@@ -1,0 +1,315 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 4
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit 3f1e952d2c1f34ccc2c5a8647f908049a9bb95c5
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261025T111000Z-cycle4-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 3 Stage 5 evidence. Identified 18 actionable open record-level
+  definition_source verbatim snippet / CURIE alignment findings (F-C4S4-DEF-SRC-001..018) for Cycle 4
+  Stage 5 grouped remediation, logged traitmech-infra-0006 in INFRA_TASKS.md (#2002), and carried forward
+  the 5 deferred source-limited/upstream-blocked cohort findings.'
+source_revision: 3f1e952d2c1f34ccc2c5a8647f908049a9bb95c5
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000003/stage-05/revision-0001/evidence.yaml
+  sha256: 0b03dc4826237b880db9cc56b1919cefe9a5e8981e774b208b34691cd9ecc4e6
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_report.md
+  sha256: 2f053ad2bcb58eb5b589f7ec85234c2cc69e5e3ce9333194dedc38a172163d7a
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/review_findings.tsv
+  sha256: 9c1e40551427e42f1e69c4aecd5f36732aaadbf916b513788db1958a15f4ae9a
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: 5e7fd4be7265ebb615d45cf22deff294fbc709875667af33d4abc37ad31275c0
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/structured_review.yaml
+  sha256: 60af7ae02bedcfd3c03619781b662ea7ed172be00b41bb1bac67dde07ec168d5
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/structured_review.md
+  sha256: 9ed985f0655c94b67fe6919fd69077780a5249b2071ba318babb97fec6a02453
+  kind: supporting
+findings:
+- finding_id: F-C4S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/ecology/habitat_association.yaml (traitmech:000047) declares definition_source:
+    DOI:10.1038/nrmicro1341 and cites DOI:10.1038/nrmicro1341 in record-level evidence[0] without a non-elliptical
+    verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though child data/traits/ecology/soil_dwelling.yaml
+    (traitmech:000050) evidence[1] and free_living.yaml (traitmech:000048) evidence[0] already carries
+    the verified verbatim snippet ''free-living microbial taxa exhibit biogeographic patterns'' from DOI:10.1038/nrmicro1341.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1038/nrmicro1341 in data/traits/ecology/habitat_association.yaml
+    from child data/traits/ecology/soil_dwelling.yaml (traitmech:000050) evidence[1] and free_living.yaml
+    (traitmech:000048) evidence[0].'
+- finding_id: F-C4S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/environment/neutrophilic.yaml (METPO:1003001) declares definition_source: DOI:10.1038/nrmicro2549
+    and cites DOI:10.1038/nrmicro2549 in record-level evidence[0] without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[1].evidence[0] on the same record
+    (cytoplasmic_ph_homeostasis -> neutrophilic_trait) already carries the verified verbatim snippet ''bacterial
+    pH homeostasis is a cell-wide physiological process'' from DOI:10.1038/nrmicro2549.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1038/nrmicro2549 in data/traits/environment/neutrophilic.yaml
+    from causal_graphs[0].edges[1].evidence[0] on the same record (cytoplasmic_ph_homeostasis -> neutrophilic_trait).'
+- finding_id: F-C4S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/metabolism/reductive_tca_cycle.yaml (traitmech:000021) declares definition_source:
+    DOI:10.1128/AEM.02473-10 and cites DOI:10.1128/AEM.02473-10 in record-level evidence[0] without a
+    non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though parent data/traits/metabolism/carbon_fixation.yaml
+    (traitmech:000019) causal_graphs[0].edges[12].evidence[0] (rtca_cycle -> carbon_fixation_process)
+    already carries the verified verbatim snippet ''the second autotrophic CO2 fixation cycle (the reductive
+    citric acid cycle) had been discovered'' from DOI:10.1128/AEM.02473-10.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1128/AEM.02473-10 in data/traits/metabolism/reductive_tca_cycle.yaml
+    from parent data/traits/metabolism/carbon_fixation.yaml (traitmech:000019) causal_graphs[0].edges[12].evidence[0]
+    (rtca_cycle -> carbon_fixation_process).'
+- finding_id: F-C4S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/morphology/cell_shape.yaml (METPO:1000666) declares definition_source: DOI:10.1038/nrmicro1205
+    and cites DOI:10.1038/nrmicro1205 in record-level evidence[0] without a non-elliptical verbatim snippet
+    (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[0].evidence[0] on the same record
+    (peptidoglycan_cell_wall -> cell_shape_trait) already carries the verified verbatim snippet ''primary
+    role in maintaining cell shape'' from DOI:10.1038/nrmicro1205.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1038/nrmicro1205 in data/traits/morphology/cell_shape.yaml
+    from causal_graphs[0].edges[0].evidence[0] on the same record (peptidoglycan_cell_wall -> cell_shape_trait).'
+- finding_id: F-C4S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/morphology/flagellar_arrangement.yaml (traitmech:000056) declares definition_source:
+    DOI:10.1093/femsre/fuv034 and cites DOI:10.1093/femsre/fuv034 in record-level evidence[0] without
+    a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though child data/traits/morphology/polar_flagellation.yaml
+    (METPO:1005032), amphitrichous.yaml (traitmech:000059), lophotrichous.yaml (traitmech:000058), and
+    monotrichous.yaml (traitmech:000057) evidence[0] already carries the verified verbatim snippet ''Bacteria
+    differ in number and location of their flagella that appear in regular patterns at the cell surface
+    (flagellation pattern).'' from DOI:10.1093/femsre/fuv034.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1093/femsre/fuv034 in data/traits/morphology/flagellar_arrangement.yaml
+    from child data/traits/morphology/polar_flagellation.yaml (METPO:1005032), amphitrichous.yaml (traitmech:000059),
+    lophotrichous.yaml (traitmech:000058), and monotrichous.yaml (traitmech:000057) evidence[0].'
+- finding_id: F-C4S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/morphology/orange_pigmented.yaml (METPO:1003026) declares definition_source: DOI:10.1080/1040841X.2025.2526423
+    and cites DOI:10.1080/1040841X.2025.2526423 in record-level evidence[0] without a non-elliptical verbatim
+    snippet (UNQUOTED_DEFINITION_SOURCE), even though parent data/traits/morphology/carotenoid_pigmentation.yaml
+    (traitmech:000116) and siblings pink_pigmented.yaml (METPO:1003027) and yellow_pigmented.yaml (METPO:1003029)
+    evidence[0] already carries the verified verbatim snippet ''red, pink, orange, and yellow pigmentation
+    in bacteria'' from DOI:10.1080/1040841X.2025.2526423.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1080/1040841X.2025.2526423 in data/traits/morphology/orange_pigmented.yaml
+    from parent data/traits/morphology/carotenoid_pigmentation.yaml (traitmech:000116) and siblings pink_pigmented.yaml
+    (METPO:1003027) and yellow_pigmented.yaml (METPO:1003029) evidence[0].'
+- finding_id: F-C4S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/morphology/spirochete_shaped.yaml (METPO:1000693) declares definition_source:
+    DOI:10.1073/pnas.200221797 and cites DOI:10.1073/pnas.200221797 in record-level evidence[0] without
+    a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[3].evidence[0]
+    on the same record (flat_wave_morphology -> spirochete_shaped_trait) already carries the verified
+    verbatim snippet ''cell morphology is either a helix, a flat wave, or an irregularly shaped helix''
+    from DOI:10.1073/pnas.200221797.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1073/pnas.200221797 in data/traits/morphology/spirochete_shaped.yaml
+    from causal_graphs[0].edges[3].evidence[0] on the same record (flat_wave_morphology -> spirochete_shaped_trait).'
+- finding_id: F-C4S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/physiology/chemolithoautotrophic.yaml (METPO:1000637) declares definition_source:
+    DOI:10.1146/annurev.micro.52.1.191 and cites DOI:10.1146/annurev.micro.52.1.191 in record-level evidence[0]
+    without a non-elliptical verbatim snippet (UNQUOTED_DEFINITION_SOURCE), even though causal_graphs[0].edges[5].evidence[0]
+    on the same record (carbon_dioxide -> co2_fixation_pathway) and parent chemoautotrophic.yaml (METPO:1000626)
+    evidence[0] already carries the verified verbatim snippet ''Carbon Dioxide Fixation in Chemoautotrophs''
+    from DOI:10.1146/annurev.micro.52.1.191.'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    populate verified verbatim snippet for DOI:10.1146/annurev.micro.52.1.191 in data/traits/physiology/chemolithoautotrophic.yaml
+    from causal_graphs[0].edges[5].evidence[0] on the same record (carbon_dioxide -> co2_fixation_pathway)
+    and parent chemoautotrophic.yaml (METPO:1000626) evidence[0].'
+- finding_id: F-C4S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/genomics/gao_her_system.yaml (traitmech:000409) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_her_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-010
+  status: open
+  summary: 'data/traits/genomics/gao_hhe_system.yaml (traitmech:000353) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_hhe_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-011
+  status: open
+  summary: 'data/traits/genomics/gao_iet_system.yaml (traitmech:000354) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_iet_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-012
+  status: open
+  summary: 'data/traits/genomics/gao_mza_system.yaml (traitmech:000355) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_mza_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-013
+  status: open
+  summary: 'data/traits/genomics/gao_ppl_system.yaml (traitmech:000356) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_ppl_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-014
+  status: open
+  summary: 'data/traits/genomics/gao_qat_system.yaml (traitmech:000359) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_qat_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-015
+  status: open
+  summary: 'data/traits/genomics/gao_rl_system.yaml (traitmech:000352) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_rl_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-016
+  status: open
+  summary: 'data/traits/genomics/gao_tery_system.yaml (traitmech:000360) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_tery_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-017
+  status: open
+  summary: 'data/traits/genomics/gao_tmn_system.yaml (traitmech:000357) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_tmn_system.yaml.'
+- finding_id: F-C4S4-DEF-SRC-018
+  status: open
+  summary: 'data/traits/genomics/gao_upx_system.yaml (traitmech:000358) declares definition_source: DOI:10.1126/science.aba0372
+    (Gao et al. 2020, Science) while record-level evidence[0] cites its PMID alias PMID:32855333 rather
+    than DOI:10.1126/science.aba0372 (flagged by audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE
+    because sibling DefenseFinder records cite DOI:10.1126/science.aba0372 directly with the identical
+    verbatim snippet ''By systematic defense gene prediction and heterologous reconstitution, here we
+    discover 29 widespread antiviral gene cassettes, collectively present in 32% of all sequenced bacterial
+    and archaeal genomes, that mediate protection against specific bacteriophages.'').'
+  disposition: 'Carry forward to Cycle 4 Stage 5 (resolve_review_findings) in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1126/science.aba0372 in data/traits/genomics/gao_upx_system.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 385 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (363 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 366 in Cycle 3 after +3 Cycle 4 Stage 2 graphs, plus 22 SUPPORTING_FIELD_VOCABULARY
+    non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 385 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 59 of 1,129 eligible TraitRecord files (after excluding the 10 Gao-* defense system records
+    promoted to open findings F-C4S4-DEF-SRC-009..018; plus 71 remaining unquoted CLASS definition_source
+    records without an intra-record or parent/child/sibling verbatim quote, 31 OBJECT_PROPERTY records
+    with short predicate-stem snippets tracked under traitmech-infra-0006, and 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that is paywalled or has
+    no indexed PubMed/EuropePMC abstract.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C4S4-DEF-SRC-001
+- F-C4S4-DEF-SRC-002
+- F-C4S4-DEF-SRC-003
+- F-C4S4-DEF-SRC-004
+- F-C4S4-DEF-SRC-005
+- F-C4S4-DEF-SRC-006
+- F-C4S4-DEF-SRC-007
+- F-C4S4-DEF-SRC-008
+- F-C4S4-DEF-SRC-009
+- F-C4S4-DEF-SRC-010
+- F-C4S4-DEF-SRC-011
+- F-C4S4-DEF-SRC-012
+- F-C4S4-DEF-SRC-013
+- F-C4S4-DEF-SRC-014
+- F-C4S4-DEF-SRC-015
+- F-C4S4-DEF-SRC-016
+- F-C4S4-DEF-SRC-017
+- F-C4S4-DEF-SRC-018
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

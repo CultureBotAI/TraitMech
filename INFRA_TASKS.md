@@ -59,6 +59,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: Resolved in Cycle 3 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py to index and query refs_by_record_id/refs_by_parent_id by doc.get("identifier") (alongside id and path.stem), propagate child quotes to parents, and distinguish snippet-less record-level evidence[] entries from absent references on UNQUOTED_DEFINITION_SOURCE, covered by unit tests in tests/test_audit_evidence_snippets.py.
+  - task_id: traitmech-infra-0006
+    summary: Skip term_kind OBJECT_PROPERTY records with non-empty predicate-stem snippets in scripts/audit_evidence_snippets.py UNQUOTED_DEFINITION_SOURCE so 1-word predicate stems are not flagged as missing when sibling OBJECT_PROPERTY records have >=12-char stems
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -118,6 +122,17 @@ tasks:
 - **Priority**: Medium
 - **Dependencies**: None (Cycle 3 Stage 5 remediation of `F-C3S4-DEF-SRC-001`..`017` completed)
 - **Disposition**: Resolved in Cycle 3 Stage 6 (issue #2002, follow-up to #1981) by updating `scripts/audit_evidence_snippets.py` to index and query `refs_by_record_id` / `refs_by_parent_id` by `doc.get("identifier")` (alongside `id` and `path.stem`), propagate child quotes to parent records, and distinguish snippet-less/elliptical record-level `evidence[]` entries from absent references on `UNQUOTED_DEFINITION_SOURCE`, verified by unit tests in `tests/test_audit_evidence_snippets.py`.
+
+### `traitmech-infra-0006` — Skip `term_kind: OBJECT_PROPERTY` records with non-empty predicate-stem snippets in `scripts/audit_evidence_snippets.py` `UNQUOTED_DEFINITION_SOURCE`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 4, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: After Cycle 3 Stage 6 enabled sibling/parent quote propagation via `doc.get("identifier")` (`traitmech-infra-0005`), running `audit_file(p, check_definition_sources=True)` across the full corpus surfaces 26 `term_kind: OBJECT_PROPERTY` records in `data/traits/metabolism/` (`builds_base_from.yaml`, `compartmentalizes.yaml`, `degrades.yaml`, etc., all children of `METPO:2000001` sharing `definition_source: DOI:10.1099/ijsem.0.004332`) because 2 sibling `OBJECT_PROPERTY` records (`produces_acid_from.yaml` with `"acid production"` and `disproportionates.yaml` with `"disproportionation"`) have predicate-stem snippets `>= 12` characters (`_MIN_LEN = 12`), whereas the other 26 `OBJECT_PROPERTY` records carry valid 1-word predicate-stem snippets (`"alkaline"`, `"compartment"`, `"degradation"`, `"oxidation"`, `"reduction"`, `"transport"`, `"growth"`, `"respiration"`, `< 12` characters) that `_has_verbatim_snippet` treats as absent (`len(s) >= _MIN_LEN`).
+- **Desired outcome**: In Cycle 4 Stage 6, update `scripts/audit_evidence_snippets.py` so `UNQUOTED_DEFINITION_SOURCE` treats any non-empty, non-elliptical `snippet` on a `term_kind: OBJECT_PROPERTY` record as satisfying `definition_source` snippet coverage (and does not propagate `<12`-char or predicate-stem `OBJECT_PROPERTY` snippets as full-sentence quotes), with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261025T111000Z-cycle4-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
+
 
 
 
