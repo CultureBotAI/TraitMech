@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-25T084500Z-claude-code-c4s301
+  timestamp: '2026-10-25T08:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1978
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: Promote all 3 Cohort G NONMECHANISTIC enzyme-activity records to MECHANISTIC
+    with 4 verified reviewed UniProtKB protein_examples
+  details: 'Audited all 1,130 TraitRecord YAMLs (1,129 eligible, 1 protected) and all 829
+    GENE_OR_PROTEIN causal nodes for Cycle 4 Stage 3 (protein_examples). Promoted all 3 Cohort
+    G NONMECHANISTIC enzyme-activity records from Cycle 4 Stage 2 to MECHANISTIC by adding
+    3 InterPro-grounded GENE_OR_PROTEIN nodes with 4 verified reviewed UniProtKB protein_examples,
+    2 distinct verbatim record-level evidence items, 1 new canonical_examples entry, and RESOLVED
+    CURATION_TODO discussions: physiology/nad_dependent_alcohol_dehydrogenase_activity.yaml
+    (added Zymomonas mobilis subsp. mobilis ZM4 NCBITaxon:264203 canonical_examples; InterPro:IPR001670
+    nad_dependent_alcohol_dehydrogenase_adh: active reviewed Swiss-Prot UniProtKB:P0DJA2 AdhB
+    v66 seq v1 UP000001173 backed by DOI:10.1128/jb.169.6.2591-2597.1987 replacing demerged/inactive
+    P06758/P0DTE6, and UniProtKB:P20368 AdhA v161 seq v2 UP000001173 backed by DOI:10.1111/j.1432-1033.1986.tb09366.x),
+    physiology/ornithine_decarboxylase_activity.yaml (InterPro:IPR005308 ornithine_decarboxylase_spec:
+    Escherichia coli K-12 NCBITaxon:83333 UP000000625 UniProtKB:P21169 SpeC v176 seq v2 backed
+    by DOI:10.1128/jb.124.2.791-799.1975), and physiology/prolyl_aminopeptidase_activity.yaml
+    (InterPro:IPR005944 prolyl_aminopeptidase_pip: Neisseria gonorrhoeae NCBITaxon:485 UniProtKB:P42786
+    Pip v118 seq v1 backed by DOI:10.1111/j.1365-2958.1993.tb01249.x replacing prompt candidate
+    P40051, which is Saccharomyces cerevisiae ICP55). Brought reports/uniprot_grounding_audit.tsv
+    to 185 uses across 164 exemplified GENE_OR_PROTEIN nodes (152 unique accessions) with
+    0 findings and 0 skipped entry_versions.'
