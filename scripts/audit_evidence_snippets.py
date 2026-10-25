@@ -220,6 +220,9 @@ def audit(
             continue
         docs.append((path, doc))
         if check_definition_sources:
+            is_object_property = (
+                _norm(str(doc.get("term_kind") or "")) == "OBJECT_PROPERTY"
+            )
             rec_id = _norm(str(doc.get("identifier") or doc.get("id") or path.stem))
             rec_keys = {
                 k
@@ -234,12 +237,13 @@ def audit(
                 _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
             ]
             quoted: set[str] = set()
-            for _loc, item, _gid in iter_evidence(doc):
-                ref = _norm(str(item.get("reference") or ""))
-                snip = _norm(str(item.get("snippet") or ""))
-                if (ref and len(snip) >= MIN_SNIPPET_CHARS
-                        and "..." not in snip and "…" not in snip):
-                    quoted.add(ref)
+            if not is_object_property:
+                for _loc, item, _gid in iter_evidence(doc):
+                    ref = _norm(str(item.get("reference") or ""))
+                    snip = _norm(str(item.get("snippet") or ""))
+                    if (ref and len(snip) >= MIN_SNIPPET_CHARS
+                            and "..." not in snip and "…" not in snip):
+                        quoted.add(ref)
             for key in rec_keys or {rec_id}:
                 refs_by_record_id.setdefault(key, set()).update(quoted)
             for parent_id in parents:
@@ -254,6 +258,10 @@ def audit(
         # separate arguments and may legitimately lean on the same key phrase.
         per_graph: dict[str, dict[str, int]] = {}
         if check_definition_sources:
+            is_object_property = (
+                _norm(str(doc.get("term_kind") or "")) == "OBJECT_PROPERTY"
+            )
+            min_snip_chars = 1 if is_object_property else MIN_SNIPPET_CHARS
             record_refs: set[str] = set()
             record_any_refs: set[str] = set()
             for item in doc.get("evidence") or []:
@@ -263,7 +271,7 @@ def audit(
                 snip = _norm(str(item.get("snippet") or ""))
                 if ref:
                     record_any_refs.add(ref)
-                if (ref and len(snip) >= MIN_SNIPPET_CHARS
+                if (ref and len(snip) >= min_snip_chars
                         and "..." not in snip and "…" not in snip):
                     record_refs.add(ref)
             def_source = _norm(str(doc.get("definition_source") or ""))

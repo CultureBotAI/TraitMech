@@ -554,5 +554,74 @@ def test_unquoted_definition_source_identifier_field_and_snippet_less_evidence(
     assert "lacks a non-elliptical verbatim snippet in record-level evidence[]" in unquoted[0]["detail"]
 
 
+def test_unquoted_definition_source_object_property_predicate_stems(
+    tmp_path, monkeypatch
+):
+    """OBJECT_PROPERTY records carry short predicate-stem snippets (e.g. 'alkaline',
+    'compartment', 'acid production'); 1-word stems (<12 chars) satisfy OBJECT_PROPERTY
+    definition_source coverage and >=12-char OBJECT_PROPERTY stems do not propagate as
+    full-sentence quotes to sibling records (#2002, traitmech-infra-0006)."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: METPO:2000003
+        term_kind: OBJECT_PROPERTY
+        parent_traits:
+          - METPO:2000001
+        definition_source: PMID:21413255
+        evidence:
+          - reference: PMID:21413255
+            snippet: acid production
+        """)
+    (traits / "builds_base_from.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:2000004
+        term_kind: OBJECT_PROPERTY
+        parent_traits:
+          - METPO:2000001
+        definition_source: PMID:21413255
+        evidence:
+          - reference: PMID:21413255
+            snippet: alkaline
+        """))
+    (traits / "class_sibling.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1009999
+        term_kind: CLASS
+        parent_traits:
+          - METPO:2000001
+        definition_source: PMID:21413255
+        evidence:
+          - reference: PMID:21413255
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
+
+    # Even when a CLASS record provides a full-sentence quote for PMID:21413255,
+    # the OBJECT_PROPERTY record with a non-empty 1-word stem ('alkaline') is not flagged,
+    # whereas a snippet-less OBJECT_PROPERTY record is flagged.
+    (traits / "class_sibling.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1009999
+        term_kind: CLASS
+        parent_traits:
+          - METPO:2000001
+        definition_source: PMID:21413255
+        evidence:
+          - reference: PMID:21413255
+            snippet: Organisms that produce alkaline metabolites from the substrate raise pH
+        """))
+    (traits / "unquoted_prop.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:2000999
+        term_kind: OBJECT_PROPERTY
+        parent_traits:
+          - METPO:2000001
+        definition_source: PMID:21413255
+        evidence:
+          - reference: PMID:21413255
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("unquoted_prop.yaml")
+
+
+
 
 
