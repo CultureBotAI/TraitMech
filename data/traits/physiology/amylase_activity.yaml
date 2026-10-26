@@ -47,9 +47,9 @@ discussions:
     cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides
     ovatus before constructing causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#amylase_starch_hydrolysis_sketch
   rationale: The current record carries one collective definition of amylolytic enzymes
     (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus
     (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.
@@ -64,6 +64,32 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-10-26'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (amylase_starch_hydrolysis_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in amylase-activity-protein-example-gap.
+- discussion_id: amylase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Bacillus licheniformis
+    alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can
+    be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#amylase_starch_hydrolysis_sketch
+  rationale: The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w)
+    establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase
+    activity in Bacteroides ovatus, while Bacillus licheniformis (NCBITaxon:1402,
+    DOI:10.1007/s002530200001) is a cited canonical example; a verified UniProtKB
+    accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-26'
+  evidence:
+  - reference: DOI:10.1007/s00018-023-04812-w
+    supports: PARTIAL
+    snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13ASus
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-12T08:08:43Z'
   curator: codex
@@ -78,3 +104,62 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (amylase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-10-26T02:03:14Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (amylase_starch_hydrolysis_sketch)
+    and OPEN CURATION_TODO discussion (amylase-activity-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: amylase_starch_hydrolysis_sketch
+  title: Extracellular amylase catalysis and starch catabolism
+  description: Evidence-backed physiological mechanism sketch linking extracellular
+    amylase catalytic activity and starch catabolism to the amylase activity phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Activity-and-pathway sketch backed by DOI:10.3389/fbioe.2020.00871
+    and DOI:10.1007/s00018-023-04812-w; strain-matched UniProtKB protein examples
+    for Bacillus licheniformis alpha-amylase (AmyS, UniProtKB:P06278) remain to be
+    curated.
+  nodes:
+  - node_id: amylase_activity_trait
+    label: amylase activity
+    node_type: TRAIT
+    grounding: traitmech:000162
+    description: Physiological enzyme-activity phenotype in which a cell produces
+      active amylolytic enzymes that hydrolyze starch.
+  - node_id: amylase_catalytic_activity
+    label: amylase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016160
+    description: Amylolytic glycoside hydrolase activity catalyzing the endohydrolysis
+      or exohydrolysis of starch polysaccharides.
+  - node_id: amylase_starch_catabolism
+    label: starch catabolic process
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0005983
+    description: Enzymatic breakdown and degradation of starch polysaccharides by
+      amylolytic enzymes.
+  edges:
+  - subject: amylase_catalytic_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: amylase_activity_trait
+    description: Production of extracellular alpha-amylase enzymes such as BoGH13ASus
+      confers the amylase activity phenotype.
+    evidence:
+    - reference: DOI:10.1007/s00018-023-04812-w
+      snippet: the Bacteroides ovatus (Bo) extracellular α-amylase, BoGH13ASus
+      notes: Brown et al. characterize the Bacteroides ovatus extracellular alpha-amylase
+        BoGH13ASus in starch utilization.
+  - subject: amylase_catalytic_activity
+    predicate: causally upstream of
+    predicate_id: RO:0002411
+    object: amylase_starch_catabolism
+    description: Amylolytic enzymes catalyze the degradation of starch polysaccharides.
+    evidence:
+    - reference: DOI:10.3389/fbioe.2020.00871
+      snippet: All enzymes capable of degrading starch are collectively indicated
+        as amylolytic enzymes.
+      notes: Sidar et al. define all enzymes capable of degrading starch collectively
+        as amylolytic enzymes.

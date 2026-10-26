@@ -207555,9 +207555,9 @@
         "discussion_id": "alpha-fucosidase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for GH29/GH95 alpha-L-fucosidase catalysis and fucosylated-glycan utilization in the exemplar taxon before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#alpha_fucosidase_hydrolysis_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.2.1.51 reaction snippet with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
         "posed_by": "claude",
@@ -207568,6 +207568,28 @@
             "supports": "PARTIAL",
             "snippet": "Reaction: an \u03b1-L-fucoside + H2O = L-fucose + an alcohol",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-26",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (alpha_fucosidase_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in alpha-fucosidase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "alpha-fucosidase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Bacteroides thetaiotaomicron VPI-5482 alpha-L-fucosidase BT_2970 (UniProtKB:Q8A3I4) so alpha_fucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#alpha_fucosidase_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), while Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186, DOI:10.1073/pnas.251226098) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-26",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/jcm.22.3.333-335.1985",
+            "supports": "PARTIAL",
+            "snippet": "Positive reactions for alpha-glucosidase, beta-glucosidase, alpha-fucosidase, and alpha-glucuronidase suggest that \"B. forsythus\" may be saccharolytic.",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -207586,6 +207608,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (alpha-fucosidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-26T02:03:14Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (alpha_fucosidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alpha-fucosidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "alpha_fucosidase_hydrolysis_sketch",
+        "title": "Alpha-L-fucosidase hydrolytic cleavage of alpha-L-fucosides",
+        "description": "Evidence-backed physiological mechanism sketch linking alpha-L-fucosidase catalytic activity and hydrolytic water consumption to the alpha-fucosidase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.2.1.51 and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB protein examples for Bacteroides thetaiotaomicron VPI-5482 alpha-L-fucosidase (BT_2970, UniProtKB:Q8A3I4) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "alpha_fucosidase_activity_trait",
+            "label": "alpha-fucosidase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000152",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active alpha-fucosidase enzymes that hydrolyze alpha-L-fucosides to L-fucose and an alcohol."
+          },
+          {
+            "node_id": "alpha_fucosidase_catalytic_activity",
+            "label": "alpha-L-fucosidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0004560",
+            "description": "Glycosidase catalytic activity hydrolyzing an alpha-L-fucoside with H2O to yield L-fucose and an alcohol (EC 3.2.1.51)."
+          },
+          {
+            "node_id": "alpha_fucosidase_water",
+            "label": "water",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:15377",
+            "description": "Water molecule consumed as a hydrolytic co-substrate during cleavage of alpha-L-fucoside linkages."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "alpha_fucosidase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "alpha_fucosidase_activity_trait",
+            "description": "Cellular production of active alpha-L-fucosidase detected by alpha-fucoside substrate hydrolysis confers the alpha-fucosidase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jcm.22.3.333-335.1985",
+                "snippet": "Positive reactions for alpha-glucosidase, beta-glucosidase, alpha-fucosidase, and alpha-glucuronidase suggest that \"B. forsythus\" may be saccharolytic.",
+                "notes": "Tanner et al. report positive alpha-fucosidase reactions in API ZYM enzyme activity panels for Tannerella forsythia ('B. forsythus')."
+              }
+            ]
+          },
+          {
+            "subject": "alpha_fucosidase_catalytic_activity",
+            "predicate": "has input",
+            "predicate_id": "RO:0002233",
+            "object": "alpha_fucosidase_water",
+            "description": "Alpha-L-fucosidase hydrolyzes an alpha-L-fucoside with H2O to produce L-fucose and an alcohol.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/2/1/51.html",
+                "snippet": "Reaction: an \u03b1-L-fucoside + H2O = L-fucose + an alcohol",
+                "notes": "IUBMB EC 3.2.1.51 defines the alpha-L-fucosidase reaction hydrolyzing an alpha-L-fucoside with H2O to L-fucose and an alcohol."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -207878,9 +207969,9 @@
         "discussion_id": "amylase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for alpha-amylase glycosidic bond cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides ovatus before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#amylase_starch_hydrolysis_sketch"
         ],
         "rationale": "The current record carries one collective definition of amylolytic enzymes (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.",
         "posed_by": "claude",
@@ -207891,6 +207982,28 @@
             "supports": "PARTIAL",
             "snippet": "All enzymes capable of degrading starch are collectively indicated as amylolytic enzymes.",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-26",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (amylase_starch_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in amylase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "amylase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus licheniformis alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#amylase_starch_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus, while Bacillus licheniformis (NCBITaxon:1402, DOI:10.1007/s002530200001) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-26",
+        "evidence": [
+          {
+            "reference": "DOI:10.1007/s00018-023-04812-w",
+            "supports": "PARTIAL",
+            "snippet": "the Bacteroides ovatus (Bo) extracellular \u03b1-amylase, BoGH13ASus",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -207909,6 +208022,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (amylase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-26T02:03:14Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (amylase_starch_hydrolysis_sketch) and OPEN CURATION_TODO discussion (amylase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "amylase_starch_hydrolysis_sketch",
+        "title": "Extracellular amylase catalysis and starch catabolism",
+        "description": "Evidence-backed physiological mechanism sketch linking extracellular amylase catalytic activity and starch catabolism to the amylase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-pathway sketch backed by DOI:10.3389/fbioe.2020.00871 and DOI:10.1007/s00018-023-04812-w; strain-matched UniProtKB protein examples for Bacillus licheniformis alpha-amylase (AmyS, UniProtKB:P06278) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "amylase_activity_trait",
+            "label": "amylase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000162",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active amylolytic enzymes that hydrolyze starch."
+          },
+          {
+            "node_id": "amylase_catalytic_activity",
+            "label": "amylase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0016160",
+            "description": "Amylolytic glycoside hydrolase activity catalyzing the endohydrolysis or exohydrolysis of starch polysaccharides."
+          },
+          {
+            "node_id": "amylase_starch_catabolism",
+            "label": "starch catabolic process",
+            "node_type": "BIOLOGICAL_PROCESS",
+            "grounding": "GO:0005983",
+            "description": "Enzymatic breakdown and degradation of starch polysaccharides by amylolytic enzymes."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "amylase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "amylase_activity_trait",
+            "description": "Production of extracellular alpha-amylase enzymes such as BoGH13ASus confers the amylase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1007/s00018-023-04812-w",
+                "snippet": "the Bacteroides ovatus (Bo) extracellular \u03b1-amylase, BoGH13ASus",
+                "notes": "Brown et al. characterize the Bacteroides ovatus extracellular alpha-amylase BoGH13ASus in starch utilization."
+              }
+            ]
+          },
+          {
+            "subject": "amylase_catalytic_activity",
+            "predicate": "causally upstream of",
+            "predicate_id": "RO:0002411",
+            "object": "amylase_starch_catabolism",
+            "description": "Amylolytic enzymes catalyze the degradation of starch polysaccharides.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3389/fbioe.2020.00871",
+                "snippet": "All enzymes capable of degrading starch are collectively indicated as amylolytic enzymes.",
+                "notes": "Sidar et al. define all enzymes capable of degrading starch collectively as amylolytic enzymes."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -210266,9 +210448,9 @@
         "discussion_id": "beta-galactosidase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for LacZ/BgaB beta-galactosidase lactose hydrolysis products and galactoside transport before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#beta_galactosidase_lacz_sketch"
         ],
         "rationale": "The current record pairs one EC 3.2.1.23 reaction snippet (DOI:10.3389/fmicb.2021.742300) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
         "posed_by": "claude",
@@ -210279,6 +210461,28 @@
             "supports": "PARTIAL",
             "snippet": "\u03b2-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an important member of glycosyl hydrolase, which can hydrolyze O-glycosidic bonds of lactose by hydrolysis reaction, resulting in the production of glucose and galactose",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-26",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (beta_galactosidase_lacz_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in beta-galactosidase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "beta-galactosidase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-galactosidase LacZ (UniProtKB:P00722) so beta_galactosidase_lacz_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#beta_galactosidase_lacz_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), while Escherichia coli K-12 (NCBITaxon:83333, DOI:10.1038/369761a0) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-26",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/jcm.22.3.333-335.1985",
+            "supports": "PARTIAL",
+            "snippet": "Selenomonas sputigena was positive for \u03b1-galactosidase, \u03b2-galactosidase, and \u03b1-glucosidase (API ZYM strip) and for \u03b1-glucosidase, \u03b2-glucosidase, and \u03b1-galactosidase (API An-Ident strip).",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -210297,6 +210501,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (beta-galactosidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-26T02:03:14Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (beta_galactosidase_lacz_sketch) and OPEN CURATION_TODO discussion (beta-galactosidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "beta_galactosidase_lacz_sketch",
+        "title": "Beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose",
+        "description": "Evidence-backed physiological mechanism sketch linking beta-galactosidase catalytic activity and glucose release from lactose hydrolysis to the beta-galactosidase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by DOI:10.3389/fmicb.2021.742300 and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB protein examples for Escherichia coli K-12 beta-galactosidase (LacZ, UniProtKB:P00722) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "beta_galactosidase_activity_trait",
+            "label": "beta-galactosidase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000148",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-galactosidase enzymes that hydrolyze lactose into glucose and galactose."
+          },
+          {
+            "node_id": "beta_galactosidase_catalytic_activity",
+            "label": "beta-galactosidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0004565",
+            "description": "Glycosyl hydrolase catalytic activity hydrolyzing O-glycosidic bonds of lactose to produce glucose and galactose (EC 3.2.1.23)."
+          },
+          {
+            "node_id": "beta_galactosidase_glucose",
+            "label": "glucose",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:17234",
+            "description": "Free D-glucose monomer released alongside galactose by beta-galactosidase hydrolysis of lactose."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "beta_galactosidase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "beta_galactosidase_activity_trait",
+            "description": "Cellular production of active beta-galactosidase detected in chromogenic substrate panels confers the beta-galactosidase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jcm.22.3.333-335.1985",
+                "snippet": "Selenomonas sputigena was positive for \u03b1-galactosidase, \u03b2-galactosidase, and \u03b1-glucosidase (API ZYM strip) and for \u03b1-glucosidase, \u03b2-glucosidase, and \u03b1-galactosidase (API An-Ident strip).",
+                "notes": "Tanner et al. report Selenomonas sputigena as positive for beta-galactosidase in API ZYM enzyme activity strips."
+              }
+            ]
+          },
+          {
+            "subject": "beta_galactosidase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "beta_galactosidase_glucose",
+            "description": "Beta-galactosidase hydrolyzes the O-glycosidic bonds of lactose to produce glucose and galactose.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3389/fmicb.2021.742300",
+                "snippet": "\u03b2-Galactosidase (EC 3.2.1.23), also referred to as lactase, is an important member of glycosyl hydrolase, which can hydrolyze O-glycosidic bonds of lactose by hydrolysis reaction, resulting in the production of glucose and galactose",
+                "notes": "Zhou et al. state that beta-galactosidase (EC 3.2.1.23) hydrolyzes O-glycosidic bonds of lactose resulting in the production of glucose and galactose."
+              }
+            ]
+          }
+        ]
       }
     ]
   },

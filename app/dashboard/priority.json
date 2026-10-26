@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 253,
-      "DEEPEN_CAUSAL_GRAPH": 415,
+      "BUILD_CAUSAL_GRAPH": 250,
+      "DEEPEN_CAUSAL_GRAPH": 418,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -6546,29 +6546,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000152",
-      "label": "alpha-fucosidase activity",
-      "category": "physiology",
-      "slug": "alpha_fucosidase_activity",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000149",
       "label": "alpha-galactosidase activity",
       "category": "physiology",
@@ -6711,29 +6688,6 @@
       "label": "ballistospore discharge",
       "category": "physiology",
       "slug": "ballistospore_discharge",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
-      "identifier": "traitmech:000148",
-      "label": "beta-galactosidase activity",
-      "category": "physiology",
-      "slug": "beta_galactosidase_activity",
       "score": 28.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -7991,28 +7945,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000162",
-      "label": "amylase activity",
-      "category": "physiology",
-      "slug": "amylase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000167",
       "label": "arginine arylamidase activity",
       "category": "physiology",
@@ -8863,10 +8795,56 @@
       ]
     },
     {
+      "identifier": "traitmech:000152",
+      "label": "alpha-fucosidase activity",
+      "category": "physiology",
+      "slug": "alpha_fucosidase_activity",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
       "identifier": "traitmech:000183",
       "label": "bacteriocin production",
       "category": "physiology",
       "slug": "bacteriocin_production",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000148",
+      "label": "beta-galactosidase activity",
+      "category": "physiology",
+      "slug": "beta_galactosidase_activity",
       "score": 15.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
       "edges": 2,
@@ -15436,6 +15414,28 @@
       "researched": false,
       "reasons": [
         "thin graph (6 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000162",
+      "label": "amylase activity",
+      "category": "physiology",
+      "slug": "amylase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {
