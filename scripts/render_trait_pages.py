@@ -239,7 +239,19 @@ TRAILING = ".,;:!?'\"*`"
 
 
 def _trim_token(token: str) -> str:
-    """Drop punctuation, Markdown marks and unbalanced closers that end a token."""
+    """Cut a token at a closing parenthesis it never opened, then drop the
+    punctuation, Markdown marks and unbalanced closers that end it.
+
+    "(10.1016/0005-2744(70)90044-4)" keeps the DOI's own parentheses, while in
+    "(https://a.org/x)-(https://b.org/y)" the first ")" closes the sentence's
+    parenthesis, so the token ends there and the second URL is its own (#2033).
+    """
+    depth = 0
+    for index, char in enumerate(token):
+        depth += {"(": 1, ")": -1}.get(char, 0)
+        if depth < 0:
+            token = token[:index]
+            break
     while token:
         last = token[-1]
         if last in TRAILING or (last in CLOSING and token.count(last) > token.count(CLOSING[last])):
@@ -275,18 +287,21 @@ def autolink(value: object) -> Markup:
         return value
     text = str(value)
     out: list[str] = []
-    position = 0
-    for match in AUTOLINK_TOKEN.finditer(text):
+    position = scan = 0
+    while match := AUTOLINK_TOKEN.search(text, scan):
         kind = match.lastgroup if match.lastgroup != "pmid_number" else "pmid"
         token = match.group(0)
         if kind in {"url", "doi"}:
             token = _trim_token(token)
         url = _token_url(kind, token, match) if token else None
         if not url:
+            scan = match.end()
             continue
         out.append(escape(text[position:match.start()]))
         out.append(Markup('<a href="{}" rel="nofollow noreferrer">{}</a>').format(url, token))
-        position = match.start() + len(token)
+        # Resume after the token, not the match: what trimming cut off may hold
+        # the next citation, as in "(https://a.org/x)-(https://b.org/y)".
+        position = scan = match.start() + len(token)
     out.append(escape(text[position:]))
     return Markup("").join(out)
 

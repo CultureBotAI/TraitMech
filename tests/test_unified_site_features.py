@@ -181,6 +181,26 @@ MARKDOWN_TOKENS = [
 ]
 
 
+PARENTHESISED_TOKENS = [
+    # A ")" that closes no "(" opened inside the token ends it, and scanning
+    # resumes there, so a second URL joined without whitespace is its own (#2033).
+    ("(https://a.example/x)-(https://b.example/y)",
+     ["https://a.example/x", "https://b.example/y"]),
+    ("see (https://a/x), (https://b/y)", ["https://a/x", "https://b/y"]),
+    # Parentheses opened inside the token are part of it.
+    ("see https://en.wikipedia.org/wiki/Foo_(bar) for more",
+     ["https://en.wikipedia.org/wiki/Foo_(bar)"]),
+    ("(see 10.1016/0005-2744(70)90044-4)", ["https://doi.org/10.1016/0005-2744(70)90044-4"]),
+]
+
+
+@pytest.mark.parametrize("text,hrefs", PARENTHESISED_TOKENS)
+def test_autolink_ends_a_token_at_a_parenthesis_it_never_opened(text, hrefs):
+    page = Page(str(autolink(text)))
+    assert page.hrefs() == hrefs
+    assert page.plain_text() == text
+
+
 @pytest.mark.parametrize("text,hrefs", MARKDOWN_TOKENS)
 def test_autolink_stops_at_markdown_syntax(text, hrefs):
     """Research previews are Markdown, and its marks are not part of a DOI or URL (#2022)."""
