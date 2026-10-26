@@ -55,6 +55,7 @@ POSED_DATE = "2026-10-21"
 POSED_DATE_C2 = "2026-10-23"
 POSED_DATE_C4 = "2026-10-25"
 POSED_DATE_C5 = "2026-10-25"
+POSED_DATE_C6 = "2026-10-26"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2157,10 +2158,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.21.1 cleavage-specificity snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
     ),
-    "data/traits/physiology/alpha_fucosidase_activity.yaml": (
-        "Add primary microbial literature evidence for GH29/GH95 alpha-L-fucosidase catalysis and fucosylated-glycan utilization in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.2.1.51 reaction snippet with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
-    ),
     "data/traits/physiology/alpha_galactosidase_activity.yaml": (
         "Add primary microbial literature evidence for MelA/Aga alpha-galactosidase catalysis and melibiose/raffinose catabolism in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one EC 3.2.1.22 catalytic definition snippet (DOI:10.3109/07388551.2013.794124) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
@@ -2173,17 +2170,9 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for GH38/GH92 alpha-mannosidase catalysis and mannoside utilization in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.2.1.24 reaction snippet with a diagnostic strain-discrimination snippet (DOI:10.1128/jcm.32.3.854-855.1994), leaving only one mechanistic quote.",
     ),
-    "data/traits/physiology/amylase_activity.yaml": (
-        "Add primary microbial literature evidence for alpha-amylase glycosidic bond cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides ovatus before constructing causal_graphs.",
-        "The current record carries one collective definition of amylolytic enzymes (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.",
-    ),
     "data/traits/physiology/arginine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
-    ),
-    "data/traits/physiology/beta_galactosidase_activity.yaml": (
-        "Add primary microbial literature evidence for LacZ/BgaB beta-galactosidase lactose hydrolysis products and galactoside transport before constructing causal_graphs.",
-        "The current record pairs one EC 3.2.1.23 reaction snippet (DOI:10.3389/fmicb.2021.742300) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
     ),
     "data/traits/physiology/beta_glucosidase_activity.yaml": (
         "Add primary microbial literature evidence for BglA/BglX beta-glucosidase cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing causal_graphs.",
@@ -3510,8 +3499,295 @@ def build_cohort_h_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_I_PATHS: tuple[str, ...] = (
+    "data/traits/physiology/alpha_fucosidase_activity.yaml",
+    "data/traits/physiology/amylase_activity.yaml",
+    "data/traits/physiology/beta_galactosidase_activity.yaml",
+)
+
+COHORT_I_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/physiology/alpha_fucosidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Bacteroides thetaiotaomicron VPI-5482 alpha-L-fucosidase BT_2970 (UniProtKB:Q8A3I4) so alpha_fucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/amylase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Bacillus licheniformis alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus (NCBITaxon:28116), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/beta_galactosidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-galactosidase LacZ (UniProtKB:P00722) so beta_galactosidase_lacz_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_i_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort I record."""
+    if rel_path == "data/traits/physiology/alpha_fucosidase_activity.yaml":
+        return [
+            {
+                "graph_id": "alpha_fucosidase_hydrolysis_sketch",
+                "title": "Alpha-L-fucosidase hydrolytic cleavage of alpha-L-fucosides",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "alpha-L-fucosidase catalytic activity and hydrolytic water "
+                    "consumption to the alpha-fucosidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.2.1.51 and "
+                    "DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB "
+                    "protein examples for Bacteroides thetaiotaomicron VPI-5482 "
+                    "alpha-L-fucosidase (BT_2970, UniProtKB:Q8A3I4) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "alpha_fucosidase_activity_trait",
+                        "label": "alpha-fucosidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000152",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active alpha-fucosidase enzymes that hydrolyze alpha-L-fucosides to L-fucose and an alcohol.",
+                    },
+                    {
+                        "node_id": "alpha_fucosidase_catalytic_activity",
+                        "label": "alpha-L-fucosidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004560",
+                        "description": "Glycosidase catalytic activity hydrolyzing an alpha-L-fucoside with H2O to yield L-fucose and an alcohol (EC 3.2.1.51).",
+                    },
+                    {
+                        "node_id": "alpha_fucosidase_water",
+                        "label": "water",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:15377",
+                        "description": "Water molecule consumed as a hydrolytic co-substrate during cleavage of alpha-L-fucoside linkages.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "alpha_fucosidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "alpha_fucosidase_activity_trait",
+                        "description": "Cellular production of active alpha-L-fucosidase detected by alpha-fucoside substrate hydrolysis confers the alpha-fucosidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Tanner et al. report positive alpha-fucosidase reactions in API ZYM enzyme activity panels for Tannerella forsythia ('B. forsythus').",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "alpha_fucosidase_catalytic_activity",
+                        "predicate": "has input",
+                        "predicate_id": "RO:0002233",
+                        "object": "alpha_fucosidase_water",
+                        "description": "Alpha-L-fucosidase hydrolyzes an alpha-L-fucoside with H2O to produce L-fucose and an alcohol.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.2.1.51 defines the alpha-L-fucosidase reaction hydrolyzing an alpha-L-fucoside with H2O to L-fucose and an alcohol.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/amylase_activity.yaml":
+        return [
+            {
+                "graph_id": "amylase_starch_hydrolysis_sketch",
+                "title": "Extracellular amylase catalysis and starch catabolism",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "extracellular amylase catalytic activity and starch "
+                    "catabolism to the amylase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-pathway sketch backed by DOI:10.3389/fbioe.2020.00871 "
+                    "and DOI:10.1007/s00018-023-04812-w; strain-matched UniProtKB "
+                    "protein examples for Bacillus licheniformis alpha-amylase "
+                    "(AmyS, UniProtKB:P06278) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "amylase_activity_trait",
+                        "label": "amylase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000162",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active amylolytic enzymes that hydrolyze starch.",
+                    },
+                    {
+                        "node_id": "amylase_catalytic_activity",
+                        "label": "amylase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0016160",
+                        "description": "Amylolytic glycoside hydrolase activity catalyzing the endohydrolysis or exohydrolysis of starch polysaccharides.",
+                    },
+                    {
+                        "node_id": "amylase_starch_catabolism",
+                        "label": "starch catabolic process",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0005983",
+                        "description": "Enzymatic breakdown and degradation of starch polysaccharides by amylolytic enzymes.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "amylase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "amylase_activity_trait",
+                        "description": "Production of extracellular alpha-amylase enzymes such as BoGH13ASus confers the amylase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Brown et al. characterize the Bacteroides ovatus extracellular alpha-amylase BoGH13ASus in starch utilization.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "amylase_catalytic_activity",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "amylase_starch_catabolism",
+                        "description": "Amylolytic enzymes catalyze the degradation of starch polysaccharides.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Sidar et al. define all enzymes capable of degrading starch collectively as amylolytic enzymes.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/beta_galactosidase_activity.yaml":
+        return [
+            {
+                "graph_id": "beta_galactosidase_lacz_sketch",
+                "title": "Beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "beta-galactosidase catalytic activity and glucose release "
+                    "from lactose hydrolysis to the beta-galactosidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by DOI:10.3389/fmicb.2021.742300 "
+                    "and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 beta-galactosidase "
+                    "(LacZ, UniProtKB:P00722) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "beta_galactosidase_activity_trait",
+                        "label": "beta-galactosidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000148",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-galactosidase enzymes that hydrolyze lactose into glucose and galactose.",
+                    },
+                    {
+                        "node_id": "beta_galactosidase_catalytic_activity",
+                        "label": "beta-galactosidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004565",
+                        "description": "Glycosyl hydrolase catalytic activity hydrolyzing O-glycosidic bonds of lactose to produce glucose and galactose (EC 3.2.1.23).",
+                    },
+                    {
+                        "node_id": "beta_galactosidase_glucose",
+                        "label": "glucose",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:17234",
+                        "description": "Free D-glucose monomer released alongside galactose by beta-galactosidase hydrolysis of lactose.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "beta_galactosidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "beta_galactosidase_activity_trait",
+                        "description": "Cellular production of active beta-galactosidase detected in chromogenic substrate panels confers the beta-galactosidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Tanner et al. report Selenomonas sputigena as positive for beta-galactosidase in API ZYM enzyme activity strips.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "beta_galactosidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "beta_galactosidase_glucose",
+                        "description": "Beta-galactosidase hydrolyzes the O-glycosidic bonds of lactose to produce glucose and galactose.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Zhou et al. state that beta-galactosidase (EC 3.2.1.23) hydrolyzes O-glycosidic bonds of lactose resulting in the production of glucose and galactose.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort I path: {rel_path}")
+
+
+def build_cohort_i_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort I record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_I_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C6,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, G, and H records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, G, H, and I records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -3712,10 +3988,7 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             for d in existing_disc
             if isinstance(d, dict)
             and d.get("discussion_id") == source_gap_id
-            and (
-                d.get("status") == "OPEN"
-                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
-            )
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
         ]
         if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
             continue
@@ -3835,10 +4108,7 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             for d in existing_disc
             if isinstance(d, dict)
             and d.get("discussion_id") == source_gap_id
-            and (
-                d.get("status") == "OPEN"
-                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
-            )
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
         ]
         if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
             continue
@@ -3922,10 +4192,7 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             for d in existing_disc
             if isinstance(d, dict)
             and d.get("discussion_id") == source_gap_id
-            and (
-                d.get("status") == "OPEN"
-                or d.get("attaches_to") != [f"causal_graphs#{graph_id}"]
-            )
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
         ]
         if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
             continue
@@ -3957,6 +4224,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C5
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_I_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_i_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_i_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C6
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "

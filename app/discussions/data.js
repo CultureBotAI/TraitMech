@@ -12510,13 +12510,13 @@ window.searchData = [
   "discussion_id": "alpha-fucosidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for GH29/GH95 alpha-L-fucosidase catalysis and fucosylated-glycan utilization in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "alpha-fucosidase activity",
   "source_id": "traitmech:000152",
   "source_file": "alpha_fucosidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#alpha_fucosidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.2.1.51 reaction snippet with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -12526,6 +12526,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/alpha_fucosidase_activity.html#alpha-fucosidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "alpha-fucosidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Bacteroides thetaiotaomicron VPI-5482 alpha-L-fucosidase BT_2970 (UniProtKB:Q8A3I4) so alpha_fucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-fucosidase activity",
+  "source_id": "traitmech:000152",
+  "source_file": "alpha_fucosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#alpha_fucosidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jcm.22.3.333-335.1985"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_fucosidase_activity.html#alpha-fucosidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "alpha-galactosidase-activity-xref-gap",
@@ -12662,13 +12683,13 @@ window.searchData = [
   "discussion_id": "amylase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for alpha-amylase glycosidic bond cleavage products (maltose/maltodextrins) and starch utilization in Bacteroides ovatus before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "amylase activity",
   "source_id": "traitmech:000162",
   "source_file": "amylase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#amylase_starch_hydrolysis_sketch"
   ],
   "rationale": "The current record carries one collective definition of amylolytic enzymes (DOI:10.3389/fbioe.2020.00871) and one short enzyme-naming phrase for BoGH13ASus (DOI:10.1007/s00018-023-04812-w) without catalytic reaction/product quotes.",
   "num_experiments": 0,
@@ -12678,6 +12699,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "amylase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus licheniformis alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "amylase activity",
+  "source_id": "traitmech:000162",
+  "source_file": "amylase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#amylase_starch_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus (NCBITaxon:28116), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1007/s00018-023-04812-w"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/amylase_activity.html#amylase-activity-protein-example-gap"
  },
  {
   "discussion_id": "anisogamy-scope-and-hierarchy",
@@ -13169,13 +13211,13 @@ window.searchData = [
   "discussion_id": "beta-galactosidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for LacZ/BgaB beta-galactosidase lactose hydrolysis products and galactoside transport before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "beta-galactosidase activity",
   "source_id": "traitmech:000148",
   "source_file": "beta_galactosidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#beta_galactosidase_lacz_sketch"
   ],
   "rationale": "The current record pairs one EC 3.2.1.23 reaction snippet (DOI:10.3389/fmicb.2021.742300) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -13185,6 +13227,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/beta_galactosidase_activity.html#beta-galactosidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "beta-galactosidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-galactosidase LacZ (UniProtKB:P00722) so beta_galactosidase_lacz_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-galactosidase activity",
+  "source_id": "traitmech:000148",
+  "source_file": "beta_galactosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#beta_galactosidase_lacz_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jcm.22.3.333-335.1985"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_galactosidase_activity.html#beta-galactosidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "beta-glucosidase-activity-xref-gap",
@@ -17981,7 +18044,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 904,
+ "total_discussions": 907,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [

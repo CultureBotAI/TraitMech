@@ -678,10 +678,13 @@ data/traits/morphology/yellow_pigmented.yaml	METPO:1003030	yellow pigmented	yell
 data/traits/other/coagulase_positive.yaml	METPO:1007090	coagulase positive	coagulase_positive_prothrombin_clotting_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/other/indole_test_positive.yaml	METPO:1005011	indole test positive	indole_test_positive_tryptophan_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml	traitmech:000194	aerobic anoxygenic phototrophy	aerobic_anoxygenic_phototrophy_light_organic_carbon	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/alpha_fucosidase_activity.yaml	traitmech:000152	alpha-fucosidase activity	alpha_fucosidase_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/amylase_activity.yaml	traitmech:000162	amylase activity	amylase_starch_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/antibiotic_resistance.yaml	traitmech:000088	antibiotic resistance	antibiotic_resistance_mechanisms	MECHANISTIC	4	1	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/arginine_dihydrolase_activity.yaml	traitmech:000164	arginine dihydrolase activity	arginine_dihydrolase_adi_pathway_sketch	MECHANISTIC	1	1	0	1	1	3	3	PASS	0	0	-
 data/traits/physiology/autotrophic.yaml	METPO:1000632	autotrophic	autotrophic_inorganic_carbon_fixation	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
 data/traits/physiology/bacteriocin_production.yaml	traitmech:000183	bacteriocin production	bacteriocin_production_defense_mechanism	MECHANISTIC	1	1	0	1	1	1	0	PASS	0	0	-
+data/traits/physiology/beta_galactosidase_activity.yaml	traitmech:000148	beta-galactosidase activity	beta_galactosidase_lacz_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/beta_glucuronidase_activity.yaml	traitmech:000151	beta-glucuronidase activity	beta_glucuronidase_uida_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml	traitmech:000157	beta-N-acetylhexosaminidase activity	beta_n_acetylhexosaminidase_chb_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	bioluminescence_luciferase	MECHANISTIC	5	2	3	1	1	1	1	PASS	0	0	-

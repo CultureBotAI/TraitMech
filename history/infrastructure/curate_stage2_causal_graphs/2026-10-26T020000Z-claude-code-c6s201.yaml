@@ -1,0 +1,34 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+  slug: curate_stage2_causal_graphs
+session:
+  id: 2026-10-26T020000Z-claude-code-c6s201
+  timestamp: '2026-10-26T02:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1976
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Curate Cycle 6 Stage 2 causal_graphs for 3 Cohort I physiology traits (alpha_fucosidase_activity, amylase_activity, beta_galactosidase_activity)
+  details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 6 Stage 2 (causal_graphs).
+    Verified 747 existing eligible CLASS records with causal_graphs have 0 new structural
+    errors, 0 new predicate-domain errors, and 0 protein-taxon gaps. Extended scripts/curate_stage2_causal_graphs.py
+    with Cohort I (3 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions for
+    alpha_fucosidase_activity, amylase_activity, and beta_galactosidase_activity,
+    resolving each record's <slug>-causal-graph-source-gap). After this batch, 750/1,129 eligible
+    records carry connected schema-valid causal_graphs, 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (255/255) of active CLASS records without causal_graphs carry an explicit
+    OPEN KNOWLEDGE_GAP (213) or CURATION_TODO (42) discussion.
