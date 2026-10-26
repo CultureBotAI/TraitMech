@@ -24,12 +24,23 @@ evidence:
   notes: Brown et al. characterized BoGH13A_Sus as a Bacteroides ovatus extracellular
     alpha-amylase in a starch utilization system, supporting B. ovatus as a source-backed
     amylase activity example.
+- reference: DOI:10.1128/jb.166.2.635-643.1986
+  snippet: The genes encoding the thermostable alpha-amylases of Bacillus stearothermophilus
+    and B. licheniformis were cloned in Escherichia coli, and their DNA sequences
+    were determined.
+  notes: Gray et al. cloned and sequenced the Bacillus licheniformis amyS gene encoding
+    thermostable alpha-amylase (UniProtKB:P06278).
 canonical_examples:
 - taxon_id: NCBITaxon:28116
   taxon_label: Bacteroides ovatus
   note: Brown et al. characterized the extracellular alpha-amylase BoGH13A_Sus from
     the Bacteroides ovatus starch utilization system.
   reference: DOI:10.1007/s00018-023-04812-w
+- taxon_id: NCBITaxon:1402
+  taxon_label: Bacillus licheniformis
+  note: Gray et al. cloned and sequenced the Bacillus licheniformis gene encoding
+    thermostable extracellular alpha-amylase (AmyS).
+  reference: DOI:10.1128/jb.166.2.635-643.1986
 discussions:
 - discussion_id: amylase-activity-xref-gap
   prompt: Resolve an exact external ontology class for amylase activity before adding
@@ -73,7 +84,7 @@ discussions:
     alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can
     be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#amylase_starch_hydrolysis_sketch
   rationale: The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w)
@@ -90,6 +101,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-26'
+  resolution_note: Added canonical_examples entry Bacillus licheniformis (NCBITaxon:1402;
+    DOI:10.1128/jb.166.2.635-643.1986) and promoted amylase_starch_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR013776-grounded GENE_OR_PROTEIN node amylase_amys
+    with reviewed Bacillus licheniformis (NCBITaxon:1402) protein_examples UniProtKB:P06278
+    (AmyS) backed by DOI:10.1128/jb.166.2.635-643.1986.
 curation_history:
 - timestamp: '2026-09-12T08:08:43Z'
   curator: codex
@@ -111,16 +128,24 @@ curation_history:
     and OPEN CURATION_TODO discussion (amylase-activity-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-26T04:00:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Bacillus licheniformis (NCBITaxon:1402; DOI:10.1128/jb.166.2.635-643.1986)
+    canonical example; promoted amylase_starch_hydrolysis_sketch to MECHANISTIC; added
+    InterPro:IPR013776-grounded GENE_OR_PROTEIN node amylase_amys with reviewed Bacillus
+    licheniformis (NCBITaxon:1402) protein_examples UniProtKB:P06278 (AmyS) backed
+    by DOI:10.1128/jb.166.2.635-643.1986; resolved amylase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: amylase_starch_hydrolysis_sketch
   title: Extracellular amylase catalysis and starch catabolism
   description: Evidence-backed physiological mechanism sketch linking extracellular
     amylase catalytic activity and starch catabolism to the amylase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-pathway sketch backed by DOI:10.3389/fbioe.2020.00871
-    and DOI:10.1007/s00018-023-04812-w; strain-matched UniProtKB protein examples
-    for Bacillus licheniformis alpha-amylase (AmyS, UniProtKB:P06278) remain to be
-    curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.1, DOI:10.1155/2013/150656, and
+    DOI:10.1128/jb.166.2.635-643.1986; exemplified on amylase_amys with Bacillus licheniformis
+    (NCBITaxon:1402) thermostable alpha-amylase AmyS (UniProtKB:P06278).
   nodes:
   - node_id: amylase_activity_trait
     label: amylase activity
@@ -140,6 +165,35 @@ causal_graphs:
     grounding: GO:0005983
     description: Enzymatic breakdown and degradation of starch polysaccharides by
       amylolytic enzymes.
+  - node_id: amylase_amys
+    label: thermostable alpha-amylase AmyS
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR013776
+    gene_symbols:
+    - amyS
+    - amyL
+    description: Glycoside hydrolase family 13 (GH13) thermostable alpha-amylase (AmyS/AmyL)
+      that endohydrolyzes (1->4)-alpha-D-glucosidic linkages in starch and related
+      polysaccharides.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06278
+      protein_label: Alpha-amylase
+      gene_symbol: amyS
+      taxon_id: NCBITaxon:1402
+      taxon_label: Bacillus licheniformis
+      entry_status: REVIEWED
+      retrieved_on: '2026-10-26'
+      entry_version: 174
+      sequence_version: 1
+      role: AmyS is the Bacillus licheniformis thermostable extracellular alpha-amylase
+        that endohydrolyzes (1->4)-alpha-D-glucosidic linkages in starch.
+      evidence:
+      - reference: DOI:10.1128/jb.166.2.635-643.1986
+        snippet: The genes encoding the thermostable alpha-amylases of Bacillus stearothermophilus
+          and B. licheniformis were cloned in Escherichia coli, and their DNA sequences
+          were determined.
+        notes: Gray et al. cloned and sequenced the Bacillus licheniformis thermostable
+          alpha-amylase gene amyS (UniProtKB:P06278).
   edges:
   - subject: amylase_catalytic_activity
     predicate: confers
@@ -163,3 +217,15 @@ causal_graphs:
         as amylolytic enzymes.
       notes: Sidar et al. define all enzymes capable of degrading starch collectively
         as amylolytic enzymes.
+  - subject: amylase_amys
+    predicate: enables
+    predicate_id: RO:0002327
+    object: amylase_catalytic_activity
+    description: Thermostable alpha-amylase AmyS enables alpha-amylase catalytic activity.
+    evidence:
+    - reference: DOI:10.1128/jb.166.2.635-643.1986
+      snippet: The genes encoding the thermostable alpha-amylases of Bacillus stearothermophilus
+        and B. licheniformis were cloned in Escherichia coli, and their DNA sequences
+        were determined.
+      notes: Gray et al. cloned and sequenced the Bacillus licheniformis amyS gene
+        encoding thermostable alpha-amylase.

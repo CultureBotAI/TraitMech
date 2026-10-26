@@ -24,6 +24,8 @@ from curate_stage3_protein_examples import (  # noqa: E402
     C4S3_RETRIEVED_ON,
     C5S3_COHORT_H_PROMOTIONS,
     C5S3_RETRIEVED_ON,
+    C6S3_COHORT_I_PROMOTIONS,
+    C6S3_RETRIEVED_ON,
     ENTRY_VERSION_REFRESHES,
     NEW_PROTEIN_EXAMPLES,
     RETRIEVED_ON,
@@ -61,6 +63,11 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         len(spec["new_node"]["protein_examples"]) for spec in C5S3_COHORT_H_PROMOTIONS.values()
     )
     assert total_c5s3_examples == 3
+    assert len(C6S3_COHORT_I_PROMOTIONS) == 3
+    total_c6s3_examples = sum(
+        len(spec["new_node"]["protein_examples"]) for spec in C6S3_COHORT_I_PROMOTIONS.values()
+    )
+    assert total_c6s3_examples == 3
     all_files = (
         {r[0] for r in ENTRY_VERSION_REFRESHES}
         | set(NEW_PROTEIN_EXAMPLES)
@@ -70,8 +77,9 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         | set(C3S3_COHORT_E_BLOCKERS)
         | set(C4S3_COHORT_G_PROMOTIONS)
         | set(C5S3_COHORT_H_PROMOTIONS)
+        | set(C6S3_COHORT_I_PROMOTIONS)
     )
-    assert len(all_files) == 125
+    assert len(all_files) == 128
     assert "data/traits/physiology/spore_germination.yaml" not in all_files
 
 
@@ -81,9 +89,7 @@ def test_new_protein_examples_committed_and_schema_valid() -> None:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert doc["identifier"] == spec["identifier"]
         assert validate_trait(doc) == []
-        assert any(
-            h.get("changes") == spec["changes_summary"] for h in doc["curation_history"]
-        )
+        assert any(h.get("changes") == spec["changes_summary"] for h in doc["curation_history"])
         graphs = [g for g in doc.get("causal_graphs", []) if g.get("graph_id") == spec["graph_id"]]
         assert len(graphs) == 1
         graph = graphs[0]
@@ -110,6 +116,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
         (C3S3_COHORT_E_PROMOTIONS, C3S3_RETRIEVED_ON),
         (C4S3_COHORT_G_PROMOTIONS, C4S3_RETRIEVED_ON),
         (C5S3_COHORT_H_PROMOTIONS, C5S3_RETRIEVED_ON),
+        (C6S3_COHORT_I_PROMOTIONS, C6S3_RETRIEVED_ON),
     ]
     for promo_dict, expected_date in promotions:
         for rel_path, spec in promo_dict.items():
@@ -117,10 +124,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
             doc = yaml.safe_load(path.read_text(encoding="utf-8"))
             assert doc["identifier"] == spec["identifier"]
             assert validate_trait(doc) == []
-            assert any(
-                h.get("changes") == spec["changes_summary"]
-                for h in doc["curation_history"]
-            )
+            assert any(h.get("changes") == spec["changes_summary"] for h in doc["curation_history"])
             graphs = [
                 g for g in doc.get("causal_graphs", []) if g.get("graph_id") == spec["graph_id"]
             ]
@@ -156,9 +160,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
         doc = yaml.safe_load(path.read_text(encoding="utf-8"))
         assert doc["identifier"] == spec["identifier"]
         assert validate_trait(doc) == []
-        assert any(
-            h.get("changes") == spec["changes_summary"] for h in doc["curation_history"]
-        )
+        assert any(h.get("changes") == spec["changes_summary"] for h in doc["curation_history"])
         discussions = [
             d for d in doc.get("discussions", []) if d.get("discussion_id") == spec["discussion_id"]
         ]
@@ -197,6 +199,7 @@ def test_protected_record_guard_raises(tmp_path: Path) -> None:
         | set(C3S3_COHORT_E_BLOCKERS)
         | set(C4S3_COHORT_G_PROMOTIONS)
         | set(C5S3_COHORT_H_PROMOTIONS)
+        | set(C6S3_COHORT_I_PROMOTIONS)
     )
     for rel_path in all_rels:
         src = REPO_ROOT / rel_path
