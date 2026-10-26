@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="umap.html">Embedding space</a>
       <a href="graph.html">Graph layout</a>
       <a href="data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <header>
   <p class="breadcrumb"><a href="index.html">TraitMech</a> <span>›</span> Text embedding map</p>
@@ -52,7 +53,7 @@
 <details class="data-table-details">
   <summary>View data as table</summary>
   <div class="data-table-actions"><a id="csv-download" hidden download="trait_corpus_map.csv">Download CSV</a></div>
-  <div class="data-table-scroll">
+  <div class="data-table-scroll" role="region" tabindex="0" aria-label="Plotted points as a table">
     <table class="data-table" id="data-table">
       <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Term kind</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
       <tbody></tbody>
@@ -85,7 +86,9 @@ function loadMap() {
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
 
     const svg = d3.select("#umap-plot").append("svg")
-      .attr("width", W).attr("height", H);
+      .attr("width", W).attr("height", H)
+      .attr("viewBox", "0 0 " + W + " " + H)
+      .style("width", "100%").style("height", "auto");
     const g = svg.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -264,12 +267,14 @@ loadMap();
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Corpus as of 2026-10-25 21:40 UTC

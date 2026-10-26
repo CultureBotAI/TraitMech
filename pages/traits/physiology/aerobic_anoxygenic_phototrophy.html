@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -108,7 +109,7 @@
 
           <li id="pathograph-1-edge-1">
             <strong>aerobic anoxygenic phototrophy</strong>
-            <code>traitmech:000194</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml" rel="nofollow noreferrer"><code>traitmech:000194</code></a>
             <span class="edge-predicate">has energy source</span>
             <strong>light</strong>
             <a href="http://purl.obolibrary.org/obo/PATO_0001717" rel="nofollow noreferrer"><code>PATO:0001717</code></a>
@@ -127,7 +128,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>aerobic anoxygenic phototrophy</strong>
-            <code>traitmech:000194</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml" rel="nofollow noreferrer"><code>traitmech:000194</code></a>
             <span class="edge-predicate">has carbon source</span>
             <strong>organic carbon</strong>
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:50860" rel="nofollow noreferrer"><code>CHEBI:50860</code></a>
@@ -270,13 +271,13 @@
       <h2>Synonyms (4)</h2>
       <ul class="synonyms">
 
-        <li>aerobic anoxygenic phototroph <span class="meta">EXACT_SYNONYM · DOI:10.1128/AEM.01747-12</span></li>
+        <li>aerobic anoxygenic phototroph <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1128/AEM.01747-12" rel="nofollow noreferrer"><code>DOI:10.1128/AEM.01747-12</code></a></span></li>
 
-        <li>aerobic anoxygenic phototrophic bacteria <span class="meta">EXACT_SYNONYM · DOI:10.1186/s40168-024-01786-0</span></li>
+        <li>aerobic anoxygenic phototrophic bacteria <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1186/s40168-024-01786-0" rel="nofollow noreferrer"><code>DOI:10.1186/s40168-024-01786-0</code></a></span></li>
 
-        <li>AAP bacteria <span class="meta">RELATED_SYNONYM · DOI:10.1186/s40168-024-01786-0</span></li>
+        <li>AAP bacteria <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1186/s40168-024-01786-0" rel="nofollow noreferrer"><code>DOI:10.1186/s40168-024-01786-0</code></a></span></li>
 
-        <li>aerobic_anoxygenic_phototrophy <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>aerobic_anoxygenic_phototrophy <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -292,7 +293,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000657</code> <span class="dim-preview">[-0.306, -3.156, -1.761, +2.105, …]</span></li>
+        <li><a href="../../traits/physiology/photoheterotrophic.html">photoheterotrophic <code>METPO:1000657</code></a> <span class="dim-preview">[-0.306, -3.156, -1.761, +2.105, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -477,7 +478,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -841,12 +851,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-09-14 23:14 UTC

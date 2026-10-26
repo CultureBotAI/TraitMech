@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -112,9 +113,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>As(III) oxidation <span class="meta">EXACT_SYNONYM · DOI:10.3389/fmicb.2020.569282</span></li>
+        <li>As(III) oxidation <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.3389/fmicb.2020.569282" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2020.569282</code></a></span></li>
 
-        <li>microbial arsenite oxidation <span class="meta">RELATED_SYNONYM · DOI:10.3389/fmicb.2020.569282</span></li>
+        <li>microbial arsenite oxidation <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.3389/fmicb.2020.569282" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2020.569282</code></a></span></li>
 
       </ul>
     </div>
@@ -130,7 +131,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
+        <li><a href="../../traits/metabolism/metabolism.html">metabolism <code>METPO:1000060</code></a> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -255,7 +256,7 @@
         </p>
 
 
-        <p>The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.</p>
+        <p>The current record carries general detoxification/energy and strain-isolation snippets (<a href="https://doi.org/10.3389/fmicb.2020.569282" rel="nofollow noreferrer">DOI:10.3389/fmicb.2020.569282</a>, <a href="https://doi.org/10.1128/AEM.66.1.92-97.2000" rel="nofollow noreferrer">DOI:10.1128/AEM.66.1.92-97.2000</a>, <a href="https://doi.org/10.1186/s12866-024-03676-9" rel="nofollow noreferrer">DOI:10.1186/s12866-024-03676-9</a>) without enzyme-level catalytic quotes or a cited canonical example.</p>
 
 
 
@@ -305,7 +306,7 @@
         <li><time>2026-09-14T20:30:00Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add arsenite oxidation trait
-            <p>Minted traitmech:000189 for the arsenite oxidation metabolism trait with DOI-backed As(III)-to-As(V) evidence from 10.3389/fmicb.2020.569282, 10.1128/AEM.66.1.92-97.2000, and 10.1186/s12866-024-03676-9, recorded an exact As(III) oxidation synonym and exact-xref gap, and reserved METPO:1014300 in proposals/metpo_traitmech_v66.</p></li></ul>
+            <p>Minted traitmech:000189 for the arsenite oxidation metabolism trait with DOI-backed As(III)-to-As(V) evidence from <a href="https://doi.org/10.3389/fmicb.2020.569282" rel="nofollow noreferrer">10.3389/fmicb.2020.569282</a>, <a href="https://doi.org/10.1128/AEM.66.1.92-97.2000" rel="nofollow noreferrer">10.1128/AEM.66.1.92-97.2000</a>, and <a href="https://doi.org/10.1186/s12866-024-03676-9" rel="nofollow noreferrer">10.1186/s12866-024-03676-9</a>, recorded an exact As(III) oxidation synonym and exact-xref gap, and reserved METPO:1014300 in proposals/metpo_traitmech_v66.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/arsenite_oxidation/2026-09-14T203000Z-codex-8fd1ed.yaml">Read this curation session</a>
         </li></ul>
 
@@ -337,7 +338,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -366,12 +376,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-23 09:40 UTC

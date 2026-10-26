@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -88,7 +89,7 @@
       <h2>Siderophore biosynthesis, extracellular secretion, and iron scavenging</h2>
       <p class="meta">Evidence-backed physiological mechanism sketch linking siderophore biosynthesis, extracellular siderophore secretion, and high-affinity iron scavenging to siderophore production.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Biosynthesis-and-transport sketch backed by DOI:10.1111/1462-2920.14937, DOI:10.15698/mic2018.10.649, and DOI:10.1073/pnas.0908760106; strain-matched UniProtKB protein examples for Pseudomonas aeruginosa pyoverdine synthetases (PvdL/PvdI/PvdJ/PvdD) and TonB-dependent receptor FpvA remain to be curated.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Biosynthesis-and-transport sketch backed by <a href="https://doi.org/10.1111/1462-2920.14937" rel="nofollow noreferrer">DOI:10.1111/1462-2920.14937</a>, <a href="https://doi.org/10.15698/mic2018.10.649" rel="nofollow noreferrer">DOI:10.15698/mic2018.10.649</a>, and <a href="https://doi.org/10.1073/pnas.0908760106" rel="nofollow noreferrer">DOI:10.1073/pnas.0908760106</a>; strain-matched UniProtKB protein examples for Pseudomonas aeruginosa pyoverdine synthetases (PvdL/PvdI/PvdJ/PvdD) and TonB-dependent receptor FpvA remain to be curated.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -111,7 +112,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0019290" rel="nofollow noreferrer"><code>GO:0019290</code></a>
             <span class="edge-predicate">confers</span>
             <strong>siderophore production</strong>
-            <code>traitmech:000186</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/siderophore_production.yaml" rel="nofollow noreferrer"><code>traitmech:000186</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Biosynthesis of iron-chelating siderophores such as pyoverdine under iron-limiting conditions confers the siderophore production trait.</p>
             <ul>
@@ -216,7 +217,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -366,7 +367,7 @@
         </p>
 
 
-        <p>The record&#39;s primary literature (DOI:10.1111/1462-2920.14937, DOI:10.15698/mic2018.10.649, DOI:10.1073/pnas.0908760106) establishes pyoverdine siderophore biosynthesis and extracellular iron scavenging in Pseudomonas aeruginosa (NCBITaxon:287), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.</p>
+        <p>The record&#39;s primary literature (<a href="https://doi.org/10.1111/1462-2920.14937" rel="nofollow noreferrer">DOI:10.1111/1462-2920.14937</a>, <a href="https://doi.org/10.15698/mic2018.10.649" rel="nofollow noreferrer">DOI:10.15698/mic2018.10.649</a>, <a href="https://doi.org/10.1073/pnas.0908760106" rel="nofollow noreferrer">DOI:10.1073/pnas.0908760106</a>) establishes pyoverdine siderophore biosynthesis and extracellular iron scavenging in Pseudomonas aeruginosa (NCBITaxon:287), but verified UniProtKB accessions must be curated on a GENE_OR_PROTEIN node before marking the graph MECHANISTIC.</p>
 
 
 
@@ -390,7 +391,7 @@
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Cycle 2 Stage 3 UniProt audit: canonical_examples cites species-level Pseudomonas aeruginosa (NCBITaxon:287; DOI:10.1073/pnas.0908760106) and Pseudomonas fluorescens (NCBITaxon:294; DOI:10.15698/mic2018.10.649), whereas reviewed Swiss-Prot pyoverdine biosynthesis/transport proteins (e.g., PvdA UniProtKB:Q51548, FpvA UniProtKB:P48632) are annotated on strain Pseudomonas aeruginosa PAO1 (NCBITaxon:208964; UP000002438) and current record evidence snippets do not name individual pvd/fpv gene products. Keeping graph NONMECHANISTIC and discussion OPEN until a PAO1-specific primary source snippet and canonical_examples entry are added.</p>
+          <p class="meta">Cycle 2 Stage 3 UniProt audit: canonical_examples cites species-level Pseudomonas aeruginosa (NCBITaxon:287; <a href="https://doi.org/10.1073/pnas.0908760106" rel="nofollow noreferrer">DOI:10.1073/pnas.0908760106</a>) and Pseudomonas fluorescens (NCBITaxon:294; <a href="https://doi.org/10.15698/mic2018.10.649" rel="nofollow noreferrer">DOI:10.15698/mic2018.10.649</a>), whereas reviewed Swiss-Prot pyoverdine biosynthesis/transport proteins (e.g., PvdA UniProtKB:Q51548, FpvA UniProtKB:P48632) are annotated on strain Pseudomonas aeruginosa PAO1 (NCBITaxon:208964; UP000002438) and current record evidence snippets do not name individual pvd/fpv gene products. Keeping graph NONMECHANISTIC and discussion OPEN until a PAO1-specific primary source snippet and canonical_examples entry are added.</p>
         </details>
 
       </div>
@@ -427,7 +428,7 @@
         <li><time>2026-09-14T18:33:33Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add siderophore production trait
-            <p>Minted traitmech:000186 for the bacterial siderophore production physiology trait with DOI-backed siderophore synthesis and release evidence from 10.1111/1462-2920.14937, 10.15698/mic2018.10.649, and 10.1073/pnas.0908760106; added Pseudomonas aeruginosa as a canonical pyoverdine-producing example; and reserved METPO:1014000 in proposals/metpo_traitmech_v63.</p></li></ul>
+            <p>Minted traitmech:000186 for the bacterial siderophore production physiology trait with DOI-backed siderophore synthesis and release evidence from <a href="https://doi.org/10.1111/1462-2920.14937" rel="nofollow noreferrer">10.1111/1462-2920.14937</a>, <a href="https://doi.org/10.15698/mic2018.10.649" rel="nofollow noreferrer">10.15698/mic2018.10.649</a>, and <a href="https://doi.org/10.1073/pnas.0908760106" rel="nofollow noreferrer">10.1073/pnas.0908760106</a>; added Pseudomonas aeruginosa as a canonical pyoverdine-producing example; and reserved METPO:1014000 in proposals/metpo_traitmech_v63.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/siderophore_production/2026-09-14T183333Z-codex-0d9b0c.yaml">Read this curation session</a>
         </li></ul>
 
@@ -459,7 +460,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -823,12 +833,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-23 11:45 UTC

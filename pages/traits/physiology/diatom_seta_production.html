@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.1038/s41467-021-24944-6" rel="nofollow noreferrer"><code>DOI:10.1038/s41467-021-24944-6</code></a>
         <blockquote>A striking example for such long elements are whisker-like extensions, called setae, which characterize the genus Chaetoceros</blockquote>
-        <p class="meta">Mayzel et al. 2021, PMID:34330922, PMC8324917, Introduction. Scientific Abstract, Introduction, Results, Discussion, Methods, main figure captions and Table 1 read in official Europe PMC full-text XML on 2026-10-10; actual Figures 2, 3 and 5 inspected. Other actual figures, supplements and movies remain unread. EXT_ID:34330922 AND SRC:MED confirmed the scientific abstract, ID, source, title and DOI. The quote identifies the structures; Results report seta formation in Chaetoceros tenuissimus under the source name. Figure 2 PDMPO labeling at growing tips supports new silica deposition, not only inherited appendage possession. Figure 3 resolves membrane, silica and an external organic layer; this supports a proposed extracellular route, not universal absence of a silica deposition vesicle. Figure 5 scores silicon limitation per cell, but germanium/PDMPO inhibition per valve; these denominators are not interchangeable. New valves still form under the germanium treatment, with altered texture, so valves are not claimed unaffected. No universal concentration threshold, growth rate or molecular necessity is inferred.</p>
+        <p class="meta">Mayzel et al. 2021, <a href="https://pubmed.ncbi.nlm.nih.gov/34330922/" rel="nofollow noreferrer">PMID:34330922</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8324917/" rel="nofollow noreferrer">PMC8324917</a>, Introduction. Scientific Abstract, Introduction, Results, Discussion, Methods, main figure captions and Table 1 read in official Europe PMC full-text XML on 2026-10-10; actual Figures 2, 3 and 5 inspected. Other actual figures, supplements and movies remain unread. EXT_ID:34330922 AND SRC:MED confirmed the scientific abstract, ID, source, title and DOI. The quote identifies the structures; Results report seta formation in Chaetoceros tenuissimus under the source name. Figure 2 PDMPO labeling at growing tips supports new silica deposition, not only inherited appendage possession. Figure 3 resolves membrane, silica and an external organic layer; this supports a proposed extracellular route, not universal absence of a silica deposition vesicle. Figure 5 scores silicon limitation per cell, but germanium/PDMPO inhibition per valve; these denominators are not interchangeable. New valves still form under the germanium treatment, with altered texture, so valves are not claimed unaffected. No universal concentration threshold, growth rate or molecular necessity is inferred.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1016/j.jsb.2025.108205" rel="nofollow noreferrer"><code>DOI:10.1016/j.jsb.2025.108205</code></a>
         <blockquote>Here, we study a relatively large species, Chaetoceros rostratus, that forms long and intricate setae.</blockquote>
-        <p class="meta">Safadi et al. 2025, PMID:40294667, online 2025-04-26, June issue. Complete scientific Abstract directly read in source-qualified Europe PMC CORE on 2026-10-10 using EXT_ID:40294667 AND SRC:MED; one exact MED result with matching ID, title and DOI. The abstract reports in-cell cryo-electron tomography during seta formation in Chaetoceros rostratus under the source name and describes an organic sheath covering newly formed silica outside the plasma membrane. Structural macromolecules might regulate architecture; their necessity is not demonstrated by this abstract. Full Methods, actual figures and supplements were not inspected. This is a distinct primary study with overlapping authors, not independent-laboratory replication. No current taxon or strain provenance is assigned from the abstract alone.</p>
+        <p class="meta">Safadi et al. 2025, <a href="https://pubmed.ncbi.nlm.nih.gov/40294667/" rel="nofollow noreferrer">PMID:40294667</a>, online 2025-04-26, June issue. Complete scientific Abstract directly read in source-qualified Europe PMC CORE on 2026-10-10 using EXT_ID:40294667 AND SRC:MED; one exact MED result with matching ID, title and DOI. The abstract reports in-cell cryo-electron tomography during seta formation in Chaetoceros rostratus under the source name and describes an organic sheath covering newly formed silica outside the plasma membrane. Structural macromolecules might regulate architecture; their necessity is not demonstrated by this abstract. Full Methods, actual figures and supplements were not inspected. This is a distinct primary study with overlapping authors, not independent-laboratory replication. No current taxon or strain provenance is assigned from the abstract alone.</p>
       </li>
 
     </ul>
@@ -113,7 +114,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -309,7 +310,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -338,12 +348,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-10 21:57 UTC

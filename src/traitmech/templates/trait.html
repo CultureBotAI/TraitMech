@@ -32,8 +32,8 @@
       {% for ev in trait.evidence %}
       <li>
         {{ citation(ev.reference) }}
-        {% if ev.snippet %}<blockquote>{{ ev.snippet }}</blockquote>{% endif %}
-        {% if ev.notes %}<p class="meta">{{ ev.notes }}</p>{% endif %}
+        {% if ev.snippet %}<blockquote>{{ ev.snippet | autolink }}</blockquote>{% endif %}
+        {% if ev.notes %}<p class="meta">{{ ev.notes | autolink }}</p>{% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -46,9 +46,9 @@
     {% set graph_dom_id = "pathograph-" ~ loop.index %}
     <div class="card causal-graph-card">
       <h2>{{ graph.title }}</h2>
-      {% if graph.description %}<p class="meta">{{ graph.description }}</p>{% endif %}
+      {% if graph.description %}<p class="meta">{{ graph.description | autolink }}</p>{% endif %}
 {% if graph.scope_status %}
-      <p class="graph-scope"><code>{{ graph.scope_status }}</code>{% if graph.scope_notes %} · {{ graph.scope_notes }}{% endif %}</p>
+      <p class="graph-scope"><code>{{ graph.scope_status }}</code>{% if graph.scope_notes %} · {{ graph.scope_notes | autolink }}{% endif %}</p>
 {% endif %}
       {% if graph.issues %}
       <div class="graph-warning">
@@ -77,18 +77,18 @@
           {% for edge in graph.evidence_rows %}
           <li id="{{ graph_dom_id }}-{{ edge.edge_id }}">
             <strong>{{ edge.source }}</strong>
-            {% if edge.source_grounding %}{% set sg_url = edge.source_grounding | curie_url %}{% if sg_url %}<a href="{{ sg_url }}" rel="nofollow noreferrer"><code>{{ edge.source_grounding }}</code></a>{% else %}<code>{{ edge.source_grounding }}</code>{% endif %}{% endif %}
+            {% if edge.source_grounding %}{{ edge.source_grounding | term_link }}{% endif %}
             <span class="edge-predicate">{{ edge.predicate }}</span>
             <strong>{{ edge.target }}</strong>
-            {% if edge.target_grounding %}{% set tg_url = edge.target_grounding | curie_url %}{% if tg_url %}<a href="{{ tg_url }}" rel="nofollow noreferrer"><code>{{ edge.target_grounding }}</code></a>{% else %}<code>{{ edge.target_grounding }}</code>{% endif %}{% endif %}
-            {% if edge.predicate_id %}{% set pid_url = edge.predicate_id | curie_url %}{% if pid_url %}<a href="{{ pid_url }}" rel="nofollow noreferrer"><code>{{ edge.predicate_id }}</code></a>{% else %}<code>{{ edge.predicate_id }}</code>{% endif %}{% endif %}
-            {% if edge.description %}<p>{{ edge.description }}</p>{% endif %}
+            {% if edge.target_grounding %}{{ edge.target_grounding | term_link }}{% endif %}
+            {% if edge.predicate_id %}{{ edge.predicate_id | term_link }}{% endif %}
+            {% if edge.description %}<p>{{ edge.description | autolink }}</p>{% endif %}
             <ul>
               {% for ev in edge.evidence %}
               <li>
                 {{ citation(ev.reference) }}
-                {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
-                {% if ev.notes %}<span class="meta">{{ ev.notes }}</span>{% endif %}
+                {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet | autolink }}</span>{% endif %}
+                {% if ev.notes %}<span class="meta">{{ ev.notes | autolink }}</span>{% endif %}
               </li>
               {% endfor %}
             </ul>
@@ -106,7 +106,7 @@
           <li><strong>{{ link.node_label }}</strong>:
             <a href="{{ link.url }}" rel="nofollow noreferrer"><code>{{ link.identifier }}</code></a>
             <span class="meta">{{ link.relation }}</span>
-            <p>{{ link.basis }}</p>
+            <p>{{ link.basis | autolink }}</p>
             <small>PathwayMech source version <code>{{ link.source_version }}</code></small>
           </li>
           {% endfor %}
@@ -132,21 +132,21 @@
                 </td>
                 <td>
                   {% set tid = ex.taxon_id|replace('NCBITaxon:','') %}
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ tid }}" rel="nofollow noreferrer">{{ ex.taxon_label }}</a>
-                  <br><code>{{ ex.taxon_id }}</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id={{ tid }}" rel="nofollow noreferrer">{{ ex.taxon_label }}
+                  <br><code>{{ ex.taxon_id }}</code></a>
                 </td>
                 <td>
                   <code>{{ ex.entry_status }}</code><br>
                   <span class="meta">retrieved {{ ex.retrieved_on }}{% if ex.entry_version %} · entry v{{ ex.entry_version }}{% endif %}{% if ex.sequence_version %} · sequence v{{ ex.sequence_version }}{% endif %}</span>
                 </td>
                 <td>
-                  {% if ex.role %}<p>{{ ex.role }}</p>{% endif %}
+                  {% if ex.role %}<p>{{ ex.role | autolink }}</p>{% endif %}
                   <ul>
                     {% for ev in ex.evidence %}
                     <li>
                       {{ citation(ev.reference) }}
-                      {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet }}</span>{% endif %}
-                      {% if ev.notes %}<span class="meta">{{ ev.notes }}</span>{% endif %}
+                      {% if ev.snippet %}<span class="evidence-snippet">{{ ev.snippet | autolink }}</span>{% endif %}
+                      {% if ev.notes %}<span class="meta">{{ ev.notes | autolink }}</span>{% endif %}
                     </li>
                     {% endfor %}
                   </ul>
@@ -173,7 +173,7 @@
         <tbody>
         {% for ds in trait.datasets %}
           <tr>
-            <td>{{ ds.title or ds.accession }}{% if ds.description %}<br><span class="meta">{{ ds.description }}</span>{% endif %}</td>
+            <td>{{ ds.title or ds.accession }}{% if ds.description %}<br><span class="meta">{{ ds.description | autolink }}</span>{% endif %}</td>
             <td>{% if ds.dataset_type %}<code>{{ ds.dataset_type }}</code>{% endif %}</td>
             <td>{{ ds.repository or '' }}</td>
             <td>{% if ds.url %}<a href="{{ ds.url }}" rel="nofollow noreferrer">{{ ds.accession or ds.url }}</a>{% else %}{{ ds.accession or '' }}{% endif %}</td>
@@ -233,7 +233,7 @@
       <h2>Synonyms ({{ trait.synonyms|length }})</h2>
       <ul class="synonyms">
         {% for s in trait.synonyms %}
-        <li>{{ s.synonym_text }} <span class="meta">{{ s.synonym_type }}{% if s.source %} · {{ s.source }}{% endif %}</span></li>
+        <li>{{ s.synonym_text }} <span class="meta">{{ s.synonym_type }}{% if s.source %} · {{ citation(s.source) }}{% endif %}</span></li>
         {% endfor %}
       </ul>
     </div>
@@ -243,7 +243,7 @@
     <div class="card">
       <h2>Cross-references</h2>
       <ul class="xrefs">
-        {% for x in trait.xrefs %}{% set x_url = x | curie_url %}<li>{% if x_url %}<a href="{{ x_url }}" rel="nofollow noreferrer"><code>{{ x }}</code></a>{% else %}<code>{{ x }}</code>{% endif %}</li>{% endfor %}
+        {% for x in trait.xrefs %}<li>{{ x | term_link }}</li>{% endfor %}
       </ul>
     </div>
     {% endif %}
@@ -256,7 +256,7 @@
         via <em>{{ kgm_match.match_method }}</em>.</p>
       <ul class="kgm-nodes">
         {% for node in kgm_match.kgm_nodes %}
-        <li><code>{{ node }}</code>{% if node in node_dim_preview %} <span class="dim-preview">{{ node_dim_preview[node] }}</span>{% endif %}</li>
+        <li>{{ node | term_link(parent_labels.get(node)) }}{% if node in node_dim_preview %} <span class="dim-preview">{{ node_dim_preview[node] }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe ({{ embedding_release }}).</p>
@@ -294,7 +294,7 @@
         ontologies, and some are known to be wrong. Check any CURIE against the source
         before using it.
       </div>
-      <pre class="research-md">{{ research_md }}</pre>
+      <pre class="research-md">{{ research_md | autolink }}</pre>
       {% if research_total_lines > research_shown_lines %}
       <p class="meta">Showing the first {{ research_shown_lines }} of
         {{ research_total_lines }} lines of findings; the linked file also carries the
@@ -329,7 +329,7 @@
           {% if ex.reference %}
           {{ citation(ex.reference) }}
           {% endif %}
-          {% if ex.note %}<span class="meta">{{ ex.note }}</span>{% endif %}
+          {% if ex.note %}<span class="meta">{{ ex.note | autolink }}</span>{% endif %}
         </li>
         {% endfor %}
       </ul>
@@ -367,7 +367,7 @@
           mechanism it concerns.</p>
         {% endif %}
 
-        {% if d.rationale %}<p>{{ d.rationale }}</p>{% endif %}
+        {% if d.rationale %}<p>{{ d.rationale | autolink }}</p>{% endif %}
 
         {% if d.proposed_experiments %}
         <h3>Proposed experiments</h3>
@@ -376,7 +376,7 @@
           <li>
             {% if x.name %}<strong>{{ x.name }}</strong>{% endif %}
             {% if x.approach %}<span class="badge">{{ x.approach }}</span>{% endif %}
-            {% if x.description %}<span class="meta">{{ x.description }}</span>{% endif %}
+            {% if x.description %}<span class="meta">{{ x.description | autolink }}</span>{% endif %}
             {% if x.model_systems %}<span class="meta">Model systems:
               {{ x.model_systems|join(', ') }}</span>{% endif %}
             {% if x.perturbations %}<span class="meta">Perturbations:
@@ -403,15 +403,15 @@
           <li>
             {{ citation(e.reference) }}
             {% if e.supports %}<span class="badge">{{ e.supports|replace('_', ' ') }}</span>{% endif %}
-            {% if e.snippet %}<blockquote>{{ e.snippet }}</blockquote>{% endif %}
-            {% if e.explanation %}<span class="meta">{{ e.explanation }}</span>{% endif %}
+            {% if e.snippet %}<blockquote>{{ e.snippet | autolink }}</blockquote>{% endif %}
+            {% if e.explanation %}<span class="meta">{{ e.explanation | autolink }}</span>{% endif %}
           </li>
           {% endfor %}
         </ul>
         {% endif %}
 
         {% if d.resolution_note %}
-        <p class="meta"><em>Resolution:</em> {{ d.resolution_note }}</p>
+        <p class="meta"><em>Resolution:</em> {{ d.resolution_note | autolink }}</p>
         {% endif %}
 
         {# Provenance for a discussion that was raised one way and curated
@@ -421,7 +421,7 @@
         {% if d.notes %}
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">{{ d.notes }}</p>
+          <p class="meta">{{ d.notes | autolink }}</p>
         </details>
         {% endif %}
       </div>
@@ -436,7 +436,7 @@
         <li>
           <time>{{ ev.timestamp }}</time> ·
           <strong>{{ ev.action }}</strong>{% if ev.curator %} · {{ ev.curator }}{% endif %}
-          {% if ev.changes %}<p class="changes">{{ ev.changes }}</p>{% endif %}
+          {% if ev.changes %}<p class="changes">{{ ev.changes | autolink }}</p>{% endif %}
         </li>
         {% endfor %}
       </ol>{% endif %}
@@ -445,8 +445,8 @@
       <ul>{% for item in curation_sessions %}
         <li><time>{{ item.session.timestamp }}</time>
           {% for actor in item.session.actors %} · {{ actor.name }}{% endfor %}
-          <ul>{% for ev in item.events %}<li><strong>{{ ev.type }}</strong> — {{ ev.summary }}
-            {% if ev.details %}<p>{{ ev.details }}</p>{% endif %}</li>{% endfor %}</ul>
+          <ul>{% for ev in item.events %}<li><strong>{{ ev.type }}</strong> — {{ ev.summary | autolink }}
+            {% if ev.details %}<p>{{ ev.details | autolink }}</p>{% endif %}</li>{% endfor %}</ul>
           <a href="{{ item.source_url }}">Read this curation session</a>
         </li>{% endfor %}</ul>
       {% endif %}
@@ -485,7 +485,16 @@
       <dt>Term kind</dt>
       <dd>{{ trait.term_kind }}</dd>
       <dt>Status</dt>
-      <dd>{{ trait.mapping_status }}</dd>
+      <dd>{{ trait.mapping_status }}
+        {% set status_meaning = (status_meanings or {}).get(trait.mapping_status) %}
+        {% if status_meaning %}
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>{{ status_meaning }}</p>
+          <p class="meta">Quoted from the schema's <a href="{{ root }}schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+        {% endif %}
+      </dd>
     </dl>
   </div>
 

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -118,7 +119,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0042710" rel="nofollow noreferrer"><code>GO:0042710</code></a>
             <span class="edge-predicate">confers</span>
             <strong>biofilm formation</strong>
-            <code>traitmech:000053</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/biofilm_formation.yaml" rel="nofollow noreferrer"><code>traitmech:000053</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Biofilm-formation activity realizes the biofilm-forming trait.</p>
             <ul>
@@ -364,8 +365,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=208964" rel="nofollow noreferrer">Pseudomonas aeruginosa PAO1</a>
-                  <br><code>NCBITaxon:208964</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=208964" rel="nofollow noreferrer">Pseudomonas aeruginosa PAO1
+                  <br><code>NCBITaxon:208964</code></a>
                 </td>
                 <td>
                   <code>UNREVIEWED</code><br>
@@ -431,7 +432,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>biofilm-forming <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrmicro.2016.94</span></li>
+        <li>biofilm-forming <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1038/nrmicro.2016.94" rel="nofollow noreferrer"><code>DOI:10.1038/nrmicro.2016.94</code></a></span></li>
 
       </ul>
     </div>
@@ -447,7 +448,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -696,7 +697,7 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;, whose sentence came from PMID:42039744. That sentence is about immune homeostasis at the gut mucosa, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:42039744 &#39;How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;; PMID:41245847 &#39;We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.&#39;; PMID:41661098 &#39;Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.&#39;; PMID:42125129 &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biofilm formation: How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;, whose sentence came from <a href="https://pubmed.ncbi.nlm.nih.gov/42039744/" rel="nofollow noreferrer">PMID:42039744</a>. That sentence is about immune homeostasis at the gut mucosa, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: <a href="https://pubmed.ncbi.nlm.nih.gov/42039744/" rel="nofollow noreferrer">PMID:42039744</a> &#39;How immune homeostasis is maintained in this constantly challenged environment remains however a central and largely unanswered question.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41245847/" rel="nofollow noreferrer">PMID:41245847</a> &#39;We present a research agenda identifying key research gaps and organizing them into priority areas to guide future investigations in this high-risk population.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41661098/" rel="nofollow noreferrer">PMID:41661098</a> &#39;Finally, we identify major knowledge gaps and research priorities necessary to advance a more integrated understanding of maternal microbial influences on reproductive and neonatal health.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/42125129/" rel="nofollow noreferrer">PMID:42125129</a> &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
         </details>
 
       </div>
@@ -807,7 +808,16 @@ Only identifiers that can be assigned conservatively are proposed. Label-only no
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1171,12 +1181,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

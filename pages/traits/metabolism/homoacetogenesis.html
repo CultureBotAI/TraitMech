@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -537,8 +538,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1525" rel="nofollow noreferrer">Neomoorella thermoacetica</a>
-                  <br><code>NCBITaxon:1525</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1525" rel="nofollow noreferrer">Neomoorella thermoacetica
+                  <br><code>NCBITaxon:1525</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -604,9 +605,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>Reductive acetyl-CoA pathway <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>Reductive acetyl-CoA pathway <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
-        <li>Wood-Ljungdahl pathway <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>Wood-Ljungdahl pathway <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -622,7 +623,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000846</code> <span class="dim-preview">[-0.148, -0.934, -1.245, +0.063, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000846" rel="nofollow noreferrer">Homoacetogenesis <code>METPO:1000846</code></a> <span class="dim-preview">[-0.148, -0.934, -1.245, +0.063, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -928,7 +929,7 @@ Ontology identifiers below are deliberately conservative. Label-only nodes are p
         <li>
           <time>2026-08-26T03:24:00Z</time> ·
           <strong>RESTORE_CANONICAL_CITATION</strong> · claude
-          <p class="changes">Restored the canonical-example citation for NCBITaxon:33952 from DOI:10.1128/JB.00357-18 back to PMID:22479398 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
+          <p class="changes">Restored the canonical-example citation for NCBITaxon:33952 from <a href="https://doi.org/10.1128/JB.00357-18" rel="nofollow noreferrer">DOI:10.1128/JB.00357-18</a> back to <a href="https://pubmed.ncbi.nlm.nih.gov/22479398/" rel="nofollow noreferrer">PMID:22479398</a> (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
 
         <li>
@@ -988,7 +989,16 @@ Ontology identifiers below are deliberately conservative. Label-only nodes are p
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1352,12 +1362,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

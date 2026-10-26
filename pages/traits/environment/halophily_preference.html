@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -406,9 +407,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>Physiology and metabolism.halophily.halophily level <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>Physiology and metabolism.halophily.halophily level <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
-        <li>range_salinity <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>range_salinity <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -424,7 +425,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000629</code> <span class="dim-preview">[-3.748, -1.433, -0.015, -2.487, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000629" rel="nofollow noreferrer">halophily preference <code>METPO:1000629</code></a> <span class="dim-preview">[-3.748, -1.433, -0.015, -2.487, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -736,13 +737,13 @@ The older binary salt-in/salt-out model is increasingly being replaced by a **dy
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
-          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed canonical example(s): Halomonas elongata (NCBITaxon:2746; PMID:20849449), Escherichia coli (NCBITaxon:562; PMC8415458). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 2 direct source-backed canonical example(s): Halomonas elongata (NCBITaxon:2746; <a href="https://pubmed.ncbi.nlm.nih.gov/20849449/" rel="nofollow noreferrer">PMID:20849449</a>), Escherichia coli (NCBITaxon:562; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8415458/" rel="nofollow noreferrer">PMC8415458</a>). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
 
         <li>
           <time>2026-10-03T17:07:26Z</time> ·
           <strong>REPAIR_CANONICAL_CITATION_SCOPE_1626</strong> · codex
-          <p class="changes">Resolved issue 1626 by normalizing PMC8415458 to its verified DOI 10.3389/fmicb.2021.705326 (PMID:34484145), preserving the same paper. Qualified the non-halophilic comparator to BW25113 in LB at 37 C and the reported 24-h viable-count comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained NCBITaxon:562 and its independently checked NCBI label. The broad-class role, Halomonas example, definition, hierarchy and graph are unchanged; no species-wide salt requirement or sodium-free growth is asserted.</p>
+          <p class="changes">Resolved issue 1626 by normalizing <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8415458/" rel="nofollow noreferrer">PMC8415458</a> to its verified <a href="https://doi.org/10.3389/fmicb.2021.705326" rel="nofollow noreferrer">DOI 10.3389/fmicb.2021.705326</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/34484145/" rel="nofollow noreferrer">PMID:34484145</a>), preserving the same paper. Qualified the non-halophilic comparator to BW25113 in LB at 37 C and the reported 24-h viable-count comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained NCBITaxon:562 and its independently checked NCBI label. The broad-class role, Halomonas example, definition, hierarchy and graph are unchanged; no species-wide salt requirement or sodium-free growth is asserted.</p>
         </li>
 
         <li>
@@ -758,13 +759,13 @@ The older binary salt-in/salt-out model is increasingly being replaced by a **dy
         <li><time>2026-10-03T17:10:54Z</time>
            · codex
           <ul><li><strong>EDIT</strong> — Normalize and scope the non-halophilic branch comparator citation
-            <p>Resolved legacy reference PMC8415458 to DOI:10.3389/fmicb.2021.705326, the same Li et al. 2021 paper independently identified as PMID:34484145. Qualified the existing E. coli comparator to wild-type BW25113 in LB at 37 C and the reported 24-h viable-count comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained the broad-class comparator role and NCBITaxon:562 with its live NCBI label; no sodium-free or species-wide requirement is asserted. Preserved the Halomonas example, all top-level evidence, definition, hierarchy, graph, mapping status and old history. Guarded prevalidation and 91 focused tests passed; full downstream checks and independent review remain required.</p></li></ul>
+            <p>Resolved legacy reference <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8415458/" rel="nofollow noreferrer">PMC8415458</a> to <a href="https://doi.org/10.3389/fmicb.2021.705326" rel="nofollow noreferrer">DOI:10.3389/fmicb.2021.705326</a>, the same Li et al. 2021 paper independently identified as <a href="https://pubmed.ncbi.nlm.nih.gov/34484145/" rel="nofollow noreferrer">PMID:34484145</a>. Qualified the existing E. coli comparator to wild-type BW25113 in LB at 37 C and the reported 24-h viable-count comparison across 0%, 1%, 3.5% and 5% NaCl supplementation. Retained the broad-class comparator role and NCBITaxon:562 with its live NCBI label; no sodium-free or species-wide requirement is asserted. Preserved the Halomonas example, all top-level evidence, definition, hierarchy, graph, mapping status and old history. Guarded prevalidation and 91 focused tests passed; full downstream checks and independent review remain required.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/halophily_preference/2026-10-03T171054Z-codex-1254fc.yaml">Read this curation session</a>
         </li>
         <li><time>2026-10-03T17:32:42Z</time>
            · codex
           <ul><li><strong>EDIT</strong> — Keep the parent comparator at branch scope without duplicating the child measurement
-            <p>Addressed optional independent PR 1628 review feedback. Retained verified DOI:10.3389/fmicb.2021.705326 and BW25113 in LB as the non-halophilic branch comparator contrasting with Halomonas, but removed the repeated 24-hour numerical comparison. The exact snippet and measured comparison remain on non_halophilic. No sodium-free or species-wide claim is introduced. Appended a second event; preserved original repository/per-record history, Halomonas row, evidence, identity, definition, hierarchy and graph. Exact reviewed-successor guards remain; comparing arbitrary live examples would weaken drift detection. All 102 focused repair/rendering tests passed; generated products and full checks must be rerun before independent re-review.</p></li></ul>
+            <p>Addressed optional independent PR 1628 review feedback. Retained verified <a href="https://doi.org/10.3389/fmicb.2021.705326" rel="nofollow noreferrer">DOI:10.3389/fmicb.2021.705326</a> and BW25113 in LB as the non-halophilic branch comparator contrasting with Halomonas, but removed the repeated 24-hour numerical comparison. The exact snippet and measured comparison remain on non_halophilic. No sodium-free or species-wide claim is introduced. Appended a second event; preserved original repository/per-record history, Halomonas row, evidence, identity, definition, hierarchy and graph. Exact reviewed-successor guards remain; comparing arbitrary live examples would weaken drift detection. All 102 focused repair/rendering tests passed; generated products and full checks must be rerun before independent re-review.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/halophily_preference/2026-10-03T173242Z-codex-7657e5.yaml">Read this curation session</a>
         </li></ul>
 
@@ -796,7 +797,16 @@ The older binary salt-in/salt-out model is increasingly being replaced by a **dy
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1160,12 +1170,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-03 17:32 UTC

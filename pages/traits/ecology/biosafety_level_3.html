@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -112,8 +113,8 @@
             <a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer"><code>METPO:1001104</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
-            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/ecology/biosafety_level.html"><code>METPO:1001101</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>BSL-3 is a member of the biosafety-level classification.</p>
             <ul>
 
@@ -286,9 +287,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>3 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>3 <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
-        <li>3** <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>3** <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -304,7 +305,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1001104</code> <span class="dim-preview">[+22.599, -24.248, -48.083, +0.798, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1001104" rel="nofollow noreferrer">biosafety level 3 <code>METPO:1001104</code></a> <span class="dim-preview">[+22.599, -24.248, -48.083, +0.798, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -553,7 +554,7 @@ This distinction is important because the same agent may be handled under differ
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 3: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.&#39;, whose sentence came from PMID:41494000. That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:41494000 &#39;Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.&#39;; PMID:40514544 &#39;Although T cells are essential for immunity to TB, the mechanisms that provide protective immunity are poorly understood.&#39;; PMID:41552424 &#39;In the field of microbiological diagnosis, HTS provides a complementary or alternative approach to traditional diagnostic tests, particularly in cases with non-specific symptoms or when the etiology is unknown.&#39;; PMID:41917383 &#39;While its virulence genes critically regulate intracellular survival and replication, the molecular mechanisms underlying pathogenesis remain elusive.&#39;.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 3: Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.&#39;, whose sentence came from <a href="https://pubmed.ncbi.nlm.nih.gov/41494000/" rel="nofollow noreferrer">PMID:41494000</a>. That sentence is about a review&#39;s boilerplate statement that gaps exist, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: <a href="https://pubmed.ncbi.nlm.nih.gov/41494000/" rel="nofollow noreferrer">PMID:41494000</a> &#39;Additionally, it identifies ongoing challenges and critical knowledge gaps for future research.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/40514544/" rel="nofollow noreferrer">PMID:40514544</a> &#39;Although T cells are essential for immunity to TB, the mechanisms that provide protective immunity are poorly understood.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41552424/" rel="nofollow noreferrer">PMID:41552424</a> &#39;In the field of microbiological diagnosis, HTS provides a complementary or alternative approach to traditional diagnostic tests, particularly in cases with non-specific symptoms or when the etiology is unknown.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41917383/" rel="nofollow noreferrer">PMID:41917383</a> &#39;While its virulence genes critically regulate intracellular survival and replication, the molecular mechanisms underlying pathogenesis remain elusive.&#39;.</p>
         </details>
 
       </div>
@@ -643,7 +644,16 @@ This distinction is important because the same agent may be handled under differ
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1007,12 +1017,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC

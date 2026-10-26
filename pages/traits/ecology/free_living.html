@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
 
             <span class="edge-predicate">confers</span>
             <strong>free-living</strong>
-            <code>traitmech:000048</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/free_living.yaml" rel="nofollow noreferrer"><code>traitmech:000048</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Persistent occupancy of environmental habitats realizes the free-living lifestyle.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>free-living</strong>
-            <code>traitmech:000048</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/free_living.yaml" rel="nofollow noreferrer"><code>traitmech:000048</code></a>
             <span class="edge-predicate">associated with</span>
             <strong>biogeographic community structure</strong>
 
@@ -137,7 +138,7 @@
 
             <span class="edge-predicate">required for</span>
             <strong>free-living</strong>
-            <code>traitmech:000048</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/free_living.yaml" rel="nofollow noreferrer"><code>traitmech:000048</code></a>
 
             <p>Self-sufficient metabolic pathways for carbon, nitrogen, sulfur and cofactors are required for a host-independent free-living life strategy.</p>
             <ul>
@@ -225,7 +226,7 @@
 
             <span class="edge-predicate">promotes</span>
             <strong>free-living</strong>
-            <code>traitmech:000048</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/free_living.yaml" rel="nofollow noreferrer"><code>traitmech:000048</code></a>
             <a href="http://purl.obolibrary.org/obo/RO_0002213" rel="nofollow noreferrer"><code>RO:0002213</code></a>
             <p>Osmoadaptation supports persistence in unstable/saline environments characteristic of the free-living lifestyle.</p>
             <ul>
@@ -339,7 +340,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -583,14 +584,14 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
 
 
 
-        <p class="meta"><em>Resolution:</em> Refuted. The record&#39;s own would_refute criterion was &#39;the trehalose knockout is osmotically impaired&#39;, and it is: in Bradyrhizobium diazoefficiens USDA 110 the otsCB-otsA deletion loses viability at 400 mM sorbitol, a nonionic challenge that separates osmotic pressure from ion toxicity, as well as at 27 mM NaCl, 50 mM MgCl2 and 75 mM MgSO4 (DOI:10.1128/mBio.00390-21). A cytoplasmic trehalase phenocopies the deletion and exogenous trehalose rescues the otsA deletion but not the transporter-deficient strains, so the phenotype tracks intracellular trehalose. Independently constructed mutants in the same background are inhibited on 60 mM NaCl (DOI:10.1128/AEM.02483-09). The split was therefore not real, and trehalose_biosynthesis now enables osmotic_stress_tolerance alongside ectoine and glycine betaine. Two things were deliberately NOT decided here and are tracked in issue 614: the weaker pre-existing trehalose_biosynthesis to environmental_stress_tolerance edge was retained rather than deleted, and the observation that the same AEM study found no desiccation defect for low-trehalose otsA mutants argues trehalose&#39;s role is specifically osmotic.</p>
+        <p class="meta"><em>Resolution:</em> Refuted. The record&#39;s own would_refute criterion was &#39;the trehalose knockout is osmotically impaired&#39;, and it is: in Bradyrhizobium diazoefficiens USDA 110 the otsCB-otsA deletion loses viability at 400 mM sorbitol, a nonionic challenge that separates osmotic pressure from ion toxicity, as well as at 27 mM NaCl, 50 mM MgCl2 and 75 mM MgSO4 (<a href="https://doi.org/10.1128/mBio.00390-21" rel="nofollow noreferrer">DOI:10.1128/mBio.00390-21</a>). A cytoplasmic trehalase phenocopies the deletion and exogenous trehalose rescues the otsA deletion but not the transporter-deficient strains, so the phenotype tracks intracellular trehalose. Independently constructed mutants in the same background are inhibited on 60 mM NaCl (<a href="https://doi.org/10.1128/AEM.02483-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02483-09</a>). The split was therefore not real, and trehalose_biosynthesis now enables osmotic_stress_tolerance alongside ectoine and glycine betaine. Two things were deliberately NOT decided here and are tracked in issue 614: the weaker pre-existing trehalose_biosynthesis to environmental_stress_tolerance edge was retained rather than deleted, and the observation that the same AEM study found no desiccation defect for low-trehalose otsA mutants argues trehalose&#39;s role is specifically osmotic.</p>
 
 
 
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;, whose sentence came from PMID:41989588. That sentence is about protozoan infection and gut microbial diversity, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:41989588 &#39;Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;; PMID:42039802 &#39;Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.&#39;; PMID:41943163 &#39;OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.&#39;; PMID:42125129 &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for free-living: Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;, whose sentence came from <a href="https://pubmed.ncbi.nlm.nih.gov/41989588/" rel="nofollow noreferrer">PMID:41989588</a>. That sentence is about protozoan infection and gut microbial diversity, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: <a href="https://pubmed.ncbi.nlm.nih.gov/41989588/" rel="nofollow noreferrer">PMID:41989588</a> &#39;Interactions between parasites and the gut microbiota play a key role in immune responses and susceptibility to zoonotic diseases; however, many aspects of how protozoan infections alter microbial diversity and how these changes influence parasite pathogenicity and host defense remain poorly understood.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/42039802/" rel="nofollow noreferrer">PMID:42039802</a> &#39;Engineered microbial assemblies tailored to specific host plants and environmental conditions have shown potential in stabilizing crop performance during drought, salinity, and nutrient limitations.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41943163/" rel="nofollow noreferrer">PMID:41943163</a> &#39;OBJECTIVES: Oxo-polyethylene (oxo-PE) is marketed as a biodegradable plastic, yet its environmental degradation remains poorly understood, particularly in marine contexts.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/42125129/" rel="nofollow noreferrer">PMID:42125129</a> &#34;However, contradictions persist regarding pH&#39;s effect on microbial diversity, with unresolved questions about how specific environmental conditions regulate microbial taxa.&#34;.</p>
         </details>
 
       </div>
@@ -653,7 +654,7 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
         <li>
           <time>2026-08-31T20:42:29Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added trehalose_biosynthesis -[RO:0002327 enables]-&gt; osmotic_stress_tolerance to free_living_environmental_habitat, resolving the record&#39;s x-compatible-solute-partitioning knowledge gap (#614) against its own stated would_refute criterion. Loss-of-function, trehalase-depletion and metabolite-rescue evidence from DOI:10.1128/mBio.00390-21, replicated by independent mutants in DOI:10.1128/AEM.02483-09, show the trehalose knockout is osmotically impaired, so the trehalose/ectoine split the graph asserted is not a real distinction. This also merges the graph&#39;s stranded {trehalose_biosynthesis, environmental_stress_tolerance} component into the main one. The pre-existing edge to environmental_stress_tolerance is retained rather than deleted: its comparative-genomics evidence is weaker but removing a cited edge is a semantic decision, tracked in #614.</p>
+          <p class="changes">Added trehalose_biosynthesis -[RO:0002327 enables]-&gt; osmotic_stress_tolerance to free_living_environmental_habitat, resolving the record&#39;s x-compatible-solute-partitioning knowledge gap (#614) against its own stated would_refute criterion. Loss-of-function, trehalase-depletion and metabolite-rescue evidence from <a href="https://doi.org/10.1128/mBio.00390-21" rel="nofollow noreferrer">DOI:10.1128/mBio.00390-21</a>, replicated by independent mutants in <a href="https://doi.org/10.1128/AEM.02483-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02483-09</a>, show the trehalose knockout is osmotically impaired, so the trehalose/ectoine split the graph asserted is not a real distinction. This also merges the graph&#39;s stranded {trehalose_biosynthesis, environmental_stress_tolerance} component into the main one. The pre-existing edge to environmental_stress_tolerance is retained rather than deleted: its comparative-genomics evidence is weaker but removing a cited edge is a semantic decision, tracked in #614.</p>
         </li>
 
         <li>
@@ -671,7 +672,7 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
         <li>
           <time>2026-10-24T02:45:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1038/nrmicro1341 (already present on sibling record soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-014 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1038/nrmicro1341" rel="nofollow noreferrer">DOI:10.1038/nrmicro1341</a> (already present on sibling record soil_dwelling.yaml evidence[1]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-014 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -681,7 +682,7 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
         <li><time>2026-08-31T20:45:06Z</time>
            · claude-code
           <ul><li><strong>EDIT</strong> — Connect trehalose biosynthesis to osmotic stress tolerance in free_living
-            <p>Resolves the record&#39;s own x-compatible-solute-partitioning knowledge gap against its stated would_refute criterion. Added trehalose_biosynthesis -[RO:0002327 enables]-&gt; osmotic_stress_tolerance to free_living_environmental_habitat with two independent experimental references and verbatim snippets: DOI:10.1128/mBio.00390-21 (Bradyrhizobium diazoefficiens USDA 110; the otsCB-otsA deletion loses viability at 400 mM sorbitol, 27 mM NaCl, 50 mM MgCl2 and 75 mM MgSO4, the nonionic sorbitol condition separating osmotic pressure from ion toxicity; a cytoplasmic trehalase phenocopies it and exogenous trehalose rescues the otsA deletion but not the transporter-deficient strains) and DOI:10.1128/AEM.02483-09 (independently constructed mutants in the same background inhibited on 60 mM NaCl). Both DOIs and both snippets were verified against the primary sources this session, not taken from the research artifact. The edit merges the graph&#39;s stranded trehalose_biosynthesis/environmental_stress_tolerance component into the main one, taking the graph from 2 wired components to 1 with no unwired nodes; that fragmentation was invisible to audit-graphs because the graph is NONMECHANISTIC, filed as issue 613. The pre-existing trehalose_biosynthesis to environmental_stress_tolerance edge was RETAINED, not deleted: its comparative-genomics evidence is weaker than what is added here and the desiccation result in AEM.02483-09 argues trehalose&#39;s role is specifically osmotic, but removing a cited edge is a semantic decision and evidence removal without provenance is the issue 520 failure mode. Written through write_validated_trait with a CONNECT_CAUSAL_GRAPH curation event. Gates: validate-strict 0 errors, audit-snippets 2592 findings all baselined with 0 new, audit-graphs 0 new, audit-derived-reports clean after just gen-pages. Also set the x-compatible-solute-partitioning discussion to RESOLVED with resolved_date 2026-08-31 and a resolution_note recording the verdict, the two references, and the two questions deliberately left open (the retained environmental_stress_tolerance edge, and the absence of a desiccation defect for low-trehalose otsA mutants). Regenerated pages/ via just gen-pages and app/discussions/data.js via just gen-discussions-data. This record is one record for one coherent change to one target, per history/README.md.</p></li></ul>
+            <p>Resolves the record&#39;s own x-compatible-solute-partitioning knowledge gap against its stated would_refute criterion. Added trehalose_biosynthesis -[RO:0002327 enables]-&gt; osmotic_stress_tolerance to free_living_environmental_habitat with two independent experimental references and verbatim snippets: <a href="https://doi.org/10.1128/mBio.00390-21" rel="nofollow noreferrer">DOI:10.1128/mBio.00390-21</a> (Bradyrhizobium diazoefficiens USDA 110; the otsCB-otsA deletion loses viability at 400 mM sorbitol, 27 mM NaCl, 50 mM MgCl2 and 75 mM MgSO4, the nonionic sorbitol condition separating osmotic pressure from ion toxicity; a cytoplasmic trehalase phenocopies it and exogenous trehalose rescues the otsA deletion but not the transporter-deficient strains) and <a href="https://doi.org/10.1128/AEM.02483-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02483-09</a> (independently constructed mutants in the same background inhibited on 60 mM NaCl). Both DOIs and both snippets were verified against the primary sources this session, not taken from the research artifact. The edit merges the graph&#39;s stranded trehalose_biosynthesis/environmental_stress_tolerance component into the main one, taking the graph from 2 wired components to 1 with no unwired nodes; that fragmentation was invisible to audit-graphs because the graph is NONMECHANISTIC, filed as issue 613. The pre-existing trehalose_biosynthesis to environmental_stress_tolerance edge was RETAINED, not deleted: its comparative-genomics evidence is weaker than what is added here and the desiccation result in AEM.02483-09 argues trehalose&#39;s role is specifically osmotic, but removing a cited edge is a semantic decision and evidence removal without provenance is the issue 520 failure mode. Written through write_validated_trait with a CONNECT_CAUSAL_GRAPH curation event. Gates: validate-strict 0 errors, audit-snippets 2592 findings all baselined with 0 new, audit-graphs 0 new, audit-derived-reports clean after just gen-pages. Also set the x-compatible-solute-partitioning discussion to RESOLVED with resolved_date 2026-08-31 and a resolution_note recording the verdict, the two references, and the two questions deliberately left open (the retained environmental_stress_tolerance edge, and the absence of a desiccation defect for low-trehalose otsA mutants). Regenerated pages/ via just gen-pages and app/discussions/data.js via just gen-discussions-data. This record is one record for one coherent change to one target, per history/README.md.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/free_living/2026-08-31T204506Z-claude-code-ca81b1.yaml">Read this curation session</a>
         </li></ul>
 
@@ -713,7 +714,16 @@ Ramoneda et al. evaluated **26,277 genomes across 12 phyla** and community data 
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1077,12 +1087,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-24 02:45 UTC

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0030154" rel="nofollow noreferrer"><code>GO:0030154</code></a>
             <span class="edge-predicate">confers</span>
             <strong>heterocyst</strong>
-            <code>traitmech:000073</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/heterocyst.yaml" rel="nofollow noreferrer"><code>traitmech:000073</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Cyanobacterial cell differentiation realizes the thick-walled heterocyst.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>heterocyst</strong>
-            <code>traitmech:000073</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/heterocyst.yaml" rel="nofollow noreferrer"><code>traitmech:000073</code></a>
             <span class="edge-predicate">causes</span>
             <strong>microoxic intracellular environment</strong>
 
@@ -270,7 +271,7 @@
 
             <span class="edge-predicate">contributes to</span>
             <strong>heterocyst</strong>
-            <code>traitmech:000073</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/heterocyst.yaml" rel="nofollow noreferrer"><code>traitmech:000073</code></a>
             <a href="http://purl.obolibrary.org/obo/RO_0002326" rel="nofollow noreferrer"><code>RO:0002326</code></a>
             <p>HetR is the central positive regulator of heterocyst development and contributes to realization of the differentiated cell trait.</p>
             <ul>
@@ -326,8 +327,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=103690" rel="nofollow noreferrer">Nostoc sp. PCC 7120</a>
-                  <br><code>NCBITaxon:103690</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=103690" rel="nofollow noreferrer">Nostoc sp. PCC 7120
+                  <br><code>NCBITaxon:103690</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -393,7 +394,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>heterocyst-forming <span class="meta">RELATED_SYNONYM · DOI:10.1101/cshperspect.a000315</span></li>
+        <li>heterocyst-forming <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1101/cshperspect.a000315" rel="nofollow noreferrer"><code>DOI:10.1101/cshperspect.a000315</code></a></span></li>
 
       </ul>
     </div>
@@ -409,7 +410,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -652,7 +653,7 @@ A defensible core graph is:
         <li>
           <time>2026-08-31T06:30:00Z</time> ·
           <strong>CONNECT_CAUSAL_GRAPH_COMPONENTS</strong> · codex
-          <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) using 2 source- and verbatim-snippet-backed connector(s). Removed the isolated FurC/hetR-promoter branch: its primary source states that more studies are required to understand the regulation exerted by FurC on hetR expression (DOI:10.1371/journal.pone.0289761), so no directional bridge was asserted. No paid research service was called.</p>
+          <p class="changes">Resolved issue #183 graph fragmentation (4 components to 1) using 2 source- and verbatim-snippet-backed connector(s). Removed the isolated FurC/hetR-promoter branch: its primary source states that more studies are required to understand the regulation exerted by FurC on hetR expression (<a href="https://doi.org/10.1371/journal.pone.0289761" rel="nofollow noreferrer">DOI:10.1371/journal.pone.0289761</a>), so no directional bridge was asserted. No paid research service was called.</p>
         </li>
 
         <li>
@@ -700,7 +701,16 @@ A defensible core graph is:
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1064,12 +1074,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

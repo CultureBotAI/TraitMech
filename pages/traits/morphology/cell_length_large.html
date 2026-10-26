@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -137,8 +138,8 @@
             <a href="https://w3id.org/metpo/1000886" rel="nofollow noreferrer"><code>METPO:1000886</code></a>
             <span class="edge-predicate">is a</span>
             <strong>cell length</strong>
-            <a href="https://w3id.org/metpo/1000881" rel="nofollow noreferrer"><code>METPO:1000881</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/morphology/cell_length.html"><code>METPO:1000881</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Large cell length is a quantitative bin of the cell-length phenotype.</p>
             <ul>
 
@@ -311,7 +312,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>L_&gt;3 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>L_&gt;3 <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -327,7 +328,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000886</code> <span class="dim-preview">[-0.375, -2.130, -2.643, +3.325, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000886" rel="nofollow noreferrer">cell length large <code>METPO:1000886</code></a> <span class="dim-preview">[-0.375, -2.130, -2.643, +3.325, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -564,7 +565,7 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
-          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; DOI:10.1099/ijs.0.65862-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Spirochaeta dissipatitropha (NCBITaxon:324679; <a href="https://doi.org/10.1099/ijs.0.65862-0" rel="nofollow noreferrer">DOI:10.1099/ijs.0.65862-0</a>). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
 
         <li>
@@ -598,7 +599,7 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
         <li><time>2026-09-04T00:31:08Z</time>
            · claude-code
           <ul><li><strong>EDIT</strong> — Connect cell_length_large FtsZ graph
-            <p>Repaired data/traits/morphology/cell_length_large.yaml after ranking it as the highest-score DEEPEN_CAUSAL_GRAPH target in scripts/trait_priority.py. The edit re-cited the SOS/SulA branch to DOI:10.1002/advs.202203260, replaced the residual ungrounded FtsZ/SulA predicates with RO:0002212/RO:0002213 groundings, and added three DOI-backed connector edges so the nonmechanistic FtsZ/SOS division-delay graph moves from four disconnected components to one. Existing paid Falcon research at research/traits/morphology/cell_length_large-deep-research-falcon.md was used as a lead. No paid research service was called. Validation used write_validated_trait, linkml-validate for the edited YAML, validate_strict.py, audit_causal_graphs.py, audit_predicate_domains.py, audit_evidence_snippets.py, audit_graph_protein_taxa.py, the record-repair regression tests, and the trait-priority regression tests.</p></li></ul>
+            <p>Repaired data/traits/morphology/cell_length_large.yaml after ranking it as the highest-score DEEPEN_CAUSAL_GRAPH target in scripts/trait_priority.py. The edit re-cited the SOS/SulA branch to <a href="https://doi.org/10.1002/advs.202203260" rel="nofollow noreferrer">DOI:10.1002/advs.202203260</a>, replaced the residual ungrounded FtsZ/SulA predicates with RO:0002212/RO:0002213 groundings, and added three DOI-backed connector edges so the nonmechanistic FtsZ/SOS division-delay graph moves from four disconnected components to one. Existing paid Falcon research at research/traits/morphology/cell_length_large-deep-research-falcon.md was used as a lead. No paid research service was called. Validation used write_validated_trait, linkml-validate for the edited YAML, validate_strict.py, audit_causal_graphs.py, audit_predicate_domains.py, audit_evidence_snippets.py, audit_graph_protein_taxa.py, the record-repair regression tests, and the trait-priority regression tests.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/cell_length_large/2026-09-04T003108Z-claude-code-a012b9.yaml">Read this curation session</a>
         </li></ul>
 
@@ -630,7 +631,16 @@ The strongest direct long-cell evidence is *Acinetobacter baumannii* Aeg1 deplet
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -994,12 +1004,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-09-07 20:05 UTC

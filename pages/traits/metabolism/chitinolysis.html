@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0004568" rel="nofollow noreferrer"><code>GO:0004568</code></a>
             <span class="edge-predicate">confers</span>
             <strong>chitinolysis</strong>
-            <code>traitmech:000112</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/chitinolysis.yaml" rel="nofollow noreferrer"><code>traitmech:000112</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Secreted chitinases drive chitin depolymerization.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>chitinolysis</strong>
-            <code>traitmech:000112</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/chitinolysis.yaml" rel="nofollow noreferrer"><code>traitmech:000112</code></a>
             <span class="edge-predicate">produces</span>
             <strong>N-acetylglucosamine</strong>
 
@@ -281,8 +282,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615" rel="nofollow noreferrer">Serratia marcescens</a>
-                  <br><code>NCBITaxon:615</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615" rel="nofollow noreferrer">Serratia marcescens
+                  <br><code>NCBITaxon:615</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -311,8 +312,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615" rel="nofollow noreferrer">Serratia marcescens</a>
-                  <br><code>NCBITaxon:615</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=615" rel="nofollow noreferrer">Serratia marcescens
+                  <br><code>NCBITaxon:615</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -378,9 +379,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>chitinolytic <span class="meta">RELATED_SYNONYM · DOI:10.3389/fmicb.2013.00149</span></li>
+        <li>chitinolytic <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.3389/fmicb.2013.00149" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2013.00149</code></a></span></li>
 
-        <li>chitin degradation <span class="meta">RELATED_SYNONYM · DOI:10.3389/fmicb.2013.00149</span></li>
+        <li>chitin degradation <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.3389/fmicb.2013.00149" rel="nofollow noreferrer"><code>DOI:10.3389/fmicb.2013.00149</code></a></span></li>
 
       </ul>
     </div>
@@ -396,7 +397,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
+        <li><a href="../../traits/metabolism/metabolism.html">metabolism <code>METPO:1000060</code></a> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -506,19 +507,19 @@ A concise set of the strongest candidate triples is shown below.
 
 | subject | predicate | object | taxon/context | confidence | DOI |
 |---|---|---|---|---|---|
-| polymeric chitin | is hydrolyzed by | extracellular chitinases to chitooligosaccharides and chitobiose | general bacterial chitinolysis; three-step hydrolytic model | high (beier2013bacterialchitindegradation—mechanisms pages 2-4, demeester2025unravellingtheregulatory pages 1-5) | 10.3389/fmicb.2013.00149; 10.1111/brv.70020 |
-| CBP21 (LPMO) | increases accessibility of | crystalline chitin to hydrolytic chitinases | *Serratia marcescens*; oxidative disruption phase | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 1-5, demeester2025unravellingtheregulatory pages 5-9) | 10.1111/brv.70020 |
-| chitooligosaccharides | are converted by β-N-acetylglucosaminidase/chitobiase | GlcNAc | *Serratia marcescens* and related chitinolytic bacteria | high (demeester2025unravellingtheregulatory pages 1-5, vaaje‐kolstad2019enzymesformodification pages 24-26) | 10.1111/brv.70020; 10.1002/9781119450467.ch8 |
-| chitooligosaccharides and chitobiose | pass through outer membrane via | ChiP chitoporin | *Serratia marcescens* | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | 10.1111/brv.70020 |
-| chitobiose | is transported across inner membrane by | PTS ChbC | *Serratia marcescens*; chitobiose utilization module | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9, garciatelles2026chbandnag pages 12-15) | 10.1111/brv.70020; 10.1007/s00253-025-13656-2 |
-| GlcNAc | is transported across inner membrane by | PTS NagE | *Serratia marcescens* | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | 10.1111/brv.70020 |
-| GlcNAc | is phosphorylated by | NagK to GlcNAc-6-phosphate | picocyanobacteria and general intracellular chitin-derivative catabolism | medium (capovilla2023chitinutilizationby pages 5-6, capovilla2023chitinutilizationby pages 6-8) | 10.1073/pnas.2213271120 |
-| GlcNAc-6-phosphate | is deacetylated by | NagA to glucosamine-6-phosphate | general intracellular amino-sugar catabolism | high (vaaje‐kolstad2019enzymesformodification pages 24-26, capovilla2023chitinutilizationby pages 5-6) | 10.1002/9781119450467.ch8; 10.1073/pnas.2213271120 |
-| glucosamine-6-phosphate | is deaminated/isomerized by | NagB to fructose-6-phosphate | general intracellular amino-sugar catabolism | high (vaaje‐kolstad2019enzymesformodification pages 24-26, capovilla2023chitinutilizationby pages 5-6) | 10.1002/9781119450467.ch8; 10.1073/pnas.2213271120 |
-| glucose scarcity | activates | cAMP-CRP signaling linked to chitinolytic state | *Serratia marcescens* catabolite repression network | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 22-26, demeester2025unravellingtheregulatory pages 1-5) | 10.1111/brv.70020 |
-| GlcNAc or soluble chitin oligomers ((GlcNAc)2-6) | induce | chitinase production/expression | general bacterial chitin degradation regulation | high (beier2013bacterialchitindegradation—mechanisms pages 2-4) | 10.3389/fmicb.2013.00149 |
-| ChiWXYZ-dependent secretion system | mediates secretion of | chitinases and CBP21 | *Serratia marcescens*; holin/peptidoglycan hydrolase-associated export | medium, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | 10.1111/brv.70020 |
-| chitin utilization pathway genes | promotes | attachment to chitin particles | marine picocyanobacteria; bead-attachment assays | medium-high, lineage-specific (capovilla2023chitinutilizationby pages 2-3, capovilla2023chitinutilizationby pages 1-2) | 10.1073/pnas.2213271120 |
+| polymeric chitin | is hydrolyzed by | extracellular chitinases to chitooligosaccharides and chitobiose | general bacterial chitinolysis; three-step hydrolytic model | high (beier2013bacterialchitindegradation—mechanisms pages 2-4, demeester2025unravellingtheregulatory pages 1-5) | <a href="https://doi.org/10.3389/fmicb.2013.00149" rel="nofollow noreferrer">10.3389/fmicb.2013.00149</a>; <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| CBP21 (LPMO) | increases accessibility of | crystalline chitin to hydrolytic chitinases | *Serratia marcescens*; oxidative disruption phase | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 1-5, demeester2025unravellingtheregulatory pages 5-9) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| chitooligosaccharides | are converted by β-N-acetylglucosaminidase/chitobiase | GlcNAc | *Serratia marcescens* and related chitinolytic bacteria | high (demeester2025unravellingtheregulatory pages 1-5, vaaje‐kolstad2019enzymesformodification pages 24-26) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a>; <a href="https://doi.org/10.1002/9781119450467.ch8" rel="nofollow noreferrer">10.1002/9781119450467.ch8</a> |
+| chitooligosaccharides and chitobiose | pass through outer membrane via | ChiP chitoporin | *Serratia marcescens* | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| chitobiose | is transported across inner membrane by | PTS ChbC | *Serratia marcescens*; chitobiose utilization module | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9, garciatelles2026chbandnag pages 12-15) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a>; <a href="https://doi.org/10.1007/s00253-025-13656-2" rel="nofollow noreferrer">10.1007/s00253-025-13656-2</a> |
+| GlcNAc | is transported across inner membrane by | PTS NagE | *Serratia marcescens* | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| GlcNAc | is phosphorylated by | NagK to GlcNAc-6-phosphate | picocyanobacteria and general intracellular chitin-derivative catabolism | medium (capovilla2023chitinutilizationby pages 5-6, capovilla2023chitinutilizationby pages 6-8) | <a href="https://doi.org/10.1073/pnas.2213271120" rel="nofollow noreferrer">10.1073/pnas.2213271120</a> |
+| GlcNAc-6-phosphate | is deacetylated by | NagA to glucosamine-6-phosphate | general intracellular amino-sugar catabolism | high (vaaje‐kolstad2019enzymesformodification pages 24-26, capovilla2023chitinutilizationby pages 5-6) | <a href="https://doi.org/10.1002/9781119450467.ch8" rel="nofollow noreferrer">10.1002/9781119450467.ch8</a>; <a href="https://doi.org/10.1073/pnas.2213271120" rel="nofollow noreferrer">10.1073/pnas.2213271120</a> |
+| glucosamine-6-phosphate | is deaminated/isomerized by | NagB to fructose-6-phosphate | general intracellular amino-sugar catabolism | high (vaaje‐kolstad2019enzymesformodification pages 24-26, capovilla2023chitinutilizationby pages 5-6) | <a href="https://doi.org/10.1002/9781119450467.ch8" rel="nofollow noreferrer">10.1002/9781119450467.ch8</a>; <a href="https://doi.org/10.1073/pnas.2213271120" rel="nofollow noreferrer">10.1073/pnas.2213271120</a> |
+| glucose scarcity | activates | cAMP-CRP signaling linked to chitinolytic state | *Serratia marcescens* catabolite repression network | medium-high, taxon-specific (demeester2025unravellingtheregulatory pages 22-26, demeester2025unravellingtheregulatory pages 1-5) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| GlcNAc or soluble chitin oligomers ((GlcNAc)2-6) | induce | chitinase production/expression | general bacterial chitin degradation regulation | high (beier2013bacterialchitindegradation—mechanisms pages 2-4) | <a href="https://doi.org/10.3389/fmicb.2013.00149" rel="nofollow noreferrer">10.3389/fmicb.2013.00149</a> |
+| ChiWXYZ-dependent secretion system | mediates secretion of | chitinases and CBP21 | *Serratia marcescens*; holin/peptidoglycan hydrolase-associated export | medium, taxon-specific (demeester2025unravellingtheregulatory pages 5-9) | <a href="https://doi.org/10.1111/brv.70020" rel="nofollow noreferrer">10.1111/brv.70020</a> |
+| chitin utilization pathway genes | promotes | attachment to chitin particles | marine picocyanobacteria; bead-attachment assays | medium-high, lineage-specific (capovilla2023chitinutilizationby pages 2-3, capovilla2023chitinutilizationby pages 1-2) | <a href="https://doi.org/10.1073/pnas.2213271120" rel="nofollow noreferrer">10.1073/pnas.2213271120</a> |
 
 
 *Table: This table compiles the strongest curation-ready causal triples for microbial chitinolysis, emphasizing mechanistic steps from extracellular depolymerization through transport, intracellular catabolism, regulation, secretion, and particle attachment. It is useful as a compact starting point for TraitMech graph curation while preserving taxon specificity and confidence.*
@@ -639,7 +640,7 @@ A concise set of the strongest candidate triples is shown below.
         <li>
           <time>2026-08-26T03:24:00Z</time> ·
           <strong>RESTORE_CANONICAL_CITATION</strong> · claude
-          <p class="changes">Restored the canonical-example citation for NCBITaxon:615 from DOI:10.1002/j.1460-2075.1986.tb04235.x back to PMID:23398882 (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
+          <p class="changes">Restored the canonical-example citation for NCBITaxon:615 from <a href="https://doi.org/10.1002/j.1460-2075.1986.tb04235.x" rel="nofollow noreferrer">DOI:10.1002/j.1460-2075.1986.tb04235.x</a> back to <a href="https://pubmed.ncbi.nlm.nih.gov/23398882/" rel="nofollow noreferrer">PMID:23398882</a> (review issue 519). The tranche event described the change as a PMID-to-DOI upgrade, but the DOI resolves to a different paper than the PMID, so this was a replacement rather than an identifier normalisation. The pre-tranche citation is restored; a deliberate replacement can be made in a new event that says so.</p>
         </li>
 
         <li>
@@ -657,7 +658,7 @@ A concise set of the strongest candidate triples is shown below.
         <li>
           <time>2026-10-23T16:05:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.3389/fmicb.2013.00149 (already present on causal_graphs[0].edges[6]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-CHITINOLYSIS-015 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.3389/fmicb.2013.00149" rel="nofollow noreferrer">DOI:10.3389/fmicb.2013.00149</a> (already present on causal_graphs[0].edges[6]) to record-level evidence[0] to match definition_source (Cycle 2 Stage 5 remediation of F-DEF-SRC-CHITINOLYSIS-015 in group G-C2S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #1995).</p>
         </li>
 
       </ol>
@@ -699,7 +700,16 @@ A concise set of the strongest candidate triples is shown below.
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1063,12 +1073,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-23 16:05 UTC
