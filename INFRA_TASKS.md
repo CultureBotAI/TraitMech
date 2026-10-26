@@ -69,6 +69,11 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: "Resolved in Cycle 5 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py to track corpus_quoted_refs_16 (>=16-char non-elliptical quotes on non-OBJECT_PROPERTY records) and flag UNQUOTED_DEFINITION_SOURCE when a CLASS record cites definition_source in evidence[].reference without a snippet and a >=16-char quote exists in-corpus, covered by unit tests in tests/test_audit_evidence_snippets.py."
+  - task_id: traitmech-infra-0008
+    summary: Extend UNQUOTED_DEFINITION_SOURCE in scripts/audit_evidence_snippets.py to resolve DOI-to-PMID reference aliases from data/raw/defense_finder/wiki/List_system_article.md
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    disposition: "Open for Cycle 6 Stage 6 (implement_infrastructure_tasks)."
 ```
 <!-- mech-infra-tasks:end -->
 
