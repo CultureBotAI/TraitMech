@@ -622,6 +622,86 @@ def test_unquoted_definition_source_object_property_predicate_stems(
     assert unquoted[0]["file"].endswith("unquoted_prop.yaml")
 
 
+def test_unquoted_definition_source_corpus_wide_16char_quote_when_in_evidence(
+    tmp_path, monkeypatch
+):
+    """When a CLASS record cites definition_source in evidence[].reference without a
+    snippet (def_source_in_ev == True), UNQUOTED_DEFINITION_SOURCE also checks
+    corpus-wide >=16-char non-elliptical quotes on non-OBJECT_PROPERTY records,
+    catching 2-hop ancestors and cross-cohort records (#2002, traitmech-infra-0007)."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: METPO:1005001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1005000
+        definition_source: PMID:99887766
+        evidence:
+          - reference: PMID:99887766
+            supports: SUPPORT
+        """)
+    # Unrelated cohort record (no shared parent_traits) with a <16-char quote (14 chars):
+    # does NOT trigger corpus-wide propagation.
+    (traits / "unrelated_short.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1006001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1006000
+        definition_source: PMID:11223344
+        evidence:
+          - reference: PMID:99887766
+            supports: SUPPORT
+            snippet: pH homeostasis
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
 
+    # Unrelated cohort CLASS record with a >=16-char non-elliptical quote for PMID:99887766:
+    # triggers UNQUOTED_DEFINITION_SOURCE on x.yaml because x.yaml cites PMID:99887766
+    # in evidence[].reference without a snippet.
+    (traits / "unrelated_long.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1007001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1007000
+        definition_source: PMID:99887766
+        evidence:
+          - reference: PMID:99887766
+            supports: SUPPORT
+            snippet: Denitrification is the dissimilatory reduction of nitrate or nitrite
+        """))
+    # Unrelated CLASS record that does NOT cite PMID:99887766 in evidence[].reference at all
+    # (def_source_in_ev == False) is not flagged by distant corpus-wide quotes.
+    (traits / "unrelated_absent_ev.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1008001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1008000
+        definition_source: PMID:99887766
+        evidence:
+          - reference: PMID:55667788
+            supports: SUPPORT
+            snippet: Dissimilatory reduction of nitrate to dinitrogen gas under anoxia
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("x.yaml")
+    assert "lacks a non-elliptical verbatim snippet in record-level evidence[]" in unquoted[0]["detail"]
 
+    # Adding a verbatim quote to x.yaml clears the finding.
+    (traits / "x.yaml").write_text(textwrap.dedent("""
+        identifier: METPO:1005001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1005000
+        definition_source: PMID:99887766
+        evidence:
+          - reference: PMID:99887766
+            supports: SUPPORT
+            snippet: Denitrification is the dissimilatory reduction of nitrate or nitrite
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
 

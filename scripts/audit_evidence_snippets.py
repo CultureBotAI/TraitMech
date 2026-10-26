@@ -88,6 +88,10 @@ SEVERITY = {
 # the shortest legitimate quotes run to a clause. Deliberately not a word count —
 # "pH homeostasis" is two words and does real work.
 MIN_SNIPPET_CHARS = 12
+# Minimum length for a corpus-wide non-elliptical quote on a non-OBJECT_PROPERTY
+# record to trigger UNQUOTED_DEFINITION_SOURCE when a CLASS record already cites
+# definition_source in evidence[].reference without a snippet (#2002).
+MIN_CORPUS_QUOTE_CHARS = 16
 # Below this a repeated snippet is more plausibly laziness than a genuinely
 # recurring key phrase.
 MAX_REUSE_PER_GRAPH = 2
@@ -214,6 +218,7 @@ def audit(
     docs: list[tuple[Path, dict]] = []
     refs_by_record_id: dict[str, set[str]] = {}
     refs_by_parent_id: dict[str, set[str]] = {}
+    corpus_quoted_refs_16: set[str] = set()
     for path in sorted(aes_traits_dir().rglob("*.yaml")):
         doc = yaml.safe_load(path.read_text())
         if not isinstance(doc, dict):
@@ -244,6 +249,8 @@ def audit(
                     if (ref and len(snip) >= MIN_SNIPPET_CHARS
                             and "..." not in snip and "…" not in snip):
                         quoted.add(ref)
+                        if len(snip) >= MIN_CORPUS_QUOTE_CHARS:
+                            corpus_quoted_refs_16.add(ref)
             for key in rec_keys or {rec_id}:
                 refs_by_record_id.setdefault(key, set()).update(quoted)
             for parent_id in parents:
@@ -275,6 +282,7 @@ def audit(
                         and "..." not in snip and "…" not in snip):
                     record_refs.add(ref)
             def_source = _norm(str(doc.get("definition_source") or ""))
+            def_source_in_ev = def_source in record_any_refs
             rec_id = _norm(str(doc.get("identifier") or doc.get("id") or path.stem))
             parents = [
                 _norm(str(p)) for p in (doc.get("parent_traits") or []) if _norm(str(p))
@@ -286,12 +294,17 @@ def audit(
             for parent_id in parents:
                 family_quoted.update(refs_by_record_id.get(parent_id, set()))
                 family_quoted.update(refs_by_parent_id.get(parent_id, set()))
+            has_corpus_16_quote = (
+                not is_object_property
+                and def_source_in_ev
+                and def_source in corpus_quoted_refs_16
+            )
             if (def_source.startswith(("PMID:", "DOI:"))
-                    and def_source in family_quoted
+                    and (def_source in family_quoted or has_corpus_16_quote)
                     and def_source not in record_refs):
                 reason = (
                     "lacks a non-elliptical verbatim snippet in record-level evidence[]"
-                    if def_source in record_any_refs
+                    if def_source_in_ev
                     else "is absent from record-level evidence[].reference"
                 )
                 findings.append({

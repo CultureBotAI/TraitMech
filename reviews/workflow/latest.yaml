@@ -460,8 +460,46 @@ entries:
   goal_evidence:
     path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml
     sha256: 32cedb75ee6c8633dc7e58670db65036e1b45e1db9b2c96160ed61b528b3061e
-  receipt_sha256: fb535b9d626e4dc06a3052b1df8c8f57f73ab77a8a4b0b004783e544cb19015f
+  receipt_sha256: 46edb28fc318f0137d94f448d33de5b62e171a3f0a8f06050c0c6fa626bc1f7e
   stage: 4
+  verification:
+    checks:
+    - bucket: pass
+      name: pytest
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence / label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    - bucket: pass
+      name: history
+      state: SUCCESS
+    - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: canonical-example-taxonomy
+      state: SUCCESS
+    - bucket: pass
+      name: validate-strict
+      state: SUCCESS
+    - bucket: pass
+      name: pr-sanity
+      state: SUCCESS
+    head_sha: da456c8be21413a5f509d550d07346a40c10b57d
+    merge_commit_sha: d5a179ca03aceaf74255d107b759cd99c4d9a7ec
+    merged_at: '2026-10-25T21:25:04Z'
+    pr_number: 2020
+    status: merged
+    verified_at: '2026-10-25T21:34:35.339286+00:00'
+- cycle: 5
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-05/revision-0001/evidence.yaml
+    sha256: 863188fa4de55a257b4d586894822e279ce719d30a3cc416bcbe5d456ac9f618
+  receipt_sha256: ae17a10a151b8e3e27350a72ffb7cf95127f21f8c4cc3599292a9e431c04fd63
+  stage: 5
   verification:
     checks:
     - bucket: pass
@@ -488,9 +526,9 @@ entries:
     - bucket: pass
       name: vendored-sync
       state: SUCCESS
-    head_sha: 1d445d4a65ed602b83e0699c3596aa8ab2441bc1
-    merge_commit_sha: d5a179ca03aceaf74255d107b759cd99c4d9a7ec
-    merged_at: '2026-10-25T21:11:37Z'
-    pr_number: 2020
+    head_sha: 512d3e60b778d74f99444750c37770ce4305206e
+    merge_commit_sha: bc1dfa795cce63059bc4744d06aa371aa335e423
+    merged_at: '2026-10-25T23:04:50Z'
+    pr_number: 2026
     status: merged
-    verified_at: '2026-10-25T21:35:05.331594+00:00'
+    verified_at: '2026-10-25T23:20:12.270467+00:00'
