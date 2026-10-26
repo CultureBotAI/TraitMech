@@ -19,12 +19,23 @@ evidence:
     and alpha-glucuronidase suggest that "B. forsythus" may be saccharolytic.
   notes: Tanner et al. detected alpha-fucosidase in the then-proposed oral species
     Bacteroides forsythus with the API ZYM enzyme activity panel.
+- reference: DOI:10.1016/j.bmc.2013.05.056
+  snippet: The X-ray crystal structures of Bacteroides thetaiotaomicron GH29 α-l-fucosidase
+    (BtFuc2970) in a new crystal form (at a resolution of 1.59Å) and liganded with
+    a 5-membered iminocyclitol inhibitor (1.73Å) are reported herein.
+  notes: Wright et al. report crystal structures of Bacteroides thetaiotaomicron VPI-5482
+    GH29 alpha-L-fucosidase BtFuc2970 (encoded by BT_2970, UniProtKB:Q8A3I4).
 canonical_examples:
 - taxon_id: NCBITaxon:28112
   taxon_label: Tannerella forsythia
   note: Tanner et al. reported alpha-fucosidase-positive reactions for "Bacteroides
     forsythus", the basonym of Tannerella forsythia, in API ZYM profiles.
   reference: DOI:10.1128/jcm.22.3.333-335.1985
+- taxon_id: NCBITaxon:226186
+  taxon_label: Bacteroides thetaiotaomicron VPI-5482
+  note: Wright et al. determined crystal structures of Bacteroides thetaiotaomicron
+    VPI-5482 GH29 alpha-L-fucosidase BtFuc2970 (BT_2970).
+  reference: DOI:10.1016/j.bmc.2013.05.056
 discussions:
 - discussion_id: alpha-fucosidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for alpha-fucosidase activity before
@@ -67,7 +78,7 @@ discussions:
     VPI-5482 alpha-L-fucosidase BT_2970 (UniProtKB:Q8A3I4) so alpha_fucosidase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#alpha_fucosidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985)
@@ -85,6 +96,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-26'
+  resolution_note: Added canonical_examples entry Bacteroides thetaiotaomicron VPI-5482
+    (NCBITaxon:226186; DOI:10.1016/j.bmc.2013.05.056) and promoted alpha_fucosidase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR000933-grounded GENE_OR_PROTEIN node alpha_fucosidase_bt2970
+    with reference-proteome (UP000001414) Bacteroides thetaiotaomicron VPI-5482 protein_examples
+    UniProtKB:Q8A3I4 (BT_2970 / BtFuc2970) backed by DOI:10.1016/j.bmc.2013.05.056.
 curation_history:
 - timestamp: '2026-09-12T01:09:57Z'
   curator: codex
@@ -106,16 +123,27 @@ curation_history:
     and OPEN CURATION_TODO discussion (alpha-fucosidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-26T04:00:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186; DOI:10.1016/j.bmc.2013.05.056)
+    canonical example; promoted alpha_fucosidase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR000933-grounded GENE_OR_PROTEIN node alpha_fucosidase_bt2970
+    with reference-proteome (UP000001414) Bacteroides thetaiotaomicron VPI-5482 protein_examples
+    UniProtKB:Q8A3I4 (BT_2970 / BtFuc2970) backed by DOI:10.1016/j.bmc.2013.05.056;
+    resolved alpha-fucosidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: alpha_fucosidase_hydrolysis_sketch
   title: Alpha-L-fucosidase hydrolytic cleavage of alpha-L-fucosides
   description: Evidence-backed physiological mechanism sketch linking alpha-L-fucosidase
     catalytic activity and hydrolytic water consumption to the alpha-fucosidase activity
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.2.1.51 and DOI:10.1128/jcm.22.3.333-335.1985;
-    strain-matched UniProtKB protein examples for Bacteroides thetaiotaomicron VPI-5482
-    alpha-L-fucosidase (BT_2970, UniProtKB:Q8A3I4) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.51, DOI:10.1016/j.bbrc.2022.05.002,
+    and DOI:10.1016/j.bmc.2013.05.056; exemplified on alpha_fucosidase_bt2970 with
+    Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186; UP000001414) GH29 alpha-L-fucosidase
+    BtFuc2970 (UniProtKB:Q8A3I4).
   nodes:
   - node_id: alpha_fucosidase_activity_trait
     label: alpha-fucosidase activity
@@ -136,6 +164,36 @@ causal_graphs:
     grounding: CHEBI:15377
     description: Water molecule consumed as a hydrolytic co-substrate during cleavage
       of alpha-L-fucoside linkages.
+  - node_id: alpha_fucosidase_bt2970
+    label: GH29 alpha-L-fucosidase BtFuc2970
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000933
+    gene_symbols:
+    - BT_2970
+    description: Glycoside hydrolase family 29 (GH29) alpha-L-fucosidase (BtFuc2970)
+      that hydrolyzes terminal alpha-L-fucosyl linkages.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q8A3I4
+      protein_label: alpha-L-fucosidase
+      gene_symbol: BT_2970
+      taxon_id: NCBITaxon:226186
+      taxon_label: Bacteroides thetaiotaomicron VPI-5482
+      entry_status: UNREVIEWED
+      proteome_id: UP000001414
+      retrieved_on: '2026-10-26'
+      entry_version: 144
+      sequence_version: 1
+      role: BtFuc2970 (encoded by BT_2970) is the Bacteroides thetaiotaomicron VPI-5482
+        GH29 alpha-L-fucosidase that hydrolyzes terminal non-reducing alpha-L-fucose
+        residues.
+      evidence:
+      - reference: DOI:10.1016/j.bmc.2013.05.056
+        snippet: The X-ray crystal structures of Bacteroides thetaiotaomicron GH29
+          α-l-fucosidase (BtFuc2970) in a new crystal form (at a resolution of 1.59Å)
+          and liganded with a 5-membered iminocyclitol inhibitor (1.73Å) are reported
+          herein.
+        notes: Wright et al. solved crystal structures of Bacteroides thetaiotaomicron
+          VPI-5482 GH29 alpha-L-fucosidase BtFuc2970 (BT_2970, UniProtKB:Q8A3I4).
   edges:
   - subject: alpha_fucosidase_catalytic_activity
     predicate: confers
@@ -160,3 +218,16 @@ causal_graphs:
       snippet: 'Reaction: an α-L-fucoside + H2O = L-fucose + an alcohol'
       notes: IUBMB EC 3.2.1.51 defines the alpha-L-fucosidase reaction hydrolyzing
         an alpha-L-fucoside with H2O to L-fucose and an alcohol.
+  - subject: alpha_fucosidase_bt2970
+    predicate: enables
+    predicate_id: RO:0002327
+    object: alpha_fucosidase_catalytic_activity
+    description: GH29 alpha-L-fucosidase BtFuc2970 enables alpha-L-fucosidase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1016/j.bmc.2013.05.056
+      snippet: The X-ray crystal structures of Bacteroides thetaiotaomicron GH29 α-l-fucosidase
+        (BtFuc2970) in a new crystal form (at a resolution of 1.59Å) and liganded
+        with a 5-membered iminocyclitol inhibitor (1.73Å) are reported herein.
+      notes: Wright et al. structurally characterized Bacteroides thetaiotaomicron
+        VPI-5482 GH29 alpha-L-fucosidase BtFuc2970.

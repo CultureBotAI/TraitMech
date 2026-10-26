@@ -1,0 +1,27 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+session:
+  id: 2026-10-26T040000Z-claude-code-e93abb
+  timestamp: '2026-10-26T04:00:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: claude-code
+events:
+- type: EDIT
+  outcome: changed
+  summary: 'Cycle 6 Stage 3 (protein_examples): promote 3 Cohort I trait graphs to MECHANISTIC
+    with verified UniProtKB protein examples'
+  details: Reviewed all 1,130 TraitRecord YAML files (1,129 curated, 1 DO_NOT_WORK protected)
+    for Cycle 6 Stage 3 (protein_examples). Promoted the 3 Cycle 6 Stage 2 Cohort I NONMECHANISTIC
+    records (alpha_fucosidase_activity, amylase_activity, beta_galactosidase_activity) to
+    MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified UniProtKB
+    protein_examples (Q8A3I4 on Bacteroides thetaiotaomicron VPI-5482 UP000001414; P06278
+    on Bacillus licheniformis; P00722 on Escherichia coli K-12 UP000000625), verbatim primary-source
+    evidence snippets, strain-matched canonical_examples, and RESOLVED CURATION_TODO discussions.
+    Refreshed reports/uniprot_grounding_audit.tsv (191 uses across 157 unique accessions,
+    0 findings), reports/graph_protein_taxon_coverage.tsv (153 MECHANISTIC pass, 597 NONMECHANISTIC,
+    0 gap, 1 protected, 0 error), and all derived reports and pages.

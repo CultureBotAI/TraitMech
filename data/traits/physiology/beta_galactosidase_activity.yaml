@@ -22,12 +22,24 @@ evidence:
     (API An-Ident strip).
   notes: Tanner et al. detected beta-galactosidase in Selenomonas sputigena with the
     API ZYM enzyme activity panel.
+- reference: DOI:10.1002/j.1460-2075.1983.tb01468.x
+  snippet: The nucleotide sequence of the lacZ gene coding for beta-galactosidase
+    (EC 3.2.1.23) in Escherichia coli has been determined. Beta-Galactosidase is predicted
+    to consist of 1023 residues, resulting in a protein with a mol. wt. of 116 353
+    per subunit.
+  notes: Kalnins et al. determined the nucleotide sequence of the Escherichia coli
+    K-12 lacZ gene encoding beta-galactosidase (UniProtKB:P00722).
 canonical_examples:
 - taxon_id: NCBITaxon:69823
   taxon_label: Selenomonas sputigena
   note: Tanner et al. reported Selenomonas sputigena as positive for beta-galactosidase
     in the API ZYM enzyme activity panel.
   reference: DOI:10.1128/jcm.22.3.333-335.1985
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Kalnins et al. determined the nucleotide sequence of the Escherichia coli
+    K-12 lacZ gene encoding beta-galactosidase.
+  reference: DOI:10.1002/j.1460-2075.1983.tb01468.x
 discussions:
 - discussion_id: beta-galactosidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for beta-galactosidase activity
@@ -71,7 +83,7 @@ discussions:
     beta-galactosidase LacZ (UniProtKB:P00722) so beta_galactosidase_lacz_sketch can
     be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#beta_galactosidase_lacz_sketch
   rationale: The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300,
@@ -91,6 +103,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-26'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1002/j.1460-2075.1983.tb01468.x) and promoted beta_galactosidase_lacz_sketch
+    to MECHANISTIC by adding InterPro:IPR023933-grounded GENE_OR_PROTEIN node beta_galactosidase_lacz
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P00722 (LacZ) backed by DOI:10.1002/j.1460-2075.1983.tb01468.x.
 curation_history:
 - timestamp: '2026-09-11T19:47:00Z'
   curator: codex
@@ -112,6 +130,15 @@ curation_history:
     and OPEN CURATION_TODO discussion (beta-galactosidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-26T04:00:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1002/j.1460-2075.1983.tb01468.x)
+    canonical example; promoted beta_galactosidase_lacz_sketch to MECHANISTIC; added
+    InterPro:IPR023933-grounded GENE_OR_PROTEIN node beta_galactosidase_lacz with
+    reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P00722
+    (LacZ) backed by DOI:10.1002/j.1460-2075.1983.tb01468.x; resolved beta-galactosidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: beta_galactosidase_lacz_sketch
   title: Beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and
@@ -119,11 +146,11 @@ causal_graphs:
   description: Evidence-backed physiological mechanism sketch linking beta-galactosidase
     catalytic activity and glucose release from lactose hydrolysis to the beta-galactosidase
     activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by DOI:10.3389/fmicb.2021.742300
-    and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB protein examples
-    for Escherichia coli K-12 beta-galactosidase (LacZ, UniProtKB:P00722) remain to
-    be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.23, DOI:10.1073/pnas.91.11.4915,
+    and DOI:10.1002/j.1460-2075.1983.tb01468.x; exemplified on beta_galactosidase_lacz
+    with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) beta-galactosidase LacZ
+    (UniProtKB:P00722).
   nodes:
   - node_id: beta_galactosidase_activity_trait
     label: beta-galactosidase activity
@@ -143,6 +170,37 @@ causal_graphs:
     grounding: CHEBI:17234
     description: Free D-glucose monomer released alongside galactose by beta-galactosidase
       hydrolysis of lactose.
+  - node_id: beta_galactosidase_lacz
+    label: beta-galactosidase LacZ
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023933
+    gene_symbols:
+    - lacZ
+    description: Glycoside hydrolase family 2 (GH2) homotetrameric beta-galactosidase
+      (LacZ) that hydrolyzes terminal non-reducing beta-D-galactose residues in lactose
+      and beta-D-galactosides.
+    protein_examples:
+    - uniprot_id: UniProtKB:P00722
+      protein_label: Beta-galactosidase
+      gene_symbol: lacZ
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-26'
+      entry_version: 230
+      sequence_version: 2
+      role: LacZ is the Escherichia coli K-12 beta-galactosidase that hydrolyzes terminal
+        non-reducing beta-D-galactose residues in beta-D-galactosides such as lactose
+        and ONPG.
+      evidence:
+      - reference: DOI:10.1002/j.1460-2075.1983.tb01468.x
+        snippet: The nucleotide sequence of the lacZ gene coding for beta-galactosidase
+          (EC 3.2.1.23) in Escherichia coli has been determined. Beta-Galactosidase
+          is predicted to consist of 1023 residues, resulting in a protein with a
+          mol. wt. of 116 353 per subunit.
+        notes: Kalnins et al. sequenced the Escherichia coli K-12 lacZ gene encoding
+          beta-galactosidase (UniProtKB:P00722).
   edges:
   - subject: beta_galactosidase_catalytic_activity
     predicate: confers
@@ -170,3 +228,16 @@ causal_graphs:
         by hydrolysis reaction, resulting in the production of glucose and galactose
       notes: Zhou et al. state that beta-galactosidase (EC 3.2.1.23) hydrolyzes O-glycosidic
         bonds of lactose resulting in the production of glucose and galactose.
+  - subject: beta_galactosidase_lacz
+    predicate: enables
+    predicate_id: RO:0002327
+    object: beta_galactosidase_catalytic_activity
+    description: Beta-galactosidase LacZ enables beta-galactosidase catalytic activity.
+    evidence:
+    - reference: DOI:10.1002/j.1460-2075.1983.tb01468.x
+      snippet: The nucleotide sequence of the lacZ gene coding for beta-galactosidase
+        (EC 3.2.1.23) in Escherichia coli has been determined. Beta-Galactosidase
+        is predicted to consist of 1023 residues, resulting in a protein with a mol.
+        wt. of 116 353 per subunit.
+      notes: Kalnins et al. determined the nucleotide sequence of Escherichia coli
+        K-12 lacZ encoding beta-galactosidase.

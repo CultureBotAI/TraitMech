@@ -3592,8 +3592,7 @@ C5S3_COHORT_H_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "beta_glucuronidase_catalytic_activity",
             "description": (
-                "Beta-glucuronidase UidA enables beta-glucuronidase catalytic "
-                "activity."
+                "Beta-glucuronidase UidA enables beta-glucuronidase catalytic activity."
             ),
             "evidence": [
                 {
@@ -3714,8 +3713,7 @@ C5S3_COHORT_H_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate_id": "RO:0002327",
             "object": "beta_n_acetylhexosaminidase_catalytic_activity",
             "description": (
-                "Chitobiase Chb enables beta-N-acetylhexosaminidase catalytic "
-                "activity."
+                "Chitobiase Chb enables beta-N-acetylhexosaminidase catalytic activity."
             ),
             "evidence": [
                 {
@@ -3755,6 +3753,419 @@ C5S3_COHORT_H_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C6S3_TIMESTAMP = "2026-10-26T04:00:00Z"
+C6S3_RETRIEVED_ON = "2026-10-26"
+
+C6S3_COHORT_I_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/physiology/alpha_fucosidase_activity.yaml": {
+        "identifier": "traitmech:000152",
+        "graph_id": "alpha_fucosidase_hydrolysis_sketch",
+        "discussion_id": "alpha-fucosidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.2.1.51, "
+            "DOI:10.1016/j.bbrc.2022.05.002, and "
+            "DOI:10.1016/j.bmc.2013.05.056; exemplified on "
+            "alpha_fucosidase_bt2970 with Bacteroides thetaiotaomicron "
+            "VPI-5482 (NCBITaxon:226186; UP000001414) GH29 alpha-L-fucosidase "
+            "BtFuc2970 (UniProtKB:Q8A3I4)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1016/j.bmc.2013.05.056",
+            "snippet": (
+                "The X-ray crystal structures of Bacteroides thetaiotaomicron "
+                "GH29 α-l-fucosidase (BtFuc2970) in a new crystal form (at a "
+                "resolution of 1.59Å) and liganded with a 5-membered "
+                "iminocyclitol inhibitor (1.73Å) are reported herein."
+            ),
+            "notes": (
+                "Wright et al. report crystal structures of Bacteroides "
+                "thetaiotaomicron VPI-5482 GH29 alpha-L-fucosidase BtFuc2970 "
+                "(encoded by BT_2970, UniProtKB:Q8A3I4)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:226186",
+            "taxon_label": "Bacteroides thetaiotaomicron VPI-5482",
+            "note": (
+                "Wright et al. determined crystal structures of Bacteroides "
+                "thetaiotaomicron VPI-5482 GH29 alpha-L-fucosidase BtFuc2970 "
+                "(BT_2970)."
+            ),
+            "reference": "DOI:10.1016/j.bmc.2013.05.056",
+        },
+        "new_node": {
+            "node_id": "alpha_fucosidase_bt2970",
+            "label": "GH29 alpha-L-fucosidase BtFuc2970",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000933",
+            "gene_symbols": ["BT_2970"],
+            "description": (
+                "Glycoside hydrolase family 29 (GH29) alpha-L-fucosidase "
+                "(BtFuc2970) that hydrolyzes terminal alpha-L-fucosyl linkages."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:Q8A3I4",
+                    "protein_label": "alpha-L-fucosidase",
+                    "gene_symbol": "BT_2970",
+                    "taxon_id": "NCBITaxon:226186",
+                    "taxon_label": "Bacteroides thetaiotaomicron VPI-5482",
+                    "entry_status": "UNREVIEWED",
+                    "proteome_id": "UP000001414",
+                    "retrieved_on": C6S3_RETRIEVED_ON,
+                    "entry_version": 144,
+                    "sequence_version": 1,
+                    "role": (
+                        "BtFuc2970 (encoded by BT_2970) is the Bacteroides "
+                        "thetaiotaomicron VPI-5482 GH29 alpha-L-fucosidase "
+                        "that hydrolyzes terminal non-reducing alpha-L-fucose "
+                        "residues."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1016/j.bmc.2013.05.056",
+                            "snippet": (
+                                "The X-ray crystal structures of Bacteroides "
+                                "thetaiotaomicron GH29 α-l-fucosidase "
+                                "(BtFuc2970) in a new crystal form (at a "
+                                "resolution of 1.59Å) and liganded with a "
+                                "5-membered iminocyclitol inhibitor (1.73Å) "
+                                "are reported herein."
+                            ),
+                            "notes": (
+                                "Wright et al. solved crystal structures of "
+                                "Bacteroides thetaiotaomicron VPI-5482 GH29 "
+                                "alpha-L-fucosidase BtFuc2970 (BT_2970, "
+                                "UniProtKB:Q8A3I4)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "alpha_fucosidase_bt2970",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alpha_fucosidase_catalytic_activity",
+            "description": (
+                "GH29 alpha-L-fucosidase BtFuc2970 enables alpha-L-fucosidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1016/j.bmc.2013.05.056",
+                    "snippet": (
+                        "The X-ray crystal structures of Bacteroides "
+                        "thetaiotaomicron GH29 α-l-fucosidase (BtFuc2970) in a "
+                        "new crystal form (at a resolution of 1.59Å) and "
+                        "liganded with a 5-membered iminocyclitol inhibitor "
+                        "(1.73Å) are reported herein."
+                    ),
+                    "notes": (
+                        "Wright et al. structurally characterized "
+                        "Bacteroides thetaiotaomicron VPI-5482 GH29 "
+                        "alpha-L-fucosidase BtFuc2970."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C6S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Bacteroides thetaiotaomicron "
+                "VPI-5482 (NCBITaxon:226186; DOI:10.1016/j.bmc.2013.05.056) "
+                "and promoted alpha_fucosidase_hydrolysis_sketch to "
+                "MECHANISTIC by adding InterPro:IPR000933-grounded "
+                "GENE_OR_PROTEIN node alpha_fucosidase_bt2970 with reference-"
+                "proteome (UP000001414) Bacteroides thetaiotaomicron VPI-5482 "
+                "protein_examples UniProtKB:Q8A3I4 (BT_2970 / BtFuc2970) "
+                "backed by DOI:10.1016/j.bmc.2013.05.056."
+            ),
+        },
+        "changes_summary": (
+            "Added Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186; "
+            "DOI:10.1016/j.bmc.2013.05.056) canonical example; promoted "
+            "alpha_fucosidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR000933-grounded GENE_OR_PROTEIN node "
+            "alpha_fucosidase_bt2970 with reference-proteome (UP000001414) "
+            "Bacteroides thetaiotaomicron VPI-5482 protein_examples "
+            "UniProtKB:Q8A3I4 (BT_2970 / BtFuc2970) backed by "
+            "DOI:10.1016/j.bmc.2013.05.056; resolved "
+            "alpha-fucosidase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/amylase_activity.yaml": {
+        "identifier": "traitmech:000162",
+        "graph_id": "amylase_starch_hydrolysis_sketch",
+        "discussion_id": "amylase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.2.1.1, "
+            "DOI:10.1155/2013/150656, and DOI:10.1128/jb.166.2.635-643.1986; "
+            "exemplified on amylase_amys with Bacillus licheniformis "
+            "(NCBITaxon:1402) thermostable alpha-amylase AmyS "
+            "(UniProtKB:P06278)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1128/jb.166.2.635-643.1986",
+            "snippet": (
+                "The genes encoding the thermostable alpha-amylases of "
+                "Bacillus stearothermophilus and B. licheniformis were cloned "
+                "in Escherichia coli, and their DNA sequences were determined."
+            ),
+            "notes": (
+                "Gray et al. cloned and sequenced the Bacillus licheniformis "
+                "amyS gene encoding thermostable alpha-amylase "
+                "(UniProtKB:P06278)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:1402",
+            "taxon_label": "Bacillus licheniformis",
+            "note": (
+                "Gray et al. cloned and sequenced the Bacillus licheniformis "
+                "gene encoding thermostable extracellular alpha-amylase "
+                "(AmyS)."
+            ),
+            "reference": "DOI:10.1128/jb.166.2.635-643.1986",
+        },
+        "new_node": {
+            "node_id": "amylase_amys",
+            "label": "thermostable alpha-amylase AmyS",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR013776",
+            "gene_symbols": ["amyS", "amyL"],
+            "description": (
+                "Glycoside hydrolase family 13 (GH13) thermostable "
+                "alpha-amylase (AmyS/AmyL) that endohydrolyzes "
+                "(1->4)-alpha-D-glucosidic linkages in starch and related "
+                "polysaccharides."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P06278",
+                    "protein_label": "Alpha-amylase",
+                    "gene_symbol": "amyS",
+                    "taxon_id": "NCBITaxon:1402",
+                    "taxon_label": "Bacillus licheniformis",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C6S3_RETRIEVED_ON,
+                    "entry_version": 174,
+                    "sequence_version": 1,
+                    "role": (
+                        "AmyS is the Bacillus licheniformis thermostable "
+                        "extracellular alpha-amylase that endohydrolyzes "
+                        "(1->4)-alpha-D-glucosidic linkages in starch."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/jb.166.2.635-643.1986",
+                            "snippet": (
+                                "The genes encoding the thermostable "
+                                "alpha-amylases of Bacillus "
+                                "stearothermophilus and B. licheniformis were "
+                                "cloned in Escherichia coli, and their DNA "
+                                "sequences were determined."
+                            ),
+                            "notes": (
+                                "Gray et al. cloned and sequenced the "
+                                "Bacillus licheniformis thermostable "
+                                "alpha-amylase gene amyS (UniProtKB:P06278)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "amylase_amys",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "amylase_catalytic_activity",
+            "description": (
+                "Thermostable alpha-amylase AmyS enables alpha-amylase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/jb.166.2.635-643.1986",
+                    "snippet": (
+                        "The genes encoding the thermostable alpha-amylases "
+                        "of Bacillus stearothermophilus and B. licheniformis "
+                        "were cloned in Escherichia coli, and their DNA "
+                        "sequences were determined."
+                    ),
+                    "notes": (
+                        "Gray et al. cloned and sequenced the Bacillus "
+                        "licheniformis amyS gene encoding thermostable "
+                        "alpha-amylase."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C6S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Bacillus licheniformis "
+                "(NCBITaxon:1402; DOI:10.1128/jb.166.2.635-643.1986) and "
+                "promoted amylase_starch_hydrolysis_sketch to MECHANISTIC by "
+                "adding InterPro:IPR013776-grounded GENE_OR_PROTEIN node "
+                "amylase_amys with reviewed Bacillus licheniformis "
+                "(NCBITaxon:1402) protein_examples UniProtKB:P06278 (AmyS) "
+                "backed by DOI:10.1128/jb.166.2.635-643.1986."
+            ),
+        },
+        "changes_summary": (
+            "Added Bacillus licheniformis (NCBITaxon:1402; "
+            "DOI:10.1128/jb.166.2.635-643.1986) canonical example; promoted "
+            "amylase_starch_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR013776-grounded GENE_OR_PROTEIN node amylase_amys "
+            "with reviewed Bacillus licheniformis (NCBITaxon:1402) "
+            "protein_examples UniProtKB:P06278 (AmyS) backed by "
+            "DOI:10.1128/jb.166.2.635-643.1986; resolved "
+            "amylase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/beta_galactosidase_activity.yaml": {
+        "identifier": "traitmech:000148",
+        "graph_id": "beta_galactosidase_lacz_sketch",
+        "discussion_id": "beta-galactosidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.2.1.23, "
+            "DOI:10.1073/pnas.91.11.4915, and "
+            "DOI:10.1002/j.1460-2075.1983.tb01468.x; exemplified on "
+            "beta_galactosidase_lacz with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) beta-galactosidase LacZ "
+            "(UniProtKB:P00722)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1002/j.1460-2075.1983.tb01468.x",
+            "snippet": (
+                "The nucleotide sequence of the lacZ gene coding for "
+                "beta-galactosidase (EC 3.2.1.23) in Escherichia coli has "
+                "been determined. Beta-Galactosidase is predicted to consist "
+                "of 1023 residues, resulting in a protein with a mol. wt. of "
+                "116 353 per subunit."
+            ),
+            "notes": (
+                "Kalnins et al. determined the nucleotide sequence of the "
+                "Escherichia coli K-12 lacZ gene encoding beta-galactosidase "
+                "(UniProtKB:P00722)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Kalnins et al. determined the nucleotide sequence of the "
+                "Escherichia coli K-12 lacZ gene encoding beta-galactosidase."
+            ),
+            "reference": "DOI:10.1002/j.1460-2075.1983.tb01468.x",
+        },
+        "new_node": {
+            "node_id": "beta_galactosidase_lacz",
+            "label": "beta-galactosidase LacZ",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR023933",
+            "gene_symbols": ["lacZ"],
+            "description": (
+                "Glycoside hydrolase family 2 (GH2) homotetrameric "
+                "beta-galactosidase (LacZ) that hydrolyzes terminal "
+                "non-reducing beta-D-galactose residues in lactose and "
+                "beta-D-galactosides."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P00722",
+                    "protein_label": "Beta-galactosidase",
+                    "gene_symbol": "lacZ",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C6S3_RETRIEVED_ON,
+                    "entry_version": 230,
+                    "sequence_version": 2,
+                    "role": (
+                        "LacZ is the Escherichia coli K-12 beta-galactosidase "
+                        "that hydrolyzes terminal non-reducing "
+                        "beta-D-galactose residues in beta-D-galactosides "
+                        "such as lactose and ONPG."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1002/j.1460-2075.1983.tb01468.x",
+                            "snippet": (
+                                "The nucleotide sequence of the lacZ gene "
+                                "coding for beta-galactosidase (EC 3.2.1.23) "
+                                "in Escherichia coli has been determined. "
+                                "Beta-Galactosidase is predicted to consist "
+                                "of 1023 residues, resulting in a protein "
+                                "with a mol. wt. of 116 353 per subunit."
+                            ),
+                            "notes": (
+                                "Kalnins et al. sequenced the Escherichia "
+                                "coli K-12 lacZ gene encoding "
+                                "beta-galactosidase (UniProtKB:P00722)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "beta_galactosidase_lacz",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "beta_galactosidase_catalytic_activity",
+            "description": (
+                "Beta-galactosidase LacZ enables beta-galactosidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1002/j.1460-2075.1983.tb01468.x",
+                    "snippet": (
+                        "The nucleotide sequence of the lacZ gene coding for "
+                        "beta-galactosidase (EC 3.2.1.23) in Escherichia coli "
+                        "has been determined. Beta-Galactosidase is predicted "
+                        "to consist of 1023 residues, resulting in a protein "
+                        "with a mol. wt. of 116 353 per subunit."
+                    ),
+                    "notes": (
+                        "Kalnins et al. determined the nucleotide sequence of "
+                        "Escherichia coli K-12 lacZ encoding "
+                        "beta-galactosidase."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C6S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1002/j.1460-2075.1983.tb01468.x) "
+                "and promoted beta_galactosidase_lacz_sketch to MECHANISTIC "
+                "by adding InterPro:IPR023933-grounded GENE_OR_PROTEIN node "
+                "beta_galactosidase_lacz with reviewed Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P00722 (LacZ) backed by "
+                "DOI:10.1002/j.1460-2075.1983.tb01468.x."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1002/j.1460-2075.1983.tb01468.x) canonical example; "
+            "promoted beta_galactosidase_lacz_sketch to MECHANISTIC; added "
+            "InterPro:IPR023933-grounded GENE_OR_PROTEIN node "
+            "beta_galactosidase_lacz with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P00722 (LacZ) "
+            "backed by DOI:10.1002/j.1460-2075.1983.tb01468.x; resolved "
+            "beta-galactosidase-activity-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -3785,6 +4196,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C3S3_COHORT_E_PROMOTIONS,
         **C4S3_COHORT_G_PROMOTIONS,
         **C5S3_COHORT_H_PROMOTIONS,
+        **C6S3_COHORT_I_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(
