@@ -12539,7 +12539,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#alpha_fucosidase_hydrolysis_sketch"
   ],
-  "rationale": "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), while Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186, DOI:10.1073/pnas.251226098) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -12712,7 +12712,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#amylase_starch_hydrolysis_sketch"
   ],
-  "rationale": "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus, while Bacillus licheniformis (NCBITaxon:1402, DOI:10.1007/s002530200001) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus (NCBITaxon:28116), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -13240,7 +13240,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#beta_galactosidase_lacz_sketch"
   ],
-  "rationale": "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), while Escherichia coli K-12 (NCBITaxon:83333, DOI:10.1038/369761a0) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [

@@ -73,8 +73,7 @@ discussions:
   rationale: The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985)
     establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and
     an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112),
-    while Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186, DOI:10.1073/pnas.251226098)
-    is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN
+    but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN
     node must be curated before marking the graph MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-26'
@@ -100,7 +99,7 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (alpha-fucosidase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
-- timestamp: '2026-10-26T02:03:14Z'
+- timestamp: '2026-10-26T02:56:14Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (alpha_fucosidase_hydrolysis_sketch)

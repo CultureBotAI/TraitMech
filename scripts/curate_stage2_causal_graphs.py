@@ -3508,17 +3508,17 @@ COHORT_I_PATHS: tuple[str, ...] = (
 COHORT_I_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     "data/traits/physiology/alpha_fucosidase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Bacteroides thetaiotaomicron VPI-5482 alpha-L-fucosidase BT_2970 (UniProtKB:Q8A3I4) so alpha_fucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), while Bacteroides thetaiotaomicron VPI-5482 (NCBITaxon:226186, DOI:10.1073/pnas.251226098) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.51, DOI:10.1128/jcm.22.3.333-335.1985) establishes hydrolytic cleavage of alpha-L-fucosides with H2O to L-fucose and an alcohol and positive alpha-fucosidase activity in Tannerella forsythia (NCBITaxon:28112), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/physiology/amylase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Bacillus licheniformis alpha-amylase AmyS (UniProtKB:P06278) so amylase_starch_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus, while Bacillus licheniformis (NCBITaxon:1402, DOI:10.1007/s002530200001) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w) establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase activity in Bacteroides ovatus (NCBITaxon:28116), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/physiology/beta_galactosidase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 beta-galactosidase LacZ (UniProtKB:P00722) so beta_galactosidase_lacz_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), while Escherichia coli K-12 (NCBITaxon:83333, DOI:10.1038/369761a0) is a cited canonical example; a verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.23, DOI:10.3389/fmicb.2021.742300, DOI:10.1128/jcm.22.3.333-335.1985) establishes beta-galactosidase hydrolysis of lactose O-glycosidic bonds to glucose and galactose and positive beta-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
 }

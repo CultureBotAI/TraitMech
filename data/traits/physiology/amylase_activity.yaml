@@ -78,9 +78,9 @@ discussions:
   - causal_graphs#amylase_starch_hydrolysis_sketch
   rationale: The record's primary literature (DOI:10.3389/fbioe.2020.00871, DOI:10.1007/s00018-023-04812-w)
     establishes amylolytic enzyme degradation of starch and extracellular alpha-amylase
-    activity in Bacteroides ovatus, while Bacillus licheniformis (NCBITaxon:1402,
-    DOI:10.1007/s002530200001) is a cited canonical example; a verified UniProtKB
-    accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.
+    activity in Bacteroides ovatus (NCBITaxon:28116), but a strain-matched canonical
+    example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated
+    before marking the graph MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-26'
   evidence:
@@ -104,7 +104,7 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (amylase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
-- timestamp: '2026-10-26T02:03:14Z'
+- timestamp: '2026-10-26T02:56:14Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (amylase_starch_hydrolysis_sketch)
