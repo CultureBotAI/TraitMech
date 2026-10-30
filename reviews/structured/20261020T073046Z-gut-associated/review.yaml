@@ -1,0 +1,1146 @@
+schema_version: 1.0.0
+review_id: 20261020T073046Z-gut-associated
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of gut-associated (traitmech:000052)
+started_at: '2026-10-20T07:19:43Z'
+finished_at: '2026-10-20T07:30:46Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The ecological identity, host-associated parent and canonical example are
+  supported. All fourteen nodes, twelve edges and the resolved discussion were assessed.
+  Three major findings concern external relation semantics, an over-broad prerequisite
+  assertion and a discussion conclusion that retains a previously corrected overstatement.
+  Three minor findings concern stale writer quotations, historical-citation characterization
+  and undocumented human sign-off in the inspected local provenance. All six current
+  quotation occurrences were accounted for through source abstracts, full HTML or
+  an inspected university manuscript; access failures are distinguished from genuine
+  source text.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/gut_associated.yaml
+    sha256: 7ff3a740499c51e2f2e4855f56c0f084cc0aa7334d48cdc4eff309d90eb15586
+    role: target
+  - path: data/traits/ecology/host_associated.yaml
+    sha256: 8f39eb631802725d79cec85d1d80e0a2f24b2fb74940473bc39b32a2c57d6384
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/other/gut-associated-oxygen-external-research/2026-08-31T210233Z-claude-code-4f48fe.yaml
+    sha256: bb5c230bfafa60da5c29356acacc1cdb410acfd97ac1dc777b9f91370f88248a
+    role: context
+  - path: history/records/gut_associated/2026-09-01T023338Z-claude-code-d63e1b.yaml
+    sha256: dfb2df5684f6a912adc0cf5b36e704ad7c7505143c55fbf978f89032c02d5908
+    role: context
+  - path: history/records/gut_associated/2026-09-02T050916Z-claude-code-3d5b85.yaml
+    sha256: 42320296bd80f2ff3ee93e0705929f7d1af2c09cf7dee7228df3b48bc90f8625
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/close_gut_associated_oxygen_loop.py
+    sha256: 16879b031f0b6eb015eca2df911f2327c5be0d89146d4303c625a36e85de6aef
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000052
+  path: data/traits/ecology/gut_associated.yaml
+  label: gut-associated
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical targeted graph writer
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Fifth target in batch002, selected in lexicographic path order using
+    the validated inventory union. One complete previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000052
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000052
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000052
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: gut_associated-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just validate data/traits/ecology/gut_associated.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-gut_associated-validate
+- check_id: gut_associated-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just validate-strict data/traits/ecology/gut_associated.yaml --out /private/tmp/traitmech-record-sweep-002.mdt7dqwk/gut_associated-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-gut_associated-strict
+- check_id: gut_associated-snippets-network
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000052
+  command: just verify-snippets --record data/traits/ecology/gut_associated.yaml --out
+    /private/tmp/traitmech-record-sweep-002.mdt7dqwk/gut_associated-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Six snippets across four references: four VERIFIED, two NOT_IN_ABSTRACT.
+    Both inconclusive occurrences were subsequently checked against the university-hosted
+    manuscript. Automated results are retained unchanged.'
+  evidence_ids:
+  - check-gut_associated-snippets-network
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000052
+  summary: The inspected public catalogue has no Bacteroides dataset. The generic
+    adhesin aggregate has no strain or locus assignment, and the named host receptor
+    is outside this bacterial catalogue. No expression-module evidence is required
+    or inferred.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-gut_associated-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/gut_associated-validate.log
+  locator: Executed 2026-10-20T07:20:56Z through 2026-10-20T07:20:57Z; metadata gut_associated-validate.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: 07bedd7e7731aafe437556052d428656d0cfcb4955d791383fc461a0182283c2
+- evidence_id: check-gut_associated-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/gut_associated-strict.log
+  locator: Executed 2026-10-20T07:20:56Z through 2026-10-20T07:20:58Z; metadata gut_associated-strict.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 5a6c4c7671aebe1333f0eea9b08572d7f80fd0d29fb971af8e073d2a7409e907
+- evidence_id: check-gut_associated-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/gut_associated-snippets-network.log
+  locator: Executed 2026-10-20T07:21:20Z through 2026-10-20T07:21:31Z; metadata gut_associated-snippets-network.json
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: context_only
+  summary: 'Six snippets across four references: four VERIFIED, two NOT_IN_ABSTRACT.
+    Both inconclusive occurrences were subsequently checked against the university-hosted
+    manuscript. Automated results are retained unchanged.'
+  snapshot_sha256: 8ab8466fcc07d1f74942f08133e11e7aa35151219d5500f3a65f291422adb549
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/gut_associated.yaml
+  locator: Entire record, including all graph elements, example, historical notes
+    and resolved discussion
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: partial
+  summary: The definition selects persistent animal gastrointestinal residence, with
+    host benefit described as frequent rather than necessary. The graph and discussion
+    contain distinct source-scope and representation concerns.
+  snapshot_sha256: 7ff3a740499c51e2f2e4855f56c0f084cc0aa7334d48cdc4eff309d90eb15586
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: Complete captured METPO literal search; v5 gut-associated and host-associated
+    proposal rows
+  accessed_at: '2026-10-20T07:21:19Z'
+  support: supports
+  summary: No normalized exact match for the target or its searched alias was found
+    in the complete snapshot, including obsolete-label forms. The v5 proposal documents
+    local fallback traitmech:000052 and reservation METPO:1007651 under the host-associated
+    parent.
+  snapshot_sha256: 663ea3404503088c766844e7731ae31d365e054bacd32fc82dfb5614fe35c6e4
+- evidence_id: hierarchy
+  kind: record_content
+  reference: data/traits/ecology/host_associated.yaml
+  locator: Parent definition and local identity
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: supports
+  summary: Persistent residence on or in an animal or plant host is broader than gastrointestinal
+    residence in an animal. Related synonym intestinal does not assert equivalence
+    to a location class.
+- evidence_id: ownership
+  kind: record_content
+  reference: scripts/close_gut_associated_oxygen_loop.py
+  locator: Entire writer; both per-record history files and external-research history
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: partial
+  summary: The targeted writer retains quotation constants and interpretive wording
+    predating the September2 corrections. It skips already-present endpoint pairs,
+    so it is not currently overwriting the corrected target. History explicitly records
+    AI self-review and earlier source-fidelity corrections.
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: Exact queries for eleven active references and four historical PMIDs; per-request
+    access metadata retained
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: supports
+  summary: All fifteen cited identifiers resolve to bibliographic records. Several
+    XML requests failed, and some HTTP200 HTML responses were challenge pages rather
+    than articles; those are not treated as source text.
+  snapshot_sha256: 2f3f180c9c2ee3bd3f8703cc0d3e6025b9afc3269bcb039b0a04bdeca53fca7d
+- evidence_id: backhed
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.1104816
+  locator: Indexed abstract, PMID15790844
+  accessed_at: '2026-10-20T07:20:58Z'
+  support: supports
+  summary: The review supports the human distal intestine as a microbial habitat and
+    describes host nutritional contributions. The abstract is narrower than the full
+    animal scope and is supplemented by the comparative animal review.
+  snapshot_sha256: a66eed790d0cf092a1d0529ad11629a1d735c8cec9cf8b6541919fddabb14bdf
+- evidence_id: mcfall
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3587249/
+  locator: Animal evolution/nutrition discussion in the retrieved full HTML
+  accessed_at: '2026-10-20T07:21:00Z'
+  support: supports
+  summary: The review discusses animal gut partnerships across diverse lineages and
+    their nutritional importance. It supports broad ecological context without making
+    every resident beneficial or every mechanism universal.
+  snapshot_sha256: 9b5d60a370751beacc2464ed17c810d45b2f450d1fa6901e71fbd472fd7fd014
+- evidence_id: example
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12663928/
+  locator: Genome-study abstract
+  accessed_at: '2026-10-20T07:20:58Z'
+  support: supports
+  summary: The source identifies B. thetaiotaomicron as a normal distal-intestinal
+    resident and describes its dietary-polysaccharide capabilities. That directly
+    supports the bounded canonical example; the full article was not obtained.
+  snapshot_sha256: 4c61f32bb2868a00a882574aafbbb0bcf67c22f3f6c2f7f4716046f8bf379c2d
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=818
+  locator: Exact NCBI taxonomy record
+  accessed_at: '2026-10-20T07:24:36Z'
+  support: supports
+  summary: NCBITaxon:818 resolves to Bacteroides thetaiotaomicron with the record’s
+    label.
+  snapshot_sha256: 12af32f5d745f443bd6d6f09b46815218503b1bdbf04b73eb62708eda8ceab44
+- evidence_id: adhesion
+  kind: primary_source
+  reference: https://doi.org/10.3390/microorganisms12051026
+  locator: Abstract and opening mammalian intestinal ecology discussion
+  accessed_at: '2026-10-20T07:20:59Z'
+  support: partial
+  summary: The review concerns bacteria in mammalian guts and frames its prerequisite
+    language within that scope. Its proximal-intestinal context supports the qualitative
+    environmental statement. It does not establish a prerequisite for all microbes
+    across all animal guts.
+  snapshot_sha256: 7efa3fe0f29b577bf3bfebed1fc89ed0123f68167cb7fd1d62a0297ee4e98d78
+- evidence_id: bile
+  kind: primary_source
+  reference: https://doi.org/10.1128/spectrum.03576-23
+  locator: Opening background paragraph on community composition
+  accessed_at: '2026-10-20T07:21:00Z'
+  support: supports
+  summary: The inspected background supports the broad ecological statement about
+    bile acids. The article’s particular experimental system is not generalized into
+    a universal mechanism here.
+  snapshot_sha256: 36bfdaa49b10cf6b220c3a11fa537ee7bd184df3af1fc092b62f63f67634ea8d
+- evidence_id: small-intestine
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.chom.2024.05.011
+  locator: Browser-inspected PMC11178278 full-text habitat-filter section; successful
+    retained result followed by a challenged reaccess
+  accessed_at: '2026-10-20T07:24:39Z'
+  support: supports
+  summary: The section directly supports the qualitative inhibitory statements for
+    many bacteria in the mammalian small intestine. This is restricted anatomical
+    and taxonomic context. The recorded time is the later reaccess attempt; the earlier
+    successfully inspected browser text is retained in the session, without claiming
+    a raw-file hash.
+- evidence_id: lee
+  kind: primary_source
+  reference: https://doi.org/10.1128/iai.00302-24
+  locator: Indexed abstract, PMID39347570
+  accessed_at: '2026-10-20T07:21:00Z'
+  support: supports
+  summary: The review supports the qualitative human-colonic homeostasis claim at
+    its stated scope. It does not make this a definition of every animal gut association.
+  snapshot_sha256: 040fae964de9af7107a16caeef1730c8b7fb3e33111184745122def383c6a1c4
+- evidence_id: study2016
+  kind: primary_source
+  reference: https://escholarship.org/content/qt90n9w7rm/qt90n9w7rm.pdf
+  locator: Author manuscript for DOI10.1016/j.chom.2016.03.004, printed pages6 and9
+  accessed_at: '2026-10-20T07:24:39Z'
+  support: supports
+  summary: The two record quotation spans are present, including the restored statistical
+    parenthesis. The inspected passages concern the measured epithelial endpoint.
+    They do not establish identity between that endpoint and all bulk luminal oxygen
+    measurements. The browser supplied the manuscript; the direct HTTP202 download
+    was empty and is not hashed as source text.
+- evidence_id: study2015
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC4433427/
+  locator: Abstract and inspected quotation context
+  accessed_at: '2026-10-20T07:21:08Z'
+  support: supports
+  summary: The full article supports the bounded epithelial observation, and its current
+    record quotation is exact. This does not certify the record’s external predicate
+    choice.
+  snapshot_sha256: d7018e889a3692bef987117b7181045b0ceb4ebf57a94671e0b2f7b76b50f8ae
+- evidence_id: study2017
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.aam9949
+  locator: Indexed source abstract, PMID28798125
+  accessed_at: '2026-10-20T07:21:05Z'
+  support: supports
+  summary: Both cited quotation spans occur in the source abstract. Their endpoint
+    is oxygen bioavailability in a particular host context; broad animal-wide universality
+    is not inferred.
+  snapshot_sha256: 93261e1b904f1dbd940ebce8f37b94d02c4a2de48342a4c7c782cffef06200fd
+- evidence_id: oxygen2018
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.1718635115
+  locator: Complete indexed abstract, PMID29610310
+  accessed_at: '2026-10-20T07:21:06Z'
+  support: refutes
+  summary: The study describes both microbial and chemical contributions to luminal
+    oxygen levels. Similar measured profiles in the compared groups do not establish
+    that microbes have no contribution. This contradicts the discussion’s absolute
+    negative while agreeing with the corrected edge note.
+  snapshot_sha256: f02031480e8cb7f4db60a128e13ed22c5863c18b02c2e2e5a0b630dcd9b29956
+- evidence_id: source-matches
+  kind: validation
+  reference: Local source-access and quotation ledger
+  locator: All six current occurrences, with abstract, full-HTML and browser-manuscript
+    methods distinguished
+  accessed_at: '2026-10-20T07:25:50Z'
+  support: supports
+  summary: Four occurrences were checked as exact normalized source-text matches locally;
+    two were manually checked in the university manuscript. The initial unavailable
+    HTML attempts are retained separately and are not quote-mismatch findings.
+  snapshot_sha256: b98e8c7356aa0a2a6b0bc34281eeab345c721a6f1684a890afa63ef734c5e2e3
+- evidence_id: historical
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: PMIDs40945860,42278360,41808832,42197356 and indexed abstract context
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: partial
+  summary: The historical references resolve. The last three include gut, microbiome
+    or intestinal-disease subjects, so their blanket description as unrelated to this
+    broad trait is too strong. They still do not establish the specific resolved question
+    and need not become active evidence.
+  snapshot_sha256: 2f3f180c9c2ee3bd3f8703cc0d3e6025b9afc3269bcb039b0a04bdeca53fca7d
+- evidence_id: ontology
+  kind: authority
+  reference: Previously downloaded RO and ChEBI authority databases
+  locator: Read-only exact-identifier and recursive superproperty inspection
+  accessed_at: '2026-10-20T07:21:58Z'
+  support: partial
+  summary: CHEBI:17968 is the named butyrate anion. RO regulation relations inherit
+    process-to-process constraints; contributes to inherits material-entity-to-process
+    semantics. Direct absence of a domain/range declaration on a subproperty does
+    not erase inherited constraints.
+  snapshot_sha256: 9fa8d238273cd9d6492ef003a144fa5c46b424c1e858bc56801723c0a38ba3fa
+- evidence_id: biolink
+  kind: authority
+  reference: https://w3id.org/biolink/biolink-model.yaml
+  locator: Cached produces slot description
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: refutes
+  summary: The relation describes a material producer. A node explicitly typed as
+    a community state is not that material producer.
+  snapshot_sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+- evidence_id: model
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Node-type meanings, NONMECHANISTIC scope, grounding policy, native checklist
+    and v8 confers proposal
+  accessed_at: '2026-10-20T07:30:46Z'
+  support: partial
+  summary: Broad ecological graphs and explicit label-only aggregates are permitted.
+    Local permissive validation does not establish external ontology semantics. The
+    checklist requires human sign-off for REVIEWED.
+- evidence_id: graph-shape
+  kind: validation
+  reference: Local read-only graph analysis
+  locator: Every node, edge and discussion anchor
+  accessed_at: '2026-10-20T07:21:58Z'
+  support: supports
+  summary: Fourteen nodes and twelve edges resolve into three components. Both discussion
+    anchors resolve. The declared NONMECHANISTIC graph need not be made connected.
+  snapshot_sha256: aed24d18e2d72382bce02a010d0442c25b6ecfba3d6e2266ce1d27b3b90c03ca
+- evidence_id: expression-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Public twenty-organism catalogue inspected during the immediately preceding
+    record review
+  accessed_at: '2026-10-20T07:11:59Z'
+  support: context_only
+  summary: No Bacteroides entry occurs in this catalogue snapshot. Generic protein
+    wording and a host receptor are not grounds to transfer a module from an unrelated
+    bacterium.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: search
+  kind: search
+  reference: Local repository at f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  locator: Ignored-inclusive identity/owner and target-specific sign-off searches
+  accessed_at: '2026-10-20T07:26:44Z'
+  support: partial
+  summary: The target, proposal and historical writer resolve. Target-specific provenance
+    documents AI assistance, including self-review, but does not identify human scientific
+    acceptance. No claim is made about private or remote approvals.
+  snapshot_sha256: 3be0d5122fdbef7de328e9c6a8fe414e4b689a9807b86887b56ff8fa7fd28870
+  search_scope: rg --no-ignore --hidden for gut-associated, gut_associated and traitmech:000052
+    across data/traits, scripts, history, mappings, proposals, conf and DO_NOT_WORK.md.
+    Additional history/reviews/research search identified target-named files for human/sign-off
+    inspection. Ignored files were included; no direct exclusion match was found.
+    No exhaustive external-approval search is claimed.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: ID, label, synonym, polarity and kind'
+  outcome: supported
+  target_ids:
+  - traitmech:000052
+  summary: One broad ecological class is identified. The fallback and pending upstream
+    reservation are documented. The related intestinal alias does not collapse residence
+    into a body location.
+  evidence_ids:
+  - record
+  - identity
+  - hierarchy
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and nearest source'
+  outcome: supported
+  target_ids:
+  - traitmech:000052
+  summary: Persistent gut residence and frequent nutritional contribution have appropriate
+    ecological support. Often does not impose host benefit as a necessary condition.
+    Sources differ in animal versus human/mammalian scope and are not treated as interchangeable.
+  evidence_ids:
+  - record
+  - backhed
+  - mcfall
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000052
+  summary: Host-associated is strictly broader. No special host effect or molecular
+    mechanism is required by that parent relationship.
+  evidence_ids:
+  - record
+  - hierarchy
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: category and graph scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000052
+  summary: ECOLOGY/CLASS and an explicitly NONMECHANISTIC graph fit a broad habitat
+    classification. No missing universal mechanism or connectivity-only edge is required.
+  evidence_ids:
+  - record
+  - model
+  - graph-shape
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: canonical example and current taxon identity'
+  outcome: supported
+  target_ids:
+  - traitmech:000052
+  summary: The current species identifier and cited genomic study support the stated
+    gut-resident example. Its source does not establish every generic graph branch.
+  evidence_ids:
+  - record
+  - example
+  - taxon
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: all citations, six quotations and source roles'
+  outcome: concern
+  target_ids:
+  - traitmech:000052
+  summary: All identifiers resolve and all six current quotation spans were accounted
+    for. Several full-text retrievals remain unavailable; abstracts and retained browser
+    text are explicitly distinguished. The current target quotations incorporate the
+    historical corrections, while the writer constants and discussion do not fully
+    track them.
+  evidence_ids:
+  - bibliography
+  - source-matches
+  - ownership
+  - study2016
+  - study2015
+  - study2017
+  - oxygen2018
+  - historical
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all fourteen nodes and twelve edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000052
+  summary: The ecological and source-specific concepts are identifiable, but seven
+    edges have external relation/endpoint conflicts. One prerequisite assertion exceeds
+    the scope of its bacterial/mammalian evidence. The three-component structure itself
+    is permitted.
+  evidence_ids:
+  - record
+  - ontology
+  - biolink
+  - model
+  - graph-shape
+  - adhesion
+  - bile
+  - small-intestine
+  - lee
+  details: 'Zero-based ledger: edge0 is a conceptual habitat/trait bridge; it is not
+    a sufficient test of persistence. Edge1 uses a TRAIT subject with a material-entity
+    relation. Edge2 has an appropriate protein/process shape at the cited bacterial
+    scope. Edge3 states a prerequisite for the broader target than the source establishes.
+    Edge4 is a descriptive ecological pressure assertion, not a grounded biochemical
+    reaction. Edges5 and6 put chemical subjects under process-to-process regulation.
+    Edge7 describes mechanical flow as a process although node8 is tagged ENVIRONMENTAL_FACTOR;
+    its qualitative anatomical context is supported. Edge8 uses process-to-state contributes
+    to. Edge9 treats a STATE as the material producer required by biolink produces.
+    Edge10 uses a chemical with process-to-process regulation. Edge11 uses a process
+    subject with material-entity contributes to. Nodes0–2 and4–10 have stated trait/habitat/process
+    meanings; node3 is an explicitly reviewed generic aggregate, node11 is a community
+    state, node12 has a valid chemical identifier, and node13 describes a host process.
+    No new mechanism is constructed here.'
+- assessment_id: discussion
+  area: consistency
+  topic: 'Native checklist: resolved question and endpoint boundaries'
+  outcome: concern
+  target_ids:
+  - traitmech:000052
+  summary: The discussion anchors resolve, but its absolute statement about bulk luminal
+    anoxia contradicts the corrected edge note and source conclusion. Distinct epithelial
+    and bulk-luminal measurements must remain distinct. The narrow observed results
+    do not validate the stronger negative.
+  evidence_ids:
+  - record
+  - ownership
+  - oxygen2018
+  - study2016
+  - study2015
+  - study2017
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: mapping status and history'
+  outcome: concern
+  target_ids:
+  - traitmech:000052
+  summary: REVIEWED and detailed AI-assisted curation history are present. The inspected
+    target-specific materials do not identify the human sign-off required by the native
+    checklist. This review supplies no such approval.
+  evidence_ids:
+  - record
+  - ownership
+  - model
+  - search
+  - check-validate-history
+findings:
+- finding_id: relation-endpoint-semantics
+  issue_key: gut-associated-relation-endpoint-semantics
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Seven edges conflict with the meanings of their external relations
+  description: Edges1,8 and11 use contributes to with non-material subjects, and edge8
+    also points to a STATE. Edges5,6 and10 use process regulation with CHEMICAL subjects.
+    Edge9 assigns a material-producer relation to a STATE. The record history’s reliance
+    on absent direct domain/range statements overlooks inherited constraints. This
+    is semantic analysis, not a claimed formal reasoner run.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - causal_graphs[0].edges[1].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  - causal_graphs[0].edges[6].predicate_id
+  - causal_graphs[0].edges[8].predicate_id
+  - causal_graphs[0].edges[9].predicate_id
+  - causal_graphs[0].edges[10].predicate_id
+  - causal_graphs[0].edges[11].predicate_id
+  evidence_ids:
+  - record
+  - ontology
+  - biolink
+  - model
+  - graph-shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared mapping decisions; any change requires a separately scoped audit
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: prerequisite-scope
+  issue_key: gut-associated-prerequisite-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A source-scoped bacterial statement becomes a prerequisite for the broad
+    trait
+  description: Edge3 applies prerequisite language to the all-animal microbial habitat
+    trait. The cited review explicitly concerns bacterial colonization of mammalian
+    guts. The declared generic graph scope does not justify extending a necessary-condition
+    statement to every organism and animal context covered by the target.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - causal_graphs[0].edges[3].description
+  - causal_graphs[0].edges[3].evidence
+  evidence_ids:
+  - record
+  - adhesion
+  - model
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: discussion-retains-corrected-overstatement
+  issue_key: gut-associated-discussion-retains-corrected-overstatement
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The resolution note retains the absolute negative corrected elsewhere
+  description: The resolution note still says the community is not responsible for
+    bulk centre-lumen anoxia. The corrected edge note and September2 history explicitly
+    reject that stronger negative. The source concludes that microbial and chemical
+    contributions both matter. Similar measured profiles do not license a no-contribution
+    conclusion.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - discussions[0].resolution_note
+  - causal_graphs[0].edges[11].evidence[2].notes
+  evidence_ids:
+  - record
+  - ownership
+  - oxygen2018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: writer-stale-quotations
+  issue_key: gut-associated-writer-stale-quotations
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Historical writer constants retain quotation defects corrected in the record
+  description: NEW_EDGES retains the older elided statistical clause and paraphrased
+    source sentence, while the target now has the corrected exact quotations. The
+    writer skips current edges, so this is a bounded future-reuse hazard rather than
+    a claim that the current record still contains those bad quotes.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - causal_graphs[0].edges[9].evidence[0].snippet
+  - causal_graphs[0].edges[11].evidence[2].snippet
+  - curation_history
+  evidence_ids:
+  - record
+  - ownership
+  - source-matches
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: historical-citation-rejection-overbroad
+  issue_key: gut-associated-historical-citation-rejection-overbroad
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The historical rejection note overstates how unrelated the references are
+  description: The preserved note says the additional references concern neither the
+    scraped sentence nor this trait. Several are plainly about gut microbiota or intestinal
+    disease. They may be irrelevant to the specific resolved question without being
+    unrelated to the broad gut-associated concept.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - discussions[0].notes
+  evidence_ids:
+  - record
+  - historical
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: gut-associated-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The inspected REVIEWED provenance lacks a human-acceptance link
+  description: The native checklist requires human sign-off, while the inspected target-specific
+    history identifies AI-assisted curation and self-review. No explicit human acceptance
+    was found in those ignored-inclusive local materials. This bounded documentary
+    gap does not prove that no private or remote approval exists.
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - ownership
+  - model
+  - search
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: history/records/gut_associated
+    role: Future appended provenance only
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: align-relations
+  description: Reconcile the external relation meanings with the existing endpoint
+    concepts.
+  finding_ids:
+  - relation-endpoint-semantics
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared mapping decisions; any change requires a separately scoped audit
+  acceptance_checks:
+  - Check inherited constraints and relation definitions; a missing direct declaration
+    is not evidence of unrestricted semantics.
+  - Keep the ecological and source-specific scopes explicit. Do not invent biological
+    steps or retype entities solely to satisfy a preferred relation.
+  - Shared mapping changes require a separate scope assessment; use guarded writes/history
+    and applicable focused validation, evidence, graph and qc gates after authorization.
+- action_id: bound-prerequisite
+  description: Restrict the necessary-condition wording to the scope actually supported
+    by its citation.
+  finding_ids:
+  - prerequisite-scope
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The broad animal-microbe class must not inherit an unsupported universal requirement
+    from a bacterial/mammalian review.
+  - Preserve conceptual evidence distinctions without adding colonization methods,
+    targets or experiments.
+- action_id: reconcile-source-corrections
+  description: Carry the documented source qualification consistently through the
+    discussion and relevant writer prose.
+  finding_ids:
+  - discussion-retains-corrected-overstatement
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  acceptance_checks:
+  - Retain the distinction between contribution and sole causation and between measured
+    anatomical endpoints.
+  - Verify that the resolution note agrees with the corrected evidence note and source
+    conclusion.
+  - Preserve earlier immutable history; record any separately authorized correction
+    as a new event.
+- action_id: reconcile-writer-quotes
+  description: Reconcile future-use writer constants with the already corrected source
+    spans.
+  finding_ids:
+  - writer-stale-quotations
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: scripts/close_gut_associated_oxygen_loop.py
+    role: Historical guarded writer; currently skips already-present endpoint pairs
+  acceptance_checks:
+  - Confirm exact quotations directly from source text without silent omissions or
+    paraphrases.
+  - The current target quotations are supported; do not overwrite them with the historical
+    constants.
+- action_id: narrow-historical-rejection
+  description: Describe the historical citations as insufficient for the particular
+    question where that is the actual reason for rejection.
+  finding_ids:
+  - historical-citation-rejection-overbroad
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve scan provenance and distinguish topical relevance from support for a
+    specific assertion.
+  - Do not promote unrelated-to-question citations into active evidence merely because
+    their broader subject overlaps.
+- action_id: document-status-basis
+  description: Locate and document human acceptance or retain the status question
+    as unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000052
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: history/records/gut_associated
+    role: Future appended provenance only
+  acceptance_checks:
+  - Do not infer an approver from automated validation, a provider answer or AI self-review.
+  - Any status/history change needs separate curation authorization; this review changes
+    neither.
+limitations:
+- Bäckhed and the example genome paper were inspected through indexed abstracts. Several
+  other claims are supported at abstract level as explicitly identified in the evidence
+  ledger; full-paper absence is not inferred.
+- HTTP200 was not equated with article access. Five PMC HTML responses were challenge
+  pages. The successful browser view of the 2024 habitat-filter article was followed
+  by a challenged reaccess.
+- The university manuscript was available through the browser, while direct download
+  returned an empty HTTP202 body. No hash of that empty file is presented as a manuscript
+  hash.
+- The six current quotation occurrences were checked using distinct source surfaces.
+  The earlier local-HTML attempt failed where article content was unavailable; that
+  is not a finding of fabricated current quotations.
+- The historical writer is idempotent for current endpoint pairs. Its stale constants
+  are a future-reuse issue, not evidence of an unobserved write to this record.
+- No canonical examples, molecular steps, experimental procedures or optimization
+  suggestions were added. The assessment covers source fidelity, conceptual scope,
+  ontology and provenance.
+- Three graph components are permitted by NONMECHANISTIC scope; no connectivity repair
+  is requested.
+- Earlier unchanged-base corpus diagnostics retain their baselines, superseded access
+  failures and product-adapter skips. They do not establish universal scientific correctness.
+- No human scientific sign-off or status promotion is supplied by this review.
+notes:
+- Native input capture preceded assessment; the complete target and maintained writer/history
+  inputs were inspected.
+- Only this new immutable review bundle is written. Scientific records, writers, mappings,
+  proposals, history and generated products remain unchanged.
+tags:
+- record-review
+- gut-associated
+- ecology
+- needs-curation
