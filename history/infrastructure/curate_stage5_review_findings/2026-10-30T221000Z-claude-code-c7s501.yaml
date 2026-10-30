@@ -1,0 +1,42 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-30T221000Z-claude-code-c7s501
+  timestamp: '2026-10-30T22:10:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 15 actionable Cycle 7 Stage 4 open findings in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 7 consuming
+    Cycle 7 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/evidence.yaml,
+    sha256 222a00d992e5eb786338b7adb358f13677621133be981764b0f2be6fa8fbd47c). Grouped all 20 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    reused real GitHub issues (#2002 for resolved group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 15 open findings (F-C7S4-DEF-SRC-001 through F-C7S4-DEF-SRC-015) via guarded writer
+    scripts/curate_stage5_review_findings.py across abia_system.yaml, abib_system.yaml, abic_system.yaml,
+    abid_system.yaml, abii_system.yaml, abir_system.yaml, abiu_system.yaml, lit_system.yaml,
+    card_nlr_endonuclease_system.yaml, card_nlr_gasdermin_system.yaml, card_nlr_phospho_system.yaml,
+    card_nlr_subtilase_system.yaml, card_nlr_system.yaml, nlr_like_bnacht_system.yaml, and pd_t2_1_system.yaml.
+    Persisted fresh structured review bundle reviews/structured/20261030T221500Z-cycle7-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 15 remediated records, regenerated pages/,
+    and preserved all immutable Stage 4 review artifacts untouched.'

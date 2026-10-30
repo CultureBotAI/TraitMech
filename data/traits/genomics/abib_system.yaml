@@ -16,12 +16,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1046/j.1365-2958.1996.371896.x
 evidence:
-- reference: PMID:8825768
+- reference: DOI:10.1046/j.1365-2958.1996.371896.x
   snippet: The abortive infection determinant AbiB prevents growth of the sensitive
     phage bIL170, but not of the resistant phage bIL41, on Lactococcus lactis strain
     IL1403
   notes: Parreira et al. place AbiB in the abortive-infection class and show that
-    it blocks the sensitive lactococcal phage bIL170 on Lactococcus lactis IL1403.
+    it blocks the sensitive lactococcal phage bIL170 on Lactococcus lactis IL1403
+    (PMID:8825768 / DOI:10.1046/j.1365-2958.1996.371896.x).
 - reference: PMID:8825768
   snippet: AbiB promotes a dramatic degradation of sensitive phage transcripts, starting
     10-15 min after infection
@@ -197,4 +198,13 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v196.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:8825768 to DOI:10.1046/j.1365-2958.1996.371896.x
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 remediation
+    of F-C7S4-DEF-SRC-002 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

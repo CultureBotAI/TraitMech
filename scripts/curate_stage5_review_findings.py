@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–6 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–7 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -15,9 +15,12 @@ Cycle 4 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 7 actionable open findings from the
 Cycle 5 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 13 actionable open findings from the
+tracked in GitHub issue #2002), the 13 actionable open findings from the
 Cycle 6 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 15 actionable open findings from the
+Cycle 7 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
@@ -25,6 +28,7 @@ tracked in GitHub issue #2002):
 - `F-C4S4-DEF-SRC-001`..`018` (Cycle 4 #2002, 18 records)
 - `F-C5S4-DEF-SRC-001`..`007` (Cycle 5 #2002, 7 records)
 - `F-C6S4-DEF-SRC-001`..`013` (Cycle 6 #2002, 13 records)
+- `F-C7S4-DEF-SRC-001`..`015` (Cycle 7 #2002, 15 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -62,6 +66,7 @@ CYCLE3_TIMESTAMP = "2026-10-24T02:45:00Z"
 CYCLE4_TIMESTAMP = "2026-10-25T12:55:00Z"
 CYCLE5_TIMESTAMP = "2026-10-25T21:40:00Z"
 CYCLE6_TIMESTAMP = "2026-10-26T08:15:00Z"
+CYCLE7_TIMESTAMP = "2026-10-30T22:10:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -1743,6 +1748,447 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    "data/traits/genomics/abia_system.yaml": {
+        "identifier": "traitmech:000344",
+        "finding_id": "F-C7S4-DEF-SRC-001",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1128/aem.60.4.1129-1136.1994",
+        "replace_reference": "PMID:16349225",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/aem.60.4.1129-1136.1994",
+            "snippet": (
+                "The abiA gene (formerly hsp) encodes an abortive phage "
+                "infection mechanism which inhibits phage DNA replication."
+            ),
+            "notes": (
+                "Dinsmore and Klaenhammer describe abiA as the former hsp "
+                "abortive-infection determinant and connect AbiA activity to "
+                "inhibition of phage DNA replication "
+                "(PMID:16349225 / DOI:10.1128/aem.60.4.1129-1136.1994)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:16349225 to "
+            "DOI:10.1128/aem.60.4.1129-1136.1994 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-001 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abib_system.yaml": {
+        "identifier": "traitmech:000319",
+        "finding_id": "F-C7S4-DEF-SRC-002",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1046/j.1365-2958.1996.371896.x",
+        "replace_reference": "PMID:8825768",
+        "evidence_entry": {
+            "reference": "DOI:10.1046/j.1365-2958.1996.371896.x",
+            "snippet": (
+                "The abortive infection determinant AbiB prevents growth of "
+                "the sensitive phage bIL170, but not of the resistant phage "
+                "bIL41, on Lactococcus lactis strain IL1403"
+            ),
+            "notes": (
+                "Parreira et al. place AbiB in the abortive-infection class "
+                "and show that it blocks the sensitive lactococcal phage "
+                "bIL170 on Lactococcus lactis IL1403 "
+                "(PMID:8825768 / DOI:10.1046/j.1365-2958.1996.371896.x)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:8825768 to "
+            "DOI:10.1046/j.1365-2958.1996.371896.x so definition_source has "
+            "an exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-002 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abic_system.yaml": {
+        "identifier": "traitmech:000320",
+        "finding_id": "F-C7S4-DEF-SRC-003",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1128/jb.174.22.7463-7469.1992",
+        "replace_reference": "PMID:1429469",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/jb.174.22.7463-7469.1992",
+            "snippet": (
+                "The genetic determinant for Prf (phage resistance five) was "
+                "subcloned from the conjugative plasmid pTN20"
+            ),
+            "notes": (
+                "Durmaz et al. subcloned the Prf determinant from the "
+                "Lactococcus lactis ME2 conjugative plasmid pTN20 "
+                "(PMID:1429469 / DOI:10.1128/jb.174.22.7463-7469.1992)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:1429469 to "
+            "DOI:10.1128/jb.174.22.7463-7469.1992 so definition_source has "
+            "an exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-003 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abid_system.yaml": {
+        "identifier": "traitmech:000318",
+        "finding_id": "F-C7S4-DEF-SRC-004",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1128/aem.61.5.2023-2026.1995",
+        "replace_reference": "PMID:7646042",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/aem.61.5.2023-2026.1995",
+            "snippet": (
+                "A 6.3-kb fragment from pBF61 in Lactococcus lactis subsp. "
+                "lactis KR5 was cloned and found to confer an abortive phage "
+                "infection (Abi+) phenotype"
+            ),
+            "notes": (
+                "McLandsborough et al. cloned the pBF61-derived fragment from "
+                "Lactococcus lactis subsp. lactis KR5 and showed that it "
+                "conferred an Abi phenotype "
+                "(PMID:7646042 / DOI:10.1128/aem.61.5.2023-2026.1995)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:7646042 to "
+            "DOI:10.1128/aem.61.5.2023-2026.1995 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-004 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abii_system.yaml": {
+        "identifier": "traitmech:000316",
+        "finding_id": "F-C7S4-DEF-SRC-005",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1016/S0168-1656(97)01692-1",
+        "replace_reference": "PMID:9195753",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/S0168-1656(97)01692-1",
+            "snippet": (
+                "Plasmid pND852 (56 kb) encodes nisin resistance and was "
+                "isolated from Lactococcus lactis ssp lactis (L. lactis) M138 "
+                "by conjugation to L. lactis LM0230"
+            ),
+            "notes": (
+                "Su et al. identified plasmid pND852 from Lactococcus lactis "
+                "M138 as the source of the abiI-associated phage resistance "
+                "locus (PMID:9195753 / DOI:10.1016/S0168-1656(97)01692-1)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:9195753 to "
+            "DOI:10.1016/S0168-1656(97)01692-1 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-005 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abir_system.yaml": {
+        "identifier": "traitmech:000317",
+        "finding_id": "F-C7S4-DEF-SRC-006",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1128/AEM.66.6.2647-2651.2000",
+        "replace_reference": "PMID:10831451",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/AEM.66.6.2647-2651.2000",
+            "snippet": (
+                "The native lactococcal plasmid pKR223 encodes two distinct "
+                "phage resistance mechanisms, a restriction and modification "
+                "(R/M) system designated LlaKR2I and an abortive infection "
+                "mechanism (Abi) which affects prolate-headed-phage proliferation"
+            ),
+            "notes": (
+                "Twomey et al. identify native Lactococcus lactis plasmid "
+                "pKR223 as the source of a restriction-modification system "
+                "and a separate abortive-infection determinant "
+                "(PMID:10831451 / DOI:10.1128/AEM.66.6.2647-2651.2000)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:10831451 to "
+            "DOI:10.1128/AEM.66.6.2647-2651.2000 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-006 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/abiu_system.yaml": {
+        "identifier": "traitmech:000321",
+        "finding_id": "F-C7S4-DEF-SRC-007",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1128/AEM.67.11.5225-5232.2001",
+        "replace_reference": "PMID:11679349",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/AEM.67.11.5225-5232.2001",
+            "snippet": (
+                "This study reports on the identification and "
+                "characterization of a novel abortive infection system, "
+                "AbiU, from Lactococcus lactis."
+            ),
+            "notes": (
+                "Dai et al. identify AbiU as a novel Lactococcus lactis "
+                "abortive-infection system "
+                "(PMID:11679349 / DOI:10.1128/AEM.67.11.5225-5232.2001)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:11679349 to "
+            "DOI:10.1128/AEM.67.11.5225-5232.2001 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 "
+            "remediation of F-C7S4-DEF-SRC-007 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/lit_system.yaml": {
+        "identifier": "traitmech:000363",
+        "finding_id": "F-C7S4-DEF-SRC-008",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1021/bi0495026",
+        "replace_reference": "PMID:15196039",
+        "evidence_entry": {
+            "reference": "DOI:10.1021/bi0495026",
+            "snippet": (
+                "Bacteriophage exclusion is a suicide response to viral "
+                "infection. In strains of Escherichia coli K-12 infected with "
+                "T4 phage this process is mediated by the host-encoded Lit "
+                "peptidase. Lit is activated by a unique sequence in the "
+                "major head protein of the T4 phage (the Gol sequence) which "
+                "then cleaves site-specifically the host translation factor "
+                "EF-Tu, ultimately leading to cell death."
+            ),
+            "notes": (
+                "Copeland et al. support host Lit as a T4-activated "
+                "bacteriophage-exclusion peptidase that cleaves EF-Tu and "
+                "leads to cell death "
+                "(PMID:15196039 / DOI:10.1021/bi0495026)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:15196039 to "
+            "DOI:10.1021/bi0495026 so definition_source has an exact matching "
+            "snippet-backed record-level evidence item while preserving the "
+            "PubMed cross-reference in notes (Cycle 7 Stage 5 remediation of "
+            "F-C7S4-DEF-SRC-008 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/card_nlr_endonuclease_system.yaml": {
+        "identifier": "traitmech:000550",
+        "finding_id": "F-C7S4-DEF-SRC-009",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1101/2023.05.28.542683",
+        "replace_reference": "https://europepmc.org/article/PPR/PPR668921",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/2023.05.28.542683",
+            "snippet": (
+                "Here we show that CARD-like domains are present in defense "
+                "systems that protect bacteria against phage."
+            ),
+            "notes": (
+                "Wein et al. support bacterial CARD-like domains as parts of "
+                "anti-phage defense systems "
+                "(https://europepmc.org/article/PPR/PPR668921 / "
+                "DOI:10.1101/2023.05.28.542683)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://europepmc.org/article/PPR/PPR668921 to "
+            "DOI:10.1101/2023.05.28.542683 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while "
+            "preserving the EuropePMC preprint cross-reference in notes "
+            "(Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-009 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/card_nlr_gasdermin_system.yaml": {
+        "identifier": "traitmech:000555",
+        "finding_id": "F-C7S4-DEF-SRC-010",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1101/2023.05.28.542683",
+        "replace_reference": "https://europepmc.org/article/PPR/PPR668921",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/2023.05.28.542683",
+            "snippet": (
+                "Here we show that CARD-like domains are present in defense "
+                "systems that protect bacteria against phage."
+            ),
+            "notes": (
+                "Wein et al. support bacterial CARD-like domains as parts of "
+                "anti-phage defense systems "
+                "(https://europepmc.org/article/PPR/PPR668921 / "
+                "DOI:10.1101/2023.05.28.542683)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://europepmc.org/article/PPR/PPR668921 to "
+            "DOI:10.1101/2023.05.28.542683 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while "
+            "preserving the EuropePMC preprint cross-reference in notes "
+            "(Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-010 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/card_nlr_phospho_system.yaml": {
+        "identifier": "traitmech:000551",
+        "finding_id": "F-C7S4-DEF-SRC-011",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1101/2023.05.28.542683",
+        "replace_reference": "https://europepmc.org/article/PPR/PPR668921",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/2023.05.28.542683",
+            "snippet": (
+                "Here we show that CARD-like domains are present in defense "
+                "systems that protect bacteria against phage."
+            ),
+            "notes": (
+                "Wein et al. support bacterial CARD-like domains as parts of "
+                "anti-phage defense systems "
+                "(https://europepmc.org/article/PPR/PPR668921 / "
+                "DOI:10.1101/2023.05.28.542683)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://europepmc.org/article/PPR/PPR668921 to "
+            "DOI:10.1101/2023.05.28.542683 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while "
+            "preserving the EuropePMC preprint cross-reference in notes "
+            "(Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-011 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/card_nlr_subtilase_system.yaml": {
+        "identifier": "traitmech:000553",
+        "finding_id": "F-C7S4-DEF-SRC-012",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1101/2023.05.28.542683",
+        "replace_reference": "https://europepmc.org/article/PPR/PPR668921",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/2023.05.28.542683",
+            "snippet": (
+                "Here we show that CARD-like domains are present in defense "
+                "systems that protect bacteria against phage."
+            ),
+            "notes": (
+                "Wein et al. support bacterial CARD-like domains as parts of "
+                "anti-phage defense systems "
+                "(https://europepmc.org/article/PPR/PPR668921 / "
+                "DOI:10.1101/2023.05.28.542683)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://europepmc.org/article/PPR/PPR668921 to "
+            "DOI:10.1101/2023.05.28.542683 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while "
+            "preserving the EuropePMC preprint cross-reference in notes "
+            "(Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-012 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/card_nlr_system.yaml": {
+        "identifier": "traitmech:000337",
+        "finding_id": "F-C7S4-DEF-SRC-013",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1101/2023.05.28.542683",
+        "replace_reference": "https://europepmc.org/article/PPR/PPR668921",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/2023.05.28.542683",
+            "snippet": (
+                "Here we show that CARD-like domains are present in defense "
+                "systems that protect bacteria against phage."
+            ),
+            "notes": (
+                "The Wein et al. abstract supports CARD-like-domain systems "
+                "as bacterial phage-defense systems "
+                "(https://europepmc.org/article/PPR/PPR668921 / "
+                "DOI:10.1101/2023.05.28.542683)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://europepmc.org/article/PPR/PPR668921 to "
+            "DOI:10.1101/2023.05.28.542683 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while "
+            "preserving the EuropePMC preprint cross-reference in notes "
+            "(Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-013 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/nlr_like_bnacht_system.yaml": {
+        "identifier": "traitmech:000408",
+        "finding_id": "F-C7S4-DEF-SRC-014",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2023.04.015",
+        "replace_reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2023.04.015",
+            "snippet": (
+                "Here we show that proteins containing a NACHT module, the "
+                "central feature of the animal nucleotide-binding domain and "
+                "leucine-rich repeat-containing gene family (NLRs), are found "
+                "in bacteria and defend against phages."
+            ),
+            "notes": (
+                "Kibby et al. support NACHT-module proteins as bacterial "
+                "NLR-related proteins that defend against phages "
+                "(https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/ / "
+                "DOI:10.1016/j.cell.2023.04.015)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/ to "
+            "DOI:10.1016/j.cell.2023.04.015 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed Central cross-reference in notes (Cycle 7 "
+            "Stage 5 remediation of F-C7S4-DEF-SRC-014 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/pd_t2_1_system.yaml": {
+        "identifier": "traitmech:000476",
+        "finding_id": "F-C7S4-DEF-SRC-015",
+        "timestamp": CYCLE7_TIMESTAMP,
+        "definition_source": "DOI:10.1038/s41564-025-02239-6",
+        "replace_reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/s41564-025-02239-6",
+            "snippet": (
+                "Two phage proteins were further investigated, revealing T7 "
+                "gp17 and additional tail fiber proteins activated the "
+                "undescribed antiphage system PD-T2\u20131 and identifying "
+                "\u03bb gpE major capsid protein activated the antiphage "
+                "system Avs8."
+            ),
+            "notes": (
+                "Goedecke et al. report that T7 gp17 and additional tail "
+                "fiber proteins activated the previously undescribed PD-T2-1 "
+                "antiphage system "
+                "(https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/ / "
+                "DOI:10.1038/s41564-025-02239-6)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from "
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/ to "
+            "DOI:10.1038/s41564-025-02239-6 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed Central cross-reference in notes (Cycle 7 "
+            "Stage 5 remediation of F-C7S4-DEF-SRC-015 in group "
+            "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -1821,7 +2267,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 65 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 80 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

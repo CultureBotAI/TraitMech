@@ -26,11 +26,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
 evidence:
-- reference: https://europepmc.org/article/PPR/PPR668921
+- reference: DOI:10.1101/2023.05.28.542683
   snippet: Here we show that CARD-like domains are present in defense systems that
     protect bacteria against phage.
   notes: Wein et al. support bacterial CARD-like domains as parts of anti-phage defense
-    systems.
+    systems (https://europepmc.org/article/PPR/PPR668921 / DOI:10.1101/2023.05.28.542683).
 - reference: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
   snippet: '| CARD_NLR | 10\.1101/2023\.05\.28\.542683 | CARD-like domains mediate
     anti-phage defense in bacterial gasdermin systems | '
@@ -189,4 +189,13 @@ curation_history:
     anti-phage defense and the CARD_NLR_Phospho model namespace but not an accession-backed
     native microbial taxon exemplar tied to CARD_NLR_Phospho profiles and experimentally
     verified endogenous CARD-NLR phospho activity. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from https://europepmc.org/article/PPR/PPR668921
+    to DOI:10.1101/2023.05.28.542683 so definition_source has an exact matching snippet-backed
+    record-level evidence item while preserving the EuropePMC preprint cross-reference
+    in notes (Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-011 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
