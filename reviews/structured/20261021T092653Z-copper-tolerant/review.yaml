@@ -1,0 +1,1399 @@
+schema_version: 1.0.0
+review_id: 20261021T092653Z-copper-tolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Evidence, chemical identity and source-scope review of copper tolerance (traitmech:000018)
+started_at: '2026-10-21T09:17:42Z'
+finished_at: '2026-10-21T09:26:53Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Copper tolerance has a justified fallback, supported organism context and
+  coherent taxon/protein identifiers. Two major findings concern the shared Cu(II)
+  node’s conflict with Cu(I), compartment and damage claims, and the collapse of distinct
+  copper systems into ATPase-mediated efflux. Three minor findings concern the nonliteral
+  protein snippet, derivative/system-versus-individual-protein evidence precision,
+  and a bounded missing human-acceptance link. All seven nodes, seven edges, four
+  references, fourteen placements and three snippets were assessed against actual
+  source bodies. Positive Cop-system evidence, exact GO grounding and historically
+  consistent UniProt metadata are preserved.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/copper_tolerant.yaml
+    sha256: 2eb94c78ccb7f7c953aa25088585cb9fb46f22b4e2425f924beb82f6caaba5fa
+    role: target
+  - path: data/traits/environment/metal_tolerant.yaml
+    sha256: 907f78048e48c547d03e3b2b073216a32007a0c0608fb361fba976a3812710c5
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/copper_tolerant-deep-research-falcon.md
+    sha256: a13f3a85b8bf51a8148e9b13f033409c2e837800c9d47ab1ac0faaf746960d4d
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000018
+  path: data/traits/environment/copper_tolerant.yaml
+  label: copper tolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: METPO-first identifier comparison; target was curator proposed
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One entire copper-tolerant record, read before native capture. All seven
+    nodes, seven edges, two canonical examples, the CopA2 protein example, fourteen
+    citation placements and five history events are included. Contextual inputs are
+    not additional review targets; the excluded spore-germination record is untouched.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000018
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000018
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000018
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: copper_tolerant-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just validate data/traits/environment/copper_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates. This establishes schema shape, not chemical
+    state, compartment identity or source support.
+  evidence_ids:
+  - check-copper_tolerant-validate
+- check_id: copper_tolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just validate-strict data/traits/environment/copper_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned with zero strict errors. Scientific and external relation
+    semantics were assessed separately.
+  evidence_ids:
+  - check-copper_tolerant-strict
+- check_id: copper_tolerant-snippets
+  name: Initial focused snippet command with unsupported option
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000018
+  command: just verify-snippets --file data/traits/environment/copper_tolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-snippets.tsv
+  exit_code: 2
+  expected_exit_code: 0
+  summary: The initial command used --file and exited 2 before snippet verification.
+    This failed optional attempt is retained and superseded by the corrected --record
+    invocation.
+  evidence_ids:
+  - check-copper_tolerant-snippets
+- check_id: copper_tolerant-snippets-corrected
+  name: Corrected focused abstract snippet check
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just verify-snippets --record data/traits/environment/copper_tolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The corrected --record command exited 0. All three snippets were NOT_IN_ABSTRACT;
+    these are inconclusive abstract misses, superseded by manual inspection of the
+    actual full texts below.
+  evidence_ids:
+  - check-copper_tolerant-snippets-corrected
+- check_id: corpus-protein-taxa
+  name: Native full-corpus protein/taxon coverage
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one PROTECTED, zero gaps/errors. Target PASS has two reviewed label-only protein
+    nodes, two cited canonical examples and one paired protein instance. Structural
+    coverage does not establish protein-specific experimental evidence.'
+  evidence_ids:
+  - check-corpus-protein-taxa
+- check_id: corpus-uniprot
+  name: Native full-corpus live UniProt audit
+  status: failed
+  required: true
+  target_ids:
+  - traitmech:000018
+  command: just audit-uniprot --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-uniprot.tsv
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions,
+    110 findings all ENTRY_VERSION_MISMATCH. Q1LBE6 matches primary accession, taxon,
+    unreviewed status, sequence 1 and proteome; stored 99 versus current 100 is the
+    only target finding. Archived version 99 fits the declared retrieval date, without
+    erasing the native audit failure.'
+  evidence_ids:
+  - check-corpus-uniprot
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000018
+  summary: Original bounded discovery reused; official catalog fallback inspected.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Canonical-organism dataset applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000018
+  summary: No matching canonical Cupriavidus dataset; no organism substitution or
+    expression query.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-copper_tolerant-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-validate.log
+  locator: Executed 2026-10-21T09:17:59Z through 2026-10-21T09:18:02Z; metadata copper_tolerant-validate.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: Selected record validates. This establishes schema shape, not chemical
+    state, compartment identity or source support.
+  snapshot_sha256: 4bf865da5828ce2fc5e32d5849021376eaf56868ff9e1f653a37fce740a3792f
+- evidence_id: check-copper_tolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-strict.log
+  locator: Executed 2026-10-21T09:17:59Z through 2026-10-21T09:18:03Z; metadata copper_tolerant-strict.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: One file scanned with zero strict errors. Scientific and external relation
+    semantics were assessed separately.
+  snapshot_sha256: e38006c8ceab472376b46b3ce615b6aa642af5c34b65b87ed0deeeac184bd9ac
+- evidence_id: check-copper_tolerant-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-snippets.log
+  locator: Executed 2026-10-21T09:18:21Z through 2026-10-21T09:18:21Z; metadata copper_tolerant-snippets.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: The initial command used --file and exited 2 before snippet verification.
+    This failed optional attempt is retained and superseded by the corrected --record
+    invocation.
+  snapshot_sha256: 3ccca587b54ce7b38413ab80fc3c56be1d79afa86800de8ad4757804c83cc3e5
+- evidence_id: check-copper_tolerant-snippets-corrected
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/copper_tolerant-snippets-corrected.log
+  locator: Executed 2026-10-21T09:18:30Z through 2026-10-21T09:18:42Z; metadata copper_tolerant-snippets-corrected.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: The corrected --record command exited 0. All three snippets were NOT_IN_ABSTRACT;
+    these are inconclusive abstract misses, superseded by manual inspection of the
+    actual full texts below.
+  snapshot_sha256: f991d5a4e76d0d6ba63c262ac8264dfe342802c07ffde487eb92f63da0cd2d02
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 'Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one PROTECTED, zero gaps/errors. Target PASS has two reviewed label-only protein
+    nodes, two cited canonical examples and one paired protein instance. Structural
+    coverage does not establish protein-specific experimental evidence.'
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-corpus-uniprot
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-uniprot.log
+  locator: Executed 2026-10-21T08:55:08Z through 2026-10-21T08:56:53Z; metadata corpus-uniprot.json
+  accessed_at: '2026-10-21T09:26:53Z'
+  support: context_only
+  summary: 'Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions,
+    110 findings all ENTRY_VERSION_MISMATCH. Q1LBE6 matches primary accession, taxon,
+    unreviewed status, sequence 1 and proteome; stored 99 versus current 100 is the
+    only target finding. Archived version 99 fits the declared retrieval date, without
+    erasing the native audit failure.'
+  snapshot_sha256: 6ad9ec31ef33837fb5f0d72d8c306af0ec862745d08c88240437e2e5012607b6
+- evidence_id: common-reuse
+  kind: validation
+  reference: Batch 004 common-input byte comparison
+  locator: All trait/history and common validator inputs versus previous owned snapshot
+  accessed_at: '2026-10-21T08:16:33Z'
+  support: supports
+  summary: Common checks retain their original dates, failures, scope and adapter
+    skips. The byte comparison permits reuse; it is not fresh certification against
+    later external ontology releases.
+  snapshot_sha256: 823d1d8f0372254e94974a97cbe7ff359378c698d0c3519860aaeaeadaeca7e0
+- evidence_id: check-reuse
+  kind: validation
+  reference: Copper-specific corpus-audit reuse receipt
+  locator: All 1130 trait files, target capture and native audit implementation inputs
+  accessed_at: '2026-10-21T09:18:17.506057Z'
+  support: supports
+  summary: Scientific trait bytes remain identical to the previous owned snapshot.
+    Actual 08:55 corpus audit timestamps and the UniProt failure are preserved rather
+    than reported as new focused executions.
+  snapshot_sha256: e21508f39e4fab1c8f094252c3775004b1be385c0ac07fb3d9546d0db658e07d
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/copper_tolerant.yaml
+  locator: Entire identity, definition, evidence, graph, protein example and five
+    events
+  accessed_at: '2026-10-21T09:17:42Z'
+  support: partial
+  summary: The record represents environmental copper tolerance with one explicitly
+    scoped protein-supported branch. Its Cu(II) chemical node, Cu(I)-specific evidence,
+    compartments and distinct copper-system classes must remain distinguishable.
+  snapshot_sha256: 2eb94c78ccb7f7c953aa25088585cb9fb46f22b4e2425f924beb82f6caaba5fa
+- evidence_id: shape
+  kind: validation
+  reference: Whole graph and history inspection
+  locator: Seven nodes, seven edges, one protein example and five AI events
+  accessed_at: '2026-10-21T09:19:00.455711Z'
+  support: supports
+  summary: Every graph endpoint resolves. All five history events explicitly disclose
+    AI assistance. No pathway-context link is asserted.
+  snapshot_sha256: a7220ffe8c074bf87f31c39d62eaa8f17fcdf2a8f58e4e100b88992cb0b8f3ef
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md; src/traitmech/schema/traitmech.yaml; native
+    review checklist
+  locator: Protein-example scope, retrieval-time versions and nearest-object evidence
+  accessed_at: '2026-10-21T09:22:28.575821Z'
+  support: supports
+  summary: Source-backed unreviewed reference-proteome examples are permitted; database
+    identity and literature evidence remain separate. Versions describe retrieval-time
+    metadata. Native enum acceptance and schema validation do not establish chemical
+    or source fidelity.
+  snapshot_sha256: 78f03107b7a98e47ed0f21831c97203ec0a0e49464fe33e9c821e80e70114fe0
+- evidence_id: identity
+  kind: authority
+  reference: Pinned data/raw/metpo.owl; v5 class proposal; metal_tolerant.yaml
+  locator: Complete exact label/synonym scan and proposal/parent comparison
+  accessed_at: '2026-10-21T09:18:41.920272Z'
+  support: supports
+  summary: The pinned scan finds no exact upstream copper-tolerance class. Proposed
+    METPO:1007617 and broader parent proposal METPO:1007611 remain absent from that
+    authority; traitmech:000018 with parent traitmech:000012 is coherent. A local
+    proposal is not an upstream minted identity.
+  snapshot_sha256: e2ea9543d2ff65b4ad4d0f357a4fd807c1b80d3a3a725903f8685ae0adda1324
+- evidence_id: identity-broad-scan
+  kind: authority
+  reference: Pinned METPO broader copper label/synonym scan
+  locator: Ignored-independent parsed authority scan, including deprecated concepts
+  accessed_at: '2026-10-21T09:22:28Z'
+  support: supports
+  summary: The broader authority scan and proposal comparison preserve the distinction
+    between a copper-tolerance phenotype and other copper-related concepts. No exact
+    active or deprecated replacement is established.
+  snapshot_sha256: 25d11d8a4b2ace7e980579127879e8f5c55a4f077e0a50fbcc411e8abcd70926
+- evidence_id: grounding
+  kind: authority
+  reference: Official ChEBI:29036; QuickGO GO:0035434; NCBI:119219/266264
+  locator: Fresh ChEBI/GO 09:18:44–45Z; taxonomy originally 08:54:06–07Z
+  accessed_at: '2026-10-21T09:22:28.574839Z'
+  support: supports
+  summary: CHEBI:29036 is copper(2+), and GO:0035434 is active copper ion transmembrane
+    transport in biological_process. Both canonical taxon labels match. Export wording
+    refines the transport description and does not make the exact GO label/type incorrect.
+    The Cu(II) identity cannot silently stand for Cu(I).
+  snapshot_sha256: 32c3f1f65f3f1933323a54c3023490a747522a1dbda40b8837daad22fc8ce200
+- evidence_id: live-receipts
+  kind: authority
+  reference: Official ChEBI, QuickGO and UniProt/UniSave response receipts
+  locator: Original root acquisitions 09:18:44.888–09:18:45.821Z with body hashes
+  accessed_at: '2026-10-21T09:18:45.821491Z'
+  support: supports
+  summary: The original successful response URLs, actual times and hashes are retained;
+    the grounding agent reused these files without refetching.
+  snapshot_sha256: d3aea412e7b1ec129a2fd7a2733b7e6c397096959cbed2770b825d732af399a0
+- evidence_id: authority-reuse
+  kind: authority
+  reference: NCBI taxonomy and official reference-proteome receipts
+  locator: Original taxonomy 08:54:06–07Z and UP000002429 08:55:33Z; current hash
+    verification
+  accessed_at: '2026-10-21T09:21:15.738446Z'
+  support: supports
+  summary: Taxon and reference-proteome files retain their original acquisition timestamps.
+    Hash-verified reuse does not relabel them as fresh API requests.
+  snapshot_sha256: 5d61fc58c58fadd3c74e2423fbb544ee04e8fc89ab66804efc49f1096b260150
+- evidence_id: protein
+  kind: database
+  reference: UniProtKB:Q1LBE6; UniSave version 99; UP000002429
+  locator: copA2/Rmet_5671; primary unreviewed multicopper-oxidase entry in CH34
+  accessed_at: '2026-10-21T09:22:28.575187Z'
+  support: partial
+  summary: Identity, gene, taxon and reference-proteome membership agree. Archived
+    99/sequence 1 dated 2026-06-10 is consistent with the declared 2026-08-25 retrieval;
+    current 100 followed the 2026-09-02 update. Protein existence is predicted and
+    the accession reference is genomic sequence, so metadata alone does not prove
+    an isolated-protein assay. The name does not establish ATPase activity.
+  snapshot_sha256: cbd5b80b67bd1fbf958f5b4e7071b095e6fae0b01d46619c8459ae43d3d6d9b1
+- evidence_id: ro
+  kind: authority
+  reference: RO:0002327 enables, read-only ontology authority and inherited roles
+  locator: Original 07:58:06Z inspection, hash-verified reuse
+  accessed_at: '2026-10-21T09:22:28Z'
+  support: supports
+  summary: A material protein executor enabling a process or molecular activity is
+    compatible with the inspected RO roles. Edges 1 and 5 have those represented endpoint
+    kinds; no formal enables mismatch is established.
+  snapshot_sha256: 84737e3738594bec0a2053b8c990451c0d5c5e9e0d32d9ca23c7531564571290
+- evidence_id: biolink
+  kind: authority
+  reference: Biolink causes authority and inherited endpoints
+  locator: Original root inspection 09:19:29.572066Z
+  accessed_at: '2026-10-21T09:19:29.572066Z'
+  support: supports
+  summary: Biolink causes permits broad named-thing endpoints, including this chemical-to-process
+    pairing. The Cu(I)/Cu(II) source conflict is substantive identity consistency,
+    not a formal Biolink domain/range error.
+  snapshot_sha256: 0328217a3e3940dea084e9b29503522122a0f5434b465b71a3195b966b0e8b75
+- evidence_id: proposals
+  kind: authority
+  reference: v2 challenges/mitigates proposals and predicate mappings
+  locator: Local role definitions, directions and placeholder status
+  accessed_at: '2026-10-21T09:22:28.575821Z'
+  support: supports
+  summary: Challenges covers a stressor acting on a tolerance trait; mitigates covers
+    a defense reducing a stressor or its consequence. These role categories fit the
+    graph generally, but do not erase the specific chemical and compartment identities
+    of actual endpoints.
+  snapshot_sha256: 78f03107b7a98e47ed0f21831c97203ec0a0e49464fe33e9c821e80e70114fe0
+- evidence_id: ledger
+  kind: validation
+  reference: Complete independent node/edge ledger
+  locator: All seven nodes, seven edges and the single protein example
+  accessed_at: '2026-10-21T09:22:28.575502Z'
+  support: partial
+  summary: Every endpoint and grounded role was inspected. No formal RO/Biolink type
+    conflict is established. Edges 3 and 6 conflict with the specific Cu(II)/cytoplasmic
+    node when their evidence refers to Cu(I) or periplasmic detoxification. GO:0035434
+    is exact for its label and type.
+  snapshot_sha256: 99906f5d8cb5462c0a69b9f080d86647158048b2438e666ccb7327cde7b12820
+- evidence_id: owners
+  kind: search
+  reference: Current node/predicate writers, mappings and v5 proposal
+  locator: Bounded ignored-inclusive exact grounding and owner search
+  accessed_at: '2026-10-21T09:22:28.593234Z'
+  support: supports
+  summary: Writers skip populated identifiers. Predicate label mappings preserve the
+    current broad roles but cannot correct source chemistry. The only related node
+    candidate found is a rejected GO:1902312 regulation candidate, not an applied
+    mapping for the current identifiers. No dedicated row is shown to regenerate the
+    Cu(I)/Cu(II) mismatch; the scientific record is the current correction owner.
+  snapshot_sha256: 9a751ded4b13887042f9653560e266e3b9175723aa8185fcf9d6c5bdbcb0b225
+  search_scope: Ignored-inclusive bounded searches across maintained mappings, scripts,
+    source and proposals; commands and explicit exclusions are retained in exact-grounding-writer-search.json
+    and grounding-owner-search.json. Static reading only; no global absence claim.
+- evidence_id: provenance
+  kind: search
+  reference: Entire target history and local history/mapping/writer/review search
+  locator: Five AI events; 268 matching lines in 134 files, including 67 prior review
+    pairs
+  accessed_at: '2026-10-21T09:18:40.900204Z'
+  support: partial
+  summary: All five target events disclose AI assistance, including promotion to REVIEWED.
+    Prior review matches are contextual inputs rather than target coverage or human
+    acceptance. No human-acceptance link identifying this revision was found in the
+    declared local scope; private or remote acceptance remains unknown.
+  snapshot_sha256: c211aebedfb1e6573d532c07f71bf727498fc4c3299884b42008e916aafac836
+  search_scope: rg --no-ignore --hidden over history, mappings, scripts and reviews/structured
+    with exact identifier, record path and copper_tolerant/copper tolerant. Actual
+    search 09:18:16.950204–09:18:17.044617Z; target lists of matching prior reviews
+    were inspected.
+- evidence_id: status-rule
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md
+  locator: Status/audit gate
+  accessed_at: '2026-10-21T09:22:28.575821Z'
+  support: supports
+  summary: REVIEWED requires human scientific acceptance; AI disclosure, native structural
+    checks and this review are distinct evidence.
+  snapshot_sha256: 78f03107b7a98e47ed0f21831c97203ec0a0e49464fe33e9c821e80e70114fe0
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original catalog 07:36:12.732638–07:36:12.858149Z; current applicability
+    assessment
+  accessed_at: '2026-10-21T09:18:40.900689Z'
+  support: context_only
+  summary: No Cupriavidus/metallidurans/CH34 entry matches the inspected 20-organism,
+    28-dataset catalog. No gene/module query or organism substitution followed. Generic
+    cue/cus/pco/cop names do not justify substituting another organism.
+  snapshot_sha256: dd08c1bc0c144f895e7bda73d133bf32a177fafc6993137be0fc5074e895996d
+- evidence_id: runner
+  kind: search
+  reference: Structured-source runner discovery
+  locator: Original bounded ignored-inclusive discovery 08:17:15.206671–08:17:15.338052Z
+  accessed_at: '2026-10-21T08:17:15.338052Z'
+  support: context_only
+  summary: The original PATH/project/install/B4 discovery is reused with exact limits
+    and an official-catalog fallback. This is neither new discovery nor a whole-filesystem
+    absence claim.
+  snapshot_sha256: 39b52930f52e898f85ac3bbb88f11ac674a355967b5704e2b62f0bda259d404f
+  search_scope: Original PATH/project/install/B4 roots include hidden, ignored and
+    virtual-environment contents, excluding Git internals. Unsearched locations remain
+    unknown.
+- evidence_id: bibliography
+  kind: database
+  reference: Complete source and acquisition ledger
+  locator: Four references, fourteen citation placements, three snippets and seven
+    edge claims
+  accessed_at: '2026-10-21T09:21:03.095146Z'
+  support: partial
+  summary: All four DOI/PMID identities resolve and all four complete article XML
+    bodies are available. Relevant actual passages were inspected for every placement
+    and edge. Four new metadata/body acquisitions succeeded, and four earlier metadata/body
+    files were hash-verified on reuse. Source-specific limits and positive evidence
+    remain explicit.
+  snapshot_sha256: ebdbfc9a286018a80325f06f600c2e10145824cb4929e71eba41d9204f524c95
+- evidence_id: definition-source
+  kind: primary_source
+  reference: https://doi.org/10.1007/s10565-013-9262-1
+  locator: PMID:24072389; PMC3847284; Sec7 Concluding remarks/body 26; Sec2/body 4–5;
+    Sec3/body 8; Sec4/body 9–10; Sec5/body 16–17,21
+  accessed_at: '2026-10-21T09:18:15.472379Z'
+  support: partial
+  summary: The Gram-negative bacterial review supports copper resistance and cytoplasmic
+    ATPase efflux; the top snippet is exact with its qualified seems wording. The
+    following conclusion and system-specific sections distinguish periplasmic oxidases,
+    chaperones and RND machinery. Those passages do not characterize every named cue/cus/pco/cop
+    system as an ATPase-driven pump.
+  snapshot_sha256: 8e2998818e789df50c392a39f596fe17004940c80776a1c13e076dbf7a7f13a1
+- evidence_id: bs1
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2020.00047
+  locator: PMID:32117100; PMC7019866; Results S3.SS1/body 11 and Table 1
+  accessed_at: '2026-10-21T08:55:31.339754Z'
+  support: supports
+  summary: The BS1 copper MIC of 5 mM is an exact strain/assay inhibitory endpoint.
+    The long top snippet matches after harmless micro-symbol notation normalization.
+    The record already says MIC; this is external challenge evidence, not measurement
+    of a cytoplasmic copper pool or growth at the inhibitory endpoint.
+  snapshot_sha256: 64d52eb8778d5b00a469f8d82deeeeb5d3a0102de2faa89badc5d55f7e72db81
+- evidence_id: copa2
+  kind: primary_source
+  reference: https://doi.org/10.1128/aem.00567-23
+  locator: PMID:37191542; PMC10304878; Intro s1/body 3; Results s2-1/body 6 and s2-7/body
+    41; Discussion s3-1/body 69–70 and s3-3/body 73–75
+  accessed_at: '2026-10-21T09:18:17.104007Z'
+  support: partial
+  summary: The paper explicitly identifies AE104 as a CH34 derivative and supplies
+    experimental Cop-region/system evidence plus an oxidase-role interpretation. This
+    is positive support for the represented branch, with derivative and region-level
+    scope, not an independently established isolated-Q1LBE6 assay in intact CH34.
+    Discussion also distinguishes damage compartments and oxidative versus other damage.
+    The anchor snippet is absent from normalized complete article XML; that bounded
+    textual result does not negate supported function.
+  snapshot_sha256: 3a640e4e75eaa69c6aea003bd666e409a8c3887e865253abf3864da66cda8891
+- evidence_id: copper-review
+  kind: primary_source
+  reference: https://doi.org/10.3390/antibiotics12091474
+  locator: PMID:37760770; PMC10525130; Section 2.1 Copper, sec2dot1-antibiotics-12-01474,
+    body 13,16–18
+  accessed_at: '2026-10-21T08:55:30.171589Z'
+  support: partial
+  summary: The nearest generic passages identify Cu(I) in the damage and oxidation
+    claims, with Cu(II) as the oxidation product, and retain oxygen/compartment qualifications.
+    They support existing general export/oxidation context but not the reuse of explicit
+    cytoplasmic Cu(II) as both the Cu(I) damage substrate and the mitigated periplasmic
+    species. Fe–S injury is discussed separately and should not all be attributed
+    to ROS. Unrelated pathogen-specific routes were not biologically assessed.
+  snapshot_sha256: f06974481fe82e6cb9502f52488ad5204e2f710818efc25cab08743f993dcdfa
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, synonym, polarity, class and broader
+    parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000018
+  summary: The positive copper-tolerance class, related copper-resistant synonym and
+    metal-tolerance parent are coherent. Complete pinned authority scans justify the
+    current fallback; local proposal identifiers are not minted upstream replacements.
+  evidence_ids:
+  - identity
+  - identity-broad-scan
+  - record
+  - proposals
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: noncircular phenotype and qualified mechanistic context'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: Growth under elevated copper is supported by the resistance review and
+    strain evidence. The typical bacterial-system context is not a universal or numerical
+    definition. The linked notes and graph overcollapse distinct systems into ATPase-mediated
+    efflux, requiring the specific source-scope correction below rather than rejection
+    of the phenotype.
+  evidence_ids:
+  - definition-source
+  - bs1
+  - copa2
+  - record
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: category, term kind, graph scope and optional fields'
+  outcome: supported
+  target_ids:
+  - traitmech:000018
+  summary: ENVIRONMENT/CLASS and an explicitly scoped mechanistic branch fit the intended
+    phenotype. Label-only protein aggregates are declared and a paired example is
+    present. Optional discussions, datasets and pathway links need not be invented;
+    no contradictory domain/range or optional-field requirement is established.
+  evidence_ids:
+  - record
+  - shape
+  - policy
+  - check-corpus-protein-taxa
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: two canonical examples and exact protein role'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: Both taxon labels and the Q1LBE6 oxidase identity agree. The primary source
+    supports copper-resistance context and a positive Cop-system branch, while the
+    direct experiment is in AE104, a CH34 derivative, at region/system level. Qualify
+    that evidence tier rather than falsely declaring the protein unsupported or substituting
+    ATPase activity.
+  evidence_ids:
+  - grounding
+  - protein
+  - copa2
+  - policy
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: all node identifiers and exact chemical identity'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: CHEBI:29036 correctly denotes the stated Cu(II), and GO:0035434 correctly
+    denotes the transport label and biological-process type. The defect is use of
+    that specific chemical/compartment node for Cu(I)-specific source claims, not
+    a mistaken ChEBI label, missing GO specificity or invalid molecular-function node.
+  evidence_ids:
+  - grounding
+  - ledger
+  - copper-review
+  - copa2
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all seven predicates, directions and endpoint roles'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: RO enables, Biolink causes and local challenge/mitigation roles are formally
+    compatible with the represented endpoint categories. Edges 3 and 6 nevertheless
+    conflict with the actual chemical/compartment referent. Passing a broad type gate
+    cannot establish source or chemical fidelity.
+  evidence_ids:
+  - ro
+  - biolink
+  - proposals
+  - ledger
+  - owners
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: four references, fourteen placements and seven nearest
+    edge claims'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: All source identities and relevant actual bodies were inspected. Edge 0
+    has measured external-challenge evidence; edges 2,4,5 have generic export/oxidation
+    support with source qualifiers. Edge 1 collapses distinct system categories; edges
+    3 and 6 have the shared endpoint-identity conflict. Positive evidence and source-specific
+    uncertainty remain separate.
+  evidence_ids:
+  - bibliography
+  - definition-source
+  - bs1
+  - copa2
+  - copper-review
+  - ledger
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: all three snippet fields against actual full text'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: The ATPase quotation is exact; the BS1 quotation matches after harmless
+    micro-symbol normalization. The protein-anchor phrase is not literal in the complete
+    retrieved article XML. Initial command failure and corrected abstract misses are
+    preserved, while manual body inspection supplies the final bounded determination.
+  evidence_ids:
+  - bibliography
+  - definition-source
+  - bs1
+  - copa2
+  - check-copper_tolerant-snippets
+  - check-copper_tolerant-snippets-corrected
+- assessment_id: compartments
+  area: consistency
+  topic: 'Native checklist: oxidation state, transport compartment and damage scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: The graph fixes a cytoplasmic Cu(II) node while nearest damage/oxidation
+    evidence concerns Cu(I), including a periplasmic context. Cu(II) is the stated
+    oxidation product, so that reaction does not substantiate mitigation of the node
+    as written. Separate damage contexts must remain qualified; no claim that Cu(II)
+    is universally harmless or all copper injury is ROS-mediated follows.
+  evidence_ids:
+  - record
+  - grounding
+  - copper-review
+  - copa2
+  - ledger
+- assessment_id: protein-history
+  area: provenance
+  topic: 'Native checklist: retrieval-time metadata and later live audit drift'
+  outcome: supported
+  target_ids:
+  - traitmech:000018
+  summary: Archived 99/sequence 1 is consistent with the declared August retrieval;
+    current 100 reflects a later update. Retain the native failed live audit and distinguish
+    historical consistency from independently witnessing the earlier retrieval.
+  evidence_ids:
+  - protein
+  - policy
+  - check-corpus-uniprot
+  - check-reuse
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record coverage and optional evidence'
+  outcome: supported
+  target_ids:
+  - traitmech:000018
+  summary: All seven nodes and seven edges resolve, all cited sources and snippets
+    have explicit assessments, and the paired example passes structural coverage.
+    No additional token protein examples, optional datasets or graphs are required
+    merely for completeness. Provider research is contextual input rather than primary
+    proof.
+  evidence_ids:
+  - shape
+  - record
+  - bibliography
+  - policy
+  - check-corpus-protein-taxa
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: canonical-organism structured-source applicability'
+  outcome: supported
+  target_ids:
+  - traitmech:000018
+  summary: The inspected catalog has no matching Cupriavidus dataset. No gene/module
+    lookup or taxon substitution followed; catalog noncoverage is not negative biological
+    evidence.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: AI disclosure, human acceptance and maintained ownership'
+  outcome: concern
+  target_ids:
+  - traitmech:000018
+  summary: All five AI events are explicit. No linked human acceptance was found within
+    the bounded local search. Current mappings/writers do not independently repair
+    or prove the chemical/source distinctions; their exact current behavior and limited
+    recurrence evidence are retained.
+  evidence_ids:
+  - provenance
+  - status-rule
+  - shape
+  - owners
+findings:
+- finding_id: copper-state-compartment
+  issue_key: copper-tolerant-copper-state-compartment
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: One Cu(II) node conflates distinct source species and compartments
+  description: Node 1 explicitly represents cytoplasmic Cu(II), but edge 3 and its
+    nearest evidence describe Cu(I)-related damage. Edge 6 describes reduced periplasmic
+    Cu(I) burden through an oxidation that produces Cu(II), yet its mitigated object
+    is that same cytoplasmic Cu(II) node. The source also separates damage contexts,
+    so folding all Fe–S injury into ROS causation overstates the nearest claim. Reconcile
+    the existing chemical referents, compartments and damage scope at their actual
+    evidence placements; do not infer an unrepresented intermediate, declare Cu(II)
+    universally harmless, or call this a formal RO/Biolink type error.
+  target_ids:
+  - traitmech:000018
+  field_paths:
+  - causal_graphs[0].nodes[1]
+  - causal_graphs[0].nodes[4]
+  - causal_graphs[0].nodes[6].description
+  - causal_graphs[0].edges[2]
+  - causal_graphs[0].edges[3]
+  - causal_graphs[0].edges[4]
+  - causal_graphs[0].edges[6]
+  evidence_ids:
+  - grounding
+  - ledger
+  - copper-review
+  - copa2
+  - definition-source
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: atpase-system-collapse
+  issue_key: copper-tolerant-atpase-system-collapse
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The efflux claim collapses distinct copper systems into ATPase pumps
+  description: Edge 1 and its evidence note characterize all named cue/cus/pco/cop
+    pumps as ATPase-mediated export. The cited review distinguishes ATPase cytoplasmic
+    efflux from other periplasmic system functions and RND machinery, including in
+    the sentence following the exact top quotation. The top evidence note also treats
+    all named systems as active efflux. Node 2 can legitimately aggregate several
+    protein-system classes; its valid aggregate scope does not support the narrower
+    collective ATPase assertion. Retain supported efflux context while aligning existing
+    claims with the cited categories.
+  target_ids:
+  - traitmech:000018
+  field_paths:
+  - evidence[0].notes
+  - causal_graphs[0].nodes[2]
+  - causal_graphs[0].edges[1].description
+  - causal_graphs[0].edges[1].evidence[0].notes
+  evidence_ids:
+  - definition-source
+  - record
+  - bibliography
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: quotation-fidelity
+  issue_key: copper-tolerant-quotation-fidelity
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The CopA2 anchor snippet is nonliteral in the cited article
+  description: The protein-example snippet is not present in normalized complete PMID:37191542
+    article XML, including the retrieved body, tables and references. Its general
+    meaning has support, but interpretation belongs in notes rather than a verbatim
+    snippet. The top ATPase quote is exact and the BS1 micro-symbol variation is harmless;
+    neither is included in this finding. No textual absence claim extends to uninspected
+    external supplements or other literature.
+  target_ids:
+  - traitmech:000018
+  field_paths:
+  - causal_graphs[0].nodes[5].protein_examples[0].evidence[0].snippet
+  evidence_ids:
+  - copa2
+  - bibliography
+  - definition-source
+  - bs1
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: strain-evidence-tier
+  issue_key: copper-tolerant-strain-evidence-tier
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The protein anchor needs derivative and system-level evidence precision
+  description: PMID:37191542 supplies positive Cop-region/system experimental support
+    in AE104, explicitly a CH34 derivative, together with an oxidase-role interpretation.
+    The note omits this derivative and region-level scope. Retain those limits so
+    the generic experimental anchor is not read as a direct isolated-Q1LBE6 assay
+    in intact CH34; the record does not expressly claim such an assay. UniProt verifies
+    an unreviewed predicted multicopper-oxidase entry; it is not an ATPase assignment
+    or independent functional experiment. This qualification preserves the supported
+    branch and does not assert that the protein role is false or wholly unsupported.
+  target_ids:
+  - traitmech:000018
+  field_paths:
+  - canonical_examples[1].note
+  - causal_graphs[0].scope_notes
+  - causal_graphs[0].nodes[5].protein_examples[0].role
+  - causal_graphs[0].nodes[5].protein_examples[0].evidence[0].notes
+  evidence_ids:
+  - copa2
+  - protein
+  - policy
+  - grounding
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: copper-tolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human scientific acceptance is not linked locally
+  description: The five disclosed AI events, including promotion to REVIEWED, and
+    ignored-inclusive local provenance search do not identify human scientific acceptance
+    of this revision. Prior structured reviews include the file as contextual input,
+    not as their target. Private or remote acceptance remains unknown; the finding
+    concerns the missing local link rather than proof that no human review occurred.
+  target_ids:
+  - traitmech:000018
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - status-rule
+  - shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-chemical-claims
+  description: In separately authorized curation, reconcile the existing chemical-state,
+    compartment and damage claims with their nearest primary-text evidence.
+  finding_ids:
+  - copper-state-compartment
+  target_ids:
+  - traitmech:000018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Each retained endpoint, edge description and evidence note denotes the same chemical
+    species and compartment.
+  - Preserve the distinction between measured external challenge, inferred intracellular
+    effects and the specific oxidation substrate/product; keep damage and oxygen/context
+    qualifiers supported by the inspected source.
+  - Do not invent replacement biological routes, additional intermediates, experimental
+    protocols or mechanism optimizations.
+  - Use guarded writes, native history, focused strict/term/graph checks and just
+    qc; regenerate affected products only through their maintained workflow.
+- action_id: qualify-system-attribution
+  description: Bound the existing efflux wording to the system categories established
+    by the cited review.
+  finding_ids:
+  - atpase-system-collapse
+  target_ids:
+  - traitmech:000018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The exact top quotation remains distinct from curator interpretation.
+  - A valid multi-class protein aggregate is not collectively called an ATPase pump
+    without specific support.
+  - Check the maintained proposal only if an authorized definition change affects
+    its corresponding content; do not invent a global mapping fix for a source-scope
+    error.
+  - After authorized curation, run native strict/term/graph and product/QC gates while
+    preserving the cited positive efflux evidence.
+- action_id: verify-anchor-text
+  description: Replace the nonliteral anchor snippet with a verified exact passage
+    or move faithful interpretation into notes through authorized curation.
+  finding_ids:
+  - quotation-fidelity
+  target_ids:
+  - traitmech:000018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Every retained snippet has an inspected exact-text locator.
+  - Preserve the supported role and do not treat an abstract miss or uninspected supplement
+    as biological disproof.
+  - Run focused snippet verification and manual primary-text checking after an authorized
+    edit.
+- action_id: qualify-protein-evidence
+  description: Document the source strain background and region/system evidence tier
+    for the existing CopA2 branch.
+  finding_ids:
+  - strain-evidence-tier
+  target_ids:
+  - traitmech:000018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Keep positive primary experimental branch support, exact UniProt identity and
+    the derivative/region scope visible together.
+  - Do not turn predicted database metadata into an isolated-protein assay, and do
+    not infer ATPase activity from the protein name.
+  - Retain historically consistent version 99/sequence 1 unless a deliberately refreshed
+    metadata event is separately authorized.
+  - Use guarded curation, native protein/taxon and evidence checks, history and just
+    qc after authorized changes; no new experiment is required.
+- action_id: link-acceptance
+  description: Locate and link existing human acceptance or obtain it through the
+    established process, preserving AI history and reassessing status if needed.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000018
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/copper_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the reviewed revision and scientific scope.
+  - AI provenance, structural validation and this review are not substituted for human
+    scientific acceptance.
+limitations:
+- All four cited article bodies are available and relevant passages were inspected.
+  This does not mean every method, external supplement or unrelated claim was assessed.
+  No search-result snippet supplies primary proof.
+- The copper-resistance review focuses on Gram-negative bacteria. Its qualified typical
+  mechanism context is not a universal class mechanism or formal quantitative growth
+  threshold.
+- The BS1 copper MIC of 5 mM is a strain/assay inhibitory endpoint and external challenge,
+  not direct measurement of the cytoplasmic copper pool. The record already labels
+  MIC; no separate growth-at-MIC defect is inferred.
+- The combined chemical finding concerns specific endpoint identities and nearest
+  evidence. It does not establish that Cu(II) is universally harmless, that all copper
+  toxicity is oxidative, or that the broad relation types are formally invalid.
+- The protein source positively supports a Cop-region/system branch in a CH34-derived
+  background. An independently established isolated-Q1LBE6 assay in intact CH34 was
+  not demonstrated by the inspected text; this is bounded evidence precision, not
+  proof of no function.
+- The anchor phrase is absent from normalized complete retrieved article XML. This
+  result does not establish absence from every external supplement or other source,
+  nor negate supported oxidase-class function.
+- Current UniProt version 100 differs from stored 99, while archived 99/sequence 1
+  fits the declared August retrieval. The actual failed live audit is retained without
+  treating later drift as an original version error; the historical retrieval itself
+  was not independently witnessed.
+- The initial snippet command failed on an unsupported --file option. Its corrected
+  --record invocation succeeded with three inconclusive abstract misses; the manual
+  full-text determinations supersede those misses without erasing the failed attempt.
+- All 1130 trait files were byte-compared before reusing the original corpus audits.
+  Common-check reuse likewise preserves original execution dates, failures and skips;
+  no fresh external-release certification is implied.
+- No canonical Cupriavidus expression dataset matches the inspected catalog. No organism
+  substitution, gene/module query or negative functional inference followed. Runner
+  nonavailability is bounded to the retained discovery scope.
+- Human acceptance remains unknown outside the declared ignored-inclusive local search.
+  Completing this review does not confer human scientific acceptance.
+- No scientific record, status, history, generated page or maintained mapping was
+  changed. No paid provider call, experimental design or biological optimization was
+  performed; unrelated pathogen mechanisms in broad sources were not assessed or expanded.
+notes:
+- All field indices are zero-based.
+- Native capture 09:17:42–43Z retained 55 inputs after the entire target was read.
+  The independent grounding manifest confirmed all 55 captured hashes match.
+- Two major and three minor findings. GO:0035434 has the exact stated label/type;
+  no additional specificity or formal RO/Biolink endpoint finding is asserted.
+- Source and ontology acquisition times retain their original receipts, including
+  reused bodies; assessment times identify the later local synthesis.
+tags:
+- record-review
+- copper-tolerant
+- environment
+- needs-curation
