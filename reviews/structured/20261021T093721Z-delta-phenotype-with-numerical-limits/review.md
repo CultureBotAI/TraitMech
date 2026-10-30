@@ -1,0 +1,1471 @@
+# Definition, evidence and relation review of delta phenotype with numerical limits
+
+- Review: 20261021T093721Z-delta-phenotype-with-numerical-limits
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T09:24:24Z
+- Finished UTC: 2026-10-21T09:37:21Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The exact delta definition, phenotype parent and three axis-specific subclass relations are supported by pinned METPO. One major finding concerns edge 7: RO:0002211 requires processes, while both endpoints are qualities; the wildcard mapping can restore that mismatch. One minor finding concerns a bounded missing human-acceptance link. All ten nodes, nine edges, eight references, thirteen citation placements and six snippets were assessed. Three snippets are exact and three remain unverified. Canonical endpoints and some body-dependent details remain explicit uncertainties, with no automatic source, protein-example or NONMECHANISTIC-scope defect.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: One complete measurement-class TraitRecord, read before native capture. All ten nodes, nine edges, one canonical example, eight references, thirteen citation placements, six snippets and ten history events are included. Contextual inputs are not additional review targets; the excluded spore-germination record remains untouched.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000534 | data/traits/environment/delta_phenotype_with_numerical_limits.yaml | maintained | delta phenotype with numerical limits |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1000534 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1000534 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1000534 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1000534 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1000534 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1000534 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1000534 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | METPO:1000534 | Selected record validates; schema shape does not establish external relation semantics or biological source support. |
+| Focused strict validation | passed | True | METPO:1000534 | One file scanned with zero strict errors. The external RO process-role mismatch is assessed separately. |
+| Focused abstract snippet check | passed | True | METPO:1000534 | Exit 0: three occurrences VERIFIED and three NOT_IN_ABSTRACT across the six snippets. The three salinity-range abstract misses remain inconclusive after bounded manual source inspection. |
+| Reused native full-corpus QC | passed | True | METPO:1000534 | Actual B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports reuse for unchanged scientific and common-check inputs. This is a corpus diagnostic with retained baselines and warnings, not a fresh B5 execution or semantic certification of this target. |
+| Live UniProt instance audit | not_applicable | False | METPO:1000534 | No protein instance or UniProt accession is asserted; no unrelated metal-record audit failure imported. |
+| Structured-source runner discovery | unavailable | False | METPO:1000534 | Bounded fresh PATH/B5 discovery and retained earlier external scope; official catalog fallback inspected. |
+| Canonical-organism dataset applicability | not_applicable | False | METPO:1000534 | No matching canonical Psychrobacter dataset; no substitution or expression query. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identifier, label, polarity, synonyms and term kind
+
+identity: supported. Targets: METPO:1000534.
+
+The active exact METPO class and label denote a generic quantitative phenotype, not an organism, assay event or molecular structure. No synonyms are asserted and no synonym requirement is missing.
+
+### Native checklist: noncircular max-minus-min definition and attribution
+
+evidence: supported. Targets: METPO:1000534.
+
+The definition exactly matches pinned METPO. The attached physiological review supplies axis context; ontology and mathematical interpretation should remain distinguishable from literature support. This is not a false-definition finding.
+
+### Native checklist: broader parent and three axis-specific subclasses
+
+identity: supported. Targets: METPO:1000534.
+
+Phenotype is broader than numerical delta, and all three child-to-delta directions are explicit upstream assertions. Physiological papers are contextual evidence rather than the formal hierarchy authority.
+
+### Native checklist: category, scope, node types and optional fields
+
+representation: supported. Targets: METPO:1000534.
+
+ENVIRONMENT/CLASS and NONMECHANISTIC measurement scope are coherent. QUALITY correctly represents ratio and fluidity. No token protein, extra graph, optional domain/range, priority/subset, discussion or dataset is required merely for completeness.
+
+### Native checklist: canonical taxon, strain and numerical endpoints
+
+evidence: unknown. Targets: METPO:1000534.
+
+The species and named strain agree with taxonomy and the source abstract. The −10/28 endpoints and their caveat remain unverified, not false. Nominal 38 °C arithmetic is conditional on those endpoints; the note already preserves that limitation.
+
+### Native checklist: all ten node identities and local proposals
+
+grounding: supported. Targets: METPO:1000534.
+
+Active trait identities, explicit local process proposal, QUALITY kinds and permitted ungrounded labels are consistent. Expected placeholder absence does not create an automatic invalid-ID finding.
+
+### Native checklist: all nine edge roles and directions
+
+consistency: concern. Targets: METPO:1000534.
+
+Edge 7 uses process-to-process RO:0002211 for two qualities. Other class, local defines/confers and unassigned predicate roles do not establish a separate formal error. Neither descriptive alteration wording nor schema success turns membrane fluidity into a process.
+
+### Native checklist: eight references and thirteen nearest placements
+
+evidence: unknown. Targets: METPO:1000534.
+
+All identities resolve and all placements have an explicit evidence assessment. Broad adaptation context is supported; the solute and fatty-ratio body claims remain unknown. HVA’s universal-paradigm wording is source-faithful, and TAC125’s two-temperature inference is positive and already qualified. No source-only major finding follows.
+
+### Native checklist: all six snippets and actual inspected source text
+
+evidence: unknown. Targets: METPO:1000534.
+
+Two thermal occurrences and one pH occurrence are exact. The three salinity-range occurrences remain unverified; NOT_IN_ABSTRACT and failed later page access do not prove nonliteral wording.
+
+### Native checklist: whole-record coverage and measurement versus adaptation
+
+completeness: supported. Targets: METPO:1000534.
+
+All ten nodes and nine edges were assessed. Physiology contextualizes the measurement descriptor without establishing a universal mechanism; no protein instance or live UniProt lookup is applicable. A measured delta is not inferred merely from adaptation evidence.
+
+### Native checklist: optional structured sources and canonical applicability
+
+evidence: supported. Targets: METPO:1000534.
+
+The inspected catalog has no canonical Psychrobacter dataset. Bounded fresh discovery and retained earlier external search scope are explicit; no organism substitution or negative biological inference follows.
+
+### Native checklist: history, acceptance, owners and native checks
+
+provenance: concern. Targets: METPO:1000534.
+
+Nine AI events and one automated seed are disclosed, with one matching AI repository history. No local human-acceptance link was found in the declared search scope. The modulates wildcard can restore the RO mismatch after clearing an ID. Original check results remain historical and separate from this semantic review.
+
+## Findings
+
+### process-relation-on-qualities: RO regulates is assigned between two qualities
+
+major / open / confirmed; issue key: delta-phenotype-with-numerical-limits-process-relation-on-qualities.
+
+Edge 7 links saturated:unsaturated fatty-acid ratio QUALITY to membrane-fluidity QUALITY using RO:0002211 regulates. The authority explicitly requires a process at both ends and describes influence on process execution. Alteration wording in the edge description does not change the represented quality endpoints, including the fluidity object. This is an ontology-role mismatch, not a claimed reasoner result or native validation failure. Wildcard modulates row 66 can reproduce it if only the identifier is cleared.
+
+### human-acceptance-link: Human scientific acceptance is not linked locally
+
+minor / open / confirmed; issue key: delta-phenotype-with-numerical-limits-human-acceptance-link.
+
+The ten events comprise nine disclosed AI-assisted events and one automated seed; the matching repository history identifies an AI agent. Ignored-inclusive local search did not locate an explicit human-acceptance link for this revision. This documentary gap does not establish that no human reviewed it privately or remotely.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-relation
+
+In separately authorized curation, reconcile edge 7’s relation with its represented endpoint roles and the maintained wildcard mapping.
+
+- Every retained grounded relation agrees with both represented endpoint identities and ontology roles; do not relabel a quality as a process solely to satisfy the existing relation.
+- Address whether unchanged modulates wording can reacquire the rejected grounding after an ID is cleared; scope any mapping/type-policy change to evidence rather than guessing a replacement identifier.
+- Preserve measurement scope and supported contextual biology without adding molecular mechanisms or experimental recommendations.
+- After authorized edits use guarded writes, native history, focused strict/term/graph and mapping checks, just qc and maintained derived-product regeneration.
+
+### link-acceptance
+
+Locate and link existing human scientific acceptance or obtain it through the established process, preserving current history and reassessing status if needed.
+
+- Acceptance identifies the revision and scientific scope.
+- AI disclosure, automated seeding, structural checks and this review are not substituted for human acceptance; preserve append-only history.
+
+### resolve-source-limits
+
+Resolve the outstanding exact-text and endpoint questions when actual public source bodies become available, without strengthening claims in the meantime.
+
+- Verify the Psychrobacter endpoint passage and caveat, the three salinity snippets and the nearest solute/fatty-ratio body claims against actual source text.
+- Keep existing nominal-endpoint and two-temperature qualifications; unavailable text is not treated as false biology.
+- Distinguish pinned ontology authority for the formula/hierarchy from physiological paper context at the relevant evidence fields.
+- Retain original access errors and times; no paid research, mechanism expansion or new experiment is required.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-005.klfwsp1f/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-delta-validate | /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-validate.log; Executed 2026-10-21T09:25:21Z through 2026-10-21T09:25:23Z; metadata delta-validate.json | context_only | Selected record validates; schema shape does not establish external relation semantics or biological source support. |
+| check-delta-strict | /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-strict.log; Executed 2026-10-21T09:25:21Z through 2026-10-21T09:25:25Z; metadata delta-strict.json | context_only | One file scanned with zero strict errors. The external RO process-role mismatch is assessed separately. |
+| check-delta-snippets | /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-snippets.log; Executed 2026-10-21T09:25:23Z through 2026-10-21T09:25:36Z; metadata delta-snippets.json | context_only | Exit 0: three occurrences VERIFIED and three NOT_IN_ABSTRACT across the six snippets. The three salinity-range abstract misses remain inconclusive after bounded manual source inspection. |
+| check-batch004-qc | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/batch004-qc.log; Executed 2026-10-21T09:19:10Z through 2026-10-21T09:21:17Z; metadata batch004-qc.json | context_only | Actual B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports reuse for unchanged scientific and common-check inputs. This is a corpus diagnostic with retained baselines and warnings, not a fresh B5 execution or semantic certification of this target. |
+| reuse | B5 common-input byte comparison and original execution receipts; 1130 trait files, history and common-check inputs versus B4; unchanged 8eee scientific base | supports | Original f25 diagnostics and B3 history validation retain their execution dates, failed product attempts and adapter skips. The same receipt records the actual B4 QC execution. Reuse does not certify later external ontology releases. |
+| reuse-independent | Independent B5 setup/reuse inspection; Original diagnostics, byte comparisons and helper scope review | supports | Independent verification confirmed the unchanged-input basis and original check counts, failures and limits. It did not rerun scientific validators or external release checks. |
+| capture | Supplemental native input capture; Initial 59 inputs 09:24:24–25Z; 63 inputs 09:24:42–44Z | supports | The v4 and v85 proposal owners were added before assessment, with all original 59 hashes unchanged. Independent grounding inspection subsequently confirmed all 63 captured hashes still match. |
+| record | data/traits/environment/delta_phenotype_with_numerical_limits.yaml; Entire identity, definition, graph, example and history | partial | The record denotes an endpoint-derived quantitative descriptor. NONMECHANISTIC scope explains why a token protein example would misrepresent it; contextual physiology is assessed without converting it into a universal molecular requirement. |
+| identity | Pinned data/raw/metpo.owl; Active METPO:1000534, definition, broader phenotype parent and three axis-specific children | supports | The definition matches exactly. NaCl delta, pH delta and temperature delta explicitly subclass this class in the pinned ontology. The complete active/deprecated scan retains explicit replacement properties; matching historical labels alone do not supply replacements. Extraction merged all declarations for each IRI so empty references could not overwrite annotations. |
+| local-authority | Native schema/checklist; v4, v8 and v85 proposals; maintained mappings; QUALITY/process distinction; defines/confers roles; homeoviscous-adaptation process proposal | supports | Local defines and confers admit the represented roles. METPO:1016200 has the maintained homeoviscous-adaptation process proposal and mapping; its absence from the pinned release is expected. Native QUALITY correctly describes the ratio and fluidity nodes. Missing optional predicate IDs or protein instances are not automatic defects. |
+| rdfs | W3C RDF Schema authority; rdfs:subClassOf class endpoints and direction; official RDF schema response | supports | The subclass relation links class extensions in the recorded direction. The three axis-specific traits and generic delta class have compatible roles; pinned METPO supplies the actual subclass assertions. |
+| ro | RO:0002211 regulates; BFO:0000015 process; Original RO inspection 08:04:46.869674Z; hash-verified reuse 09:28:53.047379Z | supports | RO:0002211 explicitly has process domain and range and an execution-based definition. Edge 7 instead links fatty-acid ratio QUALITY to membrane-fluidity QUALITY. This is an intended-role mismatch established from authority text, not an asserted reasoner result or native YAML validation failure. |
+| ledger | Independent complete node/edge and history ledger; Ten nodes, nine edges, zero protein examples; ten events, nine AI plus one automated seed | partial | Every endpoint and assigned relation was assessed. Edge 7 has the RO process/quality conflict; class edges, local defines/confers and the process proposal otherwise have coherent roles. Provider headers are provenance leads, not primary proof or evidence of a historical scientific error. |
+| owners | mappings/predicate_grounding.tsv:66; scripts/ground_causal_predicates.py:138–179; Wildcard modulates mapping and existing-ID skip; bounded maintained-owner search | supports | The writer skips populated IDs. Clearing only edge 7’s ID leaves the modulates label, whose wildcard row accepts QUALITY-to-QUALITY and can restore RO:0002211. Static reading establishes recurrence risk; no writer execution occurred. Seed, example and v85 owners are identified separately. |
+| taxonomy | Official NCBI Taxonomy:334543; Species Psychrobacter arcticus; type material includes strain 273-4 | supports | Current species identity matches and the note explicitly retains strain 273-4. Species-level canonical identity with a strain-limited note is not a taxonomic mismatch. This check does not establish the numerical growth endpoints. |
+| provenance | Whole target history and ignored-inclusive local provenance search; Ten events; 184 matching files; one target repository history with ai_agent codex | partial | Nine events disclose AI assistance and one is an automated METPO seed. No target-specific local review bundle or explicit human-acceptance link was found in the examined scope. The matching repository history records an AI agent; private or remote acceptance remains unknown. |
+| status-rule | Native review checklist and curation playbook; Status/audit gate | supports | REVIEWED requires human scientific acceptance. Automated seeding, disclosed AI curation, validator success and this review are distinct forms of evidence. |
+| expression | https://imodulondb.org/api/datasets; Original catalog 07:36:12.732638–07:36:12.858149Z; current applicability inspection | context_only | The hash-verified 20-organism, 28-dataset catalog has no matching Psychrobacter/arcticus/273-4 entry. No module query or organism substitution followed. A generic measurement descriptor does not require a token expression dataset. |
+| runner | Structured-source runner discovery; Fresh PATH/B5 search 09:27:57.380287–09:27:57.542053Z; external bounds retain original 08:17:15 inspection | context_only | No runner was found in the fresh bounded PATH/B5 filename/pyproject search. Earlier external project/install discovery was reused rather than relabelled as fresh. Official-catalog fallback was inspected. |
+| expression-independent | Independent expression-applicability receipt; Target/catalog/discovery hashes and canonical-only scope | supports | Independent reading confirms the catalog noncoverage and bounded discovery statement without inferring absent biological function or substituting an organism. |
+| bibliography | Complete source/claim and acquisition ledger; Eight references, thirteen placements, six snippets and nine edge claims | partial | All source identities resolve. Two complete bodies are local, two additional sources have bounded actual browser body inspection, and four remain abstract/preview-limited. Three snippet occurrences are exact and three salinity-range occurrences remain unverified. DOI-index misses were resolved through PMID/Crossref rather than treated as invalid references. |
+| browser-scope | Actual primary browser access receipts; Successful opening PDF sections 09:29:16–17Z and subsequent failed page requests | context_only | Successful initial RSC and OUP primary PDF passages were actually read. Later 403/redirect errors do not erase those passages or establish absence elsewhere. No successful local PDF hash is fabricated; exact or clock-bounded request times and inspected page/line limits are retained. |
+| salinity | https://doi.org/10.1093/femsre/fuy009; PMID:29529204; actual publisher PDF pp353–355, especially p354 adaptability paragraph, browser lines89–99 | partial | The review supports salt-adaptation and changing-salinity context. The inspected sections do not establish a formal maximum-minus-minimum formula or ontology subclass assertion. Three salinity-range snippets remain unverified because later pages could not be inspected; failed browser finds are not textual absence evidence. |
+| thermal | https://pubmed.ncbi.nlm.nih.gov/9406426/; DOI:10.1016/s0300-9629(97)00003-0; complete abstract sentence2, corroborated by university publication page | supports | Both thermal snippet occurrences are exact. The review supports high-temperature adaptation as physiological context; the ontology supplies the temperature-delta subclass relation. Full article PDF access failed, and no formula/body-absence claim is made. |
+| psychrobacter | https://doi.org/10.1128/JB.01377-08; PMID:19168616; complete indexed abstract naming P. arcticus 273-4 | partial | The source identity, strain and cold-growth study are confirmed. Exact −10 and 28 °C endpoints and their caveat remain unverified because full text was unavailable. The arithmetic gives 38 °C conditionally; the record already calls this nominal and retains an endpoint warning. Narrower abstract test temperatures do not disprove broader body endpoints. |
+| ph | https://doi.org/10.1038/nrmicro2549; PMID:21464825; reused BioC offset58 abstract and offset671 introduction | supports | The short pH-homeostasis snippet is exact. Conceptual text supports external-pH growth ranges and distinguishes growth from survival; pinned METPO supplies the formal pH-delta hierarchy. The complete BioC bytes retain their original 07:57:33 acquisition and verified hash; unrelated pathogen mechanisms were not assessed. |
+| homeoviscous | https://doi.org/10.1039/d4cc03114h; PMID:39190300; publisher PDF pp10280–10282, HVA definition and Section2, browser lines160–181 | supports | Actual opening sections support lipid-composition regulation preserving membrane structure/fluidity. The source itself calls HVA a universal membrane-adaptation paradigm, so that wording is source-faithful. Widening a quantified delta remains a contextual inference rather than an inspected endpoint experiment; later stressor-specific sections were inaccessible. |
+| solutes | https://doi.org/10.37256/amtt.5220244537; Crossref publisher-deposited title, abstract and official PDF link | partial | The cold-adaptation review identity resolves despite the EPMC miss. Specific freezing-point, stabilization and osmotic-balance assertions remain unverified because official body access failed. Abstract scope neither verifies nor falsifies those details. |
+| fatty-acids | https://doi.org/10.1007/s12275-023-00031-x; PMID:37010795; publisher preview Abstract and complete indexed abstract | partial | The review concerns bacterial temperature responses, mainly E. coli. The specific saturated:unsaturated ratio statement remains unverified in this citation’s unavailable body. General contextual plausibility and separate corroboration do not substitute for nearest-source checking; the access limit is not a false-science finding. |
+| metabolism | https://doi.org/10.1128/msystems.01124-22; PMID:36847563; PMC10134870; s1/body2–3, s2/body4,6,8, s3/body44,51 in saved zero-based extraction | supports | The Pseudoalteromonas haloplanktis TAC125 study compares 0 and 15 °C. Metabolite robustness is observed and buffering is an explicit author interpretation alongside transcriptional changes. It does not measure full minimum/maximum boundaries or every intermediate temperature. The record already preserves the two-temperature contrast; retain that positive, qualified context. |
+
+## Limits And Additional Notes
+
+- Psychrobacter identity and strain are confirmed, but the −10/28 °C endpoints and endpoint caveat were not verified in actual body text. Conditional 38 °C arithmetic and the record’s nominal/caveat wording are retained; no endpoint contradiction is asserted.
+- Salinity and HVA publisher PDFs yielded actual opening sections at 09:29:16–17Z; later page requests failed. Only those inspected sections are evidence. No local successful PDF hash or whole-body read is claimed, and failed browser finds do not establish phrase absence.
+- The three salinity-range snippet occurrences, detailed solute claims and the fatty-ratio claim in its nearest citation remain unverified. Abstract/preview scope and failed access do not prove absent or false biology.
+- HVA universal-paradigm wording occurs in the source. Its link to widening a measured delta is contextual; NONMECHANISTIC breadth does not itself assert universal molecular dependence. The TAC125 study positively supports an author interpretation at two temperatures, already retained in the record notes, without measuring full growth boundaries.
+- The exact formula and formal class hierarchy are grounded in pinned METPO. Physiological reviews supply context; this distinction is retained without a false-definition or hierarchy finding. Local proposal placeholders are not represented as already minted upstream terms.
+- Common checks and B4 QC are reused only on the documented unchanged-input basis, with actual original timestamps, failures, skips and warnings retained. No new full-corpus execution or latest-release certification is implied.
+- No protein instance is asserted, so a live UniProt instance audit is inapplicable. Expression-catalog noncoverage and bounded runner discovery do not imply absent phenotype or function.
+- Human acceptance is unknown outside the ignored-inclusive local scope. The complete review records scientific uncertainties and does not confer human scientific sign-off.
+- No record, mapping, history or generated product was edited. No paid provider call, protocol design, biological optimization or unrelated pathogen-mechanism assessment was performed.
+- All node and edge indices are zero-based.
+- Initial native capture retained 59 inputs at 09:24:24–25Z; the 09:24:42–44Z supplemental capture retained all prior hashes and added four v4/v85 owner files for 63 inputs. Grounding review confirmed all 63 current hashes.
+- One major and one minor finding. Missing exact source text remains uncertainty rather than an invented additional finding.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T093721Z-delta-phenotype-with-numerical-limits
+kind: record
+repository: CultureBotAI/TraitMech
+title: Definition, evidence and relation review of delta phenotype with numerical
+  limits
+started_at: '2026-10-21T09:24:24Z'
+finished_at: '2026-10-21T09:37:21Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'The exact delta definition, phenotype parent and three axis-specific subclass
+  relations are supported by pinned METPO. One major finding concerns edge 7: RO:0002211
+  requires processes, while both endpoints are qualities; the wildcard mapping can
+  restore that mismatch. One minor finding concerns a bounded missing human-acceptance
+  link. All ten nodes, nine edges, eight references, thirteen citation placements
+  and six snippets were assessed. Three snippets are exact and three remain unverified.
+  Canonical endpoints and some body-dependent details remain explicit uncertainties,
+  with no automatic source, protein-example or NONMECHANISTIC-scope defect.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    sha256: 3b26342531eb0edef94e6434c2b91a2d066e02d23a9bef03c626767c5fc19171
+    role: target
+  - path: data/traits/environment/nacl_delta.yaml
+    sha256: 902bec51cfb3915906b69bd7d35db4b31740f1c7fc0d0e0dd4fa60f39823c553
+    role: context
+  - path: data/traits/environment/ph_delta.yaml
+    sha256: bddd29a48492578a5125f903de74f2c5476444e1069cb105008bdaf7fd2eacbf
+    role: context
+  - path: data/traits/environment/temperature_delta.yaml
+    sha256: 38d2a033d5966f366b6db1a671d9fc2fc1ae09f6f4297cef9894e5eeae23840a
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/delta_phenotype_with_numerical_limits/2026-09-15T070757Z-codex-92226c.yaml
+    sha256: ff1dda27c8c74401719a6a2c034789897f0ffadd417d17dae0285deb4be34504
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+    sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+    role: context
+  - path: proposals/metpo_traitmech_v4/proposal.md
+    sha256: c35d12fec87a3efdcfa320125446320315fca17bdb9228dd2b98ed00fe991bd8
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v85/metpo_proposal_classes_robot.tsv
+    sha256: 6f32bf183eda67697a4d4c9920416473b0d09b78fab4f1d8d67140db68fb8550
+    role: context
+  - path: proposals/metpo_traitmech_v85/proposal.md
+    sha256: b41cf306750f63743bf9d7c465f3e9ad8b4ec75f19a383d64e2187331d721f05
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/delta_phenotype_with_numerical_limits-deep-research-falcon.md
+    sha256: 597d06b40aad795251170d7b6e29c775c8e0c288cd32e155626e59950709f4e0
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000534
+  path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+  label: delta phenotype with numerical limits
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Original METPO import identity/provenance
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One complete measurement-class TraitRecord, read before native capture.
+    All ten nodes, nine edges, one canonical example, eight references, thirteen citation
+    placements, six snippets and ten history events are included. Contextual inputs
+    are not additional review targets; the excluded spore-germination record remains
+    untouched.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000534
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000534
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000534
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: delta-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just validate data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates; schema shape does not establish external relation
+    semantics or biological source support.
+  evidence_ids:
+  - check-delta-validate
+- check_id: delta-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just validate-strict data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned with zero strict errors. The external RO process-role
+    mismatch is assessed separately.
+  evidence_ids:
+  - check-delta-strict
+- check_id: delta-snippets
+  name: Focused abstract snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just verify-snippets --record data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    --out /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Exit 0: three occurrences VERIFIED and three NOT_IN_ABSTRACT across the
+    six snippets. The three salinity-range abstract misses remain inconclusive after
+    bounded manual source inspection.'
+  evidence_ids:
+  - check-delta-snippets
+- check_id: batch004-qc
+  name: Reused native full-corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000534
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports
+    reuse for unchanged scientific and common-check inputs. This is a corpus diagnostic
+    with retained baselines and warnings, not a fresh B5 execution or semantic certification
+    of this target.
+  evidence_ids:
+  - check-batch004-qc
+- check_id: live-uniprot
+  name: Live UniProt instance audit
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000534
+  summary: No protein instance or UniProt accession is asserted; no unrelated metal-record
+    audit failure imported.
+  evidence_ids:
+  - record
+  - ledger
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1000534
+  summary: Bounded fresh PATH/B5 discovery and retained earlier external scope; official
+    catalog fallback inspected.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Canonical-organism dataset applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000534
+  summary: No matching canonical Psychrobacter dataset; no substitution or expression
+    query.
+  evidence_ids:
+  - expression
+  - expression-independent
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-delta-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-validate.log
+  locator: Executed 2026-10-21T09:25:21Z through 2026-10-21T09:25:23Z; metadata delta-validate.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: Selected record validates; schema shape does not establish external relation
+    semantics or biological source support.
+  snapshot_sha256: bace7853223a5c2a7889382afea279d19e0a4fdd22ad80b45b471534a9cbaad3
+- evidence_id: check-delta-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-strict.log
+  locator: Executed 2026-10-21T09:25:21Z through 2026-10-21T09:25:25Z; metadata delta-strict.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: One file scanned with zero strict errors. The external RO process-role
+    mismatch is assessed separately.
+  snapshot_sha256: 35cbcb84fd3de9b32e6c0dd81668fee379177c0e4ee3fa6ec50743a6145c76a3
+- evidence_id: check-delta-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/delta-snippets.log
+  locator: Executed 2026-10-21T09:25:23Z through 2026-10-21T09:25:36Z; metadata delta-snippets.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: 'Exit 0: three occurrences VERIFIED and three NOT_IN_ABSTRACT across the
+    six snippets. The three salinity-range abstract misses remain inconclusive after
+    bounded manual source inspection.'
+  snapshot_sha256: dbaa7a01b36d904d287d4edcc19a2f499fa9e8eb75f2c6b1d535e6d6c04237a8
+- evidence_id: check-batch004-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/batch004-qc.log
+  locator: Executed 2026-10-21T09:19:10Z through 2026-10-21T09:21:17Z; metadata batch004-qc.json
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: context_only
+  summary: Actual B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports
+    reuse for unchanged scientific and common-check inputs. This is a corpus diagnostic
+    with retained baselines and warnings, not a fresh B5 execution or semantic certification
+    of this target.
+  snapshot_sha256: 41a3fbd2beadf60e039992274e868de70b6ade8cf4b5d6028d6df932e0cfb2e5
+- evidence_id: reuse
+  kind: validation
+  reference: B5 common-input byte comparison and original execution receipts
+  locator: 1130 trait files, history and common-check inputs versus B4; unchanged
+    8eee scientific base
+  accessed_at: '2026-10-21T09:37:21Z'
+  support: supports
+  summary: Original f25 diagnostics and B3 history validation retain their execution
+    dates, failed product attempts and adapter skips. The same receipt records the
+    actual B4 QC execution. Reuse does not certify later external ontology releases.
+  snapshot_sha256: ce111d70655cdee3528b3c85ca4a71468c47d96e84ff4b28c0932389aee61313
+- evidence_id: reuse-independent
+  kind: validation
+  reference: Independent B5 setup/reuse inspection
+  locator: Original diagnostics, byte comparisons and helper scope review
+  accessed_at: '2026-10-21T09:25:47.749251Z'
+  support: supports
+  summary: Independent verification confirmed the unchanged-input basis and original
+    check counts, failures and limits. It did not rerun scientific validators or external
+    release checks.
+  snapshot_sha256: 4279ad9f488f187dd2f118a9b6274a60e5f79019225d24b33ce8b25f4ea2ca9f
+- evidence_id: capture
+  kind: validation
+  reference: Supplemental native input capture
+  locator: Initial 59 inputs 09:24:24–25Z; 63 inputs 09:24:42–44Z
+  accessed_at: '2026-10-21T09:24:44Z'
+  support: supports
+  summary: The v4 and v85 proposal owners were added before assessment, with all original
+    59 hashes unchanged. Independent grounding inspection subsequently confirmed all
+    63 captured hashes still match.
+  snapshot_sha256: 716446220852df37b9f2e596f7330112c08aaee9b1e249e904753110f66fb0a1
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+  locator: Entire identity, definition, graph, example and history
+  accessed_at: '2026-10-21T09:24:24Z'
+  support: partial
+  summary: The record denotes an endpoint-derived quantitative descriptor. NONMECHANISTIC
+    scope explains why a token protein example would misrepresent it; contextual physiology
+    is assessed without converting it into a universal molecular requirement.
+  snapshot_sha256: 3b26342531eb0edef94e6434c2b91a2d066e02d23a9bef03c626767c5fc19171
+- evidence_id: identity
+  kind: authority
+  reference: Pinned data/raw/metpo.owl
+  locator: Active METPO:1000534, definition, broader phenotype parent and three axis-specific
+    children
+  accessed_at: '2026-10-21T09:28:01.215932Z'
+  support: supports
+  summary: The definition matches exactly. NaCl delta, pH delta and temperature delta
+    explicitly subclass this class in the pinned ontology. The complete active/deprecated
+    scan retains explicit replacement properties; matching historical labels alone
+    do not supply replacements. Extraction merged all declarations for each IRI so
+    empty references could not overwrite annotations.
+  snapshot_sha256: bf2436f9aa05d653c4fc3cf8efec8741666fc3a9c3008564ada94b5d2ec1b742
+- evidence_id: local-authority
+  kind: authority
+  reference: Native schema/checklist; v4, v8 and v85 proposals; maintained mappings
+  locator: QUALITY/process distinction; defines/confers roles; homeoviscous-adaptation
+    process proposal
+  accessed_at: '2026-10-21T09:30:23.830835Z'
+  support: supports
+  summary: Local defines and confers admit the represented roles. METPO:1016200 has
+    the maintained homeoviscous-adaptation process proposal and mapping; its absence
+    from the pinned release is expected. Native QUALITY correctly describes the ratio
+    and fluidity nodes. Missing optional predicate IDs or protein instances are not
+    automatic defects.
+  snapshot_sha256: 50e3c96e28c92d862d15d2e70ee00292d377ec697608f4831423b31f038b2769
+- evidence_id: rdfs
+  kind: authority
+  reference: W3C RDF Schema authority
+  locator: rdfs:subClassOf class endpoints and direction; official RDF schema response
+  accessed_at: '2026-10-21T09:28:41.654521Z'
+  support: supports
+  summary: The subclass relation links class extensions in the recorded direction.
+    The three axis-specific traits and generic delta class have compatible roles;
+    pinned METPO supplies the actual subclass assertions.
+  snapshot_sha256: 3a14efd50580efc4ad2fcd8e9a66b225d82ae94f22da5ac70fda1079ce32c8b3
+- evidence_id: ro
+  kind: authority
+  reference: RO:0002211 regulates; BFO:0000015 process
+  locator: Original RO inspection 08:04:46.869674Z; hash-verified reuse 09:28:53.047379Z
+  accessed_at: '2026-10-21T09:28:53.047379Z'
+  support: supports
+  summary: RO:0002211 explicitly has process domain and range and an execution-based
+    definition. Edge 7 instead links fatty-acid ratio QUALITY to membrane-fluidity
+    QUALITY. This is an intended-role mismatch established from authority text, not
+    an asserted reasoner result or native YAML validation failure.
+  snapshot_sha256: 03ac643fc8de5bc0dda8056339f544da34ff94763714f91ca600467959391f66
+- evidence_id: ledger
+  kind: validation
+  reference: Independent complete node/edge and history ledger
+  locator: Ten nodes, nine edges, zero protein examples; ten events, nine AI plus
+    one automated seed
+  accessed_at: '2026-10-21T09:30:23.838529Z'
+  support: partial
+  summary: Every endpoint and assigned relation was assessed. Edge 7 has the RO process/quality
+    conflict; class edges, local defines/confers and the process proposal otherwise
+    have coherent roles. Provider headers are provenance leads, not primary proof
+    or evidence of a historical scientific error.
+  snapshot_sha256: 43d0b0b04ee57cfb9b82d03793db0dbcd5f8a1503c4367e106da2091c5792a25
+- evidence_id: owners
+  kind: search
+  reference: mappings/predicate_grounding.tsv:66; scripts/ground_causal_predicates.py:138–179
+  locator: Wildcard modulates mapping and existing-ID skip; bounded maintained-owner
+    search
+  accessed_at: '2026-10-21T09:30:23.830835Z'
+  support: supports
+  summary: The writer skips populated IDs. Clearing only edge 7’s ID leaves the modulates
+    label, whose wildcard row accepts QUALITY-to-QUALITY and can restore RO:0002211.
+    Static reading establishes recurrence risk; no writer execution occurred. Seed,
+    example and v85 owners are identified separately.
+  snapshot_sha256: f7601f129e72508ce19a8acabef25d5b1d5e9f2e40a5aa8ba341def4b0641b7e
+  search_scope: Ignored-inclusive target label/ID/slug search across the repository,
+    excluding .git and .venv, plus supplementary bounded mapping/script/proposal search.
+    Exact commands are retained; no global absence claim.
+- evidence_id: taxonomy
+  kind: database
+  reference: Official NCBI Taxonomy:334543
+  locator: Species Psychrobacter arcticus; type material includes strain 273-4
+  accessed_at: '2026-10-21T09:27:35.805843Z'
+  support: supports
+  summary: Current species identity matches and the note explicitly retains strain
+    273-4. Species-level canonical identity with a strain-limited note is not a taxonomic
+    mismatch. This check does not establish the numerical growth endpoints.
+  snapshot_sha256: b0ce89632e2538a1e7cd3bdff36a96764bb28a807d85d9cb2d765a68752a9c49
+- evidence_id: provenance
+  kind: search
+  reference: Whole target history and ignored-inclusive local provenance search
+  locator: Ten events; 184 matching files; one target repository history with ai_agent
+    codex
+  accessed_at: '2026-10-21T09:27:06.358661Z'
+  support: partial
+  summary: Nine events disclose AI assistance and one is an automated METPO seed.
+    No target-specific local review bundle or explicit human-acceptance link was found
+    in the examined scope. The matching repository history records an AI agent; private
+    or remote acceptance remains unknown.
+  snapshot_sha256: 727ed84cdde504f1eb9937b2b941579740c0cfef8c52f88d557cc37f20776c45
+  search_scope: rg --hidden --no-ignore with exact trait ID, label and slug across
+    the repository; explicit exclusions .git/** and .venv/**. Matching local repository
+    histories and review target lists inspected; no private/remote absence claim.
+- evidence_id: status-rule
+  kind: authority
+  reference: Native review checklist and curation playbook
+  locator: Status/audit gate
+  accessed_at: '2026-10-21T09:30:23.830835Z'
+  support: supports
+  summary: REVIEWED requires human scientific acceptance. Automated seeding, disclosed
+    AI curation, validator success and this review are distinct forms of evidence.
+  snapshot_sha256: 50e3c96e28c92d862d15d2e70ee00292d377ec697608f4831423b31f038b2769
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original catalog 07:36:12.732638–07:36:12.858149Z; current applicability
+    inspection
+  accessed_at: '2026-10-21T09:27:57.550125Z'
+  support: context_only
+  summary: The hash-verified 20-organism, 28-dataset catalog has no matching Psychrobacter/arcticus/273-4
+    entry. No module query or organism substitution followed. A generic measurement
+    descriptor does not require a token expression dataset.
+  snapshot_sha256: 797c3694a4b195e41186d90299de4faf47f8662646aa106e5355acec102a7a97
+- evidence_id: runner
+  kind: search
+  reference: Structured-source runner discovery
+  locator: Fresh PATH/B5 search 09:27:57.380287–09:27:57.542053Z; external bounds
+    retain original 08:17:15 inspection
+  accessed_at: '2026-10-21T09:27:57.542053Z'
+  support: context_only
+  summary: No runner was found in the fresh bounded PATH/B5 filename/pyproject search.
+    Earlier external project/install discovery was reused rather than relabelled as
+    fresh. Official-catalog fallback was inspected.
+  snapshot_sha256: 43597ec8b007fc605fabf9069534281f331a33bda5615b9ce9c473facf744179
+  search_scope: Fresh B5 search includes ignored/hidden and virtual-environment contents,
+    excluding Git internals. External roots retain their original documented bounds;
+    no whole-filesystem absence claim.
+- evidence_id: expression-independent
+  kind: validation
+  reference: Independent expression-applicability receipt
+  locator: Target/catalog/discovery hashes and canonical-only scope
+  accessed_at: '2026-10-21T09:31:42.300226Z'
+  support: supports
+  summary: Independent reading confirms the catalog noncoverage and bounded discovery
+    statement without inferring absent biological function or substituting an organism.
+  snapshot_sha256: a5fbf0b60ed893d7179e41dc57dc1ad27192610b68dcc6a782f728c0f7202a11
+- evidence_id: bibliography
+  kind: database
+  reference: Complete source/claim and acquisition ledger
+  locator: Eight references, thirteen placements, six snippets and nine edge claims
+  accessed_at: '2026-10-21T09:31:58.956089Z'
+  support: partial
+  summary: All source identities resolve. Two complete bodies are local, two additional
+    sources have bounded actual browser body inspection, and four remain abstract/preview-limited.
+    Three snippet occurrences are exact and three salinity-range occurrences remain
+    unverified. DOI-index misses were resolved through PMID/Crossref rather than treated
+    as invalid references.
+  snapshot_sha256: aa709b543f0ea4eecb62c8bb10cd85618b2397644c7f7654cb2aaf20e68b0c69
+- evidence_id: browser-scope
+  kind: primary_source
+  reference: Actual primary browser access receipts
+  locator: Successful opening PDF sections 09:29:16–17Z and subsequent failed page
+    requests
+  accessed_at: '2026-10-21T09:31:58Z'
+  support: context_only
+  summary: Successful initial RSC and OUP primary PDF passages were actually read.
+    Later 403/redirect errors do not erase those passages or establish absence elsewhere.
+    No successful local PDF hash is fabricated; exact or clock-bounded request times
+    and inspected page/line limits are retained.
+  snapshot_sha256: 72b685deebdc41480af01c160b7e35074ab7d6b92b1beb5d9728ba3ea54920ed
+- evidence_id: salinity
+  kind: primary_source
+  reference: https://doi.org/10.1093/femsre/fuy009
+  locator: PMID:29529204; actual publisher PDF pp353–355, especially p354 adaptability
+    paragraph, browser lines89–99
+  accessed_at: '2026-10-21T09:29:17Z'
+  support: partial
+  summary: The review supports salt-adaptation and changing-salinity context. The
+    inspected sections do not establish a formal maximum-minus-minimum formula or
+    ontology subclass assertion. Three salinity-range snippets remain unverified because
+    later pages could not be inspected; failed browser finds are not textual absence
+    evidence.
+- evidence_id: thermal
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/9406426/
+  locator: DOI:10.1016/s0300-9629(97)00003-0; complete abstract sentence2, corroborated
+    by university publication page
+  accessed_at: '2026-10-21T09:29:01.331044Z'
+  support: supports
+  summary: Both thermal snippet occurrences are exact. The review supports high-temperature
+    adaptation as physiological context; the ontology supplies the temperature-delta
+    subclass relation. Full article PDF access failed, and no formula/body-absence
+    claim is made.
+  snapshot_sha256: 56f69a7ce2e69822ef753fec5c43716583184e45fc1a2c0cae98aa9bdb841265
+- evidence_id: psychrobacter
+  kind: primary_source
+  reference: https://doi.org/10.1128/JB.01377-08
+  locator: PMID:19168616; complete indexed abstract naming P. arcticus 273-4
+  accessed_at: '2026-10-21T09:25:41.489901Z'
+  support: partial
+  summary: The source identity, strain and cold-growth study are confirmed. Exact
+    −10 and 28 °C endpoints and their caveat remain unverified because full text was
+    unavailable. The arithmetic gives 38 °C conditionally; the record already calls
+    this nominal and retains an endpoint warning. Narrower abstract test temperatures
+    do not disprove broader body endpoints.
+  snapshot_sha256: 381d263bc3790455d84d796b3437f1d2cf5a9042dae5b420f3bb8be791cce6ec
+- evidence_id: ph
+  kind: primary_source
+  reference: https://doi.org/10.1038/nrmicro2549
+  locator: PMID:21464825; reused BioC offset58 abstract and offset671 introduction
+  accessed_at: '2026-10-21T07:57:33Z'
+  support: supports
+  summary: The short pH-homeostasis snippet is exact. Conceptual text supports external-pH
+    growth ranges and distinguishes growth from survival; pinned METPO supplies the
+    formal pH-delta hierarchy. The complete BioC bytes retain their original 07:57:33
+    acquisition and verified hash; unrelated pathogen mechanisms were not assessed.
+  snapshot_sha256: 903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f
+- evidence_id: homeoviscous
+  kind: primary_source
+  reference: https://doi.org/10.1039/d4cc03114h
+  locator: PMID:39190300; publisher PDF pp10280–10282, HVA definition and Section2,
+    browser lines160–181
+  accessed_at: '2026-10-21T09:29:17Z'
+  support: supports
+  summary: Actual opening sections support lipid-composition regulation preserving
+    membrane structure/fluidity. The source itself calls HVA a universal membrane-adaptation
+    paradigm, so that wording is source-faithful. Widening a quantified delta remains
+    a contextual inference rather than an inspected endpoint experiment; later stressor-specific
+    sections were inaccessible.
+- evidence_id: solutes
+  kind: primary_source
+  reference: https://doi.org/10.37256/amtt.5220244537
+  locator: Crossref publisher-deposited title, abstract and official PDF link
+  accessed_at: '2026-10-21T09:27:49.131053Z'
+  support: partial
+  summary: The cold-adaptation review identity resolves despite the EPMC miss. Specific
+    freezing-point, stabilization and osmotic-balance assertions remain unverified
+    because official body access failed. Abstract scope neither verifies nor falsifies
+    those details.
+  snapshot_sha256: 9f5ed8f0f9d07aface3f482bc888a6c47a4d9683abf51f76b16bf56412857cf7
+- evidence_id: fatty-acids
+  kind: primary_source
+  reference: https://doi.org/10.1007/s12275-023-00031-x
+  locator: PMID:37010795; publisher preview Abstract and complete indexed abstract
+  accessed_at: '2026-10-21T09:27:50.678103Z'
+  support: partial
+  summary: The review concerns bacterial temperature responses, mainly E. coli. The
+    specific saturated:unsaturated ratio statement remains unverified in this citation’s
+    unavailable body. General contextual plausibility and separate corroboration do
+    not substitute for nearest-source checking; the access limit is not a false-science
+    finding.
+  snapshot_sha256: 915d50b99adb984a2f655cca8379c1b6464ebb433885f02b8e8bb6ba5c693867
+- evidence_id: metabolism
+  kind: primary_source
+  reference: https://doi.org/10.1128/msystems.01124-22
+  locator: PMID:36847563; PMC10134870; s1/body2–3, s2/body4,6,8, s3/body44,51 in saved
+    zero-based extraction
+  accessed_at: '2026-10-21T09:27:50.739729Z'
+  support: supports
+  summary: The Pseudoalteromonas haloplanktis TAC125 study compares 0 and 15 °C. Metabolite
+    robustness is observed and buffering is an explicit author interpretation alongside
+    transcriptional changes. It does not measure full minimum/maximum boundaries or
+    every intermediate temperature. The record already preserves the two-temperature
+    contrast; retain that positive, qualified context.
+  snapshot_sha256: d5baa91e4b6cd8d9217b1cc5a88b35cef6f6c5efa741a930ec3c73c2c2114a80
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, polarity, synonyms and term kind'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: The active exact METPO class and label denote a generic quantitative phenotype,
+    not an organism, assay event or molecular structure. No synonyms are asserted
+    and no synonym requirement is missing.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: noncircular max-minus-min definition and attribution'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: The definition exactly matches pinned METPO. The attached physiological
+    review supplies axis context; ontology and mathematical interpretation should
+    remain distinguishable from literature support. This is not a false-definition
+    finding.
+  evidence_ids:
+  - identity
+  - salinity
+  - record
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: broader parent and three axis-specific subclasses'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: Phenotype is broader than numerical delta, and all three child-to-delta
+    directions are explicit upstream assertions. Physiological papers are contextual
+    evidence rather than the formal hierarchy authority.
+  evidence_ids:
+  - identity
+  - rdfs
+  - salinity
+  - ph
+  - thermal
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: category, scope, node types and optional fields'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: ENVIRONMENT/CLASS and NONMECHANISTIC measurement scope are coherent. QUALITY
+    correctly represents ratio and fluidity. No token protein, extra graph, optional
+    domain/range, priority/subset, discussion or dataset is required merely for completeness.
+  evidence_ids:
+  - record
+  - local-authority
+  - ledger
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: canonical taxon, strain and numerical endpoints'
+  outcome: unknown
+  target_ids:
+  - METPO:1000534
+  summary: The species and named strain agree with taxonomy and the source abstract.
+    The −10/28 endpoints and their caveat remain unverified, not false. Nominal 38
+    °C arithmetic is conditional on those endpoints; the note already preserves that
+    limitation.
+  evidence_ids:
+  - taxonomy
+  - psychrobacter
+  - bibliography
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: all ten node identities and local proposals'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: Active trait identities, explicit local process proposal, QUALITY kinds
+    and permitted ungrounded labels are consistent. Expected placeholder absence does
+    not create an automatic invalid-ID finding.
+  evidence_ids:
+  - identity
+  - local-authority
+  - ledger
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all nine edge roles and directions'
+  outcome: concern
+  target_ids:
+  - METPO:1000534
+  summary: Edge 7 uses process-to-process RO:0002211 for two qualities. Other class,
+    local defines/confers and unassigned predicate roles do not establish a separate
+    formal error. Neither descriptive alteration wording nor schema success turns
+    membrane fluidity into a process.
+  evidence_ids:
+  - ro
+  - ledger
+  - rdfs
+  - local-authority
+  - owners
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: eight references and thirteen nearest placements'
+  outcome: unknown
+  target_ids:
+  - METPO:1000534
+  summary: All identities resolve and all placements have an explicit evidence assessment.
+    Broad adaptation context is supported; the solute and fatty-ratio body claims
+    remain unknown. HVA’s universal-paradigm wording is source-faithful, and TAC125’s
+    two-temperature inference is positive and already qualified. No source-only major
+    finding follows.
+  evidence_ids:
+  - bibliography
+  - salinity
+  - thermal
+  - ph
+  - homeoviscous
+  - solutes
+  - fatty-acids
+  - metabolism
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: all six snippets and actual inspected source text'
+  outcome: unknown
+  target_ids:
+  - METPO:1000534
+  summary: Two thermal occurrences and one pH occurrence are exact. The three salinity-range
+    occurrences remain unverified; NOT_IN_ABSTRACT and failed later page access do
+    not prove nonliteral wording.
+  evidence_ids:
+  - check-delta-snippets
+  - thermal
+  - ph
+  - salinity
+  - browser-scope
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record coverage and measurement versus adaptation'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: All ten nodes and nine edges were assessed. Physiology contextualizes the
+    measurement descriptor without establishing a universal mechanism; no protein
+    instance or live UniProt lookup is applicable. A measured delta is not inferred
+    merely from adaptation evidence.
+  evidence_ids:
+  - record
+  - ledger
+  - bibliography
+  - metabolism
+  - homeoviscous
+- assessment_id: datasets
+  area: evidence
+  topic: 'Native checklist: optional structured sources and canonical applicability'
+  outcome: supported
+  target_ids:
+  - METPO:1000534
+  summary: The inspected catalog has no canonical Psychrobacter dataset. Bounded fresh
+    discovery and retained earlier external search scope are explicit; no organism
+    substitution or negative biological inference follows.
+  evidence_ids:
+  - expression
+  - runner
+  - expression-independent
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: history, acceptance, owners and native checks'
+  outcome: concern
+  target_ids:
+  - METPO:1000534
+  summary: Nine AI events and one automated seed are disclosed, with one matching
+    AI repository history. No local human-acceptance link was found in the declared
+    search scope. The modulates wildcard can restore the RO mismatch after clearing
+    an ID. Original check results remain historical and separate from this semantic
+    review.
+  evidence_ids:
+  - provenance
+  - status-rule
+  - owners
+  - capture
+  - reuse
+  - reuse-independent
+  - check-batch004-qc
+findings:
+- finding_id: process-relation-on-qualities
+  issue_key: delta-phenotype-with-numerical-limits-process-relation-on-qualities
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: RO regulates is assigned between two qualities
+  description: Edge 7 links saturated:unsaturated fatty-acid ratio QUALITY to membrane-fluidity
+    QUALITY using RO:0002211 regulates. The authority explicitly requires a process
+    at both ends and describes influence on process execution. Alteration wording
+    in the edge description does not change the represented quality endpoints, including
+    the fluidity object. This is an ontology-role mismatch, not a claimed reasoner
+    result or native validation failure. Wildcard modulates row 66 can reproduce it
+    if only the identifier is cleared.
+  target_ids:
+  - METPO:1000534
+  field_paths:
+  - causal_graphs[0].edges[7].predicate_id
+  - causal_graphs[0].nodes[8]
+  - causal_graphs[0].nodes[5]
+  evidence_ids:
+  - ro
+  - ledger
+  - local-authority
+  - owners
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard modulates mapping owner, row66
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing-ID skip and endpoint gate owner
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: delta-phenotype-with-numerical-limits-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human scientific acceptance is not linked locally
+  description: The ten events comprise nine disclosed AI-assisted events and one automated
+    seed; the matching repository history identifies an AI agent. Ignored-inclusive
+    local search did not locate an explicit human-acceptance link for this revision.
+    This documentary gap does not establish that no human reviewed it privately or
+    remotely.
+  target_ids:
+  - METPO:1000534
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - status-rule
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: history/records/delta_phenotype_with_numerical_limits/2026-09-15T070757Z-codex-92226c.yaml
+    role: Existing provenance to preserve; add acceptance through the maintained append-only
+      workflow
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relation
+  description: In separately authorized curation, reconcile edge 7’s relation with
+    its represented endpoint roles and the maintained wildcard mapping.
+  finding_ids:
+  - process-relation-on-qualities
+  target_ids:
+  - METPO:1000534
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Every retained grounded relation agrees with both represented endpoint identities
+    and ontology roles; do not relabel a quality as a process solely to satisfy the
+    existing relation.
+  - Address whether unchanged modulates wording can reacquire the rejected grounding
+    after an ID is cleared; scope any mapping/type-policy change to evidence rather
+    than guessing a replacement identifier.
+  - Preserve measurement scope and supported contextual biology without adding molecular
+    mechanisms or experimental recommendations.
+  - After authorized edits use guarded writes, native history, focused strict/term/graph
+    and mapping checks, just qc and maintained derived-product regeneration.
+- action_id: link-acceptance
+  description: Locate and link existing human scientific acceptance or obtain it through
+    the established process, preserving current history and reassessing status if
+    needed.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000534
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the revision and scientific scope.
+  - AI disclosure, automated seeding, structural checks and this review are not substituted
+    for human acceptance; preserve append-only history.
+- action_id: resolve-source-limits
+  description: Resolve the outstanding exact-text and endpoint questions when actual
+    public source bodies become available, without strengthening claims in the meantime.
+  finding_ids: []
+  target_ids:
+  - METPO:1000534
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/delta_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/backfill_canonical_examples_444.py
+    role: Maintained canonical-example owner for any separately authorized endpoint
+      correction
+  acceptance_checks:
+  - Verify the Psychrobacter endpoint passage and caveat, the three salinity snippets
+    and the nearest solute/fatty-ratio body claims against actual source text.
+  - Keep existing nominal-endpoint and two-temperature qualifications; unavailable
+    text is not treated as false biology.
+  - Distinguish pinned ontology authority for the formula/hierarchy from physiological
+    paper context at the relevant evidence fields.
+  - Retain original access errors and times; no paid research, mechanism expansion
+    or new experiment is required.
+limitations:
+- Psychrobacter identity and strain are confirmed, but the −10/28 °C endpoints and
+  endpoint caveat were not verified in actual body text. Conditional 38 °C arithmetic
+  and the record’s nominal/caveat wording are retained; no endpoint contradiction
+  is asserted.
+- Salinity and HVA publisher PDFs yielded actual opening sections at 09:29:16–17Z;
+  later page requests failed. Only those inspected sections are evidence. No local
+  successful PDF hash or whole-body read is claimed, and failed browser finds do not
+  establish phrase absence.
+- The three salinity-range snippet occurrences, detailed solute claims and the fatty-ratio
+  claim in its nearest citation remain unverified. Abstract/preview scope and failed
+  access do not prove absent or false biology.
+- HVA universal-paradigm wording occurs in the source. Its link to widening a measured
+  delta is contextual; NONMECHANISTIC breadth does not itself assert universal molecular
+  dependence. The TAC125 study positively supports an author interpretation at two
+  temperatures, already retained in the record notes, without measuring full growth
+  boundaries.
+- The exact formula and formal class hierarchy are grounded in pinned METPO. Physiological
+  reviews supply context; this distinction is retained without a false-definition
+  or hierarchy finding. Local proposal placeholders are not represented as already
+  minted upstream terms.
+- Common checks and B4 QC are reused only on the documented unchanged-input basis,
+  with actual original timestamps, failures, skips and warnings retained. No new full-corpus
+  execution or latest-release certification is implied.
+- No protein instance is asserted, so a live UniProt instance audit is inapplicable.
+  Expression-catalog noncoverage and bounded runner discovery do not imply absent
+  phenotype or function.
+- Human acceptance is unknown outside the ignored-inclusive local scope. The complete
+  review records scientific uncertainties and does not confer human scientific sign-off.
+- No record, mapping, history or generated product was edited. No paid provider call,
+  protocol design, biological optimization or unrelated pathogen-mechanism assessment
+  was performed.
+notes:
+- All node and edge indices are zero-based.
+- Initial native capture retained 59 inputs at 09:24:24–25Z; the 09:24:42–44Z supplemental
+  capture retained all prior hashes and added four v4/v85 owner files for 63 inputs.
+  Grounding review confirmed all 63 current hashes.
+- One major and one minor finding. Missing exact source text remains uncertainty rather
+  than an invented additional finding.
+tags:
+- record-review
+- delta-phenotype-with-numerical-limits
+- environment
+- needs-curation
+```
