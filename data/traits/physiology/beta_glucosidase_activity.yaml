@@ -49,9 +49,9 @@ discussions:
     cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing
     causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#beta_glucosidase_hydrolysis_sketch
   rationale: The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z)
     with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776),
     leaving only one mechanistic quote.
@@ -67,6 +67,35 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-10-30'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (beta_glucosidase_hydrolysis_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in beta-glucosidase-activity-protein-example-gap.
+- discussion_id: beta-glucosidase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli K-12
+    periplasmic beta-D-glucosidase BglX (UniProtKB:P33363) so beta_glucosidase_hydrolysis_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#beta_glucosidase_hydrolysis_sketch
+  rationale: The record's primary literature (EC 3.2.1.21, DOI:10.1007/s13205-015-0328-z,
+    DOI:10.2323/jgam.60.59) establishes beta-glucosidase hydrolysis of carbohydrate
+    glycosidic bonds to release nonreducing terminal glycosyl residues and oligosaccharides
+    and positive beta-glucosidase activity in Flavobacterium panaciterrae (NCBITaxon:1222002),
+    but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN
+    node must be curated before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-30'
+  evidence:
+  - reference: DOI:10.2323/jgam.60.59
+    supports: PARTIAL
+    snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase
+      (C4), leucine arylamidase, valine arylamidase, cystine arylamidase, acid phosphatase,
+      naphthol-AS-BI-phosphohydrolase, α-glucosidase, β-glucosidase
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-11T17:57:39Z'
   curator: codex
@@ -81,3 +110,69 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (beta-glucosidase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-10-30T08:00:18Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (beta_glucosidase_hydrolysis_sketch)
+    and OPEN CURATION_TODO discussion (beta-glucosidase-activity-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: beta_glucosidase_hydrolysis_sketch
+  title: Beta-glucosidase hydrolysis of carbohydrate glycosidic bonds
+  description: Evidence-backed physiological mechanism sketch linking beta-glucosidase
+    catalytic activity and oligosaccharide/glycosyl release to the beta-glucosidase
+    activity phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Activity-and-reaction sketch backed by DOI:10.1007/s13205-015-0328-z
+    and DOI:10.2323/jgam.60.59; strain-matched UniProtKB protein examples for Escherichia
+    coli K-12 periplasmic beta-D-glucosidase (BglX, UniProtKB:P33363) remain to be
+    curated.
+  nodes:
+  - node_id: beta_glucosidase_activity_trait
+    label: beta-glucosidase activity
+    node_type: TRAIT
+    grounding: traitmech:000146
+    description: Physiological enzyme-activity phenotype in which a cell produces
+      active beta-glucosidase enzymes that hydrolyze beta-D-glucosidic bonds in beta-D-glucosides.
+  - node_id: beta_glucosidase_catalytic_activity
+    label: beta-glucosidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0008422
+    description: Beta-D-glucopyranoside glucohydrolase catalytic activity hydrolyzing
+      carbohydrate glycosidic bonds to release nonreducing terminal glycosyl residues,
+      glycoside, and oligosaccharides (EC 3.2.1.21).
+  - node_id: beta_glucosidase_oligosaccharide
+    label: oligosaccharide
+    node_type: CHEMICAL
+    grounding: CHEBI:50699
+    description: Oligosaccharide product released alongside nonreducing terminal glycosyl
+      residues by beta-glucosidase hydrolysis of carbohydrate glycosidic bonds.
+  edges:
+  - subject: beta_glucosidase_catalytic_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: beta_glucosidase_activity_trait
+    description: Cellular production of active beta-glucosidase detected in API ZYM
+      enzyme panels confers the beta-glucosidase activity phenotype.
+    evidence:
+    - reference: DOI:10.2323/jgam.60.59
+      snippet: In API ZYM, activities are positive for alkaline phosphatase, esterase
+        (C4), leucine arylamidase, valine arylamidase, cystine arylamidase, acid phosphatase,
+        naphthol-AS-BI-phosphohydrolase, α-glucosidase, β-glucosidase
+      notes: An et al. report positive beta-glucosidase activity in API ZYM strips
+        for Flavobacterium panaciterrae.
+  - subject: beta_glucosidase_catalytic_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: beta_glucosidase_oligosaccharide
+    description: Beta-glucosidases hydrolyze the glycosidic bond of a carbohydrate
+      moiety to release nonreducing terminal glycosyl residues, glycoside, and oligosaccharides.
+    evidence:
+    - reference: DOI:10.1007/s13205-015-0328-z
+      snippet: β-Glucosidases (β-d-glucopyrranoside glucohydrolase) [E.C.3.2.1.21]
+        are the enzymes which hydrolyze the glycosidic bond of a carbohydrate moiety
+        to release nonreducing terminal glycosyl residues, glycoside and oligosaccharides
+      notes: Singh et al. state that beta-glucosidases (EC 3.2.1.21) hydrolyze the
+        glycosidic bond of a carbohydrate moiety to release nonreducing terminal glycosyl
+        residues, glycoside, and oligosaccharides.

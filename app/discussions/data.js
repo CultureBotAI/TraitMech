@@ -12569,13 +12569,13 @@ window.searchData = [
   "discussion_id": "alpha-galactosidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for MelA/Aga alpha-galactosidase catalysis and melibiose/raffinose catabolism in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "alpha-galactosidase activity",
   "source_id": "traitmech:000149",
   "source_file": "alpha_galactosidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#alpha_galactosidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one EC 3.2.1.22 catalytic definition snippet (DOI:10.3109/07388551.2013.794124) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -12585,6 +12585,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/alpha_galactosidase_activity.html#alpha-galactosidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "alpha-galactosidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 alpha-galactosidase MelA (UniProtKB:P06720) so alpha_galactosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-galactosidase activity",
+  "source_id": "traitmech:000149",
+  "source_file": "alpha_galactosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#alpha_galactosidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.22, DOI:10.3109/07388551.2013.794124, DOI:10.1128/jcm.22.3.333-335.1985) establishes alpha-galactosidase hydrolysis of alpha-1,6-linked galactose residues in oligosaccharides and galactomannan and positive alpha-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jcm.22.3.333-335.1985"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_galactosidase_activity.html#alpha-galactosidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "alpha-glucosidase-activity-xref-gap",
@@ -12645,13 +12666,13 @@ window.searchData = [
   "discussion_id": "alpha-mannosidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for GH38/GH92 alpha-mannosidase catalysis and mannoside utilization in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "alpha-mannosidase activity",
   "source_id": "traitmech:000150",
   "source_file": "alpha_mannosidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#alpha_mannosidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.2.1.24 reaction snippet with a diagnostic strain-discrimination snippet (DOI:10.1128/jcm.32.3.854-855.1994), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -12661,6 +12682,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "alpha-mannosidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Streptococcus pneumoniae TIGR4 GH38 alpha-mannosidase SpGH38 (UniProtKB:A0A0H2UPR5) so alpha_mannosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alpha-mannosidase activity",
+  "source_id": "traitmech:000150",
+  "source_file": "alpha_mannosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#alpha_mannosidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.24, DOI:10.1128/jcm.32.3.854-855.1994) establishes alpha-mannosidase hydrolysis of terminal non-reducing alpha-D-mannose residues in alpha-D-mannosides and positive alpha-mannosidase activity in Arcanobacterium haemolyticum (NCBITaxon:28264), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jcm.32.3.854-855.1994"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alpha_mannosidase_activity.html#alpha-mannosidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "amylase-activity-xref-gap",
@@ -13270,13 +13312,13 @@ window.searchData = [
   "discussion_id": "beta-glucosidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for BglA/BglX beta-glucosidase cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "beta-glucosidase activity",
   "source_id": "traitmech:000146",
   "source_file": "beta_glucosidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#beta_glucosidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z) with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -13286,6 +13328,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "beta-glucosidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 periplasmic beta-D-glucosidase BglX (UniProtKB:P33363) so beta_glucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "beta-glucosidase activity",
+  "source_id": "traitmech:000146",
+  "source_file": "beta_glucosidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#beta_glucosidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.2.1.21, DOI:10.1007/s13205-015-0328-z, DOI:10.2323/jgam.60.59) establishes beta-glucosidase hydrolysis of carbohydrate glycosidic bonds to release nonreducing terminal glycosyl residues and oligosaccharides and positive beta-glucosidase activity in Flavobacterium panaciterrae (NCBITaxon:1222002), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.2323/jgam.60.59"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/beta_glucosidase_activity.html#beta-glucosidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "beta-glucuronidase-activity-xref-gap",
@@ -18044,7 +18107,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 907,
+ "total_discussions": 910,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [
