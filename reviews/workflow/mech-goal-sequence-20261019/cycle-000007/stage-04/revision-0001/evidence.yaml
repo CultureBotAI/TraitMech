@@ -1,0 +1,295 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 7
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit 5fb83bfe3c7a55e313fa8b4fafcce17d3931ba29
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261030T112000Z-cycle7-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 6 Stage 5 evidence. Verified the 3 Cycle 7 Stage 2/3
+  glycoside hydrolase records with 0 findings, identified 15 actionable open record-level definition_source
+  CURIE alignment findings (F-C7S4-DEF-SRC-001..015) for Cycle 7 Stage 5 grouped remediation, logged traitmech-infra-0009
+  in INFRA_TASKS.md (#2002), and carried forward the 5 deferred source-limited/upstream-blocked cohort
+  findings.'
+source_revision: 5fb83bfe3c7a55e313fa8b4fafcce17d3931ba29
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/evidence.yaml
+  sha256: b578f11be5d23a36f0073e5b7349fc9b9996bb8996e6b71e7e0bbf0352b60c71
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/review_report.md
+  sha256: 469f68816c056fde21d561be54cc12687b31be62ecd28c8d1f3b310a0dfdf48e
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/review_findings.tsv
+  sha256: b8afbeb903e9cc9aac7db7f124efb8b2ce5076d78fae5dc35775691267a7d77d
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: 4d74e598771d47af77924fb8a4ed04c135a439c6f3eccd4580d36213e0b3425f
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/structured_review.yaml
+  sha256: 5b97ed3407f706dfaea68893d8fccec0f5fc86ed14fd7e66baf74635c8a56ec0
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/structured_review.md
+  sha256: ae3f4783291eba4365eb234b69d53b6309edafe2583b4d2f8b66bb0c5d0bfe71
+  kind: supporting
+findings:
+- finding_id: F-C7S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/genomics/abia_system.yaml (traitmech:000344) declares definition_source: DOI:10.1128/aem.60.4.1129-1136.1994
+    (Dinsmore & Klaenhammer 1994, Appl Environ Microbiol) while record-level evidence[0] cites its alias
+    PMID:16349225 rather than DOI:10.1128/aem.60.4.1129-1136.1994 (flagged by audit_evidence_snippets.py
+    MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0] on the same record (cited
+    under PMID alias PMID:16349225), canonical_examples[0].reference (DOI:10.1128/aem.60.4.1129-1136.1994),
+    and List_system_article.md in evidence[5] pairs the system with DOI:10.1128/aem.60.4.1129-1136.1994
+    and carries the verified verbatim snippet ''The abiA gene (formerly hsp) encodes an abortive phage
+    infection mechanism which inhibits phage DNA replication.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1128/aem.60.4.1129-1136.1994 in data/traits/genomics/abia_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/genomics/abib_system.yaml (traitmech:000319) declares definition_source: DOI:10.1046/j.1365-2958.1996.371896.x
+    (Parreira et al. 1996, Mol Microbiol) while record-level evidence[0] cites its alias PMID:8825768
+    rather than DOI:10.1046/j.1365-2958.1996.371896.x (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:8825768), canonical_examples[0].reference
+    (DOI:10.1046/j.1365-2958.1996.371896.x), and List_system_article.md in evidence[5] pairs the system
+    with DOI:10.1046/j.1365-2958.1996.371896.x and carries the verified verbatim snippet ''The abortive
+    infection determinant AbiB prevents growth of the sensitive phage bIL170, but not of the resistant
+    phage bIL41, on Lactococcus lactis strain IL1403'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1046/j.1365-2958.1996.371896.x in data/traits/genomics/abib_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/genomics/abic_system.yaml (traitmech:000320) declares definition_source: DOI:10.1128/jb.174.22.7463-7469.1992
+    (Durmaz et al. 1992, J Bacteriol) while record-level evidence[0] cites its alias PMID:1429469 rather
+    than DOI:10.1128/jb.174.22.7463-7469.1992 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:1429469), canonical_examples[0].reference
+    (DOI:10.1128/jb.174.22.7463-7469.1992), and List_system_article.md in evidence[7] pairs the system
+    with DOI:10.1128/jb.174.22.7463-7469.1992 and carries the verified verbatim snippet ''The genetic
+    determinant for Prf (phage resistance five) was subcloned from the conjugative plasmid pTN20'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1128/jb.174.22.7463-7469.1992 in data/traits/genomics/abic_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/genomics/abid_system.yaml (traitmech:000318) declares definition_source: DOI:10.1128/aem.61.5.2023-2026.1995
+    (McLandsborough et al. 1995, Appl Environ Microbiol) while record-level evidence[0] cites its alias
+    PMID:7646042 rather than DOI:10.1128/aem.61.5.2023-2026.1995 (flagged by audit_evidence_snippets.py
+    MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0] on the same record (cited
+    under PMID alias PMID:7646042), canonical_examples[0].reference (DOI:10.1128/aem.61.5.2023-2026.1995),
+    and List_system_article.md in evidence[5] pairs the system with DOI:10.1128/aem.61.5.2023-2026.1995
+    and carries the verified verbatim snippet ''A 6.3-kb fragment from pBF61 in Lactococcus lactis subsp.
+    lactis KR5 was cloned and found to confer an abortive phage infection (Abi+) phenotype'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1128/aem.61.5.2023-2026.1995 in data/traits/genomics/abid_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/genomics/abii_system.yaml (traitmech:000316) declares definition_source: DOI:10.1016/S0168-1656(97)01692-1
+    (Su et al. 1997, J Biotechnol) while record-level evidence[0] cites its alias PMID:9195753 rather
+    than DOI:10.1016/S0168-1656(97)01692-1 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:9195753), canonical_examples[0].reference
+    (DOI:10.1016/S0168-1656(97)01692-1), and List_system_article.md in evidence[8] pairs the system with
+    DOI:10.1016/S0168-1656(97)01692-1 and carries the verified verbatim snippet ''Plasmid pND852 (56 kb)
+    encodes nisin resistance and was isolated from Lactococcus lactis ssp lactis (L. lactis) M138 by conjugation
+    to L. lactis LM0230'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1016/S0168-1656(97)01692-1 in data/traits/genomics/abii_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/genomics/abir_system.yaml (traitmech:000317) declares definition_source: DOI:10.1128/AEM.66.6.2647-2651.2000
+    (Twomey et al. 2000, Appl Environ Microbiol) while record-level evidence[0] cites its alias PMID:10831451
+    rather than DOI:10.1128/AEM.66.6.2647-2651.2000 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:10831451), canonical_examples[0].reference
+    (DOI:10.1128/AEM.66.6.2647-2651.2000), and List_system_article.md in evidence[5] pairs the system
+    with DOI:10.1128/AEM.66.6.2647-2651.2000 and carries the verified verbatim snippet ''The native lactococcal
+    plasmid pKR223 encodes two distinct phage resistance mechanisms, a restriction and modification (R/M)
+    system designated LlaKR2I and an abortive infection mechanism (Abi) which affects prolate-headed-phage
+    proliferation'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1128/AEM.66.6.2647-2651.2000 in data/traits/genomics/abir_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/genomics/abiu_system.yaml (traitmech:000321) declares definition_source: DOI:10.1128/AEM.67.11.5225-5232.2001
+    (Dai et al. 2001, Appl Environ Microbiol) while record-level evidence[0] cites its alias PMID:11679349
+    rather than DOI:10.1128/AEM.67.11.5225-5232.2001 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:11679349), canonical_examples[0].reference
+    (DOI:10.1128/AEM.67.11.5225-5232.2001), and List_system_article.md in evidence[6] pairs the system
+    with DOI:10.1128/AEM.67.11.5225-5232.2001 and carries the verified verbatim snippet ''This study reports
+    on the identification and characterization of a novel abortive infection system, AbiU, from Lactococcus
+    lactis.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1128/AEM.67.11.5225-5232.2001 in data/traits/genomics/abiu_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/genomics/lit_system.yaml (traitmech:000363) declares definition_source: DOI:10.1021/bi0495026
+    (Copeland et al. 2004, Biochemistry) while record-level evidence[0] cites its alias PMID:15196039
+    rather than DOI:10.1021/bi0495026 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias PMID:15196039) and
+    List_system_article.md in evidence[2] pairs the system with DOI:10.1021/bi0495026 and carries the
+    verified verbatim snippet ''Bacteriophage exclusion is a suicide response to viral infection. In strains
+    of Escherichia coli K-12 infected with T4 phage this process is mediated by the host-encoded Lit peptidase.
+    Lit is activated by a unique sequence in the major head protein of the T4 phage (the Gol sequence)
+    which then cleaves site-specifically the host translation factor EF-Tu, ultimately leading to cell
+    death.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1021/bi0495026 in data/traits/genomics/lit_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/genomics/card_nlr_endonuclease_system.yaml (traitmech:000550) declares definition_source:
+    DOI:10.1101/2023.05.28.542683 (Wein et al. 2023, bioRxiv) while record-level evidence[0] cites its
+    alias https://europepmc.org/article/PPR/PPR668921 rather than DOI:10.1101/2023.05.28.542683 (flagged
+    by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0]
+    on the same record (cited under EuropePMC preprint alias https://europepmc.org/article/PPR/PPR668921)
+    and List_system_article.md in evidence[1] mapping CARD_NLR to 10.1101/2023.05.28.542683 pairs the
+    system with DOI:10.1101/2023.05.28.542683 and carries the verified verbatim snippet ''Here we show
+    that CARD-like domains are present in defense systems that protect bacteria against phage.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1101/2023.05.28.542683 in data/traits/genomics/card_nlr_endonuclease_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-010
+  status: open
+  summary: 'data/traits/genomics/card_nlr_gasdermin_system.yaml (traitmech:000555) declares definition_source:
+    DOI:10.1101/2023.05.28.542683 (Wein et al. 2023, bioRxiv) while record-level evidence[0] cites its
+    alias https://europepmc.org/article/PPR/PPR668921 rather than DOI:10.1101/2023.05.28.542683 (flagged
+    by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0]
+    on the same record (cited under EuropePMC preprint alias https://europepmc.org/article/PPR/PPR668921)
+    and List_system_article.md in evidence[2] mapping CARD_NLR to 10.1101/2023.05.28.542683 pairs the
+    system with DOI:10.1101/2023.05.28.542683 and carries the verified verbatim snippet ''Here we show
+    that CARD-like domains are present in defense systems that protect bacteria against phage.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1101/2023.05.28.542683 in data/traits/genomics/card_nlr_gasdermin_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-011
+  status: open
+  summary: 'data/traits/genomics/card_nlr_phospho_system.yaml (traitmech:000551) declares definition_source:
+    DOI:10.1101/2023.05.28.542683 (Wein et al. 2023, bioRxiv) while record-level evidence[0] cites its
+    alias https://europepmc.org/article/PPR/PPR668921 rather than DOI:10.1101/2023.05.28.542683 (flagged
+    by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0]
+    on the same record (cited under EuropePMC preprint alias https://europepmc.org/article/PPR/PPR668921)
+    and List_system_article.md in evidence[1] mapping CARD_NLR to 10.1101/2023.05.28.542683 pairs the
+    system with DOI:10.1101/2023.05.28.542683 and carries the verified verbatim snippet ''Here we show
+    that CARD-like domains are present in defense systems that protect bacteria against phage.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1101/2023.05.28.542683 in data/traits/genomics/card_nlr_phospho_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-012
+  status: open
+  summary: 'data/traits/genomics/card_nlr_subtilase_system.yaml (traitmech:000553) declares definition_source:
+    DOI:10.1101/2023.05.28.542683 (Wein et al. 2023, bioRxiv) while record-level evidence[0] cites its
+    alias https://europepmc.org/article/PPR/PPR668921 rather than DOI:10.1101/2023.05.28.542683 (flagged
+    by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0]
+    on the same record (cited under EuropePMC preprint alias https://europepmc.org/article/PPR/PPR668921)
+    and List_system_article.md in evidence[1] mapping CARD_NLR to 10.1101/2023.05.28.542683 pairs the
+    system with DOI:10.1101/2023.05.28.542683 and carries the verified verbatim snippet ''Here we show
+    that CARD-like domains are present in defense systems that protect bacteria against phage.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1101/2023.05.28.542683 in data/traits/genomics/card_nlr_subtilase_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-013
+  status: open
+  summary: 'data/traits/genomics/card_nlr_system.yaml (traitmech:000337) declares definition_source: DOI:10.1101/2023.05.28.542683
+    (Wein et al. 2023, bioRxiv) while record-level evidence[0] cites its alias https://europepmc.org/article/PPR/PPR668921
+    rather than DOI:10.1101/2023.05.28.542683 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under EuropePMC preprint alias https://europepmc.org/article/PPR/PPR668921)
+    and List_system_article.md in evidence[4] mapping CARD_NLR to 10.1101/2023.05.28.542683 pairs the
+    system with DOI:10.1101/2023.05.28.542683 and carries the verified verbatim snippet ''Here we show
+    that CARD-like domains are present in defense systems that protect bacteria against phage.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1101/2023.05.28.542683 in data/traits/genomics/card_nlr_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-014
+  status: open
+  summary: 'data/traits/genomics/nlr_like_bnacht_system.yaml (traitmech:000408) declares definition_source:
+    DOI:10.1016/j.cell.2023.04.015 (Kibby et al. 2023, Cell) while record-level evidence[0] cites its
+    alias https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/ rather than DOI:10.1016/j.cell.2023.04.015
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level
+    evidence[0] on the same record (cited under PMC full-text alias https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/),
+    canonical_examples[0].reference (DOI:10.1016/j.cell.2023.04.015), and List_system_article.md in evidence[7]
+    pairs the system with DOI:10.1016/j.cell.2023.04.015 and carries the verified verbatim snippet ''Here
+    we show that proteins containing a NACHT module, the central feature of the animal nucleotide-binding
+    domain and leucine-rich repeat-containing gene family (NLRs), are found in bacteria and defend against
+    phages.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1016/j.cell.2023.04.015 in data/traits/genomics/nlr_like_bnacht_system.yaml.'
+- finding_id: F-C7S4-DEF-SRC-015
+  status: open
+  summary: 'data/traits/genomics/pd_t2_1_system.yaml (traitmech:000476) declares definition_source: DOI:10.1038/s41564-025-02239-6
+    (Goedecke et al. 2025, Nat Microbiol) while record-level evidence[0] cites its alias https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
+    rather than DOI:10.1038/s41564-025-02239-6 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMC full-text alias https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/)
+    and List_system_article.md in evidence[9] pairs the system with DOI:10.1038/s41564-025-02239-6 and
+    carries the verified verbatim snippet ''Two phage proteins were further investigated, revealing T7
+    gp17 and additional tail fiber proteins activated the undescribed antiphage system PD-T2–1 and identifying
+    λ gpE major capsid protein activated the antiphage system Avs8.'').'
+  disposition: 'Carry forward to Cycle 7 Stage 5 (resolve_review_findings) in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    align evidence[0].reference to DOI:10.1038/s41564-025-02239-6 in data/traits/genomics/pd_t2_1_system.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 376 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (354 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 357 in Cycle 6 after +3 Cycle 7 Stage 2/3 glycoside hydrolase graphs, plus 22
+    SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 376 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 29 of 1,129 eligible TraitRecord files (after excluding the 15 DefenseFinder genomics records
+    promoted to open findings F-C7S4-DEF-SRC-001..015; plus 64 empty-snippet [66 <12-char] CLASS definition_source
+    records without an in-corpus verbatim quote, 71 OBJECT_PROPERTY records [31 in metabolism with predicate-stem
+    snippets resolved under traitmech-infra-0006 and 40 in ecology], and 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that is paywalled or has
+    no indexed PubMed/EuropePMC abstract.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C7S4-DEF-SRC-001
+- F-C7S4-DEF-SRC-002
+- F-C7S4-DEF-SRC-003
+- F-C7S4-DEF-SRC-004
+- F-C7S4-DEF-SRC-005
+- F-C7S4-DEF-SRC-006
+- F-C7S4-DEF-SRC-007
+- F-C7S4-DEF-SRC-008
+- F-C7S4-DEF-SRC-009
+- F-C7S4-DEF-SRC-010
+- F-C7S4-DEF-SRC-011
+- F-C7S4-DEF-SRC-012
+- F-C7S4-DEF-SRC-013
+- F-C7S4-DEF-SRC-014
+- F-C7S4-DEF-SRC-015
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

@@ -74,6 +74,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: "Resolved in Cycle 6 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py to resolve DOI<->PMID reference aliases from data/raw/defense_finder/wiki/List_system_article.md (when present) and in-record List_system_article.md evidence snippets when checking UNQUOTED_DEFINITION_SOURCE, covered by unit tests in tests/test_audit_evidence_snippets.py."
+  - task_id: traitmech-infra-0009
+    summary: Extend _record_wiki_doi_aliases in scripts/audit_evidence_snippets.py to recognize PMC/EuropePMC PPR primary references and pair definition_source DOIs with primary quoted PMID/PMC/EuropePMC references when List_system_article.md, canonical_examples[].reference, or synonyms[].source confirms the same publication
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -166,6 +170,17 @@ tasks:
 - **Priority**: Medium
 - **Dependencies**: None
 - **Disposition**: Resolved in Cycle 6 Stage 6 (issue #2002, follow-up to #1981) by adding `_load_defense_finder_ref_aliases()`, `_record_wiki_doi_aliases()`, and `has_alias_quote` in `scripts/audit_evidence_snippets.py` to resolve `DOI:`↔`PMID:` reference aliases from `data/raw/defense_finder/wiki/List_system_article.md` (when present) and from in-record `List_system_article.md` table-row snippets paired with a single quoted `PMID:`, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 1,130 records).
+
+### `traitmech-infra-0009` — Extend `_record_wiki_doi_aliases` in `scripts/audit_evidence_snippets.py` to recognize `PMC`/`EuropePMC PPR` primary references and pair `definition_source: DOI:...` with primary quoted `PMID:`/`PMC`/`EuropePMC` references
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 7, Stage 4 (`review_records`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: In `scripts/audit_evidence_snippets.py`, `_record_wiki_doi_aliases()` currently requires `DOI:...` to appear inside the markdown table snippet of an `evidence[]` entry citing `List_system_article.md` and only extracts `PMID:...` references from `record_refs`. During Cycle 7 Stage 4 frozen-inventory review, all 15 remaining DefenseFinder `CLASS` records in `data/traits/genomics/` (`abia_system.yaml`, `abib_system.yaml`, `abic_system.yaml`, `abid_system.yaml`, `abii_system.yaml`, `abir_system.yaml`, `abiu_system.yaml`, `lit_system.yaml`, `card_nlr_endonuclease_system.yaml`, `card_nlr_gasdermin_system.yaml`, `card_nlr_phospho_system.yaml`, `card_nlr_subtilase_system.yaml`, `card_nlr_system.yaml`, `nlr_like_bnacht_system.yaml`, and `pd_t2_1_system.yaml`) whose `definition_source: DOI:...` was absent from `evidence[].reference` (`MISSING_DEFINITION_SOURCE_EVIDENCE` in `scripts/record_review.py inspect`) were found to already carry a verified non-elliptical verbatim quote from that exact `definition_source` publication in `evidence[0]`, cited under its `PMID:`, `https://europepmc.org/article/PPR/PPR668921`, or `https://pmc.ncbi.nlm.nih.gov/articles/PMC.../` alias (with `List_system_article.md` cited in `evidence[]` and/or `definition_source` repeated in `canonical_examples[].reference` or `synonyms[].source`).
+- **Desired outcome**: In Cycle 7 Stage 6, extend `_record_wiki_doi_aliases()` in `scripts/audit_evidence_snippets.py` so `UNQUOTED_DEFINITION_SOURCE` also recognizes quoted `PMC` (`https://pmc.ncbi.nlm.nih.gov/articles/PMC.../`) and `EuropePMC PPR` (`https://europepmc.org/article/PPR/...`) primary references in `record_refs` (alongside `PMID:...`) and pairs a record's `definition_source: DOI:...` with its single quoted primary `PMID:`/`PMC`/`EuropePMC` reference when the record also cites `List_system_article.md` or repeats `definition_source` in `canonical_examples[].reference` or `synonyms[].source`, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261030T112000Z-cycle7-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
+
 
 
 
