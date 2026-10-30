@@ -1,0 +1,36 @@
+{
+  "run_id": "mech-goal-sequence-20261019",
+  "cycle": 6,
+  "stage": 6,
+  "revision": 1,
+  "stage_key": "infrastructure",
+  "source_revision": "a77de264a91152ca1ee92e9ee484159b47154254",
+  "scope_frozen_at": "2026-10-30T05:39:16Z",
+  "infra_snapshot_path": "reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/infra_snapshot.md",
+  "infra_snapshot_sha256": "3baacd70e660e445040c9711228118816e196897a27dcdd192a7e1d22c406dd6",
+  "total_tasks_in_notebook": 8,
+  "previously_resolved_tasks": [
+    "traitmech-infra-0001",
+    "traitmech-infra-0002",
+    "traitmech-infra-0003",
+    "traitmech-infra-0004",
+    "traitmech-infra-0005",
+    "traitmech-infra-0006",
+    "traitmech-infra-0007"
+  ],
+  "frozen_pending_scope": [
+    {
+      "task_id": "traitmech-infra-0008",
+      "issue_url": "https://github.com/CultureBotAI/TraitMech/issues/2002",
+      "status_before": "open",
+      "status_after": "resolved",
+      "modified_files": [
+        "scripts/audit_evidence_snippets.py",
+        "tests/test_audit_evidence_snippets.py",
+        "INFRA_TASKS.md",
+        "history/infrastructure/stage6_infrastructure_plan/2026-10-30T055000Z-antigravity-c6s601.yaml"
+      ]
+    }
+  ],
+  "open_or_deferred_tasks_remaining": []
+}

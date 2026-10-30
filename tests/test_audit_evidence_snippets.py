@@ -28,6 +28,11 @@ def _write_trait(tmp_path, monkeypatch, body: str):
     (traits / "x.yaml").write_text(textwrap.dedent(body))
     monkeypatch.setattr(aes, "TRAITS_DIR", tmp_path / "data" / "traits")
     monkeypatch.setattr(aes, "RESEARCH_DIR", tmp_path / "research" / "traits")
+    monkeypatch.setattr(
+        aes,
+        "DEFENSE_FINDER_ARTICLES_MD",
+        tmp_path / "data" / "raw" / "defense_finder" / "wiki" / "List_system_article.md",
+    )
     return traits
 
 
@@ -704,4 +709,111 @@ def test_unquoted_definition_source_corpus_wide_16char_quote_when_in_evidence(
     findings = audit(check_reports=False, check_definition_sources=True)
     unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
     assert unquoted == []
+
+
+def test_unquoted_definition_source_defense_finder_wiki_doi_to_pmid_alias_file(
+    tmp_path, monkeypatch
+):
+    """When data/raw/defense_finder/wiki/List_system_article.md maps a DOI to a PMID,
+    a CLASS record citing the DOI in definition_source while quoting its mapped PMID
+    in evidence[] is flagged by UNQUOTED_DEFINITION_SOURCE (#2002, traitmech-infra-0008)."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: traitmech:000516
+        term_kind: CLASS
+        definition_source: DOI:10.1093/nar/gky781
+        evidence:
+          - reference: PMID:30202937
+            supports: SUPPORT
+            snippet: Functional metagenomic selections for DNA modifications identify a family
+        """)
+    wiki_md = tmp_path / "data" / "raw" / "defense_finder" / "wiki" / "List_system_article.md"
+    wiki_md.parent.mkdir(parents=True, exist_ok=True)
+    wiki_md.write_text(textwrap.dedent(r"""
+        | System | DOI | PMID | Title |
+        | --- | --- | --- | --- |
+        | TagI | 10\.1093/nar/gky781 | PMID:30202937 | Functional metagenomic selections |
+        | MazEF | 10\.1016/s1097-2765(03)00409-x | 12962616 | MazF is an endoribonuclease |
+        """))
+    aliases = aes._load_defense_finder_ref_aliases()
+    assert "PMID:30202937" in aliases["DOI:10.1093/nar/gky781"]
+    assert "DOI:10.1093/nar/gky781" in aliases["PMID:30202937"]
+    assert "PMID:12962616" in aliases["DOI:10.1016/s1097-2765(03)00409-x"]
+
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("x.yaml")
+    assert "is absent from record-level evidence[].reference" in unquoted[0]["detail"]
+
+    # Aligning evidence[0].reference with definition_source clears the finding.
+    (traits / "x.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000516
+        term_kind: CLASS
+        definition_source: DOI:10.1093/nar/gky781
+        evidence:
+          - reference: DOI:10.1093/nar/gky781
+            supports: SUPPORT
+            snippet: Functional metagenomic selections for DNA modifications identify a family
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
+
+
+def test_unquoted_definition_source_in_record_list_system_article_doi_pmid_pair(
+    tmp_path, monkeypatch
+):
+    """Even when data/raw/defense_finder/wiki/List_system_article.md is absent on disk,
+    in-record List_system_article.md table rows paired with a single quoted PMID
+    resolve DOI<->PMID aliases when the wiki row cites the same DOI as definition_source,
+    without falsely aliasing records whose wiki row cites a different review DOI
+    (#2002, traitmech-infra-0008)."""
+    traits = _write_trait(tmp_path, monkeypatch, r"""
+        identifier: traitmech:000516
+        term_kind: CLASS
+        definition_source: DOI:10.1093/nar/gky781
+        evidence:
+          - reference: PMID:30202937
+            supports: SUPPORT
+            snippet: Functional metagenomic selections for DNA modifications identify a family
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| TagI | 10\.1093/nar/gky781 | Functional metagenomic selections |'
+        """)
+    # Record where List_system_article.md cites a general review DOI different from
+    # the primary paper PMID in definition_source/evidence[0] — must NOT be falsely aliased.
+    (traits / "abia_like.yaml").write_text(textwrap.dedent(r"""
+        identifier: traitmech:000249
+        term_kind: CLASS
+        definition_source: PMID:2937000
+        evidence:
+          - reference: PMID:2937000
+            supports: SUPPORT
+            snippet: Cloning and localization of a Streptococcus lactis plasmid gene
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| AbiA | 10\.1016/j.mib.2005.06.006 | Phage resistance mechanisms |'
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert len(unquoted) == 1
+    assert unquoted[0]["file"].endswith("x.yaml")
+
+    # Aligning evidence[0].reference to DOI:10.1093/nar/gky781 clears x.yaml.
+    (traits / "x.yaml").write_text(textwrap.dedent(r"""
+        identifier: traitmech:000516
+        term_kind: CLASS
+        definition_source: DOI:10.1093/nar/gky781
+        evidence:
+          - reference: DOI:10.1093/nar/gky781
+            supports: SUPPORT
+            snippet: Functional metagenomic selections for DNA modifications identify a family
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| TagI | 10\.1093/nar/gky781 | Functional metagenomic selections |'
+        """))
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
+
 

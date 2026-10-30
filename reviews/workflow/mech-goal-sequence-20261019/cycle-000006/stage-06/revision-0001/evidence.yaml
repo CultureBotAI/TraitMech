@@ -1,0 +1,53 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 6
+stage: 6
+revision: 1
+source_revision: a77de264a91152ca1ee92e9ee484159b47154254
+scope_frozen_at: '2026-10-30T05:39:16Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-10-30T05:39:16Z,
+  sha256 3baacd70e660e445040c9711228118816e196897a27dcdd192a7e1d22c406dd6),
+  reconciled the 1 pending infrastructure task in the frozen scope
+  (traitmech-infra-0008, linked to GitHub issue #2002 as follow-up to #1981),
+  updated scripts/audit_evidence_snippets.py to resolve DOI<->PMID reference
+  aliases from data/raw/defense_finder/wiki/List_system_article.md (when present)
+  and from in-record List_system_article.md table-row snippets paired with a
+  single quoted PMID when checking UNQUOTED_DEFINITION_SOURCE, added unit tests
+  in tests/test_audit_evidence_snippets.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0008 as resolved in INFRA_TASKS.md
+  with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: 3baacd70e660e445040c9711228118816e196897a27dcdd192a7e1d22c406dd6
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: 8dd17fe07b6717b6ad34cc128ee486208157dd3197a32abd55b53837f7d25004
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: 20b1a2ce81f8c9aa6e2ae906e13870a984530f25e7a66ba09c146972e4ddd040
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/c6s6_coverage_full.json
+    kind: supporting
+    sha256: 0c1fb318925adb257b62265334f9fa4aecefd8663d3f66c16e174bf07a2d7b61
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0008
+    summary: Extend UNQUOTED_DEFINITION_SOURCE in scripts/audit_evidence_snippets.py to resolve DOI-to-PMID reference aliases from data/raw/defense_finder/wiki/List_system_article.md
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 6 Stage 6 (issue #2002, follow-up to #1981); updated
+      scripts/audit_evidence_snippets.py to resolve DOI<->PMID reference aliases
+      from data/raw/defense_finder/wiki/List_system_article.md (when present)
+      and in-record List_system_article.md evidence snippets when checking
+      UNQUOTED_DEFINITION_SOURCE, covered by unit tests in
+      tests/test_audit_evidence_snippets.py.
+carry_forward_ids: []
