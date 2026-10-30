@@ -71,9 +71,9 @@ tasks:
     disposition: "Resolved in Cycle 5 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py to track corpus_quoted_refs_16 (>=16-char non-elliptical quotes on non-OBJECT_PROPERTY records) and flag UNQUOTED_DEFINITION_SOURCE when a CLASS record cites definition_source in evidence[].reference without a snippet and a >=16-char quote exists in-corpus, covered by unit tests in tests/test_audit_evidence_snippets.py."
   - task_id: traitmech-infra-0008
     summary: Extend UNQUOTED_DEFINITION_SOURCE in scripts/audit_evidence_snippets.py to resolve DOI-to-PMID reference aliases from data/raw/defense_finder/wiki/List_system_article.md
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
-    disposition: "Open for Cycle 6 Stage 6 (implement_infrastructure_tasks)."
+    disposition: "Resolved in Cycle 6 Stage 6 (issue #2002, follow-up to #1981); updated scripts/audit_evidence_snippets.py to resolve DOI<->PMID reference aliases from data/raw/defense_finder/wiki/List_system_article.md (when present) and in-record List_system_article.md evidence snippets when checking UNQUOTED_DEFINITION_SOURCE, covered by unit tests in tests/test_audit_evidence_snippets.py."
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -159,13 +159,13 @@ tasks:
 ### `traitmech-infra-0008` — Extend `UNQUOTED_DEFINITION_SOURCE` in `scripts/audit_evidence_snippets.py` to resolve DOI↔PMID reference aliases from `data/raw/defense_finder/wiki/List_system_article.md`
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 6, Stage 4 (`review_records`)
 - **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
-- **Status**: `open`
+- **Status**: `resolved`
 - **Observation**: In `scripts/audit_evidence_snippets.py`, `UNQUOTED_DEFINITION_SOURCE` checks whether `definition_source` appears in `evidence[].reference` using exact string equality after `_norm()` (`ev_ref == def_source`). During Cycle 6 Stage 4 frozen-inventory review, 13 `CLASS` records in `data/traits/genomics/` (`fs_giy_yig_system.yaml`, `fs_hepn_tm_system.yaml`, `fs_hp_system.yaml`, `fs_hp_sdh_sah_system.yaml`, `fs_hsdr_like_system.yaml`, `fs_sma_system.yaml`, `mazef_system.yaml`, `mok_hok_sok_system.yaml`, `pfiat_system.yaml`, `prrc_system.yaml`, `rloc_system.yaml`, `rnlab_system.yaml`, and `tagi_system.yaml`) were found to declare `definition_source: DOI:...` while citing only the corresponding `PMID:...` alias in `evidence[0].reference` (with a verified verbatim `snippet` and `explanation`), even though `data/raw/defense_finder/wiki/List_system_article.md` maps both the `DOI:` and `PMID:` for the same publication (`MISSING_DEFINITION_SOURCE_EVIDENCE` in `scripts/record_review.py inspect`).
 - **Desired outcome**: In Cycle 6 Stage 6, extend `scripts/audit_evidence_snippets.py` so `UNQUOTED_DEFINITION_SOURCE` optionally loads `DOI:`↔`PMID:` equivalence pairs from `data/raw/defense_finder/wiki/List_system_article.md` (when present) and flags records whose `definition_source` is absent from `evidence[].reference` while its mapped `PMID:`/`DOI:` alias is already quoted in `evidence[].reference` on the same record or in-corpus, with unit tests in `tests/test_audit_evidence_snippets.py`.
-- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `data/raw/defense_finder/wiki/List_system_article.md`, `reviews/structured/20261026T053500Z-cycle6-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml`
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `data/raw/defense_finder/wiki/List_system_article.md`, `reviews/structured/20261026T053500Z-cycle6-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-06/revision-0001/evidence.yaml`
 - **Priority**: Medium
 - **Dependencies**: None
-- **Disposition**: Open for Cycle 6 Stage 6 (`implement_infrastructure_tasks`).
+- **Disposition**: Resolved in Cycle 6 Stage 6 (issue #2002, follow-up to #1981) by adding `_load_defense_finder_ref_aliases()`, `_record_wiki_doi_aliases()`, and `has_alias_quote` in `scripts/audit_evidence_snippets.py` to resolve `DOI:`↔`PMID:` reference aliases from `data/raw/defense_finder/wiki/List_system_article.md` (when present) and from in-record `List_system_article.md` table-row snippets paired with a single quoted `PMID:`, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 1,130 records).
 
 
 

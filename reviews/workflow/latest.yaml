@@ -579,7 +579,13 @@ entries:
   verification:
     checks:
     - bucket: pass
-      name: validate-strict
+      name: history
+      state: SUCCESS
+    - bucket: pass
+      name: canonical-example-taxonomy
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence / label-correspondence
       state: SUCCESS
     - bucket: pass
       name: pr-sanity
@@ -588,23 +594,55 @@ entries:
       name: pytest
       state: SUCCESS
     - bucket: pass
+      name: qc
+      state: SUCCESS
+    - bucket: pass
+      name: validate-strict
+      state: SUCCESS
+    - bucket: pass
+      name: vendored-sync
+      state: SUCCESS
+    head_sha: 6f762f868efe2df5c16a0351ae1a58d17dcf4542
+    merge_commit_sha: e4556be39a8f39f9171da3c4bad822a9c2652634
+    merged_at: '2026-10-26T07:57:28Z'
+    pr_number: 2036
+    status: merged
+    verified_at: '2026-10-26T08:06:40.554596+00:00'
+- cycle: 6
+  goal_evidence:
+    path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/evidence.yaml
+    sha256: b578f11be5d23a36f0073e5b7349fc9b9996bb8996e6b71e7e0bbf0352b60c71
+  receipt_sha256: 03f6c2ae2d9c3c857ff48c3ff5c672c8b6989aa783f90e3f4964402ed3d3151d
+  stage: 5
+  verification:
+    checks:
+    - bucket: pass
+      name: history
+      state: SUCCESS
+    - bucket: pass
       name: canonical-example-taxonomy
+      state: SUCCESS
+    - bucket: pass
+      name: label-correspondence / label-correspondence
+      state: SUCCESS
+    - bucket: pass
+      name: pr-sanity
+      state: SUCCESS
+    - bucket: pass
+      name: pytest
       state: SUCCESS
     - bucket: pass
       name: qc
       state: SUCCESS
     - bucket: pass
-      name: history
+      name: validate-strict
       state: SUCCESS
     - bucket: pass
       name: vendored-sync
       state: SUCCESS
-    - bucket: pass
-      name: label-correspondence / label-correspondence
-      state: SUCCESS
-    head_sha: 1f83a1487a1c197b97c76821c08d37bb742725aa
-    merge_commit_sha: e4556be39a8f39f9171da3c4bad822a9c2652634
-    merged_at: '2026-10-26T07:31:57Z'
-    pr_number: 2036
+    head_sha: 50cacddee8ef8a6d5bd8713abca5f1bfccb94f99
+    merge_commit_sha: a77de264a91152ca1ee92e9ee484159b47154254
+    merged_at: '2026-10-30T05:31:59Z'
+    pr_number: 2041
     status: merged
-    verified_at: '2026-10-26T08:06:40.554596+00:00'
+    verified_at: '2026-10-30T05:39:10.363553+00:00'

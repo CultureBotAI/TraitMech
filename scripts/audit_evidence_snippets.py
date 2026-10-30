@@ -69,6 +69,9 @@ from render_trait_pages import research_answer  # noqa: E402
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TRAITS_DIR = REPO_ROOT / "data" / "traits"
 RESEARCH_DIR = REPO_ROOT / "research" / "traits"
+DEFENSE_FINDER_ARTICLES_MD = (
+    REPO_ROOT / "data" / "raw" / "defense_finder" / "wiki" / "List_system_article.md"
+)
 DEFAULT_BASELINE = REPO_ROOT / "conf" / "evidence_snippet_baseline.tsv"
 DEFAULT_REPORT = REPO_ROOT / "reports" / "evidence_snippet_audit.tsv"
 
@@ -104,6 +107,77 @@ def aes_traits_dir() -> Path:
 
 def aes_research_dir() -> Path:
     return RESEARCH_DIR
+
+
+def aes_defense_finder_articles_md() -> Path:
+    return DEFENSE_FINDER_ARTICLES_MD
+
+
+_DOI_TOKEN_RE = re.compile(r"(?:DOI:\s*)?(10\.\d{4,9}/[^\s|,\];\"'>]+)", re.IGNORECASE)
+_PMID_TOKEN_RE = re.compile(
+    r"(?:PMID:\s*|pubmed\.ncbi\.nlm\.nih\.gov/|ncbi\.nlm\.nih\.gov/pubmed/)(\d{4,10})",
+    re.IGNORECASE,
+)
+
+
+def _extract_wiki_dois(text: str) -> set[str]:
+    unescaped = (text or "").replace(r"\.", ".")
+    dois: set[str] = set()
+    for match in _DOI_TOKEN_RE.finditer(unescaped):
+        doi_val = match.group(1).rstrip(".,;)")
+        if doi_val:
+            dois.add(f"DOI:{doi_val}")
+    return dois
+
+
+def _load_defense_finder_ref_aliases(path: Path | None = None) -> dict[str, set[str]]:
+    """Load optional DOI:↔PMID: equivalence pairs from List_system_article.md (#2002)."""
+    target = path if path is not None else aes_defense_finder_articles_md()
+    aliases: dict[str, set[str]] = {}
+    if not target.exists():
+        return aliases
+    for raw_line in target.read_text(encoding="utf-8", errors="replace").splitlines():
+        dois = _extract_wiki_dois(raw_line)
+        if not dois:
+            continue
+        pmids = {f"PMID:{m.group(1)}" for m in _PMID_TOKEN_RE.finditer(raw_line)}
+        if not pmids and "|" in raw_line:
+            for cell in raw_line.split("|"):
+                token = cell.strip()
+                if re.fullmatch(r"\d{6,10}", token):
+                    pmids.add(f"PMID:{token}")
+        for doi_ref in dois:
+            for pmid_ref in pmids:
+                aliases.setdefault(doi_ref, set()).add(pmid_ref)
+                aliases.setdefault(f"DOI:{doi_ref[4:].lower()}", set()).add(pmid_ref)
+                aliases.setdefault(pmid_ref, set()).add(doi_ref)
+    return aliases
+
+
+def _record_wiki_doi_aliases(doc: dict, record_refs: set[str]) -> dict[str, set[str]]:
+    """Map DOIs in a record's List_system_article.md evidence rows to quoted PMIDs on the same record."""
+    quoted_pmids = {r for r in record_refs if r.startswith("PMID:")}
+    if not quoted_pmids:
+        return {}
+    wiki_dois: set[str] = set()
+    for item in doc.get("evidence") or []:
+        if not isinstance(item, dict):
+            continue
+        ref = _norm(str(item.get("reference") or ""))
+        if "List_system_article.md" not in ref:
+            continue
+        snip = _norm(str(item.get("snippet") or ""))
+        for doi_ref in _extract_wiki_dois(snip):
+            wiki_dois.add(doi_ref)
+            wiki_dois.add(f"DOI:{doi_ref[4:].lower()}")
+    if not wiki_dois:
+        return {}
+    aliases: dict[str, set[str]] = {}
+    for doi_ref in wiki_dois:
+        aliases.setdefault(doi_ref, set()).update(quoted_pmids)
+    for pmid_ref in quoted_pmids:
+        aliases.setdefault(pmid_ref, set()).update(wiki_dois)
+    return aliases
 
 
 def _safe_rel(path: Path) -> str:
@@ -219,6 +293,7 @@ def audit(
     refs_by_record_id: dict[str, set[str]] = {}
     refs_by_parent_id: dict[str, set[str]] = {}
     corpus_quoted_refs_16: set[str] = set()
+    ref_aliases = _load_defense_finder_ref_aliases() if check_definition_sources else {}
     for path in sorted(aes_traits_dir().rglob("*.yaml")):
         doc = yaml.safe_load(path.read_text())
         if not isinstance(doc, dict):
@@ -294,13 +369,34 @@ def audit(
             for parent_id in parents:
                 family_quoted.update(refs_by_record_id.get(parent_id, set()))
                 family_quoted.update(refs_by_parent_id.get(parent_id, set()))
+            def_aliases = set(ref_aliases.get(def_source, set()))
+            if def_source.startswith("DOI:"):
+                def_aliases.update(
+                    ref_aliases.get(f"DOI:{def_source[4:].lower()}", set())
+                )
+            in_rec_aliases = _record_wiki_doi_aliases(doc, record_refs)
+            def_aliases.update(in_rec_aliases.get(def_source, set()))
+            if def_source.startswith("DOI:"):
+                def_aliases.update(
+                    in_rec_aliases.get(f"DOI:{def_source[4:].lower()}", set())
+                )
             has_corpus_16_quote = (
                 not is_object_property
                 and def_source_in_ev
                 and def_source in corpus_quoted_refs_16
             )
+            has_alias_quote = (
+                not is_object_property
+                and bool(
+                    def_aliases & (record_refs | family_quoted | corpus_quoted_refs_16)
+                )
+            )
             if (def_source.startswith(("PMID:", "DOI:"))
-                    and (def_source in family_quoted or has_corpus_16_quote)
+                    and (
+                        def_source in family_quoted
+                        or has_corpus_16_quote
+                        or has_alias_quote
+                    )
                     and def_source not in record_refs):
                 reason = (
                     "lacks a non-elliptical verbatim snippet in record-level evidence[]"
