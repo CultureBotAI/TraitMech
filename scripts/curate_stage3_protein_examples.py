@@ -53,6 +53,21 @@
    `UniProtKB:P05804`, `UniProtKB:Q54468`), 3 distinct verbatim record-level
    `evidence` items, 1 `canonical_examples` entry, and `RESOLVED` `CURATION_TODO`
    discussions.
+7. In Cycle 6 Stage 3 (`C6S3_COHORT_I_PROMOTIONS`), promotes all 3 Cohort I
+   `NONMECHANISTIC` records (`alpha_fucosidase_activity.yaml`,
+   `amylase_activity.yaml`, `beta_galactosidase_activity.yaml`) to `MECHANISTIC`
+   by adding 3 `InterPro`-grounded `GENE_OR_PROTEIN` nodes with 3 verified
+   UniProtKB `protein_examples` (`UniProtKB:Q8A3I4`, `UniProtKB:P06278`,
+   `UniProtKB:P00722`), 3 distinct verbatim record-level `evidence` items, 3
+   `canonical_examples` entries, and `RESOLVED` `CURATION_TODO` discussions.
+8. In Cycle 7 Stage 3 (`C7S3_COHORT_J_PROMOTIONS`), promotes all 3 Cohort J
+   `NONMECHANISTIC` records (`alpha_galactosidase_activity.yaml`,
+   `alpha_mannosidase_activity.yaml`, `beta_glucosidase_activity.yaml`) to
+   `MECHANISTIC` by adding 3 `InterPro`-grounded `GENE_OR_PROTEIN` nodes with 3
+   verified UniProtKB `protein_examples` (`UniProtKB:P06720`,
+   `UniProtKB:Q99YP5`, `UniProtKB:P33363`), 3 distinct verbatim record-level
+   `evidence` items, 3 `canonical_examples` entries, and `RESOLVED`
+   `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -4166,6 +4181,424 @@ C6S3_COHORT_I_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C7S3_TIMESTAMP = "2026-10-30T09:55:00Z"
+C7S3_RETRIEVED_ON = "2026-10-30"
+
+C7S3_COHORT_J_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/physiology/alpha_galactosidase_activity.yaml": {
+        "identifier": "traitmech:000149",
+        "graph_id": "alpha_galactosidase_hydrolysis_sketch",
+        "discussion_id": "alpha-galactosidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.3109/07388551.2013.794124, "
+            "DOI:10.1128/jcm.22.3.333-335.1985, and DOI:10.1093/nar/15.5.2213; "
+            "exemplified on alpha_galactosidase_mela with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) alpha-galactosidase MelA "
+            "(UniProtKB:P06720)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1093/nar/15.5.2213",
+            "snippet": (
+                "Melibiose uptake and hydrolysis in E.coli is performed by "
+                "the MelB and MelA proteins, respectively. We report the "
+                "cloning and sequencing of the melA gene. The nucleotide "
+                "sequence data showed that melA codes for a 450 amino acid "
+                "long protein with a molecular weight of 50.6 kd."
+            ),
+            "notes": (
+                "Liljeström and Liljeström cloned and sequenced the "
+                "Escherichia coli K-12 melA gene encoding the 450-residue "
+                "alpha-galactosidase MelA (UniProtKB:P06720)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Liljeström and Liljeström cloned and sequenced the "
+                "Escherichia coli K-12 melA gene encoding alpha-galactosidase "
+                "(MelA) for melibiose hydrolysis."
+            ),
+            "reference": "DOI:10.1093/nar/15.5.2213",
+        },
+        "new_node": {
+            "node_id": "alpha_galactosidase_mela",
+            "label": "alpha-galactosidase MelA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001088",
+            "gene_symbols": ["melA"],
+            "description": (
+                "Glycoside hydrolase family 4 (GH4) NAD+- and Mn2+-dependent "
+                "alpha-galactosidase (MelA) that hydrolyzes melibiose and "
+                "alpha-D-galactosides."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P06720",
+                    "protein_label": "Alpha-galactosidase",
+                    "gene_symbol": "melA",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C7S3_RETRIEVED_ON,
+                    "entry_version": 173,
+                    "sequence_version": 1,
+                    "role": (
+                        "MelA is the Escherichia coli K-12 alpha-galactosidase "
+                        "that hydrolyzes melibiose and alpha-D-galactosides "
+                        "into galactose and glucose."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1093/nar/15.5.2213",
+                            "snippet": (
+                                "Melibiose uptake and hydrolysis in E.coli is "
+                                "performed by the MelB and MelA proteins, "
+                                "respectively. We report the cloning and "
+                                "sequencing of the melA gene. The nucleotide "
+                                "sequence data showed that melA codes for a "
+                                "450 amino acid long protein with a molecular "
+                                "weight of 50.6 kd."
+                            ),
+                            "notes": (
+                                "Liljeström and Liljeström cloned and "
+                                "sequenced the Escherichia coli K-12 melA "
+                                "gene encoding alpha-galactosidase "
+                                "(UniProtKB:P06720)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "alpha_galactosidase_mela",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alpha_galactosidase_catalytic_activity",
+            "description": (
+                "Alpha-galactosidase MelA enables alpha-galactosidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1093/nar/15.5.2213",
+                    "snippet": (
+                        "Melibiose uptake and hydrolysis in E.coli is "
+                        "performed by the MelB and MelA proteins, "
+                        "respectively. We report the cloning and sequencing "
+                        "of the melA gene. The nucleotide sequence data "
+                        "showed that melA codes for a 450 amino acid long "
+                        "protein with a molecular weight of 50.6 kd."
+                    ),
+                    "notes": (
+                        "Liljeström and Liljeström characterized Escherichia "
+                        "coli K-12 MelA as the alpha-galactosidase "
+                        "performing melibiose hydrolysis."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C7S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1093/nar/15.5.2213) and promoted "
+                "alpha_galactosidase_hydrolysis_sketch to MECHANISTIC by "
+                "adding InterPro:IPR001088-grounded GENE_OR_PROTEIN node "
+                "alpha_galactosidase_mela with reviewed Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P06720 (MelA) backed by DOI:10.1093/nar/15.5.2213."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1093/nar/15.5.2213) canonical example; promoted "
+            "alpha_galactosidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR001088-grounded GENE_OR_PROTEIN node "
+            "alpha_galactosidase_mela with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P06720 (MelA) "
+            "backed by DOI:10.1093/nar/15.5.2213; resolved "
+            "alpha-galactosidase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/alpha_mannosidase_activity.yaml": {
+        "identifier": "traitmech:000150",
+        "graph_id": "alpha_mannosidase_hydrolysis_sketch",
+        "discussion_id": "alpha-mannosidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.2.1.24, "
+            "DOI:10.1128/jcm.32.3.854-855.1994, and "
+            "DOI:10.1371/journal.pone.0009006; exemplified on "
+            "alpha_mannosidase_spgh38 with Streptococcus pyogenes serotype M1 "
+            "(NCBITaxon:301447; UP000000750) GH38 alpha-mannosidase SpGH38 "
+            "(SPy_1604, UniProtKB:Q99YP5)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1371/journal.pone.0009006",
+            "snippet": (
+                "Here we show that the Streptococcus pyogenes (M1 GAS SF370) "
+                "GH38 enzyme (Spy1604; hereafter SpGH38) is an "
+                "alpha-mannosidase with specificity for alpha-1,3 mannosidic "
+                "linkages."
+            ),
+            "notes": (
+                "Suits et al. biochemically and structurally characterized "
+                "Streptococcus pyogenes serotype M1 (strain SF370) GH38 "
+                "alpha-mannosidase SpGH38 (SPy_1604, UniProtKB:Q99YP5)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:301447",
+            "taxon_label": "Streptococcus pyogenes serotype M1",
+            "note": (
+                "Suits et al. characterized Streptococcus pyogenes serotype "
+                "M1 (strain SF370) GH38 alpha-mannosidase SpGH38 (SPy_1604) "
+                "specific for alpha-1,3 mannosidic linkages."
+            ),
+            "reference": "DOI:10.1371/journal.pone.0009006",
+        },
+        "new_node": {
+            "node_id": "alpha_mannosidase_spgh38",
+            "label": "GH38 alpha-mannosidase SpGH38",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000602",
+            "gene_symbols": ["SPy_1604"],
+            "description": (
+                "Glycoside hydrolase family 38 (GH38) alpha-mannosidase "
+                "(SpGH38 / SPy_1604) that hydrolyzes terminal non-reducing "
+                "alpha-1,3-linked mannosidic linkages."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:Q99YP5",
+                    "protein_label": (
+                        "Glycoside hydrolase family 38 central "
+                        "domain-containing protein"
+                    ),
+                    "gene_symbol": "SPy_1604",
+                    "taxon_id": "NCBITaxon:301447",
+                    "taxon_label": "Streptococcus pyogenes serotype M1",
+                    "entry_status": "UNREVIEWED",
+                    "proteome_id": "UP000000750",
+                    "retrieved_on": C7S3_RETRIEVED_ON,
+                    "entry_version": 157,
+                    "sequence_version": 1,
+                    "role": (
+                        "SpGH38 (encoded by SPy_1604) is the Streptococcus "
+                        "pyogenes serotype M1 (strain SF370) GH38 "
+                        "alpha-mannosidase that hydrolyzes alpha-1,3 "
+                        "mannosidic linkages."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1371/journal.pone.0009006",
+                            "snippet": (
+                                "Here we show that the Streptococcus pyogenes "
+                                "(M1 GAS SF370) GH38 enzyme (Spy1604; "
+                                "hereafter SpGH38) is an alpha-mannosidase "
+                                "with specificity for alpha-1,3 mannosidic "
+                                "linkages."
+                            ),
+                            "notes": (
+                                "Suits et al. determined the structure and "
+                                "alpha-1,3-mannosidase specificity of "
+                                "Streptococcus pyogenes serotype M1 SpGH38 "
+                                "(SPy_1604, UniProtKB:Q99YP5)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "alpha_mannosidase_spgh38",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alpha_mannosidase_catalytic_activity",
+            "description": (
+                "GH38 alpha-mannosidase SpGH38 enables alpha-mannosidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1371/journal.pone.0009006",
+                    "snippet": (
+                        "Here we show that the Streptococcus pyogenes (M1 "
+                        "GAS SF370) GH38 enzyme (Spy1604; hereafter SpGH38) "
+                        "is an alpha-mannosidase with specificity for "
+                        "alpha-1,3 mannosidic linkages."
+                    ),
+                    "notes": (
+                        "Suits et al. characterized Streptococcus pyogenes "
+                        "serotype M1 SpGH38 as an alpha-mannosidase specific "
+                        "for alpha-1,3 mannosidic linkages."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C7S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Streptococcus pyogenes "
+                "serotype M1 (NCBITaxon:301447; DOI:10.1371/journal.pone.0009006) "
+                "and promoted alpha_mannosidase_hydrolysis_sketch to "
+                "MECHANISTIC by adding InterPro:IPR000602-grounded "
+                "GENE_OR_PROTEIN node alpha_mannosidase_spgh38 with reference-"
+                "proteome (UP000000750) Streptococcus pyogenes serotype M1 "
+                "protein_examples UniProtKB:Q99YP5 (SPy_1604 / SpGH38; "
+                "replacing unverified S. pneumoniae TIGR4 thioredoxin "
+                "accession A0A0H2UPR5 from the C7S2 TODO prompt) backed by "
+                "DOI:10.1371/journal.pone.0009006."
+            ),
+        },
+        "changes_summary": (
+            "Added Streptococcus pyogenes serotype M1 (NCBITaxon:301447; "
+            "DOI:10.1371/journal.pone.0009006) canonical example; promoted "
+            "alpha_mannosidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR000602-grounded GENE_OR_PROTEIN node "
+            "alpha_mannosidase_spgh38 with reference-proteome (UP000000750) "
+            "Streptococcus pyogenes serotype M1 protein_examples "
+            "UniProtKB:Q99YP5 (SPy_1604 / SpGH38) backed by "
+            "DOI:10.1371/journal.pone.0009006; resolved "
+            "alpha-mannosidase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/beta_glucosidase_activity.yaml": {
+        "identifier": "traitmech:000146",
+        "graph_id": "beta_glucosidase_hydrolysis_sketch",
+        "discussion_id": "beta-glucosidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1007/s13205-015-0328-z, "
+            "DOI:10.2323/jgam.60.59, and DOI:10.1099/13500872-142-7-1659; "
+            "exemplified on beta_glucosidase_bglx with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) periplasmic beta-D-glucosidase "
+            "BglX (UniProtKB:P33363)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1099/13500872-142-7-1659",
+            "snippet": (
+                "A new Escherichia coli gene, bgIX, encoding a "
+                "beta-D-glucosidase (EC 3.2.1.21) has been characterized. The "
+                "bgIX gene is located adjacent to the dld gene at 47.8 min or "
+                "2225 kb on the E. coli chromosome."
+            ),
+            "notes": (
+                "Yang et al. cloned and characterized the Escherichia coli "
+                "K-12 bglX gene encoding periplasmic beta-D-glucosidase BglX "
+                "(UniProtKB:P33363)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Yang et al. characterized the Escherichia coli K-12 bglX "
+                "gene encoding periplasmic beta-D-glucosidase (EC 3.2.1.21)."
+            ),
+            "reference": "DOI:10.1099/13500872-142-7-1659",
+        },
+        "new_node": {
+            "node_id": "beta_glucosidase_bglx",
+            "label": "periplasmic beta-D-glucosidase BglX",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001764",
+            "gene_symbols": ["bglX"],
+            "description": (
+                "Glycoside hydrolase family 3 (GH3) periplasmic "
+                "beta-D-glucosidase (BglX) that hydrolyzes terminal "
+                "non-reducing beta-D-glucosyl residues."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P33363",
+                    "protein_label": "Periplasmic beta-glucosidase",
+                    "gene_symbol": "bglX",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C7S3_RETRIEVED_ON,
+                    "entry_version": 169,
+                    "sequence_version": 2,
+                    "role": (
+                        "BglX is the Escherichia coli K-12 periplasmic "
+                        "beta-D-glucosidase (EC 3.2.1.21) that hydrolyzes "
+                        "beta-D-glucosidic linkages."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1099/13500872-142-7-1659",
+                            "snippet": (
+                                "A new Escherichia coli gene, bgIX, encoding a "
+                                "beta-D-glucosidase (EC 3.2.1.21) has been "
+                                "characterized. The bgIX gene is located "
+                                "adjacent to the dld gene at 47.8 min or 2225 "
+                                "kb on the E. coli chromosome."
+                            ),
+                            "notes": (
+                                "Yang et al. characterized the Escherichia "
+                                "coli K-12 bglX gene encoding periplasmic "
+                                "beta-D-glucosidase BglX (UniProtKB:P33363)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "beta_glucosidase_bglx",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "beta_glucosidase_catalytic_activity",
+            "description": (
+                "Periplasmic beta-D-glucosidase BglX enables beta-glucosidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1099/13500872-142-7-1659",
+                    "snippet": (
+                        "A new Escherichia coli gene, bgIX, encoding a "
+                        "beta-D-glucosidase (EC 3.2.1.21) has been "
+                        "characterized. The bgIX gene is located adjacent to "
+                        "the dld gene at 47.8 min or 2225 kb on the E. coli "
+                        "chromosome."
+                    ),
+                    "notes": (
+                        "Yang et al. characterized Escherichia coli K-12 BglX "
+                        "as a periplasmic beta-D-glucosidase (EC 3.2.1.21)."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C7S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1099/13500872-142-7-1659) and "
+                "promoted beta_glucosidase_hydrolysis_sketch to MECHANISTIC "
+                "by adding InterPro:IPR001764-grounded GENE_OR_PROTEIN node "
+                "beta_glucosidase_bglx with reviewed Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P33363 (BglX) backed by "
+                "DOI:10.1099/13500872-142-7-1659."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1099/13500872-142-7-1659) canonical example; promoted "
+            "beta_glucosidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR001764-grounded GENE_OR_PROTEIN node "
+            "beta_glucosidase_bglx with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P33363 (BglX) "
+            "backed by DOI:10.1099/13500872-142-7-1659; resolved "
+            "beta-glucosidase-activity-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -4197,6 +4630,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C4S3_COHORT_G_PROMOTIONS,
         **C5S3_COHORT_H_PROMOTIONS,
         **C6S3_COHORT_I_PROMOTIONS,
+        **C7S3_COHORT_J_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(

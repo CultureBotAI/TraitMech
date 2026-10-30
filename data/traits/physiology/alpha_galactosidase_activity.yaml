@@ -23,12 +23,24 @@ evidence:
     (API An-Ident strip).
   notes: Tanner et al. detected alpha-galactosidase in Selenomonas sputigena with
     the API ZYM enzyme activity panel and the API An-Ident strip.
+- reference: DOI:10.1093/nar/15.5.2213
+  snippet: Melibiose uptake and hydrolysis in E.coli is performed by the MelB and
+    MelA proteins, respectively. We report the cloning and sequencing of the melA
+    gene. The nucleotide sequence data showed that melA codes for a 450 amino acid
+    long protein with a molecular weight of 50.6 kd.
+  notes: Liljeström and Liljeström cloned and sequenced the Escherichia coli K-12
+    melA gene encoding the 450-residue alpha-galactosidase MelA (UniProtKB:P06720).
 canonical_examples:
 - taxon_id: NCBITaxon:69823
   taxon_label: Selenomonas sputigena
   note: Tanner et al. reported Selenomonas sputigena as positive for alpha-galactosidase
     in API ZYM and API An-Ident enzyme activity panels.
   reference: DOI:10.1128/jcm.22.3.333-335.1985
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Liljeström and Liljeström cloned and sequenced the Escherichia coli K-12 melA
+    gene encoding alpha-galactosidase (MelA) for melibiose hydrolysis.
+  reference: DOI:10.1093/nar/15.5.2213
 discussions:
 - discussion_id: alpha-galactosidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for alpha-galactosidase activity
@@ -73,7 +85,7 @@ discussions:
     alpha-galactosidase MelA (UniProtKB:P06720) so alpha_galactosidase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#alpha_galactosidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.2.1.22, DOI:10.3109/07388551.2013.794124,
@@ -93,6 +105,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-30'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1093/nar/15.5.2213) and promoted alpha_galactosidase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR001088-grounded GENE_OR_PROTEIN node alpha_galactosidase_mela
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P06720 (MelA) backed by DOI:10.1093/nar/15.5.2213.
 curation_history:
 - timestamp: '2026-09-11T23:46:20Z'
   curator: codex
@@ -114,17 +132,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (alpha-galactosidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-30T09:55:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1093/nar/15.5.2213)
+    canonical example; promoted alpha_galactosidase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR001088-grounded GENE_OR_PROTEIN node alpha_galactosidase_mela
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P06720
+    (MelA) backed by DOI:10.1093/nar/15.5.2213; resolved alpha-galactosidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: alpha_galactosidase_hydrolysis_sketch
   title: Alpha-galactosidase hydrolysis of alpha-1,6-linked galactose residues
   description: Evidence-backed physiological mechanism sketch linking alpha-galactosidase
     catalytic activity and galactose release from alpha-1,6-linked galactosides to
     the alpha-galactosidase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by DOI:10.3109/07388551.2013.794124
-    and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB protein examples
-    for Escherichia coli K-12 alpha-galactosidase (MelA, UniProtKB:P06720) remain
-    to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.3109/07388551.2013.794124, DOI:10.1128/jcm.22.3.333-335.1985,
+    and DOI:10.1093/nar/15.5.2213; exemplified on alpha_galactosidase_mela with Escherichia
+    coli K-12 (NCBITaxon:83333; UP000000625) alpha-galactosidase MelA (UniProtKB:P06720).
   nodes:
   - node_id: alpha_galactosidase_activity_trait
     label: alpha-galactosidase activity
@@ -146,6 +172,35 @@ causal_graphs:
     grounding: CHEBI:28260
     description: Galactose monomer hydrolyzed from alpha-1,6-linked galactose residues
       in oligosaccharides and polymeric galactomannan.
+  - node_id: alpha_galactosidase_mela
+    label: alpha-galactosidase MelA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001088
+    gene_symbols:
+    - melA
+    description: Glycoside hydrolase family 4 (GH4) NAD+- and Mn2+-dependent alpha-galactosidase
+      (MelA) that hydrolyzes melibiose and alpha-D-galactosides.
+    protein_examples:
+    - uniprot_id: UniProtKB:P06720
+      protein_label: Alpha-galactosidase
+      gene_symbol: melA
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-30'
+      entry_version: 173
+      sequence_version: 1
+      role: MelA is the Escherichia coli K-12 alpha-galactosidase that hydrolyzes
+        melibiose and alpha-D-galactosides into galactose and glucose.
+      evidence:
+      - reference: DOI:10.1093/nar/15.5.2213
+        snippet: Melibiose uptake and hydrolysis in E.coli is performed by the MelB
+          and MelA proteins, respectively. We report the cloning and sequencing of
+          the melA gene. The nucleotide sequence data showed that melA codes for a
+          450 amino acid long protein with a molecular weight of 50.6 kd.
+        notes: Liljeström and Liljeström cloned and sequenced the Escherichia coli
+          K-12 melA gene encoding alpha-galactosidase (UniProtKB:P06720).
   edges:
   - subject: alpha_galactosidase_catalytic_activity
     predicate: confers
@@ -174,3 +229,16 @@ causal_graphs:
       notes: Katrolia et al. state that alpha-galactosidase (EC 3.2.1.22) catalyzes
         the hydrolysis of alpha-1,6-linked galactose residues in oligosaccharides
         and polymeric galactomannan.
+  - subject: alpha_galactosidase_mela
+    predicate: enables
+    predicate_id: RO:0002327
+    object: alpha_galactosidase_catalytic_activity
+    description: Alpha-galactosidase MelA enables alpha-galactosidase catalytic activity.
+    evidence:
+    - reference: DOI:10.1093/nar/15.5.2213
+      snippet: Melibiose uptake and hydrolysis in E.coli is performed by the MelB
+        and MelA proteins, respectively. We report the cloning and sequencing of the
+        melA gene. The nucleotide sequence data showed that melA codes for a 450 amino
+        acid long protein with a molecular weight of 50.6 kd.
+      notes: Liljeström and Liljeström characterized Escherichia coli K-12 MelA as
+        the alpha-galactosidase performing melibiose hydrolysis.

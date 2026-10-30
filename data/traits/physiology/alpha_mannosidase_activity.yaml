@@ -21,12 +21,23 @@ evidence:
     type strain were alpha-mannosidase positive
   notes: Carlson and Kontiainen detected alpha-mannosidase in nearly all tested Arcanobacterium
     haemolyticum strains with a 4-h alpha-mannosidase assay.
+- reference: DOI:10.1371/journal.pone.0009006
+  snippet: Here we show that the Streptococcus pyogenes (M1 GAS SF370) GH38 enzyme
+    (Spy1604; hereafter SpGH38) is an alpha-mannosidase with specificity for alpha-1,3
+    mannosidic linkages.
+  notes: Suits et al. biochemically and structurally characterized Streptococcus pyogenes
+    serotype M1 (strain SF370) GH38 alpha-mannosidase SpGH38 (SPy_1604, UniProtKB:Q99YP5).
 canonical_examples:
 - taxon_id: NCBITaxon:28264
   taxon_label: Arcanobacterium haemolyticum
   note: Carlson and Kontiainen reported 138 of 139 Arcanobacterium haemolyticum strains
     as alpha-mannosidase positive in a 4-h test.
   reference: DOI:10.1128/jcm.32.3.854-855.1994
+- taxon_id: NCBITaxon:301447
+  taxon_label: Streptococcus pyogenes serotype M1
+  note: Suits et al. characterized Streptococcus pyogenes serotype M1 (strain SF370)
+    GH38 alpha-mannosidase SpGH38 (SPy_1604) specific for alpha-1,3 mannosidic linkages.
+  reference: DOI:10.1371/journal.pone.0009006
 discussions:
 - discussion_id: alpha-mannosidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for alpha-mannosidase activity
@@ -70,7 +81,7 @@ discussions:
     TIGR4 GH38 alpha-mannosidase SpGH38 (UniProtKB:A0A0H2UPR5) so alpha_mannosidase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#alpha_mannosidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.2.1.24, DOI:10.1128/jcm.32.3.854-855.1994)
@@ -89,6 +100,13 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-30'
+  resolution_note: Added canonical_examples entry Streptococcus pyogenes serotype
+    M1 (NCBITaxon:301447; DOI:10.1371/journal.pone.0009006) and promoted alpha_mannosidase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR000602-grounded GENE_OR_PROTEIN node alpha_mannosidase_spgh38
+    with reference-proteome (UP000000750) Streptococcus pyogenes serotype M1 protein_examples
+    UniProtKB:Q99YP5 (SPy_1604 / SpGH38; replacing unverified S. pneumoniae TIGR4
+    thioredoxin accession A0A0H2UPR5 from the C7S2 TODO prompt) backed by DOI:10.1371/journal.pone.0009006.
 curation_history:
 - timestamp: '2026-09-12T00:19:23Z'
   curator: codex
@@ -110,16 +128,27 @@ curation_history:
     and OPEN CURATION_TODO discussion (alpha-mannosidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-30T09:55:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Streptococcus pyogenes serotype M1 (NCBITaxon:301447; DOI:10.1371/journal.pone.0009006)
+    canonical example; promoted alpha_mannosidase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR000602-grounded GENE_OR_PROTEIN node alpha_mannosidase_spgh38
+    with reference-proteome (UP000000750) Streptococcus pyogenes serotype M1 protein_examples
+    UniProtKB:Q99YP5 (SPy_1604 / SpGH38) backed by DOI:10.1371/journal.pone.0009006;
+    resolved alpha-mannosidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: alpha_mannosidase_hydrolysis_sketch
   title: Alpha-mannosidase hydrolysis of terminal non-reducing alpha-D-mannose residues
   description: Evidence-backed physiological mechanism sketch linking alpha-mannosidase
     catalytic activity and alpha-D-mannose release from alpha-D-mannosides to the
     alpha-mannosidase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.2.1.24 and DOI:10.1128/jcm.32.3.854-855.1994;
-    strain-matched UniProtKB protein examples for Streptococcus pneumoniae TIGR4 GH38
-    alpha-mannosidase (SpGH38, UniProtKB:A0A0H2UPR5) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.2.1.24, DOI:10.1128/jcm.32.3.854-855.1994,
+    and DOI:10.1371/journal.pone.0009006; exemplified on alpha_mannosidase_spgh38
+    with Streptococcus pyogenes serotype M1 (NCBITaxon:301447; UP000000750) GH38 alpha-mannosidase
+    SpGH38 (SPy_1604, UniProtKB:Q99YP5).
   nodes:
   - node_id: alpha_mannosidase_activity_trait
     label: alpha-mannosidase activity
@@ -140,6 +169,36 @@ causal_graphs:
     grounding: CHEBI:28729
     description: Terminal non-reducing alpha-D-mannose residue cleaved by hydrolytic
       action of alpha-mannosidase on alpha-D-mannosides.
+  - node_id: alpha_mannosidase_spgh38
+    label: GH38 alpha-mannosidase SpGH38
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000602
+    gene_symbols:
+    - SPy_1604
+    description: Glycoside hydrolase family 38 (GH38) alpha-mannosidase (SpGH38 /
+      SPy_1604) that hydrolyzes terminal non-reducing alpha-1,3-linked mannosidic
+      linkages.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q99YP5
+      protein_label: Glycoside hydrolase family 38 central domain-containing protein
+      gene_symbol: SPy_1604
+      taxon_id: NCBITaxon:301447
+      taxon_label: Streptococcus pyogenes serotype M1
+      entry_status: UNREVIEWED
+      proteome_id: UP000000750
+      retrieved_on: '2026-10-30'
+      entry_version: 157
+      sequence_version: 1
+      role: SpGH38 (encoded by SPy_1604) is the Streptococcus pyogenes serotype M1
+        (strain SF370) GH38 alpha-mannosidase that hydrolyzes alpha-1,3 mannosidic
+        linkages.
+      evidence:
+      - reference: DOI:10.1371/journal.pone.0009006
+        snippet: Here we show that the Streptococcus pyogenes (M1 GAS SF370) GH38
+          enzyme (Spy1604; hereafter SpGH38) is an alpha-mannosidase with specificity
+          for alpha-1,3 mannosidic linkages.
+        notes: Suits et al. determined the structure and alpha-1,3-mannosidase specificity
+          of Streptococcus pyogenes serotype M1 SpGH38 (SPy_1604, UniProtKB:Q99YP5).
   edges:
   - subject: alpha_mannosidase_catalytic_activity
     predicate: confers
@@ -165,3 +224,16 @@ causal_graphs:
         in α-D-mannosides'
       notes: IUBMB EC 3.2.1.24 defines the alpha-mannosidase reaction as the hydrolysis
         of terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides.
+  - subject: alpha_mannosidase_spgh38
+    predicate: enables
+    predicate_id: RO:0002327
+    object: alpha_mannosidase_catalytic_activity
+    description: GH38 alpha-mannosidase SpGH38 enables alpha-mannosidase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1371/journal.pone.0009006
+      snippet: Here we show that the Streptococcus pyogenes (M1 GAS SF370) GH38 enzyme
+        (Spy1604; hereafter SpGH38) is an alpha-mannosidase with specificity for alpha-1,3
+        mannosidic linkages.
+      notes: Suits et al. characterized Streptococcus pyogenes serotype M1 SpGH38
+        as an alpha-mannosidase specific for alpha-1,3 mannosidic linkages.

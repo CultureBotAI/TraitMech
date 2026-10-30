@@ -1,0 +1,36 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-30T095500Z-claude-code-c70301
+  timestamp: '2026-10-30T09:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: 'Cycle 7 Stage 3 (protein_examples): promote 3 Cohort J trait graphs to MECHANISTIC
+    with verified UniProtKB protein examples'
+  details: Reviewed all 1,130 TraitRecord YAML files (1,129 curated, 1 DO_NOT_WORK protected)
+    for Cycle 7 Stage 3 (protein_examples). Promoted the 3 Cycle 7 Stage 2 Cohort J NONMECHANISTIC
+    records (alpha_galactosidase_activity, alpha_mannosidase_activity, beta_glucosidase_activity) to
+    MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified UniProtKB
+    protein_examples (P06720 MelA on Escherichia coli K-12 UP000000625; Q99YP5 SPy_1604 / SpGH38
+    on Streptococcus pyogenes serotype M1 UP000000750, replacing unverified TIGR4 thioredoxin
+    candidate A0A0H2UPR5; P33363 BglX on Escherichia coli K-12 UP000000625), verbatim primary-source
+    evidence snippets, and RESOLVED CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv
+    (194 uses across 160 unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv
+    (156 MECHANISTIC pass, 597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    and all derived reports and pages.
