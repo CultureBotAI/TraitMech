@@ -19,14 +19,14 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:15196039
+- reference: DOI:10.1021/bi0495026
   snippet: Bacteriophage exclusion is a suicide response to viral infection. In strains
     of Escherichia coli K-12 infected with T4 phage this process is mediated by the
     host-encoded Lit peptidase. Lit is activated by a unique sequence in the major
     head protein of the T4 phage (the Gol sequence) which then cleaves site-specifically
     the host translation factor EF-Tu, ultimately leading to cell death.
   notes: Copeland et al. support host Lit as a T4-activated bacteriophage-exclusion
-    peptidase that cleaves EF-Tu and leads to cell death.
+    peptidase that cleaves EF-Tu and leads to cell death (PMID:15196039 / DOI:10.1021/bi0495026).
 - reference: PMID:21129205
   snippet: phage exclusion systems that involve T4-mediated activation of a latent
     endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
@@ -167,4 +167,13 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v240.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:15196039 to DOI:10.1021/bi0495026
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 remediation
+    of F-C7S4-DEF-SRC-008 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

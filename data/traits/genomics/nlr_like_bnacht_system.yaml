@@ -24,12 +24,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/DefenseFinder_rules.tsv
 evidence:
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
+- reference: DOI:10.1016/j.cell.2023.04.015
   snippet: Here we show that proteins containing a NACHT module, the central feature
     of the animal nucleotide-binding domain and leucine-rich repeat-containing gene
     family (NLRs), are found in bacteria and defend against phages.
   notes: Kibby et al. support NACHT-module proteins as bacterial NLR-related proteins
-    that defend against phages.
+    that defend against phages (https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
+    / DOI:10.1016/j.cell.2023.04.015).
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
   snippet: Genome context of bNACHT01, which is located near a CBASS system in Klebsiella
     pneumoniae MGH 35.
@@ -284,4 +285,13 @@ curation_history:
   changes: Added verbatim Kibby et al. evidence that the NACHT-module gene later named
     bNACHT01 was identified in Klebsiella pneumoniae MGH 35, directly supporting the
     canonical example taxon.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/
+    to DOI:10.1016/j.cell.2023.04.015 so definition_source has an exact matching snippet-backed
+    record-level evidence item while preserving the PubMed Central cross-reference
+    in notes (Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-014 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

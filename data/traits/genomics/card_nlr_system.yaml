@@ -22,11 +22,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: https://europepmc.org/article/PPR/PPR668921
+- reference: DOI:10.1101/2023.05.28.542683
   snippet: Here we show that CARD-like domains are present in defense systems that
     protect bacteria against phage.
   notes: The Wein et al. abstract supports CARD-like-domain systems as bacterial phage-defense
-    systems.
+    systems (https://europepmc.org/article/PPR/PPR668921 / DOI:10.1101/2023.05.28.542683).
 - reference: https://europepmc.org/article/PPR/PPR668921
   snippet: The bacterial CARD is essential for protease-mediated activation of certain
     bacterial gasdermins, which promote cell death once phage infection is recognized.
@@ -308,4 +308,13 @@ curation_history:
     after minting traitmech:000559 for the DefenseFinder-backed CARD_NLR_like child;
     exact two-of-four effector-profile semantics, CARD_NLR__Subtilase_long_new HMM
     inventory coverage, and finer CARD-NLR activation mechanisms remain open.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from https://europepmc.org/article/PPR/PPR668921
+    to DOI:10.1101/2023.05.28.542683 so definition_source has an exact matching snippet-backed
+    record-level evidence item while preserving the EuropePMC preprint cross-reference
+    in notes (Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-013 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

@@ -17,11 +17,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1128/AEM.67.11.5225-5232.2001
 evidence:
-- reference: PMID:11679349
+- reference: DOI:10.1128/AEM.67.11.5225-5232.2001
   snippet: This study reports on the identification and characterization of a novel
     abortive infection system, AbiU, from Lactococcus lactis.
   notes: Dai et al. identify AbiU as a novel Lactococcus lactis abortive-infection
-    system.
+    system (PMID:11679349 / DOI:10.1128/AEM.67.11.5225-5232.2001).
 - reference: PMID:11679349
   snippet: 'AbiU confers resistance to phages from the three main industrially relevant
     lactococcal phage species: c2, 936, and P335.'
@@ -225,4 +225,13 @@ curation_history:
     infection system parent after an ignored-and-hidden duplicate review found no
     exact live TraitMech, METPO, history, or prior proposal record; the replacement
     placeholder is reserved in proposals/metpo_traitmech_v198.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:11679349 to DOI:10.1128/AEM.67.11.5225-5232.2001
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 remediation
+    of F-C7S4-DEF-SRC-007 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

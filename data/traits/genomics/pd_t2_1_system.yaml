@@ -20,12 +20,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
 evidence:
-- reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
+- reference: DOI:10.1038/s41564-025-02239-6
   snippet: Two phage proteins were further investigated, revealing T7 gp17 and additional
     tail fiber proteins activated the undescribed antiphage system PD-T2–1 and identifying
     λ gpE major capsid protein activated the antiphage system Avs8.
   notes: Goedecke et al. report that T7 gp17 and additional tail fiber proteins activated
-    the previously undescribed PD-T2-1 antiphage system.
+    the previously undescribed PD-T2-1 antiphage system (https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
+    / DOI:10.1038/s41564-025-02239-6).
 - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
   snippet: Sequencing the transposon insertion site of mutants that did grow revealed
     28 out of 48 mutants contained transposons that disrupted a two-gene operon of
@@ -206,4 +207,13 @@ curation_history:
     supports native discovery and locus coordinates without a verified NCBITaxon strain
     CURIE, while heterologous MG1655 phage-challenge assays do not by themselves support
     an endogenous named isolate exemplar. No paid research was used.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/
+    to DOI:10.1038/s41564-025-02239-6 so definition_source has an exact matching snippet-backed
+    record-level evidence item while preserving the PubMed Central cross-reference
+    in notes (Cycle 7 Stage 5 remediation of F-C7S4-DEF-SRC-015 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

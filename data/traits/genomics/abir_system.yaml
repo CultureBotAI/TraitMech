@@ -17,12 +17,13 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: DOI:10.1128/AEM.66.6.2647-2651.2000
 evidence:
-- reference: PMID:10831451
+- reference: DOI:10.1128/AEM.66.6.2647-2651.2000
   snippet: The native lactococcal plasmid pKR223 encodes two distinct phage resistance
     mechanisms, a restriction and modification (R/M) system designated LlaKR2I and
     an abortive infection mechanism (Abi) which affects prolate-headed-phage proliferation
   notes: Twomey et al. identify native Lactococcus lactis plasmid pKR223 as the source
-    of a restriction-modification system and a separate abortive-infection determinant.
+    of a restriction-modification system and a separate abortive-infection determinant
+    (PMID:10831451 / DOI:10.1128/AEM.66.6.2647-2651.2000).
 - reference: PMID:10831451
   snippet: sequence analysis has validated the novelty of the Abi system, which has
     now been designated AbiR
@@ -239,4 +240,13 @@ curation_history:
     the DefenseFinder AbiR determinant and treating the two separated pKR223 loci
     from Lactococcus lactis subsp. lactis KR2 as exemplar evidence rather than a constitutive
     class restriction.
+  llm_assisted: true
+- timestamp: '2026-10-30T22:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:10831451 to DOI:10.1128/AEM.66.6.2647-2651.2000
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 7 Stage 5 remediation
+    of F-C7S4-DEF-SRC-006 in group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
