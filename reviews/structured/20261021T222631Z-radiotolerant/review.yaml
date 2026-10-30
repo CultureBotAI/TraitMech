@@ -1,0 +1,1744 @@
+schema_version: 1.0.0
+review_id: 20261021T222631Z-radiotolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of radiotolerant
+started_at: '2026-10-21T22:17:11.418658Z'
+finished_at: '2026-10-21T22:26:31Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and bounded root primary/owner readings. Source identity, benign existing classification,
+    literal attribution and formal roles assessed. Detailed pathogen radiation resistance,
+    ROS-defense, fitness, methods and intervention efficacy remain UNASSESSED_SCOPE;
+    no experimental or engineering recommendations.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: one major imported relation-role mismatch and two minor
+  findings concerning a nonliteral protein evidence phrase and bounded human-acceptance
+  traceability.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/radiotolerant.yaml
+    sha256: f3bae2896b2801fcaaacdf9c6783ef0df7b96d441e8858b5e1fa0b10e3713bf6
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/radiotolerant-deep-research-falcon.md
+    sha256: e4f948fc8160b0f55dfbb1aca53a0f2e26f6fa3f21a278c896fc61f87fc49a1c
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_ds_7_system_trait.py
+    sha256: e14615f6195880a3f4735149325413e770060a7392b860376ea0d82346dd3dee
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_remaining_physiology_graphs_183.py
+    sha256: 4a238c2582772e54ccfb887eb7457e9008e89abbaaa7d9807ce13299cf6da0ea
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000007
+  path: data/traits/environment/radiotolerant.yaml
+  label: radiotolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Seventh record of the actual locally initialized batch 012 queue. Whole
+    273-line target and all 61 captured inputs verified before assessment. Local initialization
+    at 21:02:18.445284 UTC does not assert B11 publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000007
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000007
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000007
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: radiotolerant-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just validate data/traits/environment/radiotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-radiotolerant-native
+- check_id: radiotolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just validate-strict data/traits/environment/radiotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-radiotolerant-strict
+- check_id: radiotolerant-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just verify-snippets --record data/traits/environment/radiotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct network invocation passed: three fields over three references,
+    all NOT_IN_ABSTRACT. Primary text supplies two literal matches; the protein-example
+    phrase is absent from the retained complete assigned HTML. No initial target-specific
+    failed snippet attempt.'
+  evidence_ids:
+  - check-radiotolerant-snippets-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000007
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-instance-metadata
+  name: Applicable protein-instance metadata verification
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000007
+  summary: Applicable optional identity-metadata comparison, not a native or whole-corpus
+    audit. Actual projected official metadata verifies reviewed P42443, RecA/R1, proteome
+    UP000002524 and sequence version 2. Current entry version 162 versus recorded
+    161 is dated metadata drift, not a fabricated historical failure. No sequence/function
+    or efficacy check.
+  evidence_ids:
+  - uniprot
+  - taxon-r1
+  - record
+  - policy
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-radiotolerant-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-native.log
+  locator: Executed 2026-10-21T22:17:32.120654+00:00 through 2026-10-21T22:17:32.719022+00:00;
+    metadata radiotolerant-native.json
+  accessed_at: '2026-10-21T22:17:32.719022Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: e362dcbb4a5692d8f2dd043bc63367559af954b258b8b2ea959c71c531c630a9
+- evidence_id: check-radiotolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-strict.log
+  locator: Executed 2026-10-21T22:17:32.120656+00:00 through 2026-10-21T22:17:33.114950+00:00;
+    metadata radiotolerant-strict.json
+  accessed_at: '2026-10-21T22:17:33.114950Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: d730969c437771d3c8984808523c636893e06d0c1a5e631c352f5b5fae8b564d
+- evidence_id: check-radiotolerant-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-snippets-network.log
+  locator: Executed 2026-10-21T22:17:41.865335+00:00 through 2026-10-21T22:17:46.967700+00:00;
+    metadata radiotolerant-snippets-network.json
+  accessed_at: '2026-10-21T22:17:46.967700Z'
+  support: context_only
+  summary: 'Direct network invocation passed: three fields over three references,
+    all NOT_IN_ABSTRACT. Primary text supplies two literal matches; the protein-example
+    phrase is absent from the retained complete assigned HTML. No initial target-specific
+    failed snippet attempt.'
+  snapshot_sha256: 2d55e768c35752c79552fda9ce4d66be20a1badd336d01ada016193f04304fc5
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/radiotolerant.yaml
+  locator: Entire current 273-line record
+  accessed_at: '2026-10-21T22:17:11.913449Z'
+  support: supports
+  summary: Eleven nodes, eleven edges, three snippets, two canonical examples, one
+    protein instance and seven AI events covered.
+  snapshot_sha256: f3bae2896b2801fcaaacdf9c6783ef0df7b96d441e8858b5e1fa0b10e3713bf6
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Referent-based identity and applicable protein-instance metadata.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Source scope, literal copied snippets and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Current node facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Whole-record identity, evidence, graph, provenance and readiness checks.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: predicate-mapping-primary
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Conditional RO wildcard rows and compatible local relation gates.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and all current byte comparisons bound.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck; no new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Local-only initialization on verified prior local commit; publication status
+    remains separately documented.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:18:17.906976Z'
+  support: supports
+  summary: All 61 inputs verified before grounding assessment.
+  snapshot_sha256: 6e8383d5a7b45c3ea4a338853050b814593b9f911b6e89b2b39e92922318cc4c
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/identity-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.643627Z'
+  support: supports
+  summary: Fallback identity and nearby active generic METPO term; exact-scope migration
+    is qualified.
+  snapshot_sha256: f4c29bdc03b7eeca639de996eec82800c9209261dac105e227c66d9d64d84243
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/node-edge-grounding-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.643726Z'
+  support: supports
+  summary: All eleven nodes and eleven edges; formal roles separate from biological
+    efficacy.
+  snapshot_sha256: 85381fd6c1b2b22e02b17f547080793050f941ca0b9676ee2f2f689080effe3b
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.644383Z'
+  support: supports
+  summary: Current record and actual guarded writers, with local human acceptance
+    search.
+  snapshot_sha256: 487b8bf80d537f4ee932642d1c263e8c095275c960197eee9e5bb8100389bf00
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/expression-and-readiness.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.644688Z'
+  support: supports
+  summary: Current catalog applicability and one taxon-matched protein instance; no
+    detailed resistance query.
+  snapshot_sha256: c2bd468df5ce7ebcef4c5b04e0139838bf0c97c4c7391a4ee6576092edc66512
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/catalog-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:18:53.546012Z'
+  support: supports
+  summary: Original catalog/runner receipts separate from current copies.
+  snapshot_sha256: d7efe794dfcb10bfd4cd63f7833b4af268605b1ac8ec5f089bdec9c7e0e65db5
+- evidence_id: protein-metadata-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/protein-identity-version-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.643461Z'
+  support: supports
+  summary: Actual projected metadata reading and historical version-drift limitation;
+    no native audit.
+  snapshot_sha256: 385751b4257155f4f0b94cc5b586057bdd65c2e61ccfbf6b28604637870aa78a
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/local-authority-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.641132Z'
+  support: supports
+  summary: Exact local v5 fallback proposal, v8 confers and broader active-term disposition.
+  snapshot_sha256: 4318213ca728ba7b0836dcdcdaa8c18aee923312170950390b046e9887166d23
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.642421Z'
+  support: supports
+  summary: Selected actual guarded writer and mapping scope; sibling context is distinct.
+  snapshot_sha256: d02f877de65d7a07ba033b843454d9c2d29c6795374c6085532f15adaf6c0df7
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.644915Z'
+  support: supports
+  summary: Actual authority, history and owner reading boundaries.
+  snapshot_sha256: 5389092ac04d0bd525cf5756b654b0b342a431358f591b3da5dc8b7bab965063
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.647678Z'
+  support: supports
+  summary: Frozen grounding artifacts verified.
+  snapshot_sha256: bf4f70e1dddc6d81c4c4c87b1438fae4fedb80c35188fa00f908a89a0c1c55f3
+- evidence_id: ground-disposition
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/documentary-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:24.644765Z'
+  support: supports
+  summary: Formal imported-role group and bounded human traceability; other uncertainties
+    retained.
+  snapshot_sha256: 0977cc4bdc598f0c61aa4a66126390e2914acc869f86be4edb3c163eeeeefdd4
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Selected raw current parent and lexical candidate XML
+  accessed_at: '2026-10-21T22:18:42.362972Z'
+  support: supports
+  summary: Active generic radiation tolerance is broader than the current extreme-dose
+    wording; exact equivalence is not assumed.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Actual RO2213 and inherited RO2211 rows
+  accessed_at: '2026-10-21T22:18:41.636216Z'
+  support: supports
+  summary: Positive regulation has process domain and range; current chemical endpoints
+    differ.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: go-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/go.db
+  locator: Actual GO0006281 and GO0035825 rows
+  accessed_at: '2026-10-21T22:18:41.638333Z'
+  support: supports
+  summary: Current DNA repair and recombination referents are process facets; no efficacy
+    conclusion.
+  snapshot_sha256: 018a7ef0a5bd1c0767abc3d71b413264a25be7579533daf5349f739cd9a122cd
+- evidence_id: taxon-species
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/taxon1299-network-retry.xml
+  locator: Whole successful official taxonomy response; initial DNS error retained
+    separately
+  accessed_at: '2026-10-21T22:19:10.270690Z'
+  support: supports
+  summary: Official current taxon identity only; phenotype and protein efficacy are
+    separate.
+  snapshot_sha256: 0afb2130502e4595002b0420d7b5dc9a89f56b4f4e90d505cf06f8300234cd73
+- evidence_id: taxon-r1
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/taxon243230-network-retry.xml
+  locator: Whole successful official taxonomy response; initial DNS error retained
+    separately
+  accessed_at: '2026-10-21T22:19:10.242849Z'
+  support: supports
+  summary: Official current taxon identity only; phenotype and protein efficacy are
+    separate.
+  snapshot_sha256: 3484828076fca41fe1a34cbbc72771c0f3e2285fcdde06a926aabbec4bdc65b7
+- evidence_id: uniprot
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-grounding-agent/uniprot-P42443-metadata-network-retry.json
+  locator: Projected official accession/name/gene/taxon/review/proteome/version metadata;
+    no sequence or function fields requested
+  accessed_at: '2026-10-21T22:19:10.815955Z'
+  support: supports
+  summary: Reviewed RecA accession and R1/proteome identity positive. Current entry
+    version 162 differs from the historical recorded 161; sequence version remains
+    2.
+  snapshot_sha256: 5ebca5f95d1dc4152020e465d847bc447871e5724b9d4956584f87eaf5be5b35
+- evidence_id: retained-csh-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/csh-metadata.json
+  locator: Actual original source acquisition, separate from current copying
+  accessed_at: '2026-10-21T11:30:06.026298Z'
+  support: supports
+  summary: Indexed CSH review identity and existing extreme D. radiodurans classification;
+    not body reading.
+  snapshot_sha256: 7b91df06fc970dfcb21725385f0748995b86f87e863864fbf9199ac3db8400ae
+- evidence_id: retained-genes-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/genes-metadata.json
+  locator: Actual original source acquisition, separate from current copying
+  accessed_at: '2026-10-21T11:30:05.915966Z'
+  support: supports
+  summary: Indexed Genes identity concerns D. irradiatisoli; introduction separately
+    supports the supplied D. radiodurans quotation.
+  snapshot_sha256: f36f1906f8312ae15ae676b6110a39592678f66d826ea38d997c5b9fb4a7d624
+- evidence_id: retained-genes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/genes.xml
+  locator: Actual original source acquisition, separate from current copying
+  accessed_at: '2026-10-21T09:37:43.175723Z'
+  support: supports
+  summary: Actual JATS introduction paragraph 0 contains the exact supplied D. radiodurans
+    classification sentence; detailed repair efficacy unassessed.
+  snapshot_sha256: 2564113369503820a669b56961713e37baa11fe6096dd4cf10c7945c2704f48e
+- evidence_id: meta-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/canonical-metadata.json
+  locator: Actual indexed response at request time
+  accessed_at: '2026-10-21T22:17:56.236246Z'
+  support: supports
+  summary: Indexed assigned PMID identity and existing reported acute gamma magnitude;
+    no current global ranking certification.
+  snapshot_sha256: 8505f5dbde0588fc17fb24b5249659898fd8e22da7622f4b193f980e9428429b
+- evidence_id: meta-plos
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/plos-metadata.json
+  locator: Actual indexed response at request time
+  accessed_at: '2026-10-21T22:17:56.339724Z'
+  support: supports
+  summary: Actual environmental bacterial study identity and generic context only;
+    detailed radiation efficacy and methods excluded.
+  snapshot_sha256: 655c98cf58fb34c5aa5bd6b17a3f593db54d361f60f8fb373e51e6f5a4d032e8
+- evidence_id: meta-spectrum
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/spectrum-metadata.json
+  locator: Actual indexed response at request time
+  accessed_at: '2026-10-21T22:17:56.339630Z'
+  support: supports
+  summary: Actual TolRad source identity; preprint linkage is not a correction or
+    retraction. Detailed prediction features and resistance efficacy excluded.
+  snapshot_sha256: abd22bdf9e28397d4ea67253038c5a057c71c17f32921a5d8440b6a47076b149
+- evidence_id: meta-sustainability
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/sustainability-metadata.json
+  locator: Actual indexed response at request time
+  accessed_at: '2026-10-21T22:17:56.339581Z'
+  support: context_only
+  summary: Zero-hit Europe PMC response is a retrieval diagnostic, not evidence of
+    source absence.
+  snapshot_sha256: 3b241fd654e491e16a22e0f8948aa4b738ccbf6bdac37fb37980a2188fab4511
+- evidence_id: body-csh
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/csh-pmc.html
+  locator: Raw HTML paragraph31, exact supplied correlation clause
+  accessed_at: '2026-10-21T22:17:56.090248Z'
+  support: supports
+  summary: 'Two concepts remain separate: literal correlation support and unassessed
+    detailed causal efficacy.'
+  snapshot_sha256: 3155010bd972b41bd225dc422404dfbd9559aa585407919494470ab39915b9d5
+- evidence_id: body-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/canonical-pmc.html
+  locator: Raw HTML abstract and selected paragraph8 R1/classification clauses; complete
+    literal search separately bound
+  accessed_at: '2026-10-21T22:19:23.140910Z'
+  support: supports
+  summary: Existing R1 classification and >1,500 kilorads magnitude positive; supplied
+    protein quotation not found in complete retained HTML.
+  snapshot_sha256: b836d2ed2e6a290d2b03d759f6e1ef53cd6d995687a7c3b9827aed299997197a
+- evidence_id: meta-sustainability-crossref
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/sustainability-crossref.json
+  locator: Actual Crossref bibliographic identity only
+  accessed_at: '2026-10-21T22:19:23.009760Z'
+  support: supports
+  summary: Assigned 2025 review identity positive; publisher body not acquired after
+    a 429, and detailed numerical note claims remain unknown.
+  snapshot_sha256: 0ff26bab3cc07e57497c37fb6b68abbe2131e50626827c4c280afcd32a738733
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/source-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.551121Z'
+  support: supports
+  summary: Six-work source audit; source outcome UNKNOWN for detailed excluded and
+    unverified claims.
+  snapshot_sha256: c536bcf659d4b5232eb6a3188092153b2e30ffcd998b8e87bb9a0b7d0cbce123
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.548211Z'
+  support: supports
+  summary: Six bibliographic identities with actual abstract/body scopes.
+  snapshot_sha256: 95d7ddd896a1559a12c5d17589c81631bd2a7db2179313fe52aa12d3e7822eb9
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/placement-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.548556Z'
+  support: supports
+  summary: Eighteen external placements and eleven grounding fields separately accounted
+    for.
+  snapshot_sha256: b7b45f2abbb61b6b7a5611702139424165f92c95bd4ddec38e5a087be07d4cbc
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/snippet-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.549083Z'
+  support: supports
+  summary: 'Three snippets: two literal and one bounded nonliteral protein-example
+    phrase.'
+  snapshot_sha256: 365532f75139afafc379071e88966c497c2c37ce0b9e72547849b871b986dbd5
+- evidence_id: literal-search
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/canonical-literal-search.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.544891Z'
+  support: supports
+  summary: Exact and normalized case-insensitive search of complete assigned HTML;
+    machine coverage is not full biological reading.
+  snapshot_sha256: 6eb64152bc5d98087596ce35bd6c0ca94bdd985cb770605982a1ef769a7a5fab
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/node-edge-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.549727Z'
+  support: supports
+  summary: All eleven nodes and eleven edges; detailed efficacy remains unassessed.
+  snapshot_sha256: 184a6814e85e8cca39a2328ac0861a60a611e323a5e6d911cc7fdfde425f480d
+- evidence_id: source-notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/note-attribution-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.549890Z'
+  support: supports
+  summary: All existing edge, protein and top-level notes accounted for with scope
+    limits.
+  snapshot_sha256: 9f333e1351c37647391e3cbf807b55cff55dbd40f2f742df9a49fd2dd2a58641
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/publication-status-audit.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.548389Z'
+  support: supports
+  summary: Indexed notice fields; preprint linkage is not retraction.
+  snapshot_sha256: 6b7e8d060d54d336b8d582c8f1e40d90982c806dd3328e1a5deb0fcb001dce1e
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/primary-reading-scope.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.550891Z'
+  support: supports
+  summary: Actual selected classification/literal reading; incidental detailed text
+    not adopted.
+  snapshot_sha256: 03db95d95f3e5e7cbf3ad26f63fa0c1be5bac2d86b0bda9b3cb9c212280e3fce
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/access-limits.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.549975Z'
+  support: supports
+  summary: Current successful HTML, retained original JATS and publisher429/body non-acquisition
+    distinguished.
+  snapshot_sha256: 6b9162e979a9c61083e7b5530b29349dd6fd5e8896203d12a6b085a2b8f0610f
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/source-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:17:55.454961Z'
+  support: supports
+  summary: Original acquisitions separate from current copies.
+  snapshot_sha256: d309c667863f3482435c87cc3ad386da9c5182de758e23d4e67136c12a3e773b
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/canonical-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.549173Z'
+  support: supports
+  summary: R1 and existing >15 kGy magnitude positive; current Most ranking unestablished.
+  snapshot_sha256: 61795cc3ed483867a5400b28b719482b922471b285e2a8564e3ebdb5a971fdee
+- evidence_id: source-locators
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/selected-primary-locators.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.544287Z'
+  support: supports
+  summary: Exact bounded primary locations without new full-source quotation embedding.
+  snapshot_sha256: b588688f7e827d564f9ad591bcae9290fca805d75c02a2129c01ed41f3fa6678
+- evidence_id: source-browser
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/browser-access-observation.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.546341Z'
+  support: supports
+  summary: Derived publisher429 observation; original browser request time was not
+    instrumented.
+  snapshot_sha256: 60b64ffa6bb998e86354a0ecd0367e89498b9f5718d6f6128e82f3048f5d4d05
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/native-check-context.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.550771Z'
+  support: supports
+  summary: Native/strict/direct network snippet commands passed; three abstract nonmatches
+    are not false quotations by themselves.
+  snapshot_sha256: 2b39bb5f6cc769ea32f2d518f0bbe10bd7ebcff487edc5fb18aa3306e73bcb3f
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:17:34.430938Z'
+  support: supports
+  summary: All 61 inputs verified before source assessment.
+  snapshot_sha256: b54b5f1c3c6c4a9c8b1164ec484eceefbe49d7c606db5a84e072d268ca95e987
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:03.555995Z'
+  support: supports
+  summary: Frozen thirty-six source artifacts verified.
+  snapshot_sha256: 8dcf1025e422bf510d9fc1e9f6722d424fcb0d2fea0859df2c9dbf7e5f1a06fe
+- evidence_id: root-reading-86
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/canonical-primary-search-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:20:08.321998Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: 7196300248d5961743a873576bbd90046c94cde4409eceff8c5dbd9a8b1542b4
+- evidence_id: root-reading-88
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/identity-ontology-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:18:15.834257Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: e3e6757e52eef8ba0207ce6fe221012e179a973bbe5672029b6105ed75658f42
+- evidence_id: root-reading-89
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/metadata-identity-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:19:13.641012Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: 132c6ffc90251ab766731f459f092a4dea8cf0bfd93d0cf5f61ebf3f0c359df1
+- evidence_id: root-reading-90
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:21:54.083332Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: d22d799b863a43907a3bcf168ab6cc7a8a707b14f154d437c31e5a485b4c8a75
+- evidence_id: root-reading-91
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/selected-primary-quotation-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:19:43.656180Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: 589a2c103f32e59480b3255a23e6da1834c9a3eb56dcc0b41bd50a75e3531a8b
+- evidence_id: root-reading-92
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-source-root/taxonomy-protein-identity-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:20:46.853580Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: bd48a964d1b9d4ed44a8781627b5eee7c121594c9c4bddaf3e8eaf739fd4250b
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T22:22:18.840301Z'
+  support: supports
+  summary: Exact fields, disposition and bindings verified.
+  snapshot_sha256: 924fd171da48cd576056308008a56a764f032191676f81fdac76d9368029a987
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/radiotolerant-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T22:22:31.579844Z'
+  support: supports
+  summary: Final disposition controls serialization without expanding excluded biology.
+  snapshot_sha256: 5b13642f274acd20f126bf149eec1aaed68a82afdc7fac40b90a96bc8d4c7568
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback identity and current authority scope'
+  outcome: unknown
+  target_ids:
+  - traitmech:000007
+  summary: Current fallback identity denotes extreme-dose survival. Active METPO1007072
+    supplies generic radiation tolerance and the active review ledger declines a new
+    primary; exact scope equivalence still needs qualification rather than automatic
+    ID replacement. Official species/R1 and projected protein identities are positive.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - taxon-species
+  - taxon-r1
+  - uniprot
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: existing radiation-resistant classification'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: Assigned CSH source supports an existing extreme D. radiodurans phenotype
+    and the related radioresistant synonym. Generic classification is assessed separately
+    from universal or detailed causal efficacy. No experimental threshold or optimization
+    is proposed.
+  evidence_ids:
+  - record
+  - sources
+  - retained-csh-metadata
+  - body-csh
+  - identity
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: parent and current local relations'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: Phenotype parent is appropriate. Current local challenges/confers roles
+    are evaluated under maintained policy; nearby active generic radiation tolerance
+    does not by itself prove exact extreme-dose equivalence.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - local-authority
+  - node-edges
+  - ground-disposition
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: all assigned works and placements'
+  outcome: unknown
+  target_ids:
+  - traitmech:000007
+  summary: Six identities are verified. Selected existing classification and two literal
+    quotations are supported; detailed numerical repair/expression/ROS efficacy remains
+    unassessed or body-unverified. Genes study taxon is distinct from its introduction
+    example, and Sustainability identity is supported by Crossref despite zero EPMC
+    hits.
+  evidence_ids:
+  - sources
+  - source-ledger
+  - placements
+  - source-status
+  - source-access
+  - source-reuse
+  - node-sources
+  details: '{"completed_at": "2026-10-21T22:21:03.549727+00:00", "nodes": [{"index":
+    0, "node_id": "radiotolerant_trait", "node_type": "TRAIT", "incident_edges": [0,
+    1, 2], "assessment": "qualified_classification", "scope": "Existing environmental
+    radiation classification and generic context only.", "source_keys": ["csh", "genes"]},
+    {"index": 1, "node_id": "radiation_exposure", "node_type": "ENVIRONMENTAL_FACTOR",
+    "incident_edges": [0, 3], "assessment": "qualified_classification", "scope": "Existing
+    environmental radiation classification and generic context only.", "source_keys":
+    ["genes", "plos"]}, {"index": 2, "node_id": "dna_damage_repair", "node_type":
+    "BIOLOGICAL_PROCESS", "incident_edges": [1, 8, 9], "assessment": "unknown", "scope":
+    "Detailed radiation/ROS-defense mechanism, causal efficacy and repair performance
+    UNASSESSED_SCOPE. Formal identity/type is assessed separately.", "source_keys":
+    ["csh", "genes", "sustainability"]}, {"index": 3, "node_id": "mn_antioxidant_protection",
+    "node_type": "BIOLOGICAL_PROCESS", "incident_edges": [2, 6], "assessment": "unknown",
+    "scope": "Detailed radiation/ROS-defense mechanism, causal efficacy and repair
+    performance UNASSESSED_SCOPE. Formal identity/type is assessed separately.", "source_keys":
+    ["csh", "spectrum"]}, {"index": 4, "node_id": "reactive_oxygen_species", "node_type":
+    "CHEMICAL", "incident_edges": [3, 4, 5, 10], "assessment": "unknown", "scope":
+    "Detailed radiation/ROS-defense mechanism, causal efficacy and repair performance
+    UNASSESSED_SCOPE. Formal identity/type is assessed separately.", "source_keys":
+    ["plos", "spectrum", "sustainability"]}, {"index": 5, "node_id": "mn2_ion", "node_type":
+    "CHEMICAL", "incident_edges": [4, 6], "assessment": "unknown", "scope": "Detailed
+    radiation/ROS-defense mechanism, causal efficacy and repair performance UNASSESSED_SCOPE.
+    Formal identity/type is assessed separately.", "source_keys": ["spectrum"]}, {"index":
+    6, "node_id": "fe2_ion", "node_type": "CHEMICAL", "incident_edges": [5], "assessment":
+    "unknown", "scope": "Detailed radiation/ROS-defense mechanism, causal efficacy
+    and repair performance UNASSESSED_SCOPE. Formal identity/type is assessed separately.",
+    "source_keys": ["spectrum"]}, {"index": 7, "node_id": "reca_protein", "node_type":
+    "GENE_OR_PROTEIN", "incident_edges": [7], "assessment": "unknown", "scope": "Detailed
+    radiation/ROS-defense mechanism, causal efficacy and repair performance UNASSESSED_SCOPE.
+    Formal identity/type is assessed separately.", "source_keys": ["sustainability"]},
+    {"index": 8, "node_id": "homologous_recombination", "node_type": "BIOLOGICAL_PROCESS",
+    "incident_edges": [7, 8], "assessment": "unknown", "scope": "Detailed radiation/ROS-defense
+    mechanism, causal efficacy and repair performance UNASSESSED_SCOPE. Formal identity/type
+    is assessed separately.", "source_keys": ["sustainability"]}, {"index": 9, "node_id":
+    "ner_uvrabc", "node_type": "BIOLOGICAL_PROCESS", "incident_edges": [9], "assessment":
+    "unknown", "scope": "Detailed radiation/ROS-defense mechanism, causal efficacy
+    and repair performance UNASSESSED_SCOPE. Formal identity/type is assessed separately.",
+    "source_keys": ["genes"]}, {"index": 10, "node_id": "carotenoid_pigments", "node_type":
+    "CHEMICAL", "incident_edges": [10], "assessment": "unknown", "scope": "Detailed
+    radiation/ROS-defense mechanism, causal efficacy and repair performance UNASSESSED_SCOPE.
+    Formal identity/type is assessed separately.", "source_keys": ["sustainability"]}],
+    "edges": [{"index": 0, "subject": "radiation_exposure", "predicate": "challenges",
+    "object": "radiotolerant_trait", "source_keys": ["genes"], "assessment": "qualified_positive",
+    "scope": "Supplied D. radiodurans classification in Genes introduction supports
+    generic environmental challenge context.", "formal_roles": "Independent grounding
+    audit owns formal endpoint assessment."}, {"index": 1, "subject": "dna_damage_repair",
+    "predicate": "confers", "object": "radiotolerant_trait", "source_keys": ["csh"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 2, "subject": "mn_antioxidant_protection",
+    "predicate": "confers", "object": "radiotolerant_trait", "source_keys": ["csh"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 3, "subject": "radiation_exposure",
+    "predicate": "causes", "object": "reactive_oxygen_species", "source_keys": ["plos"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 4, "subject": "mn2_ion", "predicate":
+    "acts as antioxidant against", "object": "reactive_oxygen_species", "source_keys":
+    ["spectrum"], "assessment": "unknown", "scope": "Identity and nearest-source placement
+    audited. Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy,
+    methods and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected
+    body is not a false-citation finding.", "formal_roles": "Independent grounding
+    audit owns formal endpoint assessment."}, {"index": 5, "subject": "fe2_ion", "predicate":
+    "promotes", "object": "reactive_oxygen_species", "source_keys": ["spectrum"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 6, "subject": "mn2_ion", "predicate":
+    "part of", "object": "mn_antioxidant_protection", "source_keys": ["spectrum"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 7, "subject": "reca_protein", "predicate":
+    "mediates", "object": "homologous_recombination", "source_keys": ["sustainability"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 8, "subject": "homologous_recombination",
+    "predicate": "part of", "object": "dna_damage_repair", "source_keys": ["sustainability"],
+    "assessment": "unknown", "scope": "Identity and nearest-source placement audited.
+    Detailed radiation/ROS-defense/repair mechanism, quantitative efficacy, methods
+    and cross-taxon extrapolation UNASSESSED_SCOPE; unavailable or uninspected body
+    is not a false-citation finding.", "formal_roles": "Independent grounding audit
+    owns formal endpoint assessment."}, {"index": 9, "subject": "ner_uvrabc", "predicate":
+    "part of", "object": "dna_damage_repair", "source_keys": ["genes"], "assessment":
+    "unknown", "scope": "Identity and nearest-source placement audited. Detailed radiation/ROS-defense/repair
+    mechanism, quantitative efficacy, methods and cross-taxon extrapolation UNASSESSED_SCOPE;
+    unavailable or uninspected body is not a false-citation finding.", "formal_roles":
+    "Independent grounding audit owns formal endpoint assessment."}, {"index": 10,
+    "subject": "carotenoid_pigments", "predicate": "scavenges", "object": "reactive_oxygen_species",
+    "source_keys": ["sustainability"], "assessment": "unknown", "scope": "Identity
+    and nearest-source placement audited. Detailed radiation/ROS-defense/repair mechanism,
+    quantitative efficacy, methods and cross-taxon extrapolation UNASSESSED_SCOPE;
+    unavailable or uninspected body is not a false-citation finding.", "formal_roles":
+    "Independent grounding audit owns formal endpoint assessment."}], "scope": "Source
+    identity, existing benign environmental classification, supplied quotation matching
+    and bounded attribution only. Detailed pathogen radiation resistance, ROS-defense,
+    fitness, methods and intervention efficacy are UNASSESSED_SCOPE; no engineering
+    or protocol recommendations. Acquisition is not full article scientific assessment."}'
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: three copied-span fields'
+  outcome: concern
+  target_ids:
+  - traitmech:000007
+  summary: CSH and Genes supplied snippets match actual primary text. The protein-example
+    phrase does not occur in the complete assigned PMC99018 HTML under exact or normalized
+    case-insensitive search. This is a narrow literal-format concern, not a biological
+    repair-role refutation.
+  evidence_ids:
+  - snippets
+  - literal-search
+  - body-canonical
+  - source-reading
+  - playbook
+  - native-checks
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: existing species and strain attribution'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: Assigned source identifies D. radiodurans R1 and reports acute gamma exposures
+    exceeding 1,500 kilorads, equivalent to >15 kGy. These are existing reported classification
+    facts. Current global Most ranking is not independently established; detailed
+    repair efficacy remains unassessed.
+  evidence_ids:
+  - canonical-scope
+  - body-canonical
+  - meta-canonical
+  - taxon-species
+  - taxon-r1
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all eleven current referents'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: Current chemical ions/ROS, explicit repair processes and reviewed label-only
+    RecA protein class retain their actual referents. One official taxon-matched protein
+    instance is verified at metadata level; current entry-version drift is explicitly
+    historical, not a new sequence or function claim.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - go-primary
+  - uniprot
+  details: '[{"index": 0, "node_id": "radiotolerant_trait", "label": "radiotolerant",
+    "node_type": "TRAIT", "grounding": "traitmech:000007", "outcome": "supported",
+    "assessment": "Current internal trait identity and extreme-dose referent match
+    the record; broader active METPO overlap is qualified, not a forced replacement.",
+    "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 1, "node_id": "radiation_exposure",
+    "label": "ionizing or UV radiation exposure", "node_type": "ENVIRONMENTAL_FACTOR",
+    "grounding": null, "outcome": "supported", "assessment": "Exposure/condition referent
+    admitted by ENVIRONMENTAL_FACTOR; no categorical process exclusion is inferred
+    from the enum alone.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 2,
+    "node_id": "dna_damage_repair", "label": "DNA repair", "node_type": "BIOLOGICAL_PROCESS",
+    "grounding": "GO:0006281", "outcome": "supported", "assessment": "Explicit process;
+    GO0006281 is DNA repair in biological_process namespace. Formal identity positive;
+    detailed repair efficacy unassessed.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 3, "node_id": "mn_antioxidant_protection", "label": "manganese-antioxidant
+    proteome protection", "node_type": "BIOLOGICAL_PROCESS", "grounding": null, "outcome":
+    "supported", "assessment": "Explicit protection process label/type coherent for
+    formal review. Detailed ROS protection biology UNASSESSED_SCOPE.", "biological_efficacy":
+    "UNASSESSED_SCOPE"}, {"index": 4, "node_id": "reactive_oxygen_species", "label":
+    "reactive oxygen species (ROS)", "node_type": "CHEMICAL", "grounding": null, "outcome":
+    "supported", "assessment": "Material chemical aggregate referent; no requirement
+    to invent a single chemical accession. Detailed production/damage claims unassessed.",
+    "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 5, "node_id": "mn2_ion",
+    "label": "manganese(II) ion", "node_type": "CHEMICAL", "grounding": null, "outcome":
+    "qualified", "assessment": "Manganese ion material referent coherent. Activity
+    language in edge6 differs from this material node; retained as relation interpretation
+    limitation, not forced retyping.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 6, "node_id": "fe2_ion", "label": "iron(II) ion", "node_type": "CHEMICAL",
+    "grounding": null, "outcome": "supported", "assessment": "Iron ion material referent
+    coherent; edge5 uses it under an imported process-only relation. Detailed chemistry/efficacy
+    unassessed.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 7, "node_id":
+    "reca_protein", "label": "RecA recombinase", "node_type": "GENE_OR_PROTEIN", "grounding":
+    null, "outcome": "supported", "assessment": "Protein-family label, explicit reviewed-label-only
+    decision and strain-paired P42443 example satisfy representation structure. Current
+    identity metadata positive; historical entry-version drift disclosed, role efficacy
+    unassessed.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 8, "node_id":
+    "homologous_recombination", "label": "homologous recombination", "node_type":
+    "BIOLOGICAL_PROCESS", "grounding": "GO:0035825", "outcome": "supported", "assessment":
+    "Explicit homologous-recombination process with active GO0035825; generic formal
+    identity positive, no detailed repair intervention adjudication.", "biological_efficacy":
+    "UNASSESSED_SCOPE"}, {"index": 9, "node_id": "ner_uvrabc", "label": "nucleotide
+    excision repair (UvrABC)", "node_type": "BIOLOGICAL_PROCESS", "grounding": null,
+    "outcome": "supported", "assessment": "Explicit nucleotide-excision-repair process;
+    missing exact grounding is disclosed rather than automatically a defect or a protein
+    complex retype.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 10, "node_id":
+    "carotenoid_pigments", "label": "carotenoid pigments", "node_type": "CHEMICAL",
+    "grounding": null, "outcome": "supported", "assessment": "Chemical pigment aggregate
+    coherent. No forced single chemical grounding and no assessment of quantitative
+    ROS-defense efficacy.", "biological_efficacy": "UNASSESSED_SCOPE"}]'
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all eleven relation roles'
+  outcome: concern
+  target_ids:
+  - traitmech:000007
+  summary: Imported RO2213 at edge5 is processual positive regulation, but both current
+    endpoints are chemicals. The source physical/biological statement is not automatically
+    false. Other local, lexical and broad Biolink relations retain their own rules
+    and declared limitations.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - owners
+  - ground-disposition
+  - challenge
+  - adjudication
+  details: '[{"index": 0, "subject": "radiation_exposure", "predicate": "challenges",
+    "predicate_id": "METPO:2007406", "object": "radiotolerant_trait", "outcome": "supported",
+    "assessment": "Local v2 challenges admits environmental stressor-to-tolerance
+    relation, with broad scaffold endpoints; no imported RO domain imposed.", "biological_efficacy":
+    "UNASSESSED_SCOPE"}, {"index": 1, "subject": "dna_damage_repair", "predicate":
+    "confers", "predicate_id": "METPO:2007700", "object": "radiotolerant_trait", "outcome":
+    "supported", "assessment": "Local v8 confers admits current biological-process-to-trait
+    form; strong causal support remains source-scoped and detailed efficacy unassessed.",
+    "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 2, "subject": "mn_antioxidant_protection",
+    "predicate": "confers", "predicate_id": "METPO:2007700", "object": "radiotolerant_trait",
+    "outcome": "supported", "assessment": "Local v8 confers formal process-to-trait
+    role positive; no detailed protective pathway adjudication.", "biological_efficacy":
+    "UNASSESSED_SCOPE"}, {"index": 3, "subject": "radiation_exposure", "predicate":
+    "causes", "predicate_id": "biolink:causes", "object": "reactive_oxygen_species",
+    "outcome": "supported", "assessment": "Biolink causes describes occurrence/existence/activity
+    and inherits broad NamedThing endpoints. It does not inherit RO process-only constraints
+    from its mappings.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 4,
+    "subject": "mn2_ion", "predicate": "acts as antioxidant against", "predicate_id":
+    null, "object": "reactive_oxygen_species", "outcome": "qualified", "assessment":
+    "Ungrounded lexical chemical relation is transparent; no invented imported-domain
+    rule. Detailed antioxidant claim unassessed.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 5, "subject": "fe2_ion", "predicate": "promotes", "predicate_id": "RO:0002213",
+    "object": "reactive_oxygen_species", "outcome": "major", "assessment": "RO2213
+    is a subproperty of RO2211, whose explicit BFO0000015 process domain/range apply.
+    Both current iron-ion and ROS nodes are material chemical referents, not the required
+    processes. This is a single formal-role finding, independent of the underlying
+    chemistry.", "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 6, "subject":
+    "mn2_ion", "predicate": "part of", "predicate_id": "biolink:part_of", "object":
+    "mn_antioxidant_protection", "outcome": "qualified", "assessment": "Biolink part_of
+    prose permits material entities or processes; formal ancestry is broad. Current
+    material ion subject versus description of its activity creates an interpretation
+    limit, but the mapping to BFO does not automatically import a prohibited cross-category
+    domain. No additional confirmed finding.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 7, "subject": "reca_protein", "predicate": "mediates", "predicate_id":
+    null, "object": "homologous_recombination", "outcome": "qualified", "assessment":
+    "Lexical mediates transparently links protein to process; no imported formal restriction.
+    Source/protein-role efficacy is UNASSESSED_SCOPE.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 8, "subject": "homologous_recombination", "predicate": "part of", "predicate_id":
+    "biolink:part_of", "object": "dna_damage_repair", "outcome": "supported", "assessment":
+    "Process-to-process parthood is compatible with Biolink description; detailed
+    radiation-repair claim unassessed.", "biological_efficacy": "UNASSESSED_SCOPE"},
+    {"index": 9, "subject": "ner_uvrabc", "predicate": "part of", "predicate_id":
+    "biolink:part_of", "object": "dna_damage_repair", "outcome": "supported", "assessment":
+    "Process-to-process parthood compatible; exact narrower repair biology unassessed.",
+    "biological_efficacy": "UNASSESSED_SCOPE"}, {"index": 10, "subject": "carotenoid_pigments",
+    "predicate": "scavenges", "predicate_id": null, "object": "reactive_oxygen_species",
+    "outcome": "qualified", "assessment": "Lexical scavenges has no imported domain/range
+    asserted. Quantitative antioxidant/fitness claims remain UNASSESSED_SCOPE.", "biological_efficacy":
+    "UNASSESSED_SCOPE"}]'
+- assessment_id: biology
+  area: scope
+  topic: 'Native checklist: bounded classification and excluded efficacy'
+  outcome: unknown
+  target_ids:
+  - traitmech:000007
+  summary: Source identity, existing benign environmental classification and literal
+    attribution are assessed. Detailed pathogen radiation resistance, ROS-defense,
+    fitness, methods and intervention efficacy remain UNASSESSED_SCOPE; no mechanism
+    construction, optimization or repair is proposed.
+  evidence_ids:
+  - node-sources
+  - source-reading
+  - source-access
+  - ground-reading
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: MECHANISTIC scope and one instance'
+  outcome: unknown
+  target_ids:
+  - traitmech:000007
+  summary: One existing taxon-matched protein instance anchors a branch by documentary
+    identity, not comprehensive causal efficacy verification. No speculative connector,
+    additional instance, universal mechanism or experimental completion is prescribed.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - uniprot
+  - source-reading
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: catalog and instance applicability'
+  outcome: unknown
+  target_ids:
+  - traitmech:000007
+  summary: No exact canonical species/strain match was found in the retained 20-organism
+    / 28-dataset catalog. Other source organisms may be present but are not substituted.
+    No detailed radiation-stress, resistance, ROS-defense or intervention expression
+    query is inferred from catalog availability.
+  evidence_ids:
+  - expression
+  - catalog-reuse
+  - taxon-species
+  - taxon-r1
+  - uniprot
+  - protein-metadata-scope
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: current assertions and actual writer guards'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: Record owns the current assertions and quotation. Conditional mappings/shared
+    grounding can recur only under their actual empty-ID guards; retained direct writer/history
+    qualifications must be respected. Existing nonempty identifiers are not repaired
+    by a mapping-only edit.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - ground-reading
+  - predicate-mapping-primary
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - traitmech:000007
+  summary: Seven current events are AI-attributed, with no automated seed or captured
+    repository history files. Ignored-inclusive 179 matching paths and 67 actual review
+    target arrays contain zero exact current targets and do not establish an attributable
+    current human acceptance link; private or off-repository review is not excluded.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual native and metadata checks'
+  outcome: supported
+  target_ids:
+  - traitmech:000007
+  summary: All 61 inputs match. Native/strict/direct network snippets passed. Initial
+    official identity DNS errors and successful network retries remain distinct; current
+    UniProt metadata check is applicable and passed. Original common failures/retries
+    remain explicit; prior QC and local initialization do not assert B11 remote publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - native-checks
+  - uniprot
+  - taxon-species
+  - taxon-r1
+findings:
+- finding_id: chemical-process-regulation
+  issue_key: radiotolerant-chemical-process-regulation
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Process regulation is assigned to chemical endpoints
+  description: RO2213 inherits process domain and range from regulates. Current edge5
+    relates iron(II) ion to reactive oxygen species, both chemical entities. This
+    is a formal relation-role conflict, distinct from the underlying chemistry or
+    resistance efficacy.
+  target_ids:
+  - traitmech:000007
+  field_paths:
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional RO wildcard recurs only for empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: protein-evidence-literal-span
+  issue_key: radiotolerant-protein-evidence-literal-span
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Protein evidence phrase is not a literal assigned-source span
+  description: The supplied phrase is absent from the retained complete assigned PMC99018
+    HTML under exact and normalized case-insensitive searches. Existing R1 classification
+    and reported dose remain positive; this bounded excerpt-format issue does not
+    refute a biological repair role.
+  target_ids:
+  - traitmech:000007
+  field_paths:
+  - causal_graphs[0].nodes[7].protein_examples[0].evidence[0].snippet
+  evidence_ids:
+  - snippets
+  - literal-search
+  - body-canonical
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: radiotolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reviewed status lacks a locally attributable acceptance link
+  description: All seven embedded events are AI-assisted. Ignored-inclusive 179 matching
+    paths, 67 actual review target arrays and zero exact current targets, with no
+    repository history-file matches, do not identify current-target human acceptance.
+    This traceability gap does not exclude private or off-repository review.
+  target_ids:
+  - traitmech:000007
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-regulation-role
+  description: Reconcile the imported relation with the actual current endpoint referents
+    during authorized curation.
+  finding_ids:
+  - chemical-process-regulation
+  target_ids:
+  - traitmech:000007
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional RO wildcard recurs only for empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  acceptance_checks:
+  - Preserve actual chemical node meaning and separate formal role correction from
+    biological efficacy.
+  - Respect nonempty-ID guards; a mapping-only edit does not repair current assertions.
+  - Do not reconstruct or optimize radiation-resistance mechanisms.
+- action_id: clarify-protein-quotation
+  description: Clarify paraphrase status or use a genuine contiguous assigned-source
+    span.
+  finding_ids:
+  - protein-evidence-literal-span
+  target_ids:
+  - traitmech:000007
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve positive source identity and existing canonical classification.
+  - Do not turn literal-format correction into an unsupported protein efficacy assertion.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000007
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/radiotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain all current events and bounded search evidence.
+  - No contact or automatic status promotion authorized.
+limitations:
+- Biolink edge 6 relates a material manganese ion to a process while its wording invokes
+  antioxidant activity. This remains an explicit material-versus-activity interpretation
+  qualification under the broad maintained relation, not an additional formal finding.
+- Detailed pathogen radiation resistance, ROS-defense, fitness, methods and intervention
+  efficacy remain UNASSESSED_SCOPE; incidental source content is not adopted.
+- Generic active METPO radiation tolerance and current extreme-dose wording need exact-scope
+  qualification; no automatic replacement is proposed.
+- The current Most superlative is not independently established as a present global
+  ranking; positive historical classification and >15 kGy magnitude are retained.
+- PLOS and Spectrum primary bodies were not inspected; Sustainability publisher429
+  and zero-hit metadata do not prove absence or falsehood. Crossref identity is positive.
+- CSH and canonical HTML requests are current; Genes JATS and CSH/Genes metadata retain
+  their original acquisition times separately from current copies.
+- The protein snippet search covers complete retained HTML but is not a full biological
+  article reading. No current sequence/function fields were requested from UniProt.
+- Recorded UniProt entry version 161 dated 2026-08-25 and current version 162 are
+  separate observations; sequence version 2 remains equal. No historical raw version-161
+  response or annotation-update date is invented.
+- Local provenance search cannot rule out private or off-repository acceptance.
+- Actual prior QC, qualification and local initialization do not assert B11 remote
+  publication.
+notes:
+- Final root and independent challenge are pinned; builder and helper were not imported
+  or executed during preparation.
+- 'Coverage: six works, eighteen external placements, eleven grounding fields, eleven
+  nodes/eleven edges, three snippets, two canonicals, one protein instance and seven
+  AI events.'
+- No scientific record, native inventory, Git or sweep-state mutation by serializer
+  preparation.
+tags:
+- record-review
+- radiotolerant
+- environment
+- needs-curation
+native_verdict: needs_curation

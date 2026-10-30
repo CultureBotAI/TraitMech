@@ -1,0 +1,3158 @@
+# Whole-record review of piezotolerant
+
+- Review: 20261021T211425Z-piezotolerant
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T21:02:44.426350Z
+- Finished UTC: 2026-10-21T21:14:25Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Final root disposition: two grouped majors for canonical measurement/classification and imported roles, plus bounded snippet-format and human-acceptance minors.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: First record of the actual locally initialized batch 012 queue. Whole 223-line target and all 449 captured inputs verified before assessment. The 374 proposal inputs are conservative discovery context; only relevant exact authorities were substantively assessed. Local initialization at 21:02:18.445284 UTC does not assert publication of batch 011.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000003 | data/traits/environment/piezotolerant.yaml | maintained | piezotolerant |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000003 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000003 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000003 | 19 links checked against the pinned PathwayMech snapshot. |
+| Full-corpus history integrity | passed | True | traitmech:000003 | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | traitmech:000003 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000003 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000003 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused native validation | passed | True | traitmech:000003 | Successful schema validation; source and semantics separately assessed. |
+| Focused strict validation | passed | True | traitmech:000003 | Successful strict validation; no biological efficacy certification. |
+| Initial focused snippet attempt | failed | False | traitmech:000003 | DNS failure, exit2, retained separately from successful network retry; no completed-review failure inferred. |
+| Focused snippet network retry | passed | True | traitmech:000003 | Two fields over two references: both NOT_IN_ABSTRACT. Actual body verifies first literally; Colwellia abstract supports second after explicit unit transcription. |
+| Reused maintained batch-eleven QC | passed | True | traitmech:000003 | Actual B11 final QC at its original time, qualified against B12 bytes; independent of pending publication. |
+| Protein-instance metadata applicability | not_applicable | False | traitmech:000003 | One reviewed label-only aggregate, zero instances; no forced UniProt accession or detailed pressure-response query. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: fallback and synonym scope
+
+identity: supported. Targets: traitmech:000003.
+
+Retained traitmech:000003 distinguishes comparative atmospheric growth from broader pressure tolerance and piezophily. Proposed 1007602 is an exact local lift, not an imported replacement; related barotolerant is not exact-equivalence metadata.
+
+### Native checklist: comparative pressure growth
+
+evidence: supported. Targets: traitmech:000003.
+
+Assigned review directly defines piezotolerance by similar or faster atmospheric growth relative to elevated pressure. Broad graph/node 0 shorthand remains a limitation, not another finding.
+
+### Native checklist: parent and local authorities
+
+identity: supported. Targets: traitmech:000003.
+
+Active phenotype parent is appropriate. Exact v3 fluidity QUALITY and v8 confers are coherent; broad local endpoints do not waive imported RO requirements.
+
+### Native checklist: all assigned citations and placements
+
+evidence: supported. Targets: traitmech:000003.
+
+Six works and fourteen external placements accounted for with explicit access and scope limits. Metadata supports identity/abstract claims only; actual bodies and original acquisitions are separately cited.
+
+### Native checklist: literal unit-format fidelity
+
+evidence: concern. Targets: traitmech:000003.
+
+First snippet is literal in the assigned body. Second matches the Colwellia observation after degrees C to °C normalization; numeric meaning is positive, literal copied-span format differs. Native NOT_IN_ABSTRACT results are retained unchanged.
+
+### Native checklist: comparison criterion versus reported endpoints
+
+evidence: concern. Targets: traitmech:000003.
+
+SS9 piezophily and its separately reported elevated-pressure optimum do not substantiate the atmospheric-at-least-as-fast criterion. Shewanella MR-1 recovery after pressure exposure is a distinct endpoint from growth-rate ordering. Preserve both positive observations and strain limits; do not infer incapacity under pressure or all-species uniformity.
+
+### Native checklist: all nine current referents
+
+consistency: supported. Targets: traitmech:000003.
+
+Current pressure condition, fluidity quality, lipid classes and explicit processes are coherent facets. Heat-shock symbols accompany a reviewed protein aggregate; no forced accession, gene-as-protein defect or extra node 0 issue.
+
+[{"index": 0, "field": "causal_graphs[0].nodes[0]", "record": {"node_id": "piezotolerant_trait", "label": "piezotolerant", "node_type": "TRAIT", "grounding": "traitmech:000003", "description": "Growth across atmospheric and elevated hydrostatic pressures."}, "assessment": "Self-grounded trait identity retained. Description omits the comparative-growth qualification and is broader than the definition; bounded wording limitation."}, {"index": 1, "field": "causal_graphs[0].nodes[1]", "record": {"node_id": "hydrostatic_pressure", "label": "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "description": "Ambient hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025"}, "assessment": "Explicit ambient imposed hydrostatic pressure, close-grounded to PATO pressure quality. Condition referent matters for imported process predicates; not an automatic ENVIRONMENTAL_FACTOR error."}, {"index": 2, "field": "causal_graphs[0].nodes[2]", "record": {"node_id": "membrane_adaptation", "label": "membrane lipid adaptation", "node_type": "BIOLOGICAL_PROCESS", "description": "Adjustment of membrane lipid composition under varying pressure."}, "assessment": "Adjustment process explicitly described; BIOLOGICAL_PROCESS is coherent. Detailed pressure adaptation efficacy unassessed."}, {"index": 3, "field": "causal_graphs[0].nodes[3]", "record": {"node_id": "membrane_fluidity", "label": "membrane fluidity", "node_type": "QUALITY", "description": "Fluidity of the cell membrane lipid bilayer.", "grounding": "METPO:1007505"}, "assessment": "Membrane fluidity is explicitly a quality under native semantics, exact v3 proposal and current mapping; no retyping defect."}, {"index": 4, "field": "causal_graphs[0].nodes[4]", "record": {"node_id": "unsaturated_fatty_acids", "label": "unsaturated membrane fatty acids", "node_type": "CHEMICAL", "description": "Unsaturated fatty acids incorporated into membrane lipids."}, "assessment": "Material lipid class; CHEMICAL referent coherent. No compound-specific identifier asserted; detailed efficacy unassessed."}, {"index": 5, "field": "causal_graphs[0].nodes[5]", "record": {"node_id": "branched_unsaturated_fatty_acids", "label": "branched-chain and unsaturated membrane fatty acids", "node_type": "CHEMICAL", "description": "Branched-chain and unsaturated fatty acids enriched in membrane lipids under pressure."}, "assessment": "Material lipid class; CHEMICAL referent coherent. No compound-specific identifier asserted; detailed efficacy unassessed."}, {"index": 6, "field": "causal_graphs[0].nodes[6]", "record": {"node_id": "heat_shock_genes", "grounding_status": "REVIEWED_LABEL_ONLY", "grounding_notes": "Reviewed protein family, complex, or aggregate; no single semantic family identifier exactly captures this node's represented scope.", "label": "heat-shock response proteins (RpoH, RpoE, DnaK, GroEL)", "node_type": "GENE_OR_PROTEIN", "description": "Key heat-shock regulators and chaperones upregulated after pressure shock.", "gene_symbols": ["rpoH", "rpoE", "dnaK", "groEL"]}, "assessment": "Current label and description denote a heterogeneous protein/regulator/chaperone aggregate. Gene-symbol metadata does not change the material protein referent. REVIEWED_LABEL_ONLY is allowed; no forced single accession or token instance."}, {"index": 7, "field": "causal_graphs[0].nodes[7]", "record": {"node_id": "piezolyte_accumulation", "label": "piezolyte accumulation", "node_type": "BIOLOGICAL_PROCESS", "description": "Accumulation of compatible solutes (piezolytes) in response to high pressure."}, "assessment": "Accumulation process explicitly described; process facet coherent. Detailed pressure-survival efficacy unassessed."}, {"index": 8, "field": "causal_graphs[0].nodes[8]", "record": {"node_id": "protein_protection", "label": "protein protection under pressure", "node_type": "BIOLOGICAL_PROCESS", "description": "Stabilization/protection of proteins under elevated hydrostatic pressure."}, "assessment": "Stabilization/protection process explicitly described; process facet coherent. Detailed efficacy unassessed."}]
+
+### Native checklist: all eight relation roles
+
+consistency: concern. Targets: traitmech:000003.
+
+Imported RO:0002211/2212 require process/process roles: current edge 0 pressure condition is not a process; edge 2 additionally has an independently decisive fluidity-quality object. Confers process-to-trait is formally allowed, and five free lexical predicates do not inherit RO constraints. No enum-wide environmental-factor prohibition.
+
+[{"index": 0, "field": "causal_graphs[0].edges[0]", "record": {"subject": "hydrostatic_pressure", "predicate": "regulates", "object": "membrane_adaptation", "description": "Hydrostatic pressure modulates membrane fluidity, prompting adaptive lipid composition.", "evidence": [{"reference": "DOI:10.3389/fmolb.2022.1058381", "notes": "HHP adaptation involves unsaturated and branched-chain fatty acids."}], "predicate_id": "RO:0002211"}, "status": "confirmed_major", "assessment": "RO:0002211 directly requires process subject and object. The actual pressure subject is an ambient physical quality/condition, not an execution process. A pressure-change event could be modeled differently, but that is not the current grounded referent."}, {"index": 1, "field": "causal_graphs[0].edges[1]", "record": {"subject": "membrane_adaptation", "predicate": "confers", "object": "piezotolerant_trait", "description": "Membrane adaptation supports growth across the pressure range atmospheric ↔ high.", "evidence": [{"reference": "DOI:10.1099/ijsem.0.001671", "notes": "Contrast with obligate piezophiles (growth limited to 80-140 MPa) defines piezotolerant as the atmospheric-capable phenotype."}], "predicate_id": "METPO:2007700"}, "status": "formal_positive_source_limit", "assessment": "Local v8 confers permits process to trait and uses broad formal causal-node endpoints. The obligate-piezophile comparison citation does not automatically establish this causal assertion; source scope remains independently assessed."}, {"index": 2, "field": "causal_graphs[0].edges[2]", "record": {"subject": "hydrostatic_pressure", "predicate": "decreases", "object": "membrane_fluidity", "description": "High hydrostatic pressure compacts fatty acids, reducing membrane fluidity.", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "high hydrostatic pressure reduces membrane fluidity by compacting fatty acids"}], "predicate_id": "RO:0002212"}, "status": "confirmed_major", "assessment": "RO:0002212 inherits process/process from regulates. The current pressure condition and especially explicit membrane-fluidity QUALITY object are not process executions; the quality object independently anchors the range conflict."}, {"index": 3, "field": "causal_graphs[0].edges[3]", "record": {"subject": "membrane_fluidity", "predicate": "causes increase in", "object": "unsaturated_fatty_acids", "description": "Reduced membrane fluidity is countered by increasing unsaturated fatty acid proportions.", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "organisms counter HHP by increasing the proportions of unsaturated fatty acids"}]}, "status": "unbound_lexical_scope", "assessment": "Free lexical predicate has no imported domain/range. Do not infer RO constraints from its wording. Detailed causal direction or biological efficacy is outside this audit."}, {"index": 4, "field": "causal_graphs[0].edges[4]", "record": {"subject": "hydrostatic_pressure", "predicate": "increases abundance of", "object": "branched_unsaturated_fatty_acids", "description": "Membrane lipids with unsaturated and branched-chain fatty acids increase with rising pressure.", "evidence": [{"reference": "DOI:10.3389/fmolb.2022.1058381", "notes": "abundance of membrane lipids containing unsaturated and branched-chain fatty acids increases with increasing HHP"}]}, "status": "unbound_lexical_scope", "assessment": "No predicate_id; no imported endpoint defect established. Detailed lipid-response efficacy unassessed."}, {"index": 5, "field": "causal_graphs[0].edges[5]", "record": {"subject": "hydrostatic_pressure", "predicate": "induces transcription of", "object": "heat_shock_genes", "description": "Pressure shock transcriptionally upregulates key heat-shock genes.", "evidence": [{"reference": "DOI:10.3389/fmicb.2024.1470617", "notes": "key heat shock genes rpoH, rpoE, dnaK, and groEL are transcriptionally upregulated following pressure shock"}]}, "status": "unbound_lexical_scope", "assessment": "No predicate_id; the phrase refers to gene transcription while the current node groups protein products/regulators and carries gene-symbol metadata. Preserve this as a referent qualification, without a new mechanistic or type finding. Detailed pathogen pressure-survival biology unassessed."}, {"index": 6, "field": "causal_graphs[0].edges[6]", "record": {"subject": "hydrostatic_pressure", "predicate": "induces accumulation of", "object": "piezolyte_accumulation", "description": "High pressure induces accumulation of piezolytes (compatible solutes).", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "piezolytes are molecules that accumulate in cells in response to high pressure (e.g., glutamate, betaine, beta-hydroxybutyrate)"}]}, "status": "unbound_lexical_scope", "assessment": "No predicate_id; no invented imported domain or range. The stated accumulation process is coherent as a process referent; detailed efficacy unassessed."}, {"index": 7, "field": "causal_graphs[0].edges[7]", "record": {"subject": "piezolyte_accumulation", "predicate": "protects", "object": "protein_protection", "description": "Accumulated piezolytes protect proteins via preferential hydration under pressure.", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "compatible solutes act via preferential hydration to protect proteins"}]}, "status": "unbound_lexical_scope", "assessment": "No predicate_id; both descriptions denote processes. No forced material-product or executor interpretation; detailed protection efficacy unassessed."}]
+
+### Native checklist: generic environmental context and limits
+
+evidence: unknown. Targets: traitmech:000003.
+
+Assigned reviews support contextual lipid/fluidity and solute observations with taxon and condition exceptions. Edge1 nearest Colwellia causal support for the exact comparative-growth class remains UNKNOWN; no silent source transfer or extra finding. Detailed pressure-defense, fitness, AMR and intervention efficacy remain UNASSESSED_SCOPE.
+
+### Native checklist: NONMECHANISTIC applicability
+
+completeness: supported. Targets: traitmech:000003.
+
+One component, one reviewed label-only aggregate and zero instances are compatible with the declared contextual scope. No mandatory connector, pathway, protein instance, replacement canonical or experiment.
+
+### Native checklist: catalog applicability and declared query scope
+
+evidence: unknown. Targets: traitmech:000003.
+
+Neither canonical species nor checked aliases matches the retained 20-organism / 28-dataset catalog. E. coli species-level coverage exists with five datasets; exact strain/context is unestablished. Detailed pressure-defense/AMR module queries are outside the declared review scope and were not run. No global catalog-absence claim.
+
+### Native checklist: current and conditional writers
+
+provenance: supported. Targets: traitmech:000003.
+
+Current record and predicate mapping/shared grounder own imported assertions; nonempty IDs are skipped. Historical confers migration selects a different prior relation and does not repair current edges 0/2; shared fluidity normalization and sibling histories remain contextual.
+
+### Native checklist: bounded acceptance trace
+
+provenance: concern. Targets: traitmech:000003.
+
+Eight current events are all AI. Three whole context histories do not establish current-target human acceptance. Ignored-inclusive 204 matching paths/67 structured arrays/zero exact target arrays bound the gap; remote or private review is not ruled out.
+
+### Native checklist: actual checks and local preparation
+
+consistency: supported. Targets: traitmech:000003.
+
+All 449 inputs match; 374 proposal files are conservatively captured context, not a claim of full scientific reading. Native/strict and snippet retry pass, initial DNS failure remains optional. Actual B11 QC/B12 qualification/postcheck and local initialization are separate from pending B11 publication.
+
+## Findings
+
+### canonical-comparative-growth: Canonical examples use piezophily or recovery endpoints for a comparative-growth trait
+
+major / open / confirmed; issue key: piezotolerant-canonical-comparative-growth.
+
+The defining criterion is similar or faster atmospheric growth. Assigned SS9 evidence establishes piezophily, and the separately assigned review reports an elevated-pressure optimum. Assigned Shewanella evidence establishes recovery after exposure, a different measurement from growth during elevated pressure and rate ordering. Retain these true observations and strain limits while substantiating or qualifying membership; no claim about every strain or inability to grow under pressure.
+
+### imported-relation-roles: Imported process-regulation roles conflict with current condition and quality referents
+
+major / open / confirmed; issue key: piezotolerant-imported-relation-roles.
+
+RO:0002211 at edge 0 and inherited RO:0002212 at edge 2 require process subject and object. The current PATO-grounded ambient pressure is a condition/quality, not a pressure-change event; edge 2 additionally has an explicit fluidity QUALITY object. This grouped formal concern preserves generic pressure/fluidity observations and is not an enum-wide ban on environmental nodes.
+
+### literal-unit-format: Snippet changes the source unit notation
+
+minor / open / confirmed; issue key: piezotolerant-literal-unit-format.
+
+The record writes degrees C where the source abstract uses °C. All interval, optimum and temperature values are supported after normalization; only the maintained literal copied-span rule is implicated.
+
+### human-acceptance-link: Current reviewed status lacks a locally attributable acceptance link
+
+minor / open / confirmed; issue key: piezotolerant-human-acceptance-link.
+
+Eight AI events and three context histories do not identify current-target human acceptance. Ignored-inclusive 204 matching paths/67 parsed arrays/zero exact targets bound this traceability concern; no private or remote review absence claimed.
+
+## Recommended Actions And Acceptance Checks
+
+### qualify-canonical-membership
+
+Substantiate or qualify the two existing examples against the record comparative-growth criterion.
+
+- Preserve positive SS9 piezophily and Shewanella recovery observations with strain and measurement distinctions.
+- Do not transfer strain-specific facts across a species or infer absence of growth from body non-acquisition.
+- No replacement organism, pressure-survival protocol or optimized condition is prescribed.
+
+### reconcile-imported-roles
+
+Reconcile imported relations with the actual condition, quality and process referents during authorized curation.
+
+- Preserve supported generic environmental observations.
+- Respect nonempty-ID guards; mapping edits do not automatically replace current assertions.
+- No mechanism or intervention reconstruction.
+
+### restore-literal-format
+
+Use the actual source unit notation for the supported snippet.
+
+- Preserve all numerical values and source identity.
+
+### link-human-acceptance
+
+Link attributable acceptance if available or clarify status while preserving provenance.
+
+- Retain all eight AI events and bounded context-history/search evidence.
+- No contact or automatic status promotion authorized.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-piezotolerant-native | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-native.log; Executed 2026-10-21T21:03:02.715311+00:00 through 2026-10-21T21:03:03.589967+00:00; metadata piezotolerant-native.json | context_only | Successful schema validation; source and semantics separately assessed. |
+| check-piezotolerant-strict | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-strict.log; Executed 2026-10-21T21:03:02.715306+00:00 through 2026-10-21T21:03:03.635645+00:00; metadata piezotolerant-strict.json | context_only | Successful strict validation; no biological efficacy certification. |
+| check-piezotolerant-snippets | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets.log; Executed 2026-10-21T21:03:02.715446+00:00 through 2026-10-21T21:03:16.829436+00:00; metadata piezotolerant-snippets.json | context_only | DNS failure, exit2, retained separately from successful network retry; no completed-review failure inferred. |
+| check-piezotolerant-snippets-retry-network | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets-retry-network.log; Executed 2026-10-21T21:03:26.095055+00:00 through 2026-10-21T21:03:29.406141+00:00; metadata piezotolerant-snippets-retry-network.json | context_only | Two fields over two references: both NOT_IN_ABSTRACT. Actual body verifies first literally; Colwellia abstract supports second after explicit unit transcription. |
+| check-batch011-qc | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log; Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00; metadata batch011-qc.json | context_only | Actual B11 final QC at its original time, qualified against B12 bytes; independent of pending publication. |
+| record | data/traits/environment/piezotolerant.yaml; Entire current 223-line record | supports | Nine nodes, eight edges, two snippets, two canonicals and eight AI events covered. |
+| policy | docs/GROUNDING_POLICY.md; Captured maintained authority | supports | Referent-based formal roles and permitted reviewed protein aggregate. |
+| playbook | docs/CURATION_PLAYBOOK.md; Captured maintained authority | supports | Source scope, literal copied snippets and attributable acceptance. |
+| schema | src/traitmech/schema/traitmech.yaml; Captured maintained authority | supports | Current node facets and review contract. |
+| checklist | .claude/skills/curate-yaml-record/references/review-checklist.md; Captured maintained authority | supports | Whole-record identity, evidence, graph, provenance and readiness checks. |
+| reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json; Actual B11-to-B12 qualification | supports | Original outcomes and all current byte comparisons bound. |
+| reuse-postcheck | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json; Independent actual-output verification | supports | Actual output/hash postcheck; no new QC. |
+| local-init | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Local-only initialization on verified prior local commit; publication status remains separately documented, not asserted complete. |
+| capture | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/capture-verification.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All 449 inputs verified; conservative proposal discovery distinguished from actual readings. |
+| identity | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/identity-assessment.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Retained fallback, parent and active/deprecated/proposed distinctions. |
+| node-edges | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/node-edge-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All nine nodes/eight edges and one component; imported roles separate from biological efficacy. |
+| owners | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/owner-provenance-assessment.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Current/shared owners and guarded historical context; bounded human search. |
+| expression | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/expression-and-readiness-assessment.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Canonical catalog applicability and NONMECHANISTIC protein disposition. |
+| catalog-addendum | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/catalog-scope-addendum.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Canonical aliases unmatched; E. coli species catalog coverage exists, but detailed pressure-defense/AMR queries remain outside the declared review scope. |
+| authority-reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/authority-reuse-receipts.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Original taxonomy/catalog/runner receipts separate from current copies. |
+| local-authority | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/local-authority-excerpts.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Exact v5/v3/v8 proposals, maintained mappings and schema. |
+| ground-reading | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/reading-scope-receipt.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Actual selected primary/owner readings and three whole context histories, not direct target approval. |
+| ground-manifest | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/evidence-manifest.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Frozen 26 grounding artifacts verified. |
+| taxon-reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy74109-access.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Original Photobacterium request retained separately from current copy. |
+| taxon-failure | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy70863-access.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Initial Shewanella DNS failure, not a primary XML response. |
+| taxon-retry | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy70863-access-network-retry.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Successful fresh Shewanella official identity retry. |
+| metpo-primary | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl; Actual selected METPO XML | supports | Active broader pressure terms and obsolete lexical matches do not establish an exact current replacement; local v5 is separately sourced. |
+| ro-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db; Actual RO:0002211 and RO:0002212 inherited role rows | supports | Process/process role requirements assessed against the actual pressure condition and fluidity quality. |
+| pato-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/pato.db; Actual PATO0001025 rows | supports | Pressure physical quality supports the declared ambient condition identity; no process event inferred. |
+| proposal-v5-primary | proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv; Captured TSV row5 | supports | Proposed 1007602 lifts the fallback comparative-growth definition; not an active imported replacement. |
+| proposal-v3-primary | proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv; Captured TSV row8 | supports | Proposed 1007505 membrane fluidity is a quality. |
+| proposal-v8-primary | proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv; Captured TSV row3 | supports | Confers permits presence/activity/state contributors to a trait with broad formal endpoints. |
+| taxon-photobacterium | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxon74109.xml; Whole official taxonomy response; original successful request time | supports | Official species identity positive; type-strain aliases do not make SS9 the type strain or certify phenotype. |
+| taxon-shewanella | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxon70863-network-retry.xml; Whole official taxonomy response; original successful request time | supports | Official species identity and MR-1 aliases positive; no phenotype inferred. |
+| meta-membrane | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/membrane-metadata.json; Actual retained indexed metadata/abstract; original request time | supports | Actual review abstract describes non-universal lipid responses and pressure/temperature context; no full-body claim attributed to metadata. |
+| meta-colwellia | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/colwellia-metadata.json; Actual retained indexed metadata/abstract; original request time | supports | Actual primary abstract supports obligate 80–140 MPa range, optimum 120 at 6 °C; no causal support for the narrower piezotolerant class inferred. |
+| meta-piezolytes | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/piezolytes-metadata.json; Actual retained indexed metadata/abstract; original request time | supports | Actual review identity/abstract; selected body observations are separately bound. |
+| meta-canonical-photobacterium | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/canonical-photobacterium-metadata.json; Actual retained indexed metadata/abstract; original request time | supports | Actual primary abstract names SS9 as a piezophily model; no canonical primary-body inspection claimed. |
+| body-membrane | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/membrane.xml; Selected actual JATS body paragraphs, zero-based indices | supports | Selected definition paragraph 1 and generic lipid paragraphs 8/10/13; exceptions and temperature context retained. |
+| body-piezolytes | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/piezolytes.xml; Selected actual JATS body paragraphs, zero-based indices | supports | Selected paragraphs 17/26–28 support generic context and SS9 elevated-pressure optimum; detailed interventions excluded. |
+| meta-shewanella | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/shewanella-metadata.json; Actual fresh indexed response; bounded abstract/identity scope | supports | Actual abstract distinguishes recovery/survival after pressure exposure from growth-rate comparison during elevated pressure; no whole-paper absence or inability claim. |
+| meta-heatshock | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/heatshock-metadata.json; Actual fresh indexed response; bounded abstract/identity scope | supports | Source identity/status and attribution only. Detailed E. coli pressure-defense, fitness, AMR and intervention efficacy are UNASSESSED_SCOPE. |
+| body-shewanella | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/shewanella.xml; Actual article identity/abstract and existing endpoint conclusion only | supports | Positive recovery/survival observation concerns a different measurement from comparative growth; no pressure-survival method or efficacy development. |
+| sources | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-assessment.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Final six-work source audit; canonical group and snippet-format concern only. |
+| source-ledger | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All six identities and distinct abstract/body reading scopes. |
+| placements | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/placement-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All fourteen external placements and six grounding fields accounted for. |
+| snippets | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/snippet-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | One literal phrase and one supported unit transcription; numbers preserved. |
+| node-sources | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/node-source-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All nine source node contexts. |
+| edge-sources | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/edge-source-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All eight source edge contexts, scope exclusions and unknown nearest attribution. |
+| source-status | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/publication-status-ledger.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Actual indexed publication-status fields; bounded history checks. |
+| source-reading | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/selected-primary-reading.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Selected actual reading scopes; incidental excluded content not adopted. |
+| source-access | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/access-limitations.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Photo/Colwellia primary bodies not acquired/inspected; heat-shock body not acquired under declared scope. |
+| source-reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-reuse-receipt.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Original metadata/body acquisitions, prior failures and current copies remain distinct. |
+| canonical-scope | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/canonical-assessment.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Positive piezophily and recovery facts retained while narrow canonical membership is challenged. |
+| native-checks | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/native-check-context.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Native/strict pass and initial snippet DNS failure followed by successful retry. |
+| source-capture | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/final-capture-verification.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | All 449 captured inputs unchanged. |
+| source-manifest | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/evidence-manifest.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Thirty-five frozen source artifacts verified. |
+| root-reading-79 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/root-capture-identity-reading.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| root-reading-80 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/root-reading-attestation.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| root-reading-81 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/selected-primary-reading-supplement.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| root-reading-82 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/selected-primary-reading.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| root-reading-83 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/shewanella-conclusion-reading.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| root-reading-84 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/taxonomy-identity-reading.json; Derived audit or bounded reading/access receipt; primary bytes separately identified | supports | Only actual bounded root reading/observation scope; receipt hash is not an article-body hash. |
+| challenge | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-semantic-challenge-agent/semantic-severity-challenge.json; Final independent challenge | supports | Exact fields, disposition and bindings verified. |
+| adjudication | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-root-adjudication.json; Final root disposition | supports | Final findings and nonfindings control serialization. |
+
+## Limits And Additional Notes
+
+- Detailed pathogen pressure-defense, fitness, AMR, intervention efficacy and pressure-survival procedures are UNASSESSED_SCOPE; incidental displayed content is not adopted.
+- Definition directly supports a comparative growth-rate distinction. Broader node 0/graph atmospheric-capable shorthand and edge 1 nearest Colwellia causal attribution are limitations, not extra findings.
+- Positive SS9 piezophily and Shewanella recovery observations are retained with strain-specific scope; no claim that either entire species cannot grow under pressure or that all strains share an optimum.
+- Photobacterium and Colwellia primary bodies were not acquired/inspected. Shewanella actual abstract/endpoint text is distinguished from growth during elevated pressure; no paper-wide absence claim. Heat-shock body was not acquired under the declared scope.
+- Generic membrane/solute responses have taxon, temperature and condition qualifications; the contextual graph is not read as universal necessity. Five free lexical predicates are not assigned invented imported constraints.
+- Fallback/proposed 1007602 is not an imported active replacement; 374 proposal files are conservative capture context, with relevant exact v5/v3/v8 authorities selectively assessed.
+- Retained metadata 20:42:51, membrane 16:07, piezolyte 20:43 and Photobacterium taxonomy 20:44 retain original acquisitions; current source copies 21:04 and new source 21:03:58–59 / Shewanella taxonomy 21:04:45 requests are distinct. Prior and current DNS failures remain separate from successful retries.
+- Catalog canonical aliases are unmatched; E. coli species coverage exists but exact strain/context is unestablished, and detailed pressure-response queries were not run.
+- Actual prior QC, current qualification and local initialization do not assert B11 remote publication; publication remains separately documented.
+- Final root adjudication and independent challenge are pinned and verified. Preparation does not import or execute the serializer; root owns later execution, validation and save.
+- Coverage: six works/six forms, fourteen external placements, six grounding fields, nine nodes/eight edges, two canonicals, two snippets: one literal and one supported unit transcription.
+- No scientific record, native inventory, Git or sweep-state mutation by serializer preparation.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T211425Z-piezotolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of piezotolerant
+started_at: '2026-10-21T21:02:44.426350Z'
+finished_at: '2026-10-21T21:14:25Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and bounded root primary/owner readings. Generic environmental pressure physiology,
+    measurement distinctions, literal text and formal roles assessed. Detailed pathogen
+    pressure-defense, fitness, AMR and intervention efficacy are UNASSESSED_SCOPE.
+    No scientific record edited.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Final root disposition: two grouped majors for canonical measurement/classification
+  and imported roles, plus bounded snippet-format and human-acceptance minors.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/piezotolerant.yaml
+    sha256: 39c384c29f9ca7646a4f6c0533d317a8346703609e8c7634c517d4fb6c1546e9
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    sha256: 21f19561c0d4769e7acc62e05e41d0d395a0f239938f00829f79f2b9c3ac2510
+    role: context
+  - path: history/records/catalase_activity/2026-10-05T175622Z-codex-6ba7c0.yaml
+    sha256: 31b93b83a34985b2b653f8fe1308f0517d7d1b3a17c68783409ddb44ba1cdc6f
+    role: context
+  - path: history/records/dimethyl_sulfoxide_respiration/2026-09-15T025331Z-codex-7f5282.yaml
+    sha256: 0ea3d537d6fca6f2c0ce035768679307481e9ddfd3219470cdf1f8f4d536b637
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v13/metpo_proposal_classes_robot.tsv
+    sha256: 464907cc26c50ddf54956f19920899992f7df217273b3a2848d8edcb9a533365
+    role: context
+  - path: proposals/metpo_traitmech_v13/proposal.md
+    sha256: 70025cf614466334d1ab8a5e4d7822221fb2196287646bde4d934e2638e58a24
+    role: context
+  - path: proposals/metpo_traitmech_v14/metpo_proposal_classes_robot.tsv
+    sha256: 4f6537c15e8200ea90b90357287c8361c3b8c8e4e3d45ea10534a2faf64e9c78
+    role: context
+  - path: proposals/metpo_traitmech_v14/proposal.md
+    sha256: d740bb6762c3dc8e2fbe3f05436c9fcfa7421f105f24a358571b7779a026495a
+    role: context
+  - path: proposals/metpo_traitmech_v15/metpo_proposal_classes_robot.tsv
+    sha256: 2edc05384ecc64d388383b796df9be8a9d43db595316bb26e04287a013ace1c6
+    role: context
+  - path: proposals/metpo_traitmech_v15/proposal.md
+    sha256: 0f34f365d2bcd49d4ac1bef2c846cd6290a9fc5eb1a8cc8b4f6d435dadfe3cf6
+    role: context
+  - path: proposals/metpo_traitmech_v16/metpo_proposal_classes_robot.tsv
+    sha256: 4d7cc9b213f1fa2dddb943cf5626dd7bec14174a67c7cfe8cc09ac2ba93fc1b6
+    role: context
+  - path: proposals/metpo_traitmech_v16/proposal.md
+    sha256: 33090cc8c95ae99e6fa5882e42379a29763536dad70e54956db917e3ac86a265
+    role: context
+  - path: proposals/metpo_traitmech_v17/metpo_proposal_classes_robot.tsv
+    sha256: 23773da54f9d34f780e363f192f8287798914ca0553248c8af12eb7fb9589258
+    role: context
+  - path: proposals/metpo_traitmech_v17/proposal.md
+    sha256: d009fd19dce3778e351599c89504f6134de310312c9e1a49cd9b54e6d05b169a
+    role: context
+  - path: proposals/metpo_traitmech_v18/metpo_proposal_classes_robot.tsv
+    sha256: 8493587f2bb9458e15b77a2d62eda5e049a91f5d1e17bed0372f1ee91f3d7f3d
+    role: context
+  - path: proposals/metpo_traitmech_v18/proposal.md
+    sha256: 797d4a9f65d8a58a744be754491d839f5169e1af43a3145f3de5ea39143fb9ba
+    role: context
+  - path: proposals/metpo_traitmech_v19/metpo_proposal_classes_robot.tsv
+    sha256: 40354e79984bf01818b7fe4fb459da73ca80791f52b4b9be8ede00139f941884
+    role: context
+  - path: proposals/metpo_traitmech_v19/proposal.md
+    sha256: fc4ce76811db2eaf33371c844ac13067d49c94a2d2fcf87a0eb52be0885ba08a
+    role: context
+  - path: proposals/metpo_traitmech_v20/metpo_proposal_classes_robot.tsv
+    sha256: 64ae2beb7e909c9c32e1b8e03fa9b383a72bbe27a8993d3369e5c754cecf5020
+    role: context
+  - path: proposals/metpo_traitmech_v20/proposal.md
+    sha256: be3546199871a6df8625ba98c1e5a99e462c900267e23a1ee74c42c7bb3b04c2
+    role: context
+  - path: proposals/metpo_traitmech_v21/metpo_proposal_classes_robot.tsv
+    sha256: 5c0f7a571a74171eec2fe79697b449ed7d113a83885d067eac3e0e98f66c5843
+    role: context
+  - path: proposals/metpo_traitmech_v21/proposal.md
+    sha256: 160ccb56c7dca7b8038c15e7df602d407c93ae8c31e949161dc489e26521d199
+    role: context
+  - path: proposals/metpo_traitmech_v22/metpo_proposal_classes_robot.tsv
+    sha256: 915cd6887f6626272be0c4106c6d9a363971f327c5471a1f3ca84f6a867a6c79
+    role: context
+  - path: proposals/metpo_traitmech_v22/proposal.md
+    sha256: 93f17e927bfd9454ccb9d7b104f3982e107adbdca4ffca99d702141ea35e5a10
+    role: context
+  - path: proposals/metpo_traitmech_v23/metpo_proposal_classes_robot.tsv
+    sha256: 82c95a99bae63a1b9d83e9e6e2ae49ead240235414a62c2f6d44d99a69f7d96c
+    role: context
+  - path: proposals/metpo_traitmech_v23/proposal.md
+    sha256: 05d4d79435f6161685ed2c1c2dfcd43e0b7538dc027fac80014adb9142dfe791
+    role: context
+  - path: proposals/metpo_traitmech_v24/metpo_proposal_classes_robot.tsv
+    sha256: 9f0e6a3c1deeca047fca7ca8d696a964a71dc53d74e4f2693a297444cf8b7df7
+    role: context
+  - path: proposals/metpo_traitmech_v24/proposal.md
+    sha256: 646f27c57ba8dad77d1d50a1d967c38aaf1a390d6e8895646f59cfe6e748dabd
+    role: context
+  - path: proposals/metpo_traitmech_v25/metpo_proposal_classes_robot.tsv
+    sha256: 7f73ee9f7bd274f9ccd2b0348d83955910f49b8e5fee2424705e4dba58efbce2
+    role: context
+  - path: proposals/metpo_traitmech_v25/proposal.md
+    sha256: 3df0ce3f97fc89285e0f0c65e0f8b5713e34df115991c768f07339c052f8789a
+    role: context
+  - path: proposals/metpo_traitmech_v26/metpo_proposal_classes_robot.tsv
+    sha256: 7f7d39375ef93c3184c20b176386e59c4c7a08251ff0a1c4b5f85e87b1170134
+    role: context
+  - path: proposals/metpo_traitmech_v26/proposal.md
+    sha256: 198528c6b5d261a5e05deee12e05290c7015c57b55552c362407f1e3e5452b7f
+    role: context
+  - path: proposals/metpo_traitmech_v27/metpo_proposal_classes_robot.tsv
+    sha256: 51184ec3490e4d5c40d3500f4ae568f7a3e23ec3befffdbd63a1fd443bb8b4bd
+    role: context
+  - path: proposals/metpo_traitmech_v27/proposal.md
+    sha256: 56b838bb955fd51af3628e5abe26aab0654f156aa9e95031fca91dcb5e142ce5
+    role: context
+  - path: proposals/metpo_traitmech_v28/metpo_proposal_classes_robot.tsv
+    sha256: ddc8ddf010e726be1073a9dd1c8b10f7d2d3c8fea1f74b4b25c2eb8758a1da9e
+    role: context
+  - path: proposals/metpo_traitmech_v28/proposal.md
+    sha256: 117e84fe31ad7d9e57134a288e394c7e89f5dbf3ee7d09e6db3feebdaf119eb5
+    role: context
+  - path: proposals/metpo_traitmech_v29/metpo_proposal_classes_robot.tsv
+    sha256: b5b426c051662d0960108f38a0af0fd4f2e21ab771f4d8bf3482d78d4238f533
+    role: context
+  - path: proposals/metpo_traitmech_v29/proposal.md
+    sha256: 3ef6478c05bb5841720e17c715cd7090c88f9300090d447b010120a7b6aa11a5
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v3/proposal.md
+    sha256: 37be7b2c2efe0d1598d62b8df04f08262ba74b9d8068e010df6ee48069449067
+    role: context
+  - path: proposals/metpo_traitmech_v30/metpo_proposal_classes_robot.tsv
+    sha256: 362a84796929a29e4d1d958399f213acd0543bec7faa1b2350e45201a329cffe
+    role: context
+  - path: proposals/metpo_traitmech_v30/proposal.md
+    sha256: 0a52584bf7a749e4ec4c92bff0244e37eea4d63843539489c47f62c3cc4cc312
+    role: context
+  - path: proposals/metpo_traitmech_v31/metpo_proposal_classes_robot.tsv
+    sha256: fa9ce532c69fff0c45774077dd98bcd4e3740f1e5d75367a30c3b5fc965ddb14
+    role: context
+  - path: proposals/metpo_traitmech_v31/proposal.md
+    sha256: 4098f362f8ae5083ecdf1660016105a4bf1ce4b2ac3f9943b9f4f2d680c81db0
+    role: context
+  - path: proposals/metpo_traitmech_v32/metpo_proposal_classes_robot.tsv
+    sha256: 842e3aa1dbb27f9636b0da5e07932810f3114269fb2210e737d53657895f4fb8
+    role: context
+  - path: proposals/metpo_traitmech_v32/proposal.md
+    sha256: 759260c762fe1e8b39a3f960bddeee7be6ca254128a0ceca190f0f0867425431
+    role: context
+  - path: proposals/metpo_traitmech_v33/metpo_proposal_classes_robot.tsv
+    sha256: 6fd0773fd74b046fd7b6b486caf26afe8780b6ff558f50dd6f81d35c3494215b
+    role: context
+  - path: proposals/metpo_traitmech_v33/proposal.md
+    sha256: cbe06b9ed7197beca7a2ecc543278edce7dc06585d4d4befe8796396d8b55706
+    role: context
+  - path: proposals/metpo_traitmech_v34/metpo_proposal_classes_robot.tsv
+    sha256: 371338b53635b1756a5823dfc0f60646dc32839166c8668f7891e135456d018e
+    role: context
+  - path: proposals/metpo_traitmech_v34/proposal.md
+    sha256: 9320ad95fcbd0a148ffd401521c0ce456fb1c19a3eaf77ac0637c79a0798d600
+    role: context
+  - path: proposals/metpo_traitmech_v35/metpo_proposal_classes_robot.tsv
+    sha256: 1435896e6903420069db12c7ac299fc67c94df1efa1472c112730dc07c6bad1c
+    role: context
+  - path: proposals/metpo_traitmech_v35/proposal.md
+    sha256: 91462cb555c73fc832b7a5f18f9f02a1d15a8d0ad0715e31a97480d8632c7b94
+    role: context
+  - path: proposals/metpo_traitmech_v36/metpo_proposal_classes_robot.tsv
+    sha256: 74f2bff85238494b14e2b335d4e992af2cd3261fe7b8d61db5f7c1a6da1fe877
+    role: context
+  - path: proposals/metpo_traitmech_v36/proposal.md
+    sha256: c5cbf76e75df4179ce972ed9ebc3044dd7dc9364273517b8c29fd0963d39d629
+    role: context
+  - path: proposals/metpo_traitmech_v37/metpo_proposal_classes_robot.tsv
+    sha256: 56bb03296a458a7b7235d85f26a6aeddcfa0c714b013dd7d816ba9c0fcc60821
+    role: context
+  - path: proposals/metpo_traitmech_v37/proposal.md
+    sha256: ad8b631224227985bc7422e0d7b2f87ce96df855782ca31127629d2b76745529
+    role: context
+  - path: proposals/metpo_traitmech_v38/metpo_proposal_classes_robot.tsv
+    sha256: 44f797cf760577fa6e79e09033b7a6ce5b4e3a8cb2c9af8ab92f01be7f237842
+    role: context
+  - path: proposals/metpo_traitmech_v38/proposal.md
+    sha256: 9ba042ee29fbf5c4768c27b5d0f81a57bafb13ba6e0038b00f41c8df286cd4f2
+    role: context
+  - path: proposals/metpo_traitmech_v39/metpo_proposal_classes_robot.tsv
+    sha256: fba29e0f2a163e497eeaca9e6a851b68d70ca1edbce9da2fb4817d687b119782
+    role: context
+  - path: proposals/metpo_traitmech_v39/proposal.md
+    sha256: 46f60cd2ad42e415b4d6cde1e266fad2202f5acc133e12cfb3e09d1f6e45a2c2
+    role: context
+  - path: proposals/metpo_traitmech_v40/metpo_proposal_classes_robot.tsv
+    sha256: 5859b8fb6300f46cca75f7b883e728616d364e820e6dddf7d8daa8a8acb13dbc
+    role: context
+  - path: proposals/metpo_traitmech_v40/proposal.md
+    sha256: eee465f227e0dc5eb8c34e016a2622989a2fdb40eb56e566d8dcb02461126362
+    role: context
+  - path: proposals/metpo_traitmech_v405/metpo_proposal_classes_robot.tsv
+    sha256: 9bbd6a856960bf9d087efd9921b2496e2f3875af9a5a50b8c37a8d3783d831d3
+    role: context
+  - path: proposals/metpo_traitmech_v405/proposal.md
+    sha256: e41a1c3df2dc033fb9bc45005646094bab84bad1c727aec21b7cd73a4b889945
+    role: context
+  - path: proposals/metpo_traitmech_v41/metpo_proposal_classes_robot.tsv
+    sha256: a811c738f0873e5013c101e2c0c781703f23ffbf8ff36ed07d6143b669b34fcc
+    role: context
+  - path: proposals/metpo_traitmech_v41/proposal.md
+    sha256: 87630760fe9a5903ba370d0df88443efe21425652863f6561a1fa286fb69caab
+    role: context
+  - path: proposals/metpo_traitmech_v42/metpo_proposal_classes_robot.tsv
+    sha256: 721f848a04173a481506e444107ede5ceced1bfa7031065b49b1771dffb800b8
+    role: context
+  - path: proposals/metpo_traitmech_v42/proposal.md
+    sha256: 6d79dc79985a8ba33ef495b223a1ebe4c9627dcfd08255705a287b26f05e8818
+    role: context
+  - path: proposals/metpo_traitmech_v43/metpo_proposal_classes_robot.tsv
+    sha256: dbd99d083b30d96c2ab9653df5aaab19322a9b2eaeeffb4d649f6cf0655c3ae0
+    role: context
+  - path: proposals/metpo_traitmech_v43/proposal.md
+    sha256: 04cf1cdeeda32ea01a7d5945bcaf0259e3d41dbd7b86220895a5dff3d3941569
+    role: context
+  - path: proposals/metpo_traitmech_v44/metpo_proposal_classes_robot.tsv
+    sha256: f6898d2c3467aaf75df7069af137d39c2e26062dc474bc31ccbaca4aa05775ab
+    role: context
+  - path: proposals/metpo_traitmech_v44/proposal.md
+    sha256: a7b3f5a3e5c4b7167b5250b703bdb69a2eae3b91ed5ce9783d006444eb17063c
+    role: context
+  - path: proposals/metpo_traitmech_v45/metpo_proposal_classes_robot.tsv
+    sha256: dc4e282b9597e50317cdd77868bc6d6f5d19646e6555be65634062ae334c8e4e
+    role: context
+  - path: proposals/metpo_traitmech_v45/proposal.md
+    sha256: b31371f7aad430e8dde33df2215aa90ba05dd73e97055b36e6f8e7e4c669e4a4
+    role: context
+  - path: proposals/metpo_traitmech_v46/metpo_proposal_classes_robot.tsv
+    sha256: 79c81b2e0680e8f24dfee6e20d0e1dcff459287c7e69a5ce983bed11c47fefc3
+    role: context
+  - path: proposals/metpo_traitmech_v46/proposal.md
+    sha256: e85bdb1269a500c2c7556c846682674df12c1934cbe22aa5fb905666097eca0d
+    role: context
+  - path: proposals/metpo_traitmech_v47/metpo_proposal_classes_robot.tsv
+    sha256: fcacd598784282e497d4b8675eb1ab4733a6068c89358d7c4713ec43e09eadd8
+    role: context
+  - path: proposals/metpo_traitmech_v47/proposal.md
+    sha256: 66a89208cafd4d8675cef5c0308115ddddf4ad024847e1598fe847375bfa32f1
+    role: context
+  - path: proposals/metpo_traitmech_v471/metpo_proposal_classes_robot.tsv
+    sha256: c8eb184a32537c4e2f8ba52f1c276f41c8a1dc4698fc7fc5e4ee4b1d02294772
+    role: context
+  - path: proposals/metpo_traitmech_v471/proposal.md
+    sha256: 8956d4bdb9a1f677722fe523db5061120c781ed9a7c051a0d6a4589360111bdb
+    role: context
+  - path: proposals/metpo_traitmech_v472/metpo_proposal_classes_robot.tsv
+    sha256: 099487e58813772c74a864776caac04f97ca178bbdace9e815ce2fd0b8267216
+    role: context
+  - path: proposals/metpo_traitmech_v472/proposal.md
+    sha256: 09c111701a03399d36b2f7c3b952cd671a75f5fe67c9df238035c90460f89fd4
+    role: context
+  - path: proposals/metpo_traitmech_v474/metpo_proposal_classes_robot.tsv
+    sha256: 101b46bc3d7299b062c473e02cbc3727bd4f75d875cceb9f3079e90e16a60919
+    role: context
+  - path: proposals/metpo_traitmech_v474/proposal.md
+    sha256: a072579731cb69f04dbc9c27b6db7d09b81b78723c6f80814a95b3a418d20b23
+    role: context
+  - path: proposals/metpo_traitmech_v475/metpo_proposal_classes_robot.tsv
+    sha256: 7257de1f035630bb2660b22725e7a4cd9e4739f47521e8cea70e5436dcce8434
+    role: context
+  - path: proposals/metpo_traitmech_v475/proposal.md
+    sha256: 7eec7e13eef303f247a3d401a5ad88c1400edac33964ffa8b306551d0c0e009c
+    role: context
+  - path: proposals/metpo_traitmech_v476/metpo_proposal_classes_robot.tsv
+    sha256: 0ee393e9e07d629114044a924370d2885d52ad69aed5d887c50a7e84a8b42119
+    role: context
+  - path: proposals/metpo_traitmech_v476/proposal.md
+    sha256: 56872910ae52e6f24a7f757545405762e5d67e4f3a5fd1970348bb2748ac5bc8
+    role: context
+  - path: proposals/metpo_traitmech_v477/metpo_proposal_classes_robot.tsv
+    sha256: b17ae935e3a8e9a9d65ad0c41993b5bfa2e27b2b99c49a95e9d8879a0ee01290
+    role: context
+  - path: proposals/metpo_traitmech_v477/proposal.md
+    sha256: e6396aba077f3cbd0daa5a54dcfff6f040f253cc5350c1fd5faa2eea04944c88
+    role: context
+  - path: proposals/metpo_traitmech_v478/metpo_proposal_classes_robot.tsv
+    sha256: 17c9108564d78bed760ed219b88026265780df604a45db030bccf327aba7b9c5
+    role: context
+  - path: proposals/metpo_traitmech_v478/proposal.md
+    sha256: b0d45f07839b47bb336db6515c40a87f8d2cd8df6aa30109cfb8a8429b141c43
+    role: context
+  - path: proposals/metpo_traitmech_v479/metpo_proposal_classes_robot.tsv
+    sha256: 9ad767c23a2e1057bf318574d969950c6bfe5a6665258ca5685931c8dc06e48c
+    role: context
+  - path: proposals/metpo_traitmech_v479/proposal.md
+    sha256: 97f0090fc10650dbda7f1d636cb022fb3495a9d3dfee2f31c2292ab49a38f8ec
+    role: context
+  - path: proposals/metpo_traitmech_v48/metpo_proposal_classes_robot.tsv
+    sha256: 00310558bad6542c1a8b5f3d4359958165197f9c41b57300de8fb4705d49b710
+    role: context
+  - path: proposals/metpo_traitmech_v48/proposal.md
+    sha256: cfc6fea0c8d60e14451e6929690b47cb13e423b89ac884cd40bcd4af183720b3
+    role: context
+  - path: proposals/metpo_traitmech_v480/metpo_proposal_classes_robot.tsv
+    sha256: 90121fdadb2a82ffbbe6aed05ac7d6aee5eb07b833db6324520c60ee9e884780
+    role: context
+  - path: proposals/metpo_traitmech_v480/proposal.md
+    sha256: e882a87899db8cf494410acfc3b6a0e72dd50c6692e3ceee7aa406505379a4fe
+    role: context
+  - path: proposals/metpo_traitmech_v481/metpo_proposal_classes_robot.tsv
+    sha256: f4b2f7c99d22769c97174d18ffeebbc8fa5c56d670fd8591ba87fbf66de93888
+    role: context
+  - path: proposals/metpo_traitmech_v481/proposal.md
+    sha256: 4b4bd26271ffb1a7563bf2ca1564ac1f61aee1bc64d37b781f0ca82cf871e51f
+    role: context
+  - path: proposals/metpo_traitmech_v482/metpo_proposal_classes_robot.tsv
+    sha256: 94a84931d00a57aa9ce41238ec3b15dc37dfd6ae8de3735b14a1f6890b99fb8a
+    role: context
+  - path: proposals/metpo_traitmech_v482/proposal.md
+    sha256: 4e848b38c5c89d8b46ea255cfd77f1a58972c60bf3475b6bb2007cd26128018f
+    role: context
+  - path: proposals/metpo_traitmech_v483/metpo_proposal_classes_robot.tsv
+    sha256: c4a2f8b5c86a6b5994cf3bb3692d6b2fb3a974bbd4ea88bc6d28c301503ba4dc
+    role: context
+  - path: proposals/metpo_traitmech_v483/proposal.md
+    sha256: ddf780c1a58a1d8cb71b55cae3ffd2c892b8c0cb4ff9b067ba34073100e90698
+    role: context
+  - path: proposals/metpo_traitmech_v484/metpo_proposal_classes_robot.tsv
+    sha256: 91c0399ab2a5982dd361052182bb63d0b6b853557cb3b1afad72acc793685a7f
+    role: context
+  - path: proposals/metpo_traitmech_v484/proposal.md
+    sha256: 1f112734d59723936f8d95f03c97c0396a49092c7a68e4fbf2a9c62da5bfa4b9
+    role: context
+  - path: proposals/metpo_traitmech_v485/metpo_proposal_classes_robot.tsv
+    sha256: ae2b23855c79a44d2b96bb8437ba08986d7e7a3bd087b09d11bba8cae7031748
+    role: context
+  - path: proposals/metpo_traitmech_v485/proposal.md
+    sha256: f631b973455dff4e6fcae2aeeab89a27106f3ec42d5bbe42ef9e06773c449e15
+    role: context
+  - path: proposals/metpo_traitmech_v486/metpo_proposal_classes_robot.tsv
+    sha256: e839ebaa34795a9a43ea6541fcba762ccb0efbfd237bc9c0de7e3188fb112091
+    role: context
+  - path: proposals/metpo_traitmech_v486/proposal.md
+    sha256: 4175aa3334efbb75d7e37d3ec9d1e757678f9d81b0059b715ee5b35ba7ec67ce
+    role: context
+  - path: proposals/metpo_traitmech_v487/metpo_proposal_classes_robot.tsv
+    sha256: aed9da4687fee3099e04a292ea07e5d06b388dc012ba3c73d89ffb3672239dae
+    role: context
+  - path: proposals/metpo_traitmech_v487/proposal.md
+    sha256: e3268d7e07290a9548e8e50f5581b2116a63ad8c856bef1c0dcb8a99ae50d415
+    role: context
+  - path: proposals/metpo_traitmech_v488/metpo_proposal_classes_robot.tsv
+    sha256: 604b1a43431e724374693782437118cf62840d2510c69d2fe68d22e752b93b06
+    role: context
+  - path: proposals/metpo_traitmech_v488/proposal.md
+    sha256: 6458c7aea80aec3ab0ce4666aefb058b1963633f90a1c2b4e97cd27387365705
+    role: context
+  - path: proposals/metpo_traitmech_v489/metpo_proposal_classes_robot.tsv
+    sha256: 174774ed9d2664c09086feed62246037a0a22c27b3390cb437df6c01bc64ca10
+    role: context
+  - path: proposals/metpo_traitmech_v489/proposal.md
+    sha256: 7b3fa115d8fb500bc8a3b2db7a9fbdea301f5cfcc972d412d343f78d90afd732
+    role: context
+  - path: proposals/metpo_traitmech_v49/metpo_proposal_classes_robot.tsv
+    sha256: 5de54e137479a7140dbe2aa080f624b751b454bd071dfb615b09dcc2e7e6ea66
+    role: context
+  - path: proposals/metpo_traitmech_v49/proposal.md
+    sha256: b933d5d2395d95d4797cb65b278d557c09a2cf00e35d9b4a98979042c7da47cb
+    role: context
+  - path: proposals/metpo_traitmech_v490/metpo_proposal_classes_robot.tsv
+    sha256: 36cde0fc2f4df3e6e6ced361b2796cdf189f4df7a36eb834c4ca840af8fee6ce
+    role: context
+  - path: proposals/metpo_traitmech_v490/proposal.md
+    sha256: f08c8e97b47ea9bf60a2ad0c8ea560acbc61fe3bb74d7c174615d27e837d5f8c
+    role: context
+  - path: proposals/metpo_traitmech_v491/metpo_proposal_classes_robot.tsv
+    sha256: 0b38c54b6f1e449c16838438928a3a3bd398f10f410dbf133640bec42b190165
+    role: context
+  - path: proposals/metpo_traitmech_v491/proposal.md
+    sha256: 61c2b7ca4d24d34e17bb1df4bdddd90ffe28573277743dcb69f3595e4a5b03f9
+    role: context
+  - path: proposals/metpo_traitmech_v492/metpo_proposal_classes_robot.tsv
+    sha256: 223d8d6e419ea5d047ca56902649f75964ea74f810f66e0172626ab67bf7d78e
+    role: context
+  - path: proposals/metpo_traitmech_v492/proposal.md
+    sha256: 0251d34ee2bb813ed59b5840939746f76a9b8c89d887a88ac583481c2050518e
+    role: context
+  - path: proposals/metpo_traitmech_v493/metpo_proposal_classes_robot.tsv
+    sha256: 968fce1f40a2ed69a97a4485721ce62f914e997057f57f61ae4a936b49011467
+    role: context
+  - path: proposals/metpo_traitmech_v493/proposal.md
+    sha256: 2ee65b58f43ce6233c96460014b984fc3db63b7a5d67439d6d99eac784f46b2e
+    role: context
+  - path: proposals/metpo_traitmech_v494/metpo_proposal_classes_robot.tsv
+    sha256: 757e74ebec4046f3055572fff9884b0c3fa91f1fdf8dec7445629427aa0e6aee
+    role: context
+  - path: proposals/metpo_traitmech_v494/proposal.md
+    sha256: a138409f35c1b92b5285390b5d490aaf3a11c220a456869cb7e50f832d446167
+    role: context
+  - path: proposals/metpo_traitmech_v495/metpo_proposal_classes_robot.tsv
+    sha256: 58b64adc637c5bc9badaf07becb68a6ed21481cf7e3968bfc619e66259f83db8
+    role: context
+  - path: proposals/metpo_traitmech_v495/proposal.md
+    sha256: 7d84ff597c228876ee8fe6816eb6845dd4a9edfaf63df7677264e67bdfd13b8b
+    role: context
+  - path: proposals/metpo_traitmech_v496/metpo_proposal_classes_robot.tsv
+    sha256: 72fa65d85f46bb247ec2559e473e4c77b60adf80ef58e2e4bb16975a5e6b051a
+    role: context
+  - path: proposals/metpo_traitmech_v496/proposal.md
+    sha256: aeadfdc21c742f558a573f9e58819f7d4f0bc5e7a15e0452b76317dfbf1cca8b
+    role: context
+  - path: proposals/metpo_traitmech_v497/metpo_proposal_classes_robot.tsv
+    sha256: b728dce234e64ad0bdedc8ad03fbfcda8e303d04de488bd41636566dc41ea33e
+    role: context
+  - path: proposals/metpo_traitmech_v497/proposal.md
+    sha256: 2c10b3b92f549673f7016e8b58ccc92f72a40634b35a700dc405d65835d71fb6
+    role: context
+  - path: proposals/metpo_traitmech_v498/metpo_proposal_classes_robot.tsv
+    sha256: a71438742dc6b5cd360f9b40a65e469e447bf28b51f0391cfdc4bdebae25cb51
+    role: context
+  - path: proposals/metpo_traitmech_v498/proposal.md
+    sha256: c1689fd39021957785cc641b5d5765e7006ae3601e17e78b637289cfde4fb117
+    role: context
+  - path: proposals/metpo_traitmech_v499/metpo_proposal_classes_robot.tsv
+    sha256: 180c36191e4c2f85aa07ea6ce451fe8ed9adfdaa50d9983ff46ba4b50af61bcd
+    role: context
+  - path: proposals/metpo_traitmech_v499/proposal.md
+    sha256: a09fcc62193138755760616220a78bac9a148f439864ef27324ef5d55ae474e7
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v50/metpo_proposal_classes_robot.tsv
+    sha256: 5374ed49205cc2f75501a6b5c7e53d7c20d01be1b4350230498d97331f9d7f0b
+    role: context
+  - path: proposals/metpo_traitmech_v50/proposal.md
+    sha256: 8ac1b13427dc686871a02e3e4d2f63e4fc32607b0e394c3d2772c35b2449bd28
+    role: context
+  - path: proposals/metpo_traitmech_v500/metpo_proposal_classes_robot.tsv
+    sha256: a4befe1098427b62bb1bb3c7a5d6c6cca5ef5cdc64b242c749c890b1bba7259c
+    role: context
+  - path: proposals/metpo_traitmech_v500/proposal.md
+    sha256: 2eb0aa57065fcc84f7ecb01071ca73075fbabb960f067841fb598dbce0e085f2
+    role: context
+  - path: proposals/metpo_traitmech_v501/metpo_proposal_classes_robot.tsv
+    sha256: 435ee4d17c2e1a2dfcf94925806ab9cd22b75bdaaa955da2d6b1d01ca93f7bcf
+    role: context
+  - path: proposals/metpo_traitmech_v501/proposal.md
+    sha256: e45d832237f51303d4ce9e0b4293443575ef69bfc63556ddd132bdd2e754caf1
+    role: context
+  - path: proposals/metpo_traitmech_v502/metpo_proposal_classes_robot.tsv
+    sha256: 06fcc701991d46fa980efadce2e23003bf53915a1a1454959c46ec9c5c869244
+    role: context
+  - path: proposals/metpo_traitmech_v502/proposal.md
+    sha256: 3032698d844cb97741d9691165debf6c78dc3ac967a703e42bc203c8c809628a
+    role: context
+  - path: proposals/metpo_traitmech_v503/metpo_proposal_classes_robot.tsv
+    sha256: dba98229ad9302b349a5f3b3cb513d3abc2cf577e89c6047f18ee4f0cd1eca73
+    role: context
+  - path: proposals/metpo_traitmech_v503/proposal.md
+    sha256: 3ad194516b3b11d4a4c617acd2d8ef2998472b3e4ca5da11fcff890836c18703
+    role: context
+  - path: proposals/metpo_traitmech_v504/metpo_proposal_classes_robot.tsv
+    sha256: 4c690439d633f39e47648d581f74ca73f6597454e94ce07ed5d943ab4ef62d16
+    role: context
+  - path: proposals/metpo_traitmech_v504/proposal.md
+    sha256: 915054e4a77c61096eddd975e65766834a9a4d5fb42a04c0ba4201f9ff489a41
+    role: context
+  - path: proposals/metpo_traitmech_v505/metpo_proposal_classes_robot.tsv
+    sha256: d971ccfb18e9caa6c81883aa6d9b07d752f1a60b4857ae686eb5cbc0dc01222b
+    role: context
+  - path: proposals/metpo_traitmech_v505/proposal.md
+    sha256: b7c803ce7eac26da792c691939278cb8db7c2c161704b0c313bb7c91992bbbfc
+    role: context
+  - path: proposals/metpo_traitmech_v506/metpo_proposal_classes_robot.tsv
+    sha256: 5ea6ef58647efa72179b242b42e529725c736880048f9d559b3d2947ba1d2720
+    role: context
+  - path: proposals/metpo_traitmech_v506/proposal.md
+    sha256: 50742ff4aebfd3492fafc1e5e7a56689a94648bb44839fdbd9375999fe6c21e0
+    role: context
+  - path: proposals/metpo_traitmech_v507/metpo_proposal_classes_robot.tsv
+    sha256: 118cd6172b45552fe0568ac4aa2e458d5853b1da4f87e6459bda8f4ad8026fa5
+    role: context
+  - path: proposals/metpo_traitmech_v507/proposal.md
+    sha256: e6757723287c64920a00c6e1f7118fe63eae759610766bbbcc6e316409c9ac10
+    role: context
+  - path: proposals/metpo_traitmech_v508/metpo_proposal_classes_robot.tsv
+    sha256: 60fe6f984096e2982cc76de97cfb843ef899d8d0115e133203a08eda673be7d4
+    role: context
+  - path: proposals/metpo_traitmech_v508/proposal.md
+    sha256: 3430075fba3923d4662b941de3fbb0a6001394a20a366e94aadfbfce009bcfe3
+    role: context
+  - path: proposals/metpo_traitmech_v509/metpo_proposal_classes_robot.tsv
+    sha256: d8b73bf474f12aa77762e2c12b448d141c77639adbdca274b0c27c9356c56d75
+    role: context
+  - path: proposals/metpo_traitmech_v509/proposal.md
+    sha256: d9fe395b7dd4a3482ac8633ae0f78cd71bcc3c44397663a789b86f9b7977315d
+    role: context
+  - path: proposals/metpo_traitmech_v51/metpo_proposal_classes_robot.tsv
+    sha256: b129d58c839a0a790f84957fd4e0956447422376167515feed02b5091a5ad60c
+    role: context
+  - path: proposals/metpo_traitmech_v51/proposal.md
+    sha256: dcd200bf06d7d3521b7bd163d63d291b500a3dc5ecdf4a7af48aefdf842edfc3
+    role: context
+  - path: proposals/metpo_traitmech_v510/metpo_proposal_classes_robot.tsv
+    sha256: 651ca9d4f7c138361ca7952f81149f7c3f53eb886f0a0e4a02b66f994317c175
+    role: context
+  - path: proposals/metpo_traitmech_v510/proposal.md
+    sha256: 7570a43aa1f2f539a297e99122482f7e9e02b861b170a7403446f23a3b72fc1b
+    role: context
+  - path: proposals/metpo_traitmech_v511/metpo_proposal_classes_robot.tsv
+    sha256: ec27c55a8c11c3bbedd2db55aca5f9dcc6c24e79f060c4164dbb8bf7bb38326c
+    role: context
+  - path: proposals/metpo_traitmech_v511/proposal.md
+    sha256: 9d32c09880889e46a6a3286a2c0d5fe8c32c2797e4a310af292d56dd4bf7d938
+    role: context
+  - path: proposals/metpo_traitmech_v512/metpo_proposal_classes_robot.tsv
+    sha256: f2a5cb411a05712277fb670aead707421bfcae330395e825b30afcfecda347c3
+    role: context
+  - path: proposals/metpo_traitmech_v512/proposal.md
+    sha256: d76eed53f1d49ad2604a82aa77734852422a902a175714f25f9951185ed19fb4
+    role: context
+  - path: proposals/metpo_traitmech_v513/metpo_proposal_classes_robot.tsv
+    sha256: 5e5b1981954eff895b0de298873fcfebb65a905db4f2ef497bbe758a673ee4cd
+    role: context
+  - path: proposals/metpo_traitmech_v513/proposal.md
+    sha256: 05d9204b2d6622c6bec66c9f7ad2cf076759e6badb4add303e67b5f0b09563a5
+    role: context
+  - path: proposals/metpo_traitmech_v514/metpo_proposal_classes_robot.tsv
+    sha256: 87e7687d6255ea0865bcf00968af244b26cb4f9ab3bd2d5dac8797d027ca777b
+    role: context
+  - path: proposals/metpo_traitmech_v514/proposal.md
+    sha256: 1a21b90e2ee6d1d433830a5133e17888bde7688cdc68fbc782e9d3dbc622d8f3
+    role: context
+  - path: proposals/metpo_traitmech_v515/metpo_proposal_classes_robot.tsv
+    sha256: 34245a7820f7d4e78d87474f60f20f7334cbdc1e7c88ecd0fe7421d016e558db
+    role: context
+  - path: proposals/metpo_traitmech_v515/proposal.md
+    sha256: 349183b64f2058312766c3dafdf562e79cce797aa52f1123caa385b0ba9107bd
+    role: context
+  - path: proposals/metpo_traitmech_v516/metpo_proposal_classes_robot.tsv
+    sha256: c5f28925b2f9424c0c2474b913202d13542b2de5f9e7efe8ff7000b7ee060816
+    role: context
+  - path: proposals/metpo_traitmech_v516/proposal.md
+    sha256: 3025745884bd3a387739625d56f74cd3c17766727d62d3f3947e16f05b6b44f5
+    role: context
+  - path: proposals/metpo_traitmech_v517/metpo_proposal_classes_robot.tsv
+    sha256: ceb625290cc56ee3a560b81d68f961089f886476ce79ee2dd1a44d1ba5614474
+    role: context
+  - path: proposals/metpo_traitmech_v517/proposal.md
+    sha256: e13f4524cc92a50efe109301e4445e4d8b103ec44e23f1241755d5d14de44b6f
+    role: context
+  - path: proposals/metpo_traitmech_v518/metpo_proposal_classes_robot.tsv
+    sha256: 55adfdee3428d9e22c44abcaf7a9655f1d5c74f67d4e86b95b0e58e47b2bf935
+    role: context
+  - path: proposals/metpo_traitmech_v518/proposal.md
+    sha256: 7a98c2ec416bad6462ccef91609f622ed5cf043d340304a32fd645f37599113b
+    role: context
+  - path: proposals/metpo_traitmech_v519/metpo_proposal_classes_robot.tsv
+    sha256: 34c3fcd948812542d3f16ccaea326fb0e07f2663d9fcd691f7a773690954b2fc
+    role: context
+  - path: proposals/metpo_traitmech_v519/proposal.md
+    sha256: ba02ab1f2b92ccbc177bb527f970cd93c05798752932cccea9d5e1bc165a2a52
+    role: context
+  - path: proposals/metpo_traitmech_v52/metpo_proposal_classes_robot.tsv
+    sha256: ddb646d02181548ceede6b930125470770b30c6823cba97451a9187cf2be0fe0
+    role: context
+  - path: proposals/metpo_traitmech_v52/proposal.md
+    sha256: ec546ef7a2b6ec21eca609d62df855fe306d4820525fbcce627c68b13b40e342
+    role: context
+  - path: proposals/metpo_traitmech_v520/metpo_proposal_classes_robot.tsv
+    sha256: 65b5c24b366b868e3657dd80dfe2bec80375adbf41ca767913c12ac56e776703
+    role: context
+  - path: proposals/metpo_traitmech_v520/proposal.md
+    sha256: 0140130bb558ce8b5157f4895534a8d7b60850e14fa19d0674b07a81f5ef8c84
+    role: context
+  - path: proposals/metpo_traitmech_v521/metpo_proposal_classes_robot.tsv
+    sha256: 2a3ba91a60aa37635ef6461de62eece95cebb8426990e9ff9b7677d1db90f247
+    role: context
+  - path: proposals/metpo_traitmech_v521/proposal.md
+    sha256: 6db1f4db5504f47f66b1d7146e17287541f13d032b03da691b4acd9ae0fc45b4
+    role: context
+  - path: proposals/metpo_traitmech_v522/metpo_proposal_classes_robot.tsv
+    sha256: c90d78e62a73e8d14cf6bbdf071337c00e05342fc0dc7272bb56925335e80e2f
+    role: context
+  - path: proposals/metpo_traitmech_v522/proposal.md
+    sha256: 89852cabc8936f4634c08eb420f157fa9d983e0b3aff052cb99d19ed0c60d492
+    role: context
+  - path: proposals/metpo_traitmech_v523/metpo_proposal_classes_robot.tsv
+    sha256: 468d102013bf1a9048864971e7a0b7ca625732003736447457e870eb48226f48
+    role: context
+  - path: proposals/metpo_traitmech_v523/proposal.md
+    sha256: 348942b7357691f1eeac356edc5201275237eca796fbb5315efc8ed8909bde5e
+    role: context
+  - path: proposals/metpo_traitmech_v524/metpo_proposal_classes_robot.tsv
+    sha256: ce59001e471606cdaafcf6745d4436f8a1a136528cc23a3e510e1492b69a96f1
+    role: context
+  - path: proposals/metpo_traitmech_v524/proposal.md
+    sha256: ed7b581069f2954e0877b6e6d198f11cbbcf3236e1d2b6cc20bb65bc605c9b0a
+    role: context
+  - path: proposals/metpo_traitmech_v525/metpo_proposal_classes_robot.tsv
+    sha256: eddcb75efdcb8d29eea45d8bc09e742b92db0a915c728b0acbece35edbd29443
+    role: context
+  - path: proposals/metpo_traitmech_v525/proposal.md
+    sha256: 8a4dcbd03a94eff2ac139d5ce541eda4779c3e7fcbe6e7a84e739fae4d4a09cb
+    role: context
+  - path: proposals/metpo_traitmech_v526/metpo_proposal_classes_robot.tsv
+    sha256: d6c637efabd973af5af0ae1016a94738458defb563c03c56d53749eb47f73685
+    role: context
+  - path: proposals/metpo_traitmech_v526/proposal.md
+    sha256: 32cfaeb858c12a619852b00194699dd16017857a5b2220108c13bd2b65e72fe8
+    role: context
+  - path: proposals/metpo_traitmech_v527/metpo_proposal_classes_robot.tsv
+    sha256: 03b6794fde52631479c25502bccb9e769c63bfbe8217998b9736389cb1bd7728
+    role: context
+  - path: proposals/metpo_traitmech_v527/proposal.md
+    sha256: 5a03201ba19ed04e9dc7d15b9e41e233ca6c4f06bb26396c065cf81160037c30
+    role: context
+  - path: proposals/metpo_traitmech_v528/metpo_proposal_classes_robot.tsv
+    sha256: 2087ab10de7fbff14a8c574d036617d804569bce7148826e07d6694f4385ba2d
+    role: context
+  - path: proposals/metpo_traitmech_v528/proposal.md
+    sha256: 4bdc679acab08523af6958665c91b0f394ab0c66e07300552821b8c2c6882f79
+    role: context
+  - path: proposals/metpo_traitmech_v529/metpo_proposal_classes_robot.tsv
+    sha256: 713e904e0f75b3879be839ec5654e407f91a94230e07beb7d987ba48f05c1415
+    role: context
+  - path: proposals/metpo_traitmech_v529/proposal.md
+    sha256: ad976f9855889551ddd40bb8573f3ed327014254dae331ef11c7f5812bb03e26
+    role: context
+  - path: proposals/metpo_traitmech_v53/metpo_proposal_classes_robot.tsv
+    sha256: 830907d757410d91eebc6e287ddce6432fcb819465c000aea43fc2111ec2c6bd
+    role: context
+  - path: proposals/metpo_traitmech_v53/proposal.md
+    sha256: dd0c715f6e82fb48fb5b60a9c065aa9880cc2fddc3c4f21922d51aac2c6c29c9
+    role: context
+  - path: proposals/metpo_traitmech_v530/metpo_proposal_classes_robot.tsv
+    sha256: dc3525ff3a863abf47adaf241c00c0b01ab8fcfcb754e7970651d4f03a71ed84
+    role: context
+  - path: proposals/metpo_traitmech_v530/proposal.md
+    sha256: 8831316f16679af426636fe8565c5ee360be271e737506c7420e56c72020153e
+    role: context
+  - path: proposals/metpo_traitmech_v531/metpo_proposal_classes_robot.tsv
+    sha256: 3f3dbf0ec296330f33fea73015631770a10e157ff3aafa8c7606632cc4be3038
+    role: context
+  - path: proposals/metpo_traitmech_v531/proposal.md
+    sha256: 56318c233df4c9a462d70efcfe352688d734d54f356676233d5cf1dcee9e2279
+    role: context
+  - path: proposals/metpo_traitmech_v532/metpo_proposal_classes_robot.tsv
+    sha256: 2d66013a951ca40bb46e4c7319dda11e9b1537eab96e11f022bd89d03f568cdf
+    role: context
+  - path: proposals/metpo_traitmech_v532/proposal.md
+    sha256: 1bf44a012e497080dc64f4fedaf054801edece0c9ffb3db4a48a5cce8fe6459b
+    role: context
+  - path: proposals/metpo_traitmech_v533/metpo_proposal_classes_robot.tsv
+    sha256: f24cb4ef6aeba3608626d62b618d57ce06c18d3736c3981d54f986b8f72025d8
+    role: context
+  - path: proposals/metpo_traitmech_v533/proposal.md
+    sha256: 00dac30e523fd25a6a5f9e166acc0190bca636d7aea610498633b11e01252af0
+    role: context
+  - path: proposals/metpo_traitmech_v534/metpo_proposal_classes_robot.tsv
+    sha256: f5cb6ca143d00f6cde313ad81d418bb3f3efd9cf6873de3067f934d292bb005a
+    role: context
+  - path: proposals/metpo_traitmech_v534/proposal.md
+    sha256: aebfb9cd28dbd92e32ba70b778cf90eafb05d6eb18c283584be9ade4ec1f60ae
+    role: context
+  - path: proposals/metpo_traitmech_v535/metpo_proposal_classes_robot.tsv
+    sha256: 8c8c8f1b29e5d1e99db8ea57cbb5d35210f34ac18c741d607da1ee15904827ee
+    role: context
+  - path: proposals/metpo_traitmech_v535/proposal.md
+    sha256: b43fe92ebccb9cd0e3c5d074c2c696a179995d4a9ad35ddb27e1a3136e892cee
+    role: context
+  - path: proposals/metpo_traitmech_v536/metpo_proposal_classes_robot.tsv
+    sha256: 6cc93c87124da1c1c3fa2392dc1d61f981808580436188f230510af2153ca096
+    role: context
+  - path: proposals/metpo_traitmech_v536/proposal.md
+    sha256: 9332b25dd0e36d23f882c7294393c190855a124ccaac20b1bfc21bef20be7420
+    role: context
+  - path: proposals/metpo_traitmech_v537/metpo_proposal_classes_robot.tsv
+    sha256: 4255e1eec9226795bb6db95918e85946f39d83d42d9a102a09611b1727c5fd3e
+    role: context
+  - path: proposals/metpo_traitmech_v537/proposal.md
+    sha256: a69da990620af3f0b7f2bcbf1b9f4d29b198c32405c3324d63532029eedaa068
+    role: context
+  - path: proposals/metpo_traitmech_v538/metpo_proposal_classes_robot.tsv
+    sha256: a37a9c72313ee70254a98c3e2e7908d710596c039b4fc936cd5c3a6ca964101a
+    role: context
+  - path: proposals/metpo_traitmech_v538/proposal.md
+    sha256: 8ac90a6941d63c811012512c0f320b1839bfd8f8924cbbc1dcabf273d4e678d9
+    role: context
+  - path: proposals/metpo_traitmech_v539/metpo_proposal_classes_robot.tsv
+    sha256: a51cd77a410648bd6f443b06c5fd848eba20a31f9119dce033377d847e5379b8
+    role: context
+  - path: proposals/metpo_traitmech_v539/proposal.md
+    sha256: a10ba999b654f90af0bb3b0ce875668124bef631dbd2efcb4aa98ac30b66b688
+    role: context
+  - path: proposals/metpo_traitmech_v54/metpo_proposal_classes_robot.tsv
+    sha256: 75584d48351a4e30931582f5eeca869b06a7de678d14dea9ebdbfe80848455cf
+    role: context
+  - path: proposals/metpo_traitmech_v54/proposal.md
+    sha256: 192b9f1cb0c5733d2fe34205b4f3354fc1fb29d550d0bf580ea6a94528268c77
+    role: context
+  - path: proposals/metpo_traitmech_v540/metpo_proposal_classes_robot.tsv
+    sha256: 735f304ac12458027897e67d01d11884108f755b19126cd9af844ffb93c93a4e
+    role: context
+  - path: proposals/metpo_traitmech_v540/proposal.md
+    sha256: 1108942eaeafa4cd2c9ee52922fcfb001195599527ec7631d16566b969d2aefa
+    role: context
+  - path: proposals/metpo_traitmech_v541/metpo_proposal_classes_robot.tsv
+    sha256: a47b1584cdb3d9a3c4df508d0f394151ecbc4a5ef74030e5f324bc60abbd53fb
+    role: context
+  - path: proposals/metpo_traitmech_v541/proposal.md
+    sha256: 329473043130d73b8b62e00e176317d60af936208cff9f0834806f3554bd83be
+    role: context
+  - path: proposals/metpo_traitmech_v542/metpo_proposal_classes_robot.tsv
+    sha256: cdcb9e44b09f843b0afd417490ce607364f24e46fe8f8f0a9cdd15f37ba63b6b
+    role: context
+  - path: proposals/metpo_traitmech_v542/proposal.md
+    sha256: 5991ba6b2407e4f60432eced9b23cb99ac5f3d2a1464e1a4510379997993c8b0
+    role: context
+  - path: proposals/metpo_traitmech_v543/metpo_proposal_classes_robot.tsv
+    sha256: 6f33ae51a37be3d753b76f1803cc942bf99c296c3a1b6f3b8ac0e6c6f2b099c0
+    role: context
+  - path: proposals/metpo_traitmech_v543/proposal.md
+    sha256: 620c5f8dbab972520598e9b2f4f3e23e27d60594ab40398f5836a780026172ac
+    role: context
+  - path: proposals/metpo_traitmech_v544/metpo_proposal_classes_robot.tsv
+    sha256: 44861963e314a72ec4097367790182e488f63e99367284e52d8bab53fcb75b97
+    role: context
+  - path: proposals/metpo_traitmech_v544/proposal.md
+    sha256: cad990fd777080bd3e0baa65204fb326c0d572e6041578380582091eccd0abf8
+    role: context
+  - path: proposals/metpo_traitmech_v545/metpo_proposal_classes_robot.tsv
+    sha256: 3cf8550c9c8cd8de0889243b9343e446854c371b7ac450f465fb30ea439bbc7f
+    role: context
+  - path: proposals/metpo_traitmech_v545/proposal.md
+    sha256: 24b2ddd8bc2068c541c2f938f13b478f9a4bce90075ce71bb38b5a5dc1cc7ba5
+    role: context
+  - path: proposals/metpo_traitmech_v546/metpo_proposal_classes_robot.tsv
+    sha256: 6bd6ed6912a958d4f98a442b93618df59e39d9adcde2a23916c0e33ac557a381
+    role: context
+  - path: proposals/metpo_traitmech_v546/proposal.md
+    sha256: 05429e87928d7b346268bced6b4c2f1fa9821be089bdf2a3778915b8f9a80a93
+    role: context
+  - path: proposals/metpo_traitmech_v547/metpo_proposal_classes_robot.tsv
+    sha256: cea0d88eec7f36089d09522f9c118eb1cd2bf85fc7dc37df089dd91eb8ec6be9
+    role: context
+  - path: proposals/metpo_traitmech_v547/proposal.md
+    sha256: ad910fbdb475ef02c7863f136198b7ebb80f22598caa7769f8f12351648f4126
+    role: context
+  - path: proposals/metpo_traitmech_v548/metpo_proposal_classes_robot.tsv
+    sha256: 6c3a04192400e440fe5b579926a684e77b57ce76a9c9d885b87a3febcc0f1546
+    role: context
+  - path: proposals/metpo_traitmech_v548/proposal.md
+    sha256: 62d80123765f7a2e27d7a525fb5328c0f91ea50943d33445764e187e2555afcd
+    role: context
+  - path: proposals/metpo_traitmech_v549/metpo_proposal_classes_robot.tsv
+    sha256: 8ce0fc54ed338e2719b7a74d0a00dbfd436c25a9fc1347cb9bcc543c11a1987b
+    role: context
+  - path: proposals/metpo_traitmech_v549/proposal.md
+    sha256: 280f0eb439694568a08cc8c62a5249e5de5b4b3373eeda99058485051239f980
+    role: context
+  - path: proposals/metpo_traitmech_v55/metpo_proposal_classes_robot.tsv
+    sha256: ced5a5277154d8dab3de6addc968d124f1df2c2db2e7b15a6b483953d021aa2e
+    role: context
+  - path: proposals/metpo_traitmech_v55/proposal.md
+    sha256: 9fb452c8861aeb2f1ccc3d1a811139155ee5e8ec1cec0f7aecb2866e0f6fc971
+    role: context
+  - path: proposals/metpo_traitmech_v550/metpo_proposal_classes_robot.tsv
+    sha256: 0d30556a85e833d60d9dd73eb78f5a49d3fd3d4c5dc3a5037d19eb11373f0a4f
+    role: context
+  - path: proposals/metpo_traitmech_v550/proposal.md
+    sha256: 9e9c798db09daf3057e7de12a85a3fe19c24333f0311d1bb43f0f0aa8b00c35f
+    role: context
+  - path: proposals/metpo_traitmech_v551/metpo_proposal_classes_robot.tsv
+    sha256: 33c83f8c1cc5f8c060829ff295ecd11097aff596958891a74ff46cac9a9ea199
+    role: context
+  - path: proposals/metpo_traitmech_v551/proposal.md
+    sha256: 551ae7bade5b1161e05b3837e4d9622e4484050862b6128703b9549133fc6005
+    role: context
+  - path: proposals/metpo_traitmech_v552/metpo_proposal_classes_robot.tsv
+    sha256: 2a2cc9e9626715ef61eb0e79daf134c93254e4ad560421048888fd64515131dd
+    role: context
+  - path: proposals/metpo_traitmech_v552/proposal.md
+    sha256: 2dc4817aedf5fd96f1c547769fd0fd6625fe58feab2a8ea015915937571f4d00
+    role: context
+  - path: proposals/metpo_traitmech_v553/metpo_proposal_classes_robot.tsv
+    sha256: 0f8be47d14590b78ea6f4870bb8520e5a103f79e68d034e3c7a181008e135a86
+    role: context
+  - path: proposals/metpo_traitmech_v553/proposal.md
+    sha256: 230be9799b9886ac595c68b69a6b71aa36f78d64768d70f0ac150ecd35a8a1e2
+    role: context
+  - path: proposals/metpo_traitmech_v554/metpo_proposal_classes_robot.tsv
+    sha256: b400599974fda81ec1e645b7eddb807ccb2241616f1906999ecc0615144f90f4
+    role: context
+  - path: proposals/metpo_traitmech_v554/proposal.md
+    sha256: 2629b49d6b181945c068a20b27b228ee96b35f926cd99eebd732d2657f293388
+    role: context
+  - path: proposals/metpo_traitmech_v555/metpo_proposal_classes_robot.tsv
+    sha256: 89a6afe5a7b913fab7ef859dcebe1f34c54d73c9e72064ec6d450b010e126405
+    role: context
+  - path: proposals/metpo_traitmech_v555/proposal.md
+    sha256: e0545e8e47e33b77dba53fea432daac7a02b0635ae623d7d35c66237b3f84649
+    role: context
+  - path: proposals/metpo_traitmech_v556/metpo_proposal_classes_robot.tsv
+    sha256: 1748b08d2b6bd4010000866489b899b19a9689b1cfbaa7f2581878c3936809d1
+    role: context
+  - path: proposals/metpo_traitmech_v556/proposal.md
+    sha256: 9fc30c85d50bb5fe0ea7060a145fc91c75a8575ae7efb2edaea4940f356454c3
+    role: context
+  - path: proposals/metpo_traitmech_v557/metpo_proposal_classes_robot.tsv
+    sha256: 6b97e95b9a22b217902119868b7d0aec4d4cd73ea0126757774ae0ef134d03ed
+    role: context
+  - path: proposals/metpo_traitmech_v557/proposal.md
+    sha256: 463c76191f7136287f1efaca04aa7341134327c76d1a94cf3d8363846ef38344
+    role: context
+  - path: proposals/metpo_traitmech_v558/metpo_proposal_classes_robot.tsv
+    sha256: dad8ccb2031b4e7f518efa57ee3094a1137ff60af3fe5de783b0a6d8cd8d5655
+    role: context
+  - path: proposals/metpo_traitmech_v558/proposal.md
+    sha256: 12c05618afe97eb140bf296e529151f37a08a4b727fdfe13b309d141ed01e5de
+    role: context
+  - path: proposals/metpo_traitmech_v561/metpo_proposal_classes_robot.tsv
+    sha256: d90ecf4c6b1474ed0a747bae1e739dd9ff4341652d6e21ae46d1a44981a6fbc4
+    role: context
+  - path: proposals/metpo_traitmech_v561/proposal.md
+    sha256: b03bea346f061944ec3bdfcab12c4240c958a3e449545604c8418d16dc8495b5
+    role: context
+  - path: proposals/metpo_traitmech_v562/metpo_proposal_classes_robot.tsv
+    sha256: 50e16d7b91395e19a443ee890b6cfac2f2bce1c6a275f97632766e33531c6e6a
+    role: context
+  - path: proposals/metpo_traitmech_v562/proposal.md
+    sha256: 1217cb46d761675e427e6355b73725857ddda7e13ed7270555fefb6a0c142ad1
+    role: context
+  - path: proposals/metpo_traitmech_v563/metpo_proposal_classes_robot.tsv
+    sha256: a1992d20da565773865f746b7c7a4013eefaa3917b2305d74149430325300c39
+    role: context
+  - path: proposals/metpo_traitmech_v563/proposal.md
+    sha256: c15e20753739ea57831f4ee61618ba2f022fa66e39f5eda356893d4c74bc72a6
+    role: context
+  - path: proposals/metpo_traitmech_v564/metpo_proposal_classes_robot.tsv
+    sha256: 0ee6a5f53bebfebde58ee63e652430452143c89c53c06773e62224d81d6188af
+    role: context
+  - path: proposals/metpo_traitmech_v564/proposal.md
+    sha256: 9e57693bc431c35ee5703a87334fcfb6e41a22a9d13162df0b4f91de4842d617
+    role: context
+  - path: proposals/metpo_traitmech_v565/metpo_proposal_classes_robot.tsv
+    sha256: 9f0217b5512739d86cea61e7ed7e0126782801fdcc8db0af49c9260586930c3e
+    role: context
+  - path: proposals/metpo_traitmech_v565/proposal.md
+    sha256: 131e22178a9ffffa9922f9386df806329c5d7042651fdf34e588c6b7c629b424
+    role: context
+  - path: proposals/metpo_traitmech_v566/metpo_proposal_classes_robot.tsv
+    sha256: 86db04745500177cb68184b43b8d9e842c318875128a30b4eb0d37fd46cb995e
+    role: context
+  - path: proposals/metpo_traitmech_v566/proposal.md
+    sha256: 9200e3e4a67479d632cfe9fc479eccf1f31ee6aa36631baa45aadac3ce39bf40
+    role: context
+  - path: proposals/metpo_traitmech_v567/metpo_proposal_classes_robot.tsv
+    sha256: 9678756c4d662ba6715fa97eafe039a59305aff82c614d000ece572ee3328baa
+    role: context
+  - path: proposals/metpo_traitmech_v567/proposal.md
+    sha256: 7542dfa8807df4f8b61c16ebdf421c3727470498cb06e5508aa0e0b52be679d5
+    role: context
+  - path: proposals/metpo_traitmech_v568/metpo_proposal_classes_robot.tsv
+    sha256: 22c026c7bf29261c409efc51e346e9f2ed7aebcdd3e7571fdcd5afaa9c6bb937
+    role: context
+  - path: proposals/metpo_traitmech_v568/proposal.md
+    sha256: 15cda1e0de4e597de7c5bad5093bee11ddce80be388abac4cba8f7f75b519885
+    role: context
+  - path: proposals/metpo_traitmech_v569/metpo_proposal_classes_robot.tsv
+    sha256: 01e596d43828e0da4924f77ccbfca5b51e9daeeef82b5725101aaeadf965346e
+    role: context
+  - path: proposals/metpo_traitmech_v569/proposal.md
+    sha256: e21ebb3c998537fb164884627686de95c330c9a30f4ae3a5874aa37995782e4e
+    role: context
+  - path: proposals/metpo_traitmech_v570/metpo_proposal_classes_robot.tsv
+    sha256: 4fc8855214499446830bca7088f5a84b0f3080e64d872bb9de47234229f33edd
+    role: context
+  - path: proposals/metpo_traitmech_v570/proposal.md
+    sha256: 9bf324d02c79707411f474076c531fc9aee7002d0894a01cf584b5dc5c1b5b25
+    role: context
+  - path: proposals/metpo_traitmech_v571/metpo_proposal_classes_robot.tsv
+    sha256: 05fb6a0bc3606f0e7cb86701e8d606b4d72ab837406df9dd3ac1f2c46948aeea
+    role: context
+  - path: proposals/metpo_traitmech_v571/proposal.md
+    sha256: 3fc88124f774808b559c092ca727ec591ee1f62562b23886d25b41862f06ac0b
+    role: context
+  - path: proposals/metpo_traitmech_v572/metpo_proposal_classes_robot.tsv
+    sha256: 95fb8f4cf180165f3ee04d7e4979be9a1ca9e9602b05dfb00f0a62099fd7d3db
+    role: context
+  - path: proposals/metpo_traitmech_v572/proposal.md
+    sha256: 3fbea1ec09de8726ffcec37a830bb2a54faff2b6ae5984991ef5db40d9172607
+    role: context
+  - path: proposals/metpo_traitmech_v573/metpo_proposal_classes_robot.tsv
+    sha256: 3e5da53d97a12172b8cd5b5d1a0eb216e5b63b67533c34259c0d84231ff254d8
+    role: context
+  - path: proposals/metpo_traitmech_v573/proposal.md
+    sha256: 98596d01f3fad6aacd8988ac0e42cd63b44e4ca9664c5ba91418fccd78871d42
+    role: context
+  - path: proposals/metpo_traitmech_v574/metpo_proposal_classes_robot.tsv
+    sha256: 39d3023dfd89124bc16a3f7ddea08513638460766296f1cd7467e146c2e1bc3e
+    role: context
+  - path: proposals/metpo_traitmech_v574/proposal.md
+    sha256: fd569b4f31316ab1597f3e89251db83c77fd367801c97a1b3ba63d9cfb88e570
+    role: context
+  - path: proposals/metpo_traitmech_v575/metpo_proposal_classes_robot.tsv
+    sha256: 1a0841da3db71f25b847f9ca01e79dff1a43f867f1bb2b52afbf631daed9e482
+    role: context
+  - path: proposals/metpo_traitmech_v575/proposal.md
+    sha256: 40df9463dd9349e5dd93d3d1b9b5ea041b857abf9f7b86e1a6e7de06b2aaad45
+    role: context
+  - path: proposals/metpo_traitmech_v576/metpo_proposal_classes_robot.tsv
+    sha256: 823a29b72b79ae7364246e58b30e5f89933a3c67291bc4ec48f1118d1afb4f2d
+    role: context
+  - path: proposals/metpo_traitmech_v576/proposal.md
+    sha256: a200c36cf2b607c494897dff4ae6b4b8c8ad9ee68e9f4a5166f1af14434964a1
+    role: context
+  - path: proposals/metpo_traitmech_v577/metpo_proposal_classes_robot.tsv
+    sha256: f40fae967d1bad301f2022692079d96fb79bdddca96def0fc60d190408bd5d5a
+    role: context
+  - path: proposals/metpo_traitmech_v577/proposal.md
+    sha256: 905f8fc332c15d067cf1dc6ca38f6e80eee5ff27830178e6d62dd5e28245b1d0
+    role: context
+  - path: proposals/metpo_traitmech_v579/metpo_proposal_classes_robot.tsv
+    sha256: c80ac1be26de6369e65c88ae5cbdcb61e673f11a0153ceac3f6896b98b5df3e0
+    role: context
+  - path: proposals/metpo_traitmech_v579/proposal.md
+    sha256: 6cb99b036412d7ac95e6a7d0867b0ae2cbd609ddba74d5386ebdb3462007d90c
+    role: context
+  - path: proposals/metpo_traitmech_v580/metpo_proposal_classes_robot.tsv
+    sha256: 67fd19279ed6a72e789bf6d4fbfb35eec034c1862d1312fd728a0003e1802aa5
+    role: context
+  - path: proposals/metpo_traitmech_v580/proposal.md
+    sha256: 371e723e0a97e269c408764593485345c42403534b1a26788bed75b44a4dbed0
+    role: context
+  - path: proposals/metpo_traitmech_v581/metpo_proposal_classes_robot.tsv
+    sha256: ad040c5ee87f7aad042404a122ac44adc9df2dae21ac84e5dd121d97cf01ea61
+    role: context
+  - path: proposals/metpo_traitmech_v581/proposal.md
+    sha256: 78cb7dea7073ee37d74be0157cb65da0457f26e005dc40581cdc826e0bfeadfa
+    role: context
+  - path: proposals/metpo_traitmech_v582/metpo_proposal_classes_robot.tsv
+    sha256: 8b2b912b09fd49890f61224506b4b7295e4fba9569a8c74849c7f8d7fa22e825
+    role: context
+  - path: proposals/metpo_traitmech_v582/proposal.md
+    sha256: 1a4e6e0ce1e96041facb30e474cf54ed1d690a5a50043bbed8bd64fa78a6f2f8
+    role: context
+  - path: proposals/metpo_traitmech_v583/metpo_proposal_classes_robot.tsv
+    sha256: afc2f3b970d9bf0aaf53a8c6f01fe177c50b47347e032b4c8359b80410990d60
+    role: context
+  - path: proposals/metpo_traitmech_v583/proposal.md
+    sha256: 9157cc6f95ca27fb93b4322621e3b5b83b9c8a78b08084df6b9c05a6e7dc7072
+    role: context
+  - path: proposals/metpo_traitmech_v584/metpo_proposal_classes_robot.tsv
+    sha256: 819d5a1e2e6c68ba4786de5849a491c41b66d6287e1a85947946a4ba8ebd3ae1
+    role: context
+  - path: proposals/metpo_traitmech_v584/proposal.md
+    sha256: 83700a11daadc2c79e3ef994d2f7dabaefdb564bd3fdafcebfddd08e9278058a
+    role: context
+  - path: proposals/metpo_traitmech_v585/metpo_proposal_classes_robot.tsv
+    sha256: 2bb77eb078ff1a538f2b83f86180015885e24374c16245af503dc3c72c3d5933
+    role: context
+  - path: proposals/metpo_traitmech_v585/proposal.md
+    sha256: fb6e2f007255a138ab1a820ab79f14fd099aca4f0059ce97c999aa36c10e3796
+    role: context
+  - path: proposals/metpo_traitmech_v586/metpo_proposal_classes_robot.tsv
+    sha256: 818aaf5a28c59c602d0b7ad9d3728b89da1f017e983a8760d9463eccc8b7f851
+    role: context
+  - path: proposals/metpo_traitmech_v586/proposal.md
+    sha256: f9c74f6b69a0210cac6c23bcb78fdf8e4b73f584f21ad52c649c10c01f96cbaa
+    role: context
+  - path: proposals/metpo_traitmech_v587/metpo_proposal_classes_robot.tsv
+    sha256: 014010d8a37af494a84bb34d874c5cf59dc000e1ca56067f6710023294d9b921
+    role: context
+  - path: proposals/metpo_traitmech_v587/proposal.md
+    sha256: 3aae03e2ed9b358e3228cf90eadcc612b94a2bd12e24e2c1acc978eea865e19c
+    role: context
+  - path: proposals/metpo_traitmech_v588/metpo_proposal_classes_robot.tsv
+    sha256: 86842a9bbd8e8a4a30b55c85451afec59839e70d76083899bb28e4851708edb0
+    role: context
+  - path: proposals/metpo_traitmech_v588/proposal.md
+    sha256: 0e5fcca02bec25381bd0fe18f2d2ef4393fbcf678907e4c073874296e248a177
+    role: context
+  - path: proposals/metpo_traitmech_v589/metpo_proposal_classes_robot.tsv
+    sha256: 1955bce1c5be920e34126036e04bc93b8a2eb91a1d9fe09a6714417810aea236
+    role: context
+  - path: proposals/metpo_traitmech_v589/proposal.md
+    sha256: 75e9416498daac5be95efed611a86165d023819ecf4eec8962ffa0a064bd0631
+    role: context
+  - path: proposals/metpo_traitmech_v590/metpo_proposal_classes_robot.tsv
+    sha256: c4019de6e9ec8420292b99d73450aeabfc902c7e10f11a4aa08b902369ff370d
+    role: context
+  - path: proposals/metpo_traitmech_v590/proposal.md
+    sha256: bc19472ff40da3499688589344580939502e393e75887c6f3ba74846698217a1
+    role: context
+  - path: proposals/metpo_traitmech_v591/metpo_proposal_classes_robot.tsv
+    sha256: 070a7d007dd8bb303f962204a799ae997ce8da9bab5b39a509e6f61314914e98
+    role: context
+  - path: proposals/metpo_traitmech_v591/proposal.md
+    sha256: 18af5011341f6ff2eaf933a2bb7601f788d987c081421b2616939138f97bad0d
+    role: context
+  - path: proposals/metpo_traitmech_v592/metpo_proposal_classes_robot.tsv
+    sha256: 23f6cfba38d6eda9e072873420e5c53c04b99489c16bf523e99056733afb4648
+    role: context
+  - path: proposals/metpo_traitmech_v592/proposal.md
+    sha256: f4017204575d5810a12ad23d8f976e543dec5680785207f522f73d3d4aac9cea
+    role: context
+  - path: proposals/metpo_traitmech_v593/metpo_proposal_classes_robot.tsv
+    sha256: 1f61caba2b124b8da02f4e829677b51db1eaab99399bfec05498fa0e7175666a
+    role: context
+  - path: proposals/metpo_traitmech_v593/proposal.md
+    sha256: f53c5f5980d33b98c593c2aeec38228463fd6e51b7e4f441b4102fa0c5dd9342
+    role: context
+  - path: proposals/metpo_traitmech_v594/metpo_proposal_classes_robot.tsv
+    sha256: 139aa9f2a83b26a0310590010eab4ce9d07b743548ca7780c84ae3b98ddf0987
+    role: context
+  - path: proposals/metpo_traitmech_v594/proposal.md
+    sha256: 4b863ebfb0ace533262c2707bca76644f526ec01e99e5b58d313b38e689de442
+    role: context
+  - path: proposals/metpo_traitmech_v595/metpo_proposal_classes_robot.tsv
+    sha256: 772aa3a8e6f11cf589e6a96870f256d571f6c47d39c64d60b0c402e2537d309b
+    role: context
+  - path: proposals/metpo_traitmech_v595/proposal.md
+    sha256: 2cdd6f7e7c5453c6f5acc8641ed73eb3e091cbf9da987095b47100b469b4d971
+    role: context
+  - path: proposals/metpo_traitmech_v596/metpo_proposal_classes_robot.tsv
+    sha256: 9bb36361bbe4e236d43f919e4e7898e3babb56efb009ab9e671d7959c12592a2
+    role: context
+  - path: proposals/metpo_traitmech_v596/proposal.md
+    sha256: 93b2f8fa4a19a6a96d95039ec447f3f4375d74a998f6e6ee3423f547f5463191
+    role: context
+  - path: proposals/metpo_traitmech_v597/metpo_proposal_classes_robot.tsv
+    sha256: d6b20e121102d7fe4fcea0d0b950b72b48e27d30acc548ded91b2a6512073bf4
+    role: context
+  - path: proposals/metpo_traitmech_v597/proposal.md
+    sha256: 84a8c1970b684b82dd692b7134d2255a4fceebd4d3a5fe059b11229f9b1a868f
+    role: context
+  - path: proposals/metpo_traitmech_v598/metpo_proposal_classes_robot.tsv
+    sha256: fddb48be0dc3332068601d1c5354dc117e33bddf33faf6dac766084b50a3f7c5
+    role: context
+  - path: proposals/metpo_traitmech_v598/proposal.md
+    sha256: 19c7473186debec52847a658483efda5870047d3270120fa13aaebfdb7169a75
+    role: context
+  - path: proposals/metpo_traitmech_v599/metpo_proposal_classes_robot.tsv
+    sha256: e68c81d775941891d8c16f895c9ca5798e3daa5128ce13071a98725161768027
+    role: context
+  - path: proposals/metpo_traitmech_v599/proposal.md
+    sha256: fe537b4ed4a242adae69cf9c0e156e6e8e188733f1c9df3a49b5b3433f9a019d
+    role: context
+  - path: proposals/metpo_traitmech_v60/metpo_proposal_classes_robot.tsv
+    sha256: 0e25824cda3825ba753d09797f99d24e4168866aba4163a90bd43bc799579117
+    role: context
+  - path: proposals/metpo_traitmech_v60/proposal.md
+    sha256: 4f13604cc88343768b1611eeda527dcb12d0d68b13455deb67a0b38c9d6de987
+    role: context
+  - path: proposals/metpo_traitmech_v600/metpo_proposal_classes_robot.tsv
+    sha256: 31deac1a6df317782051c68332b0e65d44a05782a015584ef56f0edf7d6291e9
+    role: context
+  - path: proposals/metpo_traitmech_v600/proposal.md
+    sha256: 90bfcfed58e4bb064f603823b7d99e154abe1557b07ee1a8d18a7554e86d7021
+    role: context
+  - path: proposals/metpo_traitmech_v601/metpo_proposal_classes_robot.tsv
+    sha256: 421f536e6cb963aebd51538adfa86522fcb58cba9ebe867bdb4ced0da49a5f40
+    role: context
+  - path: proposals/metpo_traitmech_v601/proposal.md
+    sha256: b3f0ed4c2c28aec793bba3690cfb6922dbdc2f963f52a1af8e3970ed029821a4
+    role: context
+  - path: proposals/metpo_traitmech_v604/metpo_proposal_classes_robot.tsv
+    sha256: d6ff228db4e4814e7f789aff4b5958c0681514792e1f14e8c2cf48c5af293d13
+    role: context
+  - path: proposals/metpo_traitmech_v604/proposal.md
+    sha256: b5e96c8ab282fa1d31a87bf7b273a9442c1e7e11636fa6b519aae53332e01e1c
+    role: context
+  - path: proposals/metpo_traitmech_v605/metpo_proposal_classes_robot.tsv
+    sha256: 32cd061487da118a9349366f581f4064486dd0dec771027f4a7eb7f7585c4b25
+    role: context
+  - path: proposals/metpo_traitmech_v605/proposal.md
+    sha256: 2df4d3d587d1fa7db19d74263cf7a13bc4c91e394fc6334d22043008934ec833
+    role: context
+  - path: proposals/metpo_traitmech_v606/metpo_proposal_classes_robot.tsv
+    sha256: 8ed5281bf51e818afa9a78b24582122b1b67cf85e26cc9e95ab5a6e3ea044609
+    role: context
+  - path: proposals/metpo_traitmech_v606/proposal.md
+    sha256: bb93c063a2599bb54a2f6faa3b62e27ca65b6e3161d8489777270c824328ccdf
+    role: context
+  - path: proposals/metpo_traitmech_v607/metpo_proposal_classes_robot.tsv
+    sha256: 72af61de0c6d741f00271b48d1656ee47c313fbde38ce953b6cfb81c7a76aae3
+    role: context
+  - path: proposals/metpo_traitmech_v607/proposal.md
+    sha256: 161e52bf8f19987ff2af6e0340e8c303c49816be10adac942e1cbb2525624436
+    role: context
+  - path: proposals/metpo_traitmech_v608/metpo_proposal_classes_robot.tsv
+    sha256: 24a186fd10b1bd4c4729e86197cc7b5ab4824df57422912fce0bb8e55ca1f529
+    role: context
+  - path: proposals/metpo_traitmech_v608/proposal.md
+    sha256: 6300d9136eb51371c20609807efcb6ae4a3a5346a972ee8c60e672ea9662fb5b
+    role: context
+  - path: proposals/metpo_traitmech_v609/metpo_proposal_classes_robot.tsv
+    sha256: ed4a62de23eee33700a4f731cf2068335e715d2c6d5c35d9f63412c20dbe0737
+    role: context
+  - path: proposals/metpo_traitmech_v609/proposal.md
+    sha256: 86fb7454a9631408b5d58c1f538e886ff51a9403306784386bd5b81ece49ea70
+    role: context
+  - path: proposals/metpo_traitmech_v61/metpo_proposal_classes_robot.tsv
+    sha256: 72dad974e02ac8c58fa42153ead42d74aedd751ae1ae832f5198b96ac983fb1a
+    role: context
+  - path: proposals/metpo_traitmech_v61/proposal.md
+    sha256: 1a1cd40422cf5cd57586252b93d48d6335430482eb5555c305dfe00b04901588
+    role: context
+  - path: proposals/metpo_traitmech_v610/metpo_proposal_classes_robot.tsv
+    sha256: 77d0147f395fe730a2830a0e73a470f7e0cde0d27bc730fa2c7ac5434fc3d7f7
+    role: context
+  - path: proposals/metpo_traitmech_v610/proposal.md
+    sha256: 34cfd5bca4fee5bfe5ca15cdc322fc69dbdc3c73f5fab2998801db90a1740b4c
+    role: context
+  - path: proposals/metpo_traitmech_v611/metpo_proposal_classes_robot.tsv
+    sha256: bcb05dca3c188e249909b1cd902ea07a64047c4dae4d03d3c904e0c6aaafb0c2
+    role: context
+  - path: proposals/metpo_traitmech_v611/proposal.md
+    sha256: fd89ac9e07bfdca345b3250099b052ad047e4758e8b36ae3aff8005343ab9aca
+    role: context
+  - path: proposals/metpo_traitmech_v62/metpo_proposal_classes_robot.tsv
+    sha256: a07bb5272111e5bd73179015f8d36c65fbe1ad6091dfb1c3d968f58ccd779856
+    role: context
+  - path: proposals/metpo_traitmech_v62/proposal.md
+    sha256: 8d8db6fa082bdbcf88b5d3ede4ad310b3899e8fd1135192e6dfd4fc7c57d6189
+    role: context
+  - path: proposals/metpo_traitmech_v63/metpo_proposal_classes_robot.tsv
+    sha256: b91344d12ce1c8dd6bc35bc91d875dcb1148c86a5d961d46f5ae1e57d17cbbc8
+    role: context
+  - path: proposals/metpo_traitmech_v63/proposal.md
+    sha256: 098a2361a9638d68789c8fe7656145e5c178fa5d53892d3d59788acedd7a3b7f
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v7/proposal.md
+    sha256: bc6ea10ebc4bec0f446cee92578602889ec464295ce5ecce27fed76eb06528ce
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/piezotolerant-deep-research-falcon.md
+    sha256: 51ccdfe0b44c4d0337f66f0260a500314de63b6871eb2b9f4e78434841013d46
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_dimethyl_sulfoxide_respiration_trait.py
+    sha256: 264f3f634794ada4222faa9bf79507af9785585451c9b0f60a9dcb972de880aa
+    role: context
+  - path: scripts/add_ds_11_system_trait.py
+    sha256: e3a1148711f78eb77d54a87d1b6f77dc1bf1147319cc7e1cc179582e06be7a4f
+    role: context
+  - path: scripts/add_ds_2_system_trait.py
+    sha256: 9b3cb0f4a7ab70add6ed886ff265b58256254fe19123a33694d9f34d0b5540f5
+    role: context
+  - path: scripts/add_ds_37_system_trait.py
+    sha256: dd3d8d1ca601008e8a9a0c904b3183d42756d1441f6ac97caa6df5098aaea5e5
+    role: context
+  - path: scripts/add_homeoviscous_adaptation_trait.py
+    sha256: 1c757fd67bda18d2f4afb2fbf63d899844d416d084e2b9d53e298182ae2e4d09
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_mesophilic_graph_183.py
+    sha256: 3f1fa78321d7aa98dc2fedde9784e71ed60624a94f825bf3af1674753af56f85
+    role: context
+  - path: scripts/connect_temperature_delta_high_graph_183.py
+    sha256: ccbb1e6bb0e050d2975425914d6412fb3eb5812720407e1d143fbaae5a548bb7
+    role: context
+  - path: scripts/connect_temperature_delta_very_low_graph_183.py
+    sha256: 19eb2722de2fae0c76bf4c83b5f5b13f09841b17def22cdccb86d373711bf879
+    role: context
+  - path: scripts/connect_temperature_optimum_very_low_graph_183.py
+    sha256: 4749be5b5aacc87817ea013e587c41096e8a213c93dde74546f4906a0a08dc7e
+    role: context
+  - path: scripts/connect_temperature_range_mid4_graph_183.py
+    sha256: dd4b85888e88346adb515170c8fa37d542c7c7d9307d8a9fc63b22bdd6fb8b70
+    role: context
+  - path: scripts/connect_temperature_range_very_low_graph_183.py
+    sha256: 71755acb7ce3311fd473c8bef9a71dfed5fc6b8089b79cf33ea95cd5d1dad0a1
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/normalize_homeoviscous_nodes.py
+    sha256: 9b219161570aff3ca48bf79d7fac0fe0da0a629a32ce6ca60bee9b4b9d0f4bc9
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_mesophilic_graph_183.py
+    sha256: 46f9548808936268217a5e078fc1fa64d74cc2eeb69863ab6f3bb0da21e2b59c
+    role: context
+  - path: scripts/review_obligately_piezophilic_graph_183.py
+    sha256: d8fcbbb725162212cfce96bed9800e2cf08374170b7d929a1928248178111efb
+    role: context
+  - path: scripts/review_temperature_delta_high_graph_183.py
+    sha256: dcade5d2fdf07c76e06cd5d8abca898af95a8faabf70e45a62bebf951f2ae31b
+    role: context
+  - path: scripts/review_temperature_delta_very_low_graph_183.py
+    sha256: 1ac23973b6cf54861f6ae79afefe93e39cc9382a93c73c36a8daa37b376334d0
+    role: context
+  - path: scripts/review_temperature_optimum_very_low_graph_183.py
+    sha256: 17e41b0426e6c41a43e7624799cf35db9737ef372d3aeb3ea40ac0a2dce20869
+    role: context
+  - path: scripts/review_temperature_range_mid4_graph_183.py
+    sha256: 51611a8200146f1887831e5b2a49800151dc0b112d177853c3055dd442852a5a
+    role: context
+  - path: scripts/review_temperature_range_very_low_graph_183.py
+    sha256: 4a48e54f1e448c2a4f67088cce8ecfe248f81034faf7271ab272e45e9e2541d4
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000003
+  path: data/traits/environment/piezotolerant.yaml
+  label: piezotolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: First record of the actual locally initialized batch 012 queue. Whole
+    223-line target and all 449 captured inputs verified before assessment. The 374
+    proposal inputs are conservative discovery context; only relevant exact authorities
+    were substantively assessed. Local initialization at 21:02:18.445284 UTC does
+    not assert publication of batch 011.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000003
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000003
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000003
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: piezotolerant-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just validate data/traits/environment/piezotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-piezotolerant-native
+- check_id: piezotolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just validate-strict data/traits/environment/piezotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-piezotolerant-strict
+- check_id: piezotolerant-snippets
+  name: Initial focused snippet attempt
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000003
+  command: just verify-snippets --record data/traits/environment/piezotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets.tsv
+  exit_code: 2
+  expected_exit_code: 0
+  summary: DNS failure, exit2, retained separately from successful network retry;
+    no completed-review failure inferred.
+  evidence_ids:
+  - check-piezotolerant-snippets
+- check_id: piezotolerant-snippets-retry-network
+  name: Focused snippet network retry
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just verify-snippets --record data/traits/environment/piezotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets-retry-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Two fields over two references: both NOT_IN_ABSTRACT. Actual body verifies
+    first literally; Colwellia abstract supports second after explicit unit transcription.'
+  evidence_ids:
+  - check-piezotolerant-snippets-retry-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000003
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000003
+  summary: One reviewed label-only aggregate, zero instances; no forced UniProt accession
+    or detailed pressure-response query.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-piezotolerant-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-native.log
+  locator: Executed 2026-10-21T21:03:02.715311+00:00 through 2026-10-21T21:03:03.589967+00:00;
+    metadata piezotolerant-native.json
+  accessed_at: '2026-10-21T21:03:03.589967Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: da7f1f7c39a5e4a3a5eaf9f9b9c918f668140a040e596bb60d0e00beb2d9b210
+- evidence_id: check-piezotolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-strict.log
+  locator: Executed 2026-10-21T21:03:02.715306+00:00 through 2026-10-21T21:03:03.635645+00:00;
+    metadata piezotolerant-strict.json
+  accessed_at: '2026-10-21T21:03:03.635645Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: ee9a56ce1909431df1ab83dc8e479c9b922e73b82eec8d3616c64842e0a4f4a4
+- evidence_id: check-piezotolerant-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets.log
+  locator: Executed 2026-10-21T21:03:02.715446+00:00 through 2026-10-21T21:03:16.829436+00:00;
+    metadata piezotolerant-snippets.json
+  accessed_at: '2026-10-21T21:03:16.829436Z'
+  support: context_only
+  summary: DNS failure, exit2, retained separately from successful network retry;
+    no completed-review failure inferred.
+  snapshot_sha256: 0c114a5fe3101c6b9cc9d398a966d58e98ca99ef00a95ef82b1db5072bfb1170
+- evidence_id: check-piezotolerant-snippets-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-snippets-retry-network.log
+  locator: Executed 2026-10-21T21:03:26.095055+00:00 through 2026-10-21T21:03:29.406141+00:00;
+    metadata piezotolerant-snippets-retry-network.json
+  accessed_at: '2026-10-21T21:03:29.406141Z'
+  support: context_only
+  summary: 'Two fields over two references: both NOT_IN_ABSTRACT. Actual body verifies
+    first literally; Colwellia abstract supports second after explicit unit transcription.'
+  snapshot_sha256: db5f0a5fc6a55e24a072e52c09f608e7d6a516bd6641df7b3eb782808f1a7486
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/piezotolerant.yaml
+  locator: Entire current 223-line record
+  accessed_at: '2026-10-21T21:02:45.170057Z'
+  support: supports
+  summary: Nine nodes, eight edges, two snippets, two canonicals and eight AI events
+    covered.
+  snapshot_sha256: 39c384c29f9ca7646a4f6c0533d317a8346703609e8c7634c517d4fb6c1546e9
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T21:08:17.460389Z'
+  support: supports
+  summary: Referent-based formal roles and permitted reviewed protein aggregate.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T21:08:17.460389Z'
+  support: supports
+  summary: Source scope, literal copied snippets and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T21:08:17.460389Z'
+  support: supports
+  summary: Current node facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T21:08:17.460389Z'
+  support: supports
+  summary: Whole-record identity, evidence, graph, provenance and readiness checks.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and all current byte comparisons bound.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck; no new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Local-only initialization on verified prior local commit; publication status
+    remains separately documented, not asserted complete.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:03:18.325451Z'
+  support: supports
+  summary: All 449 inputs verified; conservative proposal discovery distinguished
+    from actual readings.
+  snapshot_sha256: 7b4a0adc629224b15e2c23dff73b200b1411a2e1a04de52f215665d7620a93db
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/identity-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.459157Z'
+  support: supports
+  summary: Retained fallback, parent and active/deprecated/proposed distinctions.
+  snapshot_sha256: 1688dd562b6d6b8d1356f0675920d6634c66777246836a89e8c8f3f59a02f9f9
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/node-edge-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.459578Z'
+  support: supports
+  summary: All nine nodes/eight edges and one component; imported roles separate from
+    biological efficacy.
+  snapshot_sha256: 7e76628867b5ba9461b317ee6547550dbd7f667c9c9eca72d78b7171349e3356
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.459835Z'
+  support: supports
+  summary: Current/shared owners and guarded historical context; bounded human search.
+  snapshot_sha256: d5441f0a886adcf20490f39178031f773e8e777dbe0d409ea2276da3090159b5
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/expression-and-readiness-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.460087Z'
+  support: supports
+  summary: Canonical catalog applicability and NONMECHANISTIC protein disposition.
+  snapshot_sha256: fcc91aa3b8c7ee40a3cf499378e70ab65e97e174194c6655597ca3d337c8be21
+- evidence_id: catalog-addendum
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/catalog-scope-addendum.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:56.314359Z'
+  support: supports
+  summary: Canonical aliases unmatched; E. coli species catalog coverage exists, but
+    detailed pressure-defense/AMR queries remain outside the declared review scope.
+  snapshot_sha256: 3e49726e5da33a32782d76110619d35dfbf00939bea34c2daa3090072b1f24c6
+- evidence_id: authority-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/authority-reuse-receipts.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:18.953941Z'
+  support: supports
+  summary: Original taxonomy/catalog/runner receipts separate from current copies.
+  snapshot_sha256: a7870582d0c1ae4ac9a81e7d23de6d2f386d02c60ba6f3274354e9a403b64dc8
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/local-authority-excerpts.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:18.939456Z'
+  support: supports
+  summary: Exact v5/v3/v8 proposals, maintained mappings and schema.
+  snapshot_sha256: 337fa3ed6becf3771c8b12eb50ad2f02558dc08acb29d28b4a59694a9289fbfe
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.460516Z'
+  support: supports
+  summary: Actual selected primary/owner readings and three whole context histories,
+    not direct target approval.
+  snapshot_sha256: 390094e61cfaa8af365a0dc998cd2813bf884f0b1d8782133baa10d858d68251
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:08:17.462576Z'
+  support: supports
+  summary: Frozen 26 grounding artifacts verified.
+  snapshot_sha256: 04600c40e4dcce0a69244261abcb67fb3a1720610b220860dd3fe58f29511d12
+- evidence_id: taxon-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy74109-access.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T20:44:50.500112Z'
+  support: supports
+  summary: Original Photobacterium request retained separately from current copy.
+  snapshot_sha256: 08c0782a2d49fdcae32482b6f1ffb2f48a393d197eee10c0468d7f276d3fbe0f
+- evidence_id: taxon-failure
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy70863-access.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:33.887552Z'
+  support: supports
+  summary: Initial Shewanella DNS failure, not a primary XML response.
+  snapshot_sha256: 135c8c6df2b3e6a5faf9a92a23cadcf46b0a6f68ed7e87326e62973ef64b2c39
+- evidence_id: taxon-retry
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxonomy70863-access-network-retry.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:45.736119Z'
+  support: supports
+  summary: Successful fresh Shewanella official identity retry.
+  snapshot_sha256: 0be841bc3fd2402645f66a392d3a0acb95e7b0fb0470011c58c30d0f9f1e59aa
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Actual selected METPO XML
+  accessed_at: '2026-10-21T21:04:18.865931Z'
+  support: supports
+  summary: Active broader pressure terms and obsolete lexical matches do not establish
+    an exact current replacement; local v5 is separately sourced.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Actual RO:0002211 and RO:0002212 inherited role rows
+  accessed_at: '2026-10-21T21:04:18.873738Z'
+  support: supports
+  summary: Process/process role requirements assessed against the actual pressure
+    condition and fluidity quality.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: pato-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/pato.db
+  locator: Actual PATO0001025 rows
+  accessed_at: '2026-10-21T21:04:18.877365Z'
+  support: supports
+  summary: Pressure physical quality supports the declared ambient condition identity;
+    no process event inferred.
+  snapshot_sha256: 179ab512b5c3a8827c74e2a496da575e2908a84740429deef265d58c9ce61d3b
+- evidence_id: proposal-v5-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Captured TSV row5
+  accessed_at: '2026-10-21T21:04:18.939456Z'
+  support: supports
+  summary: Proposed 1007602 lifts the fallback comparative-growth definition; not
+    an active imported replacement.
+  snapshot_sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+- evidence_id: proposal-v3-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+  locator: Captured TSV row8
+  accessed_at: '2026-10-21T21:04:18.939456Z'
+  support: supports
+  summary: Proposed 1007505 membrane fluidity is a quality.
+  snapshot_sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+- evidence_id: proposal-v8-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+  locator: Captured TSV row3
+  accessed_at: '2026-10-21T21:04:18.939456Z'
+  support: supports
+  summary: Confers permits presence/activity/state contributors to a trait with broad
+    formal endpoints.
+  snapshot_sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+- evidence_id: taxon-photobacterium
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxon74109.xml
+  locator: Whole official taxonomy response; original successful request time
+  accessed_at: '2026-10-21T20:44:50.500112Z'
+  support: supports
+  summary: Official species identity positive; type-strain aliases do not make SS9
+    the type strain or certify phenotype.
+  snapshot_sha256: b2a5ec08303e8ff4191e01fe10bc78b1202e248c155e14ecb9d34fdf1e39b656
+- evidence_id: taxon-shewanella
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-grounding-agent/taxon70863-network-retry.xml
+  locator: Whole official taxonomy response; original successful request time
+  accessed_at: '2026-10-21T21:04:45.736119Z'
+  support: supports
+  summary: Official species identity and MR-1 aliases positive; no phenotype inferred.
+  snapshot_sha256: 588fe8ef98828670083348f4797af13c5442be22ca5dfd6eb0bf30e34cddcbfd
+- evidence_id: meta-membrane
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/membrane-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.668312Z'
+  support: supports
+  summary: Actual review abstract describes non-universal lipid responses and pressure/temperature
+    context; no full-body claim attributed to metadata.
+  snapshot_sha256: 60b0dd82b02eddbe01f9944f485da11c5ea9e55ec36f65b501a3a78ba9b1e9b3
+- evidence_id: meta-colwellia
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/colwellia-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.694246Z'
+  support: supports
+  summary: Actual primary abstract supports obligate 80–140 MPa range, optimum 120
+    at 6 °C; no causal support for the narrower piezotolerant class inferred.
+  snapshot_sha256: e74a6f54136e6dcd2ab87b38d86de68e793d0dc28218b87b9f2bbd3ccd4103d2
+- evidence_id: meta-piezolytes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/piezolytes-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.672336Z'
+  support: supports
+  summary: Actual review identity/abstract; selected body observations are separately
+    bound.
+  snapshot_sha256: f841a93f68b50bd7d184e38aeaf8ed5ebc840e76fd6864c64cedfb77bff21881
+- evidence_id: meta-canonical-photobacterium
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/canonical-photobacterium-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.674562Z'
+  support: supports
+  summary: Actual primary abstract names SS9 as a piezophily model; no canonical primary-body
+    inspection claimed.
+  snapshot_sha256: 63ce9a9b5cca0d47aaa57a2e79c12b93a1aeac8baef3daa36dbf958b6cfe9788
+- evidence_id: body-membrane
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/membrane.xml
+  locator: Selected actual JATS body paragraphs, zero-based indices
+  accessed_at: '2026-10-21T16:07:35.045859Z'
+  support: supports
+  summary: Selected definition paragraph 1 and generic lipid paragraphs 8/10/13; exceptions
+    and temperature context retained.
+  snapshot_sha256: d8320b3073b404cd79da19795d94f02477ce8a34accb22809294e05d1e72c032
+- evidence_id: body-piezolytes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/piezolytes.xml
+  locator: Selected actual JATS body paragraphs, zero-based indices
+  accessed_at: '2026-10-21T20:43:59.908978Z'
+  support: supports
+  summary: Selected paragraphs 17/26–28 support generic context and SS9 elevated-pressure
+    optimum; detailed interventions excluded.
+  snapshot_sha256: b32571a4a2b468a959e4eb6d6b947576faa188eb3100daf47cc7840b23d2724e
+- evidence_id: meta-shewanella
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/shewanella-metadata.json
+  locator: Actual fresh indexed response; bounded abstract/identity scope
+  accessed_at: '2026-10-21T21:03:59.220195Z'
+  support: supports
+  summary: Actual abstract distinguishes recovery/survival after pressure exposure
+    from growth-rate comparison during elevated pressure; no whole-paper absence or
+    inability claim.
+  snapshot_sha256: 01b1f4f85f8cfdf6a346c40ea23aa056e9d80083ad15be3584cf854ce261a56f
+- evidence_id: meta-heatshock
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/heatshock-metadata.json
+  locator: Actual fresh indexed response; bounded abstract/identity scope
+  accessed_at: '2026-10-21T21:03:59.214203Z'
+  support: supports
+  summary: Source identity/status and attribution only. Detailed E. coli pressure-defense,
+    fitness, AMR and intervention efficacy are UNASSESSED_SCOPE.
+  snapshot_sha256: ddfdeb5dac570e9e53cb0c749597966c1921c4b84d0518d14af72002f8f6b828
+- evidence_id: body-shewanella
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/shewanella.xml
+  locator: Actual article identity/abstract and existing endpoint conclusion only
+  accessed_at: '2026-10-21T21:03:59.683991Z'
+  support: supports
+  summary: Positive recovery/survival observation concerns a different measurement
+    from comparative growth; no pressure-survival method or efficacy development.
+  snapshot_sha256: ea2b9f3dcc30f35e3aac6ffd5f8651752e5c41ddfb5a0e5a3722bffb803b8c7d
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:34.314820Z'
+  support: supports
+  summary: Final six-work source audit; canonical group and snippet-format concern
+    only.
+  snapshot_sha256: 7a234050056ef8f82d32bedc6ce9dca92a8df88e5ad72bff961a055d68856fa7
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.462316Z'
+  support: supports
+  summary: All six identities and distinct abstract/body reading scopes.
+  snapshot_sha256: a0f05aadf9f1082ca66deaeac2a54acfe06e45c7d57f47b2a142ee46d4144919
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/placement-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.463863Z'
+  support: supports
+  summary: All fourteen external placements and six grounding fields accounted for.
+  snapshot_sha256: d48f741faab48fac1f59376f48ecc1ad13ddc7548cf251791c33cec9bd0d9d16
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/snippet-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.464195Z'
+  support: supports
+  summary: One literal phrase and one supported unit transcription; numbers preserved.
+  snapshot_sha256: 9e0a6c7d8b657bd0be8472efda690e1979e1e262e5db0971e6c0b1e37a2ef59b
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/node-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.463051Z'
+  support: supports
+  summary: All nine source node contexts.
+  snapshot_sha256: e0d876bf623b4eae995ec1fc343db5fc9d9e4cd06b2a31eedd4ffa32fa0b3644
+- evidence_id: edge-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/edge-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.462874Z'
+  support: supports
+  summary: All eight source edge contexts, scope exclusions and unknown nearest attribution.
+  snapshot_sha256: 407fbbc38adeca047bbb4e0b2544a89e59412697285e96c818eec7e76db53c8d
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/publication-status-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.462627Z'
+  support: supports
+  summary: Actual indexed publication-status fields; bounded history checks.
+  snapshot_sha256: a15dbe89f447fb504396ab9c1423851d6869a127ecb55c6e9e8b83ea76f86859
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/selected-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.465721Z'
+  support: supports
+  summary: Selected actual reading scopes; incidental excluded content not adopted.
+  snapshot_sha256: 7f54ec83d3e85a5c0ad8afb728d53b998f3f16ff3814ff3a925b00a367d4741a
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/access-limitations.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.466106Z'
+  support: supports
+  summary: Photo/Colwellia primary bodies not acquired/inspected; heat-shock body
+    not acquired under declared scope.
+  snapshot_sha256: 14c9fb6bac4ea1c0de5fe0f9caae73b88566581b3678b68663656c6092ed9bbf
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/source-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:11.674820Z'
+  support: supports
+  summary: Original metadata/body acquisitions, prior failures and current copies
+    remain distinct.
+  snapshot_sha256: 259c4fef2ab9c78be4ca472848570f871910fde8dbd42d00b1f4a56448e5f0a6
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/canonical-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.463479Z'
+  support: supports
+  summary: Positive piezophily and recovery facts retained while narrow canonical
+    membership is challenged.
+  snapshot_sha256: 3f6c27ddefdec5434a0d16c3b1c40aebc7b34ab46cf48fc86d2a952aaeb32bc3
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/native-check-context.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.465449Z'
+  support: supports
+  summary: Native/strict pass and initial snippet DNS failure followed by successful
+    retry.
+  snapshot_sha256: 56e287c3f70737e2626b96b3ce45d19ab445580cc706a46fb71c3caf4fcf536f
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/final-capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:19.467758Z'
+  support: supports
+  summary: All 449 captured inputs unchanged.
+  snapshot_sha256: e172c572dc9aacaa5b9d9dd010e073f7043ec7b3c0b70e707b71707f858305ce
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:34.330114Z'
+  support: supports
+  summary: Thirty-five frozen source artifacts verified.
+  snapshot_sha256: 116e611c783b0b294dc5e73aab221296eec8da5269d7d875f620af00012fa139
+- evidence_id: root-reading-79
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/root-capture-identity-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:04:16.276980Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: cc84c921da2cce2905434a0c93a1abc639bc779b6deba2d364880da27bf171a1
+- evidence_id: root-reading-80
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/root-reading-attestation.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:06:37.345621Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 654664de928539a58450748ca5dcbf57447eac908ce35524bdec1874a81bb512
+- evidence_id: root-reading-81
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/selected-primary-reading-supplement.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:03:47.882134Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 401ab904f317773f124608374d3781e8e78b1cad1ed31d67c510b60e3d194dd6
+- evidence_id: root-reading-82
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/selected-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:03:40.967446Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 073077ed2e331f9ffd0e340424b75b009da659df45121940c3854942f269f357
+- evidence_id: root-reading-83
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/shewanella-conclusion-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:05:55.043567Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 9d3e736aba0b3521a36d202b43aad03614c5bab41fab21aa38d488496e829718
+- evidence_id: root-reading-84
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-source-root/taxonomy-identity-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:07:34.426442Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: ab91f39171d37a4663c515f8baf017d45f3ea31c5c1a9b304d6c9e2828139734
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T21:09:42.555466Z'
+  support: supports
+  summary: Exact fields, disposition and bindings verified.
+  snapshot_sha256: b5defce5ac00db2d20056e538554eb7b0d478cb11a8ef130aff1e14071368488
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/piezotolerant-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T21:10:23.598205Z'
+  support: supports
+  summary: Final findings and nonfindings control serialization.
+  snapshot_sha256: 88c8d5412c7311bfaeea40c5753d9fe69dc9a2024e2dc0f5c6c6f82adf7145a0
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback and synonym scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Retained traitmech:000003 distinguishes comparative atmospheric growth
+    from broader pressure tolerance and piezophily. Proposed 1007602 is an exact local
+    lift, not an imported replacement; related barotolerant is not exact-equivalence
+    metadata.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - proposal-v5-primary
+  - local-authority
+  - body-membrane
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: comparative pressure growth'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Assigned review directly defines piezotolerance by similar or faster atmospheric
+    growth relative to elevated pressure. Broad graph/node 0 shorthand remains a limitation,
+    not another finding.
+  evidence_ids:
+  - record
+  - sources
+  - body-membrane
+  - meta-membrane
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: parent and local authorities'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Active phenotype parent is appropriate. Exact v3 fluidity QUALITY and v8
+    confers are coherent; broad local endpoints do not waive imported RO requirements.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - proposal-v3-primary
+  - proposal-v8-primary
+  - local-authority
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: all assigned citations and placements'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Six works and fourteen external placements accounted for with explicit
+    access and scope limits. Metadata supports identity/abstract claims only; actual
+    bodies and original acquisitions are separately cited.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - source-status
+  - source-access
+  - source-reuse
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: literal unit-format fidelity'
+  outcome: concern
+  target_ids:
+  - traitmech:000003
+  summary: First snippet is literal in the assigned body. Second matches the Colwellia
+    observation after degrees C to °C normalization; numeric meaning is positive,
+    literal copied-span format differs. Native NOT_IN_ABSTRACT results are retained
+    unchanged.
+  evidence_ids:
+  - snippets
+  - body-membrane
+  - meta-colwellia
+  - playbook
+  - native-checks
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: comparison criterion versus reported endpoints'
+  outcome: concern
+  target_ids:
+  - traitmech:000003
+  summary: SS9 piezophily and its separately reported elevated-pressure optimum do
+    not substantiate the atmospheric-at-least-as-fast criterion. Shewanella MR-1 recovery
+    after pressure exposure is a distinct endpoint from growth-rate ordering. Preserve
+    both positive observations and strain limits; do not infer incapacity under pressure
+    or all-species uniformity.
+  evidence_ids:
+  - canonical-scope
+  - meta-canonical-photobacterium
+  - body-piezolytes
+  - meta-shewanella
+  - body-shewanella
+  - taxon-photobacterium
+  - taxon-shewanella
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all nine current referents'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Current pressure condition, fluidity quality, lipid classes and explicit
+    processes are coherent facets. Heat-shock symbols accompany a reviewed protein
+    aggregate; no forced accession, gene-as-protein defect or extra node 0 issue.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - pato-primary
+  - proposal-v3-primary
+  details: '[{"index": 0, "field": "causal_graphs[0].nodes[0]", "record": {"node_id":
+    "piezotolerant_trait", "label": "piezotolerant", "node_type": "TRAIT", "grounding":
+    "traitmech:000003", "description": "Growth across atmospheric and elevated hydrostatic
+    pressures."}, "assessment": "Self-grounded trait identity retained. Description
+    omits the comparative-growth qualification and is broader than the definition;
+    bounded wording limitation."}, {"index": 1, "field": "causal_graphs[0].nodes[1]",
+    "record": {"node_id": "hydrostatic_pressure", "label": "hydrostatic pressure",
+    "node_type": "ENVIRONMENTAL_FACTOR", "description": "Ambient hydrostatic pressure
+    imposed on the cell.", "grounding": "PATO:0001025"}, "assessment": "Explicit ambient
+    imposed hydrostatic pressure, close-grounded to PATO pressure quality. Condition
+    referent matters for imported process predicates; not an automatic ENVIRONMENTAL_FACTOR
+    error."}, {"index": 2, "field": "causal_graphs[0].nodes[2]", "record": {"node_id":
+    "membrane_adaptation", "label": "membrane lipid adaptation", "node_type": "BIOLOGICAL_PROCESS",
+    "description": "Adjustment of membrane lipid composition under varying pressure."},
+    "assessment": "Adjustment process explicitly described; BIOLOGICAL_PROCESS is
+    coherent. Detailed pressure adaptation efficacy unassessed."}, {"index": 3, "field":
+    "causal_graphs[0].nodes[3]", "record": {"node_id": "membrane_fluidity", "label":
+    "membrane fluidity", "node_type": "QUALITY", "description": "Fluidity of the cell
+    membrane lipid bilayer.", "grounding": "METPO:1007505"}, "assessment": "Membrane
+    fluidity is explicitly a quality under native semantics, exact v3 proposal and
+    current mapping; no retyping defect."}, {"index": 4, "field": "causal_graphs[0].nodes[4]",
+    "record": {"node_id": "unsaturated_fatty_acids", "label": "unsaturated membrane
+    fatty acids", "node_type": "CHEMICAL", "description": "Unsaturated fatty acids
+    incorporated into membrane lipids."}, "assessment": "Material lipid class; CHEMICAL
+    referent coherent. No compound-specific identifier asserted; detailed efficacy
+    unassessed."}, {"index": 5, "field": "causal_graphs[0].nodes[5]", "record": {"node_id":
+    "branched_unsaturated_fatty_acids", "label": "branched-chain and unsaturated membrane
+    fatty acids", "node_type": "CHEMICAL", "description": "Branched-chain and unsaturated
+    fatty acids enriched in membrane lipids under pressure."}, "assessment": "Material
+    lipid class; CHEMICAL referent coherent. No compound-specific identifier asserted;
+    detailed efficacy unassessed."}, {"index": 6, "field": "causal_graphs[0].nodes[6]",
+    "record": {"node_id": "heat_shock_genes", "grounding_status": "REVIEWED_LABEL_ONLY",
+    "grounding_notes": "Reviewed protein family, complex, or aggregate; no single
+    semantic family identifier exactly captures this node''s represented scope.",
+    "label": "heat-shock response proteins (RpoH, RpoE, DnaK, GroEL)", "node_type":
+    "GENE_OR_PROTEIN", "description": "Key heat-shock regulators and chaperones upregulated
+    after pressure shock.", "gene_symbols": ["rpoH", "rpoE", "dnaK", "groEL"]}, "assessment":
+    "Current label and description denote a heterogeneous protein/regulator/chaperone
+    aggregate. Gene-symbol metadata does not change the material protein referent.
+    REVIEWED_LABEL_ONLY is allowed; no forced single accession or token instance."},
+    {"index": 7, "field": "causal_graphs[0].nodes[7]", "record": {"node_id": "piezolyte_accumulation",
+    "label": "piezolyte accumulation", "node_type": "BIOLOGICAL_PROCESS", "description":
+    "Accumulation of compatible solutes (piezolytes) in response to high pressure."},
+    "assessment": "Accumulation process explicitly described; process facet coherent.
+    Detailed pressure-survival efficacy unassessed."}, {"index": 8, "field": "causal_graphs[0].nodes[8]",
+    "record": {"node_id": "protein_protection", "label": "protein protection under
+    pressure", "node_type": "BIOLOGICAL_PROCESS", "description": "Stabilization/protection
+    of proteins under elevated hydrostatic pressure."}, "assessment": "Stabilization/protection
+    process explicitly described; process facet coherent. Detailed efficacy unassessed."}]'
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all eight relation roles'
+  outcome: concern
+  target_ids:
+  - traitmech:000003
+  summary: 'Imported RO:0002211/2212 require process/process roles: current edge 0
+    pressure condition is not a process; edge 2 additionally has an independently
+    decisive fluidity-quality object. Confers process-to-trait is formally allowed,
+    and five free lexical predicates do not inherit RO constraints. No enum-wide environmental-factor
+    prohibition.'
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - local-authority
+  - owners
+  - challenge
+  - adjudication
+  details: '[{"index": 0, "field": "causal_graphs[0].edges[0]", "record": {"subject":
+    "hydrostatic_pressure", "predicate": "regulates", "object": "membrane_adaptation",
+    "description": "Hydrostatic pressure modulates membrane fluidity, prompting adaptive
+    lipid composition.", "evidence": [{"reference": "DOI:10.3389/fmolb.2022.1058381",
+    "notes": "HHP adaptation involves unsaturated and branched-chain fatty acids."}],
+    "predicate_id": "RO:0002211"}, "status": "confirmed_major", "assessment": "RO:0002211
+    directly requires process subject and object. The actual pressure subject is an
+    ambient physical quality/condition, not an execution process. A pressure-change
+    event could be modeled differently, but that is not the current grounded referent."},
+    {"index": 1, "field": "causal_graphs[0].edges[1]", "record": {"subject": "membrane_adaptation",
+    "predicate": "confers", "object": "piezotolerant_trait", "description": "Membrane
+    adaptation supports growth across the pressure range atmospheric ↔ high.", "evidence":
+    [{"reference": "DOI:10.1099/ijsem.0.001671", "notes": "Contrast with obligate
+    piezophiles (growth limited to 80-140 MPa) defines piezotolerant as the atmospheric-capable
+    phenotype."}], "predicate_id": "METPO:2007700"}, "status": "formal_positive_source_limit",
+    "assessment": "Local v8 confers permits process to trait and uses broad formal
+    causal-node endpoints. The obligate-piezophile comparison citation does not automatically
+    establish this causal assertion; source scope remains independently assessed."},
+    {"index": 2, "field": "causal_graphs[0].edges[2]", "record": {"subject": "hydrostatic_pressure",
+    "predicate": "decreases", "object": "membrane_fluidity", "description": "High
+    hydrostatic pressure compacts fatty acids, reducing membrane fluidity.", "evidence":
+    [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "high hydrostatic
+    pressure reduces membrane fluidity by compacting fatty acids"}], "predicate_id":
+    "RO:0002212"}, "status": "confirmed_major", "assessment": "RO:0002212 inherits
+    process/process from regulates. The current pressure condition and especially
+    explicit membrane-fluidity QUALITY object are not process executions; the quality
+    object independently anchors the range conflict."}, {"index": 3, "field": "causal_graphs[0].edges[3]",
+    "record": {"subject": "membrane_fluidity", "predicate": "causes increase in",
+    "object": "unsaturated_fatty_acids", "description": "Reduced membrane fluidity
+    is countered by increasing unsaturated fatty acid proportions.", "evidence": [{"reference":
+    "DOI:10.3390/microorganisms11071629", "notes": "organisms counter HHP by increasing
+    the proportions of unsaturated fatty acids"}]}, "status": "unbound_lexical_scope",
+    "assessment": "Free lexical predicate has no imported domain/range. Do not infer
+    RO constraints from its wording. Detailed causal direction or biological efficacy
+    is outside this audit."}, {"index": 4, "field": "causal_graphs[0].edges[4]", "record":
+    {"subject": "hydrostatic_pressure", "predicate": "increases abundance of", "object":
+    "branched_unsaturated_fatty_acids", "description": "Membrane lipids with unsaturated
+    and branched-chain fatty acids increase with rising pressure.", "evidence": [{"reference":
+    "DOI:10.3389/fmolb.2022.1058381", "notes": "abundance of membrane lipids containing
+    unsaturated and branched-chain fatty acids increases with increasing HHP"}]},
+    "status": "unbound_lexical_scope", "assessment": "No predicate_id; no imported
+    endpoint defect established. Detailed lipid-response efficacy unassessed."}, {"index":
+    5, "field": "causal_graphs[0].edges[5]", "record": {"subject": "hydrostatic_pressure",
+    "predicate": "induces transcription of", "object": "heat_shock_genes", "description":
+    "Pressure shock transcriptionally upregulates key heat-shock genes.", "evidence":
+    [{"reference": "DOI:10.3389/fmicb.2024.1470617", "notes": "key heat shock genes
+    rpoH, rpoE, dnaK, and groEL are transcriptionally upregulated following pressure
+    shock"}]}, "status": "unbound_lexical_scope", "assessment": "No predicate_id;
+    the phrase refers to gene transcription while the current node groups protein
+    products/regulators and carries gene-symbol metadata. Preserve this as a referent
+    qualification, without a new mechanistic or type finding. Detailed pathogen pressure-survival
+    biology unassessed."}, {"index": 6, "field": "causal_graphs[0].edges[6]", "record":
+    {"subject": "hydrostatic_pressure", "predicate": "induces accumulation of", "object":
+    "piezolyte_accumulation", "description": "High pressure induces accumulation of
+    piezolytes (compatible solutes).", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629",
+    "notes": "piezolytes are molecules that accumulate in cells in response to high
+    pressure (e.g., glutamate, betaine, beta-hydroxybutyrate)"}]}, "status": "unbound_lexical_scope",
+    "assessment": "No predicate_id; no invented imported domain or range. The stated
+    accumulation process is coherent as a process referent; detailed efficacy unassessed."},
+    {"index": 7, "field": "causal_graphs[0].edges[7]", "record": {"subject": "piezolyte_accumulation",
+    "predicate": "protects", "object": "protein_protection", "description": "Accumulated
+    piezolytes protect proteins via preferential hydration under pressure.", "evidence":
+    [{"reference": "DOI:10.3390/microorganisms11071629", "notes": "compatible solutes
+    act via preferential hydration to protect proteins"}]}, "status": "unbound_lexical_scope",
+    "assessment": "No predicate_id; both descriptions denote processes. No forced
+    material-product or executor interpretation; detailed protection efficacy unassessed."}]'
+- assessment_id: biology
+  area: evidence
+  topic: 'Native checklist: generic environmental context and limits'
+  outcome: unknown
+  target_ids:
+  - traitmech:000003
+  summary: Assigned reviews support contextual lipid/fluidity and solute observations
+    with taxon and condition exceptions. Edge1 nearest Colwellia causal support for
+    the exact comparative-growth class remains UNKNOWN; no silent source transfer
+    or extra finding. Detailed pressure-defense, fitness, AMR and intervention efficacy
+    remain UNASSESSED_SCOPE.
+  evidence_ids:
+  - edge-sources
+  - source-reading
+  - source-access
+  - body-membrane
+  - body-piezolytes
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: NONMECHANISTIC applicability'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: One component, one reviewed label-only aggregate and zero instances are
+    compatible with the declared contextual scope. No mandatory connector, pathway,
+    protein instance, replacement canonical or experiment.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - ground-reading
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: catalog applicability and declared query scope'
+  outcome: unknown
+  target_ids:
+  - traitmech:000003
+  summary: Neither canonical species nor checked aliases matches the retained 20-organism
+    / 28-dataset catalog. E. coli species-level coverage exists with five datasets;
+    exact strain/context is unestablished. Detailed pressure-defense/AMR module queries
+    are outside the declared review scope and were not run. No global catalog-absence
+    claim.
+  evidence_ids:
+  - expression
+  - catalog-addendum
+  - authority-reuse
+  - taxon-photobacterium
+  - taxon-shewanella
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: current and conditional writers'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: Current record and predicate mapping/shared grounder own imported assertions;
+    nonempty IDs are skipped. Historical confers migration selects a different prior
+    relation and does not repair current edges 0/2; shared fluidity normalization
+    and sibling histories remain contextual.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - local-authority
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - traitmech:000003
+  summary: Eight current events are all AI. Three whole context histories do not establish
+    current-target human acceptance. Ignored-inclusive 204 matching paths/67 structured
+    arrays/zero exact target arrays bound the gap; remote or private review is not
+    ruled out.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual checks and local preparation'
+  outcome: supported
+  target_ids:
+  - traitmech:000003
+  summary: All 449 inputs match; 374 proposal files are conservatively captured context,
+    not a claim of full scientific reading. Native/strict and snippet retry pass,
+    initial DNS failure remains optional. Actual B11 QC/B12 qualification/postcheck
+    and local initialization are separate from pending B11 publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - native-checks
+  - check-piezotolerant-native
+  - check-piezotolerant-strict
+  - check-piezotolerant-snippets-retry-network
+findings:
+- finding_id: canonical-comparative-growth
+  issue_key: piezotolerant-canonical-comparative-growth
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Canonical examples use piezophily or recovery endpoints for a comparative-growth
+    trait
+  description: The defining criterion is similar or faster atmospheric growth. Assigned
+    SS9 evidence establishes piezophily, and the separately assigned review reports
+    an elevated-pressure optimum. Assigned Shewanella evidence establishes recovery
+    after exposure, a different measurement from growth during elevated pressure and
+    rate ordering. Retain these true observations and strain limits while substantiating
+    or qualifying membership; no claim about every strain or inability to grow under
+    pressure.
+  target_ids:
+  - traitmech:000003
+  field_paths:
+  - canonical_examples[0]
+  - canonical_examples[1]
+  evidence_ids:
+  - canonical-scope
+  - meta-canonical-photobacterium
+  - body-piezolytes
+  - meta-shewanella
+  - body-shewanella
+  - body-membrane
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: imported-relation-roles
+  issue_key: piezotolerant-imported-relation-roles
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported process-regulation roles conflict with current condition and quality
+    referents
+  description: RO:0002211 at edge 0 and inherited RO:0002212 at edge 2 require process
+    subject and object. The current PATO-grounded ambient pressure is a condition/quality,
+    not a pressure-change event; edge 2 additionally has an explicit fluidity QUALITY
+    object. This grouped formal concern preserves generic pressure/fluidity observations
+    and is not an enum-wide ban on environmental nodes.
+  target_ids:
+  - traitmech:000003
+  field_paths:
+  - causal_graphs[0].edges[0]
+  - causal_graphs[0].edges[2]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - pato-primary
+  - proposal-v3-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard regulates/decreases rows may recur on empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: literal-unit-format
+  issue_key: piezotolerant-literal-unit-format
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Snippet changes the source unit notation
+  description: The record writes degrees C where the source abstract uses °C. All
+    interval, optimum and temperature values are supported after normalization; only
+    the maintained literal copied-span rule is implicated.
+  target_ids:
+  - traitmech:000003
+  field_paths:
+  - evidence[1].snippet
+  evidence_ids:
+  - snippets
+  - meta-colwellia
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: piezotolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Current reviewed status lacks a locally attributable acceptance link
+  description: Eight AI events and three context histories do not identify current-target
+    human acceptance. Ignored-inclusive 204 matching paths/67 parsed arrays/zero exact
+    targets bound this traceability concern; no private or remote review absence claimed.
+  target_ids:
+  - traitmech:000003
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: qualify-canonical-membership
+  description: Substantiate or qualify the two existing examples against the record
+    comparative-growth criterion.
+  finding_ids:
+  - canonical-comparative-growth
+  target_ids:
+  - traitmech:000003
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve positive SS9 piezophily and Shewanella recovery observations with strain
+    and measurement distinctions.
+  - Do not transfer strain-specific facts across a species or infer absence of growth
+    from body non-acquisition.
+  - No replacement organism, pressure-survival protocol or optimized condition is
+    prescribed.
+- action_id: reconcile-imported-roles
+  description: Reconcile imported relations with the actual condition, quality and
+    process referents during authorized curation.
+  finding_ids:
+  - imported-relation-roles
+  target_ids:
+  - traitmech:000003
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard regulates/decreases rows may recur on empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  acceptance_checks:
+  - Preserve supported generic environmental observations.
+  - Respect nonempty-ID guards; mapping edits do not automatically replace current
+    assertions.
+  - No mechanism or intervention reconstruction.
+- action_id: restore-literal-format
+  description: Use the actual source unit notation for the supported snippet.
+  finding_ids:
+  - literal-unit-format
+  target_ids:
+  - traitmech:000003
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve all numerical values and source identity.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000003
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/piezotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain all eight AI events and bounded context-history/search evidence.
+  - No contact or automatic status promotion authorized.
+limitations:
+- Detailed pathogen pressure-defense, fitness, AMR, intervention efficacy and pressure-survival
+  procedures are UNASSESSED_SCOPE; incidental displayed content is not adopted.
+- Definition directly supports a comparative growth-rate distinction. Broader node
+  0/graph atmospheric-capable shorthand and edge 1 nearest Colwellia causal attribution
+  are limitations, not extra findings.
+- Positive SS9 piezophily and Shewanella recovery observations are retained with strain-specific
+  scope; no claim that either entire species cannot grow under pressure or that all
+  strains share an optimum.
+- Photobacterium and Colwellia primary bodies were not acquired/inspected. Shewanella
+  actual abstract/endpoint text is distinguished from growth during elevated pressure;
+  no paper-wide absence claim. Heat-shock body was not acquired under the declared
+  scope.
+- Generic membrane/solute responses have taxon, temperature and condition qualifications;
+  the contextual graph is not read as universal necessity. Five free lexical predicates
+  are not assigned invented imported constraints.
+- Fallback/proposed 1007602 is not an imported active replacement; 374 proposal files
+  are conservative capture context, with relevant exact v5/v3/v8 authorities selectively
+  assessed.
+- Retained metadata 20:42:51, membrane 16:07, piezolyte 20:43 and Photobacterium taxonomy
+  20:44 retain original acquisitions; current source copies 21:04 and new source 21:03:58–59
+  / Shewanella taxonomy 21:04:45 requests are distinct. Prior and current DNS failures
+  remain separate from successful retries.
+- Catalog canonical aliases are unmatched; E. coli species coverage exists but exact
+  strain/context is unestablished, and detailed pressure-response queries were not
+  run.
+- Actual prior QC, current qualification and local initialization do not assert B11
+  remote publication; publication remains separately documented.
+notes:
+- Final root adjudication and independent challenge are pinned and verified. Preparation
+  does not import or execute the serializer; root owns later execution, validation
+  and save.
+- 'Coverage: six works/six forms, fourteen external placements, six grounding fields,
+  nine nodes/eight edges, two canonicals, two snippets: one literal and one supported
+  unit transcription.'
+- No scientific record, native inventory, Git or sweep-state mutation by serializer
+  preparation.
+tags:
+- record-review
+- piezotolerant
+- environment
+- needs-curation
+native_verdict: needs_curation
+```
