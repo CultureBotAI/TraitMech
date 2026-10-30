@@ -26,12 +26,23 @@ evidence:
     β-glucosidase activity was only observed in L. mucosae NK41.
   notes: Ma et al. detected beta-glucosidase activity in Limosilactobacillus mucosae
     NK41 with the API ZYM enzyme activity panel.
+- reference: DOI:10.1099/13500872-142-7-1659
+  snippet: A new Escherichia coli gene, bgIX, encoding a beta-D-glucosidase (EC 3.2.1.21)
+    has been characterized. The bgIX gene is located adjacent to the dld gene at 47.8
+    min or 2225 kb on the E. coli chromosome.
+  notes: Yang et al. cloned and characterized the Escherichia coli K-12 bglX gene
+    encoding periplasmic beta-D-glucosidase BglX (UniProtKB:P33363).
 canonical_examples:
 - taxon_id: NCBITaxon:1222002
   taxon_label: Flavobacterium panaciterrae
   note: An et al. reported Flavobacterium panaciterrae DCY69T as positive for beta-glucosidase
     in the API ZYM enzyme activity panel.
   reference: DOI:10.2323/jgam.60.59
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Yang et al. characterized the Escherichia coli K-12 bglX gene encoding periplasmic
+    beta-D-glucosidase (EC 3.2.1.21).
+  reference: DOI:10.1099/13500872-142-7-1659
 discussions:
 - discussion_id: beta-glucosidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for beta-glucosidase activity before
@@ -76,7 +87,7 @@ discussions:
     periplasmic beta-D-glucosidase BglX (UniProtKB:P33363) so beta_glucosidase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#beta_glucosidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.2.1.21, DOI:10.1007/s13205-015-0328-z,
@@ -96,6 +107,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-30'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1099/13500872-142-7-1659) and promoted beta_glucosidase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR001764-grounded GENE_OR_PROTEIN node beta_glucosidase_bglx
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P33363 (BglX) backed by DOI:10.1099/13500872-142-7-1659.
 curation_history:
 - timestamp: '2026-09-11T17:57:39Z'
   curator: codex
@@ -117,17 +134,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (beta-glucosidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-30T09:55:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1099/13500872-142-7-1659)
+    canonical example; promoted beta_glucosidase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR001764-grounded GENE_OR_PROTEIN node beta_glucosidase_bglx with
+    reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P33363
+    (BglX) backed by DOI:10.1099/13500872-142-7-1659; resolved beta-glucosidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: beta_glucosidase_hydrolysis_sketch
   title: Beta-glucosidase hydrolysis of carbohydrate glycosidic bonds
   description: Evidence-backed physiological mechanism sketch linking beta-glucosidase
     catalytic activity and oligosaccharide/glycosyl release to the beta-glucosidase
     activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by DOI:10.1007/s13205-015-0328-z
-    and DOI:10.2323/jgam.60.59; strain-matched UniProtKB protein examples for Escherichia
-    coli K-12 periplasmic beta-D-glucosidase (BglX, UniProtKB:P33363) remain to be
-    curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1007/s13205-015-0328-z, DOI:10.2323/jgam.60.59,
+    and DOI:10.1099/13500872-142-7-1659; exemplified on beta_glucosidase_bglx with
+    Escherichia coli K-12 (NCBITaxon:83333; UP000000625) periplasmic beta-D-glucosidase
+    BglX (UniProtKB:P33363).
   nodes:
   - node_id: beta_glucosidase_activity_trait
     label: beta-glucosidase activity
@@ -148,6 +174,34 @@ causal_graphs:
     grounding: CHEBI:50699
     description: Oligosaccharide product released alongside nonreducing terminal glycosyl
       residues by beta-glucosidase hydrolysis of carbohydrate glycosidic bonds.
+  - node_id: beta_glucosidase_bglx
+    label: periplasmic beta-D-glucosidase BglX
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR001764
+    gene_symbols:
+    - bglX
+    description: Glycoside hydrolase family 3 (GH3) periplasmic beta-D-glucosidase
+      (BglX) that hydrolyzes terminal non-reducing beta-D-glucosyl residues.
+    protein_examples:
+    - uniprot_id: UniProtKB:P33363
+      protein_label: Periplasmic beta-glucosidase
+      gene_symbol: bglX
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-30'
+      entry_version: 169
+      sequence_version: 2
+      role: BglX is the Escherichia coli K-12 periplasmic beta-D-glucosidase (EC 3.2.1.21)
+        that hydrolyzes beta-D-glucosidic linkages.
+      evidence:
+      - reference: DOI:10.1099/13500872-142-7-1659
+        snippet: A new Escherichia coli gene, bgIX, encoding a beta-D-glucosidase
+          (EC 3.2.1.21) has been characterized. The bgIX gene is located adjacent
+          to the dld gene at 47.8 min or 2225 kb on the E. coli chromosome.
+        notes: Yang et al. characterized the Escherichia coli K-12 bglX gene encoding
+          periplasmic beta-D-glucosidase BglX (UniProtKB:P33363).
   edges:
   - subject: beta_glucosidase_catalytic_activity
     predicate: confers
@@ -176,3 +230,16 @@ causal_graphs:
       notes: Singh et al. state that beta-glucosidases (EC 3.2.1.21) hydrolyze the
         glycosidic bond of a carbohydrate moiety to release nonreducing terminal glycosyl
         residues, glycoside, and oligosaccharides.
+  - subject: beta_glucosidase_bglx
+    predicate: enables
+    predicate_id: RO:0002327
+    object: beta_glucosidase_catalytic_activity
+    description: Periplasmic beta-D-glucosidase BglX enables beta-glucosidase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1099/13500872-142-7-1659
+      snippet: A new Escherichia coli gene, bgIX, encoding a beta-D-glucosidase (EC
+        3.2.1.21) has been characterized. The bgIX gene is located adjacent to the
+        dld gene at 47.8 min or 2225 kb on the E. coli chromosome.
+      notes: Yang et al. characterized Escherichia coli K-12 BglX as a periplasmic
+        beta-D-glucosidase (EC 3.2.1.21).
