@@ -1,0 +1,1191 @@
+# Concept and source review of parasitism (traitmech:000043)
+
+- Review: 20261021T071310Z-parasitism
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T07:08:29Z
+- Finished UTC: 2026-10-21T07:13:10Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The ecological definition, fallback identity, symbiosis parent and species example are supported. Twelve nodes and eleven edges were inspected for documentary scope and ontology meaning. One major finding concerns a process subject under material-executor enables. Minor findings concern an unsupported historical acute-disease distinction, source-context loss and locally undocumented human acceptance. Detailed pathogen mechanisms remain unverified; this review does not construct or improve them.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Second batch003 target, selected in lexicographic path order after the validated opportunistic-pathogen bundle; one entire previously uncovered TraitRecord.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000043 | data/traits/ecology/parasitism.yaml | maintained | parasitism |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000043 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000043 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000043 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | traitmech:000043 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | traitmech:000043 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000043 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000043 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | traitmech:000043 | The selected record validates. |
+| Focused strict validation | passed | True | traitmech:000043 | One file scanned, zero strict errors. |
+| Focused snippet verification | passed | True | traitmech:000043 | Zero snippets are asserted; this pass does not verify citation entailment. |
+| Expression-module applicability | not_applicable | False | traitmech:000043 | The NONMECHANISTIC record asserts no gene, locus, accession or strain-specific expression result. An expression module is not used to infer the relationship class. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: fallback identity, label and related synonym
+
+identity: supported. Targets: traitmech:000043.
+
+The record denotes the benefit/harm ecological relationship. Its local fallback is consistent with the proposal; the deprecated historical METPO term is not an active exact replacement. The adjective parasitic is related rather than an asserted exact phenotype synonym.
+
+### Native checklist: definition and designated source
+
+evidence: supported. Targets: traitmech:000043.
+
+Drew supports the harmful-to-host/beneficial-to-microbe symbiotic relationship. This conceptual support does not establish every graph route.
+
+### Native checklist: local parent and neighboring pathogenicity concept
+
+consistency: concern. Targets: traitmech:000043.
+
+The symbiosis parent is strictly broader within the declared persistent-association scope. The historical acute-only characterization of pathogenicity is unsupported. A restricted chronic graph sketch does not itself redefine the class, and no parent replacement or organism-level disjointness is inferred.
+
+### Native checklist: class/category and graph scope
+
+representation: supported. Targets: traitmech:000043.
+
+ECOLOGY, CLASS and NONMECHANISTIC fit this relationship concept. Molecular completeness is not required.
+
+### Native checklist: taxonomic identity and narrow species example
+
+evidence: supported. Targets: traitmech:000043.
+
+The live taxon and cited abstract support the narrow lifestyle/disease attribution. The generic graph is not transferred to the species exemplar.
+
+### Native checklist: eight references and nearest claim scope
+
+evidence: concern. Targets: traitmech:000043.
+
+Citation identities resolve and the conceptual definition/example are supported. Mechanistic branches remain unverified. The graph often omits the narrower source organism context, although the Reyes note explicitly retains protozoan scope. Missing context is not automatically evidence that a contextual sketch asserts universality.
+
+### Native checklist: all twelve nodes and eleven edges
+
+graph: concern. Targets: traitmech:000043.
+
+All graph elements were inspected for concept/type/source framing. Edge3 has a clear external domain mismatch. Other detailed biological claims are explicitly unverified.
+
+Nodes0/2/9/10 are respectively the trait, two qualities and environmental context; node1 and nodes4–6/8/11 are processes. Nodes3/7 name molecular activities and are not automatically material-entity errors. Edge0 has compatible formal types, but a definition does not independently prove universal causality. Edge1 fits the provisional quality-to-trait mapping; its schematic interpretation should retain the complete benefit/harm definition rather than infer parasitism from harm alone. Edge2 allows an activity/process interpretation. Edge3 explicitly uses a process where RO enables requires a material executor. Edges4/6/7 allow process/activity endpoint types, without biological certification. Edges5/8 allow process parthood; entailment remains unverified. Edge9 allows quality endpoints but its exact causal claim is not verified. Edge10 has an allowed ungrounded local predicate; the cited study has narrower context. No alternative route, molecular target or experimental step is supplied.
+
+### Native checklist: discussion, datasets and optional examples
+
+completeness: supported. Targets: traitmech:000043.
+
+No discussion placeholder, dataset accession or protein example is asserted. These optional slots are not defects in this conceptual record.
+
+### Native checklist: REVIEWED basis and per-record history
+
+provenance: concern. Targets: traitmech:000043.
+
+Six AI-assisted events disclose provenance but inspected local material does not identify human scientific acceptance. A provider report or successful validator is not that acceptance.
+
+## Findings
+
+### enables-process-subject: A process is used as an enables executor
+
+major / open / confirmed; issue key: parasitism-enables-process-subject.
+
+Edge3 explicitly has a biological-process subject, whereas RO:0002327 inherits material-entity executor semantics. Passing local LinkML checks does not establish semantic compatibility with RO. Other molecular-activity subjects are not counted as this error.
+
+### acute-chronic-boundary-wording: Historical scope wording wrongly restricts pathogenicity to acute disease
+
+minor / open / confirmed; issue key: parasitism-acute-chronic-boundary-wording.
+
+The initial event glosses pathogenic_to_host as acute disease causation, but the maintained neighboring definition and active METPO term have no acute-only restriction. That historical distinction is unsupported. Persistent physical association in the local parent does not establish a chronic clinical course. The graph may legitimately choose a restricted chronic-association sketch; its wording alone is not counted as a separate scope defect. The main definition and chosen parent remain coherent.
+
+### source-context-not-retained: Some graph descriptions omit the cited source context
+
+minor / open / confirmed; issue key: parasitism-source-context-not-retained.
+
+The broad graph mixes review and study contexts. In particular the Hoffmann source is about arthropod endosymbionts and Shi about an amoeba-bacteria system, while the corresponding descriptions use generic hosts and symbionts. These restrictions should remain visible to prevent overinterpretation. The graph already declares breadth, Reyes retains protozoan context, and generic wording alone does not prove a universal claim; this is a bounded context-documentation finding rather than a confirmed class-wide mechanistic error.
+
+### reviewed-signoff-not-documented: Inspected REVIEWED provenance lacks a human-acceptance link
+
+minor / open / confirmed; issue key: parasitism-reviewed-signoff-not-documented.
+
+Six AI-assisted events do not identify human scientific acceptance in the bounded local search. The native checklist requires that basis for REVIEWED. Private or remote approval is not ruled out.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-relation
+
+Reconcile the existing entity meaning with the external relation definition during separately authorized curation.
+
+- Check the maintained subject meaning against actual RO domain/executor semantics.
+- Do not invent a molecular actor or biological intermediary to make the identifier fit.
+- Run strict and graph checks after any authorized guarded edit and history event.
+
+### clarify-boundary
+
+Clarify the historical acute-only characterization while preserving the local parent and explicit graph scope.
+
+- Distinguish persistent association from a chronic clinical course.
+- Do not rewrite old history; document any correction through the native append-only curation process.
+- Do not collapse parasitism and pathogenicity or claim organism-level disjointness from these observations.
+
+### retain-context
+
+Retain the source organism and evidence context for the existing documentary claims.
+
+- Preserve each source’s study/review scope without transferring generic branches to the canonical species.
+- Keep detailed mechanisms unverified where they were not assessed; no replacement route or experiment is proposed.
+
+### document-acceptance
+
+Locate and document human scientific acceptance, or retain the status-basis question as unresolved.
+
+- Do not equate AI history, publication or deterministic validation with human scientific acceptance.
+- Any status change requires separate curation authorization.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-parasitism-validate | /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-validate.log; Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:49Z; metadata parasitism-validate.json | context_only | The selected record validates. |
+| check-parasitism-strict | /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-strict.log; Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:50Z; metadata parasitism-strict.json | context_only | One file scanned, zero strict errors. |
+| check-parasitism-snippets | /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-snippets.log; Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:48Z; metadata parasitism-snippets.json | context_only | Zero snippets are asserted; this pass does not verify citation entailment. |
+| record | data/traits/ecology/parasitism.yaml; Entire record including twelve nodes, eleven edges and six history events | partial | The definition specifies microbe benefit and host fitness cost within symbiosis. Graph scope is NONMECHANISTIC, while history and graph description add acute/chronic wording. |
+| identity | data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv; Complete RDF label/synonym scan including obsolete-prefix normalization; complete deprecated entity; exact proposal row | supports | METPO:1000227 is obsolete parasitism, explicitly deprecated with no replacement assertion in the inspected entity. No active exact match was found. The local fallback maps to proposed METPO:1007642; obsolete identity is not an active replacement. |
+| hierarchy | data/traits/ecology/symbiosis.yaml; data/traits/ecology/pathogenic_to_host.yaml; proposals/metpo_traitmech_v602/proposal.md; proposals/metpo_traitmech_v603/proposal.md; Parent definition; pathogenic-to-host definition; v602 lines22–24 and v603 lines41–44 | partial | The local symbiosis parent requires persistent physical association. Host harm with microbe benefit narrows that parent. Neither active METPO:1004000 nor its local record restricts pathogenicity to acute disease; persistent association does not imply a chronic clinical course. Proposals preserve local class boundaries without organism-level disjointness. |
+| taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=782; Exact live NCBI taxonomy identity | supports | NCBITaxon:782 resolves to Rickettsia prowazekii; identity verification does not validate any mechanism. |
+| relations | RO ontology database; Biolink model; proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv; Recursive predicate statements, definitions, domains and ranges | partial | RO:0002327 inherits material-executor subject semantics; edge3 instead has an explicit process subject. RO:0002213 permits process/activity endpoints. Biolink part_of permits processes and causes has broad named-thing endpoints. METPO:2007700 is a local proposal, not an asserted active upstream term. |
+| ledger | Read-only node/edge inspection; All twelve nodes and eleven edges, zero-based locators | partial | All endpoints resolve. One definite external type mismatch occurs at edge3. Compatible formal types on other edges do not establish the biological assertions. |
+| shape | Read-only graph endpoint check; Twelve unique node identifiers and eleven edges | supports | No unresolved edge endpoint. |
+| bibliography | https://www.ebi.ac.uk/europepmc/webservices/rest/search; All eight unique citation identities, original access timestamps and source-scope ledger | supports | All DOI/PMID identities resolve. Six fresh metadata receipts and five preserved earlier access receipts include one unsuccessful McFall XML request followed by successful HTML access. Resolution alone does not establish mechanistic support. |
+| drew | https://pmc.ncbi.nlm.nih.gov/articles/PMC8054256/; Glossary def-item Parasitism; Introduction Sec1 paragraph1; DOI10.1038/s41579-021-00550-7 | supports | The glossary defines the harmful-to-one, beneficial-to-other symbiotic relation. Conceptual framing supports the core definition and continuum. Inspected text does not establish a chronic-only criterion or an invariant causal rule. |
+| mcfall | https://pmc.ncbi.nlm.nih.gov/articles/PMC3587249/; PMID23391737 abstract and high-level review framing; DOI10.1073/pnas.1218525110 | partial | The broad review supports animal-bacterial interaction context. The particular shared-toolkit and chronic-host-cost entailments remain unverified from the inspected framing; host harm alone does not express both fitness signs of the definition. |
+| example | https://pubmed.ncbi.nlm.nih.gov/9823893/; Abstract first sentence; DOI10.1038/24094 | supports | Supports the species attribution as an obligate intracellular parasite and epidemic-typhus agent. Verification is limited to bibliographic identity, lifestyle and disease attribution. |
+| barber | https://doi.org/10.1093/femsre/fuae019; PMID39003250 title and abstract review framing | partial | The review concerns bacterial pathogens. Detailed assertions and any universal relationship-class interpretation remain unverified. |
+| wehrmann | https://doi.org/10.3389/fimmu.2023.1303072; PMID38077335 title and abstract review-scope opening | partial | The review concerns bacterial/parasitic infection of human cells. Detailed host-process assertions remain unverified. |
+| reyes | https://doi.org/10.3389/fcimb.2023.1150054; PMID37360530 title and abstract scope sentence | partial | The review concerns human protozoan parasites; the evidence note retains protozoan scope. This is not species-specific evidence for the bacterial exemplar. Detailed assertions remain unverified. |
+| hoffmann | https://doi.org/10.1002/ece3.11705; PMID38975267 abstract | partial | The review concerns arthropod endosymbionts and cautions that fitness costs may be assumed rather than demonstrated. The exact strong density-to-host-death assertion remains unverified, not declared false. |
+| shi | https://doi.org/10.1093/ismejo/wrae100; PMID38848278 title and abstract study framing | partial | The empirical source concerns an amoeba-bacteria system. Its context is narrower than the generic graph sentence. Detailed effects and methods remain unverified. |
+| search | Local identity, ownership and provenance search; Ignored-inclusive search of identifier, path, graph identifier and acute wording | partial | Six target history events disclose AI assistance. No explicit human-acceptance link was identified in inspected target-specific local material. Private/remote approval remains unknown. |
+| policy | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md; Source scope, graph meaning, optional data and human sign-off rules | supports | NONMECHANISTIC is an allowed scope, with no obligation to invent protein examples or connectivity. Scientific status requires human acceptance; automatic structural validation does not confer it. |
+
+## Limits And Additional Notes
+
+- All fields were inspected for documentary and conceptual consistency. Detailed pathogen mechanisms, molecular routes and experimental effects are neither validated nor reconstructed.
+- Drew conceptual passages and McFall high-level framing were inspected; five later graph citations were assessed only for title/abstract identity and scope. Exact detailed support remains unverified, not declared false.
+- The species example was checked only for taxonomy, lifestyle and disease attribution; no generic mechanistic branch is assigned to that species.
+- The schematic host-cost-to-trait edge does not separately encode microbe benefit. Its interpretation should retain the full definition; absence of a separate benefit node is not counted as a major omission in a NONMECHANISTIC sketch.
+- The historical METPO parasitism term is explicitly deprecated. No active exact term was found in the entire captured ontology; this does not establish the state of every later release.
+- The provisional confers mapping, historical common-check failures/skips and bounded local acceptance search remain explicit.
+- No scientific record, mapping, history, generated page or native status is changed.
+- Native inspection preceded judgment and captured35inputs at the fresh batch003 source base.
+- Independent documentary-source and ontology checks informed the manually authored review; provider output was used only as provenance.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T071310Z-parasitism
+kind: record
+repository: CultureBotAI/TraitMech
+title: Concept and source review of parasitism (traitmech:000043)
+started_at: '2026-10-21T07:08:29Z'
+finished_at: '2026-10-21T07:13:10Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The ecological definition, fallback identity, symbiosis parent and species
+  example are supported. Twelve nodes and eleven edges were inspected for documentary
+  scope and ontology meaning. One major finding concerns a process subject under material-executor
+  enables. Minor findings concern an unsupported historical acute-disease distinction,
+  source-context loss and locally undocumented human acceptance. Detailed pathogen
+  mechanisms remain unverified; this review does not construct or improve them.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/parasitism.yaml
+    sha256: 06714e9bc42a3405dc4700e41a0d6a92ae814c0122375a40b3ad776fda1a6040
+    role: target
+  - path: data/traits/ecology/pathogenic_to_host.yaml
+    sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+    role: context
+  - path: data/traits/ecology/symbiosis.yaml
+    sha256: 86ad9516ff0879731da3792de1495ba1d0e107394edfcc754be03d052a677b21
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v602/proposal.md
+    sha256: 00fed39f6dfe10aabddb2e8975b7836054d9ca7f59d2003d9f97aaa2b6a6a04e
+    role: context
+  - path: proposals/metpo_traitmech_v603/proposal.md
+    sha256: 2b117a11696f475a75eea18c450bfde9f90168faba7ddf9deb6e93ee0c2f93a1
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: research/traits/ecology/parasitism-deep-research-falcon.md
+    sha256: c5a8eab006bf8895b993ca3d153dbea75b2aedc525cfeab1fc061af7255b54de
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000043
+  path: data/traits/ecology/parasitism.yaml
+  label: parasitism
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Second batch003 target, selected in lexicographic path order after the
+    validated opportunistic-pathogen bundle; one entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000043
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000043
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000043
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: parasitism-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just validate data/traits/ecology/parasitism.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-parasitism-validate
+- check_id: parasitism-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just validate-strict data/traits/ecology/parasitism.yaml --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned, zero strict errors.
+  evidence_ids:
+  - check-parasitism-strict
+- check_id: parasitism-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000043
+  command: just verify-snippets --record data/traits/ecology/parasitism.yaml --out
+    /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Zero snippets are asserted; this pass does not verify citation entailment.
+  evidence_ids:
+  - check-parasitism-snippets
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000043
+  summary: The NONMECHANISTIC record asserts no gene, locus, accession or strain-specific
+    expression result. An expression module is not used to infer the relationship
+    class.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-parasitism-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-validate.log
+  locator: Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:49Z; metadata parasitism-validate.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: 531428fd0839bc237182ce74b923cf8efbf96c9c592449ebfc7ba15b3312465d
+- evidence_id: check-parasitism-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-strict.log
+  locator: Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:50Z; metadata parasitism-strict.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: One file scanned, zero strict errors.
+  snapshot_sha256: 2629e83ee0da9ffc8955559f23c9f8b1377838de1d3338e03de56e612a250cd1
+- evidence_id: check-parasitism-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/parasitism-snippets.log
+  locator: Executed 2026-10-21T07:08:48Z through 2026-10-21T07:08:48Z; metadata parasitism-snippets.json
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: context_only
+  summary: Zero snippets are asserted; this pass does not verify citation entailment.
+  snapshot_sha256: b2e46c863630667a0b6f7a85d1e7a511d85c309f4b6e0e932ba17f57712531c4
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/parasitism.yaml
+  locator: Entire record including twelve nodes, eleven edges and six history events
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: partial
+  summary: The definition specifies microbe benefit and host fitness cost within symbiosis.
+    Graph scope is NONMECHANISTIC, while history and graph description add acute/chronic
+    wording.
+  snapshot_sha256: 06714e9bc42a3405dc4700e41a0d6a92ae814c0122375a40b3ad776fda1a6040
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Complete RDF label/synonym scan including obsolete-prefix normalization;
+    complete deprecated entity; exact proposal row
+  accessed_at: '2026-10-21T07:09:17Z'
+  support: supports
+  summary: METPO:1000227 is obsolete parasitism, explicitly deprecated with no replacement
+    assertion in the inspected entity. No active exact match was found. The local
+    fallback maps to proposed METPO:1007642; obsolete identity is not an active replacement.
+  snapshot_sha256: 945290a66e7a1dc636862dbb54704b7fd2b38b5729913493f24e4ba9a9a49bdf
+- evidence_id: hierarchy
+  kind: record_content
+  reference: data/traits/ecology/symbiosis.yaml; data/traits/ecology/pathogenic_to_host.yaml;
+    proposals/metpo_traitmech_v602/proposal.md; proposals/metpo_traitmech_v603/proposal.md
+  locator: Parent definition; pathogenic-to-host definition; v602 lines22–24 and v603
+    lines41–44
+  accessed_at: '2026-10-21T07:10:40Z'
+  support: partial
+  summary: The local symbiosis parent requires persistent physical association. Host
+    harm with microbe benefit narrows that parent. Neither active METPO:1004000 nor
+    its local record restricts pathogenicity to acute disease; persistent association
+    does not imply a chronic clinical course. Proposals preserve local class boundaries
+    without organism-level disjointness.
+  snapshot_sha256: 97bfe9db257d1f508abf44a147e6db8b9419b8135658e06683f8e53df807e4ec
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=782
+  locator: Exact live NCBI taxonomy identity
+  accessed_at: '2026-10-21T07:09:57Z'
+  support: supports
+  summary: NCBITaxon:782 resolves to Rickettsia prowazekii; identity verification
+    does not validate any mechanism.
+  snapshot_sha256: b94e02bbecac2e491f78e5ba9a113b0741db12a6fb446ef61c7d5ac4193719ff
+- evidence_id: relations
+  kind: authority
+  reference: RO ontology database; Biolink model; proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+  locator: Recursive predicate statements, definitions, domains and ranges
+  accessed_at: '2026-10-21T07:09:57Z'
+  support: partial
+  summary: RO:0002327 inherits material-executor subject semantics; edge3 instead
+    has an explicit process subject. RO:0002213 permits process/activity endpoints.
+    Biolink part_of permits processes and causes has broad named-thing endpoints.
+    METPO:2007700 is a local proposal, not an asserted active upstream term.
+  snapshot_sha256: 9a82cf4c228cc6a2f61687b1f3697ab5e58b73b820b9ab8d0f156fcc2affc9d1
+- evidence_id: ledger
+  kind: validation
+  reference: Read-only node/edge inspection
+  locator: All twelve nodes and eleven edges, zero-based locators
+  accessed_at: '2026-10-21T07:10:40Z'
+  support: partial
+  summary: All endpoints resolve. One definite external type mismatch occurs at edge3.
+    Compatible formal types on other edges do not establish the biological assertions.
+  snapshot_sha256: f15eaf8001310a67bb364b22ed5da0e25492ee7901c50c76e2d2b718f733c4e4
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph endpoint check
+  locator: Twelve unique node identifiers and eleven edges
+  accessed_at: '2026-10-21T07:11:37Z'
+  support: supports
+  summary: No unresolved edge endpoint.
+  snapshot_sha256: 17b91f8bfe9d341eb4d86b144fd9a67ce7def3a0fa8a6ef6ab9304ef1827e47c
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: All eight unique citation identities, original access timestamps and source-scope
+    ledger
+  accessed_at: '2026-10-21T07:10:45Z'
+  support: supports
+  summary: All DOI/PMID identities resolve. Six fresh metadata receipts and five preserved
+    earlier access receipts include one unsuccessful McFall XML request followed by
+    successful HTML access. Resolution alone does not establish mechanistic support.
+  snapshot_sha256: 83aa1fe856a5295471d45c7cca7b3465fff7581743daa2a4afa9157da49bdeaa
+- evidence_id: drew
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8054256/
+  locator: Glossary def-item Parasitism; Introduction Sec1 paragraph1; DOI10.1038/s41579-021-00550-7
+  accessed_at: '2026-10-21T07:04:00Z'
+  support: supports
+  summary: The glossary defines the harmful-to-one, beneficial-to-other symbiotic
+    relation. Conceptual framing supports the core definition and continuum. Inspected
+    text does not establish a chronic-only criterion or an invariant causal rule.
+  snapshot_sha256: a431624c1430ff8e3076a79cf7304c19127c8a3813e2e49f018dc35a8eb2d5d6
+- evidence_id: mcfall
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3587249/
+  locator: PMID23391737 abstract and high-level review framing; DOI10.1073/pnas.1218525110
+  accessed_at: '2026-10-20T07:21:00Z'
+  support: partial
+  summary: The broad review supports animal-bacterial interaction context. The particular
+    shared-toolkit and chronic-host-cost entailments remain unverified from the inspected
+    framing; host harm alone does not express both fitness signs of the definition.
+  snapshot_sha256: 9b5d60a370751beacc2464ed17c810d45b2f450d1fa6901e71fbd472fd7fd014
+- evidence_id: example
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/9823893/
+  locator: Abstract first sentence; DOI10.1038/24094
+  accessed_at: '2026-10-21T07:08:57Z'
+  support: supports
+  summary: Supports the species attribution as an obligate intracellular parasite
+    and epidemic-typhus agent. Verification is limited to bibliographic identity,
+    lifestyle and disease attribution.
+  snapshot_sha256: b10c6d15a8916d8fa030faac744fbbe2c657537b6fefb467d29bcef92379273f
+- evidence_id: barber
+  kind: primary_source
+  reference: https://doi.org/10.1093/femsre/fuae019
+  locator: PMID39003250 title and abstract review framing
+  accessed_at: '2026-10-21T07:08:57Z'
+  support: partial
+  summary: The review concerns bacterial pathogens. Detailed assertions and any universal
+    relationship-class interpretation remain unverified.
+  snapshot_sha256: 3fcc332b6a09b2b5be7029f400fefe32d9c2d43c6d5f70e2b0fdbfd3a92aaf8c
+- evidence_id: wehrmann
+  kind: primary_source
+  reference: https://doi.org/10.3389/fimmu.2023.1303072
+  locator: PMID38077335 title and abstract review-scope opening
+  accessed_at: '2026-10-21T07:08:57Z'
+  support: partial
+  summary: The review concerns bacterial/parasitic infection of human cells. Detailed
+    host-process assertions remain unverified.
+  snapshot_sha256: c48ddc78fc98c5a67727a856e80e3bb5e334ea7e6e0c2e7e0c29311fcd678a59
+- evidence_id: reyes
+  kind: primary_source
+  reference: https://doi.org/10.3389/fcimb.2023.1150054
+  locator: PMID37360530 title and abstract scope sentence
+  accessed_at: '2026-10-21T07:08:57Z'
+  support: partial
+  summary: The review concerns human protozoan parasites; the evidence note retains
+    protozoan scope. This is not species-specific evidence for the bacterial exemplar.
+    Detailed assertions remain unverified.
+  snapshot_sha256: 098ed1a42b77b230738fa9c6647faac6485f7a73dcb046479a3351a1c5cd742f
+- evidence_id: hoffmann
+  kind: primary_source
+  reference: https://doi.org/10.1002/ece3.11705
+  locator: PMID38975267 abstract
+  accessed_at: '2026-10-21T07:09:00Z'
+  support: partial
+  summary: The review concerns arthropod endosymbionts and cautions that fitness costs
+    may be assumed rather than demonstrated. The exact strong density-to-host-death
+    assertion remains unverified, not declared false.
+  snapshot_sha256: 65bf8a72860b00b3b03c57fec75c20e9fe729f5a6fcce72a9d0b42b9273adc69
+- evidence_id: shi
+  kind: primary_source
+  reference: https://doi.org/10.1093/ismejo/wrae100
+  locator: PMID38848278 title and abstract study framing
+  accessed_at: '2026-10-21T07:09:00Z'
+  support: partial
+  summary: The empirical source concerns an amoeba-bacteria system. Its context is
+    narrower than the generic graph sentence. Detailed effects and methods remain
+    unverified.
+  snapshot_sha256: a87723a8aad5a84ce6afa861931d68b6fc5b6d524987e749a08bd41637aad68a
+- evidence_id: search
+  kind: search
+  reference: Local identity, ownership and provenance search
+  locator: Ignored-inclusive search of identifier, path, graph identifier and acute
+    wording
+  accessed_at: '2026-10-21T07:09:18Z'
+  support: partial
+  summary: Six target history events disclose AI assistance. No explicit human-acceptance
+    link was identified in inspected target-specific local material. Private/remote
+    approval remains unknown.
+  snapshot_sha256: 495dc600a6b46190fed33be903f9f81faef673bc7e4be92616e0821939e1f830
+  search_scope: rg --no-ignore --hidden across data/traits, scripts, history, mappings,
+    proposals, conf, docs and DO_NOT_WORK.md, including ignored files; provider header
+    captured separately as provenance. Complete captured METPO RDF scanned separately.
+    This is not a search of private/remote communications.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Source scope, graph meaning, optional data and human sign-off rules
+  accessed_at: '2026-10-21T07:12:50Z'
+  support: supports
+  summary: NONMECHANISTIC is an allowed scope, with no obligation to invent protein
+    examples or connectivity. Scientific status requires human acceptance; automatic
+    structural validation does not confer it.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback identity, label and related synonym'
+  outcome: supported
+  target_ids:
+  - traitmech:000043
+  summary: The record denotes the benefit/harm ecological relationship. Its local
+    fallback is consistent with the proposal; the deprecated historical METPO term
+    is not an active exact replacement. The adjective parasitic is related rather
+    than an asserted exact phenotype synonym.
+  evidence_ids:
+  - record
+  - identity
+  - drew
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and designated source'
+  outcome: supported
+  target_ids:
+  - traitmech:000043
+  summary: Drew supports the harmful-to-host/beneficial-to-microbe symbiotic relationship.
+    This conceptual support does not establish every graph route.
+  evidence_ids:
+  - record
+  - drew
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: local parent and neighboring pathogenicity concept'
+  outcome: concern
+  target_ids:
+  - traitmech:000043
+  summary: The symbiosis parent is strictly broader within the declared persistent-association
+    scope. The historical acute-only characterization of pathogenicity is unsupported.
+    A restricted chronic graph sketch does not itself redefine the class, and no parent
+    replacement or organism-level disjointness is inferred.
+  evidence_ids:
+  - record
+  - hierarchy
+  - drew
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: class/category and graph scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000043
+  summary: ECOLOGY, CLASS and NONMECHANISTIC fit this relationship concept. Molecular
+    completeness is not required.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: example
+  area: evidence
+  topic: 'Native checklist: taxonomic identity and narrow species example'
+  outcome: supported
+  target_ids:
+  - traitmech:000043
+  summary: The live taxon and cited abstract support the narrow lifestyle/disease
+    attribution. The generic graph is not transferred to the species exemplar.
+  evidence_ids:
+  - taxon
+  - example
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: eight references and nearest claim scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000043
+  summary: Citation identities resolve and the conceptual definition/example are supported.
+    Mechanistic branches remain unverified. The graph often omits the narrower source
+    organism context, although the Reyes note explicitly retains protozoan scope.
+    Missing context is not automatically evidence that a contextual sketch asserts
+    universality.
+  evidence_ids:
+  - bibliography
+  - drew
+  - mcfall
+  - example
+  - barber
+  - wehrmann
+  - reyes
+  - hoffmann
+  - shi
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all twelve nodes and eleven edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000043
+  summary: All graph elements were inspected for concept/type/source framing. Edge3
+    has a clear external domain mismatch. Other detailed biological claims are explicitly
+    unverified.
+  evidence_ids:
+  - record
+  - ledger
+  - shape
+  - relations
+  - drew
+  - mcfall
+  - barber
+  - wehrmann
+  - reyes
+  - hoffmann
+  - shi
+  details: Nodes0/2/9/10 are respectively the trait, two qualities and environmental
+    context; node1 and nodes4–6/8/11 are processes. Nodes3/7 name molecular activities
+    and are not automatically material-entity errors. Edge0 has compatible formal
+    types, but a definition does not independently prove universal causality. Edge1
+    fits the provisional quality-to-trait mapping; its schematic interpretation should
+    retain the complete benefit/harm definition rather than infer parasitism from
+    harm alone. Edge2 allows an activity/process interpretation. Edge3 explicitly
+    uses a process where RO enables requires a material executor. Edges4/6/7 allow
+    process/activity endpoint types, without biological certification. Edges5/8 allow
+    process parthood; entailment remains unverified. Edge9 allows quality endpoints
+    but its exact causal claim is not verified. Edge10 has an allowed ungrounded local
+    predicate; the cited study has narrower context. No alternative route, molecular
+    target or experimental step is supplied.
+- assessment_id: optional
+  area: completeness
+  topic: 'Native checklist: discussion, datasets and optional examples'
+  outcome: supported
+  target_ids:
+  - traitmech:000043
+  summary: No discussion placeholder, dataset accession or protein example is asserted.
+    These optional slots are not defects in this conceptual record.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: history
+  area: provenance
+  topic: 'Native checklist: REVIEWED basis and per-record history'
+  outcome: concern
+  target_ids:
+  - traitmech:000043
+  summary: Six AI-assisted events disclose provenance but inspected local material
+    does not identify human scientific acceptance. A provider report or successful
+    validator is not that acceptance.
+  evidence_ids:
+  - record
+  - search
+  - policy
+  - check-validate-history
+findings:
+- finding_id: enables-process-subject
+  issue_key: parasitism-enables-process-subject
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A process is used as an enables executor
+  description: Edge3 explicitly has a biological-process subject, whereas RO:0002327
+    inherits material-entity executor semantics. Passing local LinkML checks does
+    not establish semantic compatibility with RO. Other molecular-activity subjects
+    are not counted as this error.
+  target_ids:
+  - traitmech:000043
+  field_paths:
+  - causal_graphs[0].edges[3].predicate_id
+  - causal_graphs[0].nodes[4].node_type
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared maintained relation mapping; any future change requires separately
+      scoped curation
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: acute-chronic-boundary-wording
+  issue_key: parasitism-acute-chronic-boundary-wording
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Historical scope wording wrongly restricts pathogenicity to acute disease
+  description: The initial event glosses pathogenic_to_host as acute disease causation,
+    but the maintained neighboring definition and active METPO term have no acute-only
+    restriction. That historical distinction is unsupported. Persistent physical association
+    in the local parent does not establish a chronic clinical course. The graph may
+    legitimately choose a restricted chronic-association sketch; its wording alone
+    is not counted as a separate scope defect. The main definition and chosen parent
+    remain coherent.
+  target_ids:
+  - traitmech:000043
+  field_paths:
+  - curation_history[0].changes
+  evidence_ids:
+  - record
+  - hierarchy
+  - drew
+  - mcfall
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: source-context-not-retained
+  issue_key: parasitism-source-context-not-retained
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Some graph descriptions omit the cited source context
+  description: The broad graph mixes review and study contexts. In particular the
+    Hoffmann source is about arthropod endosymbionts and Shi about an amoeba-bacteria
+    system, while the corresponding descriptions use generic hosts and symbionts.
+    These restrictions should remain visible to prevent overinterpretation. The graph
+    already declares breadth, Reyes retains protozoan context, and generic wording
+    alone does not prove a universal claim; this is a bounded context-documentation
+    finding rather than a confirmed class-wide mechanistic error.
+  target_ids:
+  - traitmech:000043
+  field_paths:
+  - causal_graphs[0].edges[9].description
+  - causal_graphs[0].edges[9].evidence
+  - causal_graphs[0].edges[10].description
+  - causal_graphs[0].edges[10].evidence
+  evidence_ids:
+  - record
+  - hoffmann
+  - shi
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: parasitism-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Inspected REVIEWED provenance lacks a human-acceptance link
+  description: Six AI-assisted events do not identify human scientific acceptance
+    in the bounded local search. The native checklist requires that basis for REVIEWED.
+    Private or remote approval is not ruled out.
+  target_ids:
+  - traitmech:000043
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - search
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relation
+  description: Reconcile the existing entity meaning with the external relation definition
+    during separately authorized curation.
+  finding_ids:
+  - enables-process-subject
+  target_ids:
+  - traitmech:000043
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared maintained relation mapping; any future change requires separately
+      scoped curation
+  acceptance_checks:
+  - Check the maintained subject meaning against actual RO domain/executor semantics.
+  - Do not invent a molecular actor or biological intermediary to make the identifier
+    fit.
+  - Run strict and graph checks after any authorized guarded edit and history event.
+- action_id: clarify-boundary
+  description: Clarify the historical acute-only characterization while preserving
+    the local parent and explicit graph scope.
+  finding_ids:
+  - acute-chronic-boundary-wording
+  target_ids:
+  - traitmech:000043
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish persistent association from a chronic clinical course.
+  - Do not rewrite old history; document any correction through the native append-only
+    curation process.
+  - Do not collapse parasitism and pathogenicity or claim organism-level disjointness
+    from these observations.
+- action_id: retain-context
+  description: Retain the source organism and evidence context for the existing documentary
+    claims.
+  finding_ids:
+  - source-context-not-retained
+  target_ids:
+  - traitmech:000043
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve each source’s study/review scope without transferring generic branches
+    to the canonical species.
+  - Keep detailed mechanisms unverified where they were not assessed; no replacement
+    route or experiment is proposed.
+- action_id: document-acceptance
+  description: Locate and document human scientific acceptance, or retain the status-basis
+    question as unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000043
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Do not equate AI history, publication or deterministic validation with human scientific
+    acceptance.
+  - Any status change requires separate curation authorization.
+limitations:
+- All fields were inspected for documentary and conceptual consistency. Detailed pathogen
+  mechanisms, molecular routes and experimental effects are neither validated nor
+  reconstructed.
+- Drew conceptual passages and McFall high-level framing were inspected; five later
+  graph citations were assessed only for title/abstract identity and scope. Exact
+  detailed support remains unverified, not declared false.
+- The species example was checked only for taxonomy, lifestyle and disease attribution;
+  no generic mechanistic branch is assigned to that species.
+- The schematic host-cost-to-trait edge does not separately encode microbe benefit.
+  Its interpretation should retain the full definition; absence of a separate benefit
+  node is not counted as a major omission in a NONMECHANISTIC sketch.
+- The historical METPO parasitism term is explicitly deprecated. No active exact term
+  was found in the entire captured ontology; this does not establish the state of
+  every later release.
+- The provisional confers mapping, historical common-check failures/skips and bounded
+  local acceptance search remain explicit.
+- No scientific record, mapping, history, generated page or native status is changed.
+notes:
+- Native inspection preceded judgment and captured35inputs at the fresh batch003 source
+  base.
+- Independent documentary-source and ontology checks informed the manually authored
+  review; provider output was used only as provenance.
+tags:
+- record-review
+- parasitism
+- ecology
+- needs-curation
+```
