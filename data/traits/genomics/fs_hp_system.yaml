@@ -16,11 +16,11 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:35985290
+- reference: DOI:10.1016/j.cell.2022.07.014
   snippet: the phage-inducible chromosomal islands (PICIs), carry an impressive arsenal
     of defense mechanisms
   notes: Fillol-Salom et al. support phage-inducible chromosomal islands as carriers
-    of mobile-element defense mechanisms.
+    of mobile-element defense mechanisms (PMID:35985290 / DOI:10.1016/j.cell.2022.07.014).
 - reference: PMID:35985290
   snippet: These defense systems provide broad immunity, blocking not only phage reproduction,
     but also plasmid and non-cognate PICI transfer.
@@ -147,4 +147,13 @@ curation_history:
     system after an ignored-and-hidden duplicate review found no exact live TraitMech,
     METPO, history, or prior proposal record; the replacement placeholder is reserved
     in proposals/metpo_traitmech_v225.
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-003 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

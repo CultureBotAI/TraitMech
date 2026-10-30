@@ -1,0 +1,500 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 6
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed all 18 carried-forward findings from Cycle 6 Stage 4 review evidence
+  (reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml,
+  sha256 c9f73a3929bf0e4e79346d93a9adf3345a4d43e5d4f50fcfb7d7712fd58fe2e7), grouped
+  them by cause and repair ownership into 6 groups, deduplicated against all open
+  GitHub issues, and linked every group and finding to a real GitHub issue (#2002
+  for resolved group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS; open issues #1982,
+  #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+  cohort groups). Implemented accepted fixes for all 13 actionable open findings (F-C6S4-DEF-SRC-001..F-C6S4-DEF-SRC-013
+  across 13 DefenseFinder genomics TraitRecord files) via guarded writer scripts/curate_stage5_review_findings.py,
+  regenerated pages/, preserved all immutable Stage 4 review artifacts untouched,
+  and obtained fresh structured review reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml
+  confirming verdict pass and 0 remaining open findings.'
+source_revision: e4556be39a8f39f9171da3c4bad822a9c2652634
+scope_frozen_at: '2026-10-26T08:06:50.933251Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml
+  sha256: c9f73a3929bf0e4e79346d93a9adf3345a4d43e5d4f50fcfb7d7712fd58fe2e7
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  sha256: 371f165326c4d5bbca30c21d22f9f620a493b76afbc15b0110de97cb160e68fd
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/validation.md
+  sha256: 9b23d2a4e448ba41df19f2a0eb7d590d223b6f9406e0f8a42a8de34233d4a23d
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: eb6f00837ece9d2bc21dde29e1a24ea75cf3538d053f6b9eeb759da4ecc5a7d0
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/remediated_records_review.md
+  sha256: efceb7cec40c8dda97533699f412515699fc312cb18b55756dea791f42aba87a
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  sha256: 2d35cbe6a632e04261202b71097ebbf5ba2f7f91f22a4ba3991837e29872988b
+  kind: supporting
+findings:
+- finding_id: F-C6S4-DEF-SRC-001
+  status: resolved
+  summary: 'data/traits/genomics/fs_giy_yig_system.yaml (traitmech:000346) declares
+    definition_source: DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell)
+    while record-level evidence[0] cites its PMID alias PMID:35985290 rather than
+    DOI:10.1016/j.cell.2022.07.014 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias
+    PMID:35985290) and List_system_article.md in evidence[2] mapping FS_GIY_YIG to
+    10.1016/j.cell.2022.07.014 pairs the system with DOI:10.1016/j.cell.2022.07.014
+    and carries the verified verbatim snippet ''the phage-inducible chromosomal islands
+    (PICIs), carry an impressive arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-001
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_giy_yig_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_GIY_YIG to 10.1016/j.cell.2022.07.014 and verified in
+    reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-002
+  status: resolved
+  summary: 'data/traits/genomics/fs_hepn_tm_system.yaml (traitmech:000347) declares
+    definition_source: DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell)
+    while record-level evidence[0] cites its PMID alias PMID:35985290 rather than
+    DOI:10.1016/j.cell.2022.07.014 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias
+    PMID:35985290) and List_system_article.md in evidence[2] mapping FS_HEPN_TM to
+    10.1016/j.cell.2022.07.014 pairs the system with DOI:10.1016/j.cell.2022.07.014
+    and carries the verified verbatim snippet ''the phage-inducible chromosomal islands
+    (PICIs), carry an impressive arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-002
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_hepn_tm_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_HEPN_TM to 10.1016/j.cell.2022.07.014 and verified in
+    reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-003
+  status: resolved
+  summary: 'data/traits/genomics/fs_hp_system.yaml (traitmech:000348) declares definition_source:
+    DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell) while record-level
+    evidence[0] cites its PMID alias PMID:35985290 rather than DOI:10.1016/j.cell.2022.07.014
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:35985290)
+    and List_system_article.md in evidence[2] mapping FS_HP to 10.1016/j.cell.2022.07.014
+    pairs the system with DOI:10.1016/j.cell.2022.07.014 and carries the verified
+    verbatim snippet ''the phage-inducible chromosomal islands (PICIs), carry an impressive
+    arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-003
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_hp_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_HP to 10.1016/j.cell.2022.07.014 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-004
+  status: resolved
+  summary: 'data/traits/genomics/fs_hp_sdh_sah_system.yaml (traitmech:000349) declares
+    definition_source: DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell)
+    while record-level evidence[0] cites its PMID alias PMID:35985290 rather than
+    DOI:10.1016/j.cell.2022.07.014 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias
+    PMID:35985290) and List_system_article.md in evidence[2] mapping FS_HP_SDH_sah
+    to 10.1016/j.cell.2022.07.014 pairs the system with DOI:10.1016/j.cell.2022.07.014
+    and carries the verified verbatim snippet ''the phage-inducible chromosomal islands
+    (PICIs), carry an impressive arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-004
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_hp_sdh_sah_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_HP_SDH_sah to 10.1016/j.cell.2022.07.014 and verified
+    in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-005
+  status: resolved
+  summary: 'data/traits/genomics/fs_hsdr_like_system.yaml (traitmech:000350) declares
+    definition_source: DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell)
+    while record-level evidence[0] cites its PMID alias PMID:35985290 rather than
+    DOI:10.1016/j.cell.2022.07.014 (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias
+    PMID:35985290) and List_system_article.md in evidence[2] mapping FS_HsdR_like
+    to 10.1016/j.cell.2022.07.014 pairs the system with DOI:10.1016/j.cell.2022.07.014
+    and carries the verified verbatim snippet ''the phage-inducible chromosomal islands
+    (PICIs), carry an impressive arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-005
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_hsdr_like_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_HsdR_like to 10.1016/j.cell.2022.07.014 and verified
+    in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-006
+  status: resolved
+  summary: 'data/traits/genomics/fs_sma_system.yaml (traitmech:000351) declares definition_source:
+    DOI:10.1016/j.cell.2022.07.014 (Fillol-Salom et al. 2022, Cell) while record-level
+    evidence[0] cites its PMID alias PMID:35985290 rather than DOI:10.1016/j.cell.2022.07.014
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:35985290)
+    and List_system_article.md in evidence[2] mapping FS_Sma to 10.1016/j.cell.2022.07.014
+    pairs the system with DOI:10.1016/j.cell.2022.07.014 and carries the verified
+    verbatim snippet ''the phage-inducible chromosomal islands (PICIs), carry an impressive
+    arsenal of defense mechanisms'').'
+  carried_from: F-C6S4-DEF-SRC-006
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:35985290 to DOI:10.1016/j.cell.2022.07.014 on data/traits/genomics/fs_sma_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:35985290) and List_system_article.md
+    in evidence[2] mapping FS_Sma to 10.1016/j.cell.2022.07.014 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-007
+  status: resolved
+  summary: 'data/traits/genomics/mazef_system.yaml (traitmech:000345) declares definition_source:
+    DOI:10.1098/rsbl.2025.0080 (Nikolic et al. 2025, Biol Lett) while record-level
+    evidence[0] cites its PMID alias PMID:40494395 rather than DOI:10.1098/rsbl.2025.0080
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:40494395),
+    canonical_examples[0].reference (DOI:10.1098/rsbl.2025.0080), and List_system_article.md
+    in evidence[5] mapping MazEF to 10.1098/rsbl.2025.0080 pairs the system with DOI:10.1098/rsbl.2025.0080
+    and carries the verified verbatim snippet ''we investigated the role of a model
+    toxin-antitoxin system, MazEF, in protecting Escherichia coli against two RNA
+    phage species'').'
+  carried_from: F-C6S4-DEF-SRC-007
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:40494395 to DOI:10.1098/rsbl.2025.0080 on data/traits/genomics/mazef_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:40494395), canonical_examples[0].reference
+    (DOI:10.1098/rsbl.2025.0080), and List_system_article.md in evidence[5] mapping
+    MazEF to 10.1098/rsbl.2025.0080 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-008
+  status: resolved
+  summary: 'data/traits/genomics/mok_hok_sok_system.yaml (traitmech:000372) declares
+    definition_source: DOI:10.1128/jb.178.7.2044-2050.1996 (Pecota & Wood 1996, J
+    Bacteriol) while record-level evidence[0] cites its PMID alias PMID:8606182 rather
+    than DOI:10.1128/jb.178.7.2044-2050.1996 (flagged by audit_evidence_snippets.py
+    MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level evidence[0] on the
+    same record (cited under PMID alias PMID:8606182) and List_system_article.md in
+    evidence[3] mapping Mok_Hok_Sok to 10.1128/jb.178.7.2044-2050.1996 pairs the system
+    with DOI:10.1128/jb.178.7.2044-2050.1996 and carries the verified verbatim snippet
+    ''To investigate whether the hok/sok locus evolved as a phage-exclusion mechanism,
+    Escherichia coli cells that contain hok/sok on a pBR322-based plasmid were challenged
+    with T1, T4, T5, T7, and lambda phage.'').'
+  carried_from: F-C6S4-DEF-SRC-008
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:8606182 to DOI:10.1128/jb.178.7.2044-2050.1996 on data/traits/genomics/mok_hok_sok_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:8606182) and List_system_article.md
+    in evidence[3] mapping Mok_Hok_Sok to 10.1128/jb.178.7.2044-2050.1996 and verified
+    in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-009
+  status: resolved
+  summary: 'data/traits/genomics/pfiat_system.yaml (traitmech:000365) declares definition_source:
+    DOI:10.1111/1751-7915.13570 (Li et al. 2020, Microb Biotechnol) while record-level
+    evidence[0] cites its PMID alias PMID:32246813 rather than DOI:10.1111/1751-7915.13570
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:32246813)
+    and List_system_article.md in evidence[4] mapping PfiAT to 10.1111/1751-7915.13570
+    pairs the system with DOI:10.1111/1751-7915.13570 and carries the verified verbatim
+    snippet ''we provided experimental evidence to demonstrate that PA0729 and the
+    upstream ORF Rorf0727 near the right attachment site of Pf4 form a type II toxin/antitoxin
+    (TA) pair.'').'
+  carried_from: F-C6S4-DEF-SRC-009
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:32246813 to DOI:10.1111/1751-7915.13570 on data/traits/genomics/pfiat_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:32246813) and List_system_article.md
+    in evidence[4] mapping PfiAT to 10.1111/1751-7915.13570 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-010
+  status: resolved
+  summary: 'data/traits/genomics/prrc_system.yaml (traitmech:000364) declares definition_source:
+    DOI:10.1186/1743-422X-7-360 (Uzan et al. 2010, Virol J) while record-level evidence[0]
+    cites its PMID alias PMID:21129205 rather than DOI:10.1186/1743-422X-7-360 (flagged
+    by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even though record-level
+    evidence[0] on the same record (cited under PMID alias PMID:21129205) and List_system_article.md
+    in evidence[4] mapping PrrC to 10.1186/1743-422X-7-360 pairs the system with DOI:10.1186/1743-422X-7-360
+    and carries the verified verbatim snippet ''phage exclusion systems that involve
+    T4-mediated activation of a latent endoribonuclease (PrrC) and cofactor-assisted
+    activation of EF-Tu proteolysis (Gol-Lit)'').'
+  carried_from: F-C6S4-DEF-SRC-010
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:21129205 to DOI:10.1186/1743-422X-7-360 on data/traits/genomics/prrc_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:21129205) and List_system_article.md
+    in evidence[4] mapping PrrC to 10.1186/1743-422X-7-360 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-011
+  status: resolved
+  summary: 'data/traits/genomics/rloc_system.yaml (traitmech:000366) declares definition_source:
+    DOI:10.1111/j.1365-2958.2008.06387.x (Davidov & Kaufmann 2008, Mol Microbiol)
+    while record-level evidence[0] cites its PMID alias PMID:18681940 rather than
+    DOI:10.1111/j.1365-2958.2008.06387.x (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE
+    even though record-level evidence[0] on the same record (cited under PMID alias
+    PMID:18681940) and List_system_article.md in evidence[5] mapping RloC to 10.1111/j.1365-2958.2008.06387.x
+    pairs the system with DOI:10.1111/j.1365-2958.2008.06387.x and carries the verified
+    verbatim snippet ''The conserved bacterial protein RloC, a distant homologue of
+    the tRNA(Lys) anticodon nuclease (ACNase) PrrC, is shown here to act as a wobble
+    nucleotide-excising and Zn(++)-responsive tRNase.'').'
+  carried_from: F-C6S4-DEF-SRC-011
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:18681940 to DOI:10.1111/j.1365-2958.2008.06387.x on data/traits/genomics/rloc_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:18681940) and List_system_article.md
+    in evidence[5] mapping RloC to 10.1111/j.1365-2958.2008.06387.x and verified in
+    reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-012
+  status: resolved
+  summary: 'data/traits/genomics/rnlab_system.yaml (traitmech:000367) declares definition_source:
+    DOI:10.1534/genetics.110.121798 (Koga et al. 2011, Genetics) while record-level
+    evidence[0] cites its PMID alias PMID:20980243 rather than DOI:10.1534/genetics.110.121798
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:20980243)
+    and List_system_article.md in evidence[6] mapping RnlAB to 10.1534/genetics.110.121798
+    pairs the system with DOI:10.1534/genetics.110.121798 and carries the verified
+    verbatim snippet ''RNase LS was originally identified as a potential antagonist
+    of bacteriophage T4 infection. When T4 dmd is defective, RNase LS activity rapidly
+    increases after T4 infection and cleaves T4 mRNAs to antagonize T4 reproduction.'').'
+  carried_from: F-C6S4-DEF-SRC-012
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:20980243 to DOI:10.1534/genetics.110.121798 on data/traits/genomics/rnlab_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:20980243) and List_system_article.md
+    in evidence[6] mapping RnlAB to 10.1534/genetics.110.121798 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-C6S4-DEF-SRC-013
+  status: resolved
+  summary: 'data/traits/genomics/tagi_system.yaml (traitmech:000513) declares definition_source:
+    DOI:10.1093/nar/gky781 (Kisiala et al. 2018, Nucleic Acids Res) while record-level
+    evidence[0] cites its PMID alias PMID:30202937 rather than DOI:10.1093/nar/gky781
+    (flagged by audit_evidence_snippets.py MISSING_DEFINITION_SOURCE_EVIDENCE even
+    though record-level evidence[0] on the same record (cited under PMID alias PMID:30202937)
+    and List_system_article.md in evidence[6] mapping TagI to 10.1093/nar/gky781 pairs
+    the system with DOI:10.1093/nar/gky781 and carries the verified verbatim snippet
+    ''TagI belongs to the recently characterized SRA-HNH family of modification-dependent
+    restriction endonucleases (REases) that also includes ScoA3IV (Sco5333) and TbiR51I
+    (Tbis1).'').'
+  carried_from: F-C6S4-DEF-SRC-013
+  group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: 'Resolved in Cycle 6 Stage 5 under group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002) via scripts/curate_stage5_review_findings.py: aligned evidence[0].reference
+    from PMID:30202937 to DOI:10.1093/nar/gky781 on data/traits/genomics/tagi_system.yaml
+    while preserving the verified verbatim snippet from record-level evidence[0] on
+    the same record (cited under PMID alias PMID:30202937) and List_system_article.md
+    in evidence[6] mapping TagI to 10.1093/nar/gky781 and verified in reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 379 of 1,129 eligible TraitRecord files lack causal_graphs due to documented
+    source limitations (357 records where open-access PubMed/PMC/EuropePMC literature
+    lacks a multi-step causal mechanism snippet, reduced from 360 in Cycle 5 after
+    +3 Cycle 6 Stage 2/3 glycoside hydrolase graphs, plus 22 SUPPORTING_FIELD_VOCABULARY
+    non-mechanistic hierarchy/measurement/observation records).
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one
+    of the 379 records already documents its exact literature limitation in an open
+    CURATION_TODO DiscussionItem; requires full-text PDF acquisition or paid deep-research
+    approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible
+    records and 579 total records carry verified canonical_examples) because open-access
+    abstracts do not report a verbatim strain-designated or species-specific positive/negative
+    value.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in
+    scripts/backfill_canonical_examples_444.py (POST_444_CANONICAL_EXAMPLE_QUEUE)
+    and record-level CURATION_TODO DiscussionItems; requires primary strain characterization
+    literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub
+    issue #1984 (follow-up to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined
+    regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 44 of 1,129 eligible TraitRecord files (after resolving the 13 DefenseFinder
+    genomics records in F-C6S4-DEF-SRC-001..013; plus 58 remaining unquoted CLASS
+    definition_source records without an in-corpus verbatim quote, 31 OBJECT_PROPERTY
+    records with predicate-stem snippets resolved under traitmech-infra-0006, and
+    50 records omitting definition_source) cite a primary discovery/characterization
+    reference in definition_source that is paywalled or has no indexed PubMed/EuropePMC
+    abstract.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires
+    full-text access to paywalled primary characterization articles to extract verbatim
+    definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term
+    incorporation across proposals/metpo_traitmech_v1..v611.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734
+    eligible traitmech:NNNNNN records (735 total) are already packaged into verified
+    ROBOT templates under proposals/metpo_traitmech_v1..v611 and submitted upstream
+    in berkeleybop/metpo#535.'
+groups:
+- group_id: G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  finding_ids:
+  - F-C6S4-DEF-SRC-001
+  - F-C6S4-DEF-SRC-002
+  - F-C6S4-DEF-SRC-003
+  - F-C6S4-DEF-SRC-004
+  - F-C6S4-DEF-SRC-005
+  - F-C6S4-DEF-SRC-006
+  - F-C6S4-DEF-SRC-007
+  - F-C6S4-DEF-SRC-008
+  - F-C6S4-DEF-SRC-009
+  - F-C6S4-DEF-SRC-010
+  - F-C6S4-DEF-SRC-011
+  - F-C6S4-DEF-SRC-012
+  - F-C6S4-DEF-SRC-013
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  status: resolved
+  summary: 'Cause: Thirteen DefenseFinder GENOMICS TraitRecord files (fs_giy_yig_system.yaml,
+    fs_hepn_tm_system.yaml, fs_hp_system.yaml, fs_hp_sdh_sah_system.yaml, fs_hsdr_like_system.yaml,
+    fs_sma_system.yaml, mazef_system.yaml, mok_hok_sok_system.yaml, pfiat_system.yaml,
+    prrc_system.yaml, rloc_system.yaml, rnlab_system.yaml, and tagi_system.yaml) declared
+    a definition_source (DOI:) while citing its PMID alias in record-level evidence[0].reference
+    (MISSING_DEFINITION_SOURCE_EVIDENCE), even though evidence[0].snippet already
+    carried the verified verbatim abstract snippet for that paper and List_system_article.md
+    on the same record mapped the system directly to the definition_source DOI. Repair
+    owner: CultureBotAI/TraitMech (scripts/curate_stage5_review_findings.py and the
+    13 target TraitRecord files).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Resolved all 13 open findings via guarded writer scripts/curate_stage5_review_findings.py,
+    validated with strict LinkML schema and snippet checks, and verified with fresh
+    structured review bundle reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/review.yaml
+    (verdict: pass).'
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 'Cause: 379 eligible TraitRecord files lack causal_graphs because 357 records
+    cite open-access abstracts without a multi-step molecular mechanism snippet and
+    22 records belong to non-mechanistic SUPPORTING_FIELD_VOCABULARY categories. Repair
+    owner: CultureBotAI/TraitMech full-text / deep-research curation queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982: source-limited without full-text
+    PDF acquisition or paid deep-research approval.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 'Cause: 551 eligible TraitRecord files lack canonical_examples because
+    their currently cited open abstracts are taxon-general or upper-level definitions
+    that do not state a verbatim strain/species phenotype value. Repair owner: CultureBotAI/TraitMech
+    (scripts/backfill_canonical_examples_444.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983: requires primary strain characterization
+    or IJSEM species description texts.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 'Cause: 85 cross-record causal-graph warning rows (83 INCONSISTENT_NODE_TYPE,
+    2 DUPLICATE_GROUNDING) across 72 unique eligible TraitRecord files remain baselined
+    in conf/causal_graph_audit_baseline.tsv where shared GO/CHEBI/METPO CURIEs play
+    dual roles across traits. Repair owner: CultureBotAI/TraitMech (conf/causal_graph_audit_baseline.tsv,
+    scripts/audit_causal_graphs.py, data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 (follow-up to closed #356):
+    requires coordinated cross-record ontology-role harmonization without breaking
+    GENE_OR_PROTEIN protein_examples bindings.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 'Cause: 44 eligible TraitRecord files (after resolving the 13 DefenseFinder
+    genomics records in F-C6S4-DEF-SRC-001..013; plus 58 remaining unquoted CLASS
+    definition_source records without an in-corpus verbatim quote, 31 OBJECT_PROPERTY
+    records with predicate-stem snippets resolved under traitmech-infra-0006, and
+    50 records omitting definition_source) cite a primary discovery DOI/PMID in definition_source
+    whose full text is paywalled or lacks an open-access abstract quote in PubMed/EuropePMC.
+    Repair owner: CultureBotAI/TraitMech full-text literature queue (data/traits/**/*.yaml).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985: source-limited without full-text
+    access to paywalled primary discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 'Cause: 734 eligible TraitRecord files (735 total including excluded traitmech:000083)
+    use repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO release
+    incorporation. Repair owner: Upstream berkeleybop/metpo#535 and CultureBotAI/TraitMech
+    (proposals/metpo_traitmech_v1..v611).'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-05/revision-0001/c6s5_coverage_full.json
+  disposition: 'Deferred (upstream-blocked) under existing open GitHub issue #364
+    and berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []

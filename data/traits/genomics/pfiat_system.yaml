@@ -20,12 +20,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:32246813
+- reference: DOI:10.1111/1751-7915.13570
   snippet: we provided experimental evidence to demonstrate that PA0729 and the upstream
     ORF Rorf0727 near the right attachment site of Pf4 form a type II toxin/antitoxin
     (TA) pair.
   notes: Li et al. experimentally identify PA0729 and Rorf0727 in the Pf4 prophage
-    as a PfiT/PfiA type II toxin-antitoxin pair.
+    as a PfiT/PfiA type II toxin-antitoxin pair (PMID:32246813 / DOI:10.1111/1751-7915.13570).
 - reference: PMID:32246813
   snippet: Importantly, we found that the deletion of the toxin gene PA0729 greatly
     increased Pf4 phage production.
@@ -192,4 +192,13 @@ curation_history:
     PfiAT profiles, but does not cite a directly observed natural microbial taxon
     with a source-backed PfiAT locus broad enough for a canonical example. No paid
     research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:32246813 to DOI:10.1111/1751-7915.13570
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-009 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

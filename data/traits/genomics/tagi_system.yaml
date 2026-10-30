@@ -14,12 +14,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/List_system_article.md
 evidence:
-- reference: PMID:30202937
+- reference: DOI:10.1093/nar/gky781
   snippet: TagI belongs to the recently characterized SRA-HNH family of modification-dependent
     restriction endonucleases (REases) that also includes ScoA3IV (Sco5333) and TbiR51I
     (Tbis1).
   notes: Kisiala et al. support TagI as a member of an SRA-HNH modification-dependent
-    restriction endonuclease family.
+    restriction endonuclease family (PMID:30202937 / DOI:10.1093/nar/gky781).
 - reference: PMID:30202937
   snippet: Here, we present a crystal structure of dimeric TagI, which exhibits a
     DNA binding site formed jointly by the nuclease domains, and separate binding
@@ -242,4 +242,13 @@ curation_history:
     phage restriction assays, but not a single stable NCBITaxon strain exemplar or
     accession-level protein example for the organism-level TagI system trait. No paid
     research was used.
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:30202937 to DOI:10.1093/nar/gky781
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-013 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

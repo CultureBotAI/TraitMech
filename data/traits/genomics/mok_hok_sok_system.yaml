@@ -23,12 +23,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:8606182
+- reference: DOI:10.1128/jb.178.7.2044-2050.1996
   snippet: To investigate whether the hok/sok locus evolved as a phage-exclusion mechanism,
     Escherichia coli cells that contain hok/sok on a pBR322-based plasmid were challenged
     with T1, T4, T5, T7, and lambda phage.
   notes: Pecota and Wood tested whether a plasmid-carried hok/sok locus can act as
-    a phage-exclusion mechanism.
+    a phage-exclusion mechanism (PMID:8606182 / DOI:10.1128/jb.178.7.2044-2050.1996).
 - reference: PMID:8606182
   snippet: The presence of hok/sok reduced the efficiency of plating of T4 by 42%
     and decreased the plaque size by approximately 85%.
@@ -174,4 +174,13 @@ curation_history:
     defense system after an ignored-and-hidden duplicate review found no exact live
     TraitMech, METPO, history, or prior proposal record; the replacement placeholder
     is reserved in proposals/metpo_traitmech_v249.
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:8606182 to DOI:10.1128/jb.178.7.2044-2050.1996
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-008 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

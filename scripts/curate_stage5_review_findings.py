@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–5 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–6 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -12,15 +12,19 @@ Cycle 3 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 18 actionable open findings from the
 Cycle 4 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000004/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 7 actionable open findings from the
+tracked in GitHub issue #2002), the 7 actionable open findings from the
 Cycle 5 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000005/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 13 actionable open findings from the
+Cycle 6 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
 - `F-C3S4-DEF-SRC-001`..`017` (Cycle 3 #2002, 17 records)
 - `F-C4S4-DEF-SRC-001`..`018` (Cycle 4 #2002, 18 records)
 - `F-C5S4-DEF-SRC-001`..`007` (Cycle 5 #2002, 7 records)
+- `F-C6S4-DEF-SRC-001`..`013` (Cycle 6 #2002, 13 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -57,6 +61,7 @@ CYCLE2_TIMESTAMP = "2026-10-23T16:05:00Z"
 CYCLE3_TIMESTAMP = "2026-10-24T02:45:00Z"
 CYCLE4_TIMESTAMP = "2026-10-25T12:55:00Z"
 CYCLE5_TIMESTAMP = "2026-10-25T21:40:00Z"
+CYCLE6_TIMESTAMP = "2026-10-26T08:15:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -1377,6 +1382,367 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C5S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    "data/traits/genomics/fs_giy_yig_system.yaml": {
+        "identifier": "traitmech:000346",
+        "finding_id": "F-C6S4-DEF-SRC-001",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-001 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/fs_hepn_tm_system.yaml": {
+        "identifier": "traitmech:000347",
+        "finding_id": "F-C6S4-DEF-SRC-002",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-002 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/fs_hp_system.yaml": {
+        "identifier": "traitmech:000348",
+        "finding_id": "F-C6S4-DEF-SRC-003",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-003 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/fs_hp_sdh_sah_system.yaml": {
+        "identifier": "traitmech:000349",
+        "finding_id": "F-C6S4-DEF-SRC-004",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-004 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/fs_hsdr_like_system.yaml": {
+        "identifier": "traitmech:000350",
+        "finding_id": "F-C6S4-DEF-SRC-005",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-005 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/fs_sma_system.yaml": {
+        "identifier": "traitmech:000351",
+        "finding_id": "F-C6S4-DEF-SRC-006",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.cell.2022.07.014",
+        "replace_reference": "PMID:35985290",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.cell.2022.07.014",
+            "snippet": (
+                "the phage-inducible chromosomal islands (PICIs), carry an "
+                "impressive arsenal of defense mechanisms"
+            ),
+            "notes": (
+                "Fillol-Salom et al. support phage-inducible chromosomal islands as "
+                "carriers of mobile-element defense mechanisms "
+                "(PMID:35985290 / DOI:10.1016/j.cell.2022.07.014)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:35985290 to "
+            "DOI:10.1016/j.cell.2022.07.014 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-006 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/mazef_system.yaml": {
+        "identifier": "traitmech:000345",
+        "finding_id": "F-C6S4-DEF-SRC-007",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1098/rsbl.2025.0080",
+        "replace_reference": "PMID:40494395",
+        "evidence_entry": {
+            "reference": "DOI:10.1098/rsbl.2025.0080",
+            "snippet": (
+                "we investigated the role of a model toxin-antitoxin system, "
+                "MazEF, in protecting Escherichia coli against two RNA phage "
+                "species"
+            ),
+            "notes": (
+                "Nikolic et al. directly tested MazEF as an Escherichia coli "
+                "toxin-antitoxin module protecting against RNA phages "
+                "(PMID:40494395 / DOI:10.1098/rsbl.2025.0080)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:40494395 to "
+            "DOI:10.1098/rsbl.2025.0080 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-007 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/mok_hok_sok_system.yaml": {
+        "identifier": "traitmech:000372",
+        "finding_id": "F-C6S4-DEF-SRC-008",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1128/jb.178.7.2044-2050.1996",
+        "replace_reference": "PMID:8606182",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/jb.178.7.2044-2050.1996",
+            "snippet": (
+                "To investigate whether the hok/sok locus evolved as a "
+                "phage-exclusion mechanism, Escherichia coli cells that contain "
+                "hok/sok on a pBR322-based plasmid were challenged with T1, T4, "
+                "T5, T7, and lambda phage."
+            ),
+            "notes": (
+                "Pecota and Wood tested whether a plasmid-carried hok/sok locus "
+                "can act as a phage-exclusion mechanism "
+                "(PMID:8606182 / DOI:10.1128/jb.178.7.2044-2050.1996)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:8606182 to "
+            "DOI:10.1128/jb.178.7.2044-2050.1996 so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 "
+            "remediation of F-C6S4-DEF-SRC-008 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/pfiat_system.yaml": {
+        "identifier": "traitmech:000365",
+        "finding_id": "F-C6S4-DEF-SRC-009",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1111/1751-7915.13570",
+        "replace_reference": "PMID:32246813",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/1751-7915.13570",
+            "snippet": (
+                "we provided experimental evidence to demonstrate that PA0729 "
+                "and the upstream ORF Rorf0727 near the right attachment site of "
+                "Pf4 form a type II toxin/antitoxin (TA) pair."
+            ),
+            "notes": (
+                "Li et al. experimentally identify PA0729 and Rorf0727 in the "
+                "Pf4 prophage as a PfiT/PfiA type II toxin-antitoxin pair "
+                "(PMID:32246813 / DOI:10.1111/1751-7915.13570)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:32246813 to "
+            "DOI:10.1111/1751-7915.13570 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-009 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/prrc_system.yaml": {
+        "identifier": "traitmech:000364",
+        "finding_id": "F-C6S4-DEF-SRC-010",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1186/1743-422X-7-360",
+        "replace_reference": "PMID:21129205",
+        "evidence_entry": {
+            "reference": "DOI:10.1186/1743-422X-7-360",
+            "snippet": (
+                "phage exclusion systems that involve T4-mediated activation of "
+                "a latent endoribonuclease (PrrC) and cofactor-assisted "
+                "activation of EF-Tu proteolysis (Gol-Lit)"
+            ),
+            "notes": (
+                "Uzan et al. name PrrC as a T4-mediated phage-exclusion system "
+                "that activates a latent endoribonuclease "
+                "(PMID:21129205 / DOI:10.1186/1743-422X-7-360)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:21129205 to "
+            "DOI:10.1186/1743-422X-7-360 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-010 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/rloc_system.yaml": {
+        "identifier": "traitmech:000366",
+        "finding_id": "F-C6S4-DEF-SRC-011",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1111/j.1365-2958.2008.06387.x",
+        "replace_reference": "PMID:18681940",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/j.1365-2958.2008.06387.x",
+            "snippet": (
+                "The conserved bacterial protein RloC, a distant homologue of "
+                "the tRNA(Lys) anticodon nuclease (ACNase) PrrC, is shown here "
+                "to act as a wobble nucleotide-excising and Zn(++)-responsive "
+                "tRNase."
+            ),
+            "notes": (
+                "Davidov and Kaufmann identify RloC as a conserved bacterial "
+                "wobble nucleotide-excising, zinc-responsive tRNase related to "
+                "PrrC (PMID:18681940 / DOI:10.1111/j.1365-2958.2008.06387.x)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:18681940 to "
+            "DOI:10.1111/j.1365-2958.2008.06387.x so definition_source has an "
+            "exact matching snippet-backed record-level evidence item while "
+            "preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 "
+            "remediation of F-C6S4-DEF-SRC-011 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/rnlab_system.yaml": {
+        "identifier": "traitmech:000367",
+        "finding_id": "F-C6S4-DEF-SRC-012",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1534/genetics.110.121798",
+        "replace_reference": "PMID:20980243",
+        "evidence_entry": {
+            "reference": "DOI:10.1534/genetics.110.121798",
+            "snippet": (
+                "RNase LS was originally identified as a potential antagonist "
+                "of bacteriophage T4 infection. When T4 dmd is defective, RNase "
+                "LS activity rapidly increases after T4 infection and cleaves "
+                "T4 mRNAs to antagonize T4 reproduction."
+            ),
+            "notes": (
+                "Koga et al. frame RnlA-dependent RNase LS activity as a "
+                "potential antagonist of bacteriophage T4 dmd mutants "
+                "(PMID:20980243 / DOI:10.1534/genetics.110.121798)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:20980243 to "
+            "DOI:10.1534/genetics.110.121798 so definition_source has an exact "
+            "matching snippet-backed record-level evidence item while preserving "
+            "the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-012 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/tagi_system.yaml": {
+        "identifier": "traitmech:000513",
+        "finding_id": "F-C6S4-DEF-SRC-013",
+        "timestamp": CYCLE6_TIMESTAMP,
+        "definition_source": "DOI:10.1093/nar/gky781",
+        "replace_reference": "PMID:30202937",
+        "evidence_entry": {
+            "reference": "DOI:10.1093/nar/gky781",
+            "snippet": (
+                "TagI belongs to the recently characterized SRA-HNH family of "
+                "modification-dependent restriction endonucleases (REases) that "
+                "also includes ScoA3IV (Sco5333) and TbiR51I (Tbis1)."
+            ),
+            "notes": (
+                "Kisiala et al. support TagI as a member of an SRA-HNH "
+                "modification-dependent restriction endonuclease family "
+                "(PMID:30202937 / DOI:10.1093/nar/gky781)."
+            ),
+        },
+        "changes": (
+            "Aligned record-level evidence[0].reference from PMID:30202937 to "
+            "DOI:10.1093/nar/gky781 so definition_source has an exact matching "
+            "snippet-backed record-level evidence item while preserving the "
+            "PubMed cross-reference in notes (Cycle 6 Stage 5 remediation of "
+            "F-C6S4-DEF-SRC-013 in group "
+            "G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -1455,7 +1821,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 52 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 65 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

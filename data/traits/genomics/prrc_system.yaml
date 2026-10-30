@@ -20,12 +20,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:21129205
+- reference: DOI:10.1186/1743-422X-7-360
   snippet: phage exclusion systems that involve T4-mediated activation of a latent
     endoribonuclease (PrrC) and cofactor-assisted activation of EF-Tu proteolysis
     (Gol-Lit)
   notes: Uzan et al. name PrrC as a T4-mediated phage-exclusion system that activates
-    a latent endoribonuclease.
+    a latent endoribonuclease (PMID:21129205 / DOI:10.1186/1743-422X-7-360).
 - reference: PMID:16790566
   snippet: The tRNA(Lys) anticodon nuclease PrrC is associated in latent form with
     the type Ic DNA restriction endonuclease EcoprrI and activated by a phage T4-encoded
@@ -217,4 +217,13 @@ curation_history:
   changes: 'Resolved PR #1245 review issue #1249 by removing the bare EcoprrI component
     name from PrrC system related synonyms while retaining the DefenseFinder PrrC__EcoprrI
     profile name and Blanga-Kanfi evidence for EcoprrI-linked PrrC homologs.'
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:21129205 to DOI:10.1186/1743-422X-7-360
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-010 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
