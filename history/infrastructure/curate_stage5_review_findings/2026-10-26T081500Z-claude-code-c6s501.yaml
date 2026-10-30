@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+session:
+  id: 2026-10-26T081500Z-claude-code-c6s501
+  timestamp: '2026-10-26T08:15:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1995
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 13 actionable Cycle 6 Stage 4 open findings in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019, cycle 6 consuming
+    Cycle 6 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml,
+    sha256 c9f73a3929bf0e4e79346d93a9adf3345a4d43e5d4f50fcfb7d7712fd58fe2e7). Grouped all 18 carried-forward
+    findings into 6 cause-and-ownership groups, deduplicated against all live GitHub issues, and
+    reused real GitHub issues (#2002 for resolved group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked cohort groups).
+    Remediated all 13 open findings (F-C6S4-DEF-SRC-001 through F-C6S4-DEF-SRC-013) via guarded writer
+    scripts/curate_stage5_review_findings.py across fs_giy_yig_system.yaml, fs_hepn_tm_system.yaml,
+    fs_hp_system.yaml, fs_hp_sdh_sah_system.yaml, fs_hsdr_like_system.yaml, fs_sma_system.yaml,
+    mazef_system.yaml, mok_hok_sok_system.yaml, pfiat_system.yaml, prrc_system.yaml, rloc_system.yaml,
+    rnlab_system.yaml, and tagi_system.yaml. Persisted fresh structured review bundle
+    reviews/structured/20261026T082000Z-cycle6-stage5-remediated-records-review/ confirming 0 open findings
+    and verdict pass across all 13 remediated records, regenerated pages/ and reports/citation_index.tsv,
+    and preserved all immutable Stage 4 review artifacts untouched.'

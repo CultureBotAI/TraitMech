@@ -16,12 +16,12 @@ synonyms:
   synonym_type: RELATED_SYNONYM
   source: https://raw.githubusercontent.com/mdmparis/defense-finder-models/afb0e5a8b466be53586b13266f5d38d98c3ac268/Liste_hmm_system.md
 evidence:
-- reference: PMID:18681940
+- reference: DOI:10.1111/j.1365-2958.2008.06387.x
   snippet: The conserved bacterial protein RloC, a distant homologue of the tRNA(Lys)
     anticodon nuclease (ACNase) PrrC, is shown here to act as a wobble nucleotide-excising
     and Zn(++)-responsive tRNase.
   notes: Davidov and Kaufmann identify RloC as a conserved bacterial wobble nucleotide-excising,
-    zinc-responsive tRNase related to PrrC.
+    zinc-responsive tRNase related to PrrC (PMID:18681940 / DOI:10.1111/j.1365-2958.2008.06387.x).
 - reference: PMID:18681940
   snippet: Geobacillus kaustophilus RloC expressed in Escherichia coli exhibited ACNase
     activity that differed from PrrC's in substrate preference and ability to excise
@@ -208,4 +208,13 @@ curation_history:
     pinned DefenseFinder RloC profile, but does not cite a directly observed natural
     microbial taxon with a source-backed RloC locus broad enough for a canonical example.
     No paid research was used.'
+  llm_assisted: true
+- timestamp: '2026-10-26T08:15:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Aligned record-level evidence[0].reference from PMID:18681940 to DOI:10.1111/j.1365-2958.2008.06387.x
+    so definition_source has an exact matching snippet-backed record-level evidence
+    item while preserving the PubMed cross-reference in notes (Cycle 6 Stage 5 remediation
+    of F-C6S4-DEF-SRC-011 in group G-C6S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
