@@ -31,10 +31,10 @@ artifacts:
   sha256: 260c5871432175e0ae76b96a26a846b5afc56d8926cc555882bbe7f2954f65a2
   kind: validation
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/remediated_records_review.yaml
-  sha256: 91f8786c522e224ff5f05d971752c4f64c8dbb9b8442c55e66a530699ac94cf3
+  sha256: 44678fd430865db1dd571273daba0be17280b9f8b2949b4091295d21d3e79aa8
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/remediated_records_review.md
-  sha256: d388e6b111a1e1f51525559e71237628594df619f2335df4ac02802fc0a1175c
+  sha256: ef04206f89e9c7cfaa77d678597fa526ad9d2b0c5aa27daab5a23350128f1e34
   kind: supporting
 - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/c7s5_coverage_full.json
   sha256: aef987a9e13fac908735c37fd6474fa2098c110ea2cfda03720ebc44fdfc41f2

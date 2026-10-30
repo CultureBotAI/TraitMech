@@ -57,7 +57,7 @@ evidence: supported. Targets: traitmech:000344, traitmech:000319, traitmech:0003
 
 All 15 DefenseFinder genomics records identified with open findings in Cycle 7 Stage 4 (abia_system.yaml, abib_system.yaml, abic_system.yaml, abid_system.yaml, abii_system.yaml, abir_system.yaml, abiu_system.yaml, lit_system.yaml, card_nlr_endonuclease_system.yaml, card_nlr_gasdermin_system.yaml, card_nlr_phospho_system.yaml, card_nlr_subtilase_system.yaml, card_nlr_system.yaml, nlr_like_bnacht_system.yaml, and pd_t2_1_system.yaml) now align record-level evidence[0].reference with their primary definition_source DOI and carry a verified non-elliptical verbatim snippet directly in record-level evidence[0].
 
-Each of the 15 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) F-C7S4-DEF-SRC-001..008 (abia_system.yaml, abib_system.yaml, abic_system.yaml, abid_system.yaml, abii_system.yaml, abir_system.yaml, abiu_system.yaml, lit_system.yaml) now align evidence[0].reference with their primary lactococcal/E. coli abortive infection definition_source DOIs while preserving their verified verbatim abstract snippets and PMID aliases; (2) F-C7S4-DEF-SRC-009..013 (card_nlr_endonuclease_system.yaml, card_nlr_gasdermin_system.yaml, card_nlr_phospho_system.yaml, card_nlr_subtilase_system.yaml, card_nlr_system.yaml) now align evidence[0].reference with definition_source DOI:10.1016/j.chom.2024.07.015 (from PMID:39121849); (3) F-C7S4-DEF-SRC-014 (nlr_like_bnacht_system.yaml) aligns evidence[0].reference with definition_source DOI:10.1073/pnas.2208261119 (from PMID:36191188); and (4) F-C7S4-DEF-SRC-015 (pd_t2_1_system.yaml) aligns evidence[0].reference with definition_source DOI:10.1016/j.chom.2023.03.005 (from PMID:36996818).
+Each of the 15 remediated records was re-inspected against .claude/skills/review-yaml-record/SKILL.md: (1) F-C7S4-DEF-SRC-001..008 (abia_system.yaml, abib_system.yaml, abic_system.yaml, abid_system.yaml, abii_system.yaml, abir_system.yaml, abiu_system.yaml, lit_system.yaml) now align evidence[0].reference with their primary lactococcal/E. coli abortive infection definition_source DOIs while preserving their verified verbatim abstract snippets and PMID aliases; (2) F-C7S4-DEF-SRC-009..013 (card_nlr_endonuclease_system.yaml, card_nlr_gasdermin_system.yaml, card_nlr_phospho_system.yaml, card_nlr_subtilase_system.yaml, card_nlr_system.yaml) now align evidence[0].reference with definition_source DOI:10.1101/2023.05.28.542683 (from https://europepmc.org/article/PPR/PPR668921); (3) F-C7S4-DEF-SRC-014 (nlr_like_bnacht_system.yaml) aligns evidence[0].reference with definition_source DOI:10.1016/j.cell.2023.04.015 (from https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/); and (4) F-C7S4-DEF-SRC-015 (pd_t2_1_system.yaml) aligns evidence[0].reference with definition_source DOI:10.1038/s41564-025-02239-6 (from https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/).
 
 ### Schema validity, curation_history provenance, and writer guardrails on remediated records
 
@@ -216,7 +216,7 @@ Disposition: Resolved in Cycle 7 Stage 5 (resolve_review_findings) under group G
 ## Limits And Additional Notes
 
 - This batch review covers the 15 records remediated in Cycle 7 Stage 5 under group G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level source-limited or upstream-blocked findings from Cycle 7 Stage 4 remain tracked under open GitHub issues #1982, #1983, #1984, #1985, and #364.
-- All 15 of the remediated records carry repository-minted traitmech:NNNNNN identifiers (traitmech:000338..000344, traitmech:000370, traitmech:000514..000520) backed by validated ROBOT templates awaiting upstream METPO release incorporation (#364, berkeleybop/metpo#535).
+- All 15 of the remediated records carry repository-minted traitmech:NNNNNN identifiers (traitmech:000316..000321, traitmech:000337, traitmech:000344, traitmech:000363, traitmech:000408, traitmech:000476, traitmech:000550, traitmech:000551, traitmech:000553, traitmech:000555) backed by validated ROBOT templates awaiting upstream METPO release incorporation (#364, berkeleybop/metpo#535).
 - Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.
 - Immutable Cycle 7 Stage 4 review bundle preserved untouched at reviews/structured/20261030T112000Z-cycle7-stage4-corpus-record-and-cohort-review/review.yaml.
 
@@ -913,11 +913,12 @@ assessments:
     infection definition_source DOIs while preserving their verified verbatim abstract
     snippets and PMID aliases; (2) F-C7S4-DEF-SRC-009..013 (card_nlr_endonuclease_system.yaml,
     card_nlr_gasdermin_system.yaml, card_nlr_phospho_system.yaml, card_nlr_subtilase_system.yaml,
-    card_nlr_system.yaml) now align evidence[0].reference with definition_source DOI:10.1016/j.chom.2024.07.015
-    (from PMID:39121849); (3) F-C7S4-DEF-SRC-014 (nlr_like_bnacht_system.yaml) aligns
-    evidence[0].reference with definition_source DOI:10.1073/pnas.2208261119 (from
-    PMID:36191188); and (4) F-C7S4-DEF-SRC-015 (pd_t2_1_system.yaml) aligns evidence[0].reference
-    with definition_source DOI:10.1016/j.chom.2023.03.005 (from PMID:36996818).'
+    card_nlr_system.yaml) now align evidence[0].reference with definition_source DOI:10.1101/2023.05.28.542683
+    (from https://europepmc.org/article/PPR/PPR668921); (3) F-C7S4-DEF-SRC-014 (nlr_like_bnacht_system.yaml)
+    aligns evidence[0].reference with definition_source DOI:10.1016/j.cell.2023.04.015
+    (from https://pmc.ncbi.nlm.nih.gov/articles/PMC10294775/); and (4) F-C7S4-DEF-SRC-015
+    (pd_t2_1_system.yaml) aligns evidence[0].reference with definition_source DOI:10.1038/s41564-025-02239-6
+    (from https://pmc.ncbi.nlm.nih.gov/articles/PMC12875140/).'
 - assessment_id: assess-remediated-schema-and-provenance
   area: provenance
   topic: Schema validity, curation_history provenance, and writer guardrails on remediated
@@ -1580,8 +1581,10 @@ limitations:
   or upstream-blocked findings from Cycle 7 Stage 4 remain tracked under open GitHub
   issues #1982, #1983, #1984, #1985, and #364.'
 - All 15 of the remediated records carry repository-minted traitmech:NNNNNN identifiers
-  (traitmech:000338..000344, traitmech:000370, traitmech:000514..000520) backed by
-  validated ROBOT templates awaiting upstream METPO release incorporation (#364, berkeleybop/metpo#535).
+  (traitmech:000316..000321, traitmech:000337, traitmech:000344, traitmech:000363,
+  traitmech:000408, traitmech:000476, traitmech:000550, traitmech:000551, traitmech:000553,
+  traitmech:000555) backed by validated ROBOT templates awaiting upstream METPO release
+  incorporation (#364, berkeleybop/metpo#535).
 notes:
 - 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
 - Immutable Cycle 7 Stage 4 review bundle preserved untouched at reviews/structured/20261030T112000Z-cycle7-stage4-corpus-record-and-cohort-review/review.yaml.
