@@ -56,6 +56,7 @@ POSED_DATE_C2 = "2026-10-23"
 POSED_DATE_C4 = "2026-10-25"
 POSED_DATE_C5 = "2026-10-25"
 POSED_DATE_C6 = "2026-10-26"
+POSED_DATE_C7 = "2026-10-30"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2158,25 +2159,13 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.21.1 cleavage-specificity snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
     ),
-    "data/traits/physiology/alpha_galactosidase_activity.yaml": (
-        "Add primary microbial literature evidence for MelA/Aga alpha-galactosidase catalysis and melibiose/raffinose catabolism in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one EC 3.2.1.22 catalytic definition snippet (DOI:10.3109/07388551.2013.794124) with a diagnostic assay-panel list (DOI:10.1128/jcm.22.3.333-335.1985), leaving only one mechanistic quote.",
-    ),
     "data/traits/physiology/alpha_glucosidase_activity.yaml": (
         "Add primary microbial literature evidence for alpha-glucosidase (EC 3.2.1.20) catalysis of terminal alpha-D-glucosidic linkages and maltose/oligosaccharide utilization before constructing causal_graphs.",
         "The current record carries two API ZYM enzyme-panel survey snippets (DOI:10.1371/journal.pone.0322500, DOI:10.3390/microorganisms13092005) without verbatim catalytic reaction or pathway quotes.",
     ),
-    "data/traits/physiology/alpha_mannosidase_activity.yaml": (
-        "Add primary microbial literature evidence for GH38/GH92 alpha-mannosidase catalysis and mannoside utilization in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.2.1.24 reaction snippet with a diagnostic strain-discrimination snippet (DOI:10.1128/jcm.32.3.854-855.1994), leaving only one mechanistic quote.",
-    ),
     "data/traits/physiology/arginine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
-    ),
-    "data/traits/physiology/beta_glucosidase_activity.yaml": (
-        "Add primary microbial literature evidence for BglA/BglX beta-glucosidase cellobiose/beta-D-glucoside hydrolysis and glucose release before constructing causal_graphs.",
-        "The current record pairs one EC 3.2.1.21 definition snippet (DOI:10.1007/s13205-015-0328-z) with two API ZYM diagnostic survey snippets (DOI:10.2323/jgam.60.59, DOI:10.3390/microorganisms12040776), leaving only one mechanistic quote.",
     ),
     "data/traits/physiology/carboxylesterase_activity.yaml": (
         "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
@@ -3786,8 +3775,295 @@ def build_cohort_i_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_J_PATHS: tuple[str, ...] = (
+    "data/traits/physiology/alpha_galactosidase_activity.yaml",
+    "data/traits/physiology/alpha_mannosidase_activity.yaml",
+    "data/traits/physiology/beta_glucosidase_activity.yaml",
+)
+
+COHORT_J_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/physiology/alpha_galactosidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 alpha-galactosidase MelA (UniProtKB:P06720) so alpha_galactosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.22, DOI:10.3109/07388551.2013.794124, DOI:10.1128/jcm.22.3.333-335.1985) establishes alpha-galactosidase hydrolysis of alpha-1,6-linked galactose residues in oligosaccharides and galactomannan and positive alpha-galactosidase activity in Selenomonas sputigena (NCBITaxon:69823), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/alpha_mannosidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Streptococcus pneumoniae TIGR4 GH38 alpha-mannosidase SpGH38 (UniProtKB:A0A0H2UPR5) so alpha_mannosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.24, DOI:10.1128/jcm.32.3.854-855.1994) establishes alpha-mannosidase hydrolysis of terminal non-reducing alpha-D-mannose residues in alpha-D-mannosides and positive alpha-mannosidase activity in Arcanobacterium haemolyticum (NCBITaxon:28264), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/beta_glucosidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 periplasmic beta-D-glucosidase BglX (UniProtKB:P33363) so beta_glucosidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.2.1.21, DOI:10.1007/s13205-015-0328-z, DOI:10.2323/jgam.60.59) establishes beta-glucosidase hydrolysis of carbohydrate glycosidic bonds to release nonreducing terminal glycosyl residues and oligosaccharides and positive beta-glucosidase activity in Flavobacterium panaciterrae (NCBITaxon:1222002), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_j_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort J record."""
+    if rel_path == "data/traits/physiology/alpha_galactosidase_activity.yaml":
+        return [
+            {
+                "graph_id": "alpha_galactosidase_hydrolysis_sketch",
+                "title": "Alpha-galactosidase hydrolysis of alpha-1,6-linked galactose residues",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "alpha-galactosidase catalytic activity and galactose release "
+                    "from alpha-1,6-linked galactosides to the alpha-galactosidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by DOI:10.3109/07388551.2013.794124 "
+                    "and DOI:10.1128/jcm.22.3.333-335.1985; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 alpha-galactosidase "
+                    "(MelA, UniProtKB:P06720) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "alpha_galactosidase_activity_trait",
+                        "label": "alpha-galactosidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000149",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active alpha-galactosidase enzymes that hydrolyze alpha-1,6-linked galactose residues in oligosaccharides and polymeric galactomannans.",
+                    },
+                    {
+                        "node_id": "alpha_galactosidase_catalytic_activity",
+                        "label": "alpha-galactosidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004557",
+                        "description": "Alpha-D-galactoside galactohydrolase catalytic activity hydrolyzing alpha-1,6-linked galactose residues in oligosaccharides and polymeric galactomannan (EC 3.2.1.22).",
+                    },
+                    {
+                        "node_id": "alpha_galactosidase_galactose",
+                        "label": "galactose",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:28260",
+                        "description": "Galactose monomer hydrolyzed from alpha-1,6-linked galactose residues in oligosaccharides and polymeric galactomannan.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "alpha_galactosidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "alpha_galactosidase_activity_trait",
+                        "description": "Cellular production of active alpha-galactosidase detected in chromogenic substrate strips confers the alpha-galactosidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Tanner et al. report Selenomonas sputigena as positive for alpha-galactosidase in API ZYM and API An-Ident enzyme activity strips.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "alpha_galactosidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "alpha_galactosidase_galactose",
+                        "description": "Alpha-galactosidase catalyzes the hydrolysis of alpha-1,6-linked galactose residues in oligosaccharides and polymeric galactomannan.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Katrolia et al. state that alpha-galactosidase (EC 3.2.1.22) catalyzes the hydrolysis of alpha-1,6-linked galactose residues in oligosaccharides and polymeric galactomannan.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/alpha_mannosidase_activity.yaml":
+        return [
+            {
+                "graph_id": "alpha_mannosidase_hydrolysis_sketch",
+                "title": "Alpha-mannosidase hydrolysis of terminal non-reducing alpha-D-mannose residues",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "alpha-mannosidase catalytic activity and alpha-D-mannose release "
+                    "from alpha-D-mannosides to the alpha-mannosidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.2.1.24 and "
+                    "DOI:10.1128/jcm.32.3.854-855.1994; strain-matched UniProtKB "
+                    "protein examples for Streptococcus pneumoniae TIGR4 GH38 "
+                    "alpha-mannosidase (SpGH38, UniProtKB:A0A0H2UPR5) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "alpha_mannosidase_activity_trait",
+                        "label": "alpha-mannosidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000150",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active alpha-mannosidase enzymes that hydrolyze terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides.",
+                    },
+                    {
+                        "node_id": "alpha_mannosidase_catalytic_activity",
+                        "label": "alpha-mannosidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004559",
+                        "description": "Glycosidase catalytic activity hydrolyzing terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides (EC 3.2.1.24).",
+                    },
+                    {
+                        "node_id": "alpha_mannosidase_mannose",
+                        "label": "alpha-D-mannose",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:28729",
+                        "description": "Terminal non-reducing alpha-D-mannose residue cleaved by hydrolytic action of alpha-mannosidase on alpha-D-mannosides.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "alpha_mannosidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "alpha_mannosidase_activity_trait",
+                        "description": "Cellular production of active alpha-mannosidase detected in diagnostic substrate assays confers the alpha-mannosidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Carlson and Kontiainen report that 138 of 139 Arcanobacterium haemolyticum strains and the Listeria monocytogenes type strain tested positive for alpha-mannosidase.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "alpha_mannosidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "alpha_mannosidase_mannose",
+                        "description": "Alpha-mannosidase catalyzes the hydrolysis of terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.2.1.24 defines the alpha-mannosidase reaction as the hydrolysis of terminal, non-reducing alpha-D-mannose residues in alpha-D-mannosides.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/beta_glucosidase_activity.yaml":
+        return [
+            {
+                "graph_id": "beta_glucosidase_hydrolysis_sketch",
+                "title": "Beta-glucosidase hydrolysis of carbohydrate glycosidic bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "beta-glucosidase catalytic activity and oligosaccharide/glycosyl "
+                    "release to the beta-glucosidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by DOI:10.1007/s13205-015-0328-z "
+                    "and DOI:10.2323/jgam.60.59; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 periplasmic "
+                    "beta-D-glucosidase (BglX, UniProtKB:P33363) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "beta_glucosidase_activity_trait",
+                        "label": "beta-glucosidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000146",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active beta-glucosidase enzymes that hydrolyze beta-D-glucosidic bonds in beta-D-glucosides.",
+                    },
+                    {
+                        "node_id": "beta_glucosidase_catalytic_activity",
+                        "label": "beta-glucosidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0008422",
+                        "description": "Beta-D-glucopyranoside glucohydrolase catalytic activity hydrolyzing carbohydrate glycosidic bonds to release nonreducing terminal glycosyl residues, glycoside, and oligosaccharides (EC 3.2.1.21).",
+                    },
+                    {
+                        "node_id": "beta_glucosidase_oligosaccharide",
+                        "label": "oligosaccharide",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:50699",
+                        "description": "Oligosaccharide product released alongside nonreducing terminal glycosyl residues by beta-glucosidase hydrolysis of carbohydrate glycosidic bonds.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "beta_glucosidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "beta_glucosidase_activity_trait",
+                        "description": "Cellular production of active beta-glucosidase detected in API ZYM enzyme panels confers the beta-glucosidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "An et al. report positive beta-glucosidase activity in API ZYM strips for Flavobacterium panaciterrae.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "beta_glucosidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "beta_glucosidase_oligosaccharide",
+                        "description": "Beta-glucosidases hydrolyze the glycosidic bond of a carbohydrate moiety to release nonreducing terminal glycosyl residues, glycoside, and oligosaccharides.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Singh et al. state that beta-glucosidases (EC 3.2.1.21) hydrolyze the glycosidic bond of a carbohydrate moiety to release nonreducing terminal glycosyl residues, glycoside, and oligosaccharides.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort J path: {rel_path}")
+
+
+def build_cohort_j_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort J record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_J_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C7,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, G, H, and I records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, G, H, I, and J records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -4308,6 +4584,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C6
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_J_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_j_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_j_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C7
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
