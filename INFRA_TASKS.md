@@ -79,6 +79,11 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: "Resolved in Cycle 7 Stage 6 (issue #2002, follow-up to #1981); updated _record_wiki_doi_aliases() and added _record_repeats_def_source() in scripts/audit_evidence_snippets.py to recognize PMC (https://pmc.ncbi.nlm.nih.gov/articles/PMC.../, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC...) and EuropePMC PPR (https://europepmc.org/article/PPR/...) primary references alongside PMID: and pair a record's definition_source DOI with its single quoted primary PMID/PMC/EuropePMC reference when the record cites List_system_article.md or repeats definition_source in canonical_examples[].reference or synonyms[].source, covered by unit tests in tests/test_audit_evidence_snippets.py."
+  - task_id: traitmech-infra-0010
+    summary: Extend has_corpus_16_quote and _record_repeats_def_source in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE also checks corpus_quoted_refs_16 when a CLASS record repeats definition_source in canonical_examples[].reference, synonyms[].source, or causal_graphs[].edges[].evidence[].reference
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    disposition: "Carry forward to Cycle 8 Stage 6 (implement_infrastructure): extend _record_repeats_def_source() and has_corpus_16_quote in scripts/audit_evidence_snippets.py and add unit tests in tests/test_audit_evidence_snippets.py."
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -182,6 +187,18 @@ tasks:
 - **Priority**: Medium
 - **Dependencies**: None
 - **Disposition**: Resolved in Cycle 7 Stage 6 (issue #2002, follow-up to #1981) by adding `_PRIMARY_REF_PREFIXES` and `_record_repeats_def_source()` and extending `_record_wiki_doi_aliases()` in `scripts/audit_evidence_snippets.py` to recognize `PMC` (`https://pmc.ncbi.nlm.nih.gov/articles/PMC.../`, `https://www.ncbi.nlm.nih.gov/pmc/articles/PMC...`) and `EuropePMC PPR` (`https://europepmc.org/article/PPR/...`) primary references alongside `PMID:` and pair a record's `definition_source: DOI:...` with its single quoted primary `PMID:`/`PMC`/`EuropePMC` reference when the record cites `List_system_article.md` or repeats `definition_source` in `canonical_examples[].reference` or `synonyms[].source`, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 1,130 records).
+
+### `traitmech-infra-0010` — Extend `has_corpus_16_quote` and `_record_repeats_def_source` in `scripts/audit_evidence_snippets.py` so `UNQUOTED_DEFINITION_SOURCE` also checks `corpus_quoted_refs_16` when a `CLASS` record repeats `definition_source` in `canonical_examples[].reference`, `synonyms[].source`, or `causal_graphs[].edges[].evidence[].reference`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 8, Stage 4 (`review_records`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: In `scripts/audit_evidence_snippets.py`, `has_corpus_16_quote` (lines 418–422) currently checks `not is_object_property and def_source_in_ev and def_source in corpus_quoted_refs_16`, requiring `def_source_in_ev == True` (`definition_source` already listed in `evidence[].reference`), while `_record_repeats_def_source(doc, def_source)` (lines 166–182) only inspects `canonical_examples[].reference` and `synonyms[].source` (not `causal_graphs[].edges[].evidence[].reference`). During Cycle 8 Stage 4 frozen-inventory review of the `ecology` and `metabolism` cohorts, 12 `ecology` `CLASS` records (`biofilm_formation.yaml`, `commensalism.yaml`, `endosymbiosis.yaml`, `gut_associated.yaml`, `host_associated.yaml`, `mutualism.yaml`, `nitrogen_fixing_symbiosis.yaml`, `opportunistic_pathogen.yaml`, `parasitism.yaml`, `predatory_bacterium.yaml`, `rhizosphere_association.yaml`, and `symbiosis.yaml`) were found to cite `definition_source` in `evidence[0].reference` without a `snippet` (`MISSING_SNIPPET` in `conf/evidence_snippet_baseline.tsv`) while open Europe PMC abstracts provide verified verbatim definitional quotes, and 14 FAPROTAX `metabolism` `CLASS` records (`traitmech:000121`..`traitmech:000134`) were found to repeat `definition_source` in `synonyms[0].source` while omitting it from `evidence[].reference` (`def_source_in_ev == False`). If any of a record's repeated `definition_source` references (in `canonical_examples[].reference`, `synonyms[].source`, or `causal_graphs[].edges[].evidence[].reference`) acquires a `>= 16`-char quote anywhere in `corpus_quoted_refs_16` across a non-sibling cohort while `def_source_in_ev` is `False`, `has_corpus_16_quote` currently fails to flag `UNQUOTED_DEFINITION_SOURCE`.
+- **Desired outcome**: In Cycle 8 Stage 6, extend `_record_repeats_def_source(doc, def_source)` in `scripts/audit_evidence_snippets.py` to also check `causal_graphs[].edges[].evidence[].reference` and update `has_corpus_16_quote` to trigger for non-`OBJECT_PROPERTY` records whenever `(def_source_in_ev or _record_repeats_def_source(doc, def_source)) and def_source in corpus_quoted_refs_16`, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261031T091500Z-cycle8-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
+- **Disposition**: Carry forward to Cycle 8 Stage 6 (`implement_infrastructure`).
+
 
 
 

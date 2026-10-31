@@ -1,0 +1,251 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 8
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit ecf64c4e1f05335266a582ef88086ceca6f3fb47
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 7 Stage 5 evidence. Verified the 3 Cycle 8 Stage 2/3
+  Cohort K diagnostic enzyme-assay records with 0 findings, identified 12 actionable open record-level
+  definition_source missing-snippet findings (F-C8S4-DEF-SRC-001..012) across data/traits/ecology/ for
+  Cycle 8 Stage 5 grouped remediation, logged traitmech-infra-0010 in INFRA_TASKS.md (#2002), and carried
+  forward the 5 deferred source-limited/upstream-blocked cohort findings.'
+source_revision: ecf64c4e1f05335266a582ef88086ceca6f3fb47
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/evidence.yaml
+  sha256: f36e178874cd02a2af6d32391bc269ef5aab93085da933e468f059c3073545a3
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_report.md
+  sha256: bd84d9de98eeec2ec7d5001093d05b5d2f5c2ecfdf5af3ac370212a68fcf362a
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/review_findings.tsv
+  sha256: b367c7b6a6c0232ffd01817d859c006aa0b50eceee49a202db5c63b63e3a57c1
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: c84e2362d965bd2450acda9f2284f5b6a5a4c00f286b868248aadcc02dedfd75
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/structured_review.yaml
+  sha256: 5a4c26e81182ee4d9211b6697583565207a1c1a9201cf2f53a2285ea45a8a279
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/structured_review.md
+  sha256: 78e788325c2b0dc04f08343c9bdcc0137bb78a74e75d2925da39cd785ed3b313
+  kind: supporting
+findings:
+- finding_id: F-C8S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/ecology/biofilm_formation.yaml (traitmech:000053) declares definition_source:
+    DOI:10.1038/nrmicro.2016.94 (Flemming et al. 2016, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro.2016.94
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro.2016.94
+    (PMID:27510863) and research/traits/ecology/biofilm_formation-deep-research-falcon.md provides the
+    verified verbatim definitional quote ''Bacterial biofilms are formed by communities that are embedded
+    in a self-produced matrix of extracellular polymeric substances (EPS).''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro.2016.94 to evidence[0].snippet in data/traits/ecology/biofilm_formation.yaml.'
+- finding_id: F-C8S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/ecology/commensalism.yaml (traitmech:000042) declares definition_source: DOI:10.1038/s41579-021-00550-7
+    (Drew et al. 2021, Nat Rev Microbiol) and cites DOI:10.1038/s41579-021-00550-7 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/s41579-021-00550-7 (PMID:33981038) and research/traits/ecology/commensalism-deep-research-falcon.md
+    provides the verified verbatim definitional quote ''Symbiotic interactions can be neutral, harmful
+    or have beneficial effects on the host organism. However, growing evidence suggests that microbial
+    symbionts can evolve rapidly, resulting in drastic transitions along the parasite-mutualist continuum.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/s41579-021-00550-7 to evidence[0].snippet in data/traits/ecology/commensalism.yaml.'
+- finding_id: F-C8S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/ecology/endosymbiosis.yaml (traitmech:000045) declares definition_source: DOI:10.1038/nrmicro2670
+    (McCutcheon & Moran 2012, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro2670 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro2670 (PMID:22064560) and research/traits/ecology/endosymbiosis-deep-research-falcon.md
+    provides the verified verbatim definitional quote ''Since 2006, numerous cases of bacterial symbionts
+    with extraordinarily small genomes have been reported. These organisms represent independent lineages
+    from diverse bacterial groups. They have diminutive gene sets that rival some mitochondria and chloroplasts
+    in terms of gene numbers and lack genes that are considered to be essential in other bacteria.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro2670 to evidence[0].snippet in data/traits/ecology/endosymbiosis.yaml.'
+- finding_id: F-C8S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/ecology/gut_associated.yaml (traitmech:000052) declares definition_source: DOI:10.1126/science.1104816
+    (Bäckhed et al. 2005, Science) and cites DOI:10.1126/science.1104816 in record-level evidence[0] with
+    explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1126/science.1104816 (PMID:15790844) and research/traits/ecology/gut_associated-deep-research-falcon.md
+    provides the verified verbatim definitional quote ''The distal human intestine represents an anaerobic
+    bioreactor programmed with an enormous population of bacteria, dominated by relatively few divisions
+    that are highly diverse at the strain/subspecies level. This microbiota and its collective genomes
+    (microbiome) provide us with genetic and metabolic attributes we have not been required to evolve
+    on our own, including the ability to harvest otherwise inaccessible nutrients.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1126/science.1104816 to evidence[0].snippet in data/traits/ecology/gut_associated.yaml.'
+- finding_id: F-C8S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/ecology/host_associated.yaml (traitmech:000049) declares definition_source: DOI:10.1073/pnas.1218525110
+    (McFall-Ngai et al. 2013, Proc Natl Acad Sci U S A) and cites DOI:10.1073/pnas.1218525110 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1073/pnas.1218525110
+    (PMID:23391737) and research/traits/ecology/host_associated-deep-research-falcon.md provides the verified
+    verbatim definitional quote ''This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally altering our understanding
+    of animal biology.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1073/pnas.1218525110 to evidence[0].snippet in data/traits/ecology/host_associated.yaml.'
+- finding_id: F-C8S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/ecology/mutualism.yaml (traitmech:000041) declares definition_source: DOI:10.1073/pnas.1218525110
+    (McFall-Ngai et al. 2013, Proc Natl Acad Sci U S A) and cites DOI:10.1073/pnas.1218525110 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1073/pnas.1218525110
+    (PMID:23391737) and research/traits/ecology/mutualism-deep-research-falcon.md provides the verified
+    verbatim definitional quote ''This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally altering our understanding
+    of animal biology.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1073/pnas.1218525110 to evidence[0].snippet in data/traits/ecology/mutualism.yaml.'
+- finding_id: F-C8S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/ecology/nitrogen_fixing_symbiosis.yaml (traitmech:000044) declares definition_source:
+    DOI:10.1038/nrmicro.2017.171 (Poole et al. 2018, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro.2017.171
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro.2017.171
+    (PMID:29379215) and research/traits/ecology/nitrogen_fixing_symbiosis-deep-research-falcon.md provides
+    the verified verbatim definitional quote ''Rhizobia are some of the best-studied plant microbiota.
+    These oligotrophic Alphaproteobacteria or Betaproteobacteria form symbioses with their legume hosts.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro.2017.171 to evidence[0].snippet in data/traits/ecology/nitrogen_fixing_symbiosis.yaml.'
+- finding_id: F-C8S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/ecology/opportunistic_pathogen.yaml (traitmech:000046) declares definition_source:
+    DOI:10.1016/j.tim.2012.04.005 (Brown, Cornforth & Mideo 2012, Trends Microbiol) and cites DOI:10.1016/j.tim.2012.04.005
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1016/j.tim.2012.04.005
+    (PMID:22564248) and research/traits/ecology/opportunistic_pathogen-deep-research-falcon.md provides
+    the verified verbatim definitional quote ''An increasing number of studies now demonstrate that many
+    opportunistic pathogens (OPs) do not conform to these assumptions, with virulence factors maintained
+    instead because of advantages in non-parasitic contexts.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1016/j.tim.2012.04.005 to evidence[0].snippet in data/traits/ecology/opportunistic_pathogen.yaml.'
+- finding_id: F-C8S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/ecology/parasitism.yaml (traitmech:000043) declares definition_source: DOI:10.1038/s41579-021-00550-7
+    (Drew et al. 2021, Nat Rev Microbiol) and cites DOI:10.1038/s41579-021-00550-7 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/s41579-021-00550-7 (PMID:33981038) and research/traits/ecology/parasitism-deep-research-falcon.md
+    provides the verified verbatim definitional quote ''Symbiotic interactions can be neutral, harmful
+    or have beneficial effects on the host organism. However, growing evidence suggests that microbial
+    symbionts can evolve rapidly, resulting in drastic transitions along the parasite-mutualist continuum.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/s41579-021-00550-7 to evidence[0].snippet in data/traits/ecology/parasitism.yaml.'
+- finding_id: F-C8S4-DEF-SRC-010
+  status: open
+  summary: 'data/traits/ecology/predatory_bacterium.yaml (traitmech:000054) declares definition_source:
+    DOI:10.1146/annurev.micro.091208.073346 (Sockett 2009, Annu Rev Microbiol) and cites DOI:10.1146/annurev.micro.091208.073346
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1146/annurev.micro.091208.073346
+    (PMID:19575568) and research/traits/ecology/predatory_bacterium-deep-research-falcon.md provides the
+    verified verbatim definitional quote ''Bdellovibrio species are naturally predatory, small, motile,
+    Deltaproteobacteria that invade the periplasm of other larger gram-negative bacteria, killing and
+    digesting them.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev.micro.091208.073346 to evidence[0].snippet in
+    data/traits/ecology/predatory_bacterium.yaml.'
+- finding_id: F-C8S4-DEF-SRC-011
+  status: open
+  summary: 'data/traits/ecology/rhizosphere_association.yaml (traitmech:000051) declares definition_source:
+    DOI:10.1038/nrmicro3109 (Philippot et al. 2013, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro3109
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro3109
+    (PMID:24056930) and research/traits/ecology/rhizosphere_association-deep-research-falcon.md provides
+    the verified verbatim definitional quote ''The rhizosphere is the interface between plant roots and
+    soil where interactions among a myriad of microorganisms and invertebrates affect biogeochemical cycling,
+    plant growth and tolerance to biotic and abiotic stress.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro3109 to evidence[0].snippet in data/traits/ecology/rhizosphere_association.yaml.'
+- finding_id: F-C8S4-DEF-SRC-012
+  status: open
+  summary: 'data/traits/ecology/symbiosis.yaml (traitmech:000040) declares definition_source: DOI:10.1073/pnas.1218525110
+    (McFall-Ngai et al. 2013, Proc Natl Acad Sci U S A) and cites DOI:10.1073/pnas.1218525110 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1073/pnas.1218525110
+    (PMID:23391737) and research/traits/ecology/symbiosis-deep-research-falcon.md provides the verified
+    verbatim definitional quote ''This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally altering our understanding
+    of animal biology.''.'
+  disposition: 'Carry forward to Cycle 8 Stage 5 (resolve_review_findings) in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1073/pnas.1218525110 to evidence[0].snippet in data/traits/ecology/symbiosis.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 373 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (351 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 354 in Cycle 7 after +3 Cycle 8 Stage 2/3 Cohort K diagnostic enzyme-assay graphs,
+    plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 373 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 29 of 1,129 eligible TraitRecord files (plus 52 empty-snippet [54 <12-char] CLASS definition_source
+    records without an in-corpus verbatim quote after promoting 12 ecology records to open findings F-C8S4-DEF-SRC-001..012,
+    94 OBJECT_PROPERTY records in metabolism [71 without a >=12-char snippet on definition_source, including
+    31 with predicate-stem snippets resolved under traitmech-infra-0006], and 50 records omitting definition_source)
+    cite a primary discovery/characterization reference in definition_source that is paywalled or has
+    no indexed PubMed/EuropePMC abstract.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C8S4-DEF-SRC-001
+- F-C8S4-DEF-SRC-002
+- F-C8S4-DEF-SRC-003
+- F-C8S4-DEF-SRC-004
+- F-C8S4-DEF-SRC-005
+- F-C8S4-DEF-SRC-006
+- F-C8S4-DEF-SRC-007
+- F-C8S4-DEF-SRC-008
+- F-C8S4-DEF-SRC-009
+- F-C8S4-DEF-SRC-010
+- F-C8S4-DEF-SRC-011
+- F-C8S4-DEF-SRC-012
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
