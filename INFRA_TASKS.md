@@ -84,6 +84,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
     disposition: "Resolved in Cycle 8 Stage 6 (issue #2002, follow-up to #1981); extended _record_repeats_def_source() in scripts/audit_evidence_snippets.py to inspect causal_graphs[].edges[].evidence[].reference alongside canonical_examples[].reference and synonyms[].source, and updated has_corpus_16_quote to trigger for non-OBJECT_PROPERTY records whenever (def_source_in_ev or _record_repeats_def_source(doc, def_source)) and def_source in corpus_quoted_refs_16, covered by unit tests in tests/test_audit_evidence_snippets.py."
+  - task_id: traitmech-infra-0011
+    summary: Add HTTP 5xx/429 retry with backoff to fetch() in scripts/audit_uniprot_grounding.py so transient rest.uniprot.org 500 responses do not cause false API_ERROR failures during full-corpus refreshes
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -199,7 +203,13 @@ tasks:
 - **Dependencies**: None
 - **Disposition**: Resolved in Cycle 8 Stage 6 (issue #2002, follow-up to #1981) by extending `_record_repeats_def_source()` in `scripts/audit_evidence_snippets.py` to inspect `causal_graphs[].edges[].evidence[].reference` alongside `canonical_examples[].reference` and `synonyms[].source`, and updating `has_corpus_16_quote` to trigger for non-`OBJECT_PROPERTY` records whenever `(def_source_in_ev or _record_repeats_def_source(doc, def_source)) and def_source in corpus_quoted_refs_16`, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 1,130 records).
 
-
-
-
+### `traitmech-infra-0011` — Add HTTP 5xx/429 retry with backoff to `fetch()` in `scripts/audit_uniprot_grounding.py`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 9, Stage 3 (`protein_examples`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/1988
+- **Status**: `open`
+- **Observation**: In `scripts/audit_uniprot_grounding.py`, `fetch(accession)` (lines 147–162) executes a single `urllib.request.urlopen` call against `https://rest.uniprot.org/uniprotkb/{accession}.json` and immediately returns `{"_error": f"HTTP {exc.code}"}` on any `urllib.error.HTTPError` other than `404` or `410`. During the Cycle 9 Stage 3 live refresh of `reports/uniprot_grounding_audit.tsv` across 166 unique accessions (201 uses), `rest.uniprot.org` returned transient `HTTP 500` errors on 3 accessions (`P0DW05`, `A0A099LW44`, and `Q9Z4S6`), causing `audit_uses()` to emit false `API_ERROR` findings even though each accession succeeded immediately on retry.
+- **Desired outcome**: In Cycle 9 Stage 6, update `fetch(accession)` in `scripts/audit_uniprot_grounding.py` to retry transient `HTTPError` (`500`, `502`, `503`, `504`, `429`) and `URLError` exceptions with configurable bounded retries and backoff before recording `_error`, with unit tests in `tests/test_audit_uniprot_grounding.py`.
+- **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`
+- **Priority**: Medium
+- **Dependencies**: None
 

@@ -45,12 +45,28 @@ evidence:
   notes: Srinivasan et al. listed arginine arylamidase among enzymatic activities
     present in the Amygdalobacter indicium species description, supporting the API
     arylamidase row as a directly assayed bacterial enzyme-activity phenotype.
+- reference: DOI:10.1021/bi7022333
+  snippet: Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase with
+    the active-site region related to that of thermolysin. The enzyme has unusual
+    specificity, cleaving adjacent to the large, nonpolar amino acids Phe and Tyr
+    but also cleaving next to the polar residues Lys and Arg. To try to understand
+    the structural basis for this pattern of hydrolysis, the structure of the enzyme
+    was determined in complex with the amino acids L-arginine, L-lysine, L-phenylalanine,
+    L-tryptophan, and L-tyrosine.
+  notes: Addlagatta et al. characterized the L-arginine cleavage specificity and L-arginine-bound
+    crystal structure of Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825).
 canonical_examples:
 - taxon_id: NCBITaxon:2974574
   taxon_label: Helicobacter zhangjianzhongii
   note: Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive
     for L-arginine arylamidase in the formal species description.
   reference: DOI:10.3389/fgene.2023.1240581
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Addlagatta et al. characterized Escherichia coli K-12 M1 aminopeptidase N
+    (PepN) cleavage adjacent to basic residues including L-arginine and determined
+    the structure of the enzyme in complex with L-arginine.
+  reference: DOI:10.1021/bi7022333
 discussions:
 - discussion_id: arginine-arylamidase-activity-xref-gap
   prompt: Resolve an exact external ontology class for arginine arylamidase activity
@@ -95,7 +111,7 @@ discussions:
     aminopeptidase B PepB (UniProtKB:P37095) so arginine_arylamidase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#arginine_arylamidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.4.11.6, DOI:10.3389/fgene.2023.1240581)
@@ -114,6 +130,15 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-31'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1021/bi7022333) and promoted arginine_arylamidase_hydrolysis_sketch to
+    MECHANISTIC by adding InterPro:IPR012779-grounded GENE_OR_PROTEIN node arginine_arylamidase_pepn
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P04825 (PepN; replacing the mis-cited open discussion prompt accessions
+    Q48677, which is Lactococcus lactis glutamyl aminopeptidase PepA, and P37095,
+    which is Escherichia coli M17 cysteinylglycinase/aspartyl peptidase B PepB) backed
+    by DOI:10.1021/bi7022333.
 curation_history:
 - timestamp: '2026-09-12T11:40:11Z'
   curator: codex
@@ -136,6 +161,16 @@ curation_history:
     and OPEN CURATION_TODO discussion (arginine-arylamidase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-31T20:55:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1021/bi7022333) canonical
+    example; promoted arginine_arylamidase_hydrolysis_sketch to MECHANISTIC; added
+    InterPro:IPR012779-grounded GENE_OR_PROTEIN node arginine_arylamidase_pepn with
+    reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P04825
+    (PepN, correcting mis-cited Q48677 PepA and P37095 PepB) backed by DOI:10.1021/bi7022333;
+    resolved arginine-arylamidase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: arginine_arylamidase_hydrolysis_sketch
   title: Arginine arylamidase hydrolysis of N-terminal L-arginyl peptide and arylamide
@@ -143,10 +178,11 @@ causal_graphs:
   description: Evidence-backed physiological mechanism sketch linking aminopeptidase
     B catalytic activity and N-terminal L-arginine release from oligopeptide and arylamide
     substrates to the arginine arylamidase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.4.11.6 and DOI:10.3389/fgene.2023.1240581;
-    strain-matched UniProtKB protein examples for bacterial arginine aminopeptidase
-    / arylamidase remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.4.11.6, DOI:10.3389/fgene.2023.1240581,
+    DOI:10.1099/ijsem.0.006017, and DOI:10.1021/bi7022333; exemplified on arginine_arylamidase_pepn
+    with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) aminopeptidase N PepN
+    (UniProtKB:P04825).
   nodes:
   - node_id: arginine_arylamidase_activity_trait
     label: arginine arylamidase activity
@@ -167,6 +203,39 @@ causal_graphs:
     grounding: CHEBI:16467
     description: N-terminal L-arginine product released by hydrolytic cleavage of
       oligopeptide and arylamide substrates.
+  - node_id: arginine_arylamidase_pepn
+    label: aminopeptidase N PepN
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR012779
+    gene_symbols:
+    - pepN
+    description: Peptidase M1 family broad-specificity zinc aminopeptidase N (PepN;
+      EC 3.4.11.2) that cleaves N-terminal basic (L-arginine, L-lysine) and nonpolar
+      aminoacyl amide and arylamide bonds.
+    protein_examples:
+    - uniprot_id: UniProtKB:P04825
+      protein_label: Aminopeptidase N
+      gene_symbol: pepN
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-31'
+      entry_version: 217
+      sequence_version: 2
+      role: PepN is the Escherichia coli K-12 M1 zinc aminopeptidase N (EC 3.4.11.2)
+        that cleaves N-terminal basic aminoacyl bonds including L-arginine.
+      evidence:
+      - reference: DOI:10.1021/bi7022333
+        snippet: Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase
+          with the active-site region related to that of thermolysin. The enzyme has
+          unusual specificity, cleaving adjacent to the large, nonpolar amino acids
+          Phe and Tyr but also cleaving next to the polar residues Lys and Arg. To
+          try to understand the structural basis for this pattern of hydrolysis, the
+          structure of the enzyme was determined in complex with the amino acids L-arginine,
+          L-lysine, L-phenylalanine, L-tryptophan, and L-tyrosine.
+        notes: Addlagatta et al. determined the structural basis of L-arginine hydrolysis
+          by Escherichia coli K-12 PepN (UniProtKB:P04825).
   edges:
   - subject: arginine_arylamidase_catalytic_activity
     predicate: confers
@@ -195,3 +264,19 @@ causal_graphs:
       notes: IUBMB EC 3.4.11.6 defines the aminopeptidase B reaction as the release
         of N-terminal Arg and Lys from oligopeptides when P1' is not Pro and hydrolysis
         of arylamides of Arg and Lys.
+  - subject: arginine_arylamidase_pepn
+    predicate: enables
+    predicate_id: RO:0002327
+    object: arginine_arylamidase_catalytic_activity
+    description: Aminopeptidase N PepN enables arginine arylamidase catalytic activity.
+    evidence:
+    - reference: DOI:10.1021/bi7022333
+      snippet: Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase
+        with the active-site region related to that of thermolysin. The enzyme has
+        unusual specificity, cleaving adjacent to the large, nonpolar amino acids
+        Phe and Tyr but also cleaving next to the polar residues Lys and Arg. To try
+        to understand the structural basis for this pattern of hydrolysis, the structure
+        of the enzyme was determined in complex with the amino acids L-arginine, L-lysine,
+        L-phenylalanine, L-tryptophan, and L-tyrosine.
+      notes: Addlagatta et al. demonstrated that Escherichia coli K-12 PepN cleaves
+        N-terminal Arg residues and bound L-arginine in the active site.

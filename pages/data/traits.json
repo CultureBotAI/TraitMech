@@ -207565,6 +207565,11 @@
         "reference": "DOI:10.1099/ijsem.0.006017",
         "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
         "notes": "Srinivasan et al. listed alanine arylamidase among enzymatic activities present in the Amygdalobacter indicium species description, supporting the API arylamidase row as a bacterial enzyme-activity phenotype."
+      },
+      {
+        "reference": "DOI:10.1074/jbc.m605203200",
+        "snippet": "Aminopeptidase N from Escherichia coli is a broad specificity zinc exopeptidase belonging to aminopeptidase clan MA, family M1. The structures of the ligand-free form and the enzyme-bestatin complex were determined at 1.5- and 1.6-A resolution, respectively.",
+        "notes": "Ito et al. determined the high-resolution crystal structure of Escherichia coli K-12 M1 zinc exopeptidase aminopeptidase N PepN (UniProtKB:P04825)."
       }
     ],
     "canonical_examples": [
@@ -207573,6 +207578,12 @@
         "taxon_label": "Amygdalobacter indicium",
         "note": "Srinivasan et al. reported Amygdalobacter indicium as positive for alanine arylamidase activity in an enzyme activity panel.",
         "reference": "DOI:10.1099/ijsem.0.006017"
+      },
+      {
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli K-12",
+        "note": "Ito et al. determined the crystal structure of Escherichia coli K-12 broad-specificity M1 zinc exopeptidase aminopeptidase N (PepN) that hydrolyzes N-terminal L-alanyl and related aminoacyl bonds.",
+        "reference": "DOI:10.1074/jbc.m605203200"
       }
     ],
     "discussions": [
@@ -207611,7 +207622,7 @@
         "discussion_id": "alanine-arylamidase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825) so alanine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#alanine_arylamidase_hydrolysis_sketch"
         ],
@@ -207625,7 +207636,9 @@
             "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-31",
+        "resolution_note": "Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1074/jbc.m605203200) and promoted alanine_arylamidase_hydrolysis_sketch to MECHANISTIC by adding InterPro:IPR012779-grounded GENE_OR_PROTEIN node alanine_arylamidase_pepn with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P04825 (PepN) backed by DOI:10.1074/jbc.m605203200."
       }
     ],
     "curation_history": [
@@ -207649,6 +207662,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (alanine_arylamidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alanine-arylamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T20:55:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1074/jbc.m605203200) canonical example; promoted alanine_arylamidase_hydrolysis_sketch to MECHANISTIC; added InterPro:IPR012779-grounded GENE_OR_PROTEIN node alanine_arylamidase_pepn with reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P04825 (PepN) backed by DOI:10.1074/jbc.m605203200; resolved alanine-arylamidase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -207656,8 +207676,8 @@
         "graph_id": "alanine_arylamidase_hydrolysis_sketch",
         "title": "Alanine arylamidase hydrolysis of N-terminal L-alanyl peptide and arylamide bonds",
         "description": "Evidence-backed physiological mechanism sketch linking alanyl aminopeptidase catalytic activity and N-terminal L-alanine release from peptide, amide, or arylamide substrates to the alanine arylamidase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.11.2 and DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB protein examples for Escherichia coli K-12 aminopeptidase N (PepN, UniProtKB:P04825) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.4.11.2, DOI:10.1099/ijsem.0.006017, and DOI:10.1074/jbc.m605203200; exemplified on alanine_arylamidase_pepn with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) aminopeptidase N PepN (UniProtKB:P04825).",
         "nodes": [
           {
             "node_id": "alanine_arylamidase_activity_trait",
@@ -207679,6 +207699,38 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16977",
             "description": "N-terminal L-alanine product preferentially released by alanyl aminopeptidase (alanine arylamidase) cleavage of peptide, amide, or arylamide substrates."
+          },
+          {
+            "node_id": "alanine_arylamidase_pepn",
+            "label": "aminopeptidase N PepN",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR012779",
+            "gene_symbols": [
+              "pepN"
+            ],
+            "description": "Peptidase M1 family broad-specificity zinc aminopeptidase N (PepN; EC 3.4.11.2) that catalyzes N-terminal hydrolysis of L-alanine and other neutral or basic aminoacyl amide and arylamide bonds.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P04825",
+                "protein_label": "Aminopeptidase N",
+                "gene_symbol": "pepN",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-31",
+                "entry_version": 217,
+                "sequence_version": 2,
+                "role": "PepN is the Escherichia coli K-12 broad-specificity M1 zinc aminopeptidase N (EC 3.4.11.2) that cleaves N-terminal L-alanine and other aminoacyl bonds.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1074/jbc.m605203200",
+                    "snippet": "Aminopeptidase N from Escherichia coli is a broad specificity zinc exopeptidase belonging to aminopeptidase clan MA, family M1. The structures of the ligand-free form and the enzyme-bestatin complex were determined at 1.5- and 1.6-A resolution, respectively.",
+                    "notes": "Ito et al. determined the 1.5 A crystal structure of Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -207707,6 +207759,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html",
                 "snippet": "<b>Reaction:</b> Release of an N-terminal amino acid, Xaa<img src=\"../../../EZgif/FISS.GIF\" align=top>Yaa- from a peptide, amide or arylamide. Xaa is preferably Ala, but may be most amino acids including Pro (slow action).",
                 "notes": "IUBMB EC 3.4.11.2 defines the membrane alanyl aminopeptidase reaction as the release of an N-terminal amino acid (preferably L-alanine) from a peptide, amide, or arylamide."
+              }
+            ]
+          },
+          {
+            "subject": "alanine_arylamidase_pepn",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alanine_arylamidase_catalytic_activity",
+            "description": "Aminopeptidase N PepN enables alanine arylamidase catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1074/jbc.m605203200",
+                "snippet": "Aminopeptidase N from Escherichia coli is a broad specificity zinc exopeptidase belonging to aminopeptidase clan MA, family M1. The structures of the ligand-free form and the enzyme-bestatin complex were determined at 1.5- and 1.6-A resolution, respectively.",
+                "notes": "Ito et al. characterized Escherichia coli K-12 PepN as a broad-specificity M1 zinc exopeptidase enabling N-terminal aminoacyl/alanyl hydrolysis."
               }
             ]
           }
@@ -207821,6 +207887,11 @@
         "reference": "DOI:10.1099/ijsem.0.006017",
         "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
         "notes": "Srinivasan et al. listed alpha-chymotrypsin among enzymatic activities present in the Amygdalobacter indicium species description, consistent with the positive API ZYM table row for both assayed A. indicium strains."
+      },
+      {
+        "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+        "snippet": "Protease A and protease B are extracellular proteins which are secreted by Streptomyces griseus. The genes encoding protease A (sprA) and protease B (sprB) were isolated from an S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing sprA and sprB were characterized by hybridization and demonstration of proteolytic activity in Streptomyces lividans.",
+        "notes": "Henderson et al. cloned and characterized the Streptomyces griseus sprA gene encoding extracellular chymotrypsin-like serine protease A / streptogrisin-A (UniProtKB:P00776)."
       }
     ],
     "canonical_examples": [
@@ -207829,6 +207900,12 @@
         "taxon_label": "Amygdalobacter indicium",
         "note": "Srinivasan et al. reported Amygdalobacter indicium as positive for alpha-chymotrypsin activity in the API ZYM enzyme activity panel.",
         "reference": "DOI:10.1099/ijsem.0.006017"
+      },
+      {
+        "taxon_id": "NCBITaxon:1911",
+        "taxon_label": "Streptomyces griseus",
+        "note": "Henderson et al. cloned and characterized the Streptomyces griseus sprA gene encoding extracellular chymotrypsin-like serine protease A (streptogrisin-A; SprA).",
+        "reference": "DOI:10.1128/jb.169.8.3778-3784.1987"
       }
     ],
     "discussions": [
@@ -207867,7 +207944,7 @@
         "discussion_id": "alpha-chymotrypsin-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) so alpha_chymotrypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#alpha_chymotrypsin_hydrolysis_sketch"
         ],
@@ -207881,7 +207958,9 @@
             "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-31",
+        "resolution_note": "Added canonical_examples entry Streptomyces griseus (NCBITaxon:1911; DOI:10.1128/jb.169.8.3778-3784.1987) and promoted alpha_chymotrypsin_hydrolysis_sketch to MECHANISTIC by adding InterPro:IPR001316-grounded GENE_OR_PROTEIN node alpha_chymotrypsin_spra with reviewed Streptomyces griseus (NCBITaxon:1911) protein_examples UniProtKB:P00776 (SprA / streptogrisin-A) backed by DOI:10.1128/jb.169.8.3778-3784.1987."
       }
     ],
     "curation_history": [
@@ -207919,6 +207998,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (alpha_chymotrypsin_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alpha-chymotrypsin-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T20:55:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Streptomyces griseus (NCBITaxon:1911; DOI:10.1128/jb.169.8.3778-3784.1987) canonical example; promoted alpha_chymotrypsin_hydrolysis_sketch to MECHANISTIC; added InterPro:IPR001316-grounded GENE_OR_PROTEIN node alpha_chymotrypsin_spra with reviewed Streptomyces griseus (NCBITaxon:1911) protein_examples UniProtKB:P00776 (SprA) backed by DOI:10.1128/jb.169.8.3778-3784.1987; resolved alpha-chymotrypsin-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -207926,8 +208012,8 @@
         "graph_id": "alpha_chymotrypsin_hydrolysis_sketch",
         "title": "Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds",
         "description": "Evidence-backed physiological mechanism sketch linking serine-type endopeptidase catalytic activity and peptide cleavage product release at Tyr, Trp, Phe, and Leu residues to the alpha-chymotrypsin activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.21.1 and DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB protein examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.4.21.1, DOI:10.1099/ijsem.0.006017, and DOI:10.1128/jb.169.8.3778-3784.1987; exemplified on alpha_chymotrypsin_spra with Streptomyces griseus (NCBITaxon:1911) streptogrisin-A SprA (UniProtKB:P00776).",
         "nodes": [
           {
             "node_id": "alpha_chymotrypsin_activity_trait",
@@ -207949,6 +208035,37 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16670",
             "description": "Peptide cleavage product generated by chymotrypsin-like serine endopeptidase hydrolysis at aromatic and leucyl peptide bonds."
+          },
+          {
+            "node_id": "alpha_chymotrypsin_spra",
+            "label": "streptogrisin-A SprA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001316",
+            "gene_symbols": [
+              "sprA"
+            ],
+            "description": "Peptidase S1A streptogrisin family extracellular chymotrypsin-like serine endopeptidase (SprA; EC 3.4.21.80) that cleaves peptide and chromogenic ester or amide bonds on the carboxyl side of bulky aromatic or hydrophobic amino acid residues.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P00776",
+                "protein_label": "Streptogrisin-A",
+                "gene_symbol": "sprA",
+                "taxon_id": "NCBITaxon:1911",
+                "taxon_label": "Streptomyces griseus",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-31",
+                "entry_version": 127,
+                "sequence_version": 2,
+                "role": "SprA is the Streptomyces griseus extracellular S1A chymotrypsin-like serine protease A / streptogrisin-A (EC 3.4.21.80) that hydrolyzes peptide bonds after aromatic or hydrophobic residues.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+                    "snippet": "Protease A and protease B are extracellular proteins which are secreted by Streptomyces griseus. The genes encoding protease A (sprA) and protease B (sprB) were isolated from an S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing sprA and sprB were characterized by hybridization and demonstration of proteolytic activity in Streptomyces lividans.",
+                    "notes": "Henderson et al. isolated and characterized the Streptomyces griseus sprA gene encoding streptogrisin-A (UniProtKB:P00776)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -207977,6 +208094,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html",
                 "snippet": "<b>Reaction:</b> Preferential cleavage: Tyr<img src=\"../../../EZgif/FISS.GIF\" align=top>, Trp<img src=\"../../../EZgif/FISS.GIF\" align=top>, Phe<img src=\"../../../EZgif/FISS.GIF\" align=top>, Leu<img src=\"../../../EZgif/FISS.GIF\" align=top>",
                 "notes": "IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues."
+              }
+            ]
+          },
+          {
+            "subject": "alpha_chymotrypsin_spra",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alpha_chymotrypsin_catalytic_activity",
+            "description": "Streptogrisin-A SprA enables alpha-chymotrypsin catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+                "snippet": "Protease A and protease B are extracellular proteins which are secreted by Streptomyces griseus. The genes encoding protease A (sprA) and protease B (sprB) were isolated from an S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing sprA and sprB were characterized by hybridization and demonstration of proteolytic activity in Streptomyces lividans.",
+                "notes": "Henderson et al. demonstrated proteolytic activity of cloned Streptomyces griseus protease A (SprA)."
               }
             ]
           }
@@ -209558,6 +209689,11 @@
         "reference": "DOI:10.1099/ijsem.0.006017",
         "snippet": "arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase",
         "notes": "Srinivasan et al. listed arginine arylamidase among enzymatic activities present in the Amygdalobacter indicium species description, supporting the API arylamidase row as a directly assayed bacterial enzyme-activity phenotype."
+      },
+      {
+        "reference": "DOI:10.1021/bi7022333",
+        "snippet": "Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase with the active-site region related to that of thermolysin. The enzyme has unusual specificity, cleaving adjacent to the large, nonpolar amino acids Phe and Tyr but also cleaving next to the polar residues Lys and Arg. To try to understand the structural basis for this pattern of hydrolysis, the structure of the enzyme was determined in complex with the amino acids L-arginine, L-lysine, L-phenylalanine, L-tryptophan, and L-tyrosine.",
+        "notes": "Addlagatta et al. characterized the L-arginine cleavage specificity and L-arginine-bound crystal structure of Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825)."
       }
     ],
     "canonical_examples": [
@@ -209566,6 +209702,12 @@
         "taxon_label": "Helicobacter zhangjianzhongii",
         "note": "Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive for L-arginine arylamidase in the formal species description.",
         "reference": "DOI:10.3389/fgene.2023.1240581"
+      },
+      {
+        "taxon_id": "NCBITaxon:83333",
+        "taxon_label": "Escherichia coli K-12",
+        "note": "Addlagatta et al. characterized Escherichia coli K-12 M1 aminopeptidase N (PepN) cleavage adjacent to basic residues including L-arginine and determined the structure of the enzyme in complex with L-arginine.",
+        "reference": "DOI:10.1021/bi7022333"
       }
     ],
     "discussions": [
@@ -209604,7 +209746,7 @@
         "discussion_id": "arginine-arylamidase-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Lactococcus lactis subsp. cremoris MG1363 aminopeptidase C PepC (UniProtKB:Q48677) or Escherichia coli K-12 aminopeptidase B PepB (UniProtKB:P37095) so arginine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#arginine_arylamidase_hydrolysis_sketch"
         ],
@@ -209618,7 +209760,9 @@
             "snippet": "Both of these strains exhibit positive results for oxidase, gamma-glutamyl transferase, alkaline phosphatase, pyrrolidonyl arylamidase, L-arginine arylamidase, and L-aspartate arylamidase",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-31",
+        "resolution_note": "Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1021/bi7022333) and promoted arginine_arylamidase_hydrolysis_sketch to MECHANISTIC by adding InterPro:IPR012779-grounded GENE_OR_PROTEIN node arginine_arylamidase_pepn with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples UniProtKB:P04825 (PepN; replacing the mis-cited open discussion prompt accessions Q48677, which is Lactococcus lactis glutamyl aminopeptidase PepA, and P37095, which is Escherichia coli M17 cysteinylglycinase/aspartyl peptidase B PepB) backed by DOI:10.1021/bi7022333."
       }
     ],
     "curation_history": [
@@ -209642,6 +209786,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (arginine_arylamidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (arginine-arylamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T20:55:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1021/bi7022333) canonical example; promoted arginine_arylamidase_hydrolysis_sketch to MECHANISTIC; added InterPro:IPR012779-grounded GENE_OR_PROTEIN node arginine_arylamidase_pepn with reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P04825 (PepN, correcting mis-cited Q48677 PepA and P37095 PepB) backed by DOI:10.1021/bi7022333; resolved arginine-arylamidase-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -209649,8 +209800,8 @@
         "graph_id": "arginine_arylamidase_hydrolysis_sketch",
         "title": "Arginine arylamidase hydrolysis of N-terminal L-arginyl peptide and arylamide bonds",
         "description": "Evidence-backed physiological mechanism sketch linking aminopeptidase B catalytic activity and N-terminal L-arginine release from oligopeptide and arylamide substrates to the arginine arylamidase activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.11.6 and DOI:10.3389/fgene.2023.1240581; strain-matched UniProtKB protein examples for bacterial arginine aminopeptidase / arylamidase remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.4.11.6, DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017, and DOI:10.1021/bi7022333; exemplified on arginine_arylamidase_pepn with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) aminopeptidase N PepN (UniProtKB:P04825).",
         "nodes": [
           {
             "node_id": "arginine_arylamidase_activity_trait",
@@ -209672,6 +209823,38 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16467",
             "description": "N-terminal L-arginine product released by hydrolytic cleavage of oligopeptide and arylamide substrates."
+          },
+          {
+            "node_id": "arginine_arylamidase_pepn",
+            "label": "aminopeptidase N PepN",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR012779",
+            "gene_symbols": [
+              "pepN"
+            ],
+            "description": "Peptidase M1 family broad-specificity zinc aminopeptidase N (PepN; EC 3.4.11.2) that cleaves N-terminal basic (L-arginine, L-lysine) and nonpolar aminoacyl amide and arylamide bonds.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P04825",
+                "protein_label": "Aminopeptidase N",
+                "gene_symbol": "pepN",
+                "taxon_id": "NCBITaxon:83333",
+                "taxon_label": "Escherichia coli K-12",
+                "entry_status": "REVIEWED",
+                "proteome_id": "UP000000625",
+                "retrieved_on": "2026-10-31",
+                "entry_version": 217,
+                "sequence_version": 2,
+                "role": "PepN is the Escherichia coli K-12 M1 zinc aminopeptidase N (EC 3.4.11.2) that cleaves N-terminal basic aminoacyl bonds including L-arginine.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1021/bi7022333",
+                    "snippet": "Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase with the active-site region related to that of thermolysin. The enzyme has unusual specificity, cleaving adjacent to the large, nonpolar amino acids Phe and Tyr but also cleaving next to the polar residues Lys and Arg. To try to understand the structural basis for this pattern of hydrolysis, the structure of the enzyme was determined in complex with the amino acids L-arginine, L-lysine, L-phenylalanine, L-tryptophan, and L-tyrosine.",
+                    "notes": "Addlagatta et al. determined the structural basis of L-arginine hydrolysis by Escherichia coli K-12 PepN (UniProtKB:P04825)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -209700,6 +209883,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/6.html",
                 "snippet": "<b>Reaction:</b> Release of N-terminal Arg and Lys from oligopeptides when P1' is not Pro. Also acts on arylamides of Arg and Lys",
                 "notes": "IUBMB EC 3.4.11.6 defines the aminopeptidase B reaction as the release of N-terminal Arg and Lys from oligopeptides when P1' is not Pro and hydrolysis of arylamides of Arg and Lys."
+              }
+            ]
+          },
+          {
+            "subject": "arginine_arylamidase_pepn",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "arginine_arylamidase_catalytic_activity",
+            "description": "Aminopeptidase N PepN enables arginine arylamidase catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1021/bi7022333",
+                "snippet": "Aminopeptidase N from Escherichia coli is a M1 class aminopeptidase with the active-site region related to that of thermolysin. The enzyme has unusual specificity, cleaving adjacent to the large, nonpolar amino acids Phe and Tyr but also cleaving next to the polar residues Lys and Arg. To try to understand the structural basis for this pattern of hydrolysis, the structure of the enzyme was determined in complex with the amino acids L-arginine, L-lysine, L-phenylalanine, L-tryptophan, and L-tyrosine.",
+                "notes": "Addlagatta et al. demonstrated that Escherichia coli K-12 PepN cleaves N-terminal Arg residues and bound L-arginine in the active site."
               }
             ]
           }
@@ -242751,6 +242948,11 @@
         "reference": "DOI:10.1371/journal.pone.0322500",
         "snippet": "Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and alpha-glucosidase are present when assayed with API ZYM system.",
         "notes": "Park et al. treated trypsin as a positive API ZYM enzyme-activity phenotype in the Flexibacterium corallicola type species description."
+      },
+      {
+        "reference": "DOI:10.1016/0006-291x(91)91248-b",
+        "snippet": "Streptomyces griseus trypsin (E.C. 3.4.21.4) is one of the major extracellular proteinase, which is secreted by S. griseus. The gene encoding S. griseus trypsin was isolated from a S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing the gene for S. griseus trypsin were characterized by hybridization and demonstration of proteolytic activity in S. lividans.",
+        "notes": "Kim et al. cloned and characterized the Streptomyces griseus sprT gene encoding extracellular trypsin (EC 3.4.21.4; UniProtKB:P00775)."
       }
     ],
     "canonical_examples": [
@@ -242759,6 +242961,12 @@
         "taxon_label": "Flexibacterium corallicola",
         "note": "Park et al. reported Flexibacterium corallicola as positive for trypsin activity in the API ZYM enzyme activity panel.",
         "reference": "DOI:10.1371/journal.pone.0322500"
+      },
+      {
+        "taxon_id": "NCBITaxon:1911",
+        "taxon_label": "Streptomyces griseus",
+        "note": "Kim et al. cloned and characterized the Streptomyces griseus sprT gene encoding secreted extracellular trypsin (EC 3.4.21.4; SprT).",
+        "reference": "DOI:10.1016/0006-291x(91)91248-b"
       }
     ],
     "discussions": [
@@ -242797,7 +243005,7 @@
         "discussion_id": "trypsin-activity-protein-example-gap",
         "prompt": "Add strain-matched UniProtKB protein_examples for Streptomyces griseus trypsin SprT (UniProtKB:P00775) so trypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
         "kind": "CURATION_TODO",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
           "causal_graphs#trypsin_hydrolysis_sketch"
         ],
@@ -242811,7 +243019,9 @@
             "snippet": "Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and alpha-glucosidase are present when assayed with API ZYM system.",
             "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
-        ]
+        ],
+        "resolved_date": "2026-10-31",
+        "resolution_note": "Added canonical_examples entry Streptomyces griseus (NCBITaxon:1911; DOI:10.1016/0006-291x(91)91248-b) and promoted trypsin_hydrolysis_sketch to MECHANISTIC by adding InterPro:IPR001314-grounded GENE_OR_PROTEIN node trypsin_sprt with reviewed Streptomyces griseus (NCBITaxon:1911) protein_examples UniProtKB:P00775 (SprT / trypsin) backed by DOI:10.1016/0006-291x(91)91248-b."
       }
     ],
     "curation_history": [
@@ -242849,6 +243059,13 @@
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (trypsin_hydrolysis_sketch) and OPEN CURATION_TODO discussion (trypsin-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T20:55:00Z",
+        "curator": "claude",
+        "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
+        "changes": "Added Streptomyces griseus (NCBITaxon:1911; DOI:10.1016/0006-291x(91)91248-b) canonical example; promoted trypsin_hydrolysis_sketch to MECHANISTIC; added InterPro:IPR001314-grounded GENE_OR_PROTEIN node trypsin_sprt with reviewed Streptomyces griseus (NCBITaxon:1911) protein_examples UniProtKB:P00775 (SprT) backed by DOI:10.1016/0006-291x(91)91248-b; resolved trypsin-activity-protein-example-gap.",
+        "llm_assisted": true
       }
     ],
     "causal_graphs": [
@@ -242856,8 +243073,8 @@
         "graph_id": "trypsin_hydrolysis_sketch",
         "title": "Trypsin endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds",
         "description": "Evidence-backed physiological mechanism sketch linking trypsin serine-endopeptidase catalytic activity and peptide cleavage product release to the trypsin activity phenotype.",
-        "scope_status": "NONMECHANISTIC",
-        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.21.4 and DOI:10.1371/journal.pone.0322500; strain-matched UniProtKB protein examples for Streptomyces griseus trypsin SprT (UniProtKB:P00775) remain to be curated.",
+        "scope_status": "MECHANISTIC",
+        "scope_notes": "Mechanistic graph backed by EC 3.4.21.4, DOI:10.1371/journal.pone.0322500, and DOI:10.1016/0006-291x(91)91248-b; exemplified on trypsin_sprt with Streptomyces griseus (NCBITaxon:1911) trypsin SprT (UniProtKB:P00775).",
         "nodes": [
           {
             "node_id": "trypsin_activity_trait",
@@ -242879,6 +243096,37 @@
             "node_type": "CHEMICAL",
             "grounding": "CHEBI:16670",
             "description": "Peptide cleavage product generated by trypsin endopeptidase hydrolysis at L-arginyl and L-lysyl bonds."
+          },
+          {
+            "node_id": "trypsin_sprt",
+            "label": "trypsin SprT",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001314",
+            "gene_symbols": [
+              "sprT"
+            ],
+            "description": "Peptidase S1A chymotrypsin/trypsin family extracellular serine endopeptidase (SprT; EC 3.4.21.4) that cleaves peptide and synthetic chromogenic ester or amide bonds on the carboxyl side of L-arginine or L-lysine residues.",
+            "protein_examples": [
+              {
+                "uniprot_id": "UniProtKB:P00775",
+                "protein_label": "Trypsin",
+                "gene_symbol": "sprT",
+                "taxon_id": "NCBITaxon:1911",
+                "taxon_label": "Streptomyces griseus",
+                "entry_status": "REVIEWED",
+                "retrieved_on": "2026-10-31",
+                "entry_version": 132,
+                "sequence_version": 2,
+                "role": "SprT is the Streptomyces griseus extracellular trypsin (EC 3.4.21.4) that catalyzes endopeptidase cleavage after basic L-arginine or L-lysine residues.",
+                "evidence": [
+                  {
+                    "reference": "DOI:10.1016/0006-291x(91)91248-b",
+                    "snippet": "Streptomyces griseus trypsin (E.C. 3.4.21.4) is one of the major extracellular proteinase, which is secreted by S. griseus. The gene encoding S. griseus trypsin was isolated from a S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing the gene for S. griseus trypsin were characterized by hybridization and demonstration of proteolytic activity in S. lividans.",
+                    "notes": "Kim et al. isolated and characterized the Streptomyces griseus sprT gene encoding extracellular trypsin (UniProtKB:P00775)."
+                  }
+                ]
+              }
+            ]
           }
         ],
         "edges": [
@@ -242907,6 +243155,20 @@
                 "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/4.html",
                 "snippet": "<b>Reaction:</b> Preferential cleavage: Arg<img src=\"../../../EZgif/FISS.GIF\" align=top>, Lys<img src=\"../../../EZgif/FISS.GIF\" align=top>",
                 "notes": "IUBMB EC 3.4.21.4 defines trypsin catalysis as preferential peptide bond cleavage at Arg-|-Xaa and Lys-|-Xaa residues."
+              }
+            ]
+          },
+          {
+            "subject": "trypsin_sprt",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "trypsin_catalytic_activity",
+            "description": "Trypsin SprT enables trypsin catalytic activity.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1016/0006-291x(91)91248-b",
+                "snippet": "Streptomyces griseus trypsin (E.C. 3.4.21.4) is one of the major extracellular proteinase, which is secreted by S. griseus. The gene encoding S. griseus trypsin was isolated from a S. griseus genomic library by using a synthetic oligonucleotide probe. Fragments containing the gene for S. griseus trypsin were characterized by hybridization and demonstration of proteolytic activity in S. lividans.",
+                "notes": "Kim et al. demonstrated proteolytic activity of cloned Streptomyces griseus trypsin (SprT; EC 3.4.21.4)."
               }
             ]
           }
