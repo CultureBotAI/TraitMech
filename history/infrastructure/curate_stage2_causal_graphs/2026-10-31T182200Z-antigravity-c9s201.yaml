@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+  slug: curate_stage2_causal_graphs
+session:
+  id: 2026-10-31T182200Z-antigravity-c9s201
+  timestamp: '2026-10-31T18:22:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2059
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2058
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Curate Cycle 9 Stage 2 causal_graphs for 4 Cohort L physiology traits (alanine_arylamidase_activity,
+    alpha_chymotrypsin_activity, arginine_arylamidase_activity, trypsin_activity)
+  details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 9 Stage 2 (causal_graphs).
+    Verified 756 existing eligible CLASS records with causal_graphs have 0 new structural
+    errors, 0 new predicate-domain errors, and 0 protein-taxon gaps. Extended scripts/curate_stage2_causal_graphs.py
+    with Cohort L (4 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions for
+    alanine_arylamidase_activity, alpha_chymotrypsin_activity, arginine_arylamidase_activity,
+    and trypsin_activity, resolving each record's <slug>-causal-graph-source-gap, grounding
+    serine endopeptidase catalytic nodes to active GO:0004252, and attributing species-description
+    snippets to Amygdalobacter indicium NCBITaxon:3029272 and Flexibacterium corallicola
+    NCBITaxon:3037259). After this batch, 760/1,129 eligible records carry connected
+    schema-valid causal_graphs, 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (245/245) of active CLASS records without causal_graphs carry an
+    explicit OPEN KNOWLEDGE_GAP (206) or CURATION_TODO (39) discussion.

@@ -60,9 +60,9 @@ discussions:
     catalysis and physiological peptide cleavage in the exemplar taxon before constructing
     causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#alanine_arylamidase_hydrolysis_sketch
   rationale: The current record pairs one IUBMB EC 3.4.11.2 reaction snippet with
     a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017),
     leaving only one mechanistic quote.
@@ -78,6 +78,38 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-10-31'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (alanine_arylamidase_hydrolysis_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in alanine-arylamidase-activity-protein-example-gap.
+- discussion_id: alanine-arylamidase-activity-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Escherichia coli K-12
+    aminopeptidase N PepN (UniProtKB:P04825) so alanine_arylamidase_hydrolysis_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#alanine_arylamidase_hydrolysis_sketch
+  rationale: The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017)
+    establishes N-terminal amino-acid release preferentially cleaving L-alanine from
+    peptides, amides, or arylamides and positive alanine arylamidase activity in Amygdalobacter
+    indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified
+    UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the
+    graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-10-31'
+  evidence:
+  - reference: DOI:10.1099/ijsem.0.006017
+    supports: PARTIAL
+    snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+      arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+      arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+      glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+      serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+      lipase, alpha-chymotrypsin'
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-12T07:32:57Z'
   curator: codex
@@ -92,3 +124,73 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (alanine-arylamidase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-10-31T19:03:07Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (alanine_arylamidase_hydrolysis_sketch)
+    and OPEN CURATION_TODO discussion (alanine-arylamidase-activity-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: alanine_arylamidase_hydrolysis_sketch
+  title: Alanine arylamidase hydrolysis of N-terminal L-alanyl peptide and arylamide
+    bonds
+  description: Evidence-backed physiological mechanism sketch linking alanyl aminopeptidase
+    catalytic activity and N-terminal L-alanine release from peptide, amide, or arylamide
+    substrates to the alanine arylamidase activity phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Activity-and-reaction sketch backed by EC 3.4.11.2 and DOI:10.1099/ijsem.0.006017;
+    strain-matched UniProtKB protein examples for Escherichia coli K-12 aminopeptidase
+    N (PepN, UniProtKB:P04825) remain to be curated.
+  nodes:
+  - node_id: alanine_arylamidase_activity_trait
+    label: alanine arylamidase activity
+    node_type: TRAIT
+    grounding: traitmech:000161
+    description: Physiological enzyme-activity phenotype in which a cell produces
+      active alanine arylamidase (aminopeptidase N) enzymes that release N-terminal
+      L-alanine from peptide, amide, or arylamide substrates.
+  - node_id: alanine_arylamidase_catalytic_activity
+    label: alanyl aminopeptidase activity
+    node_type: MOLECULAR_FUNCTION
+    grounding: GO:0016285
+    description: Aminopeptidase catalytic activity releasing an N-terminal amino acid,
+      preferentially L-alanine, from a peptide, amide, or arylamide (EC 3.4.11.2).
+  - node_id: alanine_arylamidase_alanine
+    label: L-alanine
+    node_type: CHEMICAL
+    grounding: CHEBI:16977
+    description: N-terminal L-alanine product preferentially released by alanyl aminopeptidase
+      (alanine arylamidase) cleavage of peptide, amide, or arylamide substrates.
+  edges:
+  - subject: alanine_arylamidase_catalytic_activity
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: alanine_arylamidase_activity_trait
+    description: Cellular production of active alanine arylamidase detected in diagnostic
+      enzyme panels confers the alanine arylamidase activity phenotype.
+    evidence:
+    - reference: DOI:10.1099/ijsem.0.006017
+      snippet: 'enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase,
+        arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine
+        arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase,
+        glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
+        serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
+        lipase, alpha-chymotrypsin'
+      notes: Srinivasan et al. report that Amygdalobacter indicium displays positive
+        enzymatic activity for alanine arylamidase in the API ZYM enzyme activity
+        panel.
+  - subject: alanine_arylamidase_catalytic_activity
+    predicate: has output
+    predicate_id: RO:0002234
+    object: alanine_arylamidase_alanine
+    description: Alanyl aminopeptidase catalyzes the hydrolytic release of an N-terminal
+      amino acid, preferentially L-alanine, from a peptide, amide, or arylamide.
+    evidence:
+    - reference: https://iubmb.qmul.ac.uk/enzyme/EC3/4/11/2.html
+      snippet: <b>Reaction:</b> Release of an N-terminal amino acid, Xaa<img src="../../../EZgif/FISS.GIF"
+        align=top>Yaa- from a peptide, amide or arylamide. Xaa is preferably Ala,
+        but may be most amino acids including Pro (slow action).
+      notes: IUBMB EC 3.4.11.2 defines the membrane alanyl aminopeptidase reaction
+        as the release of an N-terminal amino acid (preferably L-alanine) from a peptide,
+        amide, or arylamide.
