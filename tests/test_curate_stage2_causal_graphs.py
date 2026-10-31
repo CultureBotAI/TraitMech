@@ -23,6 +23,7 @@ from curate_stage2_causal_graphs import (  # noqa: E402
     COHORT_H_PATHS,
     COHORT_I_PATHS,
     COHORT_J_PATHS,
+    COHORT_K_PATHS,
     _verify_graph_invariants,
     build_cohort_a_graphs,
     build_cohort_b_discussion,
@@ -40,6 +41,8 @@ from curate_stage2_causal_graphs import (  # noqa: E402
     build_cohort_i_graphs,
     build_cohort_j_discussion,
     build_cohort_j_graphs,
+    build_cohort_k_discussion,
+    build_cohort_k_graphs,
     process_all,
 )
 from traitmech.validation.write_validated import validate_trait  # noqa: E402
@@ -49,13 +52,14 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
     assert len(COHORT_A_PATHS) == 10
     assert len(COHORT_B_GAPS) == 14
     assert len(COHORT_C_PATHS) == 10
-    assert len(COHORT_D_GAPS) == 41
+    assert len(COHORT_D_GAPS) == 38
     assert len(COHORT_E_PATHS) == 3
     assert len(COHORT_F_GAPS) == 30
     assert len(COHORT_G_PATHS) == 3
     assert len(COHORT_H_PATHS) == 3
     assert len(COHORT_I_PATHS) == 3
     assert len(COHORT_J_PATHS) == 3
+    assert len(COHORT_K_PATHS) == 3
     all_sets = [
         set(COHORT_A_PATHS),
         set(COHORT_B_GAPS),
@@ -67,6 +71,7 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
         set(COHORT_H_PATHS),
         set(COHORT_I_PATHS),
         set(COHORT_J_PATHS),
+        set(COHORT_K_PATHS),
     ]
     for idx, s1 in enumerate(all_sets):
         assert "data/traits/physiology/spore_germination.yaml" not in s1
@@ -296,6 +301,33 @@ def test_cohort_j_committed_records_have_valid_connected_causal_graphs_and_todo(
         assert source_gaps[0]["attaches_to"] == [f"causal_graphs#{graph_id}"]
 
 
+def test_cohort_k_committed_records_have_valid_connected_causal_graphs_and_todo() -> None:
+    for rel_path in COHORT_K_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = doc.get("causal_graphs")
+        assert graphs and len(graphs) == 1, f"{rel_path}: missing causal_graphs"
+        _verify_graph_invariants(rel_path, doc, graphs)
+        assert graphs[0]["scope_status"] in {"NONMECHANISTIC", "MECHANISTIC"}
+        graph_id = graphs[0]["graph_id"]
+        disc_id = f"{path.stem.replace('_', '-')}-protein-example-gap"
+        discussions = doc.get("discussions") or []
+        matching = [d for d in discussions if d.get("discussion_id") == disc_id]
+        assert len(matching) == 1, f"{rel_path}: missing {disc_id}"
+        disc = matching[0]
+        assert disc["kind"] == "CURATION_TODO"
+        if graphs[0]["scope_status"] == "MECHANISTIC":
+            assert disc["status"] == "RESOLVED"
+        else:
+            assert disc["status"] == "OPEN"
+        assert disc["attaches_to"] == [f"causal_graphs#{graph_id}"]
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        source_gaps = [d for d in discussions if d.get("discussion_id") == source_gap_id]
+        assert len(source_gaps) == 1, f"{rel_path}: missing {source_gap_id}"
+        assert source_gaps[0]["status"] == "RESOLVED"
+        assert source_gaps[0]["attaches_to"] == [f"causal_graphs#{graph_id}"]
+
+
 def test_process_all_is_idempotent_on_committed_corpus() -> None:
     assert process_all(apply=False) == (0, 0)
 
@@ -362,3 +394,10 @@ def test_builders_produce_closed_schema_valid_records() -> None:
     doc_j["causal_graphs"] = graphs_j
     doc_j["discussions"] = [build_cohort_j_discussion(rel_j, doc_j, graphs_j[0]["graph_id"])]
     assert validate_trait(doc_j) == []
+
+    rel_k = COHORT_K_PATHS[0]
+    doc_k = copy.deepcopy(yaml.safe_load((REPO_ROOT / rel_k).read_text(encoding="utf-8")))
+    graphs_k = build_cohort_k_graphs(rel_k, doc_k)
+    doc_k["causal_graphs"] = graphs_k
+    doc_k["discussions"] = [build_cohort_k_discussion(rel_k, doc_k, graphs_k[0]["graph_id"])]
+    assert validate_trait(doc_k) == []
