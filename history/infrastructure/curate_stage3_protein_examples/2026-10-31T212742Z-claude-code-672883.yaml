@@ -1,7 +1,7 @@
 history_version: 1
 target:
   kind: infrastructure
-  path: scripts/curate_stage3_protein_examples.yaml
+  path: scripts/curate_stage3_protein_examples.py
   slug: curate_stage3_protein_examples
 session:
   id: 2026-10-31T212742Z-claude-code-672883
@@ -12,6 +12,8 @@ session:
     model: claude-opus-4-6
     agent_tool: antigravity
 links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2060
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/1988
   - https://github.com/CultureBotAI/TraitMech/issues/2053
@@ -19,6 +21,10 @@ events:
 - type: EDIT
   outcome: changed
   sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
   - curation_history
   summary: 'Cycle 9 Stage 3 (protein_examples): promote 4 Cohort L trait graphs to MECHANISTIC
     with verified UniProtKB protein examples'
@@ -27,13 +33,13 @@ events:
     records (alanine_arylamidase_activity, alpha_chymotrypsin_activity, arginine_arylamidase_activity,
     trypsin_activity) to MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with
     live-verified reviewed UniProtKB protein_examples (P04825 PepN on Escherichia coli K-12
-    UP000000625 for alanine_arylamidase_activity; P0A7B8 ClpP on Escherichia coli K-12 UP000000625
-    for alpha_chymotrypsin_activity; P04825 PepN on Escherichia coli K-12 UP000000625 for
-    arginine_arylamidase_activity, correcting the open discussion prompt misattributions of
-    Q48677 PepA and P37095 PepB; P09095 DegP on Escherichia coli K-12 UP000000625 for trypsin_activity),
-    strain-matched canonical_examples, distinct verbatim primary-source evidence snippets,
-    record-evidence-backed scope_notes, and RESOLVED CURATION_TODO discussions. Refreshed
-    reports/uniprot_grounding_audit.tsv (201 uses across 166 unique accessions, 0 findings),
-    reports/graph_protein_taxon_coverage.tsv (163 MECHANISTIC pass, 597 NONMECHANISTIC, 0
-    gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv, and all derived reports
-    and pages.
+    NCBITaxon:83333 UP000000625 for alanine_arylamidase_activity; P00776 SprA on Streptomyces
+    griseus NCBITaxon:1911 for alpha_chymotrypsin_activity; P04825 PepN on Escherichia coli
+    K-12 NCBITaxon:83333 UP000000625 for arginine_arylamidase_activity, correcting the open
+    discussion prompt misattributions of Q48677 PepA and P37095 PepB; P00775 SprT on Streptomyces
+    griseus NCBITaxon:1911 for trypsin_activity), strain-matched canonical_examples, distinct
+    verbatim primary-source evidence snippets, record-evidence-backed scope_notes, and RESOLVED
+    CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv (201 uses across
+    165 unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv (163 MECHANISTIC
+    pass, 597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    and all derived reports and pages.
