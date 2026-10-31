@@ -207615,7 +207615,7 @@
         "attaches_to": [
           "causal_graphs#alanine_arylamidase_hydrolysis_sketch"
         ],
-        "rationale": "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Alloprevotella rava (NCBITaxon:1073377), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "rationale": "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Amygdalobacter indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         "posed_by": "claude",
         "posed_date": "2026-10-31",
         "evidence": [
@@ -207644,7 +207644,7 @@
         "llm_assisted": true
       },
       {
-        "timestamp": "2026-10-31T18:13:44Z",
+        "timestamp": "2026-10-31T19:03:07Z",
         "curator": "claude",
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (alanine_arylamidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alanine-arylamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
@@ -207692,7 +207692,7 @@
               {
                 "reference": "DOI:10.1099/ijsem.0.006017",
                 "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
-                "notes": "Downes et al. report that Alloprevotella rava displays positive enzymatic activity for alanine arylamidase in the Rapid ID 32A and API ZYM panels."
+                "notes": "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alanine arylamidase in the API ZYM enzyme activity panel."
               }
             ]
           },
@@ -207845,9 +207845,9 @@
         "discussion_id": "alpha-chymotrypsin-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#alpha_chymotrypsin_hydrolysis_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.4.21.1 cleavage-specificity snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
         "posed_by": "claude",
@@ -207858,6 +207858,28 @@
             "supports": "PARTIAL",
             "snippet": "<b>Reaction:</b> Preferential cleavage: Tyr<img src=\"../../../EZgif/FISS.GIF\" align=top>, Trp<img src=\"../../../EZgif/FISS.GIF\" align=top>, Phe<img src=\"../../../EZgif/FISS.GIF\" align=top>, Leu<img src=\"../../../EZgif/FISS.GIF\" align=top>",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-31",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (alpha_chymotrypsin_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in alpha-chymotrypsin-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "alpha-chymotrypsin-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) so alpha_chymotrypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#alpha_chymotrypsin_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.4.21.1, DOI:10.1099/ijsem.0.006017) establishes preferential endopeptidase cleavage at tyrosine, tryptophan, phenylalanine, and leucine peptide bonds and positive alpha-chymotrypsin activity in Amygdalobacter indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-31",
+        "evidence": [
+          {
+            "reference": "DOI:10.1099/ijsem.0.006017",
+            "supports": "PARTIAL",
+            "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -207890,6 +207912,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (alpha-chymotrypsin-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T19:03:08Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (alpha_chymotrypsin_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alpha-chymotrypsin-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "alpha_chymotrypsin_hydrolysis_sketch",
+        "title": "Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds",
+        "description": "Evidence-backed physiological mechanism sketch linking serine-type endopeptidase catalytic activity and peptide cleavage product release at Tyr, Trp, Phe, and Leu residues to the alpha-chymotrypsin activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.21.1 and DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB protein examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "alpha_chymotrypsin_activity_trait",
+            "label": "alpha-chymotrypsin activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000159",
+            "description": "Physiological enzyme-activity phenotype in which a cell exhibits chymotrypsin-like serine endopeptidase activity preferentially cleaving peptide bonds on the carboxyl side of Tyr, Trp, Phe, or Leu residues."
+          },
+          {
+            "node_id": "alpha_chymotrypsin_catalytic_activity",
+            "label": "serine-type endopeptidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0004252",
+            "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine residues (EC 3.4.21.1)."
+          },
+          {
+            "node_id": "alpha_chymotrypsin_peptide_product",
+            "label": "peptide",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:16670",
+            "description": "Peptide cleavage product generated by chymotrypsin-like serine endopeptidase hydrolysis at aromatic and leucyl peptide bonds."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "alpha_chymotrypsin_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "alpha_chymotrypsin_activity_trait",
+            "description": "Cellular production of active alpha-chymotrypsin-like serine endopeptidase detected in diagnostic enzyme panels confers the alpha-chymotrypsin activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1099/ijsem.0.006017",
+                "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin",
+                "notes": "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alpha-chymotrypsin in the API ZYM enzyme activity panel."
+              }
+            ]
+          },
+          {
+            "subject": "alpha_chymotrypsin_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "alpha_chymotrypsin_peptide_product",
+            "description": "Chymotrypsin-like serine endopeptidase catalyzes preferential peptide bond cleavage on the carboxyl side of Tyr, Trp, Phe, and Leu residues to release peptide cleavage products.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html",
+                "snippet": "<b>Reaction:</b> Preferential cleavage: Tyr<img src=\"../../../EZgif/FISS.GIF\" align=top>, Trp<img src=\"../../../EZgif/FISS.GIF\" align=top>, Phe<img src=\"../../../EZgif/FISS.GIF\" align=top>, Leu<img src=\"../../../EZgif/FISS.GIF\" align=top>",
+                "notes": "IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -209546,7 +209637,7 @@
         "llm_assisted": true
       },
       {
-        "timestamp": "2026-10-31T18:13:44Z",
+        "timestamp": "2026-10-31T19:03:08Z",
         "curator": "claude",
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (arginine_arylamidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (arginine-arylamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
@@ -242710,7 +242801,7 @@
         "attaches_to": [
           "causal_graphs#trypsin_hydrolysis_sketch"
         ],
-        "rationale": "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Chryseobacterium indologenes (NCBITaxon:253), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "rationale": "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Flexibacterium corallicola (NCBITaxon:3037259), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         "posed_by": "claude",
         "posed_date": "2026-10-31",
         "evidence": [
@@ -242753,7 +242844,7 @@
         "llm_assisted": true
       },
       {
-        "timestamp": "2026-10-31T18:13:44Z",
+        "timestamp": "2026-10-31T19:03:08Z",
         "curator": "claude",
         "action": "CURATE_CAUSAL_GRAPH",
         "changes": "Added NONMECHANISTIC causal_graphs entry (trypsin_hydrolysis_sketch) and OPEN CURATION_TODO discussion (trypsin-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
@@ -242777,9 +242868,9 @@
           },
           {
             "node_id": "trypsin_catalytic_activity",
-            "label": "trypsin activity",
+            "label": "serine-type endopeptidase activity",
             "node_type": "MOLECULAR_FUNCTION",
-            "grounding": "GO:0004295",
+            "grounding": "GO:0004252",
             "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl group of L-arginine or L-lysine residues (EC 3.4.21.4)."
           },
           {
@@ -242801,7 +242892,7 @@
               {
                 "reference": "DOI:10.1371/journal.pone.0322500",
                 "snippet": "Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and alpha-glucosidase are present when assayed with API ZYM system.",
-                "notes": "jung2025characterization report that Chryseobacterium indologenes exhibits positive trypsin activity when assayed with the API ZYM system."
+                "notes": "Park et al. report that Flexibacterium corallicola exhibits positive trypsin activity when assayed with the API ZYM enzyme activity panel."
               }
             ]
           },

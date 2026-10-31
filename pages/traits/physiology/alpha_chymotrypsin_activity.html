@@ -69,6 +69,78 @@
 
 
 
+  <section class="causal-graphs">
+
+
+    <div class="card causal-graph-card">
+      <h2>Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds</h2>
+      <p class="meta">Evidence-backed physiological mechanism sketch linking serine-type endopeptidase catalytic activity and peptide cleavage product release at Tyr, Trp, Phe, and Leu residues to the alpha-chymotrypsin activity phenotype.</p>
+
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Activity-and-reaction sketch backed by EC 3.4.21.1 and DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB protein examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) remain to be curated.</p>
+
+
+      <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
+      <noscript><p>JavaScript is unavailable. Read the edge evidence below.</p></noscript>
+      <div class="pathograph-container" id="pathograph-1">
+        <div class="pathograph-legend" id="pathograph-1-legend"></div>
+        <svg id="pathograph-1-svg" role="img">
+          <title>Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds</title>
+          <desc>Interactive directed graph showing evidence-backed causal relationships for alpha-chymotrypsin activity.</desc>
+        </svg>
+        <div class="pathograph-tooltip" id="pathograph-1-tooltip"></div>
+      </div>
+
+      <div class="edge-evidence">
+        <h3>Edge evidence</h3>
+        <ul>
+
+          <li id="pathograph-1-edge-1">
+            <strong>serine-type endopeptidase activity</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004252" rel="nofollow noreferrer"><code>GO:0004252</code></a>
+            <span class="edge-predicate">confers</span>
+            <strong>alpha-chymotrypsin activity</strong>
+            <code>traitmech:000159</code>
+            <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
+            <p>Cellular production of active alpha-chymotrypsin-like serine endopeptidase detected in diagnostic enzyme panels confers the alpha-chymotrypsin activity phenotype.</p>
+            <ul>
+
+              <li>
+                <a href="https://doi.org/10.1099/ijsem.0.006017" rel="nofollow noreferrer"><code>DOI:10.1099/ijsem.0.006017</code></a>
+                <span class="evidence-snippet">enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin</span>
+                <span class="meta">Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alpha-chymotrypsin in the API ZYM enzyme activity panel.</span>
+              </li>
+
+            </ul>
+          </li>
+
+          <li id="pathograph-1-edge-2">
+            <strong>serine-type endopeptidase activity</strong>
+            <a href="https://amigo.geneontology.org/amigo/term/GO:0004252" rel="nofollow noreferrer"><code>GO:0004252</code></a>
+            <span class="edge-predicate">has output</span>
+            <strong>peptide</strong>
+            <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:16670" rel="nofollow noreferrer"><code>CHEBI:16670</code></a>
+            <a href="http://purl.obolibrary.org/obo/RO_0002234" rel="nofollow noreferrer"><code>RO:0002234</code></a>
+            <p>Chymotrypsin-like serine endopeptidase catalyzes preferential peptide bond cleavage on the carboxyl side of Tyr, Trp, Phe, and Leu residues to release peptide cleavage products.</p>
+            <ul>
+
+              <li>
+                <a href="https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html" rel="nofollow noreferrer"><code>https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html</code></a>
+                <span class="evidence-snippet">&lt;b&gt;Reaction:&lt;/b&gt; Preferential cleavage: Tyr&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Trp&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Phe&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Leu&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;</span>
+                <span class="meta">IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues.</span>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+    </div>
+
+  </section>
+
 
 
 
@@ -220,7 +292,7 @@
 
 
     <div class="card" id="discussions">
-      <h2>Discussions and Knowledge Gaps <span class="meta">(2)</span></h2>
+      <h2>Discussions and Knowledge Gaps <span class="meta">(3)</span></h2>
       <p class="meta">Open questions attached to this trait. Seeded by
         <code>just knowledge-gap-scan</code> and curated; see
         <a href="../../../app/discussions/index.html">the corpus-wide index</a>.</p>
@@ -260,7 +332,7 @@
         <p class="discussion-prompt">Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.</p>
         <p class="meta">
           <span class="badge">KNOWLEDGE GAP</span>
-          <span class="badge">OPEN</span>
+          <span class="badge">RESOLVED</span>
           <code>alpha-chymotrypsin-activity-causal-graph-source-gap</code>
           · raised by claude
           · 2026-10-23
@@ -268,7 +340,7 @@
 
 
         <p class="meta">Attached to
-          <code>causal_graphs</code>
+          <code>causal_graphs#alpha_chymotrypsin_hydrolysis_sketch</code>
         </p>
 
 
@@ -285,6 +357,49 @@
             <span class="badge">PARTIAL</span>
             <blockquote>&lt;b&gt;Reaction:&lt;/b&gt; Preferential cleavage: Tyr&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Trp&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Phe&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;, Leu&lt;img src=&#34;../../../EZgif/FISS.GIF&#34; align=top&gt;</blockquote>
             <span class="meta">Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph.</span>
+          </li>
+
+        </ul>
+
+
+
+        <p class="meta"><em>Resolution:</em> Added connected NONMECHANISTIC causal_graphs entry (alpha_chymotrypsin_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in alpha-chymotrypsin-activity-protein-example-gap.</p>
+
+
+
+
+      </div>
+
+
+      <div class="discussion" id="alpha-chymotrypsin-activity-protein-example-gap">
+        <p class="discussion-prompt">Add strain-matched UniProtKB protein_examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) so alpha_chymotrypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.</p>
+        <p class="meta">
+          <span class="badge">CURATION TODO</span>
+          <span class="badge">OPEN</span>
+          <code>alpha-chymotrypsin-activity-protein-example-gap</code>
+          · raised by claude
+          · 2026-10-31
+        </p>
+
+
+        <p class="meta">Attached to
+          <code>causal_graphs#alpha_chymotrypsin_hydrolysis_sketch</code>
+        </p>
+
+
+        <p>The record&#39;s primary literature (EC 3.4.21.1, DOI:10.1099/ijsem.0.006017) establishes preferential endopeptidase cleavage at tyrosine, tryptophan, phenylalanine, and leucine peptide bonds and positive alpha-chymotrypsin activity in Amygdalobacter indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.</p>
+
+
+
+
+        <h3>Evidence</h3>
+        <ul class="discussion-evidence">
+
+          <li>
+            <a href="https://doi.org/10.1099/ijsem.0.006017" rel="nofollow noreferrer"><code>DOI:10.1099/ijsem.0.006017</code></a>
+            <span class="badge">PARTIAL</span>
+            <blockquote>enzymatic activities are present for: α-galactosidase, N-acetyl-β-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin</blockquote>
+            <span class="meta">Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples.</span>
           </li>
 
         </ul>
@@ -325,6 +440,12 @@
           <time>2026-10-23T09:40:48Z</time> ·
           <strong>RECORD_MECHANISM_KNOWLEDGE_GAP</strong> · claude
           <p class="changes">Recorded OPEN KNOWLEDGE_GAP discussion (alpha-chymotrypsin-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.</p>
+        </li>
+
+        <li>
+          <time>2026-10-31T19:03:08Z</time> ·
+          <strong>CURATE_CAUSAL_GRAPH</strong> · claude
+          <p class="changes">Added NONMECHANISTIC causal_graphs entry (alpha_chymotrypsin_hydrolysis_sketch) and OPEN CURATION_TODO discussion (alpha-chymotrypsin-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.</p>
         </li>
 
       </ol>
@@ -392,6 +513,341 @@
 </div>
 
 
+<script src="../../d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dagre@0.8.5/dist/dagre.min.js"></script>
+<script>
+var NODE_SHAPES = {
+  TRAIT: "roundrect",
+  PATHWAY: "roundrect",
+  ENVIRONMENTAL_FACTOR: "diamond",
+  EXPERIMENTAL_FACTOR: "rect",
+  GENE_OR_PROTEIN: "hexagon",
+  CHEMICAL: "circle",
+  ORGANELLE: "ellipse",
+  CELLULAR_LOCALIZATION: "ellipse",
+  MOLECULAR_FUNCTION: "roundrect",
+  BIOLOGICAL_PROCESS: "roundrect",
+  ORPHAN: "roundrect",
+  UNKNOWN: "roundrect"
+};
+var NODE_TYPE_LABELS = {
+  TRAIT: "Trait",
+  PATHWAY: "Pathway",
+  ENVIRONMENTAL_FACTOR: "Environmental factor",
+  EXPERIMENTAL_FACTOR: "Experimental factor",
+  GENE_OR_PROTEIN: "Gene or protein",
+  CHEMICAL: "Chemical",
+  ORGANELLE: "Organelle",
+  CELLULAR_LOCALIZATION: "Cellular localization",
+  MOLECULAR_FUNCTION: "Molecular function",
+  BIOLOGICAL_PROCESS: "Biological process",
+  ORPHAN: "Unresolved node",
+  UNKNOWN: "Unknown"
+};
+var NODE_STROKE = {
+  TRAIT: "#93c5fd",
+  PATHWAY: "#a5b4fc",
+  ENVIRONMENTAL_FACTOR: "#86efac",
+  EXPERIMENTAL_FACTOR: "#14b8a6",
+  GENE_OR_PROTEIN: "#c4b5fd",
+  CHEMICAL: "#fcd34d",
+  ORGANELLE: "#f9a8d4",
+  CELLULAR_LOCALIZATION: "#c4b5fd",
+  MOLECULAR_FUNCTION: "#67e8f9",
+  BIOLOGICAL_PROCESS: "#bef264",
+  ORPHAN: "#dc2626",
+  UNKNOWN: "#d1d5db"
+};
+
+function renderPathograph(containerId, data) {
+  var container = document.getElementById(containerId);
+  var svgEl = document.getElementById(containerId + "-svg");
+  var tooltipEl = document.getElementById(containerId + "-tooltip");
+  var legendEl = document.getElementById(containerId + "-legend");
+  if (!container || !svgEl || !tooltipEl || !legendEl || !data || !data.nodes.length) return;
+
+  var status = document.getElementById(containerId + "-status");
+  if (typeof dagre === "undefined" || typeof d3 === "undefined") {
+    status.textContent = "Graph unavailable: a drawing dependency could not load. Read the edge evidence below.";
+    container.hidden = true;
+    return;
+  }
+  status.hidden = true;
+  var graph = new dagre.graphlib.Graph();
+  graph.setGraph({ rankdir: "LR", nodesep: 44, ranksep: 92, marginx: 34, marginy: 34 });
+  graph.setDefaultEdgeLabel(function() { return {}; });
+
+  var nodeMap = {};
+  data.nodes.forEach(function(node) {
+    nodeMap[node.id] = node;
+    var label = node.label || node.id;
+    var width = Math.max(130, Math.min(230, label.length * 8 + 36));
+    graph.setNode(node.id, { width: width, height: 48, label: label });
+  });
+  data.edges.forEach(function(edge) {
+    if (nodeMap[edge.source] && nodeMap[edge.target]) graph.setEdge(edge.source, edge.target);
+  });
+  dagre.layout(graph);
+
+  var info = graph.graph();
+  var totalWidth = Math.max(320, info.width + 68);
+  var totalHeight = Math.max(220, info.height + 68);
+  var svg = d3.select(svgEl)
+    .attr("viewBox", "0 0 " + totalWidth + " " + totalHeight)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+    .style("min-height", Math.min(totalHeight, 620) + "px");
+
+  var root = svg.append("g").attr("class", "pathograph-root");
+  var markerId = containerId + "-arrow";
+  var orphanMarkerId = containerId + "-arrow-orphan";
+  var defs = svg.append("defs");
+  addArrow(defs, markerId, "#9ca3af");
+  addArrow(defs, orphanMarkerId, "#dc2626");
+
+  var zoom = d3.zoom().scaleExtent([0.3, 3]).on("zoom", function(event) {
+    root.attr("transform", event.transform);
+  });
+  svg.call(zoom);
+
+  var edgesGroup = root.append("g").attr("class", "pg-edges");
+  data.edges.forEach(function(edge) {
+    var dagreEdge = graph.edge(edge.source, edge.target);
+    if (!dagreEdge || !dagreEdge.points) return;
+    var line = d3.line().x(function(p) { return p.x; }).y(function(p) { return p.y; }).curve(d3.curveBasis);
+    var path = edgesGroup.append("path")
+      .attr("d", line(dagreEdge.points))
+      .attr("fill", "none")
+      .attr("stroke", edge.is_orphan ? "#dc2626" : "#9ca3af")
+      .attr("stroke-width", 1.9)
+      .attr("stroke-dasharray", edge.is_orphan ? "6 4" : "none")
+      .attr("marker-end", "url(#" + (edge.is_orphan ? orphanMarkerId : markerId) + ")")
+      .attr("data-source", edge.source)
+      .attr("data-target", edge.target)
+      .attr("data-edge-id", edge.id)
+      .style("cursor", "pointer");
+    path.on("mouseenter", function(event) { showEdgeTooltip(event, edge); })
+      .on("mouseleave", hideTooltip)
+      .on("click", function(event) {
+        event.stopPropagation();
+        var evidence = document.getElementById(containerId + "-" + edge.id);
+        if (evidence) evidence.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+  });
+
+  var nodesGroup = root.append("g").attr("class", "pg-nodes");
+  data.nodes.forEach(function(node) {
+    var dagreNode = graph.node(node.id);
+    if (!dagreNode) return;
+    var group = nodesGroup.append("g")
+      .attr("transform", "translate(" + dagreNode.x + "," + dagreNode.y + ")")
+      .attr("data-node-type", node.node_type)
+      .attr("data-node-id", node.id)
+      .style("cursor", "pointer");
+    drawNodeShape(group, node, dagreNode.width, dagreNode.height);
+    var label = node.label || node.id;
+    var maxChars = Math.floor(dagreNode.width / 7);
+    if (label.length > maxChars) label = label.substring(0, maxChars - 1) + "...";
+    group.append("text")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "central")
+      .attr("font-size", "11px")
+      .attr("font-family", "system-ui, -apple-system, sans-serif")
+      .attr("fill", "#1f2937")
+      .text(label);
+    group.on("mouseenter", function(event) {
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    }).on("mouseleave", function() {
+      clearHighlight();
+      hideTooltip();
+    }).on("click", function(event) {
+      event.stopPropagation();
+      highlightNode(node.id, true);
+      showNodeTooltip(event, node);
+    });
+  });
+
+  svg.on("click", function() {
+    clearHighlight();
+    hideTooltip();
+  });
+
+  buildLegend();
+
+  function addArrow(defsNode, id, color) {
+    defsNode.append("marker")
+      .attr("id", id)
+      .attr("viewBox", "0 0 10 6")
+      .attr("refX", 10)
+      .attr("refY", 3)
+      .attr("markerWidth", 8)
+      .attr("markerHeight", 6)
+      .attr("orient", "auto")
+      .append("path")
+      .attr("d", "M0,0 L10,3 L0,6 Z")
+      .attr("fill", color);
+  }
+
+  function drawNodeShape(selection, node, width, height) {
+    var shape = NODE_SHAPES[node.node_type] || "roundrect";
+    var stroke = node.is_orphan ? "#dc2626" : (NODE_STROKE[node.node_type] || "#d1d5db");
+    var dash = node.is_orphan ? "6 4" : "none";
+    if (shape === "ellipse") {
+      selection.append("ellipse").attr("rx", width / 2).attr("ry", height / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "diamond") {
+      selection.append("polygon")
+        .attr("points", "0," + (-height / 2) + " " + (width / 2) + ",0 0," + (height / 2) + " " + (-width / 2) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "hexagon") {
+      var x = width / 2, y = height / 2, inset = width * 0.18;
+      selection.append("polygon")
+        .attr("points", (-x + inset) + "," + (-y) + " " + (x - inset) + "," + (-y) + " " + x + ",0 " + (x - inset) + "," + y + " " + (-x + inset) + "," + y + " " + (-x) + ",0")
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else if (shape === "circle") {
+      selection.append("circle").attr("r", Math.min(width, height) / 2)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    } else {
+      selection.append("rect")
+        .attr("x", -width / 2).attr("y", -height / 2).attr("width", width).attr("height", height)
+        .attr("rx", shape === "roundrect" ? 8 : 0).attr("ry", shape === "roundrect" ? 8 : 0)
+        .attr("fill", node.color).attr("stroke", stroke).attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", dash);
+    }
+  }
+
+  function highlightNode(nodeId, on) {
+    if (!on) { clearHighlight(); return; }
+    var connected = new Set([nodeId]);
+    data.edges.forEach(function(edge) {
+      if (edge.source === nodeId) connected.add(edge.target);
+      if (edge.target === nodeId) connected.add(edge.source);
+    });
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("opacity", connected.has(item.attr("data-node-id")) ? 1 : 0.2);
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = item.attr("data-source");
+      var target = item.attr("data-target");
+      item.style("opacity", source === nodeId || target === nodeId ? 1 : 0.12);
+    });
+  }
+
+  function clearHighlight() {
+    nodesGroup.selectAll("g").style("opacity", 1);
+    edgesGroup.selectAll("path").style("opacity", 1);
+  }
+
+  function showNodeTooltip(event, node) {
+    var html = '<div class="tt-title">' + escapeHtml(node.label || node.id) + '</div>';
+    html += '<div class="tt-type">' + escapeHtml(NODE_TYPE_LABELS[node.node_type] || node.node_type) + '</div>';
+    if (node.grounding) html += '<div class="tt-meta"><span>Grounding: ' + escapeHtml(node.grounding) + '</span></div>';
+    if (node.protein_examples && node.protein_examples.length) {
+      var example = node.protein_examples[0];
+      html += '<div class="tt-meta"><span>Protein example: ' + escapeHtml(example.uniprot_id || "") + '</span>';
+      html += '<span>Taxon: ' + escapeHtml(example.taxon_label || example.taxon_id || "") + '</span></div>';
+    }
+    if (node.description) html += '<div class="tt-desc">' + escapeHtml(truncate(node.description, 220)) + '</div>';
+    showTooltip(event, html);
+  }
+
+  function showEdgeTooltip(event, edge) {
+    var html = '<div class="tt-title">' + escapeHtml(edge.predicate || "edge") + '</div>';
+    if (edge.predicate_id) html += '<div class="tt-type">' + escapeHtml(edge.predicate_id) + '</div>';
+    if (edge.description) html += '<div class="tt-desc">' + escapeHtml(truncate(edge.description, 220)) + '</div>';
+    html += '<div class="tt-meta"><span>Evidence: ' + (edge.evidence ? edge.evidence.length : 0) + ' item(s)</span></div>';
+    showTooltip(event, html);
+  }
+
+  function showTooltip(event, html) {
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.opacity = "1";
+    var rect = container.getBoundingClientRect();
+    var x = event.clientX - rect.left + 14;
+    var y = event.clientY - rect.top + 14;
+    if (x + 330 > rect.width) x = x - 340;
+    if (y + 200 > rect.height) y = Math.max(4, y - 200);
+    tooltipEl.style.left = x + "px";
+    tooltipEl.style.top = y + "px";
+  }
+
+  function hideTooltip() {
+    tooltipEl.style.opacity = "0";
+  }
+
+  function buildLegend() {
+    var types = {};
+    data.nodes.forEach(function(node) { types[node.node_type] = node.color; });
+    var activeTypes = new Set(Object.keys(types));
+    Object.keys(types).forEach(function(type) {
+      var item = document.createElement("label");
+      item.className = "pathograph-legend-item";
+      var checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.checked = true;
+      checkbox.setAttribute("aria-label", "Toggle " + (NODE_TYPE_LABELS[type] || type));
+      var swatch = document.createElement("span");
+      swatch.className = "pathograph-legend-swatch";
+      swatch.style.background = types[type];
+      swatch.style.borderColor = NODE_STROKE[type] || "#d1d5db";
+      var text = document.createElement("span");
+      text.textContent = NODE_TYPE_LABELS[type] || type;
+      item.appendChild(checkbox);
+      item.appendChild(swatch);
+      item.appendChild(text);
+      checkbox.addEventListener("change", function() {
+        if (checkbox.checked) {
+          activeTypes.add(type);
+          item.classList.remove("dimmed");
+        } else {
+          activeTypes.delete(type);
+          item.classList.add("dimmed");
+        }
+        filterByType(activeTypes);
+      });
+      legendEl.appendChild(item);
+    });
+  }
+
+  function filterByType(activeTypes) {
+    nodesGroup.selectAll("g").each(function() {
+      var item = d3.select(this);
+      item.style("display", activeTypes.has(item.attr("data-node-type")) ? null : "none");
+    });
+    edgesGroup.selectAll("path").each(function() {
+      var item = d3.select(this);
+      var source = nodeMap[item.attr("data-source")];
+      var target = nodeMap[item.attr("data-target")];
+      var visible = source && target && activeTypes.has(source.node_type) && activeTypes.has(target.node_type);
+      item.style("display", visible ? null : "none");
+    });
+  }
+
+  function truncate(value, maxLength) {
+    return value.length > maxLength ? value.substring(0, maxLength - 3) + "..." : value;
+  }
+
+  function escapeHtml(value) {
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(value || ""));
+    return div.innerHTML;
+  }
+}
+
+(function() {
+  var graphs = [{"description": "Evidence-backed physiological mechanism sketch linking serine-type endopeptidase catalytic activity and peptide cleavage product release at Tyr, Trp, Phe, and Leu residues to the alpha-chymotrypsin activity phenotype.", "edges": [{"description": "Cellular production of active alpha-chymotrypsin-like serine endopeptidase detected in diagnostic enzyme panels confers the alpha-chymotrypsin activity phenotype.", "evidence": [{"notes": "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alpha-chymotrypsin in the API ZYM enzyme activity panel.", "reference": "DOI:10.1099/ijsem.0.006017", "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin"}], "id": "edge-1", "is_orphan": false, "predicate": "confers", "predicate_id": "METPO:2007700", "source": "alpha_chymotrypsin_catalytic_activity", "target": "alpha_chymotrypsin_activity_trait"}, {"description": "Chymotrypsin-like serine endopeptidase catalyzes preferential peptide bond cleavage on the carboxyl side of Tyr, Trp, Phe, and Leu residues to release peptide cleavage products.", "evidence": [{"notes": "IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues.", "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html", "snippet": "\u003cb\u003eReaction:\u003c/b\u003e Preferential cleavage: Tyr\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Trp\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Phe\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Leu\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e"}], "id": "edge-2", "is_orphan": false, "predicate": "has output", "predicate_id": "RO:0002234", "source": "alpha_chymotrypsin_catalytic_activity", "target": "alpha_chymotrypsin_peptide_product"}], "evidence_rows": [{"description": "Cellular production of active alpha-chymotrypsin-like serine endopeptidase detected in diagnostic enzyme panels confers the alpha-chymotrypsin activity phenotype.", "edge_id": "edge-1", "evidence": [{"notes": "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alpha-chymotrypsin in the API ZYM enzyme activity panel.", "reference": "DOI:10.1099/ijsem.0.006017", "snippet": "enzymatic activities are present for: \u03b1-galactosidase, N-acetyl-\u03b2-glucosaminidase, arginine arylamidase, proline arylamidase, leucyl glycine arylamidase, phenylalanine arylamidase, leucine arylamidase, tyrosine arylamidase, alanine arylamidase, glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase, serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase lipase, alpha-chymotrypsin"}], "predicate": "confers", "predicate_id": "METPO:2007700", "source": "serine-type endopeptidase activity", "source_grounding": "GO:0004252", "target": "alpha-chymotrypsin activity", "target_grounding": "traitmech:000159"}, {"description": "Chymotrypsin-like serine endopeptidase catalyzes preferential peptide bond cleavage on the carboxyl side of Tyr, Trp, Phe, and Leu residues to release peptide cleavage products.", "edge_id": "edge-2", "evidence": [{"notes": "IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues.", "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/21/1.html", "snippet": "\u003cb\u003eReaction:\u003c/b\u003e Preferential cleavage: Tyr\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Trp\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Phe\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e, Leu\u003cimg src=\"../../../EZgif/FISS.GIF\" align=top\u003e"}], "predicate": "has output", "predicate_id": "RO:0002234", "source": "serine-type endopeptidase activity", "source_grounding": "GO:0004252", "target": "peptide", "target_grounding": "CHEBI:16670"}], "graph_id": "alpha_chymotrypsin_hydrolysis_sketch", "issues": [], "nodes": [{"color": "#dbeafe", "description": "Physiological enzyme-activity phenotype in which a cell exhibits chymotrypsin-like serine endopeptidase activity preferentially cleaving peptide bonds on the carboxyl side of Tyr, Trp, Phe, or Leu residues.", "grounding": "traitmech:000159", "id": "alpha_chymotrypsin_activity_trait", "is_orphan": false, "label": "alpha-chymotrypsin activity", "node_type": "TRAIT", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#cffafe", "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine residues (EC 3.4.21.1).", "grounding": "GO:0004252", "id": "alpha_chymotrypsin_catalytic_activity", "is_orphan": false, "label": "serine-type endopeptidase activity", "node_type": "MOLECULAR_FUNCTION", "protein_examples": [], "related_records": [], "xrefs": []}, {"color": "#fef3c7", "description": "Peptide cleavage product generated by chymotrypsin-like serine endopeptidase hydrolysis at aromatic and leucyl peptide bonds.", "grounding": "CHEBI:16670", "id": "alpha_chymotrypsin_peptide_product", "is_orphan": false, "label": "peptide", "node_type": "CHEMICAL", "protein_examples": [], "related_records": [], "xrefs": []}], "pathway_context_rows": [], "protein_example_rows": [], "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.21.1 and DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB protein examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) remain to be curated.", "scope_status": "NONMECHANISTIC", "title": "Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds"}];
+  graphs.forEach(function(graph, index) {
+    renderPathograph("pathograph-" + (index + 1), graph);
+  });
+})();
+</script>
+
 
 </main>
 <footer class="site-footer">
@@ -415,7 +871,7 @@
       third-party source terms apply
     </div>
     <div>
-      Record as of 2026-10-23 09:40 UTC
+      Record as of 2026-10-31 19:03 UTC
       · Ontology baseline: <a href="https://w3id.org/metpo">METPO 2026-06-12</a>
       · 1130 TraitRecords
       · embedding coverage 100.0%

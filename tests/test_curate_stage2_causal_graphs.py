@@ -55,7 +55,7 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
     assert len(COHORT_A_PATHS) == 10
     assert len(COHORT_B_GAPS) == 14
     assert len(COHORT_C_PATHS) == 10
-    assert len(COHORT_D_GAPS) == 35
+    assert len(COHORT_D_GAPS) == 34
     assert len(COHORT_E_PATHS) == 3
     assert len(COHORT_F_GAPS) == 30
     assert len(COHORT_G_PATHS) == 3
@@ -63,7 +63,7 @@ def test_cohort_a_and_b_disjoint_and_cover_24_records() -> None:
     assert len(COHORT_I_PATHS) == 3
     assert len(COHORT_J_PATHS) == 3
     assert len(COHORT_K_PATHS) == 3
-    assert len(COHORT_L_PATHS) == 3
+    assert len(COHORT_L_PATHS) == 4
     all_sets = [
         set(COHORT_A_PATHS),
         set(COHORT_B_GAPS),

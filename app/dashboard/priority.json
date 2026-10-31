@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 241,
-      "DEEPEN_CAUSAL_GRAPH": 427,
+      "BUILD_CAUSAL_GRAPH": 240,
+      "DEEPEN_CAUSAL_GRAPH": 428,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -7809,28 +7809,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000159",
-      "label": "alpha-chymotrypsin activity",
-      "category": "physiology",
-      "slug": "alpha_chymotrypsin_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000137",
       "label": "caseinase activity",
       "category": "physiology",
@@ -15311,6 +15289,28 @@
       "label": "alanine arylamidase activity",
       "category": "physiology",
       "slug": "alanine_arylamidase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000159",
+      "label": "alpha-chymotrypsin activity",
+      "category": "physiology",
+      "slug": "alpha_chymotrypsin_activity",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
       "edges": 2,

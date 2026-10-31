@@ -679,6 +679,7 @@ data/traits/other/coagulase_positive.yaml	METPO:1007090	coagulase positive	coagu
 data/traits/other/indole_test_positive.yaml	METPO:1005011	indole test positive	indole_test_positive_tryptophan_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/aerobic_anoxygenic_phototrophy.yaml	traitmech:000194	aerobic anoxygenic phototrophy	aerobic_anoxygenic_phototrophy_light_organic_carbon	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/alanine_arylamidase_activity.yaml	traitmech:000161	alanine arylamidase activity	alanine_arylamidase_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/alpha_chymotrypsin_activity.yaml	traitmech:000159	alpha-chymotrypsin activity	alpha_chymotrypsin_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/alpha_fucosidase_activity.yaml	traitmech:000152	alpha-fucosidase activity	alpha_fucosidase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/alpha_galactosidase_activity.yaml	traitmech:000149	alpha-galactosidase activity	alpha_galactosidase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/alpha_mannosidase_activity.yaml	traitmech:000150	alpha-mannosidase activity	alpha_mannosidase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-

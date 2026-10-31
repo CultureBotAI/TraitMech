@@ -16,12 +16,12 @@ metabolism/, morphology/, and physiology/:
   record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
   source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
-- Cohorts C, E, G, H, I, J, K, and L (28 multi-evidence physiology/metabolism
+- Cohorts C, E, G, H, I, J, K, and L (29 multi-evidence physiology/metabolism
   records): adds connected NONMECHANISTIC causal_graphs entries anchored on
   existing verbatim record evidence snippets, resolves prior source-gap
   discussions where applicable, and records OPEN CURATION_TODO discussions
   for strain-matched UniProtKB protein_examples.
-- Cohorts D and F (68 single-mechanism-quote records): adds structured
+- Cohorts D and F (67 single-mechanism-quote records): adds structured
   OPEN KNOWLEDGE_GAP discussions documenting source-limited mechanism gaps.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
@@ -2158,10 +2158,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/alkaline_phosphatase_activity.yaml": (
         "Add primary microbial literature evidence for PhoA/PhoX alkaline phosphatase catalysis (EC 3.1.3.1), phosphate-ester hydrolysis products, and PhoBR regulation before constructing causal_graphs.",
         "The current record carries one constitutive-expression snippet and one API ZYM profile list (DOI:10.1128/JB.185.16.4983-4991.2003, DOI:10.1155/2021/8888641) without distinct catalytic reaction/product quotes for a multi-edge graph.",
-    ),
-    "data/traits/physiology/alpha_chymotrypsin_activity.yaml": (
-        "Add primary microbial literature evidence for bacterial chymotrypsin-like serine endopeptidase catalysis and substrate cleavage before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.4.21.1 cleavage-specificity snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
     ),
     "data/traits/physiology/alpha_glucosidase_activity.yaml": (
         "Add primary microbial literature evidence for alpha-glucosidase (EC 3.2.1.20) catalysis of terminal alpha-D-glucosidic linkages and maltose/oligosaccharide utilization before constructing causal_graphs.",
@@ -4337,6 +4333,7 @@ def build_cohort_k_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
 
 COHORT_L_PATHS: tuple[str, ...] = (
     "data/traits/physiology/alanine_arylamidase_activity.yaml",
+    "data/traits/physiology/alpha_chymotrypsin_activity.yaml",
     "data/traits/physiology/arginine_arylamidase_activity.yaml",
     "data/traits/physiology/trypsin_activity.yaml",
 )
@@ -4344,7 +4341,12 @@ COHORT_L_PATHS: tuple[str, ...] = (
 COHORT_L_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     "data/traits/physiology/alanine_arylamidase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825) so alanine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Alloprevotella rava (NCBITaxon:1073377), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Amygdalobacter indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/alpha_chymotrypsin_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Streptomyces griseus chymotrypsin-like protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes alpha-lytic protease (UniProtKB:P00778) so alpha_chymotrypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.21.1, DOI:10.1099/ijsem.0.006017) establishes preferential endopeptidase cleavage at tyrosine, tryptophan, phenylalanine, and leucine peptide bonds and positive alpha-chymotrypsin activity in Amygdalobacter indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/physiology/arginine_arylamidase_activity.yaml": (
@@ -4354,7 +4356,7 @@ COHORT_L_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     ),
     "data/traits/physiology/trypsin_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Streptomyces griseus trypsin SprT (UniProtKB:P00775) so trypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Chryseobacterium indologenes (NCBITaxon:253), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Flexibacterium corallicola (NCBITaxon:3037259), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         2,
     ),
 }
@@ -4414,7 +4416,7 @@ def build_cohort_l_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 1,
-                                "Downes et al. report that Alloprevotella rava displays positive enzymatic activity for alanine arylamidase in the Rapid ID 32A and API ZYM panels.",
+                                "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alanine arylamidase in the API ZYM enzyme activity panel.",
                             )
                         ],
                     },
@@ -4429,6 +4431,81 @@ def build_cohort_l_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                                 doc,
                                 0,
                                 "IUBMB EC 3.4.11.2 defines the membrane alanyl aminopeptidase reaction as the release of an N-terminal amino acid (preferably L-alanine) from a peptide, amide, or arylamide.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/alpha_chymotrypsin_activity.yaml":
+        return [
+            {
+                "graph_id": "alpha_chymotrypsin_hydrolysis_sketch",
+                "title": "Alpha-chymotrypsin-like serine endopeptidase cleavage at aromatic and leucyl peptide bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "serine-type endopeptidase catalytic activity and peptide "
+                    "cleavage product release at Tyr, Trp, Phe, and Leu "
+                    "residues to the alpha-chymotrypsin activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.21.1 and "
+                    "DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB "
+                    "protein examples for Streptomyces griseus chymotrypsin-like "
+                    "protease A SprA (UniProtKB:P00776) or Lysobacter enzymogenes "
+                    "alpha-lytic protease (UniProtKB:P00778) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "alpha_chymotrypsin_activity_trait",
+                        "label": "alpha-chymotrypsin activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000159",
+                        "description": "Physiological enzyme-activity phenotype in which a cell exhibits chymotrypsin-like serine endopeptidase activity preferentially cleaving peptide bonds on the carboxyl side of Tyr, Trp, Phe, or Leu residues.",
+                    },
+                    {
+                        "node_id": "alpha_chymotrypsin_catalytic_activity",
+                        "label": "serine-type endopeptidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004252",
+                        "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl side of tyrosine, tryptophan, phenylalanine, or leucine residues (EC 3.4.21.1).",
+                    },
+                    {
+                        "node_id": "alpha_chymotrypsin_peptide_product",
+                        "label": "peptide",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16670",
+                        "description": "Peptide cleavage product generated by chymotrypsin-like serine endopeptidase hydrolysis at aromatic and leucyl peptide bonds.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "alpha_chymotrypsin_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "alpha_chymotrypsin_activity_trait",
+                        "description": "Cellular production of active alpha-chymotrypsin-like serine endopeptidase detected in diagnostic enzyme panels confers the alpha-chymotrypsin activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Srinivasan et al. report that Amygdalobacter indicium displays positive enzymatic activity for alpha-chymotrypsin in the API ZYM enzyme activity panel.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "alpha_chymotrypsin_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "alpha_chymotrypsin_peptide_product",
+                        "description": "Chymotrypsin-like serine endopeptidase catalyzes preferential peptide bond cleavage on the carboxyl side of Tyr, Trp, Phe, and Leu residues to release peptide cleavage products.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.21.1 defines chymotrypsin catalysis as preferential peptide bond cleavage at Tyr, Trp, Phe, and Leu residues.",
                             )
                         ],
                     },
@@ -4537,9 +4614,9 @@ def build_cohort_l_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                     },
                     {
                         "node_id": "trypsin_catalytic_activity",
-                        "label": "trypsin activity",
+                        "label": "serine-type endopeptidase activity",
                         "node_type": "MOLECULAR_FUNCTION",
-                        "grounding": "GO:0004295",
+                        "grounding": "GO:0004252",
                         "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl group of L-arginine or L-lysine residues (EC 3.4.21.4).",
                     },
                     {
@@ -4561,7 +4638,7 @@ def build_cohort_l_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 2,
-                                "jung2025characterization report that Chryseobacterium indologenes exhibits positive trypsin activity when assayed with the API ZYM system.",
+                                "Park et al. report that Flexibacterium corallicola exhibits positive trypsin activity when assayed with the API ZYM enzyme activity panel.",
                             )
                         ],
                     },

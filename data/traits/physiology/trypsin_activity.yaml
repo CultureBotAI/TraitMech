@@ -85,7 +85,7 @@ discussions:
   - causal_graphs#trypsin_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500)
     establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl
-    peptide bonds and positive trypsin activity in Chryseobacterium indologenes (NCBITaxon:253),
+    peptide bonds and positive trypsin activity in Flexibacterium corallicola (NCBITaxon:3037259),
     but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN
     node must be curated before marking the graph MECHANISTIC.
   posed_by: claude
@@ -126,7 +126,7 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (trypsin-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
-- timestamp: '2026-10-31T18:13:44Z'
+- timestamp: '2026-10-31T19:03:08Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (trypsin_hydrolysis_sketch) and
@@ -152,9 +152,9 @@ causal_graphs:
       active trypsin-like serine endopeptidases that preferentially cleave peptide
       and arylamide bonds at L-arginine and L-lysine residues.
   - node_id: trypsin_catalytic_activity
-    label: trypsin activity
+    label: serine-type endopeptidase activity
     node_type: MOLECULAR_FUNCTION
-    grounding: GO:0004295
+    grounding: GO:0004252
     description: Serine-type endopeptidase catalytic activity with preferential cleavage
       at the carboxyl group of L-arginine or L-lysine residues (EC 3.4.21.4).
   - node_id: trypsin_peptide_product
@@ -175,8 +175,8 @@ causal_graphs:
       snippet: Enzyme activities of acid- and alkaline-phosphatases, esterase, esterase
         lipase, leucine arylamidase, trypsin, naphthol-AS-BI phosphohydrolase, and
         alpha-glucosidase are present when assayed with API ZYM system.
-      notes: jung2025characterization report that Chryseobacterium indologenes exhibits
-        positive trypsin activity when assayed with the API ZYM system.
+      notes: Park et al. report that Flexibacterium corallicola exhibits positive
+        trypsin activity when assayed with the API ZYM enzyme activity panel.
   - subject: trypsin_catalytic_activity
     predicate: has output
     predicate_id: RO:0002234

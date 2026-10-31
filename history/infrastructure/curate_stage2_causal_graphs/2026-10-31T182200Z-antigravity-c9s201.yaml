@@ -14,6 +14,9 @@ session:
 links:
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2059
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2058
 events:
 - type: EDIT
   outcome: changed
@@ -21,18 +24,18 @@ events:
   - causal_graphs
   - discussions
   - curation_history
-  summary: Curate Cycle 9 Stage 2 causal_graphs for 3 Cohort L physiology traits (alanine_arylamidase_activity,
-    arginine_arylamidase_activity, trypsin_activity)
+  summary: Curate Cycle 9 Stage 2 causal_graphs for 4 Cohort L physiology traits (alanine_arylamidase_activity,
+    alpha_chymotrypsin_activity, arginine_arylamidase_activity, trypsin_activity)
   details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 9 Stage 2 (causal_graphs).
     Verified 756 existing eligible CLASS records with causal_graphs have 0 new structural
     errors, 0 new predicate-domain errors, and 0 protein-taxon gaps. Extended scripts/curate_stage2_causal_graphs.py
-    with Cohort L (3 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    with Cohort L (4 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
     record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions for
-    alanine_arylamidase_activity, arginine_arylamidase_activity, and trypsin_activity,
-    resolving each record's <slug>-causal-graph-source-gap). Retained alpha_chymotrypsin_activity
-    in COHORT_D_GAPS because its second record evidence snippet (DOI:10.1099/ijsem.0.006017)
-    reports absence rather than positive microbial activity. After this batch, 759/1,129
-    eligible records carry connected schema-valid causal_graphs, 124 are non-mechanistic
-    vocabulary/property/observation/upper records, and 100% (246/246) of active CLASS records
-    without causal_graphs carry an explicit OPEN KNOWLEDGE_GAP (207) or CURATION_TODO (39)
-    discussion.
+    alanine_arylamidase_activity, alpha_chymotrypsin_activity, arginine_arylamidase_activity,
+    and trypsin_activity, resolving each record's <slug>-causal-graph-source-gap, grounding
+    serine endopeptidase catalytic nodes to active GO:0004252, and attributing species-description
+    snippets to Amygdalobacter indicium NCBITaxon:3029272 and Flexibacterium corallicola
+    NCBITaxon:3037259). After this batch, 760/1,129 eligible records carry connected
+    schema-valid causal_graphs, 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (245/245) of active CLASS records without causal_graphs carry an
+    explicit OPEN KNOWLEDGE_GAP (206) or CURATION_TODO (39) discussion.

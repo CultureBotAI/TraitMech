@@ -92,8 +92,8 @@ discussions:
   - causal_graphs#alanine_arylamidase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017)
     establishes N-terminal amino-acid release preferentially cleaving L-alanine from
-    peptides, amides, or arylamides and positive alanine arylamidase activity in Alloprevotella
-    rava (NCBITaxon:1073377), but a strain-matched canonical example and verified
+    peptides, amides, or arylamides and positive alanine arylamidase activity in Amygdalobacter
+    indicium (NCBITaxon:3029272), but a strain-matched canonical example and verified
     UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the
     graph MECHANISTIC.
   posed_by: claude
@@ -124,7 +124,7 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (alanine-arylamidase-activity-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
-- timestamp: '2026-10-31T18:13:44Z'
+- timestamp: '2026-10-31T19:03:07Z'
   curator: claude
   action: CURATE_CAUSAL_GRAPH
   changes: Added NONMECHANISTIC causal_graphs entry (alanine_arylamidase_hydrolysis_sketch)
@@ -177,8 +177,9 @@ causal_graphs:
         glycine arylamidase, histidine arylamidase, glutamyl glutamic acid arylamidase,
         serine arylamidase, valine arylamidase, cysteine arylamidase, esterase, esterase
         lipase, alpha-chymotrypsin'
-      notes: Downes et al. report that Alloprevotella rava displays positive enzymatic
-        activity for alanine arylamidase in the Rapid ID 32A and API ZYM panels.
+      notes: Srinivasan et al. report that Amygdalobacter indicium displays positive
+        enzymatic activity for alanine arylamidase in the API ZYM enzyme activity
+        panel.
   - subject: alanine_arylamidase_catalytic_activity
     predicate: has output
     predicate_id: RO:0002234
