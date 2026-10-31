@@ -13620,7 +13620,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#carboxylesterase_hydrolysis_sketch"
   ],
-  "rationale": "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) activity in Paracoccus yeei (NCBITaxon:147645), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) and esterase lipase (C8) activity in Corynebacterium resistens (NCBITaxon:258224), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -14921,7 +14921,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch"
   ],
-  "rationale": "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter zhangjianzhongii (NCBITaxon:2974574), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [
@@ -17253,7 +17253,7 @@ window.searchData = [
   "attaches_to": [
    "causal_graphs#pyrrolidonyl_arylamidase_hydrolysis_sketch"
   ],
-  "rationale": "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Actinobaculum massiliense (NCBITaxon:76833), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "rationale": "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Corynebacterium auriscanis (NCBITaxon:99807), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
   "num_experiments": 0,
   "num_evidence": 1,
   "evidence_refs": [

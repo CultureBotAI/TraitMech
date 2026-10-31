@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Curate Stage 2 causal_graphs and source-limited knowledge-gap discussions.
 
-Addresses the 24 active CLASS records in environment/, metabolism/, morphology/,
-and physiology/ that lacked both a causal_graphs block and an open deferral
-discussion:
+Addresses 120 active CLASS records across Cohorts A through K in environment/,
+metabolism/, morphology/, and physiology/:
 
 - Cohort A (10 multi-evidence records): adds a connected, schema-valid
   causal_graphs entry anchored on the trait's existing verbatim evidence
@@ -17,6 +16,13 @@ discussion:
   record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
   source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
+- Cohorts C, E, G, H, I, J, and K (25 multi-evidence physiology/metabolism
+  records): adds connected NONMECHANISTIC causal_graphs entries anchored on
+  existing verbatim record evidence snippets, resolves prior source-gap
+  discussions where applicable, and records OPEN CURATION_TODO discussions
+  for strain-matched UniProtKB protein_examples.
+- Cohorts D and F (71 single-mechanism-quote records): adds structured
+  OPEN KNOWLEDGE_GAP discussions documenting source-limited mechanism gaps.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
 (`traitmech.validation.write_validated` + `record_curation_event`).
@@ -4060,17 +4066,17 @@ COHORT_K_PATHS: tuple[str, ...] = (
 COHORT_K_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
     "data/traits/physiology/carboxylesterase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 carboxylesterase EstA (UniProtKB:P37967) so carboxylesterase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) activity in Paracoccus yeei (NCBITaxon:147645), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) and esterase lipase (C8) activity in Corynebacterium resistens (NCBITaxon:258224), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/physiology/gamma_glutamyltransferase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956) so gamma_glutamyltransferase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter zhangjianzhongii (NCBITaxon:2974574), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
     "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": (
         "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 pyroglutamyl-peptidase I Pcp (UniProtKB:P46920) so pyrrolidonyl_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
-        "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Actinobaculum massiliense (NCBITaxon:76833), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Corynebacterium auriscanis (NCBITaxon:99807), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
         1,
     ),
 }
@@ -4129,7 +4135,7 @@ def build_cohort_k_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 1,
-                                "Funke et al. report that Paracoccus yeei clinical isolates tested clearly positive for esterase (C4) and esterase lipase (C8) activities in API ZYM strips.",
+                                "Otsuka et al. report that all five Corynebacterium resistens isolates tested clearly positive for esterase (C4) and esterase lipase (C8) activities in API ZYM strips.",
                             )
                         ],
                     },
@@ -4203,7 +4209,7 @@ def build_cohort_k_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 1,
-                                "Midwinter et al. report that Helicobacter canis and related isolates test positive for gamma-glutamyl transferase activity.",
+                                "Wang et al. report that both Helicobacter zhangjianzhongii isolates (like Helicobacter canis) test positive for gamma-glutamyl transferase activity in the API Campy biochemical panel.",
                             )
                         ],
                     },
@@ -4277,7 +4283,7 @@ def build_cohort_k_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, 
                             _ev_item(
                                 doc,
                                 1,
-                                "Greub and Raoult report that Actinobaculum massiliense strains displayed pyrrolidonyl arylamidase activity.",
+                                "Collins et al. report that all six Corynebacterium auriscanis strains displayed pyrrolidonyl arylamidase activity.",
                             )
                         ],
                     },

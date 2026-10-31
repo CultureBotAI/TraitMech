@@ -106,9 +106,9 @@ discussions:
   rationale: The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581)
     establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a
     gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl
-    transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched
-    canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must
-    be curated before marking the graph MECHANISTIC.
+    transferase activity in Helicobacter zhangjianzhongii (NCBITaxon:2974574), but
+    a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN
+    node must be curated before marking the graph MECHANISTIC.
   posed_by: claude
   posed_date: '2026-10-30'
   evidence:
@@ -186,8 +186,9 @@ causal_graphs:
       snippet: Like Helicobacter canis, these two putative isolates are positive for
         oxidase, gamma-glutamyl transferase, and alkaline phosphatase and negative
         for catalase and urease activities.
-      notes: Midwinter et al. report that Helicobacter canis and related isolates
-        test positive for gamma-glutamyl transferase activity.
+      notes: Wang et al. report that both Helicobacter zhangjianzhongii isolates (like
+        Helicobacter canis) test positive for gamma-glutamyl transferase activity
+        in the API Campy biochemical panel.
   - subject: gamma_glutamyltransferase_catalytic_activity
     predicate: has output
     predicate_id: RO:0002234

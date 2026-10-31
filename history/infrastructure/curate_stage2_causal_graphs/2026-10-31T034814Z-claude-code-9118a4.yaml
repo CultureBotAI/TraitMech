@@ -14,6 +14,9 @@ session:
 links:
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2051
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2050
 events:
 - type: EDIT
   outcome: changed
