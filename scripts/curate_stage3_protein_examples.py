@@ -76,6 +76,15 @@
    `protein_examples` (`UniProtKB:P37967`, `UniProtKB:P18956`,
    `UniProtKB:P28618`), 3 distinct verbatim record-level `evidence` items, 3
    `canonical_examples` entries, and `RESOLVED` `CURATION_TODO` discussions.
+10. In Cycle 9 Stage 3 (`C9S3_COHORT_L_PROMOTIONS`), promotes all 4 Cohort L
+    `NONMECHANISTIC` records (`alanine_arylamidase_activity.yaml`,
+    `alpha_chymotrypsin_activity.yaml`, `arginine_arylamidase_activity.yaml`,
+    `trypsin_activity.yaml`) to `MECHANISTIC` by adding 4 `InterPro`-grounded
+    `GENE_OR_PROTEIN` nodes with 4 verified reviewed UniProtKB
+    `protein_examples` (`UniProtKB:P04825`, `UniProtKB:P00776`,
+    `UniProtKB:P04825`, `UniProtKB:P00775`), 4 distinct verbatim record-level
+    `evidence` items, 4 `canonical_examples` entries, and `RESOLVED`
+    `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -5075,6 +5084,598 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C9S3_TIMESTAMP = "2026-10-31T20:55:00Z"
+C9S3_RETRIEVED_ON = "2026-10-31"
+
+C9S3_COHORT_L_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/physiology/alanine_arylamidase_activity.yaml": {
+        "identifier": "traitmech:000161",
+        "graph_id": "alanine_arylamidase_hydrolysis_sketch",
+        "discussion_id": "alanine-arylamidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.4.11.2, "
+            "DOI:10.1099/ijsem.0.006017, and "
+            "DOI:10.1074/jbc.m605203200; exemplified on "
+            "alanine_arylamidase_pepn with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) aminopeptidase N PepN "
+            "(UniProtKB:P04825)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1074/jbc.m605203200",
+            "snippet": (
+                "Aminopeptidase N from Escherichia coli is a broad specificity "
+                "zinc exopeptidase belonging to aminopeptidase clan MA, family "
+                "M1. The structures of the ligand-free form and the "
+                "enzyme-bestatin complex were determined at 1.5- and 1.6-A "
+                "resolution, respectively."
+            ),
+            "notes": (
+                "Ito et al. determined the high-resolution crystal structure "
+                "of Escherichia coli K-12 M1 zinc exopeptidase aminopeptidase "
+                "N PepN (UniProtKB:P04825)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Ito et al. determined the crystal structure of Escherichia "
+                "coli K-12 broad-specificity M1 zinc exopeptidase "
+                "aminopeptidase N (PepN) that hydrolyzes N-terminal L-alanyl "
+                "and related aminoacyl bonds."
+            ),
+            "reference": "DOI:10.1074/jbc.m605203200",
+        },
+        "new_node": {
+            "node_id": "alanine_arylamidase_pepn",
+            "label": "aminopeptidase N PepN",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR012779",
+            "gene_symbols": ["pepN"],
+            "description": (
+                "Peptidase M1 family broad-specificity zinc aminopeptidase N "
+                "(PepN; EC 3.4.11.2) that catalyzes N-terminal hydrolysis of "
+                "L-alanine and other neutral or basic aminoacyl amide and "
+                "arylamide bonds."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P04825",
+                    "protein_label": "Aminopeptidase N",
+                    "gene_symbol": "pepN",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C9S3_RETRIEVED_ON,
+                    "entry_version": 217,
+                    "sequence_version": 2,
+                    "role": (
+                        "PepN is the Escherichia coli K-12 broad-specificity "
+                        "M1 zinc aminopeptidase N (EC 3.4.11.2) that cleaves "
+                        "N-terminal L-alanine and other aminoacyl bonds."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1074/jbc.m605203200",
+                            "snippet": (
+                                "Aminopeptidase N from Escherichia coli is a "
+                                "broad specificity zinc exopeptidase belonging "
+                                "to aminopeptidase clan MA, family M1. The "
+                                "structures of the ligand-free form and the "
+                                "enzyme-bestatin complex were determined at "
+                                "1.5- and 1.6-A resolution, respectively."
+                            ),
+                            "notes": (
+                                "Ito et al. determined the 1.5 A crystal "
+                                "structure of Escherichia coli K-12 "
+                                "aminopeptidase N PepN (UniProtKB:P04825)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "alanine_arylamidase_pepn",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alanine_arylamidase_catalytic_activity",
+            "description": (
+                "Aminopeptidase N PepN enables alanine arylamidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1074/jbc.m605203200",
+                    "snippet": (
+                        "Aminopeptidase N from Escherichia coli is a broad "
+                        "specificity zinc exopeptidase belonging to "
+                        "aminopeptidase clan MA, family M1. The structures of "
+                        "the ligand-free form and the enzyme-bestatin complex "
+                        "were determined at 1.5- and 1.6-A resolution, "
+                        "respectively."
+                    ),
+                    "notes": (
+                        "Ito et al. characterized Escherichia coli K-12 PepN "
+                        "as a broad-specificity M1 zinc exopeptidase enabling "
+                        "N-terminal aminoacyl/alanyl hydrolysis."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C9S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1074/jbc.m605203200) and promoted "
+                "alanine_arylamidase_hydrolysis_sketch to MECHANISTIC by "
+                "adding InterPro:IPR012779-grounded GENE_OR_PROTEIN node "
+                "alanine_arylamidase_pepn with reviewed Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P04825 (PepN) backed by DOI:10.1074/jbc.m605203200."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1074/jbc.m605203200) canonical example; promoted "
+            "alanine_arylamidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR012779-grounded GENE_OR_PROTEIN node "
+            "alanine_arylamidase_pepn with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P04825 (PepN) "
+            "backed by DOI:10.1074/jbc.m605203200; resolved "
+            "alanine-arylamidase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/alpha_chymotrypsin_activity.yaml": {
+        "identifier": "traitmech:000159",
+        "graph_id": "alpha_chymotrypsin_hydrolysis_sketch",
+        "discussion_id": "alpha-chymotrypsin-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.4.21.1, "
+            "DOI:10.1099/ijsem.0.006017, and "
+            "DOI:10.1128/jb.169.8.3778-3784.1987; exemplified on "
+            "alpha_chymotrypsin_spra with Streptomyces griseus "
+            "(NCBITaxon:1911) streptogrisin-A SprA (UniProtKB:P00776)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+            "snippet": (
+                "Protease A and protease B are extracellular proteins which "
+                "are secreted by Streptomyces griseus. The genes encoding "
+                "protease A (sprA) and protease B (sprB) were isolated from "
+                "an S. griseus genomic library by using a synthetic "
+                "oligonucleotide probe. Fragments containing sprA and sprB "
+                "were characterized by hybridization and demonstration of "
+                "proteolytic activity in Streptomyces lividans."
+            ),
+            "notes": (
+                "Henderson et al. cloned and characterized the Streptomyces "
+                "griseus sprA gene encoding extracellular chymotrypsin-like "
+                "serine protease A / streptogrisin-A (UniProtKB:P00776)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:1911",
+            "taxon_label": "Streptomyces griseus",
+            "note": (
+                "Henderson et al. cloned and characterized the Streptomyces "
+                "griseus sprA gene encoding extracellular chymotrypsin-like "
+                "serine protease A (streptogrisin-A; SprA)."
+            ),
+            "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+        },
+        "new_node": {
+            "node_id": "alpha_chymotrypsin_spra",
+            "label": "streptogrisin-A SprA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001316",
+            "gene_symbols": ["sprA"],
+            "description": (
+                "Peptidase S1A streptogrisin family extracellular "
+                "chymotrypsin-like serine endopeptidase (SprA; EC 3.4.21.80) "
+                "that cleaves peptide and chromogenic ester or amide bonds "
+                "on the carboxyl side of bulky aromatic or hydrophobic "
+                "amino acid residues."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P00776",
+                    "protein_label": "Streptogrisin-A",
+                    "gene_symbol": "sprA",
+                    "taxon_id": "NCBITaxon:1911",
+                    "taxon_label": "Streptomyces griseus",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C9S3_RETRIEVED_ON,
+                    "entry_version": 127,
+                    "sequence_version": 2,
+                    "role": (
+                        "SprA is the Streptomyces griseus extracellular S1A "
+                        "chymotrypsin-like serine protease A / streptogrisin-A "
+                        "(EC 3.4.21.80) that hydrolyzes peptide bonds after "
+                        "aromatic or hydrophobic residues."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+                            "snippet": (
+                                "Protease A and protease B are extracellular "
+                                "proteins which are secreted by Streptomyces "
+                                "griseus. The genes encoding protease A (sprA) "
+                                "and protease B (sprB) were isolated from an "
+                                "S. griseus genomic library by using a "
+                                "synthetic oligonucleotide probe. Fragments "
+                                "containing sprA and sprB were characterized "
+                                "by hybridization and demonstration of "
+                                "proteolytic activity in Streptomyces lividans."
+                            ),
+                            "notes": (
+                                "Henderson et al. isolated and characterized "
+                                "the Streptomyces griseus sprA gene encoding "
+                                "streptogrisin-A (UniProtKB:P00776)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "alpha_chymotrypsin_spra",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "alpha_chymotrypsin_catalytic_activity",
+            "description": (
+                "Streptogrisin-A SprA enables alpha-chymotrypsin catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
+                    "snippet": (
+                        "Protease A and protease B are extracellular proteins "
+                        "which are secreted by Streptomyces griseus. The genes "
+                        "encoding protease A (sprA) and protease B (sprB) were "
+                        "isolated from an S. griseus genomic library by using "
+                        "a synthetic oligonucleotide probe. Fragments "
+                        "containing sprA and sprB were characterized by "
+                        "hybridization and demonstration of proteolytic "
+                        "activity in Streptomyces lividans."
+                    ),
+                    "notes": (
+                        "Henderson et al. demonstrated proteolytic activity of "
+                        "cloned Streptomyces griseus protease A (SprA)."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C9S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Streptomyces griseus "
+                "(NCBITaxon:1911; DOI:10.1128/jb.169.8.3778-3784.1987) and "
+                "promoted alpha_chymotrypsin_hydrolysis_sketch to MECHANISTIC "
+                "by adding InterPro:IPR001316-grounded GENE_OR_PROTEIN node "
+                "alpha_chymotrypsin_spra with reviewed Streptomyces griseus "
+                "(NCBITaxon:1911) protein_examples UniProtKB:P00776 "
+                "(SprA / streptogrisin-A) backed by "
+                "DOI:10.1128/jb.169.8.3778-3784.1987."
+            ),
+        },
+        "changes_summary": (
+            "Added Streptomyces griseus (NCBITaxon:1911; "
+            "DOI:10.1128/jb.169.8.3778-3784.1987) canonical example; promoted "
+            "alpha_chymotrypsin_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR001316-grounded GENE_OR_PROTEIN node "
+            "alpha_chymotrypsin_spra with reviewed Streptomyces griseus "
+            "(NCBITaxon:1911) protein_examples UniProtKB:P00776 (SprA) backed "
+            "by DOI:10.1128/jb.169.8.3778-3784.1987; resolved "
+            "alpha-chymotrypsin-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/arginine_arylamidase_activity.yaml": {
+        "identifier": "traitmech:000167",
+        "graph_id": "arginine_arylamidase_hydrolysis_sketch",
+        "discussion_id": "arginine-arylamidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.4.11.6, "
+            "DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017, and "
+            "DOI:10.1021/bi7022333; exemplified on "
+            "arginine_arylamidase_pepn with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) aminopeptidase N PepN "
+            "(UniProtKB:P04825)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1021/bi7022333",
+            "snippet": (
+                "Aminopeptidase N from Escherichia coli is a M1 class "
+                "aminopeptidase with the active-site region related to that "
+                "of thermolysin. The enzyme has unusual specificity, cleaving "
+                "adjacent to the large, nonpolar amino acids Phe and Tyr but "
+                "also cleaving next to the polar residues Lys and Arg. To try "
+                "to understand the structural basis for this pattern of "
+                "hydrolysis, the structure of the enzyme was determined in "
+                "complex with the amino acids L-arginine, L-lysine, "
+                "L-phenylalanine, L-tryptophan, and L-tyrosine."
+            ),
+            "notes": (
+                "Addlagatta et al. characterized the L-arginine cleavage "
+                "specificity and L-arginine-bound crystal structure of "
+                "Escherichia coli K-12 aminopeptidase N PepN "
+                "(UniProtKB:P04825)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Addlagatta et al. characterized Escherichia coli K-12 M1 "
+                "aminopeptidase N (PepN) cleavage adjacent to basic residues "
+                "including L-arginine and determined the structure of the "
+                "enzyme in complex with L-arginine."
+            ),
+            "reference": "DOI:10.1021/bi7022333",
+        },
+        "new_node": {
+            "node_id": "arginine_arylamidase_pepn",
+            "label": "aminopeptidase N PepN",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR012779",
+            "gene_symbols": ["pepN"],
+            "description": (
+                "Peptidase M1 family broad-specificity zinc aminopeptidase N "
+                "(PepN; EC 3.4.11.2) that cleaves N-terminal basic (L-arginine, "
+                "L-lysine) and nonpolar aminoacyl amide and arylamide bonds."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P04825",
+                    "protein_label": "Aminopeptidase N",
+                    "gene_symbol": "pepN",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C9S3_RETRIEVED_ON,
+                    "entry_version": 217,
+                    "sequence_version": 2,
+                    "role": (
+                        "PepN is the Escherichia coli K-12 M1 zinc "
+                        "aminopeptidase N (EC 3.4.11.2) that cleaves N-terminal "
+                        "basic aminoacyl bonds including L-arginine."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1021/bi7022333",
+                            "snippet": (
+                                "Aminopeptidase N from Escherichia coli is a "
+                                "M1 class aminopeptidase with the active-site "
+                                "region related to that of thermolysin. The "
+                                "enzyme has unusual specificity, cleaving "
+                                "adjacent to the large, nonpolar amino acids "
+                                "Phe and Tyr but also cleaving next to the "
+                                "polar residues Lys and Arg. To try to "
+                                "understand the structural basis for this "
+                                "pattern of hydrolysis, the structure of the "
+                                "enzyme was determined in complex with the "
+                                "amino acids L-arginine, L-lysine, "
+                                "L-phenylalanine, L-tryptophan, and L-tyrosine."
+                            ),
+                            "notes": (
+                                "Addlagatta et al. determined the structural "
+                                "basis of L-arginine hydrolysis by Escherichia "
+                                "coli K-12 PepN (UniProtKB:P04825)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "arginine_arylamidase_pepn",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "arginine_arylamidase_catalytic_activity",
+            "description": (
+                "Aminopeptidase N PepN enables arginine arylamidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1021/bi7022333",
+                    "snippet": (
+                        "Aminopeptidase N from Escherichia coli is a M1 class "
+                        "aminopeptidase with the active-site region related to "
+                        "that of thermolysin. The enzyme has unusual "
+                        "specificity, cleaving adjacent to the large, nonpolar "
+                        "amino acids Phe and Tyr but also cleaving next to the "
+                        "polar residues Lys and Arg. To try to understand the "
+                        "structural basis for this pattern of hydrolysis, the "
+                        "structure of the enzyme was determined in complex "
+                        "with the amino acids L-arginine, L-lysine, "
+                        "L-phenylalanine, L-tryptophan, and L-tyrosine."
+                    ),
+                    "notes": (
+                        "Addlagatta et al. demonstrated that Escherichia coli "
+                        "K-12 PepN cleaves N-terminal Arg residues and bound "
+                        "L-arginine in the active site."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C9S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1021/bi7022333) and promoted "
+                "arginine_arylamidase_hydrolysis_sketch to MECHANISTIC by "
+                "adding InterPro:IPR012779-grounded GENE_OR_PROTEIN node "
+                "arginine_arylamidase_pepn with reviewed Escherichia coli K-12 "
+                "(NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P04825 (PepN; replacing the mis-cited open "
+                "discussion prompt accessions Q48677, which is Lactococcus "
+                "lactis glutamyl aminopeptidase PepA, and P37095, which is "
+                "Escherichia coli M17 cysteinylglycinase/aspartyl peptidase B "
+                "PepB) backed by DOI:10.1021/bi7022333."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1021/bi7022333) canonical example; promoted "
+            "arginine_arylamidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR012779-grounded GENE_OR_PROTEIN node "
+            "arginine_arylamidase_pepn with reviewed Escherichia coli K-12 "
+            "(NCBITaxon:83333) protein_examples UniProtKB:P04825 (PepN, "
+            "correcting mis-cited Q48677 PepA and P37095 PepB) backed by "
+            "DOI:10.1021/bi7022333; resolved "
+            "arginine-arylamidase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/trypsin_activity.yaml": {
+        "identifier": "traitmech:000158",
+        "graph_id": "trypsin_hydrolysis_sketch",
+        "discussion_id": "trypsin-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by EC 3.4.21.4, "
+            "DOI:10.1371/journal.pone.0322500, and "
+            "DOI:10.1016/0006-291x(91)91248-b; exemplified on "
+            "trypsin_sprt with Streptomyces griseus (NCBITaxon:1911) "
+            "trypsin SprT (UniProtKB:P00775)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1016/0006-291x(91)91248-b",
+            "snippet": (
+                "Streptomyces griseus trypsin (E.C. 3.4.21.4) is one of the "
+                "major extracellular proteinase, which is secreted by S. "
+                "griseus. The gene encoding S. griseus trypsin was isolated "
+                "from a S. griseus genomic library by using a synthetic "
+                "oligonucleotide probe. Fragments containing the gene for S. "
+                "griseus trypsin were characterized by hybridization and "
+                "demonstration of proteolytic activity in S. lividans."
+            ),
+            "notes": (
+                "Kim et al. cloned and characterized the Streptomyces griseus "
+                "sprT gene encoding extracellular trypsin (EC 3.4.21.4; "
+                "UniProtKB:P00775)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:1911",
+            "taxon_label": "Streptomyces griseus",
+            "note": (
+                "Kim et al. cloned and characterized the Streptomyces griseus "
+                "sprT gene encoding secreted extracellular trypsin (EC "
+                "3.4.21.4; SprT)."
+            ),
+            "reference": "DOI:10.1016/0006-291x(91)91248-b",
+        },
+        "new_node": {
+            "node_id": "trypsin_sprt",
+            "label": "trypsin SprT",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR001314",
+            "gene_symbols": ["sprT"],
+            "description": (
+                "Peptidase S1A chymotrypsin/trypsin family extracellular "
+                "serine endopeptidase (SprT; EC 3.4.21.4) that cleaves peptide "
+                "and synthetic chromogenic ester or amide bonds on the "
+                "carboxyl side of L-arginine or L-lysine residues."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P00775",
+                    "protein_label": "Trypsin",
+                    "gene_symbol": "sprT",
+                    "taxon_id": "NCBITaxon:1911",
+                    "taxon_label": "Streptomyces griseus",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C9S3_RETRIEVED_ON,
+                    "entry_version": 132,
+                    "sequence_version": 2,
+                    "role": (
+                        "SprT is the Streptomyces griseus extracellular "
+                        "trypsin (EC 3.4.21.4) that catalyzes endopeptidase "
+                        "cleavage after basic L-arginine or L-lysine residues."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1016/0006-291x(91)91248-b",
+                            "snippet": (
+                                "Streptomyces griseus trypsin (E.C. 3.4.21.4) "
+                                "is one of the major extracellular proteinase, "
+                                "which is secreted by S. griseus. The gene "
+                                "encoding S. griseus trypsin was isolated from "
+                                "a S. griseus genomic library by using a "
+                                "synthetic oligonucleotide probe. Fragments "
+                                "containing the gene for S. griseus trypsin "
+                                "were characterized by hybridization and "
+                                "demonstration of proteolytic activity in S. "
+                                "lividans."
+                            ),
+                            "notes": (
+                                "Kim et al. isolated and characterized the "
+                                "Streptomyces griseus sprT gene encoding "
+                                "extracellular trypsin (UniProtKB:P00775)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "trypsin_sprt",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "trypsin_catalytic_activity",
+            "description": (
+                "Trypsin SprT enables trypsin catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1016/0006-291x(91)91248-b",
+                    "snippet": (
+                        "Streptomyces griseus trypsin (E.C. 3.4.21.4) is one "
+                        "of the major extracellular proteinase, which is "
+                        "secreted by S. griseus. The gene encoding S. griseus "
+                        "trypsin was isolated from a S. griseus genomic "
+                        "library by using a synthetic oligonucleotide probe. "
+                        "Fragments containing the gene for S. griseus trypsin "
+                        "were characterized by hybridization and demonstration "
+                        "of proteolytic activity in S. lividans."
+                    ),
+                    "notes": (
+                        "Kim et al. demonstrated proteolytic activity of "
+                        "cloned Streptomyces griseus trypsin (SprT; "
+                        "EC 3.4.21.4)."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C9S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Streptomyces griseus "
+                "(NCBITaxon:1911; DOI:10.1016/0006-291x(91)91248-b) and "
+                "promoted trypsin_hydrolysis_sketch to MECHANISTIC by adding "
+                "InterPro:IPR001314-grounded GENE_OR_PROTEIN node trypsin_sprt "
+                "with reviewed Streptomyces griseus (NCBITaxon:1911) "
+                "protein_examples UniProtKB:P00775 (SprT / trypsin) backed by "
+                "DOI:10.1016/0006-291x(91)91248-b."
+            ),
+        },
+        "changes_summary": (
+            "Added Streptomyces griseus (NCBITaxon:1911; "
+            "DOI:10.1016/0006-291x(91)91248-b) canonical example; promoted "
+            "trypsin_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR001314-grounded GENE_OR_PROTEIN node trypsin_sprt "
+            "with reviewed Streptomyces griseus (NCBITaxon:1911) "
+            "protein_examples UniProtKB:P00775 (SprT) backed by "
+            "DOI:10.1016/0006-291x(91)91248-b; resolved "
+            "trypsin-activity-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -5108,6 +5709,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C6S3_COHORT_I_PROMOTIONS,
         **C7S3_COHORT_J_PROMOTIONS,
         **C8S3_COHORT_K_PROMOTIONS,
+        **C9S3_COHORT_L_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(

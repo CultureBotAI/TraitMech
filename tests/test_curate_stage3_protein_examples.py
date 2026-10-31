@@ -31,6 +31,8 @@ from curate_stage3_protein_examples import (  # noqa: E402
     C7S3_RETRIEVED_ON,
     C8S3_COHORT_K_PROMOTIONS,
     C8S3_RETRIEVED_ON,
+    C9S3_COHORT_L_PROMOTIONS,
+    C9S3_RETRIEVED_ON,
     ENTRY_VERSION_REFRESHES,
     NEW_PROTEIN_EXAMPLES,
     RETRIEVED_ON,
@@ -83,6 +85,11 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         len(spec["new_node"]["protein_examples"]) for spec in C8S3_COHORT_K_PROMOTIONS.values()
     )
     assert total_c8s3_examples == 3
+    assert len(C9S3_COHORT_L_PROMOTIONS) == 4
+    total_c9s3_examples = sum(
+        len(spec["new_node"]["protein_examples"]) for spec in C9S3_COHORT_L_PROMOTIONS.values()
+    )
+    assert total_c9s3_examples == 4
     all_files = (
         {r[0] for r in ENTRY_VERSION_REFRESHES}
         | set(NEW_PROTEIN_EXAMPLES)
@@ -95,8 +102,9 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         | set(C6S3_COHORT_I_PROMOTIONS)
         | set(C7S3_COHORT_J_PROMOTIONS)
         | set(C8S3_COHORT_K_PROMOTIONS)
+        | set(C9S3_COHORT_L_PROMOTIONS)
     )
-    assert len(all_files) == 134
+    assert len(all_files) == 138
     assert "data/traits/physiology/spore_germination.yaml" not in all_files
 
 
@@ -136,6 +144,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
         (C6S3_COHORT_I_PROMOTIONS, C6S3_RETRIEVED_ON),
         (C7S3_COHORT_J_PROMOTIONS, C7S3_RETRIEVED_ON),
         (C8S3_COHORT_K_PROMOTIONS, C8S3_RETRIEVED_ON),
+        (C9S3_COHORT_L_PROMOTIONS, C9S3_RETRIEVED_ON),
     ]
     for promo_dict, expected_date in promotions:
         for rel_path, spec in promo_dict.items():
@@ -151,7 +160,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
             graph = graphs[0]
             assert graph["scope_status"] == "MECHANISTIC"
             assert graph["scope_notes"] == spec["scope_notes"]
-            if promo_dict is C8S3_COHORT_K_PROMOTIONS:
+            if promo_dict in (C8S3_COHORT_K_PROMOTIONS, C9S3_COHORT_L_PROMOTIONS):
                 record_refs = {ev.get("reference") for ev in doc.get("evidence", [])}
                 canon_refs = {ce.get("reference") for ce in doc.get("canonical_examples", [])}
                 edge_refs = {
@@ -240,6 +249,7 @@ def test_protected_record_guard_raises(tmp_path: Path) -> None:
         | set(C6S3_COHORT_I_PROMOTIONS)
         | set(C7S3_COHORT_J_PROMOTIONS)
         | set(C8S3_COHORT_K_PROMOTIONS)
+        | set(C9S3_COHORT_L_PROMOTIONS)
     )
     for rel_path in all_rels:
         src = REPO_ROOT / rel_path
