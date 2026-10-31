@@ -1,0 +1,1738 @@
+# Evidence, grounding and relation review of cobalt tolerance (traitmech:000015)
+
+- Review: 20261021T092048Z-cobalt-tolerant
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T09:13:08Z
+- Finished UTC: 2026-10-21T09:20:48Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Cobalt tolerance has a justified fallback, supported strain context and coherent chemical/CzcA identities. One major finding combines edges 5 and 9, which assign material-actor RO roles to explicit processes. Five minor findings concern broad transport grounding, quotation fidelity, compartment precision, baseline-homeostasis scope and a bounded missing human-acceptance link. All eleven nodes, ten edges, eight references, sixteen citation placements and three snippets were assessed. Positive CzcA component and Czc homeostasis evidence is preserved alongside source-specific qualifications, RcnA abstract limits and valid historical UniProt metadata.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: One entire cobalt-tolerant record, read before native capture. All eleven nodes, ten edges, two canonical examples, the CzcA component example, sixteen citation placements and six history events are included.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000015 | data/traits/environment/cobalt_tolerant.yaml | maintained | cobalt tolerant |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000015 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000015 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000015 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | traitmech:000015 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | traitmech:000015 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000015 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000015 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | traitmech:000015 | Selected record validates; this does not establish external relation semantics. |
+| Focused strict validation | passed | True | traitmech:000015 | One file scanned; zero strict errors. External inherited RO roles are assessed separately. |
+| Focused abstract snippet check | passed | True | traitmech:000015 | Three snippets across three references are NOT_IN_ABSTRACT. The command succeeds, but these misses are inconclusive until actual source text is inspected; manual results follow. |
+| Native full-corpus protein/taxon coverage | passed | True | traitmech:000015 | Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC, one PROTECTED, zero gaps/errors. Target PASS has six reviewed label-only proteins, two cited canonical examples and one paired protein instance. Coverage is structural, not source verification. |
+| Native full-corpus live UniProt audit | failed | True | traitmech:000015 | Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions, 110 findings all ENTRY_VERSION_MISMATCH. P13511 matches primary accession, taxon, review status, sequence 3 and proteome; stored 153 versus current 154 is the only target finding. Archived metadata explains later drift without erasing the failed check. |
+| Structured-source runner discovery | unavailable | False | traitmech:000015 | Original bounded discovery reused; official catalog fallback inspected. |
+| Canonical-organism dataset applicability | not_applicable | False | traitmech:000015 | No canonical Cupriavidus dataset matches; no organism substitution or expression query. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: fallback, polarity, term kind and hierarchy
+
+identity: supported. Targets: traitmech:000015.
+
+The complete pinned scan supports the accepted fallback and its narrower positive metal-tolerance class. The v5 proposal is not an upstream minted identity; obsolete cobalt reduction is a different concept.
+
+### Native checklist: growth phenotype and typical efflux emphasis
+
+evidence: supported. Targets: traitmech:000015.
+
+The definition is a contextual synthesis of the resistance review and cobalt-specific strain evidence. Typical czc/cnr emphasis does not assert a universal mechanism or numerical growth threshold.
+
+### Native checklist: both canonical examples and CzcA component role
+
+evidence: supported. Targets: traitmech:000015.
+
+Taxonomy and CH34 cobalt-resistance context agree. P13511 is the declared reviewed CzcA component; the role explicitly says one component rather than the entire complex. The genome paper supports that role while synthesizing earlier functional work.
+
+### Native checklist: mechanistic scope and instance-level evidence tier
+
+representation: unknown. Targets: traitmech:000015.
+
+ENVIRONMENT/CLASS, a scoped branch and the explicit CzcA component representation fit. Native protein/taxon coverage passes. An accession-specific experimental assay in the attached genome citation was not independently established; positive role evidence remains and the paper category alone does not justify a major no-function finding.
+
+### Native checklist: all identifiers and transport specificity
+
+grounding: concern. Targets: traitmech:000015.
+
+Chemical, taxon and protein identities match. GO:0030001 is a true broad metal-ion transport concept but lacks cobalt and outward-transmembrane specificity. Local placeholder relations retain documented proposal status.
+
+### Native checklist: all ten edge roles and directions
+
+consistency: concern. Targets: traitmech:000015.
+
+Edges 5 and 9 use explicit processes as actors under material-subject RO predicates. Other formal roles fit. The description of a produced or detected protein does not silently turn the graph subject into that protein. Local exports direction is separately subject to compartment evidence.
+
+### Native checklist: eight references, sixteen placements and ten nearest edge claims
+
+evidence: concern. Targets: traitmech:000015.
+
+All ten edge claims have an assessed source surface. Core efflux and regulatory contexts have support; compartment framing and baseline scope require bounded qualifications. RcnA remains abstract-limited with author-inference wording retained. No automatic universal or cross-taxon inference is made.
+
+### Native checklist: all three verbatim snippet fields
+
+evidence: concern. Targets: traitmech:000015.
+
+The BS1 quote matches after notation normalization. The top CzcP wording is faithful paraphrase in the inspected passage, with whole-body exactness unknown. The CzcA anchor phrase is nonliteral in the complete retrieved CH34 article XML; absence beyond that text is not asserted.
+
+### Native checklist: explicit CzcCBA cytoplasmic-cobalt statement
+
+consistency: concern. Targets: traitmech:000015.
+
+The sources support cobalt efflux but distinguish central-component capacity, full-complex activity and compartments differently. Keep the older CH34 transenvelope formulation alongside later component/complex and in-vitro/in-vivo distinctions; do not call the aggregate invalid or every cytoplasmic formulation impossible.
+
+### Native checklist: Czc inference versus Cnr/cobalt-specific baseline claim
+
+evidence: concern. Targets: traitmech:000015.
+
+The source expressly supports a Czc low-metal-homeostasis inference. Adding Cnr, assembled-complex activity and cobalt-specific baseline function extends beyond the inspected result. This source-scope problem is independent of edge 9’s RO subject-role error.
+
+### Native checklist: retrieval-time version and current audit drift
+
+provenance: supported. Targets: traitmech:000015.
+
+Archived 153/sequence 3 matches the declared retrieval snapshot. Current 154 is later; retain the native audit failure without creating a version-only scientific defect. The past retrieval itself was not independently observed.
+
+### Native checklist: whole-record shape and optional discussions/datasets
+
+completeness: supported. Targets: traitmech:000015.
+
+All endpoints resolve and a structurally valid paired component example is present. Additional token instances and graphs are not required for every contextual branch. No pathway link is asserted; provider research is a lead, not primary proof.
+
+### Native checklist: canonical-taxon structured-source applicability
+
+evidence: supported. Targets: traitmech:000015.
+
+No matching Cupriavidus dataset is present in the inspected catalog. No gene/module queries or taxon substitution followed; noncoverage supplies no negative biological evidence.
+
+### Native checklist: AI disclosure, acceptance and maintained owners
+
+provenance: concern. Targets: traitmech:000015.
+
+Six events disclose AI assistance. No human-acceptance link was found within bounded local provenance. Wildcard relation mappings can reproduce the RO conflicts when IDs are cleared; populated fields are skipped. No analogous recurrence is established for the broad node grounding.
+
+## Findings
+
+### material-actor-relations: Two RO predicates assign material-actor roles to processes
+
+major / open / confirmed; issue key: cobalt-tolerant-material-actor-relations.
+
+Edge 5 uses operon expression as the subject of RO:0002327 enables, and edge 9 uses cobalt export as the subject of RO:0002326 contributes to. Both predicates inherit material-entity actor constraints; these nodes explicitly denote processes. Descriptions mentioning produced or present protein complexes do not change the structured subject. Reconcile the relation and intended entity role without inventing a biological route. Native validation passing is compatible with this external semantic defect.
+
+### transport-grounding-specificity: The transport grounding is broader than the stated process
+
+minor / open / confirmed; issue key: cobalt-tolerant-transport-grounding-specificity.
+
+Node 3 describes cobalt-specific outward transmembrane transport but GO:0030001 denotes general metal-ion transport. This is a legitimate broad context, not a wrong ion identity or process aspect. Clarify the intended grounding relationship or use a precisely supported term.
+
+### quotation-fidelity: Two snippet fields contain paraphrase or nonliteral wording
+
+minor / open / confirmed; issue key: cobalt-tolerant-quotation-fidelity.
+
+The top CzcP snippet is a faithful subject-substituted paraphrase of the inspected Summary; complete-body exactness is unknown. The CzcA anchor phrase is not present in normalized complete CH34 article XML, including tables and references, although its meaning has support. Verify exact passages or put interpretive wording in notes. No absence claim extends to every supplement or other literature.
+
+### compartment-precision: The CzcCBA compartment claim needs source-specific qualification
+
+minor / open / confirmed; issue key: cobalt-tolerant-compartment-precision.
+
+Edge 3 expressly assigns cytoplasmic cobalt export to the CzcCBA complex. Inspected sources distinguish individual CzcA in-vitro capacity from full-complex in-vivo periplasmic export, while the older CH34 genome source uses broader transenvelope wording. Preserve this source tension and distinguish component, complete complex and transport compartment; do not turn it into an unsupported universal contradiction or a false component identifier.
+
+### baseline-homeostasis-scope: The baseline claim exceeds the source’s Czc inference
+
+minor / open / confirmed; issue key: cobalt-tolerant-baseline-homeostasis-scope.
+
+The cited authors explicitly infer low-metal homeostasis from Czc protein presence, so that positive support must remain. The record additionally names Cnr complexes and cobalt-specific baseline function; detected proteins do not alone establish assembled-complex activity or cobalt-specific flux, and CnrA/CnrC were not quantified. Bound the wording to the documented inference without interpreting nonquantification as absence. This source-scope issue is separate from the edge’s RO actor mismatch.
+
+### human-acceptance-link: Human scientific acceptance is not linked locally
+
+minor / open / confirmed; issue key: cobalt-tolerant-human-acceptance-link.
+
+The six disclosed AI events, including promotion to REVIEWED, and ignored-inclusive local search do not identify human scientific acceptance of this revision. Prior structured reviews include the file as context, not as their target. Private or remote acceptance remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-ro-actors
+
+In separately authorized curation, reconcile edges 5 and 9 with the entity roles their grounded predicates actually require, and review the maintained mapping behavior.
+
+- Every retained predicate agrees with the subject and object’s represented identity, including inherited ontology roles.
+- Preserve supported expression/export/homeostasis context without inventing replacement biological steps or treating YAML validation as semantic proof.
+- Check whether unchanged labels can reacquire the rejected grounding through wildcard mappings; do not silently expand global mappings without a scoped audit.
+- After authorized edits, use guarded writes, focused strict/term/graph checks and just qc; retain native history and regenerate affected products as required.
+
+### clarify-transport-grounding
+
+Align node 3’s specific process wording with the breadth of its grounding.
+
+- The intended cobalt specificity and direction agree with the term or the broader relationship is represented explicitly.
+- Do not invent a replacement identifier or treat general metal-ion transport as an invalid biological-process type.
+- Use guarded curation and the required native validation/QC gates after an authorized correction.
+
+### verify-snippets
+
+Verify exact source wording for both affected snippets or move faithful interpretation into notes.
+
+- Retained quotation text has an exact inspected source locator.
+- Preserve supported component and transport claims; partial access does not establish absent biology.
+- Run focused snippet verification and manual primary-text checking after authorized changes.
+
+### qualify-source-scope
+
+Qualify the existing compartment and baseline-homeostasis claims at their nearest evidence fields.
+
+- Keep the older transenvelope formulation and later individual-protein/full-complex distinctions visible rather than declaring a universal contradiction.
+- Preserve the authors’ positive Czc homeostasis inference while bounding Cnr, cobalt specificity and assembled-complex activity to inspected evidence.
+- Do not treat unquantified proteins as absent or the expression/source-scope qualification as a substitute for the independent RO repair.
+- Use primary-text checks plus native strict/term/graph validation and just qc after authorized curation; no new experiment or mechanism optimization is needed.
+
+### link-acceptance
+
+Locate and link existing human acceptance or obtain it through the established process, preserving AI history and reassessing status if needed.
+
+- Acceptance identifies the reviewed revision and scientific scope.
+- AI provenance, structural coverage and this review are not substituted for human scientific acceptance.
+
+### preserve-access-limits
+
+When complete source text becomes available, resolve remaining RcnA and accession-specific experimental-provenance questions before strengthening those claims.
+
+- Retain RcnA author-inference language and the abstract/body boundary until an actual full-text source is inspected.
+- Distinguish reviewed CzcA identity and supported component role from an independently assessed accession-specific experiment.
+- Record source support, qualification or contradiction separately; do not create a major no-function finding from the current access limit.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-cobalt_tolerant-validate | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-validate.log; Executed 2026-10-21T09:13:55Z through 2026-10-21T09:13:56Z; metadata cobalt_tolerant-validate.json | context_only | Selected record validates; this does not establish external relation semantics. |
+| check-cobalt_tolerant-strict | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-strict.log; Executed 2026-10-21T09:13:55Z through 2026-10-21T09:13:57Z; metadata cobalt_tolerant-strict.json | context_only | One file scanned; zero strict errors. External inherited RO roles are assessed separately. |
+| check-cobalt_tolerant-snippets | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-snippets.log; Executed 2026-10-21T09:13:58Z through 2026-10-21T09:14:03Z; metadata cobalt_tolerant-snippets.json | context_only | Three snippets across three references are NOT_IN_ABSTRACT. The command succeeds, but these misses are inconclusive until actual source text is inspected; manual results follow. |
+| check-corpus-protein-taxa | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log; Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json | context_only | Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC, one PROTECTED, zero gaps/errors. Target PASS has six reviewed label-only proteins, two cited canonical examples and one paired protein instance. Coverage is structural, not source verification. |
+| check-corpus-uniprot | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-uniprot.log; Executed 2026-10-21T08:55:08Z through 2026-10-21T08:56:53Z; metadata corpus-uniprot.json | context_only | Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions, 110 findings all ENTRY_VERSION_MISMATCH. P13511 matches primary accession, taxon, review status, sequence 3 and proteome; stored 153 versus current 154 is the only target finding. Archived metadata explains later drift without erasing the failed check. |
+| common-reuse | Batch 004 common-input byte comparison; All trait/history and common validator inputs versus previous owned snapshot | supports | Common checks retain original execution dates, failures and adapter skips. The byte comparison permits reuse; it is not a fresh check against later external ontology releases. |
+| check-reuse | Cobalt-specific corpus-audit reuse receipt; All 1130 trait files, target capture and native audit implementation inputs | supports | All scientific trait bytes remain identical to the previous owned snapshot. Actual corpus audit scope, original timestamps and the UniProt failure are retained rather than relabelled as new focused checks. |
+| record | data/traits/environment/cobalt_tolerant.yaml; Entire identity, evidence, graph, component example and six events | partial | The record describes environmental cobalt tolerance with an explicitly scoped mechanistic branch. Protein aggregates, one CzcA component, expression processes, transport processes and metal-homeostasis claims must remain distinguishable. |
+| shape | Whole graph and history inspection; Eleven nodes, ten edges, one protein example and six AI events | supports | All graph endpoints resolve. Six history events explicitly disclose AI assistance. No pathway-context link is asserted. |
+| policy | docs/GROUNDING_POLICY.md; src/traitmech/schema/traitmech.yaml; ProteinExample component scope and retrieval-time versions; process versus material entity | supports | A component instance explicitly labelled as such is not an erroneous whole-complex identifier. Protein-example entry and sequence versions describe the retrieval-time snapshot. Native node enums and syntactic validation do not establish compatibility with inherited external relation semantics. |
+| identity | Pinned data/raw/metpo.owl; v5 class proposal; metal_tolerant.yaml; Complete label/synonym scan, broader cobalt search and fallback parent | supports | No active or deprecated exact cobalt-tolerance term was found in the complete pinned authority scan. The only broader cobalt-name hit is obsolete cobalt reduction, a different concept. Local proposed METPO:1007614 is not minted upstream; traitmech:000015 and its broader metal/metalloid parent are coherent. |
+| grounding | Official ChEBI:48828; QuickGO GO:0030001; NCBI:119219/266264; Fresh cobalt identity 09:13:46Z; hash-verified GO/taxonomy originally 08:54:06–07Z | partial | Cobalt(2+) and both taxon labels match. GO:0030001 is active metal ion transport, a legitimate broad context for cobalt transport, but does not encode cobalt specificity or outward transmembrane direction. |
+| authority-reuse | Official ontology/database response receipts; Original acquisition times and rechecked body/database hashes | supports | Cobalt ChEBI was fetched at 09:13:46Z. GO/taxa retain 08:54:06–07Z acquisitions; P13511/current and UniSave 153 retain 09:02:07–09Z acquisitions; reference-proteome metadata retains 08:55:33Z. Reuse dates are not substituted for original access dates. |
+| protein | UniProtKB:P13511; UniSave version 153; UP000002429; Reviewed CzcA/Rmet_5980 in CH34; pMOL30 reference-proteome membership | supports | Primary reviewed CzcA identity, taxon, gene, proteome and explicit component role agree. Archived 153/sequence 3 dated 2026-01-28 fits the declared 2026-08-25 retrieval. Current 154 followed the 2026-09-02 update; that is later drift, not an original metadata defect. |
+| ro | Read-only RO SQLite authority; RO:0002327 and RO:0002326 superproperty closure; Original enables inspection 07:58:06Z; contributes-to inspection 08:04:46Z; source hash rechecked | supports | Enables means capable of and acting to execute a process, inheriting independent-continuant and material-entity subject constraints. Contributes-to inherits a material-entity subject through RO:0002216, RO:0002500 and RO:0002595. Explicit expression/export processes do not satisfy these actor roles. No native validation or OWL reasoner failure is claimed. |
+| proposals | v2 challenges/mitigates and v9 exports proposals; predicate mappings; Current local definitions, directions and placeholder status | supports | Challenges and mitigates cover the declared stressor/defense roles. Proposed exports denotes movement from cytoplasm across a membrane to the exterior; protein-to-chemical endpoint kinds fit, while precise biological compartment support remains a separate source question. Historical microbe-domain identifiers have already been replaced. |
+| ledger | Complete independent node/edge ledger; All eleven nodes and ten edges, including ungrounded relation labels | partial | Edges 5 and 9 have confirmed external subject-role conflicts. Remaining formal endpoint roles are compatible. Node 7 retains operon wording despite a protein-module label and gene/operon metadata; this is bounded wording ambiguity, not a forced retyping finding. |
+| owners | mappings/predicate_grounding.tsv; scripts/ground_causal_predicates.py; bounded node-writer search; Wildcard rows 9/10 and populated-ID skip; ignored-inclusive literal search | supports | The predicate writer skips existing IDs, but unchanged enables/contributes-to labels can reacquire the same RO IDs after clearing because rows 9/10 are wildcard mappings. No current dedicated literal node mapping for cobalt transport/GO:0030001 was found in the declared writer roots; clearing that node grounding is not shown to reproduce it automatically. Static code reading only. |
+| provenance | Whole target history and ignored-inclusive local history/mapping/writer/review search; Six AI events; 268 matching lines in 67 previous review pairs | partial | All six events disclose AI assistance, including promotion to REVIEWED. All prior-review matches are contextual inputs, not target coverage or human acceptance. No acceptance link identifying this revision was found within the declared local bounds; remote/private acceptance remains unknown. |
+| status-rule | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md; Status/audit gate | supports | REVIEWED requires human scientific acceptance; AI history, mapping status and validator success are different evidence. |
+| expression | https://imodulondb.org/api/datasets; Original 07:36:12Z catalog; current hash-verified canonical-taxon applicability assessment | context_only | No Cupriavidus/metallidurans/CH34 dataset matches the inspected 20-organism, 28-dataset catalog. No gene/module queries or species substitution followed. The contextual E. coli RcnA source does not justify substituting its dataset into this canonical-only assessment. |
+| runner | Structured-source runner discovery; Original bounded ignored-inclusive 08:17:15Z discovery | context_only | Original PATH/project/install/B4 discovery is reused with exact bounds and official-catalog fallback. This is neither new discovery nor a global absence claim. |
+| bibliography | Complete source and acquisition ledger; Eight references, sixteen citation placements, three snippets and ten edge claims | partial | All eight identities resolve. Five complete source bodies are locally available, one prior publisher body was partly inspected, and two sources remain abstract-only. Ten new download attempts yielded eight hashed acquisitions; six prior files were hash-verified on reuse. Exact edge coverage and limits are retained. |
+| definition-source | https://pubmed.ncbi.nlm.nih.gov/12829273/; DOI:10.1016/s0168-6445(03)00048-2; complete indexed abstract | supports | The review supports efflux-mediated prokaryotic metal resistance. It supplies broad definition context rather than a formal cobalt-growth threshold; other cited strain sources support the cobalt phenotype. Body access was unavailable and no repeated failed request is relabelled as evidence. |
+| czcp | https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2009.06792.x; PMID:19602147; original publisher Summary 80–82 and Introduction 87–97 | partial | Inspected passages support CzcP cobalt transport and discuss CzcA/CzcCBA context. The top snippet substitutes CzcP for the source subject and is a faithful compressed paraphrase. Source distinguishes ATPase cytoplasmic efflux from full-complex periplasmic export. Complete results/discussion were not inspected; no local full-body hash is fabricated. |
+| czcp-access | Prior successful Wiley passage receipt and later access failures; Original partial-body access scope retained | context_only | Later 403 responses do not erase the successful earlier Summary/Introduction inspection. They also do not permit asserting whole-body absence of the top snippet. |
+| bs1 | https://doi.org/10.3389/fmicb.2020.00047; PMID:32117100; Results S3.SS1/body 11 and Table 1 | supports | BS1 cobalt MIC 20 mM and CH34 comparison MIC 35 mM are exact strain/assay inhibitory endpoints. The long snippet matches apart from harmless uM/μM notation. The record already labels MIC; no growth-at-MIC or universal species-threshold falsehood is inferred. |
+| ch34 | https://doi.org/10.1371/journal.pone.0010433; PMID:20463976; Introduction/body 3, Results s2f/body 53–54 and Table 5; complete XML snippet search | partial | The primary genome article describes CH34 cobalt resistance and CzcA as one inner-membrane component of CzcCBA. This supports component identity/role, not a newly performed purified-P13511 assay. The anchor snippet is semantically consistent but absent from normalized complete article XML, including tables/references. Older transenvelope wording must be retained when assessing newer compartment distinctions. |
+| czc-review | https://doi.org/10.3390/ijms26125716; PMID:40565180; Section 5 sec5-ijms-26-05716, body 26 | supports | The full review directly supports existing CzcCBA substrate, CzcRS transcriptional activation and expression/encoding context in historical CH34 nomenclature. This does not cure the RO typing of expression as executor, nor resolve individual-protein versus full-complex compartment interpretation. |
+| cnr-review | https://link.springer.com/article/10.1007/s44274-025-00301-y; Section 3.2.2 DmeF; Section 3.3 CH34; Section 3.5 component/complex discussion | supports | Actual full publisher HTML and Crossref establish the article despite no EPMC hit. The review supports the existing strain-specific Cnr/plasmid note and DmeF cobalt preference. It distinguishes central CzcA membrane capacity from full-complex compartment; retain this source context. |
+| rcna | https://doi.org/10.1128/JB.187.8.2912-2916.2005; PMID:15805538; complete indexed primary abstract | partial | The abstract directly supports membrane-bound RcnA/YohM and increased cobalt/nickel resistance in E. coli. Efflux is an author-supported hypothesis; the reported accumulation measurement concerns nickel. No independent cobalt-flux assay is established from the abstract. Full text remained unavailable after EPMC 500 and BioC 429. |
+| baseline | https://doi.org/10.1093/mtomcs/mfae058; PMID:39562290; Introduction/body 2,5; Results sec2-2/body 16,21; Discussion sec3-1/body 66–67; Table 2 | partial | Authors explicitly infer low-metal homeostasis from Czc protein presence. That positive inference is supported, not rejected merely because the method is proteomics. It does not equally establish assembled Cnr complexes or cobalt-specific baseline function; CnrA/CnrC were not quantified, which is not proof of absence. The paper also distinguishes individual-protein in-vitro capacity from full-complex in-vivo compartment. |
+
+## Limits And Additional Notes
+
+- Definition review access is limited to its complete indexed abstract. The cobalt definition is a supported synthesis, not a quoted formal class definition or universal quantitative threshold.
+- The CzcP publisher Summary/Introduction were actually inspected at the original 09:02 access. Later 403 responses do not erase that evidence; full results/discussion and whole-body snippet absence were not assessed. No local full-body hash is fabricated.
+- The CH34 anchor phrase is absent from complete normalized retrieved article XML, including tables/references. This bounded textual result does not assert absence from every supplement or other source, nor negate supported CzcA component function.
+- Compartment sources differ. Preserve older CH34 transenvelope wording and newer central-component/full-complex, in-vitro/in-vivo distinctions. This is not an automatic false aggregate, wrong CzcA identity or universal impossibility claim.
+- The baseline paper explicitly supports a Czc low-metal-homeostasis inference. Only extensions to Cnr, assembled-complex activity and cobalt-specific baseline function require qualification; CnrA/CnrC nonquantification is not proof of absence.
+- RcnA full text remained unavailable after EPMC HTTP 500 and BioC HTTP 429. The primary abstract supports resistance and an author-supported efflux hypothesis; its accumulation measurement concerns nickel, so an independently verified cobalt-flux assay is not claimed.
+- The CH34 genome paper supports the CzcA component role and synthesizes earlier functional work. An accession-specific experiment was not independently assessed. Positive role evidence prevents converting this bounded uncertainty into a major no-function finding.
+- BS1 cobalt MIC 20 mM and CH34 comparison MIC 35 mM are strain/assay inhibitory endpoints. The record already says MIC; no growth-at-MIC or universal species threshold is inferred.
+- Current UniProt entry 154 differs from stored 153, but archived 153/sequence 3 agrees with the declared retrieval snapshot. The actual native audit failure is retained without a version-only scientific defect.
+- All 1130 trait bytes were checked before reusing the 08:55 corpus audits. Common validator reuse likewise retains original scope, failures, skips and times; it is not fresh external-release certification.
+- No matching canonical Cupriavidus expression dataset occurs in the inspected catalog. No taxon substitution or negative functional inference follows from noncoverage.
+- Human acceptance remains unknown outside the declared ignored-inclusive local scope. A complete review does not confer human acceptance.
+- No scientific-record edit, status/history change, generated-page mutation, paid provider call, experimental design or biological optimization was performed. Unrelated pathogen mechanisms in broad sources were not assessed or expanded.
+- All field indices are zero-based.
+- Native capture 09:13:08–11Z retained 55 inputs after the entire target was read. Independent receipt checks confirmed unchanged input hashes.
+- One major and five minor findings; current source-access and historical-version qualifications are retained rather than converted into additional defects.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T092048Z-cobalt-tolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Evidence, grounding and relation review of cobalt tolerance (traitmech:000015)
+started_at: '2026-10-21T09:13:08Z'
+finished_at: '2026-10-21T09:20:48Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Cobalt tolerance has a justified fallback, supported strain context and coherent
+  chemical/CzcA identities. One major finding combines edges 5 and 9, which assign
+  material-actor RO roles to explicit processes. Five minor findings concern broad
+  transport grounding, quotation fidelity, compartment precision, baseline-homeostasis
+  scope and a bounded missing human-acceptance link. All eleven nodes, ten edges,
+  eight references, sixteen citation placements and three snippets were assessed.
+  Positive CzcA component and Czc homeostasis evidence is preserved alongside source-specific
+  qualifications, RcnA abstract limits and valid historical UniProt metadata.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/cobalt_tolerant.yaml
+    sha256: 7cf345edc60c113f1a805d1a51325710092c7f881a32e7dff59965c5336aefb0
+    role: target
+  - path: data/traits/environment/metal_tolerant.yaml
+    sha256: 907f78048e48c547d03e3b2b073216a32007a0c0608fb361fba976a3812710c5
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/cobalt_tolerant-deep-research-falcon.md
+    sha256: d5bde78cd1ff2680d77b559f94d77869ed8ae812a63588cf28f6fc81492ecb74
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000015
+  path: data/traits/environment/cobalt_tolerant.yaml
+  label: cobalt tolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: METPO-first identifier comparison; target was curator proposed
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One entire cobalt-tolerant record, read before native capture. All eleven
+    nodes, ten edges, two canonical examples, the CzcA component example, sixteen
+    citation placements and six history events are included.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000015
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000015
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000015
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: cobalt_tolerant-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just validate data/traits/environment/cobalt_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates; this does not establish external relation semantics.
+  evidence_ids:
+  - check-cobalt_tolerant-validate
+- check_id: cobalt_tolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just validate-strict data/traits/environment/cobalt_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors. External inherited RO roles are assessed
+    separately.
+  evidence_ids:
+  - check-cobalt_tolerant-strict
+- check_id: cobalt_tolerant-snippets
+  name: Focused abstract snippet check
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just verify-snippets --record data/traits/environment/cobalt_tolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Three snippets across three references are NOT_IN_ABSTRACT. The command
+    succeeds, but these misses are inconclusive until actual source text is inspected;
+    manual results follow.
+  evidence_ids:
+  - check-cobalt_tolerant-snippets
+- check_id: corpus-protein-taxa
+  name: Native full-corpus protein/taxon coverage
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one PROTECTED, zero gaps/errors. Target PASS has six reviewed label-only proteins,
+    two cited canonical examples and one paired protein instance. Coverage is structural,
+    not source verification.'
+  evidence_ids:
+  - check-corpus-protein-taxa
+- check_id: corpus-uniprot
+  name: Native full-corpus live UniProt audit
+  status: failed
+  required: true
+  target_ids:
+  - traitmech:000015
+  command: just audit-uniprot --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-uniprot.tsv
+  exit_code: 1
+  expected_exit_code: 0
+  summary: 'Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions,
+    110 findings all ENTRY_VERSION_MISMATCH. P13511 matches primary accession, taxon,
+    review status, sequence 3 and proteome; stored 153 versus current 154 is the only
+    target finding. Archived metadata explains later drift without erasing the failed
+    check.'
+  evidence_ids:
+  - check-corpus-uniprot
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000015
+  summary: Original bounded discovery reused; official catalog fallback inspected.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Canonical-organism dataset applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000015
+  summary: No canonical Cupriavidus dataset matches; no organism substitution or expression
+    query.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-cobalt_tolerant-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-validate.log
+  locator: Executed 2026-10-21T09:13:55Z through 2026-10-21T09:13:56Z; metadata cobalt_tolerant-validate.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: Selected record validates; this does not establish external relation semantics.
+  snapshot_sha256: 0e2b9a6fbfebda1b3ba8d873db5426d1bf77c93e5b879ded8bc4ac109fca5406
+- evidence_id: check-cobalt_tolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-strict.log
+  locator: Executed 2026-10-21T09:13:55Z through 2026-10-21T09:13:57Z; metadata cobalt_tolerant-strict.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: One file scanned; zero strict errors. External inherited RO roles are assessed
+    separately.
+  snapshot_sha256: f2a433a44f5305aa1163eabb127143449a96a1f1d456cea55dadeeaa0964223b
+- evidence_id: check-cobalt_tolerant-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/cobalt_tolerant-snippets.log
+  locator: Executed 2026-10-21T09:13:58Z through 2026-10-21T09:14:03Z; metadata cobalt_tolerant-snippets.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: Three snippets across three references are NOT_IN_ABSTRACT. The command
+    succeeds, but these misses are inconclusive until actual source text is inspected;
+    manual results follow.
+  snapshot_sha256: 8e66b5a55d233ac89370ca81abea5c71abfa6ac00f2ae1847c62b93b4e37ac20
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 'Reused actual 08:55:04–10Z execution: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one PROTECTED, zero gaps/errors. Target PASS has six reviewed label-only proteins,
+    two cited canonical examples and one paired protein instance. Coverage is structural,
+    not source verification.'
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-corpus-uniprot
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-uniprot.log
+  locator: Executed 2026-10-21T08:55:08Z through 2026-10-21T08:56:53Z; metadata corpus-uniprot.json
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: context_only
+  summary: 'Reused actual 08:55:08–08:56:53Z execution: exit 1, 146 uses/115 accessions,
+    110 findings all ENTRY_VERSION_MISMATCH. P13511 matches primary accession, taxon,
+    review status, sequence 3 and proteome; stored 153 versus current 154 is the only
+    target finding. Archived metadata explains later drift without erasing the failed
+    check.'
+  snapshot_sha256: 6ad9ec31ef33837fb5f0d72d8c306af0ec862745d08c88240437e2e5012607b6
+- evidence_id: common-reuse
+  kind: validation
+  reference: Batch 004 common-input byte comparison
+  locator: All trait/history and common validator inputs versus previous owned snapshot
+  accessed_at: '2026-10-21T08:16:33Z'
+  support: supports
+  summary: Common checks retain original execution dates, failures and adapter skips.
+    The byte comparison permits reuse; it is not a fresh check against later external
+    ontology releases.
+  snapshot_sha256: 823d1d8f0372254e94974a97cbe7ff359378c698d0c3519860aaeaeadaeca7e0
+- evidence_id: check-reuse
+  kind: validation
+  reference: Cobalt-specific corpus-audit reuse receipt
+  locator: All 1130 trait files, target capture and native audit implementation inputs
+  accessed_at: '2026-10-21T09:14:37Z'
+  support: supports
+  summary: All scientific trait bytes remain identical to the previous owned snapshot.
+    Actual corpus audit scope, original timestamps and the UniProt failure are retained
+    rather than relabelled as new focused checks.
+  snapshot_sha256: 86d2ba9a128776f86399ecff927d6cd24d260f9b78e8f0b8c7b30eccb8cb3f2a
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/cobalt_tolerant.yaml
+  locator: Entire identity, evidence, graph, component example and six events
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: partial
+  summary: The record describes environmental cobalt tolerance with an explicitly
+    scoped mechanistic branch. Protein aggregates, one CzcA component, expression
+    processes, transport processes and metal-homeostasis claims must remain distinguishable.
+  snapshot_sha256: 7cf345edc60c113f1a805d1a51325710092c7f881a32e7dff59965c5336aefb0
+- evidence_id: shape
+  kind: validation
+  reference: Whole graph and history inspection
+  locator: Eleven nodes, ten edges, one protein example and six AI events
+  accessed_at: '2026-10-21T09:13:59Z'
+  support: supports
+  summary: All graph endpoints resolve. Six history events explicitly disclose AI
+    assistance. No pathway-context link is asserted.
+  snapshot_sha256: 0f2c050a78406484bd7ecc3eb7789a192813ce8cbadb0243e6eee1d04a7bb5ab
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md; src/traitmech/schema/traitmech.yaml
+  locator: ProteinExample component scope and retrieval-time versions; process versus
+    material entity
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: A component instance explicitly labelled as such is not an erroneous whole-complex
+    identifier. Protein-example entry and sequence versions describe the retrieval-time
+    snapshot. Native node enums and syntactic validation do not establish compatibility
+    with inherited external relation semantics.
+  snapshot_sha256: 3405a8954ed6f50448d12c4b2a6a72293ee68333154614472a83a415173b9bc7
+- evidence_id: identity
+  kind: authority
+  reference: Pinned data/raw/metpo.owl; v5 class proposal; metal_tolerant.yaml
+  locator: Complete label/synonym scan, broader cobalt search and fallback parent
+  accessed_at: '2026-10-21T09:13:31Z'
+  support: supports
+  summary: No active or deprecated exact cobalt-tolerance term was found in the complete
+    pinned authority scan. The only broader cobalt-name hit is obsolete cobalt reduction,
+    a different concept. Local proposed METPO:1007614 is not minted upstream; traitmech:000015
+    and its broader metal/metalloid parent are coherent.
+  snapshot_sha256: 530d842ae9b9bf79632e49d8721b91ba81c8cc11de80913aa4495c47bf16f387
+- evidence_id: grounding
+  kind: authority
+  reference: Official ChEBI:48828; QuickGO GO:0030001; NCBI:119219/266264
+  locator: Fresh cobalt identity 09:13:46Z; hash-verified GO/taxonomy originally 08:54:06–07Z
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: partial
+  summary: Cobalt(2+) and both taxon labels match. GO:0030001 is active metal ion
+    transport, a legitimate broad context for cobalt transport, but does not encode
+    cobalt specificity or outward transmembrane direction.
+  snapshot_sha256: 4f5fbf8e295d0a210785c2ec0eb427aa66fa467265134e0b42c92fdd606d74c0
+- evidence_id: authority-reuse
+  kind: authority
+  reference: Official ontology/database response receipts
+  locator: Original acquisition times and rechecked body/database hashes
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: Cobalt ChEBI was fetched at 09:13:46Z. GO/taxa retain 08:54:06–07Z acquisitions;
+    P13511/current and UniSave 153 retain 09:02:07–09Z acquisitions; reference-proteome
+    metadata retains 08:55:33Z. Reuse dates are not substituted for original access
+    dates.
+  snapshot_sha256: 6d1415244ca586b97e308131f14ca48bbec21013efd6a73e5f1acdbe035accf0
+- evidence_id: protein
+  kind: database
+  reference: UniProtKB:P13511; UniSave version 153; UP000002429
+  locator: Reviewed CzcA/Rmet_5980 in CH34; pMOL30 reference-proteome membership
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: Primary reviewed CzcA identity, taxon, gene, proteome and explicit component
+    role agree. Archived 153/sequence 3 dated 2026-01-28 fits the declared 2026-08-25
+    retrieval. Current 154 followed the 2026-09-02 update; that is later drift, not
+    an original metadata defect.
+  snapshot_sha256: 88d6d3d06afae45f3b8be883de6c578470dfce0b4b8eb634dbf2d209499ae42b
+- evidence_id: ro
+  kind: authority
+  reference: Read-only RO SQLite authority; RO:0002327 and RO:0002326 superproperty
+    closure
+  locator: Original enables inspection 07:58:06Z; contributes-to inspection 08:04:46Z;
+    source hash rechecked
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: Enables means capable of and acting to execute a process, inheriting independent-continuant
+    and material-entity subject constraints. Contributes-to inherits a material-entity
+    subject through RO:0002216, RO:0002500 and RO:0002595. Explicit expression/export
+    processes do not satisfy these actor roles. No native validation or OWL reasoner
+    failure is claimed.
+  snapshot_sha256: eb5b0e19a0adc53790a237a998cf4f0c1f360c553d3ed7bd3ec38dae1923dc9d
+- evidence_id: proposals
+  kind: authority
+  reference: v2 challenges/mitigates and v9 exports proposals; predicate mappings
+  locator: Current local definitions, directions and placeholder status
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: Challenges and mitigates cover the declared stressor/defense roles. Proposed
+    exports denotes movement from cytoplasm across a membrane to the exterior; protein-to-chemical
+    endpoint kinds fit, while precise biological compartment support remains a separate
+    source question. Historical microbe-domain identifiers have already been replaced.
+  snapshot_sha256: 3405a8954ed6f50448d12c4b2a6a72293ee68333154614472a83a415173b9bc7
+- evidence_id: ledger
+  kind: validation
+  reference: Complete independent node/edge ledger
+  locator: All eleven nodes and ten edges, including ungrounded relation labels
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: partial
+  summary: Edges 5 and 9 have confirmed external subject-role conflicts. Remaining
+    formal endpoint roles are compatible. Node 7 retains operon wording despite a
+    protein-module label and gene/operon metadata; this is bounded wording ambiguity,
+    not a forced retyping finding.
+  snapshot_sha256: b87bcff56f7cfa5c911aec316866c7c1a8f5aa3d2cc13aca3b518ed1c8392862
+- evidence_id: owners
+  kind: search
+  reference: mappings/predicate_grounding.tsv; scripts/ground_causal_predicates.py;
+    bounded node-writer search
+  locator: Wildcard rows 9/10 and populated-ID skip; ignored-inclusive literal search
+  accessed_at: '2026-10-21T09:14:49Z'
+  support: supports
+  summary: The predicate writer skips existing IDs, but unchanged enables/contributes-to
+    labels can reacquire the same RO IDs after clearing because rows 9/10 are wildcard
+    mappings. No current dedicated literal node mapping for cobalt transport/GO:0030001
+    was found in the declared writer roots; clearing that node grounding is not shown
+    to reproduce it automatically. Static code reading only.
+  snapshot_sha256: 4823978b1f80989f367ab689beea06ba726e8fd08cf36ed7360ca1cd66da7f27
+  search_scope: Ignored-inclusive exact label/identifier searches across mappings,
+    scripts, src and proposals; commands retained in exact-grounding-writer-search.json.
+    No historical or whole-filesystem absence claim.
+- evidence_id: provenance
+  kind: search
+  reference: Whole target history and ignored-inclusive local history/mapping/writer/review
+    search
+  locator: Six AI events; 268 matching lines in 67 previous review pairs
+  accessed_at: '2026-10-21T09:14:36Z'
+  support: partial
+  summary: All six events disclose AI assistance, including promotion to REVIEWED.
+    All prior-review matches are contextual inputs, not target coverage or human acceptance.
+    No acceptance link identifying this revision was found within the declared local
+    bounds; remote/private acceptance remains unknown.
+  snapshot_sha256: c7b71f2806a320ce44e0ddb79a09f96d4da57fcbf18a4c6de5069107724c4610
+  search_scope: rg --no-ignore --hidden over history, mappings, scripts and reviews/structured
+    with exact identifier, record path and cobalt_tolerant/cobalt tolerant. Original
+    09:13:59Z receipt retains 268 lines; all 67 matching review target lists were
+    inspected.
+- evidence_id: status-rule
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md
+  locator: Status/audit gate
+  accessed_at: '2026-10-21T09:20:48Z'
+  support: supports
+  summary: REVIEWED requires human scientific acceptance; AI history, mapping status
+    and validator success are different evidence.
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original 07:36:12Z catalog; current hash-verified canonical-taxon applicability
+    assessment
+  accessed_at: '2026-10-21T09:14:36Z'
+  support: context_only
+  summary: No Cupriavidus/metallidurans/CH34 dataset matches the inspected 20-organism,
+    28-dataset catalog. No gene/module queries or species substitution followed. The
+    contextual E. coli RcnA source does not justify substituting its dataset into
+    this canonical-only assessment.
+  snapshot_sha256: 576c09f941cc047387e912a020d875ed3437182a2dbc5f3491168778b8aa4aed
+- evidence_id: runner
+  kind: search
+  reference: Structured-source runner discovery
+  locator: Original bounded ignored-inclusive 08:17:15Z discovery
+  accessed_at: '2026-10-21T08:17:15Z'
+  support: context_only
+  summary: Original PATH/project/install/B4 discovery is reused with exact bounds
+    and official-catalog fallback. This is neither new discovery nor a global absence
+    claim.
+  snapshot_sha256: 39b52930f52e898f85ac3bbb88f11ac674a355967b5704e2b62f0bda259d404f
+  search_scope: Original PATH/project/install/B4 roots include hidden/ignored and
+    virtual-environment contents, excluding Git internals. Unsearched directories
+    remain unknown.
+- evidence_id: bibliography
+  kind: database
+  reference: Complete source and acquisition ledger
+  locator: Eight references, sixteen citation placements, three snippets and ten edge
+    claims
+  accessed_at: '2026-10-21T09:16:24Z'
+  support: partial
+  summary: All eight identities resolve. Five complete source bodies are locally available,
+    one prior publisher body was partly inspected, and two sources remain abstract-only.
+    Ten new download attempts yielded eight hashed acquisitions; six prior files were
+    hash-verified on reuse. Exact edge coverage and limits are retained.
+  snapshot_sha256: 8826acf047afa3edb482be0178cdf276c1111ce2d2c352494bcb69588dd80c6f
+- evidence_id: definition-source
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/12829273/
+  locator: DOI:10.1016/s0168-6445(03)00048-2; complete indexed abstract
+  accessed_at: '2026-10-21T09:01:42Z'
+  support: supports
+  summary: The review supports efflux-mediated prokaryotic metal resistance. It supplies
+    broad definition context rather than a formal cobalt-growth threshold; other cited
+    strain sources support the cobalt phenotype. Body access was unavailable and no
+    repeated failed request is relabelled as evidence.
+  snapshot_sha256: ab66a791a5245cbb2bd7274916dba2349cf69ed1b105f965af95e8f3d6279302
+- evidence_id: czcp
+  kind: primary_source
+  reference: https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2958.2009.06792.x
+  locator: PMID:19602147; original publisher Summary 80–82 and Introduction 87–97
+  accessed_at: '2026-10-21T09:02:00Z'
+  support: partial
+  summary: Inspected passages support CzcP cobalt transport and discuss CzcA/CzcCBA
+    context. The top snippet substitutes CzcP for the source subject and is a faithful
+    compressed paraphrase. Source distinguishes ATPase cytoplasmic efflux from full-complex
+    periplasmic export. Complete results/discussion were not inspected; no local full-body
+    hash is fabricated.
+- evidence_id: czcp-access
+  kind: primary_source
+  reference: Prior successful Wiley passage receipt and later access failures
+  locator: Original partial-body access scope retained
+  accessed_at: '2026-10-21T09:02:28Z'
+  support: context_only
+  summary: Later 403 responses do not erase the successful earlier Summary/Introduction
+    inspection. They also do not permit asserting whole-body absence of the top snippet.
+  snapshot_sha256: 12adff5909f706f64155d6d78573d6b7082d8acedcbeed0f2498a9954999c550
+- evidence_id: bs1
+  kind: primary_source
+  reference: https://doi.org/10.3389/fmicb.2020.00047
+  locator: PMID:32117100; Results S3.SS1/body 11 and Table 1
+  accessed_at: '2026-10-21T08:55:31Z'
+  support: supports
+  summary: BS1 cobalt MIC 20 mM and CH34 comparison MIC 35 mM are exact strain/assay
+    inhibitory endpoints. The long snippet matches apart from harmless uM/μM notation.
+    The record already labels MIC; no growth-at-MIC or universal species-threshold
+    falsehood is inferred.
+  snapshot_sha256: 64d52eb8778d5b00a469f8d82deeeeb5d3a0102de2faa89badc5d55f7e72db81
+- evidence_id: ch34
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.pone.0010433
+  locator: PMID:20463976; Introduction/body 3, Results s2f/body 53–54 and Table 5;
+    complete XML snippet search
+  accessed_at: '2026-10-21T08:55:43Z'
+  support: partial
+  summary: The primary genome article describes CH34 cobalt resistance and CzcA as
+    one inner-membrane component of CzcCBA. This supports component identity/role,
+    not a newly performed purified-P13511 assay. The anchor snippet is semantically
+    consistent but absent from normalized complete article XML, including tables/references.
+    Older transenvelope wording must be retained when assessing newer compartment
+    distinctions.
+  snapshot_sha256: bc3ff60f3133a5ec3ac949d7f319d52401370ffaa038d9c498d330529cccd821
+- evidence_id: czc-review
+  kind: primary_source
+  reference: https://doi.org/10.3390/ijms26125716
+  locator: PMID:40565180; Section 5 sec5-ijms-26-05716, body 26
+  accessed_at: '2026-10-21T09:13:47Z'
+  support: supports
+  summary: The full review directly supports existing CzcCBA substrate, CzcRS transcriptional
+    activation and expression/encoding context in historical CH34 nomenclature. This
+    does not cure the RO typing of expression as executor, nor resolve individual-protein
+    versus full-complex compartment interpretation.
+  snapshot_sha256: 280222b8954028a984847444f271eb28a5461e4a22d5eeb397dc7e447ff139aa
+- evidence_id: cnr-review
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1007/s44274-025-00301-y
+  locator: Section 3.2.2 DmeF; Section 3.3 CH34; Section 3.5 component/complex discussion
+  accessed_at: '2026-10-21T09:14:26Z'
+  support: supports
+  summary: Actual full publisher HTML and Crossref establish the article despite no
+    EPMC hit. The review supports the existing strain-specific Cnr/plasmid note and
+    DmeF cobalt preference. It distinguishes central CzcA membrane capacity from full-complex
+    compartment; retain this source context.
+  snapshot_sha256: 9b78be7cb4c575b8c5e586014b92b69fac19ca603dc08adabf94fc5c8c75cfc2
+- evidence_id: rcna
+  kind: primary_source
+  reference: https://doi.org/10.1128/JB.187.8.2912-2916.2005
+  locator: PMID:15805538; complete indexed primary abstract
+  accessed_at: '2026-10-21T09:13:45Z'
+  support: partial
+  summary: The abstract directly supports membrane-bound RcnA/YohM and increased cobalt/nickel
+    resistance in E. coli. Efflux is an author-supported hypothesis; the reported
+    accumulation measurement concerns nickel. No independent cobalt-flux assay is
+    established from the abstract. Full text remained unavailable after EPMC 500 and
+    BioC 429.
+  snapshot_sha256: 3bd2cb6459fb7d76c1a106eb5f1dbe9fc3b20ff3cd4fdf46915a35ded58d883e
+- evidence_id: baseline
+  kind: primary_source
+  reference: https://doi.org/10.1093/mtomcs/mfae058
+  locator: PMID:39562290; Introduction/body 2,5; Results sec2-2/body 16,21; Discussion
+    sec3-1/body 66–67; Table 2
+  accessed_at: '2026-10-21T09:13:47Z'
+  support: partial
+  summary: Authors explicitly infer low-metal homeostasis from Czc protein presence.
+    That positive inference is supported, not rejected merely because the method is
+    proteomics. It does not equally establish assembled Cnr complexes or cobalt-specific
+    baseline function; CnrA/CnrC were not quantified, which is not proof of absence.
+    The paper also distinguishes individual-protein in-vitro capacity from full-complex
+    in-vivo compartment.
+  snapshot_sha256: eeac2fc96f836c9410bb03e0f157b486d5ca12b6d864347b945b41a2ada1f77f
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback, polarity, term kind and hierarchy'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: The complete pinned scan supports the accepted fallback and its narrower
+    positive metal-tolerance class. The v5 proposal is not an upstream minted identity;
+    obsolete cobalt reduction is a different concept.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: growth phenotype and typical efflux emphasis'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: The definition is a contextual synthesis of the resistance review and cobalt-specific
+    strain evidence. Typical czc/cnr emphasis does not assert a universal mechanism
+    or numerical growth threshold.
+  evidence_ids:
+  - definition-source
+  - bs1
+  - ch34
+  - record
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: both canonical examples and CzcA component role'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: Taxonomy and CH34 cobalt-resistance context agree. P13511 is the declared
+    reviewed CzcA component; the role explicitly says one component rather than the
+    entire complex. The genome paper supports that role while synthesizing earlier
+    functional work.
+  evidence_ids:
+  - grounding
+  - protein
+  - ch34
+  - policy
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: mechanistic scope and instance-level evidence tier'
+  outcome: unknown
+  target_ids:
+  - traitmech:000015
+  summary: ENVIRONMENT/CLASS, a scoped branch and the explicit CzcA component representation
+    fit. Native protein/taxon coverage passes. An accession-specific experimental
+    assay in the attached genome citation was not independently established; positive
+    role evidence remains and the paper category alone does not justify a major no-function
+    finding.
+  evidence_ids:
+  - record
+  - policy
+  - protein
+  - ch34
+  - check-corpus-protein-taxa
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: all identifiers and transport specificity'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: Chemical, taxon and protein identities match. GO:0030001 is a true broad
+    metal-ion transport concept but lacks cobalt and outward-transmembrane specificity.
+    Local placeholder relations retain documented proposal status.
+  evidence_ids:
+  - grounding
+  - identity
+  - protein
+  - proposals
+  - ledger
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all ten edge roles and directions'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: Edges 5 and 9 use explicit processes as actors under material-subject RO
+    predicates. Other formal roles fit. The description of a produced or detected
+    protein does not silently turn the graph subject into that protein. Local exports
+    direction is separately subject to compartment evidence.
+  evidence_ids:
+  - ro
+  - ledger
+  - proposals
+  - owners
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: eight references, sixteen placements and ten nearest edge
+    claims'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: All ten edge claims have an assessed source surface. Core efflux and regulatory
+    contexts have support; compartment framing and baseline scope require bounded
+    qualifications. RcnA remains abstract-limited with author-inference wording retained.
+    No automatic universal or cross-taxon inference is made.
+  evidence_ids:
+  - bibliography
+  - czcp
+  - ch34
+  - czc-review
+  - cnr-review
+  - rcna
+  - baseline
+  - bs1
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: all three verbatim snippet fields'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: The BS1 quote matches after notation normalization. The top CzcP wording
+    is faithful paraphrase in the inspected passage, with whole-body exactness unknown.
+    The CzcA anchor phrase is nonliteral in the complete retrieved CH34 article XML;
+    absence beyond that text is not asserted.
+  evidence_ids:
+  - bibliography
+  - czcp
+  - czcp-access
+  - ch34
+  - bs1
+- assessment_id: compartments
+  area: consistency
+  topic: 'Native checklist: explicit CzcCBA cytoplasmic-cobalt statement'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: The sources support cobalt efflux but distinguish central-component capacity,
+    full-complex activity and compartments differently. Keep the older CH34 transenvelope
+    formulation alongside later component/complex and in-vitro/in-vivo distinctions;
+    do not call the aggregate invalid or every cytoplasmic formulation impossible.
+  evidence_ids:
+  - czc-review
+  - cnr-review
+  - baseline
+  - ch34
+  - czcp
+- assessment_id: baseline-scope
+  area: evidence
+  topic: 'Native checklist: Czc inference versus Cnr/cobalt-specific baseline claim'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: The source expressly supports a Czc low-metal-homeostasis inference. Adding
+    Cnr, assembled-complex activity and cobalt-specific baseline function extends
+    beyond the inspected result. This source-scope problem is independent of edge
+    9’s RO subject-role error.
+  evidence_ids:
+  - baseline
+  - record
+  - ledger
+- assessment_id: protein-history
+  area: provenance
+  topic: 'Native checklist: retrieval-time version and current audit drift'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: Archived 153/sequence 3 matches the declared retrieval snapshot. Current
+    154 is later; retain the native audit failure without creating a version-only
+    scientific defect. The past retrieval itself was not independently observed.
+  evidence_ids:
+  - protein
+  - policy
+  - check-corpus-uniprot
+  - check-reuse
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record shape and optional discussions/datasets'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: All endpoints resolve and a structurally valid paired component example
+    is present. Additional token instances and graphs are not required for every contextual
+    branch. No pathway link is asserted; provider research is a lead, not primary
+    proof.
+  evidence_ids:
+  - shape
+  - record
+  - policy
+  - check-corpus-protein-taxa
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: canonical-taxon structured-source applicability'
+  outcome: supported
+  target_ids:
+  - traitmech:000015
+  summary: No matching Cupriavidus dataset is present in the inspected catalog. No
+    gene/module queries or taxon substitution followed; noncoverage supplies no negative
+    biological evidence.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: AI disclosure, acceptance and maintained owners'
+  outcome: concern
+  target_ids:
+  - traitmech:000015
+  summary: Six events disclose AI assistance. No human-acceptance link was found within
+    bounded local provenance. Wildcard relation mappings can reproduce the RO conflicts
+    when IDs are cleared; populated fields are skipped. No analogous recurrence is
+    established for the broad node grounding.
+  evidence_ids:
+  - provenance
+  - status-rule
+  - shape
+  - owners
+findings:
+- finding_id: material-actor-relations
+  issue_key: cobalt-tolerant-material-actor-relations
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two RO predicates assign material-actor roles to processes
+  description: Edge 5 uses operon expression as the subject of RO:0002327 enables,
+    and edge 9 uses cobalt export as the subject of RO:0002326 contributes to. Both
+    predicates inherit material-entity actor constraints; these nodes explicitly denote
+    processes. Descriptions mentioning produced or present protein complexes do not
+    change the structured subject. Reconcile the relation and intended entity role
+    without inventing a biological route. Native validation passing is compatible
+    with this external semantic defect.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - causal_graphs[0].edges[5]
+  - causal_graphs[0].edges[9]
+  evidence_ids:
+  - ro
+  - ledger
+  - owners
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard enables/contributes-to mapping owner
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing-ID skip and mapping application owner
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: transport-grounding-specificity
+  issue_key: cobalt-tolerant-transport-grounding-specificity
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The transport grounding is broader than the stated process
+  description: Node 3 describes cobalt-specific outward transmembrane transport but
+    GO:0030001 denotes general metal-ion transport. This is a legitimate broad context,
+    not a wrong ion identity or process aspect. Clarify the intended grounding relationship
+    or use a precisely supported term.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - causal_graphs[0].nodes[3]
+  evidence_ids:
+  - grounding
+  - ledger
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: quotation-fidelity
+  issue_key: cobalt-tolerant-quotation-fidelity
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Two snippet fields contain paraphrase or nonliteral wording
+  description: The top CzcP snippet is a faithful subject-substituted paraphrase of
+    the inspected Summary; complete-body exactness is unknown. The CzcA anchor phrase
+    is not present in normalized complete CH34 article XML, including tables and references,
+    although its meaning has support. Verify exact passages or put interpretive wording
+    in notes. No absence claim extends to every supplement or other literature.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - evidence[0].snippet
+  - causal_graphs[0].nodes[4].protein_examples[0].evidence[0].snippet
+  evidence_ids:
+  - czcp
+  - czcp-access
+  - ch34
+  - bibliography
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: compartment-precision
+  issue_key: cobalt-tolerant-compartment-precision
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The CzcCBA compartment claim needs source-specific qualification
+  description: Edge 3 expressly assigns cytoplasmic cobalt export to the CzcCBA complex.
+    Inspected sources distinguish individual CzcA in-vitro capacity from full-complex
+    in-vivo periplasmic export, while the older CH34 genome source uses broader transenvelope
+    wording. Preserve this source tension and distinguish component, complete complex
+    and transport compartment; do not turn it into an unsupported universal contradiction
+    or a false component identifier.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - causal_graphs[0].edges[3].description
+  - causal_graphs[0].nodes[4].description
+  evidence_ids:
+  - czc-review
+  - cnr-review
+  - baseline
+  - ch34
+  - czcp
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: baseline-homeostasis-scope
+  issue_key: cobalt-tolerant-baseline-homeostasis-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The baseline claim exceeds the source’s Czc inference
+  description: The cited authors explicitly infer low-metal homeostasis from Czc protein
+    presence, so that positive support must remain. The record additionally names
+    Cnr complexes and cobalt-specific baseline function; detected proteins do not
+    alone establish assembled-complex activity or cobalt-specific flux, and CnrA/CnrC
+    were not quantified. Bound the wording to the documented inference without interpreting
+    nonquantification as absence. This source-scope issue is separate from the edge’s
+    RO actor mismatch.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - causal_graphs[0].edges[9].description
+  - causal_graphs[0].edges[9].evidence[0].notes
+  - causal_graphs[0].nodes[10].description
+  evidence_ids:
+  - baseline
+  - record
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: cobalt-tolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human scientific acceptance is not linked locally
+  description: The six disclosed AI events, including promotion to REVIEWED, and ignored-inclusive
+    local search do not identify human scientific acceptance of this revision. Prior
+    structured reviews include the file as context, not as their target. Private or
+    remote acceptance remains unknown.
+  target_ids:
+  - traitmech:000015
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - status-rule
+  - shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-ro-actors
+  description: In separately authorized curation, reconcile edges 5 and 9 with the
+    entity roles their grounded predicates actually require, and review the maintained
+    mapping behavior.
+  finding_ids:
+  - material-actor-relations
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Every retained predicate agrees with the subject and object’s represented identity,
+    including inherited ontology roles.
+  - Preserve supported expression/export/homeostasis context without inventing replacement
+    biological steps or treating YAML validation as semantic proof.
+  - Check whether unchanged labels can reacquire the rejected grounding through wildcard
+    mappings; do not silently expand global mappings without a scoped audit.
+  - After authorized edits, use guarded writes, focused strict/term/graph checks and
+    just qc; retain native history and regenerate affected products as required.
+- action_id: clarify-transport-grounding
+  description: Align node 3’s specific process wording with the breadth of its grounding.
+  finding_ids:
+  - transport-grounding-specificity
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The intended cobalt specificity and direction agree with the term or the broader
+    relationship is represented explicitly.
+  - Do not invent a replacement identifier or treat general metal-ion transport as
+    an invalid biological-process type.
+  - Use guarded curation and the required native validation/QC gates after an authorized
+    correction.
+- action_id: verify-snippets
+  description: Verify exact source wording for both affected snippets or move faithful
+    interpretation into notes.
+  finding_ids:
+  - quotation-fidelity
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retained quotation text has an exact inspected source locator.
+  - Preserve supported component and transport claims; partial access does not establish
+    absent biology.
+  - Run focused snippet verification and manual primary-text checking after authorized
+    changes.
+- action_id: qualify-source-scope
+  description: Qualify the existing compartment and baseline-homeostasis claims at
+    their nearest evidence fields.
+  finding_ids:
+  - compartment-precision
+  - baseline-homeostasis-scope
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Keep the older transenvelope formulation and later individual-protein/full-complex
+    distinctions visible rather than declaring a universal contradiction.
+  - Preserve the authors’ positive Czc homeostasis inference while bounding Cnr, cobalt
+    specificity and assembled-complex activity to inspected evidence.
+  - Do not treat unquantified proteins as absent or the expression/source-scope qualification
+    as a substitute for the independent RO repair.
+  - Use primary-text checks plus native strict/term/graph validation and just qc after
+    authorized curation; no new experiment or mechanism optimization is needed.
+- action_id: link-acceptance
+  description: Locate and link existing human acceptance or obtain it through the
+    established process, preserving AI history and reassessing status if needed.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the reviewed revision and scientific scope.
+  - AI provenance, structural coverage and this review are not substituted for human
+    scientific acceptance.
+- action_id: preserve-access-limits
+  description: When complete source text becomes available, resolve remaining RcnA
+    and accession-specific experimental-provenance questions before strengthening
+    those claims.
+  finding_ids: []
+  target_ids:
+  - traitmech:000015
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/cobalt_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain RcnA author-inference language and the abstract/body boundary until an
+    actual full-text source is inspected.
+  - Distinguish reviewed CzcA identity and supported component role from an independently
+    assessed accession-specific experiment.
+  - Record source support, qualification or contradiction separately; do not create
+    a major no-function finding from the current access limit.
+limitations:
+- Definition review access is limited to its complete indexed abstract. The cobalt
+  definition is a supported synthesis, not a quoted formal class definition or universal
+  quantitative threshold.
+- The CzcP publisher Summary/Introduction were actually inspected at the original
+  09:02 access. Later 403 responses do not erase that evidence; full results/discussion
+  and whole-body snippet absence were not assessed. No local full-body hash is fabricated.
+- The CH34 anchor phrase is absent from complete normalized retrieved article XML,
+  including tables/references. This bounded textual result does not assert absence
+  from every supplement or other source, nor negate supported CzcA component function.
+- Compartment sources differ. Preserve older CH34 transenvelope wording and newer
+  central-component/full-complex, in-vitro/in-vivo distinctions. This is not an automatic
+  false aggregate, wrong CzcA identity or universal impossibility claim.
+- The baseline paper explicitly supports a Czc low-metal-homeostasis inference. Only
+  extensions to Cnr, assembled-complex activity and cobalt-specific baseline function
+  require qualification; CnrA/CnrC nonquantification is not proof of absence.
+- RcnA full text remained unavailable after EPMC HTTP 500 and BioC HTTP 429. The primary
+  abstract supports resistance and an author-supported efflux hypothesis; its accumulation
+  measurement concerns nickel, so an independently verified cobalt-flux assay is not
+  claimed.
+- The CH34 genome paper supports the CzcA component role and synthesizes earlier functional
+  work. An accession-specific experiment was not independently assessed. Positive
+  role evidence prevents converting this bounded uncertainty into a major no-function
+  finding.
+- BS1 cobalt MIC 20 mM and CH34 comparison MIC 35 mM are strain/assay inhibitory endpoints.
+  The record already says MIC; no growth-at-MIC or universal species threshold is
+  inferred.
+- Current UniProt entry 154 differs from stored 153, but archived 153/sequence 3 agrees
+  with the declared retrieval snapshot. The actual native audit failure is retained
+  without a version-only scientific defect.
+- All 1130 trait bytes were checked before reusing the 08:55 corpus audits. Common
+  validator reuse likewise retains original scope, failures, skips and times; it is
+  not fresh external-release certification.
+- No matching canonical Cupriavidus expression dataset occurs in the inspected catalog.
+  No taxon substitution or negative functional inference follows from noncoverage.
+- Human acceptance remains unknown outside the declared ignored-inclusive local scope.
+  A complete review does not confer human acceptance.
+- No scientific-record edit, status/history change, generated-page mutation, paid
+  provider call, experimental design or biological optimization was performed. Unrelated
+  pathogen mechanisms in broad sources were not assessed or expanded.
+notes:
+- All field indices are zero-based.
+- Native capture 09:13:08–11Z retained 55 inputs after the entire target was read.
+  Independent receipt checks confirmed unchanged input hashes.
+- One major and five minor findings; current source-access and historical-version
+  qualifications are retained rather than converted into additional defects.
+tags:
+- record-review
+- cobalt-tolerant
+- environment
+- needs-curation
+```
