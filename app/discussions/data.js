@@ -12396,13 +12396,13 @@ window.searchData = [
   "discussion_id": "alanine-arylamidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for alanine aminopeptidase/arylamidase catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "alanine arylamidase activity",
   "source_id": "traitmech:000161",
   "source_file": "alanine_arylamidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#alanine_arylamidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.4.11.2 reaction snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -12412,6 +12412,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/alanine_arylamidase_activity.html#alanine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "alanine-arylamidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825) so alanine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "alanine arylamidase activity",
+  "source_id": "traitmech:000161",
+  "source_file": "alanine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#alanine_arylamidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Alloprevotella rava (NCBITaxon:1073377), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1099/ijsem.0.006017"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/alanine_arylamidase_activity.html#alanine-arylamidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "alkaline-phosphatase-activity-xref-gap",
@@ -12818,13 +12839,13 @@ window.searchData = [
   "discussion_id": "arginine-arylamidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "arginine arylamidase activity",
   "source_id": "traitmech:000167",
   "source_file": "arginine_arylamidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#arginine_arylamidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -12834,6 +12855,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/arginine_arylamidase_activity.html#arginine-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "arginine-arylamidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Lactococcus lactis subsp. cremoris MG1363 aminopeptidase C PepC (UniProtKB:Q48677) or Escherichia coli K-12 aminopeptidase B PepB (UniProtKB:P37095) so arginine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "arginine arylamidase activity",
+  "source_id": "traitmech:000167",
+  "source_file": "arginine_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#arginine_arylamidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.11.6, DOI:10.3389/fgene.2023.1240581) establishes N-terminal L-arginine and L-lysine release from oligopeptides and arylamides and positive L-arginine arylamidase activity in Helicobacter zhangjianzhongii (NCBITaxon:2974574), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fgene.2023.1240581"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/arginine_arylamidase_activity.html#arginine-arylamidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "arginine-dihydrolase-activity-xref-gap",
@@ -17922,13 +17964,13 @@ window.searchData = [
   "discussion_id": "trypsin-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for microbial trypsin-like serine protease catalysis and physiological substrate cleavage before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "trypsin activity",
   "source_id": "traitmech:000158",
   "source_file": "trypsin_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#trypsin_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs IUBMB EC 3.4.21.4 cleavage/vertebrate-pancreas snippets with an API ZYM diagnostic survey list (DOI:10.1371/journal.pone.0322500), lacking a second microbial mechanistic quote.",
   "num_experiments": 0,
@@ -17938,6 +17980,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/trypsin_activity.html#trypsin-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "trypsin-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Streptomyces griseus trypsin SprT (UniProtKB:P00775) so trypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "trypsin activity",
+  "source_id": "traitmech:000158",
+  "source_file": "trypsin_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#trypsin_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Chryseobacterium indologenes (NCBITaxon:253), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1371/journal.pone.0322500"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/trypsin_activity.html#trypsin-activity-protein-example-gap"
  },
  {
   "discussion_id": "tyrosine-arylamidase-activity-xref-gap",
@@ -18170,7 +18233,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 913,
+ "total_discussions": 916,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [

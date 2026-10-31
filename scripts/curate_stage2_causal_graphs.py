@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Curate Stage 2 causal_graphs and source-limited knowledge-gap discussions.
 
-Addresses 120 active CLASS records across Cohorts A through K in environment/,
+Addresses 120 active CLASS records across Cohorts A through L in environment/,
 metabolism/, morphology/, and physiology/:
 
 - Cohort A (10 multi-evidence records): adds a connected, schema-valid
@@ -16,12 +16,12 @@ metabolism/, morphology/, and physiology/:
   record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
   source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
-- Cohorts C, E, G, H, I, J, and K (25 multi-evidence physiology/metabolism
+- Cohorts C, E, G, H, I, J, K, and L (28 multi-evidence physiology/metabolism
   records): adds connected NONMECHANISTIC causal_graphs entries anchored on
   existing verbatim record evidence snippets, resolves prior source-gap
   discussions where applicable, and records OPEN CURATION_TODO discussions
   for strain-matched UniProtKB protein_examples.
-- Cohorts D and F (71 single-mechanism-quote records): adds structured
+- Cohorts D and F (68 single-mechanism-quote records): adds structured
   OPEN KNOWLEDGE_GAP discussions documenting source-limited mechanism gaps.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
@@ -64,6 +64,7 @@ POSED_DATE_C5 = "2026-10-25"
 POSED_DATE_C6 = "2026-10-26"
 POSED_DATE_C7 = "2026-10-30"
 POSED_DATE_C8 = "2026-10-30"
+POSED_DATE_C9 = "2026-10-31"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2154,10 +2155,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for secreted or periplasmic acid phosphatase catalysis (EC 3.1.3.2, e.g. SapM, AphA, PhoN) and substrate dephosphorylation products before constructing causal_graphs.",
         "The current record carries one culture-filtrate detection snippet and one API ZYM profile snippet (DOI:10.1128/JB.182.23.6850-6853.2000, DOI:10.1155/2021/8888641) without distinct catalytic substrate/product quotes for a multi-edge graph.",
     ),
-    "data/traits/physiology/alanine_arylamidase_activity.yaml": (
-        "Add primary microbial literature evidence for alanine aminopeptidase/arylamidase catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.4.11.2 reaction snippet with a multi-enzyme API ZYM species-description list (DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
-    ),
     "data/traits/physiology/alkaline_phosphatase_activity.yaml": (
         "Add primary microbial literature evidence for PhoA/PhoX alkaline phosphatase catalysis (EC 3.1.3.1), phosphate-ester hydrolysis products, and PhoBR regulation before constructing causal_graphs.",
         "The current record carries one constitutive-expression snippet and one API ZYM profile list (DOI:10.1128/JB.185.16.4983-4991.2003, DOI:10.1155/2021/8888641) without distinct catalytic reaction/product quotes for a multi-edge graph.",
@@ -2169,10 +2166,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/alpha_glucosidase_activity.yaml": (
         "Add primary microbial literature evidence for alpha-glucosidase (EC 3.2.1.20) catalysis of terminal alpha-D-glucosidic linkages and maltose/oligosaccharide utilization before constructing causal_graphs.",
         "The current record carries two API ZYM enzyme-panel survey snippets (DOI:10.1371/journal.pone.0322500, DOI:10.3390/microorganisms13092005) without verbatim catalytic reaction or pathway quotes.",
-    ),
-    "data/traits/physiology/arginine_arylamidase_activity.yaml": (
-        "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
     ),
     "data/traits/physiology/caseinase_activity.yaml": (
         "Add primary microbial literature evidence for secreted extracellular caseinolytic protease identification, peptide release, and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
@@ -2229,10 +2222,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/serine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for seryl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
         "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
-    ),
-    "data/traits/physiology/trypsin_activity.yaml": (
-        "Add primary microbial literature evidence for microbial trypsin-like serine protease catalysis and physiological substrate cleavage before constructing causal_graphs.",
-        "The current record pairs IUBMB EC 3.4.21.4 cleavage/vertebrate-pancreas snippets with an API ZYM diagnostic survey list (DOI:10.1371/journal.pone.0322500), lacking a second microbial mechanistic quote.",
     ),
     "data/traits/physiology/tyrosine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for tyrosyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
@@ -4346,8 +4335,297 @@ def build_cohort_k_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_L_PATHS: tuple[str, ...] = (
+    "data/traits/physiology/alanine_arylamidase_activity.yaml",
+    "data/traits/physiology/arginine_arylamidase_activity.yaml",
+    "data/traits/physiology/trypsin_activity.yaml",
+)
+
+COHORT_L_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/physiology/alanine_arylamidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 aminopeptidase N PepN (UniProtKB:P04825) so alanine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.11.2, DOI:10.1099/ijsem.0.006017) establishes N-terminal amino-acid release preferentially cleaving L-alanine from peptides, amides, or arylamides and positive alanine arylamidase activity in Alloprevotella rava (NCBITaxon:1073377), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/arginine_arylamidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Lactococcus lactis subsp. cremoris MG1363 aminopeptidase C PepC (UniProtKB:Q48677) or Escherichia coli K-12 aminopeptidase B PepB (UniProtKB:P37095) so arginine_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.11.6, DOI:10.3389/fgene.2023.1240581) establishes N-terminal L-arginine and L-lysine release from oligopeptides and arylamides and positive L-arginine arylamidase activity in Helicobacter zhangjianzhongii (NCBITaxon:2974574), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/trypsin_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Streptomyces griseus trypsin SprT (UniProtKB:P00775) so trypsin_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.21.4, DOI:10.1371/journal.pone.0322500) establishes trypsin preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds and positive trypsin activity in Chryseobacterium indologenes (NCBITaxon:253), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        2,
+    ),
+}
+
+
+def build_cohort_l_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort L record."""
+    if rel_path == "data/traits/physiology/alanine_arylamidase_activity.yaml":
+        return [
+            {
+                "graph_id": "alanine_arylamidase_hydrolysis_sketch",
+                "title": "Alanine arylamidase hydrolysis of N-terminal L-alanyl peptide and arylamide bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "alanyl aminopeptidase catalytic activity and N-terminal "
+                    "L-alanine release from peptide, amide, or arylamide "
+                    "substrates to the alanine arylamidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.11.2 and "
+                    "DOI:10.1099/ijsem.0.006017; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 aminopeptidase N "
+                    "(PepN, UniProtKB:P04825) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "alanine_arylamidase_activity_trait",
+                        "label": "alanine arylamidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000161",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active alanine arylamidase (aminopeptidase N) enzymes that release N-terminal L-alanine from peptide, amide, or arylamide substrates.",
+                    },
+                    {
+                        "node_id": "alanine_arylamidase_catalytic_activity",
+                        "label": "alanyl aminopeptidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0016285",
+                        "description": "Aminopeptidase catalytic activity releasing an N-terminal amino acid, preferentially L-alanine, from a peptide, amide, or arylamide (EC 3.4.11.2).",
+                    },
+                    {
+                        "node_id": "alanine_arylamidase_alanine",
+                        "label": "L-alanine",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16977",
+                        "description": "N-terminal L-alanine product preferentially released by alanyl aminopeptidase (alanine arylamidase) cleavage of peptide, amide, or arylamide substrates.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "alanine_arylamidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "alanine_arylamidase_activity_trait",
+                        "description": "Cellular production of active alanine arylamidase detected in diagnostic enzyme panels confers the alanine arylamidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Downes et al. report that Alloprevotella rava displays positive enzymatic activity for alanine arylamidase in the Rapid ID 32A and API ZYM panels.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "alanine_arylamidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "alanine_arylamidase_alanine",
+                        "description": "Alanyl aminopeptidase catalyzes the hydrolytic release of an N-terminal amino acid, preferentially L-alanine, from a peptide, amide, or arylamide.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.11.2 defines the membrane alanyl aminopeptidase reaction as the release of an N-terminal amino acid (preferably L-alanine) from a peptide, amide, or arylamide.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/arginine_arylamidase_activity.yaml":
+        return [
+            {
+                "graph_id": "arginine_arylamidase_hydrolysis_sketch",
+                "title": "Arginine arylamidase hydrolysis of N-terminal L-arginyl peptide and arylamide bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "aminopeptidase B catalytic activity and N-terminal "
+                    "L-arginine release from oligopeptide and arylamide "
+                    "substrates to the arginine arylamidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.11.6 and "
+                    "DOI:10.3389/fgene.2023.1240581; strain-matched UniProtKB "
+                    "protein examples for bacterial arginine aminopeptidase / "
+                    "arylamidase remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "arginine_arylamidase_activity_trait",
+                        "label": "arginine arylamidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000167",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active arginine arylamidase enzymes that hydrolyze N-terminal L-arginine from oligopeptide and arylamide substrates.",
+                    },
+                    {
+                        "node_id": "arginine_arylamidase_catalytic_activity",
+                        "label": "aminopeptidase B activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004178",
+                        "description": "Aminopeptidase catalytic activity releasing N-terminal L-arginine and L-lysine from oligopeptides and arylamides when P1' is not proline (EC 3.4.11.6).",
+                    },
+                    {
+                        "node_id": "arginine_arylamidase_arginine",
+                        "label": "L-arginine",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16467",
+                        "description": "N-terminal L-arginine product released by hydrolytic cleavage of oligopeptide and arylamide substrates.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "arginine_arylamidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "arginine_arylamidase_activity_trait",
+                        "description": "Cellular production of active L-arginine arylamidase detected in biochemical identification panels confers the arginine arylamidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Wang et al. report that both Helicobacter zhangjianzhongii strains exhibit positive results for L-arginine arylamidase activity.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "arginine_arylamidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "arginine_arylamidase_arginine",
+                        "description": "Aminopeptidase B catalyzes the release of N-terminal L-arginine and L-lysine from oligopeptides and arylamides.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.11.6 defines the aminopeptidase B reaction as the release of N-terminal Arg and Lys from oligopeptides when P1' is not Pro and hydrolysis of arylamides of Arg and Lys.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/trypsin_activity.yaml":
+        return [
+            {
+                "graph_id": "trypsin_hydrolysis_sketch",
+                "title": "Trypsin endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "trypsin serine-endopeptidase catalytic activity and "
+                    "peptide cleavage product release to the trypsin activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.21.4 and "
+                    "DOI:10.1371/journal.pone.0322500; strain-matched UniProtKB "
+                    "protein examples for Streptomyces griseus trypsin SprT "
+                    "(UniProtKB:P00775) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "trypsin_activity_trait",
+                        "label": "trypsin activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000158",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active trypsin-like serine endopeptidases that preferentially cleave peptide and arylamide bonds at L-arginine and L-lysine residues.",
+                    },
+                    {
+                        "node_id": "trypsin_catalytic_activity",
+                        "label": "trypsin activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0004295",
+                        "description": "Serine-type endopeptidase catalytic activity with preferential cleavage at the carboxyl group of L-arginine or L-lysine residues (EC 3.4.21.4).",
+                    },
+                    {
+                        "node_id": "trypsin_peptide_product",
+                        "label": "peptide",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16670",
+                        "description": "Peptide cleavage product generated by trypsin endopeptidase hydrolysis at L-arginyl and L-lysyl bonds.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "trypsin_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "trypsin_activity_trait",
+                        "description": "Cellular production of active trypsin detected in API ZYM enzyme assays confers the trypsin activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "jung2025characterization report that Chryseobacterium indologenes exhibits positive trypsin activity when assayed with the API ZYM system.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "trypsin_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "trypsin_peptide_product",
+                        "description": "Trypsin catalyzes preferential endopeptidase cleavage at L-arginyl and L-lysyl peptide bonds to release peptide cleavage products.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.21.4 defines trypsin catalysis as preferential peptide bond cleavage at Arg-|-Xaa and Lys-|-Xaa residues.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort L path: {rel_path}")
+
+
+def build_cohort_l_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort L record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_L_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C9,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, G, H, I, J, and K records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, G, H, I, J, K, and L records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -5036,6 +5314,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C8
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_L_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_l_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_l_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C9
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
