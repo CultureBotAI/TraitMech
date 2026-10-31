@@ -44,12 +44,27 @@ evidence:
     and L-aspartate arylamidase
   notes: The formal species description reports the same gamma-glutamyltransferase-positive
     phenotype in both H. zhangjianzhongii strains.
+- reference: DOI:10.1073/pnas.0511020103
+  snippet: Gamma-glutamyltranspeptidase (GGT) is a heterodimic enzyme that is generated
+    from the precursor protein through posttranslational processing and catalyzes
+    the hydrolysis of gamma-glutamyl bonds in gamma-glutamyl compounds such as glutathione
+    and/or the transfer of the gamma-glutamyl group to other amino acids and peptides.
+    We have determined the crystal structure of GGT from Escherichia coli K-12 at
+    1.95 A resolution.
+  notes: Okada et al. determined the crystal structure and catalytic mechanism of
+    Escherichia coli K-12 gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956).
 canonical_examples:
 - taxon_id: NCBITaxon:2974574
   taxon_label: Helicobacter zhangjianzhongii
   note: Wang et al. reported both Helicobacter zhangjianzhongii isolates as positive
     for gamma-glutamyltransferase activity in the API Campy biochemical panel.
   reference: DOI:10.3389/fgene.2023.1240581
+- taxon_id: NCBITaxon:83333
+  taxon_label: Escherichia coli K-12
+  note: Okada et al. characterized the structure and catalytic mechanism of Escherichia
+    coli K-12 gamma-glutamyltranspeptidase (Ggt) for gamma-glutamyl bond hydrolysis
+    and transpeptidation.
+  reference: DOI:10.1073/pnas.0511020103
 discussions:
 - discussion_id: gamma-glutamyltransferase-activity-xref-gap
   prompt: Resolve an exact external ontology class for gamma-glutamyltransferase activity
@@ -100,7 +115,7 @@ discussions:
     gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956) so gamma_glutamyltransferase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581)
@@ -120,6 +135,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-31'
+  resolution_note: Added canonical_examples entry Escherichia coli K-12 (NCBITaxon:83333;
+    DOI:10.1073/pnas.0511020103) and promoted gamma_glutamyltransferase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR000101-grounded GENE_OR_PROTEIN node gamma_glutamyltransferase_ggt
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333; UP000000625) protein_examples
+    UniProtKB:P18956 (Ggt) backed by DOI:10.1073/pnas.0511020103.
 curation_history:
 - timestamp: '2026-09-12T06:47:37Z'
   curator: codex
@@ -142,16 +163,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (gamma-glutamyltransferase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-31T05:25:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Escherichia coli K-12 (NCBITaxon:83333; DOI:10.1073/pnas.0511020103)
+    canonical example; promoted gamma_glutamyltransferase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR000101-grounded GENE_OR_PROTEIN node gamma_glutamyltransferase_ggt
+    with reviewed Escherichia coli K-12 (NCBITaxon:83333) protein_examples UniProtKB:P18956
+    (Ggt) backed by DOI:10.1073/pnas.0511020103; resolved gamma-glutamyltransferase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: gamma_glutamyltransferase_hydrolysis_sketch
   title: Gamma-glutamyltransferase cleavage of gamma-glutamyl amide bonds
   description: Evidence-backed physiological mechanism sketch linking gamma-glutamyltransferase
     catalytic activity and L-glutamate release via a gamma-glutamyl-enzyme intermediate
     to the gamma-glutamyltransferase activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.4.19.13 and DOI:10.3389/fgene.2023.1240581;
-    strain-matched UniProtKB protein examples for Escherichia coli K-12 gamma-glutamyltranspeptidase
-    (Ggt, UniProtKB:P18956) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1074/jbc.M109.054213, DOI:10.1128/jcm.19.6.826-829.1984,
+    and DOI:10.1073/pnas.0511020103; exemplified on gamma_glutamyltransferase_ggt
+    with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) glutathione hydrolase
+    proenzyme Ggt (UniProtKB:P18956).
   nodes:
   - node_id: gamma_glutamyltransferase_activity_trait
     label: gamma-glutamyltransferase activity
@@ -173,6 +204,39 @@ causal_graphs:
     grounding: CHEBI:16015
     description: L-glutamate product formed when the gamma-glutamyl-enzyme intermediate
       of gamma-glutamyltransferase reacts with water during hydrolysis.
+  - node_id: gamma_glutamyltransferase_ggt
+    label: gamma-glutamyltranspeptidase Ggt
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR000101
+    gene_symbols:
+    - ggt
+    description: Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2) that
+      catalyzes the hydrolysis of gamma-glutamyl bonds in glutathione and other gamma-glutamyl
+      compounds and transfers gamma-glutamyl moieties to amino acid or peptide acceptors.
+    protein_examples:
+    - uniprot_id: UniProtKB:P18956
+      protein_label: Glutathione hydrolase proenzyme
+      gene_symbol: ggt
+      taxon_id: NCBITaxon:83333
+      taxon_label: Escherichia coli K-12
+      entry_status: REVIEWED
+      proteome_id: UP000000625
+      retrieved_on: '2026-10-31'
+      entry_version: 194
+      sequence_version: 1
+      role: Ggt is the Escherichia coli K-12 periplasmic gamma-glutamyltranspeptidase
+        / glutathione hydrolase (EC 2.3.2.2 / EC 3.4.19.13) that cleaves gamma-glutamyl
+        amide bonds.
+      evidence:
+      - reference: DOI:10.1073/pnas.0511020103
+        snippet: Gamma-glutamyltranspeptidase (GGT) is a heterodimic enzyme that is
+          generated from the precursor protein through posttranslational processing
+          and catalyzes the hydrolysis of gamma-glutamyl bonds in gamma-glutamyl compounds
+          such as glutathione and/or the transfer of the gamma-glutamyl group to other
+          amino acids and peptides. We have determined the crystal structure of GGT
+          from Escherichia coli K-12 at 1.95 A resolution.
+        notes: Okada et al. characterized Escherichia coli K-12 Ggt (UniProtKB:P18956)
+          and determined its 1.95 A crystal structure.
   edges:
   - subject: gamma_glutamyltransferase_catalytic_activity
     predicate: confers
@@ -208,3 +272,19 @@ causal_graphs:
       notes: IUBMB EC 3.4.19.13 states that the gamma-glutamyl-enzyme intermediate
         reacts with water (hydrolysis) to form L-glutamate or with an amino acid or
         peptide acceptor.
+  - subject: gamma_glutamyltransferase_ggt
+    predicate: enables
+    predicate_id: RO:0002327
+    object: gamma_glutamyltransferase_catalytic_activity
+    description: Gamma-glutamyltranspeptidase Ggt enables gamma-glutamyltransferase
+      catalytic activity.
+    evidence:
+    - reference: DOI:10.1073/pnas.0511020103
+      snippet: Gamma-glutamyltranspeptidase (GGT) is a heterodimic enzyme that is
+        generated from the precursor protein through posttranslational processing
+        and catalyzes the hydrolysis of gamma-glutamyl bonds in gamma-glutamyl compounds
+        such as glutathione and/or the transfer of the gamma-glutamyl group to other
+        amino acids and peptides. We have determined the crystal structure of GGT
+        from Escherichia coli K-12 at 1.95 A resolution.
+      notes: Okada et al. demonstrated that Escherichia coli K-12 Ggt catalyzes gamma-glutamyl
+        bond hydrolysis and gamma-glutamyl group transfer.

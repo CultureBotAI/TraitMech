@@ -692,7 +692,7 @@ data/traits/physiology/beta_glucuronidase_activity.yaml	traitmech:000151	beta-gl
 data/traits/physiology/beta_n_acetylhexosaminidase_activity.yaml	traitmech:000157	beta-N-acetylhexosaminidase activity	beta_n_acetylhexosaminidase_chb_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/physiology/bioluminescence.yaml	traitmech:000085	bioluminescence	bioluminescence_luciferase	MECHANISTIC	5	2	3	1	1	1	1	PASS	0	0	-
 data/traits/physiology/carboxydotrophic.yaml	METPO:1000633	carboxydotrophic	carboxydotrophic_co_oxidation	MECHANISTIC	7	2	5	2	2	1	1	PASS	0	0	-
-data/traits/physiology/carboxylesterase_activity.yaml	traitmech:000156	carboxylesterase activity	carboxylesterase_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/carboxylesterase_activity.yaml	traitmech:000156	carboxylesterase activity	carboxylesterase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/catalase_activity.yaml	traitmech:000075	catalase activity	catalase_activity_h2o2_detoxification	MECHANISTIC	3	1	2	3	3	3	1	PASS	0	0	-
 data/traits/physiology/cellular_buoyancy.yaml	traitmech:000528	cellular buoyancy	gas_vesicles_confer_cellular_buoyancy	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/chemoautolithotrophic.yaml	METPO:1000634	chemoautolithotrophic	chemoautolithotrophic_inorganic_energy_co2_fixation	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
@@ -710,7 +710,7 @@ data/traits/physiology/cold_shock_response.yaml	traitmech:000206	cold shock resp
 data/traits/physiology/copiotrophic.yaml	METPO:1000642	copiotrophic	copiotrophic_high_nutrient_fast_growth	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/dormancy.yaml	traitmech:000080	dormancy	dormancy_seed_bank	MECHANISTIC	3	0	3	2	2	1	1	PASS	0	0	-
 data/traits/physiology/galvanotaxis.yaml	traitmech:000581	galvanotaxis	galvanotaxis_flagellar_motility	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
-data/traits/physiology/gamma_glutamyltransferase_activity.yaml	traitmech:000160	gamma-glutamyltransferase activity	gamma_glutamyltransferase_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/gamma_glutamyltransferase_activity.yaml	traitmech:000160	gamma-glutamyltransferase activity	gamma_glutamyltransferase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/heat_shock_response.yaml	traitmech:000205	heat shock response	heat_shock_response_proteostasis	MECHANISTIC	2	0	2	2	2	2	0	PASS	0	0	-
 data/traits/physiology/heterotrophic.yaml	METPO:1000644	heterotrophic	heterotrophic_organic_carbon_assimilation	MECHANISTIC	1	1	0	3	3	1	1	PASS	0	0	-
 data/traits/physiology/homeoviscous_adaptation.yaml	traitmech:000208	homeoviscous adaptation	homeoviscous_adaptation_membrane_fluidity	MECHANISTIC	1	0	1	2	2	2	0	PASS	0	0	-
@@ -741,7 +741,7 @@ data/traits/physiology/photoorganoheterotrophic.yaml	METPO:1000659	photoorganohe
 data/traits/physiology/phototrophic.yaml	METPO:1000660	phototrophic	phototrophic_light_energy_capture	MECHANISTIC	3	2	1	2	2	1	1	PASS	0	0	-
 data/traits/physiology/prolyl_aminopeptidase_activity.yaml	traitmech:000166	prolyl aminopeptidase activity	prolyl_aminopeptidase_pip_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/physiology/pyrazinamidase_activity.yaml	traitmech:000163	pyrazinamidase activity	pyrazinamidase_activity_pnca_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
-data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml	traitmech:000155	pyrrolidonyl arylamidase activity	pyrrolidonyl_arylamidase_hydrolysis_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml	traitmech:000155	pyrrolidonyl arylamidase activity	pyrrolidonyl_arylamidase_hydrolysis_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/physiology/quorum_sensing.yaml	traitmech:000084	quorum sensing	quorum_sensing_autoinducer	MECHANISTIC	3	3	0	1	1	5	1	PASS	0	0	-
 data/traits/physiology/siderophore_production.yaml	traitmech:000186	siderophore production	siderophore_production_iron_scavenging_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/physiology/sos_response.yaml	traitmech:000207	SOS response	sos_response_dna_damage_regulon	MECHANISTIC	2	1	1	1	1	2	0	PASS	0	0	-

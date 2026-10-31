@@ -68,6 +68,14 @@
    `UniProtKB:Q99YP5`, `UniProtKB:P33363`), 3 distinct verbatim record-level
    `evidence` items, 3 `canonical_examples` entries, and `RESOLVED`
    `CURATION_TODO` discussions.
+9. In Cycle 8 Stage 3 (`C8S3_COHORT_K_PROMOTIONS`), promotes all 3 Cohort K
+   `NONMECHANISTIC` records (`carboxylesterase_activity.yaml`,
+   `gamma_glutamyltransferase_activity.yaml`,
+   `pyrrolidonyl_arylamidase_activity.yaml`) to `MECHANISTIC` by adding 3
+   `InterPro`-grounded `GENE_OR_PROTEIN` nodes with 3 verified reviewed UniProtKB
+   `protein_examples` (`UniProtKB:P37967`, `UniProtKB:P18956`,
+   `UniProtKB:P28618`), 3 distinct verbatim record-level `evidence` items, 3
+   `canonical_examples` entries, and `RESOLVED` `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -4599,6 +4607,471 @@ C7S3_COHORT_J_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C8S3_TIMESTAMP = "2026-10-31T05:25:00Z"
+C8S3_RETRIEVED_ON = "2026-10-31"
+
+C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/physiology/carboxylesterase_activity.yaml": {
+        "identifier": "traitmech:000156",
+        "graph_id": "carboxylesterase_hydrolysis_sketch",
+        "discussion_id": "carboxylesterase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1074/jbc.M304425200, "
+            "DOI:10.1128/jcm.19.6.826-829.1984, and "
+            "DOI:10.1016/0378-1119(94)90630-0; exemplified on "
+            "carboxylesterase_pnba with Bacillus subtilis 168 "
+            "(NCBITaxon:224308; UP000001570) para-nitrobenzyl esterase PnbA "
+            "(UniProtKB:P37967)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1016/0378-1119(94)90630-0",
+            "snippet": (
+                "A Bacillus subtilis PNB carboxy-esterase (PNBCE) catalyzes "
+                "hydrolysis of several beta-lactam antibiotic PNB esters to "
+                "the corresponding free acid and PNB alcohol. This "
+                "communication (i) describes cloning the pnbA gene, which "
+                "encodes PNBCE, (ii) provides the nucleotide sequence of the "
+                "pnbA open reading frame (ORF) and (iii) describes a method "
+                "for efficiently expressing the ORF in Escherichia coli."
+            ),
+            "notes": (
+                "Zock et al. cloned and sequenced the Bacillus subtilis 168 "
+                "pnbA gene encoding para-nitrobenzyl carboxylesterase "
+                "(UniProtKB:P37967)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:224308",
+            "taxon_label": "Bacillus subtilis 168",
+            "note": (
+                "Zock et al. cloned and sequenced the Bacillus subtilis 168 "
+                "pnbA gene encoding para-nitrobenzyl carboxylesterase (PnbA) "
+                "that hydrolyzes carboxylic esters."
+            ),
+            "reference": "DOI:10.1016/0378-1119(94)90630-0",
+        },
+        "new_node": {
+            "node_id": "carboxylesterase_pnba",
+            "label": "para-nitrobenzyl esterase PnbA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR002018",
+            "gene_symbols": ["pnbA"],
+            "description": (
+                "Carboxylesterase type B family enzyme (PnbA; EC 3.1.1.1) "
+                "that catalyzes the hydrolysis of carboxylic esters into a "
+                "carboxylate and an alcohol."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P37967",
+                    "protein_label": "Para-nitrobenzyl esterase",
+                    "gene_symbol": "pnbA",
+                    "taxon_id": "NCBITaxon:224308",
+                    "taxon_label": "Bacillus subtilis 168",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001570",
+                    "retrieved_on": C8S3_RETRIEVED_ON,
+                    "entry_version": 146,
+                    "sequence_version": 2,
+                    "role": (
+                        "PnbA is the Bacillus subtilis 168 para-nitrobenzyl "
+                        "carboxylesterase (EC 3.1.1.1) that catalyzes "
+                        "hydrolysis of carboxylic esters to the free acid "
+                        "and alcohol."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1016/0378-1119(94)90630-0",
+                            "snippet": (
+                                "A Bacillus subtilis PNB carboxy-esterase "
+                                "(PNBCE) catalyzes hydrolysis of several "
+                                "beta-lactam antibiotic PNB esters to the "
+                                "corresponding free acid and PNB alcohol. "
+                                "This communication (i) describes cloning the "
+                                "pnbA gene, which encodes PNBCE, (ii) "
+                                "provides the nucleotide sequence of the pnbA "
+                                "open reading frame (ORF) and (iii) describes "
+                                "a method for efficiently expressing the ORF "
+                                "in Escherichia coli."
+                            ),
+                            "notes": (
+                                "Zock et al. cloned and sequenced the "
+                                "Bacillus subtilis 168 pnbA gene encoding "
+                                "para-nitrobenzyl esterase "
+                                "(UniProtKB:P37967)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "carboxylesterase_pnba",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "carboxylesterase_catalytic_activity",
+            "description": (
+                "Para-nitrobenzyl esterase PnbA enables carboxylesterase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1016/0378-1119(94)90630-0",
+                    "snippet": (
+                        "A Bacillus subtilis PNB carboxy-esterase (PNBCE) "
+                        "catalyzes hydrolysis of several beta-lactam "
+                        "antibiotic PNB esters to the corresponding free "
+                        "acid and PNB alcohol. This communication (i) "
+                        "describes cloning the pnbA gene, which encodes "
+                        "PNBCE, (ii) provides the nucleotide sequence of the "
+                        "pnbA open reading frame (ORF) and (iii) describes a "
+                        "method for efficiently expressing the ORF in "
+                        "Escherichia coli."
+                    ),
+                    "notes": (
+                        "Zock et al. characterized Bacillus subtilis 168 PnbA "
+                        "as a carboxylesterase hydrolyzing carboxylic esters "
+                        "into the free acid and alcohol."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C8S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Bacillus subtilis 168 "
+                "(NCBITaxon:224308; DOI:10.1016/0378-1119(94)90630-0) and "
+                "promoted carboxylesterase_hydrolysis_sketch to MECHANISTIC "
+                "by adding InterPro:IPR002018-grounded GENE_OR_PROTEIN node "
+                "carboxylesterase_pnba with reviewed Bacillus subtilis 168 "
+                "(NCBITaxon:224308; UP000001570) protein_examples "
+                "UniProtKB:P37967 (PnbA) backed by "
+                "DOI:10.1016/0378-1119(94)90630-0."
+            ),
+        },
+        "changes_summary": (
+            "Added Bacillus subtilis 168 (NCBITaxon:224308; "
+            "DOI:10.1016/0378-1119(94)90630-0) canonical example; promoted "
+            "carboxylesterase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR002018-grounded GENE_OR_PROTEIN node "
+            "carboxylesterase_pnba with reviewed Bacillus subtilis 168 "
+            "(NCBITaxon:224308) protein_examples UniProtKB:P37967 (PnbA) "
+            "backed by DOI:10.1016/0378-1119(94)90630-0; resolved "
+            "carboxylesterase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/gamma_glutamyltransferase_activity.yaml": {
+        "identifier": "traitmech:000160",
+        "graph_id": "gamma_glutamyltransferase_hydrolysis_sketch",
+        "discussion_id": "gamma-glutamyltransferase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1074/jbc.M109.054213, "
+            "DOI:10.1128/jcm.19.6.826-829.1984, and "
+            "DOI:10.1073/pnas.0511020103; exemplified on "
+            "gamma_glutamyltransferase_ggt with Escherichia coli K-12 "
+            "(NCBITaxon:83333; UP000000625) glutathione hydrolase proenzyme "
+            "Ggt (UniProtKB:P18956)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1073/pnas.0511020103",
+            "snippet": (
+                "Gamma-glutamyltranspeptidase (GGT) is a heterodimic enzyme "
+                "that is generated from the precursor protein through "
+                "posttranslational processing and catalyzes the hydrolysis "
+                "of gamma-glutamyl bonds in gamma-glutamyl compounds such as "
+                "glutathione and/or the transfer of the gamma-glutamyl group "
+                "to other amino acids and peptides. We have determined the "
+                "crystal structure of GGT from Escherichia coli K-12 at "
+                "1.95 A resolution."
+            ),
+            "notes": (
+                "Okada et al. determined the crystal structure and catalytic "
+                "mechanism of Escherichia coli K-12 gamma-glutamyltranspeptidase "
+                "Ggt (UniProtKB:P18956)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:83333",
+            "taxon_label": "Escherichia coli K-12",
+            "note": (
+                "Okada et al. characterized the structure and catalytic "
+                "mechanism of Escherichia coli K-12 gamma-glutamyltranspeptidase "
+                "(Ggt) for gamma-glutamyl bond hydrolysis and transpeptidation."
+            ),
+            "reference": "DOI:10.1073/pnas.0511020103",
+        },
+        "new_node": {
+            "node_id": "gamma_glutamyltransferase_ggt",
+            "label": "gamma-glutamyltranspeptidase Ggt",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000101",
+            "gene_symbols": ["ggt"],
+            "description": (
+                "Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2) "
+                "that catalyzes the hydrolysis of gamma-glutamyl bonds in "
+                "glutathione and other gamma-glutamyl compounds and transfers "
+                "gamma-glutamyl moieties to amino acid or peptide acceptors."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P18956",
+                    "protein_label": "Glutathione hydrolase proenzyme",
+                    "gene_symbol": "ggt",
+                    "taxon_id": "NCBITaxon:83333",
+                    "taxon_label": "Escherichia coli K-12",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000625",
+                    "retrieved_on": C8S3_RETRIEVED_ON,
+                    "entry_version": 194,
+                    "sequence_version": 1,
+                    "role": (
+                        "Ggt is the Escherichia coli K-12 periplasmic "
+                        "gamma-glutamyltranspeptidase / glutathione hydrolase "
+                        "(EC 2.3.2.2 / EC 3.4.19.13) that cleaves "
+                        "gamma-glutamyl amide bonds."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1073/pnas.0511020103",
+                            "snippet": (
+                                "Gamma-glutamyltranspeptidase (GGT) is a "
+                                "heterodimic enzyme that is generated from "
+                                "the precursor protein through "
+                                "posttranslational processing and catalyzes "
+                                "the hydrolysis of gamma-glutamyl bonds in "
+                                "gamma-glutamyl compounds such as glutathione "
+                                "and/or the transfer of the gamma-glutamyl "
+                                "group to other amino acids and peptides. We "
+                                "have determined the crystal structure of GGT "
+                                "from Escherichia coli K-12 at 1.95 A "
+                                "resolution."
+                            ),
+                            "notes": (
+                                "Okada et al. characterized Escherichia coli "
+                                "K-12 Ggt (UniProtKB:P18956) and determined "
+                                "its 1.95 A crystal structure."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "gamma_glutamyltransferase_ggt",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "gamma_glutamyltransferase_catalytic_activity",
+            "description": (
+                "Gamma-glutamyltranspeptidase Ggt enables gamma-glutamyltransferase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1073/pnas.0511020103",
+                    "snippet": (
+                        "Gamma-glutamyltranspeptidase (GGT) is a heterodimic "
+                        "enzyme that is generated from the precursor protein "
+                        "through posttranslational processing and catalyzes "
+                        "the hydrolysis of gamma-glutamyl bonds in "
+                        "gamma-glutamyl compounds such as glutathione and/or "
+                        "the transfer of the gamma-glutamyl group to other "
+                        "amino acids and peptides. We have determined the "
+                        "crystal structure of GGT from Escherichia coli K-12 "
+                        "at 1.95 A resolution."
+                    ),
+                    "notes": (
+                        "Okada et al. demonstrated that Escherichia coli K-12 "
+                        "Ggt catalyzes gamma-glutamyl bond hydrolysis and "
+                        "gamma-glutamyl group transfer."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C8S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Escherichia coli K-12 "
+                "(NCBITaxon:83333; DOI:10.1073/pnas.0511020103) and promoted "
+                "gamma_glutamyltransferase_hydrolysis_sketch to MECHANISTIC "
+                "by adding InterPro:IPR000101-grounded GENE_OR_PROTEIN node "
+                "gamma_glutamyltransferase_ggt with reviewed Escherichia coli "
+                "K-12 (NCBITaxon:83333; UP000000625) protein_examples "
+                "UniProtKB:P18956 (Ggt) backed by "
+                "DOI:10.1073/pnas.0511020103."
+            ),
+        },
+        "changes_summary": (
+            "Added Escherichia coli K-12 (NCBITaxon:83333; "
+            "DOI:10.1073/pnas.0511020103) canonical example; promoted "
+            "gamma_glutamyltransferase_hydrolysis_sketch to MECHANISTIC; "
+            "added InterPro:IPR000101-grounded GENE_OR_PROTEIN node "
+            "gamma_glutamyltransferase_ggt with reviewed Escherichia coli "
+            "K-12 (NCBITaxon:83333) protein_examples UniProtKB:P18956 (Ggt) "
+            "backed by DOI:10.1073/pnas.0511020103; resolved "
+            "gamma-glutamyltransferase-activity-protein-example-gap."
+        ),
+    },
+    "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": {
+        "identifier": "traitmech:000155",
+        "graph_id": "pyrrolidonyl_arylamidase_hydrolysis_sketch",
+        "discussion_id": "pyrrolidonyl-arylamidase-activity-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1006/jmbi.1999.2995, "
+            "DOI:10.1128/jcm.15.6.987-990.1982, and "
+            "DOI:10.1016/0014-5793(92)80656-2; exemplified on "
+            "pyrrolidonyl_arylamidase_pcp with Bacillus subtilis 168 "
+            "(NCBITaxon:224308; UP000001570) pyrrolidone-carboxylate "
+            "peptidase Pcp (UniProtKB:P28618)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1016/0014-5793(92)80656-2",
+            "snippet": (
+                "Pyrrolidone carboxyl peptidase (EC 3.4.11.8) (Pcp) is an "
+                "enzyme that catalyzes the removal of the N-terminal "
+                "pyroglutamyl group from some peptides or proteins. Its value "
+                "in protein chemistry and bacterial diagnosis makes this "
+                "enzyme an interesting subject of study. The present paper "
+                "reports for the first time the cloning and characterization "
+                "of a pyrrolidone carboxyl peptidase gene (pcp). This gene "
+                "is present in a single copy in the genome of Bacillus "
+                "subtilis as indicated by Southern blot hybridization "
+                "analysis."
+            ),
+            "notes": (
+                "Awade et al. cloned and sequenced the Bacillus subtilis 168 "
+                "pcp gene encoding pyrrolidone-carboxylate peptidase "
+                "(UniProtKB:P28618)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:224308",
+            "taxon_label": "Bacillus subtilis 168",
+            "note": (
+                "Awade et al. cloned and characterized the Bacillus subtilis "
+                "168 pcp gene encoding pyrrolidone-carboxylate peptidase "
+                "(Pcp) that removes N-terminal pyroglutamyl groups."
+            ),
+            "reference": "DOI:10.1016/0014-5793(92)80656-2",
+        },
+        "new_node": {
+            "node_id": "pyrrolidonyl_arylamidase_pcp",
+            "label": "pyrrolidone-carboxylate peptidase Pcp",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR000816",
+            "gene_symbols": ["pcp"],
+            "description": (
+                "Peptidase C15 family pyroglutamyl peptidase I (Pcp; "
+                "EC 3.4.19.3) that hydrolyzes N-terminal L-pyroglutamyl "
+                "(5-oxoprolyl) amide bonds in peptides and synthetic "
+                "L-pyrrolidonyl-beta-naphthylamide substrates."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P28618",
+                    "protein_label": "Pyrrolidone-carboxylate peptidase",
+                    "gene_symbol": "pcp",
+                    "taxon_id": "NCBITaxon:224308",
+                    "taxon_label": "Bacillus subtilis 168",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001570",
+                    "retrieved_on": C8S3_RETRIEVED_ON,
+                    "entry_version": 154,
+                    "sequence_version": 1,
+                    "role": (
+                        "Pcp is the Bacillus subtilis 168 "
+                        "pyrrolidone-carboxylate peptidase (EC 3.4.19.3) that "
+                        "catalyzes hydrolytic removal of N-terminal "
+                        "L-pyroglutamyl groups."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1016/0014-5793(92)80656-2",
+                            "snippet": (
+                                "Pyrrolidone carboxyl peptidase (EC 3.4.11.8) "
+                                "(Pcp) is an enzyme that catalyzes the "
+                                "removal of the N-terminal pyroglutamyl group "
+                                "from some peptides or proteins. Its value in "
+                                "protein chemistry and bacterial diagnosis "
+                                "makes this enzyme an interesting subject of "
+                                "study. The present paper reports for the "
+                                "first time the cloning and characterization "
+                                "of a pyrrolidone carboxyl peptidase gene "
+                                "(pcp). This gene is present in a single copy "
+                                "in the genome of Bacillus subtilis as "
+                                "indicated by Southern blot hybridization "
+                                "analysis."
+                            ),
+                            "notes": (
+                                "Awade et al. cloned and sequenced the "
+                                "Bacillus subtilis 168 pcp gene encoding "
+                                "pyrrolidone-carboxylate peptidase "
+                                "(UniProtKB:P28618)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "pyrrolidonyl_arylamidase_pcp",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "pyrrolidonyl_arylamidase_catalytic_activity",
+            "description": (
+                "Pyrrolidone-carboxylate peptidase Pcp enables pyrrolidonyl arylamidase catalytic activity."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1016/0014-5793(92)80656-2",
+                    "snippet": (
+                        "Pyrrolidone carboxyl peptidase (EC 3.4.11.8) (Pcp) "
+                        "is an enzyme that catalyzes the removal of the "
+                        "N-terminal pyroglutamyl group from some peptides or "
+                        "proteins. Its value in protein chemistry and "
+                        "bacterial diagnosis makes this enzyme an interesting "
+                        "subject of study. The present paper reports for the "
+                        "first time the cloning and characterization of a "
+                        "pyrrolidone carboxyl peptidase gene (pcp). This "
+                        "gene is present in a single copy in the genome of "
+                        "Bacillus subtilis as indicated by Southern blot "
+                        "hybridization analysis."
+                    ),
+                    "notes": (
+                        "Awade et al. characterized Bacillus subtilis 168 Pcp "
+                        "as a pyrrolidone-carboxylate peptidase catalyzing "
+                        "removal of N-terminal pyroglutamyl groups."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C8S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Bacillus subtilis 168 "
+                "(NCBITaxon:224308; DOI:10.1016/0014-5793(92)80656-2) and "
+                "promoted pyrrolidonyl_arylamidase_hydrolysis_sketch to "
+                "MECHANISTIC by adding InterPro:IPR000816-grounded "
+                "GENE_OR_PROTEIN node pyrrolidonyl_arylamidase_pcp with "
+                "reviewed Bacillus subtilis 168 (NCBITaxon:224308; "
+                "UP000001570) protein_examples UniProtKB:P28618 (Pcp; "
+                "replacing the mis-cited OpuAA accession P46920 in the open "
+                "discussion note) backed by DOI:10.1016/0014-5793(92)80656-2."
+            ),
+        },
+        "changes_summary": (
+            "Added Bacillus subtilis 168 (NCBITaxon:224308; "
+            "DOI:10.1016/0014-5793(92)80656-2) canonical example; promoted "
+            "pyrrolidonyl_arylamidase_hydrolysis_sketch to MECHANISTIC; added "
+            "InterPro:IPR000816-grounded GENE_OR_PROTEIN node "
+            "pyrrolidonyl_arylamidase_pcp with reviewed Bacillus subtilis 168 "
+            "(NCBITaxon:224308) protein_examples UniProtKB:P28618 (Pcp, "
+            "correcting P46920) backed by DOI:10.1016/0014-5793(92)80656-2; "
+            "resolved pyrrolidonyl-arylamidase-activity-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -4631,6 +5104,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C5S3_COHORT_H_PROMOTIONS,
         **C6S3_COHORT_I_PROMOTIONS,
         **C7S3_COHORT_J_PROMOTIONS,
+        **C8S3_COHORT_K_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(
