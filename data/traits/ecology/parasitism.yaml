@@ -14,6 +14,10 @@ synonyms:
   source: DOI:10.1038/s41579-021-00550-7
 evidence:
 - reference: DOI:10.1038/s41579-021-00550-7
+  snippet: Symbiotic interactions can be neutral, harmful or have beneficial effects
+    on the host organism. However, growing evidence suggests that microbial symbionts
+    can evolve rapidly, resulting in drastic transitions along the parasite-mutualist
+    continuum.
   notes: Drew et al. define parasitism as the harmful pole of the parasite-mutualist
     continuum and describe evolutionary transitions along it.
 - reference: DOI:10.1073/pnas.1218525110
@@ -232,4 +236,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope parasitism_host_fitness_cost=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/s41579-021-00550-7 (Drew
+    et al. 2021, already present on causal_graphs[0].edges[10].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-009
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

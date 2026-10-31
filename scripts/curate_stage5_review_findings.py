@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–7 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–8 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -18,9 +18,12 @@ Cycle 5 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 13 actionable open findings from the
 Cycle 6 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000006/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 15 actionable open findings from the
+tracked in GitHub issue #2002), the 15 actionable open findings from the
 Cycle 7 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 12 actionable open findings from the
+Cycle 8 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
@@ -29,6 +32,7 @@ tracked in GitHub issue #2002):
 - `F-C5S4-DEF-SRC-001`..`007` (Cycle 5 #2002, 7 records)
 - `F-C6S4-DEF-SRC-001`..`013` (Cycle 6 #2002, 13 records)
 - `F-C7S4-DEF-SRC-001`..`015` (Cycle 7 #2002, 15 records)
+- `F-C8S4-DEF-SRC-001`..`012` (Cycle 8 #2002, 12 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -67,6 +71,7 @@ CYCLE4_TIMESTAMP = "2026-10-25T12:55:00Z"
 CYCLE5_TIMESTAMP = "2026-10-25T21:40:00Z"
 CYCLE6_TIMESTAMP = "2026-10-26T08:15:00Z"
 CYCLE7_TIMESTAMP = "2026-10-30T22:10:00Z"
+CYCLE8_TIMESTAMP = "2026-10-31T10:45:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -2189,6 +2194,339 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C7S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    # Cycle 8 Stage 5 remediation (#2002): 12 open findings from Cycle 8 Stage 4
+    "data/traits/ecology/biofilm_formation.yaml": {
+        "identifier": "traitmech:000053",
+        "finding_id": "F-C8S4-DEF-SRC-001",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro.2016.94",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro.2016.94",
+            "snippet": (
+                "Bacterial biofilms are formed by communities that are embedded "
+                "in a self-produced matrix of extracellular polymeric substances (EPS)."
+            ),
+            "notes": (
+                "Flemming et al. describe matrix-enclosed, surface-associated "
+                "communities (biofilms) as an emergent, distinct mode of bacterial life."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.94 "
+            "(Flemming et al. 2016, already present on "
+            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-001 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/commensalism.yaml": {
+        "identifier": "traitmech:000042",
+        "finding_id": "F-C8S4-DEF-SRC-002",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/s41579-021-00550-7",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/s41579-021-00550-7",
+            "snippet": (
+                "Symbiotic interactions can be neutral, harmful or have beneficial "
+                "effects on the host organism. However, growing evidence suggests "
+                "that microbial symbionts can evolve rapidly, resulting in drastic "
+                "transitions along the parasite-mutualist continuum."
+            ),
+            "notes": (
+                "Drew et al. place commensalism on the parasite-mutualist "
+                "continuum as a near-neutral host interaction."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/s41579-021-00550-7 "
+            "(Drew et al. 2021, already present on "
+            "causal_graphs[0].edges[11].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-002 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/endosymbiosis.yaml": {
+        "identifier": "traitmech:000045",
+        "finding_id": "F-C8S4-DEF-SRC-003",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro2670",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro2670",
+            "snippet": (
+                "Since 2006, numerous cases of bacterial symbionts with "
+                "extraordinarily small genomes have been reported. These "
+                "organisms represent independent lineages from diverse bacterial "
+                "groups. They have diminutive gene sets that rival some "
+                "mitochondria and chloroplasts in terms of gene numbers and lack "
+                "genes that are considered to be essential in other bacteria."
+            ),
+            "notes": (
+                'McCutcheon & Moran, "Extreme genome reduction in symbiotic '
+                'bacteria", characterize intracellular endosymbionts and their '
+                "diminished genomes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro2670 "
+            "(McCutcheon & Moran 2011, already present on "
+            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-003 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/gut_associated.yaml": {
+        "identifier": "traitmech:000052",
+        "finding_id": "F-C8S4-DEF-SRC-004",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1126/science.1104816",
+        "evidence_entry": {
+            "reference": "DOI:10.1126/science.1104816",
+            "snippet": (
+                "The distal human intestine represents an anaerobic bioreactor "
+                "programmed with an enormous population of bacteria, dominated by "
+                "relatively few divisions that are highly diverse at the "
+                "strain/subspecies level. This microbiota and its collective "
+                "genomes (microbiome) provide us with genetic and metabolic "
+                "attributes we have not been required to evolve on our own, "
+                "including the ability to harvest otherwise inaccessible nutrients."
+            ),
+            "notes": (
+                "B\u00e4ckhed et al. characterize the distal intestine as a dense "
+                "microbial habitat whose residents provide metabolic capabilities "
+                "to the host."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1126/science.1104816 "
+            "(B\u00e4ckhed et al. 2005, already present on "
+            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-004 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/host_associated.yaml": {
+        "identifier": "traitmech:000049",
+        "finding_id": "F-C8S4-DEF-SRC-005",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1073/pnas.1218525110",
+        "evidence_entry": {
+            "reference": "DOI:10.1073/pnas.1218525110",
+            "snippet": (
+                "This review examines how a growing knowledge of the vast range "
+                "of animal-bacterial interactions, whether in shared ecosystems "
+                "or intimate symbioses, is fundamentally altering our "
+                "understanding of animal biology."
+            ),
+            "notes": (
+                "McFall-Ngai et al. document the ubiquity of host-associated "
+                "microbial communities across the animal kingdom."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1073/pnas.1218525110 "
+            "(McFall-Ngai et al. 2013, already present on "
+            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-005 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/mutualism.yaml": {
+        "identifier": "traitmech:000041",
+        "finding_id": "F-C8S4-DEF-SRC-006",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1073/pnas.1218525110",
+        "evidence_entry": {
+            "reference": "DOI:10.1073/pnas.1218525110",
+            "snippet": (
+                "This review examines how a growing knowledge of the vast range "
+                "of animal-bacterial interactions, whether in shared ecosystems "
+                "or intimate symbioses, is fundamentally altering our "
+                "understanding of animal biology."
+            ),
+            "notes": (
+                "McFall-Ngai et al. document widespread mutually beneficial "
+                "host-microbe associations across animals."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1073/pnas.1218525110 "
+            "(McFall-Ngai et al. 2013, already present on "
+            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-006 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/nitrogen_fixing_symbiosis.yaml": {
+        "identifier": "traitmech:000044",
+        "finding_id": "F-C8S4-DEF-SRC-007",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro.2017.171",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro.2017.171",
+            "snippet": (
+                "Rhizobia are some of the best-studied plant microbiota. These "
+                "oligotrophic Alphaproteobacteria or Betaproteobacteria form "
+                "symbioses with their legume hosts."
+            ),
+            "notes": (
+                "Poole et al. describe the free-living-to-endosymbiont transition "
+                "of rhizobia that forms N2-fixing legume root nodules."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro.2017.171 "
+            "(Poole et al. 2018, already present on "
+            "causal_graphs[0].edges[10].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-007 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/opportunistic_pathogen.yaml": {
+        "identifier": "traitmech:000046",
+        "finding_id": "F-C8S4-DEF-SRC-008",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.tim.2012.04.005",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.tim.2012.04.005",
+            "snippet": (
+                "An increasing number of studies now demonstrate that many "
+                "opportunistic pathogens (OPs) do not conform to these "
+                "assumptions, with virulence factors maintained instead because "
+                "of advantages in non-parasitic contexts."
+            ),
+            "notes": (
+                'Brown, Cornforth & Mideo, "Evolution of virulence in '
+                'opportunistic pathogens", support context-dependent virulence '
+                "maintained by advantages outside the host."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1016/j.tim.2012.04.005 "
+            "(Brown, Cornforth & Mideo 2012, already present on "
+            "causal_graphs[0].edges[6].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-008 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/parasitism.yaml": {
+        "identifier": "traitmech:000043",
+        "finding_id": "F-C8S4-DEF-SRC-009",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/s41579-021-00550-7",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/s41579-021-00550-7",
+            "snippet": (
+                "Symbiotic interactions can be neutral, harmful or have beneficial "
+                "effects on the host organism. However, growing evidence suggests "
+                "that microbial symbionts can evolve rapidly, resulting in drastic "
+                "transitions along the parasite-mutualist continuum."
+            ),
+            "notes": (
+                "Drew et al. define parasitism as the harmful pole of the "
+                "parasite-mutualist continuum and describe evolutionary "
+                "transitions along it."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/s41579-021-00550-7 "
+            "(Drew et al. 2021, already present on "
+            "causal_graphs[0].edges[10].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-009 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/predatory_bacterium.yaml": {
+        "identifier": "traitmech:000054",
+        "finding_id": "F-C8S4-DEF-SRC-010",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.micro.091208.073346",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.micro.091208.073346",
+            "snippet": (
+                "Bdellovibrio species are naturally predatory, small, motile, "
+                "Deltaproteobacteria that invade the periplasm of other larger "
+                "gram-negative bacteria, killing and digesting them."
+            ),
+            "notes": (
+                'Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus", '
+                "describes invasion, killing, and digestion of prey bacteria as "
+                "a predatory lifestyle."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1146/annurev.micro.091208.073346 (Sockett 2009, already "
+            "present on causal_graphs[0].edges[8].evidence[0]) to record-level "
+            "evidence[0] to match definition_source (Cycle 8 Stage 5 remediation "
+            "of F-C8S4-DEF-SRC-010 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/rhizosphere_association.yaml": {
+        "identifier": "traitmech:000051",
+        "finding_id": "F-C8S4-DEF-SRC-011",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro3109",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro3109",
+            "snippet": (
+                "The rhizosphere is the interface between plant roots and soil "
+                "where interactions among a myriad of microorganisms and "
+                "invertebrates affect biogeochemical cycling, plant growth and "
+                "tolerance to biotic and abiotic stress."
+            ),
+            "notes": (
+                'Philippot et al., "Going back to the roots", define the '
+                "rhizosphere as a distinct, root-influenced microbial habitat."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro3109 "
+            "(Philippot et al. 2013, already present on "
+            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-011 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/ecology/symbiosis.yaml": {
+        "identifier": "traitmech:000040",
+        "finding_id": "F-C8S4-DEF-SRC-012",
+        "timestamp": CYCLE8_TIMESTAMP,
+        "definition_source": "DOI:10.1073/pnas.1218525110",
+        "evidence_entry": {
+            "reference": "DOI:10.1073/pnas.1218525110",
+            "snippet": (
+                "This review examines how a growing knowledge of the vast range "
+                "of animal-bacterial interactions, whether in shared ecosystems "
+                "or intimate symbioses, is fundamentally altering our "
+                "understanding of animal biology."
+            ),
+            "notes": (
+                'McFall-Ngai et al., "Animals in a bacterial world", supports '
+                "persistent host-microbe association (symbiosis) as a pervasive "
+                "microbial lifestyle; parent of the "
+                "mutualism/commensalism/parasitism sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1073/pnas.1218525110 "
+            "(McFall-Ngai et al. 2013, already present on "
+            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] "
+            "to match definition_source (Cycle 8 Stage 5 remediation of "
+            "F-C8S4-DEF-SRC-012 in group "
+            "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -2267,7 +2605,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 80 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 92 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

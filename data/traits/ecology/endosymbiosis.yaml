@@ -15,6 +15,11 @@ synonyms:
   source: DOI:10.1038/nrmicro2670
 evidence:
 - reference: DOI:10.1038/nrmicro2670
+  snippet: Since 2006, numerous cases of bacterial symbionts with extraordinarily
+    small genomes have been reported. These organisms represent independent lineages
+    from diverse bacterial groups. They have diminutive gene sets that rival some
+    mitochondria and chloroplasts in terms of gene numbers and lack genes that are
+    considered to be essential in other bacteria.
   notes: McCutcheon & Moran, "Extreme genome reduction in symbiotic bacteria", characterize
     intracellular endosymbionts and their diminished genomes.
 - reference: DOI:10.1038/nrmicro.2017.171
@@ -208,6 +213,14 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope endosymbiosis_intracellular_genome_reduction=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro2670 (McCutcheon
+    & Moran 2011, already present on causal_graphs[0].edges[0].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-003
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-a6758e26f5a6

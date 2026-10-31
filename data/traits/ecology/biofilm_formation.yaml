@@ -15,6 +15,8 @@ synonyms:
   source: DOI:10.1038/nrmicro.2016.94
 evidence:
 - reference: DOI:10.1038/nrmicro.2016.94
+  snippet: Bacterial biofilms are formed by communities that are embedded in a self-produced
+    matrix of extracellular polymeric substances (EPS).
   notes: Flemming et al. describe matrix-enclosed, surface-associated communities
     (biofilms) as an emergent, distinct mode of bacterial life.
 - reference: DOI:10.1038/s41579-019-0162-0
@@ -318,6 +320,14 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q9HXT9 (152 -> 153 on wspR_diguanylate_cyclase).'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.94 (Flemming
+    et al. 2016, already present on causal_graphs[0].edges[5].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-001
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-aa46cc9b34ab

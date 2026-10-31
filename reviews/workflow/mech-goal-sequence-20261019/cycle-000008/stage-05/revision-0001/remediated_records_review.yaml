@@ -1,0 +1,1241 @@
+schema_version: 1.0.0
+review_id: 20261031T105000Z-cycle8-stage5-remediated-records-review
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Cycle 8 Stage 5 post-remediation verification review of the 12 ecology TraitRecord
+  files in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+started_at: '2026-10-31T10:45:00Z'
+finished_at: '2026-10-31T10:50:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Repository-local post-remediation record review verifying resolution
+    of the 12 Cycle 8 Stage 4 open findings (F-C8S4-DEF-SRC-001..F-C8S4-DEF-SRC-012)
+    under group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); separate from
+    independent PR adversarial review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: 'Fresh post-remediation batch review of the 12 ecology TraitRecord YAML files
+  remediated in Cycle 8 Stage 5 (biofilm_formation.yaml, commensalism.yaml, endosymbiosis.yaml,
+  gut_associated.yaml, host_associated.yaml, mutualism.yaml, nitrogen_fixing_symbiosis.yaml,
+  opportunistic_pathogen.yaml, parasitism.yaml, predatory_bacterium.yaml, rhizosphere_association.yaml,
+  and symbiosis.yaml) under group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and
+  GitHub issue #2002. All 12 Cycle 8 Stage 4 open findings (F-C8S4-DEF-SRC-001..012)
+  are verified as resolved with contiguous verbatim snippets for their primary definition_source
+  DOI in record-level evidence[0], removal of all 12 baselined MISSING_SNIPPET rows
+  from conf/evidence_snippet_baseline.tsv (2,384 -> 2,372 total baselined findings),
+  append-only curation_history provenance, and 0 remaining open findings.'
+source:
+  git_revision: 5ae160c39fc9feca1bc5d17ffafbe4ce3a4c21f3
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: 27f535d3f057d321c8b87c6506f2f35dd2d37fd005bcd5040b3e17269285075b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: AGENTS.md
+    sha256: 6771ed07ef5ae68deecbf50ae6123e2e3a4834e05b2dbc13faa96ec2329a6f93
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: efd64b890bfc0ef2e580978edc51e31efa8dc202998fef6bd24ef40bee038e69
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/traits/ecology/biofilm_formation.yaml
+    sha256: 688044d9e6ffbcfed54d79e3bd17d78ed123d19c443831208ff64faf0972af80
+    role: target
+  - path: data/traits/ecology/commensalism.yaml
+    sha256: 84d963c3c48d9aa9d9953d8324ef9a79d079e4244e21a03e322ac1200deab8eb
+    role: target
+  - path: data/traits/ecology/endosymbiosis.yaml
+    sha256: 0a357c5f6322ed4f9c317ce37319fdb9eba12617f7a2e815fa0065cdabb4a4e9
+    role: target
+  - path: data/traits/ecology/gut_associated.yaml
+    sha256: fdadf91f1a00ae2334998bee204561cdb968208bd50d72497eb574118a057715
+    role: target
+  - path: data/traits/ecology/host_associated.yaml
+    sha256: ac20e9bcfec331fdc89e72371aa0f75ba8d2e75a9d6e066889a7e4567cdbbb91
+    role: target
+  - path: data/traits/ecology/mutualism.yaml
+    sha256: cc43829f64385b1bc229fa396f0785035557dadd97b2b1c45f7a602060a3d93a
+    role: target
+  - path: data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    sha256: 20ef487e2b025c8d5972976901d12db6c7919a2541f093cf60fa50793437d75d
+    role: target
+  - path: data/traits/ecology/opportunistic_pathogen.yaml
+    sha256: 63f415970c5614e2177fb2fff85c80d26a7788af55c27f840fb7a579bd8e44cc
+    role: target
+  - path: data/traits/ecology/parasitism.yaml
+    sha256: 71b807099eb86c38d69f2ac026828b88673c77083fe0c04994dff99668137675
+    role: target
+  - path: data/traits/ecology/predatory_bacterium.yaml
+    sha256: d793b7b29a38ca061df35f2c3b85be03a150492b0871fa38a08594c53ddfc884
+    role: target
+  - path: data/traits/ecology/rhizosphere_association.yaml
+    sha256: 50aa2de707070533ef0010ae91f82ff59babb6dc7cf61270b9c3b00bc6759c28
+    role: target
+  - path: data/traits/ecology/symbiosis.yaml
+    sha256: 49d317b9e6b206fe98b1c496450ad5826bbfccb1127dd568ab4f1f1310e9a0f5
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-10-31T104500Z-claude-code-0a1520.yaml
+    sha256: 1487d53e0e457088e2810518a4924e4fc7e019c4706fdc7ac9d8e689dacd02d5
+    role: context
+  - path: reviews/structured/20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review/review.yaml
+    sha256: 5a4c26e81182ee4d9211b6697583565207a1c1a9201cf2f53a2285ea45a8a279
+    role: context
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml
+    sha256: 1e884abeb1f8a080fd9d6ade1f8a5dc4868d245ef06c69dd89f0dd408b24c302
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/curate_stage5_review_findings.py
+    sha256: 5b1541892693e9a4f067308e8ab2431d4450ea417980c5e5eeb65a6fb262de03
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_curate_stage5_review_findings.py
+    sha256: dd2a9111fe58f29d23532e2c5ca4775e0ca3a815129e9c7219a8bca56c8d00a8
+    role: context
+scope:
+  description: Focused post-remediation review of all 12 ecology TraitRecord YAML
+    files modified in Cycle 8 Stage 5 (resolve_review_findings) to resolve group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002).
+  selection: All 12 records with open findings carried forward from Cycle 8 Stage
+    4 review 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review.
+  coverage: full
+  population_size: 12
+  reviewed_target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+targets:
+- target_id: traitmech:000053
+  path: data/traits/ecology/biofilm_formation.yaml
+  label: biofilm formation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biofilm_formation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000042
+  path: data/traits/ecology/commensalism.yaml
+  label: commensalism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000045
+  path: data/traits/ecology/endosymbiosis.yaml
+  label: endosymbiosis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/endosymbiosis.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000052
+  path: data/traits/ecology/gut_associated.yaml
+  label: gut-associated
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000049
+  path: data/traits/ecology/host_associated.yaml
+  label: host-associated
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/host_associated.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000041
+  path: data/traits/ecology/mutualism.yaml
+  label: mutualism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000044
+  path: data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+  label: nitrogen-fixing symbiosis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000046
+  path: data/traits/ecology/opportunistic_pathogen.yaml
+  label: opportunistic pathogen
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000043
+  path: data/traits/ecology/parasitism.yaml
+  label: parasitism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000054
+  path: data/traits/ecology/predatory_bacterium.yaml
+  label: predatory bacterium
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/predatory_bacterium.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000051
+  path: data/traits/ecology/rhizosphere_association.yaml
+  label: rhizosphere association
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000040
+  path: data/traits/ecology/symbiosis.yaml
+  label: symbiosis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/symbiosis.yaml
+    role: maintained TraitRecord YAML
+checks:
+- check_id: validate-strict
+  name: Strict LinkML schema and reference validation across all TraitRecord files
+  command: uv run python scripts/validate_strict.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-validate-strict
+  - ev-remediated-records
+  summary: All 1,130 TraitRecord YAML files (including all 12 Cycle 8 Stage 5 remediated
+    ecology records) pass strict closed-mode LinkML validation with 0 errors.
+- check_id: audit-snippets
+  name: Evidence snippet structural and baseline ratchet audit
+  command: uv run python scripts/audit_evidence_snippets.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-snippet-audit
+  - ev-c8s5-def-src-001
+  - ev-c8s5-def-src-002
+  - ev-c8s5-def-src-003
+  - ev-c8s5-def-src-004
+  - ev-c8s5-def-src-005
+  - ev-c8s5-def-src-006
+  - ev-c8s5-def-src-007
+  - ev-c8s5-def-src-008
+  - ev-c8s5-def-src-009
+  - ev-c8s5-def-src-010
+  - ev-c8s5-def-src-011
+  - ev-c8s5-def-src-012
+  summary: All 12 remediated ecology records now carry a contiguous >=16-char verbatim
+    quote for their primary definition_source DOI in record-level evidence[0], passing
+    scripts/audit_evidence_snippets.py with 0 new findings and reducing baselined
+    MISSING_SNIPPET rows in conf/evidence_snippet_baseline.tsv from 2,246 to 2,234
+    (-12; total baselined findings 2,384 -> 2,372).
+- check_id: stage5-writer-tests
+  name: Stage 5 guarded writer idempotency and postcondition unit tests
+  command: uv run pytest tests/test_curate_stage5_review_findings.py -v
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-stage5-writer
+  summary: All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming
+    DO_NOT_WORK protection, exact definition_source evidence alignment across all
+    92 remediated specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle
+    5 + 13 Cycle 6 + 15 Cycle 7 + 12 Cycle 8), zero UNQUOTED_DEFINITION_SOURCE or
+    MISSING_DEFINITION_SOURCE_EVIDENCE defects on remediated records, and dry-run/apply
+    idempotency.
+- check_id: audit-writers
+  name: Guarded YAML writer safeguard audit
+  command: uv run python scripts/audit_writers.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-stage5-writer
+  summary: scripts/curate_stage5_review_findings.py satisfies all writer safeguards
+    (appends curation_history, has write safeguard, validates before write, wired
+    into justfile).
+evidence:
+- evidence_id: ev-prior-c8s4-review
+  kind: prior_review
+  reference: reviews/structured/20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review/review.yaml
+  locator: findings[0..11]
+  accessed_at: '2026-10-31T10:46:00Z'
+  support: supports
+  summary: Immutable Cycle 8 Stage 4 review bundle identifying the 12 open definition_source
+    missing-snippet findings (F-C8S4-DEF-SRC-001..F-C8S4-DEF-SRC-012) across data/traits/ecology/
+    with planned remediation actions ACT-C8S4-DEF-SRC-001..012.
+  snapshot_sha256: 5a4c26e81182ee4d9211b6697583565207a1c1a9201cf2f53a2285ea45a8a279
+- evidence_id: ev-c8s5-def-src-001
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro.2016.94
+  locator: Aligned on data/traits/ecology/biofilm_formation.yaml evidence[0] (Flemming
+    et al. describe matrix-enclosed, surface-associated communities (biofilms) as
+    an emergent, distinct mode of bacterial life.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro.2016.94 on data/traits/ecology/biofilm_formation.yaml
+    (traitmech:000053, biofilm formation) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Flemming et al. describe matrix-enclosed,
+    surface-associated communities (biofilms) as an emergent, distinct mode of bacterial
+    life.).
+  quote: Bacterial biofilms are formed by communities that are embedded in a self-produced
+    matrix of extracellular polymeric substances (EPS).
+- evidence_id: ev-c8s5-def-src-002
+  kind: primary_source
+  reference: DOI:10.1038/s41579-021-00550-7
+  locator: Aligned on data/traits/ecology/commensalism.yaml evidence[0] (Drew et al.
+    place commensalism on the parasite-mutualist continuum as a near-neutral host
+    interaction.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/s41579-021-00550-7 on data/traits/ecology/commensalism.yaml
+    (traitmech:000042, commensalism) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (Drew et al. place commensalism on the parasite-mutualist
+    continuum as a near-neutral host interaction.).
+  quote: Symbiotic interactions can be neutral, harmful or have beneficial effects
+    on the host organism. However, growing evidence suggests that microbial symbionts
+    can evolve rapidly, resulting in drastic transitions along the parasite-mutualist
+    continuum.
+- evidence_id: ev-c8s5-def-src-003
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro2670
+  locator: Aligned on data/traits/ecology/endosymbiosis.yaml evidence[0] (McCutcheon
+    & Moran, "Extreme genome reduction in symbiotic bacteria", characterize intracellular
+    endosymbionts and their diminished genomes.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro2670 on data/traits/ecology/endosymbiosis.yaml
+    (traitmech:000045, endosymbiosis) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (McCutcheon & Moran, "Extreme genome reduction
+    in symbiotic bacteria", characterize intracellular endosymbionts and their diminished
+    genomes.).
+  quote: Since 2006, numerous cases of bacterial symbionts with extraordinarily small
+    genomes have been reported. These organisms represent independent lineages from
+    diverse bacterial groups. They have diminutive gene sets that rival some mitochondria
+    and chloroplasts in terms of gene numbers and lack genes that are considered to
+    be essential in other bacteria.
+- evidence_id: ev-c8s5-def-src-004
+  kind: primary_source
+  reference: DOI:10.1126/science.1104816
+  locator: Aligned on data/traits/ecology/gut_associated.yaml evidence[0] (Bäckhed
+    et al. characterize the distal intestine as a dense microbial habitat whose residents
+    provide metabolic capabilities to the host.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1126/science.1104816 on data/traits/ecology/gut_associated.yaml
+    (traitmech:000052, gut-associated) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Bäckhed et al. characterize the distal
+    intestine as a dense microbial habitat whose residents provide metabolic capabilities
+    to the host.).
+  quote: The distal human intestine represents an anaerobic bioreactor programmed
+    with an enormous population of bacteria, dominated by relatively few divisions
+    that are highly diverse at the strain/subspecies level. This microbiota and its
+    collective genomes (microbiome) provide us with genetic and metabolic attributes
+    we have not been required to evolve on our own, including the ability to harvest
+    otherwise inaccessible nutrients.
+- evidence_id: ev-c8s5-def-src-005
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1218525110
+  locator: Aligned on data/traits/ecology/host_associated.yaml evidence[0] (McFall-Ngai
+    et al. document the ubiquity of host-associated microbial communities across the
+    animal kingdom.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1073/pnas.1218525110 on data/traits/ecology/host_associated.yaml
+    (traitmech:000049, host-associated) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (McFall-Ngai et al. document the ubiquity
+    of host-associated microbial communities across the animal kingdom.).
+  quote: This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.
+- evidence_id: ev-c8s5-def-src-006
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1218525110
+  locator: Aligned on data/traits/ecology/mutualism.yaml evidence[0] (McFall-Ngai
+    et al. document widespread mutually beneficial host-microbe associations across
+    animals.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1073/pnas.1218525110 on data/traits/ecology/mutualism.yaml
+    (traitmech:000041, mutualism) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (McFall-Ngai et al. document widespread mutually
+    beneficial host-microbe associations across animals.).
+  quote: This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.
+- evidence_id: ev-c8s5-def-src-007
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro.2017.171
+  locator: Aligned on data/traits/ecology/nitrogen_fixing_symbiosis.yaml evidence[0]
+    (Poole et al. describe the free-living-to-endosymbiont transition of rhizobia
+    that forms N2-fixing legume root nodules.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro.2017.171 on data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    (traitmech:000044, nitrogen-fixing symbiosis) verified with verbatim Europe PMC
+    abstract quote in record-level evidence[0].snippet (Poole et al. describe the
+    free-living-to-endosymbiont transition of rhizobia that forms N2-fixing legume
+    root nodules.).
+  quote: Rhizobia are some of the best-studied plant microbiota. These oligotrophic
+    Alphaproteobacteria or Betaproteobacteria form symbioses with their legume hosts.
+- evidence_id: ev-c8s5-def-src-008
+  kind: primary_source
+  reference: DOI:10.1016/j.tim.2012.04.005
+  locator: Aligned on data/traits/ecology/opportunistic_pathogen.yaml evidence[0]
+    (Brown, Cornforth & Mideo, "Evolution of virulence in opportunistic pathogens",
+    support context-dependent virulence maintained by advantages outside the host.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1016/j.tim.2012.04.005 on data/traits/ecology/opportunistic_pathogen.yaml
+    (traitmech:000046, opportunistic pathogen) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Brown, Cornforth & Mideo, "Evolution
+    of virulence in opportunistic pathogens", support context-dependent virulence
+    maintained by advantages outside the host.).
+  quote: An increasing number of studies now demonstrate that many opportunistic pathogens
+    (OPs) do not conform to these assumptions, with virulence factors maintained instead
+    because of advantages in non-parasitic contexts.
+- evidence_id: ev-c8s5-def-src-009
+  kind: primary_source
+  reference: DOI:10.1038/s41579-021-00550-7
+  locator: Aligned on data/traits/ecology/parasitism.yaml evidence[0] (Drew et al.
+    define parasitism as the harmful pole of the parasite-mutualist continuum and
+    describe evolutionary transitions along it.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/s41579-021-00550-7 on data/traits/ecology/parasitism.yaml
+    (traitmech:000043, parasitism) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (Drew et al. define parasitism as the harmful
+    pole of the parasite-mutualist continuum and describe evolutionary transitions
+    along it.).
+  quote: Symbiotic interactions can be neutral, harmful or have beneficial effects
+    on the host organism. However, growing evidence suggests that microbial symbionts
+    can evolve rapidly, resulting in drastic transitions along the parasite-mutualist
+    continuum.
+- evidence_id: ev-c8s5-def-src-010
+  kind: primary_source
+  reference: DOI:10.1146/annurev.micro.091208.073346
+  locator: Aligned on data/traits/ecology/predatory_bacterium.yaml evidence[0] (Sockett,
+    "Predatory lifestyle of Bdellovibrio bacteriovorus", describes invasion, killing,
+    and digestion of prey bacteria as a predatory lifestyle.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1146/annurev.micro.091208.073346 on data/traits/ecology/predatory_bacterium.yaml
+    (traitmech:000054, predatory bacterium) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Sockett, "Predatory lifestyle of Bdellovibrio
+    bacteriovorus", describes invasion, killing, and digestion of prey bacteria as
+    a predatory lifestyle.).
+  quote: Bdellovibrio species are naturally predatory, small, motile, Deltaproteobacteria
+    that invade the periplasm of other larger gram-negative bacteria, killing and
+    digesting them.
+- evidence_id: ev-c8s5-def-src-011
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro3109
+  locator: Aligned on data/traits/ecology/rhizosphere_association.yaml evidence[0]
+    (Philippot et al., "Going back to the roots", define the rhizosphere as a distinct,
+    root-influenced microbial habitat.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro3109 on data/traits/ecology/rhizosphere_association.yaml
+    (traitmech:000051, rhizosphere association) verified with verbatim Europe PMC
+    abstract quote in record-level evidence[0].snippet (Philippot et al., "Going back
+    to the roots", define the rhizosphere as a distinct, root-influenced microbial
+    habitat.).
+  quote: The rhizosphere is the interface between plant roots and soil where interactions
+    among a myriad of microorganisms and invertebrates affect biogeochemical cycling,
+    plant growth and tolerance to biotic and abiotic stress.
+- evidence_id: ev-c8s5-def-src-012
+  kind: primary_source
+  reference: DOI:10.1073/pnas.1218525110
+  locator: Aligned on data/traits/ecology/symbiosis.yaml evidence[0] (McFall-Ngai
+    et al., "Animals in a bacterial world", supports persistent host-microbe association
+    (symbiosis) as a pervasive microbial lifestyle; parent of the mutualism/commensalism/parasitism
+    sub-variants.)
+  accessed_at: '2026-10-31T10:47:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1073/pnas.1218525110 on data/traits/ecology/symbiosis.yaml
+    (traitmech:000040, symbiosis) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (McFall-Ngai et al., "Animals in a bacterial
+    world", supports persistent host-microbe association (symbiosis) as a pervasive
+    microbial lifestyle; parent of the mutualism/commensalism/parasitism sub-variants.).
+  quote: This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.
+- evidence_id: ev-remediated-records
+  kind: record_content
+  reference: data/traits/ecology/biofilm_formation.yaml; data/traits/ecology/commensalism.yaml;
+    data/traits/ecology/endosymbiosis.yaml; data/traits/ecology/gut_associated.yaml;
+    data/traits/ecology/host_associated.yaml; data/traits/ecology/mutualism.yaml;
+    data/traits/ecology/nitrogen_fixing_symbiosis.yaml; data/traits/ecology/opportunistic_pathogen.yaml;
+    data/traits/ecology/parasitism.yaml; data/traits/ecology/predatory_bacterium.yaml;
+    data/traits/ecology/rhizosphere_association.yaml; data/traits/ecology/symbiosis.yaml
+  locator: definition_source, evidence[0], curation_history
+  accessed_at: '2026-10-31T10:48:00Z'
+  support: supports
+  summary: All 12 remediated ecology TraitRecord YAML files now carry a verified non-elliptical
+    verbatim snippet in record-level evidence[0].snippet for their declared definition_source
+    DOI and record an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    event.
+- evidence_id: ev-stage5-writer
+  kind: validation
+  reference: scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py
+  locator: process_all
+  accessed_at: '2026-10-31T10:48:00Z'
+  support: supports
+  summary: Guarded writer script and unit test suite verifying closed-mode LinkML
+    validation, DO_NOT_WORK exclusion, and idempotent remediation across all 92 target
+    specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5 + 13 Cycle
+    6 + 15 Cycle 7 + 12 Cycle 8).
+  snapshot_sha256: 5b1541892693e9a4f067308e8ab2431d4450ea417980c5e5eeb65a6fb262de03
+- evidence_id: ev-validate-strict
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: reports/instance_validation_failures.tsv
+  accessed_at: '2026-10-31T10:49:00Z'
+  support: supports
+  summary: Closed-mode LinkML schema and identifier validation passes with 0 errors
+    across all 1,130 TraitRecord files.
+- evidence_id: ev-snippet-audit
+  kind: validation
+  reference: scripts/audit_evidence_snippets.py
+  locator: conf/evidence_snippet_baseline.tsv
+  accessed_at: '2026-10-31T10:49:00Z'
+  support: supports
+  summary: All 12 remediated record-level evidence[0] entries pass contiguous verbatim
+    quote checks with 0 new warnings, removing 12 baselined MISSING_SNIPPET rows from
+    conf/evidence_snippet_baseline.tsv (2,384 -> 2,372 total baselined findings; MISSING_SNIPPET
+    2,246 -> 2,234) and eliminating all 12 open definition_source missing-snippet
+    findings from Cycle 8 Stage 4.
+assessments:
+- assessment_id: assess-remediated-evidence-alignment
+  area: evidence
+  topic: Verification of record-level definition_source evidence[0] verbatim snippet
+    alignment across the 12 remediated ecology records
+  outcome: supported
+  summary: All 12 ecology records identified with open findings in Cycle 8 Stage 4
+    (biofilm_formation.yaml, commensalism.yaml, endosymbiosis.yaml, gut_associated.yaml,
+    host_associated.yaml, mutualism.yaml, nitrogen_fixing_symbiosis.yaml, opportunistic_pathogen.yaml,
+    parasitism.yaml, predatory_bacterium.yaml, rhizosphere_association.yaml, and symbiosis.yaml)
+    now carry a verified non-elliptical verbatim snippet directly in record-level
+    evidence[0].snippet for their primary definition_source DOI.
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-001
+  - ev-c8s5-def-src-002
+  - ev-c8s5-def-src-003
+  - ev-c8s5-def-src-004
+  - ev-c8s5-def-src-005
+  - ev-c8s5-def-src-006
+  - ev-c8s5-def-src-007
+  - ev-c8s5-def-src-008
+  - ev-c8s5-def-src-009
+  - ev-c8s5-def-src-010
+  - ev-c8s5-def-src-011
+  - ev-c8s5-def-src-012
+  - ev-remediated-records
+  - ev-snippet-audit
+  metrics:
+  - name: remediated_open_findings_rate
+    value: 1.0
+    unit: ratio
+    definition: Fraction of Cycle 8 Stage 4 open findings in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+      verified as resolved with verbatim definition_source evidence.
+    denominator: 12
+    minimum: 0.0
+    maximum: 1.0
+  details: 'Each of the 12 remediated ecology records was re-inspected against .claude/skills/review-yaml-record/SKILL.md:
+    F-C8S4-DEF-SRC-001..012 (biofilm_formation.yaml [DOI:10.1038/nrmicro.2016.94],
+    commensalism.yaml [DOI:10.1038/s41579-021-00550-7], endosymbiosis.yaml [DOI:10.1038/nrmicro2670],
+    gut_associated.yaml [DOI:10.1126/science.1104816], host_associated.yaml [DOI:10.1073/pnas.1218525110],
+    mutualism.yaml [DOI:10.1073/pnas.1218525110], nitrogen_fixing_symbiosis.yaml [DOI:10.1038/nrmicro.2017.171],
+    opportunistic_pathogen.yaml [DOI:10.1016/j.tim.2012.04.005], parasitism.yaml [DOI:10.1038/s41579-021-00550-7],
+    predatory_bacterium.yaml [DOI:10.1146/annurev.micro.091208.073346], rhizosphere_association.yaml
+    [DOI:10.1038/nrmicro3109], and symbiosis.yaml [DOI:10.1073/pnas.1218525110]) now
+    populate evidence[0].snippet with the verified Europe PMC abstract quote for their
+    declared definition_source DOI and have been removed from conf/evidence_snippet_baseline.tsv.'
+- assessment_id: assess-remediated-schema-and-provenance
+  area: provenance
+  topic: Schema validity, curation_history provenance, and writer guardrails on remediated
+    records
+  outcome: supported
+  summary: 'All 12 remediated records pass strict closed-mode LinkML validation, preserve
+    existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched,
+    and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    entries referencing issue #2002.'
+  target_ids:
+  - traitmech:000053
+  - traitmech:000042
+  - traitmech:000045
+  - traitmech:000052
+  - traitmech:000049
+  - traitmech:000041
+  - traitmech:000044
+  - traitmech:000046
+  - traitmech:000043
+  - traitmech:000054
+  - traitmech:000051
+  - traitmech:000040
+  evidence_ids:
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-validate-strict
+findings:
+- finding_id: F-C8S4-DEF-SRC-001
+  issue_key: biofilm-formation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: biofilm_formation.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2016.94
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-001 on data/traits/ecology/biofilm_formation.yaml
+    (traitmech:000053): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro.2016.94 with the verified Europe PMC abstract quote (''Bacterial
+    biofilms are formed by communities that are embedded in a self-produced matrix
+    of extracellular polymeric substances (EPS).'') (Flemming et al. describe matrix-enclosed,
+    surface-associated communities (biofilms) as an emergent, distinct mode of bacterial
+    life.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000053
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-001
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biofilm_formation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-001
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-002
+  issue_key: commensalism-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: commensalism.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/s41579-021-00550-7
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-002 on data/traits/ecology/commensalism.yaml
+    (traitmech:000042): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/s41579-021-00550-7 with the verified Europe PMC abstract quote (''Symbiotic
+    interactions can be neutral, harmful or have beneficial effects on the host organism.
+    However, growing evidence suggests that microbial symbionts can evolve rapidly,
+    resulting in drastic transitions along the parasite-mutualist continuum.'') (Drew
+    et al. place commensalism on the parasite-mutualist continuum as a near-neutral
+    host interaction.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-002
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-002
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-003
+  issue_key: endosymbiosis-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: endosymbiosis.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/nrmicro2670
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-003 on data/traits/ecology/endosymbiosis.yaml
+    (traitmech:000045): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro2670 with the verified Europe PMC abstract quote (''Since 2006,
+    numerous cases of bacterial symbionts with extraordinarily small genomes have
+    been reported. These organisms represent independent lineages from diverse bacterial
+    groups. They have diminutive gene sets that rival some mitochondria and chloroplasts
+    in terms of gene numbers and lack genes that are considered to be essential in
+    other bacteria.'') (McCutcheon & Moran, "Extreme genome reduction in symbiotic
+    bacteria", characterize intracellular endosymbionts and their diminished genomes.),
+    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000045
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-003
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/endosymbiosis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-003
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-004
+  issue_key: gut-associated-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: gut_associated.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1126/science.1104816
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-004 on data/traits/ecology/gut_associated.yaml
+    (traitmech:000052): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1126/science.1104816 with the verified Europe PMC abstract quote (''The
+    distal human intestine represents an anaerobic bioreactor programmed with an enormous
+    population of bacteria, dominated by relatively few divisions that are highly
+    diverse at the strain/subspecies level. This microbiota and its collective genomes
+    (microbiome) provide us with genetic and metabolic attributes we have not been
+    required to evolve on our own, including the ability to harvest otherwise inaccessible
+    nutrients.'') (Bäckhed et al. characterize the distal intestine as a dense microbial
+    habitat whose residents provide metabolic capabilities to the host.), removed
+    its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000052
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-004
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/gut_associated.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-004
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-005
+  issue_key: host-associated-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: host_associated.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1073/pnas.1218525110
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-005 on data/traits/ecology/host_associated.yaml
+    (traitmech:000049): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1073/pnas.1218525110 with the verified Europe PMC abstract quote (''This
+    review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.'') (McFall-Ngai et al. document
+    the ubiquity of host-associated microbial communities across the animal kingdom.),
+    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000049
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-005
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/host_associated.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-005
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-006
+  issue_key: mutualism-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: mutualism.yaml now carries a verified verbatim snippet in record-level evidence[0].snippet
+    for definition_source DOI:10.1073/pnas.1218525110
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-006 on data/traits/ecology/mutualism.yaml
+    (traitmech:000041): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1073/pnas.1218525110 with the verified Europe PMC abstract quote (''This
+    review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.'') (McFall-Ngai et al. document
+    widespread mutually beneficial host-microbe associations across animals.), removed
+    its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000041
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-006
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-006
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-007
+  issue_key: nitrogen-fixing-symbiosis-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: nitrogen_fixing_symbiosis.yaml now carries a verified verbatim snippet in
+    record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2017.171
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-007 on data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    (traitmech:000044): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro.2017.171 with the verified Europe PMC abstract quote (''Rhizobia
+    are some of the best-studied plant microbiota. These oligotrophic Alphaproteobacteria
+    or Betaproteobacteria form symbioses with their legume hosts.'') (Poole et al.
+    describe the free-living-to-endosymbiont transition of rhizobia that forms N2-fixing
+    legume root nodules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000044
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-007
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/nitrogen_fixing_symbiosis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-007
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-008
+  issue_key: opportunistic-pathogen-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: opportunistic_pathogen.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1016/j.tim.2012.04.005
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-008 on data/traits/ecology/opportunistic_pathogen.yaml
+    (traitmech:000046): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1016/j.tim.2012.04.005 with the verified Europe PMC abstract quote (''An
+    increasing number of studies now demonstrate that many opportunistic pathogens
+    (OPs) do not conform to these assumptions, with virulence factors maintained instead
+    because of advantages in non-parasitic contexts.'') (Brown, Cornforth & Mideo,
+    "Evolution of virulence in opportunistic pathogens", support context-dependent
+    virulence maintained by advantages outside the host.), removed its baselined MISSING_SNIPPET
+    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
+    via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000046
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-008
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-008
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-009
+  issue_key: parasitism-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: parasitism.yaml now carries a verified verbatim snippet in record-level evidence[0].snippet
+    for definition_source DOI:10.1038/s41579-021-00550-7
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-009 on data/traits/ecology/parasitism.yaml
+    (traitmech:000043): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/s41579-021-00550-7 with the verified Europe PMC abstract quote (''Symbiotic
+    interactions can be neutral, harmful or have beneficial effects on the host organism.
+    However, growing evidence suggests that microbial symbionts can evolve rapidly,
+    resulting in drastic transitions along the parasite-mutualist continuum.'') (Drew
+    et al. define parasitism as the harmful pole of the parasite-mutualist continuum
+    and describe evolutionary transitions along it.), removed its baselined MISSING_SNIPPET
+    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
+    via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000043
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-009
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/parasitism.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-009
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-010
+  issue_key: predatory-bacterium-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: predatory_bacterium.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.091208.073346
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-010 on data/traits/ecology/predatory_bacterium.yaml
+    (traitmech:000054): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1146/annurev.micro.091208.073346 with the verified Europe PMC abstract
+    quote (''Bdellovibrio species are naturally predatory, small, motile, Deltaproteobacteria
+    that invade the periplasm of other larger gram-negative bacteria, killing and
+    digesting them.'') (Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus",
+    describes invasion, killing, and digestion of prey bacteria as a predatory lifestyle.),
+    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000054
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-010
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/predatory_bacterium.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-010
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-011
+  issue_key: rhizosphere-association-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: rhizosphere_association.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/nrmicro3109
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-011 on data/traits/ecology/rhizosphere_association.yaml
+    (traitmech:000051): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro3109 with the verified Europe PMC abstract quote (''The rhizosphere
+    is the interface between plant roots and soil where interactions among a myriad
+    of microorganisms and invertebrates affect biogeochemical cycling, plant growth
+    and tolerance to biotic and abiotic stress.'') (Philippot et al., "Going back
+    to the roots", define the rhizosphere as a distinct, root-influenced microbial
+    habitat.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000051
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-011
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-011
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C8S4-DEF-SRC-012
+  issue_key: symbiosis-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: symbiosis.yaml now carries a verified verbatim snippet in record-level evidence[0].snippet
+    for definition_source DOI:10.1073/pnas.1218525110
+  description: 'Resolved Cycle 8 Stage 4 open finding F-C8S4-DEF-SRC-012 on data/traits/ecology/symbiosis.yaml
+    (traitmech:000040): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1073/pnas.1218525110 with the verified Europe PMC abstract quote (''This
+    review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.'') (McFall-Ngai et al., "Animals
+    in a bacterial world", supports persistent host-microbe association (symbiosis)
+    as a pervasive microbial lifestyle; parent of the mutualism/commensalism/parasitism
+    sub-variants.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000040
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c8s4-review
+  - ev-c8s5-def-src-012
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/symbiosis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 8 Stage 5 (resolve_review_findings) under
+    group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+    finding_id: F-C8S4-DEF-SRC-012
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+actions: []
+limitations:
+- 'This batch review covers the 12 ecology records remediated in Cycle 8 Stage 5 under
+  group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level
+  source-limited or upstream-blocked findings from Cycle 8 Stage 4 remain tracked
+  under open GitHub issues #1982, #1983, #1984, #1985, and #364.'
+- All 12 of the remediated ecology records carry repository-minted traitmech:NNNNNN
+  identifiers (traitmech:000040..000046, traitmech:000049, traitmech:000051..000054)
+  backed by validated ROBOT templates awaiting upstream METPO release incorporation
+  (#364, berkeleybop/metpo#535).
+notes:
+- 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
+- Immutable Cycle 8 Stage 4 review bundle preserved untouched at reviews/structured/20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review/review.yaml.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261031T091200Z-cycle8-stage4-corpus-record-and-cohort-review
+  relationship: follow_up_remediation_verification
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/2002
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+tags:
+- cycle-08
+- stage-05
+- resolve-review-findings
+- remediation-verification

@@ -14,6 +14,9 @@ synonyms:
   source: DOI:10.1146/annurev.micro.091208.073346
 evidence:
 - reference: DOI:10.1146/annurev.micro.091208.073346
+  snippet: Bdellovibrio species are naturally predatory, small, motile, Deltaproteobacteria
+    that invade the periplasm of other larger gram-negative bacteria, killing and
+    digesting them.
   notes: Sockett, "Predatory lifestyle of Bdellovibrio bacteriovorus", describes invasion,
     killing, and digestion of prey bacteria as a predatory lifestyle.
 - reference: DOI:10.1111/1462-2920.13171
@@ -274,4 +277,12 @@ curation_history:
   changes: Removed the interim edge's unnecessary temporal implication about invasion
     preceding killing. The final wording only qualifies the existing invasion/digestion
     claim to B. bacteriovorus; prior event retained.
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1146/annurev.micro.091208.073346
+    (Sockett 2009, already present on causal_graphs[0].edges[8].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-010
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

@@ -15,6 +15,9 @@ synonyms:
   source: DOI:10.1038/nrmicro3109
 evidence:
 - reference: DOI:10.1038/nrmicro3109
+  snippet: The rhizosphere is the interface between plant roots and soil where interactions
+    among a myriad of microorganisms and invertebrates affect biogeochemical cycling,
+    plant growth and tolerance to biotic and abiotic stress.
   notes: Philippot et al., "Going back to the roots", define the rhizosphere as a
     distinct, root-influenced microbial habitat.
 - reference: DOI:10.1038/nrmicro.2017.87
@@ -207,4 +210,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope rhizosphere_root_exudate=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (mcp_chemoreceptor).'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro3109 (Philippot
+    et al. 2013, already present on causal_graphs[0].edges[0].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-011
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
