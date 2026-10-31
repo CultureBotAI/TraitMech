@@ -213247,9 +213247,9 @@
         "discussion_id": "carboxylesterase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#carboxylesterase_hydrolysis_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.1.1.1 reaction snippet with a diagnostic strain-characterization snippet, leaving only one catalytic reaction quote.",
         "posed_by": "claude",
@@ -213260,6 +213260,28 @@
             "supports": "PARTIAL",
             "snippet": "Reaction: A carboxylic ester + H_{2}O = an alcohol + a carboxylate",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-30",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (carboxylesterase_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in carboxylesterase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "carboxylesterase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 carboxylesterase EstA (UniProtKB:P37967) so carboxylesterase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#carboxylesterase_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) activity in Paracoccus yeei (NCBITaxon:147645), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-30",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/JCM.43.8.3713-3717.2005",
+            "supports": "PARTIAL",
+            "snippet": "Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were clearly positive",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -213278,6 +213300,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (carboxylesterase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T03:37:22Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (carboxylesterase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (carboxylesterase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "carboxylesterase_hydrolysis_sketch",
+        "title": "Carboxylesterase hydrolysis of carboxylic esters",
+        "description": "Evidence-backed physiological mechanism sketch linking carboxylesterase catalytic activity and alcohol release from carboxylic esters to the carboxylesterase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.1.1.1 and DOI:10.1128/JCM.43.8.3713-3717.2005; strain-matched UniProtKB protein examples for Bacillus subtilis 168 carboxylesterase (EstA, UniProtKB:P37967) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "carboxylesterase_activity_trait",
+            "label": "carboxylesterase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000156",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active carboxylesterase enzymes that hydrolyze carboxylic esters with water to yield an alcohol and a carboxylate."
+          },
+          {
+            "node_id": "carboxylesterase_catalytic_activity",
+            "label": "carboxylesterase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0106435",
+            "description": "Carboxylic-ester hydrolase catalytic activity hydrolyzing a carboxylic ester and water into an alcohol and a carboxylate (EC 3.1.1.1)."
+          },
+          {
+            "node_id": "carboxylesterase_alcohol",
+            "label": "alcohol",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:30879",
+            "description": "Alcohol product released alongside a carboxylate by carboxylesterase-catalyzed hydrolysis of a carboxylic ester."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "carboxylesterase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "carboxylesterase_activity_trait",
+            "description": "Cellular production of active carboxylesterase detected in C4 esterase enzyme strips confers the carboxylesterase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/JCM.43.8.3713-3717.2005",
+                "snippet": "Alkaline phosphatase, esterase (C4), esterase lipase (C8), leucine arylamidase, acid phosphatase, and naphthol-AS-BI-phosphohydrolase were clearly positive",
+                "notes": "Funke et al. report that Paracoccus yeei clinical isolates tested clearly positive for esterase (C4) and esterase lipase (C8) activities in API ZYM strips."
+              }
+            ]
+          },
+          {
+            "subject": "carboxylesterase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "carboxylesterase_alcohol",
+            "description": "Carboxylesterase catalyzes the hydrolysis of a carboxylic ester and water to produce an alcohol and a carboxylate.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/1/1/1.html",
+                "snippet": "Reaction: A carboxylic ester + H_{2}O = an alcohol + a carboxylate",
+                "notes": "IUBMB EC 3.1.1.1 defines the carboxylesterase reaction as a carboxylic ester + H2O = an alcohol + a carboxylate."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -222377,9 +222468,9 @@
         "discussion_id": "gamma-glutamyltransferase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for Ggt gamma-glutamyltransferase glutathione cleavage and gamma-glutamyl amino-acid transfer in the exemplar taxon before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.4.19.13 reaction snippet with two diagnostic strain-phenotyping snippets (DOI:10.3389/fgene.2023.1240581), leaving only one catalytic reaction quote.",
         "posed_by": "claude",
@@ -222390,6 +222481,28 @@
             "supports": "PARTIAL",
             "snippet": "The enzyme binds its substrate by forming an initial &gamma;-glutamyl-enzyme intermediate, releasing the <small>L</small>-cysteinylglycine part of the molecule. The enzyme then reacts with either a water molecule or a different acceptor substrate (usually an <small>L</small>-amino acid or a dipeptide) to form <small>L</small>-glutamate or a product containing a new &gamma;-glutamyl isopeptide bond, respectively. The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates, and, at a lower level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl residue.",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-30",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (gamma_glutamyltransferase_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in gamma-glutamyltransferase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "gamma-glutamyltransferase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956) so gamma_glutamyltransferase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-30",
+        "evidence": [
+          {
+            "reference": "DOI:10.3389/fgene.2023.1240581",
+            "supports": "PARTIAL",
+            "snippet": "Like Helicobacter canis, these two putative isolates are positive for oxidase, gamma-glutamyl transferase, and alkaline phosphatase and negative for catalase and urease activities.",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -222408,6 +222521,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (gamma-glutamyltransferase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T03:37:22Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (gamma_glutamyltransferase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (gamma-glutamyltransferase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "gamma_glutamyltransferase_hydrolysis_sketch",
+        "title": "Gamma-glutamyltransferase cleavage of gamma-glutamyl amide bonds",
+        "description": "Evidence-backed physiological mechanism sketch linking gamma-glutamyltransferase catalytic activity and L-glutamate release via a gamma-glutamyl-enzyme intermediate to the gamma-glutamyltransferase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.19.13 and DOI:10.3389/fgene.2023.1240581; strain-matched UniProtKB protein examples for Escherichia coli K-12 gamma-glutamyltranspeptidase (Ggt, UniProtKB:P18956) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "gamma_glutamyltransferase_activity_trait",
+            "label": "gamma-glutamyltransferase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000160",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active gamma-glutamyltransferase enzymes that cleave gamma-glutamyl amide bonds via a gamma-glutamyl-enzyme intermediate."
+          },
+          {
+            "node_id": "gamma_glutamyltransferase_catalytic_activity",
+            "label": "glutathione gamma-glutamate hydrolase",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0036374",
+            "description": "Catalytic activity transferring a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate or to an amino acid or peptide acceptor (EC 3.4.19.13)."
+          },
+          {
+            "node_id": "gamma_glutamyltransferase_glutamate",
+            "label": "L-glutamic acid",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:16015",
+            "description": "L-glutamate product formed when the gamma-glutamyl-enzyme intermediate of gamma-glutamyltransferase reacts with water during hydrolysis."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "gamma_glutamyltransferase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "gamma_glutamyltransferase_activity_trait",
+            "description": "Cellular production of active gamma-glutamyltransferase detected in phenotypic biochemical assays confers the gamma-glutamyltransferase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.3389/fgene.2023.1240581",
+                "snippet": "Like Helicobacter canis, these two putative isolates are positive for oxidase, gamma-glutamyl transferase, and alkaline phosphatase and negative for catalase and urease activities.",
+                "notes": "Midwinter et al. report that Helicobacter canis and related isolates test positive for gamma-glutamyl transferase activity."
+              }
+            ]
+          },
+          {
+            "subject": "gamma_glutamyltransferase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "gamma_glutamyltransferase_glutamate",
+            "description": "Gamma-glutamyltransferase forms a gamma-glutamyl-enzyme intermediate that reacts with water during hydrolysis to release L-glutamate.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/13.html",
+                "snippet": "The enzyme binds its substrate by forming an initial &gamma;-glutamyl-enzyme intermediate, releasing the <small>L</small>-cysteinylglycine part of the molecule. The enzyme then reacts with either a water molecule or a different acceptor substrate (usually an <small>L</small>-amino acid or a dipeptide) to form <small>L</small>-glutamate or a product containing a new &gamma;-glutamyl isopeptide bond, respectively. The enzyme acts on glutathione, glutathione-<i>S</i>-conjugates, and, at a lower level, on other substrates with an N-terminal <small>L</small>-&gamma;-glutamyl residue.",
+                "notes": "IUBMB EC 3.4.19.13 states that the gamma-glutamyl-enzyme intermediate reacts with water (hydrolysis) to form L-glutamate or with an amino acid or peptide acceptor."
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -238808,9 +238990,9 @@
         "discussion_id": "pyrrolidonyl-arylamidase-activity-causal-graph-source-gap",
         "prompt": "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
         "kind": "KNOWLEDGE_GAP",
-        "status": "OPEN",
+        "status": "RESOLVED",
         "attaches_to": [
-          "causal_graphs"
+          "causal_graphs#pyrrolidonyl_arylamidase_hydrolysis_sketch"
         ],
         "rationale": "The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving only one mechanistic quote.",
         "posed_by": "claude",
@@ -238821,6 +239003,28 @@
             "supports": "PARTIAL",
             "snippet": "Reaction: Release of an N-terminal pyroglutamyl group from a polypeptide, the second amino acid generally not being Pro",
             "explanation": "Existing record-level evidence supports the trait definition and diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme quotes and strain-matched UniProtKB protein accessions needed for a connected causal graph."
+          }
+        ],
+        "resolved_date": "2026-10-30",
+        "resolution_note": "Added connected NONMECHANISTIC causal_graphs entry (pyrrolidonyl_arylamidase_hydrolysis_sketch) anchored on existing verbatim record evidence snippets, and tracked the remaining strain-matched UniProtKB protein-example requirement in pyrrolidonyl-arylamidase-activity-protein-example-gap."
+      },
+      {
+        "discussion_id": "pyrrolidonyl-arylamidase-activity-protein-example-gap",
+        "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 pyroglutamyl-peptidase I Pcp (UniProtKB:P46920) so pyrrolidonyl_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [
+          "causal_graphs#pyrrolidonyl_arylamidase_hydrolysis_sketch"
+        ],
+        "rationale": "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Actinobaculum massiliense (NCBITaxon:76833), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        "posed_by": "claude",
+        "posed_date": "2026-10-30",
+        "evidence": [
+          {
+            "reference": "DOI:10.1128/JCM.37.11.3443-3447.1999",
+            "supports": "PARTIAL",
+            "snippet": "The strains displayed acid phosphatase, alkaline phosphatase, ester lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase, phosphoamidase, and pyrrolidonyl arylamidase activity.",
+            "explanation": "Existing record-level evidence supports the connected NONMECHANISTIC pathway/function graph but does not provide strain-matched UniProtKB protein accessions for protein_examples."
           }
         ]
       }
@@ -238839,6 +239043,75 @@
         "action": "RECORD_MECHANISM_KNOWLEDGE_GAP",
         "changes": "Recorded OPEN KNOWLEDGE_GAP discussion (pyrrolidonyl-arylamidase-activity-causal-graph-source-gap) attached to causal_graphs documenting the source-limited mechanism gap.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-10-31T03:37:22Z",
+        "curator": "claude",
+        "action": "CURATE_CAUSAL_GRAPH",
+        "changes": "Added NONMECHANISTIC causal_graphs entry (pyrrolidonyl_arylamidase_hydrolysis_sketch) and OPEN CURATION_TODO discussion (pyrrolidonyl-arylamidase-activity-protein-example-gap) anchored on existing verbatim record evidence snippets.",
+        "llm_assisted": true
+      }
+    ],
+    "causal_graphs": [
+      {
+        "graph_id": "pyrrolidonyl_arylamidase_hydrolysis_sketch",
+        "title": "Pyrrolidonyl arylamidase hydrolysis of N-terminal pyroglutamyl residues",
+        "description": "Evidence-backed physiological mechanism sketch linking pyroglutamyl-peptidase catalytic activity and N-terminal 5-oxo-L-proline release from polypeptides to the pyrrolidonyl arylamidase activity phenotype.",
+        "scope_status": "NONMECHANISTIC",
+        "scope_notes": "Activity-and-reaction sketch backed by EC 3.4.19.3 and DOI:10.1128/JCM.37.11.3443-3447.1999; strain-matched UniProtKB protein examples for Bacillus subtilis 168 pyroglutamyl-peptidase I (Pcp, UniProtKB:P46920) remain to be curated.",
+        "nodes": [
+          {
+            "node_id": "pyrrolidonyl_arylamidase_activity_trait",
+            "label": "pyrrolidonyl arylamidase activity",
+            "node_type": "TRAIT",
+            "grounding": "traitmech:000155",
+            "description": "Physiological enzyme-activity phenotype in which a cell produces active pyroglutamyl-peptidase I (pyrrolidonyl arylamidase) enzymes that cleave N-terminal pyroglutamyl residues from polypeptides."
+          },
+          {
+            "node_id": "pyrrolidonyl_arylamidase_catalytic_activity",
+            "label": "pyroglutamyl-peptidase activity",
+            "node_type": "MOLECULAR_FUNCTION",
+            "grounding": "GO:0016920",
+            "description": "Omega-peptidase catalytic activity releasing an N-terminal pyroglutamyl (5-oxo-L-prolyl) group from a polypeptide (EC 3.4.19.3)."
+          },
+          {
+            "node_id": "pyrrolidonyl_arylamidase_pyroglutamate",
+            "label": "5-oxo-L-proline",
+            "node_type": "CHEMICAL",
+            "grounding": "CHEBI:18183",
+            "description": "N-terminal pyroglutamyl (5-oxo-L-proline) residue released by hydrolytic cleavage of a polypeptide substrate."
+          }
+        ],
+        "edges": [
+          {
+            "subject": "pyrrolidonyl_arylamidase_catalytic_activity",
+            "predicate": "confers",
+            "predicate_id": "METPO:2007700",
+            "object": "pyrrolidonyl_arylamidase_activity_trait",
+            "description": "Cellular production of active pyrrolidonyl arylamidase detected in diagnostic enzyme panels confers the pyrrolidonyl arylamidase activity phenotype.",
+            "evidence": [
+              {
+                "reference": "DOI:10.1128/JCM.37.11.3443-3447.1999",
+                "snippet": "The strains displayed acid phosphatase, alkaline phosphatase, ester lipase C8 (weak reaction), esterase C4 (weak reaction), leucine arylamidase, phosphoamidase, and pyrrolidonyl arylamidase activity.",
+                "notes": "Greub and Raoult report that Actinobaculum massiliense strains displayed pyrrolidonyl arylamidase activity."
+              }
+            ]
+          },
+          {
+            "subject": "pyrrolidonyl_arylamidase_catalytic_activity",
+            "predicate": "has output",
+            "predicate_id": "RO:0002234",
+            "object": "pyrrolidonyl_arylamidase_pyroglutamate",
+            "description": "Pyroglutamyl-peptidase I catalyzes the hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide.",
+            "evidence": [
+              {
+                "reference": "https://iubmb.qmul.ac.uk/enzyme/EC3/4/19/3.html",
+                "snippet": "Reaction: Release of an N-terminal pyroglutamyl group from a polypeptide, the second amino acid generally not being Pro",
+                "notes": "IUBMB EC 3.4.19.3 defines the reaction as the release of an N-terminal pyroglutamyl group from a polypeptide, the second amino acid generally not being Pro."
+              }
+            ]
+          }
+        ]
       }
     ]
   },

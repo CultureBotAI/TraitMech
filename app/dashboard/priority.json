@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 247,
-      "DEEPEN_CAUSAL_GRAPH": 421,
+      "BUILD_CAUSAL_GRAPH": 244,
+      "DEEPEN_CAUSAL_GRAPH": 424,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -7167,29 +7167,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000155",
-      "label": "pyrrolidonyl arylamidase activity",
-      "category": "physiology",
-      "slug": "pyrrolidonyl_arylamidase_activity",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000582",
       "label": "rheotaxis",
       "category": "physiology",
@@ -7898,28 +7875,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000156",
-      "label": "carboxylesterase activity",
-      "category": "physiology",
-      "slug": "carboxylesterase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000137",
       "label": "caseinase activity",
       "category": "physiology",
@@ -7946,28 +7901,6 @@
       "label": "DNase activity",
       "category": "physiology",
       "slug": "dnase_activity",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000160",
-      "label": "gamma-glutamyltransferase activity",
-      "category": "physiology",
-      "slug": "gamma_glutamyltransferase_activity",
       "score": 25.0,
       "action": "BUILD_CAUSAL_GRAPH",
       "edges": 0,
@@ -8975,6 +8908,29 @@
       "researched": true,
       "reasons": [
         "thin graph (5 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000155",
+      "label": "pyrrolidonyl arylamidase activity",
+      "category": "physiology",
+      "slug": "pyrrolidonyl_arylamidase_activity",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -15483,6 +15439,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000156",
+      "label": "carboxylesterase activity",
+      "category": "physiology",
+      "slug": "carboxylesterase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000528",
       "label": "cellular buoyancy",
       "category": "physiology",
@@ -15546,6 +15524,28 @@
       "researched": false,
       "reasons": [
         "thin graph (5 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000160",
+      "label": "gamma-glutamyltransferase activity",
+      "category": "physiology",
+      "slug": "gamma_glutamyltransferase_activity",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {

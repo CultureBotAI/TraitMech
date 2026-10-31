@@ -57,6 +57,7 @@ POSED_DATE_C4 = "2026-10-25"
 POSED_DATE_C5 = "2026-10-25"
 POSED_DATE_C6 = "2026-10-26"
 POSED_DATE_C7 = "2026-10-30"
+POSED_DATE_C8 = "2026-10-30"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2167,10 +2168,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary microbial literature evidence for aminopeptidase B (EC 3.4.11.6) catalysis and physiological peptide cleavage in the exemplar taxon before constructing causal_graphs.",
         "The current record pairs one IUBMB EC 3.4.11.6 reaction snippet with two multi-enzyme diagnostic profile lists (DOI:10.3389/fgene.2023.1240581, DOI:10.1099/ijsem.0.006017), leaving only one mechanistic quote.",
     ),
-    "data/traits/physiology/carboxylesterase_activity.yaml": (
-        "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.1.1.1 reaction snippet with a diagnostic strain-characterization snippet, leaving only one catalytic reaction quote.",
-    ),
     "data/traits/physiology/caseinase_activity.yaml": (
         "Add primary microbial literature evidence for secreted extracellular caseinolytic protease identification, peptide release, and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
         "The current record carries two general casein-hydrolysis screening snippets (DOI:10.3389/fmicb.2018.01148, DOI:10.2174/1874285801408010025) without specific protease gene/enzyme or multi-step mechanism quotes.",
@@ -2182,10 +2179,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/dnase_activity.yaml": (
         "Add primary microbial literature evidence for secreted extracellular deoxyribonuclease (e.g. Nuc, EndA) phosphodiester cleavage and oligonucleotide products before constructing causal_graphs.",
         "The current record carries two general DNase agar-screening snippets (DOI:10.3389/fmicb.2019.00969, DOI:10.22207/JPAM.14.1.44) without specific nuclease enzyme or catalytic product quotes.",
-    ),
-    "data/traits/physiology/gamma_glutamyltransferase_activity.yaml": (
-        "Add primary microbial literature evidence for Ggt gamma-glutamyltransferase glutathione cleavage and gamma-glutamyl amino-acid transfer in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.4.19.13 reaction snippet with two diagnostic strain-phenotyping snippets (DOI:10.3389/fgene.2023.1240581), leaving only one catalytic reaction quote.",
     ),
     "data/traits/physiology/gelatinase_activity.yaml": (
         "Add primary microbial literature evidence for secreted GelE/metalloprotease gelatin cleavage, peptide products, and quorum-sensing regulation before constructing causal_graphs.",
@@ -2226,10 +2219,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/physiology/phenylalanine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for phenylalanyl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
         "The current record carries two diagnostic enzyme-panel survey snippets (DOI:10.1099/ijsem.0.006017, DOI:10.1128/JCM.40.9.3427-3431.2002) without verbatim catalytic reaction quotes.",
-    ),
-    "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": (
-        "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
-        "The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving only one mechanistic quote.",
     ),
     "data/traits/physiology/serine_arylamidase_activity.yaml": (
         "Add primary microbial literature evidence for seryl aminopeptidase/arylamidase catalysis and substrate cleavage before constructing causal_graphs.",
@@ -4062,8 +4051,297 @@ def build_cohort_j_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_K_PATHS: tuple[str, ...] = (
+    "data/traits/physiology/carboxylesterase_activity.yaml",
+    "data/traits/physiology/gamma_glutamyltransferase_activity.yaml",
+    "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml",
+)
+
+COHORT_K_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/physiology/carboxylesterase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 carboxylesterase EstA (UniProtKB:P37967) so carboxylesterase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) activity in Paracoccus yeei (NCBITaxon:147645), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/gamma_glutamyltransferase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956) so gamma_glutamyltransferase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 pyroglutamyl-peptidase I Pcp (UniProtKB:P46920) so pyrrolidonyl_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Actinobaculum massiliense (NCBITaxon:76833), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+}
+
+
+def build_cohort_k_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort K record."""
+    if rel_path == "data/traits/physiology/carboxylesterase_activity.yaml":
+        return [
+            {
+                "graph_id": "carboxylesterase_hydrolysis_sketch",
+                "title": "Carboxylesterase hydrolysis of carboxylic esters",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "carboxylesterase catalytic activity and alcohol release "
+                    "from carboxylic esters to the carboxylesterase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.1.1.1 and "
+                    "DOI:10.1128/JCM.43.8.3713-3717.2005; strain-matched UniProtKB "
+                    "protein examples for Bacillus subtilis 168 carboxylesterase "
+                    "(EstA, UniProtKB:P37967) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "carboxylesterase_activity_trait",
+                        "label": "carboxylesterase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000156",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active carboxylesterase enzymes that hydrolyze carboxylic esters with water to yield an alcohol and a carboxylate.",
+                    },
+                    {
+                        "node_id": "carboxylesterase_catalytic_activity",
+                        "label": "carboxylesterase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0106435",
+                        "description": "Carboxylic-ester hydrolase catalytic activity hydrolyzing a carboxylic ester and water into an alcohol and a carboxylate (EC 3.1.1.1).",
+                    },
+                    {
+                        "node_id": "carboxylesterase_alcohol",
+                        "label": "alcohol",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:30879",
+                        "description": "Alcohol product released alongside a carboxylate by carboxylesterase-catalyzed hydrolysis of a carboxylic ester.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "carboxylesterase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "carboxylesterase_activity_trait",
+                        "description": "Cellular production of active carboxylesterase detected in C4 esterase enzyme strips confers the carboxylesterase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Funke et al. report that Paracoccus yeei clinical isolates tested clearly positive for esterase (C4) and esterase lipase (C8) activities in API ZYM strips.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "carboxylesterase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "carboxylesterase_alcohol",
+                        "description": "Carboxylesterase catalyzes the hydrolysis of a carboxylic ester and water to produce an alcohol and a carboxylate.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.1.1.1 defines the carboxylesterase reaction as a carboxylic ester + H2O = an alcohol + a carboxylate.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/gamma_glutamyltransferase_activity.yaml":
+        return [
+            {
+                "graph_id": "gamma_glutamyltransferase_hydrolysis_sketch",
+                "title": "Gamma-glutamyltransferase cleavage of gamma-glutamyl amide bonds",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "gamma-glutamyltransferase catalytic activity and L-glutamate "
+                    "release via a gamma-glutamyl-enzyme intermediate to the "
+                    "gamma-glutamyltransferase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.19.13 and "
+                    "DOI:10.3389/fgene.2023.1240581; strain-matched UniProtKB "
+                    "protein examples for Escherichia coli K-12 gamma-glutamyltranspeptidase "
+                    "(Ggt, UniProtKB:P18956) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "gamma_glutamyltransferase_activity_trait",
+                        "label": "gamma-glutamyltransferase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000160",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active gamma-glutamyltransferase enzymes that cleave gamma-glutamyl amide bonds via a gamma-glutamyl-enzyme intermediate.",
+                    },
+                    {
+                        "node_id": "gamma_glutamyltransferase_catalytic_activity",
+                        "label": "glutathione gamma-glutamate hydrolase",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0036374",
+                        "description": "Catalytic activity transferring a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate or to an amino acid or peptide acceptor (EC 3.4.19.13).",
+                    },
+                    {
+                        "node_id": "gamma_glutamyltransferase_glutamate",
+                        "label": "L-glutamic acid",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16015",
+                        "description": "L-glutamate product formed when the gamma-glutamyl-enzyme intermediate of gamma-glutamyltransferase reacts with water during hydrolysis.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "gamma_glutamyltransferase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "gamma_glutamyltransferase_activity_trait",
+                        "description": "Cellular production of active gamma-glutamyltransferase detected in phenotypic biochemical assays confers the gamma-glutamyltransferase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Midwinter et al. report that Helicobacter canis and related isolates test positive for gamma-glutamyl transferase activity.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "gamma_glutamyltransferase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "gamma_glutamyltransferase_glutamate",
+                        "description": "Gamma-glutamyltransferase forms a gamma-glutamyl-enzyme intermediate that reacts with water during hydrolysis to release L-glutamate.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.19.13 states that the gamma-glutamyl-enzyme intermediate reacts with water (hydrolysis) to form L-glutamate or with an amino acid or peptide acceptor.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/physiology/pyrrolidonyl_arylamidase_activity.yaml":
+        return [
+            {
+                "graph_id": "pyrrolidonyl_arylamidase_hydrolysis_sketch",
+                "title": "Pyrrolidonyl arylamidase hydrolysis of N-terminal pyroglutamyl residues",
+                "description": (
+                    "Evidence-backed physiological mechanism sketch linking "
+                    "pyroglutamyl-peptidase catalytic activity and N-terminal "
+                    "5-oxo-L-proline release from polypeptides to the "
+                    "pyrrolidonyl arylamidase activity phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Activity-and-reaction sketch backed by EC 3.4.19.3 and "
+                    "DOI:10.1128/JCM.37.11.3443-3447.1999; strain-matched UniProtKB "
+                    "protein examples for Bacillus subtilis 168 pyroglutamyl-peptidase I "
+                    "(Pcp, UniProtKB:P46920) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "pyrrolidonyl_arylamidase_activity_trait",
+                        "label": "pyrrolidonyl arylamidase activity",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000155",
+                        "description": "Physiological enzyme-activity phenotype in which a cell produces active pyroglutamyl-peptidase I (pyrrolidonyl arylamidase) enzymes that cleave N-terminal pyroglutamyl residues from polypeptides.",
+                    },
+                    {
+                        "node_id": "pyrrolidonyl_arylamidase_catalytic_activity",
+                        "label": "pyroglutamyl-peptidase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0016920",
+                        "description": "Omega-peptidase catalytic activity releasing an N-terminal pyroglutamyl (5-oxo-L-prolyl) group from a polypeptide (EC 3.4.19.3).",
+                    },
+                    {
+                        "node_id": "pyrrolidonyl_arylamidase_pyroglutamate",
+                        "label": "5-oxo-L-proline",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:18183",
+                        "description": "N-terminal pyroglutamyl (5-oxo-L-proline) residue released by hydrolytic cleavage of a polypeptide substrate.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "pyrrolidonyl_arylamidase_catalytic_activity",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "pyrrolidonyl_arylamidase_activity_trait",
+                        "description": "Cellular production of active pyrrolidonyl arylamidase detected in diagnostic enzyme panels confers the pyrrolidonyl arylamidase activity phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Greub and Raoult report that Actinobaculum massiliense strains displayed pyrrolidonyl arylamidase activity.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "pyrrolidonyl_arylamidase_catalytic_activity",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "pyrrolidonyl_arylamidase_pyroglutamate",
+                        "description": "Pyroglutamyl-peptidase I catalyzes the hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "IUBMB EC 3.4.19.3 defines the reaction as the release of an N-terminal pyroglutamyl group from a polypeptide, the second amino acid generally not being Pro.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort K path: {rel_path}")
+
+
+def build_cohort_k_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort K record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_K_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C8,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, G, H, I, and J records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A, B, C, D, E, F, G, H, I, J, and K records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -4668,6 +4946,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C7
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_K_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_k_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_k_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C8
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "

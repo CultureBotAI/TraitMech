@@ -13591,13 +13591,13 @@ window.searchData = [
   "discussion_id": "carboxylesterase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for microbial carboxylesterase (EC 3.1.1.1) substrate hydrolysis and alcohol/carboxylate release in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "carboxylesterase activity",
   "source_id": "traitmech:000156",
   "source_file": "carboxylesterase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#carboxylesterase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.1.1.1 reaction snippet with a diagnostic strain-characterization snippet, leaving only one catalytic reaction quote.",
   "num_experiments": 0,
@@ -13607,6 +13607,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/carboxylesterase_activity.html#carboxylesterase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "carboxylesterase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 carboxylesterase EstA (UniProtKB:P37967) so carboxylesterase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "carboxylesterase activity",
+  "source_id": "traitmech:000156",
+  "source_file": "carboxylesterase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#carboxylesterase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005) establishes carboxylesterase hydrolysis of a carboxylic ester and water to an alcohol and a carboxylate and positive esterase (C4) activity in Paracoccus yeei (NCBITaxon:147645), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JCM.43.8.3713-3717.2005"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/carboxylesterase_activity.html#carboxylesterase-activity-protein-example-gap"
  },
  {
   "discussion_id": "caseinase-activity-xref-gap",
@@ -14871,13 +14892,13 @@ window.searchData = [
   "discussion_id": "gamma-glutamyltransferase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for Ggt gamma-glutamyltransferase glutathione cleavage and gamma-glutamyl amino-acid transfer in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "gamma-glutamyltransferase activity",
   "source_id": "traitmech:000160",
   "source_file": "gamma_glutamyltransferase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.4.19.13 reaction snippet with two diagnostic strain-phenotyping snippets (DOI:10.3389/fgene.2023.1240581), leaving only one catalytic reaction quote.",
   "num_experiments": 0,
@@ -14887,6 +14908,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/gamma_glutamyltransferase_activity.html#gamma-glutamyltransferase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "gamma-glutamyltransferase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Escherichia coli K-12 gamma-glutamyltranspeptidase Ggt (UniProtKB:P18956) so gamma_glutamyltransferase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "gamma-glutamyltransferase activity",
+  "source_id": "traitmech:000160",
+  "source_file": "gamma_glutamyltransferase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#gamma_glutamyltransferase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581) establishes gamma-glutamyltransferase transfer of a gamma-glutamyl group via a gamma-glutamyl-enzyme intermediate to water to form L-glutamate and positive gamma-glutamyl transferase activity in Helicobacter canis (NCBITaxon:29419), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.3389/fgene.2023.1240581"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/gamma_glutamyltransferase_activity.html#gamma-glutamyltransferase-activity-protein-example-gap"
  },
  {
   "discussion_id": "gelatinase-activity-xref-gap",
@@ -17182,13 +17224,13 @@ window.searchData = [
   "discussion_id": "pyrrolidonyl-arylamidase-activity-causal-graph-source-gap",
   "prompt": "Add primary microbial literature evidence for pyroglutamyl-peptidase I (PyrA, EC 3.4.19.3) catalysis and physiological peptide turnover in the exemplar taxon before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "pyrrolidonyl arylamidase activity",
   "source_id": "traitmech:000155",
   "source_file": "pyrrolidonyl_arylamidase_activity.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#pyrrolidonyl_arylamidase_hydrolysis_sketch"
   ],
   "rationale": "The current record pairs one IUBMB EC 3.4.19.3 reaction snippet with a diagnostic strain-phenotyping list (DOI:10.1128/JCM.37.11.3443-3447.1999), leaving only one mechanistic quote.",
   "num_experiments": 0,
@@ -17198,6 +17240,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "pyrrolidonyl-arylamidase-activity-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Bacillus subtilis 168 pyroglutamyl-peptidase I Pcp (UniProtKB:P46920) so pyrrolidonyl_arylamidase_hydrolysis_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "pyrrolidonyl arylamidase activity",
+  "source_id": "traitmech:000155",
+  "source_file": "pyrrolidonyl_arylamidase_activity.yaml",
+  "attaches_to": [
+   "causal_graphs#pyrrolidonyl_arylamidase_hydrolysis_sketch"
+  ],
+  "rationale": "The record's primary literature (EC 3.4.19.3, DOI:10.1128/JCM.37.11.3443-3447.1999) establishes pyroglutamyl-peptidase I hydrolytic release of an N-terminal pyroglutamyl group from a polypeptide and positive pyrrolidonyl arylamidase activity in Actinobaculum massiliense (NCBITaxon:76833), but a strain-matched canonical example and verified UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JCM.37.11.3443-3447.1999"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/physiology/pyrrolidonyl_arylamidase_activity.html#pyrrolidonyl-arylamidase-activity-protein-example-gap"
  },
  {
   "discussion_id": "quorum-quenching-scope-and-mappings",
@@ -18107,7 +18170,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 910,
+ "total_discussions": 913,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [
