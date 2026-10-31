@@ -1,0 +1,49 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: INFRA_TASKS.md
+session:
+  id: 2026-10-31T003500Z-antigravity-c7s601
+  timestamp: '2026-10-31T00:35:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2047
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1962
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1988
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+events:
+- type: EDIT
+  outcome: changed
+  summary: Sync verified Cycle 7 Stage 5 closure in reviews/workflow/latest.yaml
+  details: 'Updated reviews/workflow/latest.yaml from the supervisor-verified evidence
+    index (authority: verified_closure) to record Cycle 7 Stage 5 closure (reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-05/revision-0001/evidence.yaml,
+    PR #2047, merged commit 631087f24fec9e00bd969d8827fd642207b61f9b).'
+- type: EDIT
+  outcome: changed
+  sections:
+  - INFRA_TASKS
+  - scripts
+  - tests
+  summary: Freeze INFRA_TASKS.md at Cycle 7 Stage 6 cutoff and resolve traitmech-infra-0009
+    (PMC/EuropePMC PPR primary reference alias resolution and repeated definition_source
+    pairing in scripts/audit_evidence_snippets.py)
+  details: 'Executed Stage 6 (infrastructure) of run mech-goal-sequence-20261019,
+    cycle 7 using the exact supervisor-frozen INFRA_TASKS.md snapshot (frozen_at 2026-10-31T00:24:29Z,
+    sha256 e05b7cea505cfd01a4ee6338cd39ceb53e25982e72f1909a5c90e32a7ef4c2c4) at
+    source revision 631087f24fec9e00bd969d8827fd642207b61f9b. Implemented the 1 open
+    task in the frozen scope, traitmech-infra-0009 (linked to issue #2002, follow-up
+    to #1981): updated scripts/audit_evidence_snippets.py (_PRIMARY_REF_PREFIXES,
+    _record_repeats_def_source, and _record_wiki_doi_aliases) to recognize PMC and
+    EuropePMC PPR primary references in record_refs alongside PMID: and pair a record''s
+    definition_source DOI with its single quoted primary PMID/PMC/EuropePMC reference
+    when the record cites List_system_article.md or repeats definition_source in
+    canonical_examples[].reference or synonyms[].source when checking UNQUOTED_DEFINITION_SOURCE,
+    covered by unit tests in tests/test_audit_evidence_snippets.py. Updated INFRA_TASKS.md
+    to mark traitmech-infra-0009 as resolved with 0 deferred or blocked tasks.'

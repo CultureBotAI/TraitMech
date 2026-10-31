@@ -817,3 +817,108 @@ def test_unquoted_definition_source_in_record_list_system_article_doi_pmid_pair(
     assert unquoted == []
 
 
+def test_unquoted_definition_source_pmc_europepmc_and_repeated_def_source_aliases(
+    tmp_path, monkeypatch
+):
+    """_record_wiki_doi_aliases recognizes PMC and EuropePMC PPR primary references in
+    record_refs and pairs definition_source: DOI:... with the single quoted primary
+    PMID/PMC/EuropePMC reference when List_system_article.md, canonical_examples[].reference,
+    or synonyms[].source confirms the same publication (#2002, traitmech-infra-0009)."""
+    traits = _write_trait(tmp_path, monkeypatch, r"""
+        identifier: traitmech:000279
+        term_kind: CLASS
+        definition_source: DOI:10.1101/2023.05.31.542886
+        evidence:
+          - reference: https://europepmc.org/article/PPR/PPR668921
+            supports: SUPPORT
+            snippet: Bacteria use a variety of immune systems to protect themselves from phage infection
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| Card_NLR | 10\.1101/2023.05.31.542886 | Gasdermin and subtilase |'
+        """)
+    (traits / "pd_t2_1.yaml").write_text(textwrap.dedent(r"""
+        identifier: traitmech:000435
+        term_kind: CLASS
+        definition_source: DOI:10.1093/nar/gkad258
+        evidence:
+          - reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10250213/
+            supports: SUPPORT
+            snippet: Systematic discovery of antiphage defense systems in the microbial pangenome
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| PD-T2-1 | 10\.1093/nar/gkad258 | Vassallo et al., 2022 |'
+        """))
+    (traits / "abia.yaml").write_text(textwrap.dedent(r"""
+        identifier: traitmech:000249
+        term_kind: CLASS
+        definition_source: DOI:10.1128/jb.172.1.104-109.1990
+        evidence:
+          - reference: PMID:2152894
+            supports: SUPPORT
+            snippet: Cloning and localization of a Streptococcus lactis plasmid gene
+          - reference: https://raw.githubusercontent.com/mdmparis/defense-finder/master/wiki/List_system_article.md
+            supports: SUPPORT
+            snippet: '| AbiA | 10\.1016/j.mib.2005.06.006 | Phage resistance mechanisms |'
+        canonical_examples:
+          - taxon: Lactococcus lactis
+            ncbi_taxid: NCBITaxon:1358
+            value: 'true'
+            reference: DOI:10.1128/jb.172.1.104-109.1990
+        """))
+    (traits / "lit.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000395
+        term_kind: CLASS
+        definition_source: DOI:10.1002/j.1460-2075.1987.tb02579.x
+        synonyms:
+          - label: T4 exclusion by e14 prophage lit gene
+            scope: RELATED
+            source: DOI:10.1002/j.1460-2075.1987.tb02579.x
+        evidence:
+          - reference: PMID:2824193
+            supports: SUPPORT
+            snippet: Overproduction of the Lit protein causes severe inhibition of gene expression
+        """))
+    # Unrelated DOI in definition_source without List_system_article.md or repeated
+    # canonical_examples/synonyms reference must NOT be falsely aliased.
+    (traits / "unrelated.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000999
+        term_kind: CLASS
+        definition_source: DOI:10.1038/nrmicro3380
+        evidence:
+          - reference: PMID:99999999
+            supports: SUPPORT
+            snippet: An unrelated open-access review quote that does not match definition_source
+        """))
+
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = sorted(
+        f["file"].rsplit("/", 1)[-1]
+        for f in findings
+        if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"
+    )
+    assert unquoted == ["abia.yaml", "lit.yaml", "pd_t2_1.yaml", "x.yaml"]
+
+    # Aligning evidence[0].reference to definition_source clears all four records.
+    for fname, doi in [
+        ("x.yaml", "DOI:10.1101/2023.05.31.542886"),
+        ("pd_t2_1.yaml", "DOI:10.1093/nar/gkad258"),
+        ("abia.yaml", "DOI:10.1128/jb.172.1.104-109.1990"),
+        ("lit.yaml", "DOI:10.1002/j.1460-2075.1987.tb02579.x"),
+    ]:
+        p = traits / fname
+        text = p.read_text()
+        for old_ref in (
+            "https://europepmc.org/article/PPR/PPR668921",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10250213/",
+            "PMID:2152894",
+            "PMID:2824193",
+        ):
+            text = text.replace(f"reference: {old_ref}", f"reference: {doi}")
+        p.write_text(text)
+
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = [f for f in findings if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"]
+    assert unquoted == []
+
+
+

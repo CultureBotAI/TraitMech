@@ -154,29 +154,64 @@ def _load_defense_finder_ref_aliases(path: Path | None = None) -> dict[str, set[
     return aliases
 
 
+_PRIMARY_REF_PREFIXES = (
+    "PMID:",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC",
+    "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC",
+    "https://europepmc.org/article/PPR/",
+)
+
+
+def _record_repeats_def_source(doc: dict, def_source: str) -> bool:
+    """Return True if canonical_examples[].reference or synonyms[].source repeats def_source."""
+    target = def_source.lower()
+    for ex in doc.get("canonical_examples") or []:
+        if isinstance(ex, dict):
+            ref = _norm(str(ex.get("reference") or "")).lower()
+            if ref and ref == target:
+                return True
+    for syn in doc.get("synonyms") or []:
+        if isinstance(syn, dict):
+            src = _norm(str(syn.get("source") or "")).lower()
+            if src and src == target:
+                return True
+    return False
+
+
 def _record_wiki_doi_aliases(doc: dict, record_refs: set[str]) -> dict[str, set[str]]:
-    """Map DOIs in a record's List_system_article.md evidence rows to quoted PMIDs on the same record."""
-    quoted_pmids = {r for r in record_refs if r.startswith("PMID:")}
-    if not quoted_pmids:
+    """Map DOIs in a record's List_system_article.md rows or confirmed definition_source to quoted primary refs."""
+    quoted_primary = {r for r in record_refs if r.startswith(_PRIMARY_REF_PREFIXES)}
+    if not quoted_primary:
         return {}
     wiki_dois: set[str] = set()
+    has_wiki_ref = False
     for item in doc.get("evidence") or []:
         if not isinstance(item, dict):
             continue
         ref = _norm(str(item.get("reference") or ""))
         if "List_system_article.md" not in ref:
             continue
+        has_wiki_ref = True
         snip = _norm(str(item.get("snippet") or ""))
         for doi_ref in _extract_wiki_dois(snip):
             wiki_dois.add(doi_ref)
             wiki_dois.add(f"DOI:{doi_ref[4:].lower()}")
+    def_source = _norm(str(doc.get("definition_source") or ""))
+    if (
+        len(quoted_primary) == 1
+        and def_source.startswith("DOI:")
+        and def_source not in record_refs
+        and (has_wiki_ref or _record_repeats_def_source(doc, def_source))
+    ):
+        wiki_dois.add(def_source)
+        wiki_dois.add(f"DOI:{def_source[4:].lower()}")
     if not wiki_dois:
         return {}
     aliases: dict[str, set[str]] = {}
     for doi_ref in wiki_dois:
-        aliases.setdefault(doi_ref, set()).update(quoted_pmids)
-    for pmid_ref in quoted_pmids:
-        aliases.setdefault(pmid_ref, set()).update(wiki_dois)
+        aliases.setdefault(doi_ref, set()).update(quoted_primary)
+    for primary_ref in quoted_primary:
+        aliases.setdefault(primary_ref, set()).update(wiki_dois)
     return aliases
 
 
