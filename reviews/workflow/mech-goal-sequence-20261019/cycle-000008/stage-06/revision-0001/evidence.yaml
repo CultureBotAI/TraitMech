@@ -1,0 +1,57 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 8
+stage: 6
+revision: 1
+source_revision: f3e2ff60c3f71ca005667575c3c6a76743080b5a
+scope_frozen_at: '2026-10-31T14:58:49Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-10-31T14:58:49Z,
+  sha256 645800fcacee5bfc7c08a84880efb75eb8f92b5ff04a74660307c4a1a202f5de),
+  reconciled the 1 pending infrastructure task in the frozen scope
+  (traitmech-infra-0010, linked to GitHub issue #2002 as follow-up to #1981),
+  extended _record_repeats_def_source() in scripts/audit_evidence_snippets.py to
+  inspect causal_graphs[].edges[].evidence[].reference alongside
+  canonical_examples[].reference and synonyms[].source and updated
+  has_corpus_16_quote to trigger for non-OBJECT_PROPERTY records whenever
+  (def_source_in_ev or _record_repeats_def_source(doc, def_source)) and
+  def_source in corpus_quoted_refs_16, added unit tests in
+  tests/test_audit_evidence_snippets.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0010 as resolved in INFRA_TASKS.md
+  with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: 645800fcacee5bfc7c08a84880efb75eb8f92b5ff04a74660307c4a1a202f5de
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: b850038f4510820379a6dee22e9cd56a784aea42d1ad4b04b03cd2ad9003e5c3
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: 8a946a696a80033ea5c9c98c1c21c6fad9c09828ddedc569b2f887033f4ad332
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/c8s6_coverage_full.json
+    kind: supporting
+    sha256: 4659cd6d447664742ede1312b99c6e3518c2637059fae5c9f6ccc5875e518a6e
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0010
+    summary: Extend has_corpus_16_quote and _record_repeats_def_source in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE also checks corpus_quoted_refs_16 when a CLASS record repeats definition_source in canonical_examples[].reference, synonyms[].source, or causal_graphs[].edges[].evidence[].reference
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 8 Stage 6 (issue #2002, follow-up to #1981); extended
+      _record_repeats_def_source() in scripts/audit_evidence_snippets.py to
+      inspect causal_graphs[].edges[].evidence[].reference alongside
+      canonical_examples[].reference and synonyms[].source, and updated
+      has_corpus_16_quote to trigger for non-OBJECT_PROPERTY records whenever
+      (def_source_in_ev or _record_repeats_def_source(doc, def_source)) and
+      def_source in corpus_quoted_refs_16, covered by unit tests in
+      tests/test_audit_evidence_snippets.py.
+carry_forward_ids: []
