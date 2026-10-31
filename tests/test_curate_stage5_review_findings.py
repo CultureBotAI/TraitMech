@@ -1,4 +1,4 @@
-"""Tests for Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–7 #2002)."""
+"""Tests for Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–8 #2002)."""
 
 from __future__ import annotations
 
@@ -23,6 +23,7 @@ from curate_stage5_review_findings import (  # noqa: E402
     CYCLE5_TIMESTAMP,
     CYCLE6_TIMESTAMP,
     CYCLE7_TIMESTAMP,
+    CYCLE8_TIMESTAMP,
     REMEDIATION_SPECS,
     TIMESTAMP,
     process_all,
@@ -31,7 +32,7 @@ from traitmech.validation.write_validated import validate_trait  # noqa: E402
 
 
 def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
-    assert len(REMEDIATION_SPECS) == 80
+    assert len(REMEDIATION_SPECS) == 92
     assert "data/traits/physiology/spore_germination.yaml" not in REMEDIATION_SPECS
     finding_ids = {spec["finding_id"] for spec in REMEDIATION_SPECS.values()}
     assert finding_ids == {
@@ -115,6 +116,18 @@ def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
         "F-C7S4-DEF-SRC-013",
         "F-C7S4-DEF-SRC-014",
         "F-C7S4-DEF-SRC-015",
+        "F-C8S4-DEF-SRC-001",
+        "F-C8S4-DEF-SRC-002",
+        "F-C8S4-DEF-SRC-003",
+        "F-C8S4-DEF-SRC-004",
+        "F-C8S4-DEF-SRC-005",
+        "F-C8S4-DEF-SRC-006",
+        "F-C8S4-DEF-SRC-007",
+        "F-C8S4-DEF-SRC-008",
+        "F-C8S4-DEF-SRC-009",
+        "F-C8S4-DEF-SRC-010",
+        "F-C8S4-DEF-SRC-011",
+        "F-C8S4-DEF-SRC-012",
     }
 
 
@@ -140,12 +153,13 @@ def test_stage5_remediations_committed_and_schema_valid() -> None:
             CYCLE5_TIMESTAMP,
             CYCLE6_TIMESTAMP,
             CYCLE7_TIMESTAMP,
+            CYCLE8_TIMESTAMP,
         }
         assert last_event["changes"] == spec["changes"]
 
 
 def test_process_all_is_idempotent_on_committed_corpus() -> None:
-    assert process_all(apply=False) == (80, 0)
+    assert process_all(apply=False) == (92, 0)
 
 
 def test_zero_unquoted_definition_sources_on_remediated_records() -> None:

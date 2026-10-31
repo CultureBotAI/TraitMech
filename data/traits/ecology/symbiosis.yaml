@@ -15,6 +15,9 @@ synonyms:
   source: DOI:10.1073/pnas.1218525110
 evidence:
 - reference: DOI:10.1073/pnas.1218525110
+  snippet: This review examines how a growing knowledge of the vast range of animal-bacterial
+    interactions, whether in shared ecosystems or intimate symbioses, is fundamentally
+    altering our understanding of animal biology.
   notes: McFall-Ngai et al., "Animals in a bacterial world", supports persistent host-microbe
     association (symbiosis) as a pervasive microbial lifestyle; parent of the mutualism/commensalism/parasitism
     sub-variants.
@@ -274,4 +277,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope symbiosis_host_interaction=NONMECHANISTIC with scope_notes;
     marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (adhesins).'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1073/pnas.1218525110 (McFall-Ngai
+    et al. 2013, already present on causal_graphs[0].edges[0].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-012
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

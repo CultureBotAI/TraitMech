@@ -15,6 +15,12 @@ synonyms:
   source: DOI:10.1126/science.1104816
 evidence:
 - reference: DOI:10.1126/science.1104816
+  snippet: The distal human intestine represents an anaerobic bioreactor programmed
+    with an enormous population of bacteria, dominated by relatively few divisions
+    that are highly diverse at the strain/subspecies level. This microbiota and its
+    collective genomes (microbiome) provide us with genetic and metabolic attributes
+    we have not been required to evolve on our own, including the ability to harvest
+    otherwise inaccessible nutrients.
   notes: Bäckhed et al. characterize the distal intestine as a dense microbial habitat
     whose residents provide metabolic capabilities to the host.
 - reference: DOI:10.1073/pnas.1218525110
@@ -380,6 +386,14 @@ curation_history:
     that both microbes and oxidative chemistry regulate luminal oxygen, so the note
     now bounds SOLE causation rather than denying a microbial contribution. No causal
     claim changed.'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1126/science.1104816 (Bäckhed
+    et al. 2005, already present on causal_graphs[0].edges[8].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-004
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
 discussions:
 - discussion_id: kgscan-4fc1a06fa1e3

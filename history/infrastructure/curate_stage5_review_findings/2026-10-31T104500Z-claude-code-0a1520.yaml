@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+  slug: curate_stage5_review_findings
+session:
+  id: 2026-10-31T104500Z-claude-code-0a1520
+  timestamp: '2026-10-31T10:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 12 actionable Cycle 8 Stage 4 open findings in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019,
+    cycle 8 consuming Cycle 8 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml,
+    sha256 1e884abeb1f8a080fd9d6ade1f8a5dc4868d245ef06c69dd89f0dd408b24c302). Grouped all
+    17 carried-forward findings into 6 cause-and-ownership groups, deduplicated against all
+    live GitHub issues, and reused real GitHub issues (#2002 for resolved group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+    cohort groups). Remediated all 12 open findings (F-C8S4-DEF-SRC-001 through F-C8S4-DEF-SRC-012)
+    via guarded writer scripts/curate_stage5_review_findings.py across biofilm_formation.yaml,
+    commensalism.yaml, endosymbiosis.yaml, gut_associated.yaml, host_associated.yaml, mutualism.yaml,
+    nitrogen_fixing_symbiosis.yaml, opportunistic_pathogen.yaml, parasitism.yaml, predatory_bacterium.yaml,
+    rhizosphere_association.yaml, and symbiosis.yaml, and removed the 12 resolved evidence[0]
+    MISSING_SNIPPET entries from conf/evidence_snippet_baseline.tsv. Persisted fresh structured
+    review bundle reviews/structured/20261031T105000Z-cycle8-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 12 remediated records, regenerated
+    pages/, and preserved all immutable Stage 4 review artifacts untouched.'

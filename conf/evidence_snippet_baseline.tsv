@@ -21,7 +21,6 @@ data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community:nitric_o
 data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community:planktonic_cell->amenable_surface[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1042/BCJ20210301 has no snippet
 data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community:qs_autoinducers->biofilm_formation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/bacteria3030008 has no snippet
 data/traits/ecology/biofilm_formation.yaml	biofilm_eps_matrix_community:sessile_state->biofilm_formation_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/w17131944 has no snippet
-data/traits/ecology/biofilm_formation.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2016.94 has no snippet
 data/traits/ecology/biofilm_formation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-019-0162-0 has no snippet
 data/traits/ecology/biosafety_level.yaml	biosafety_level_hazard_classification:aerosol_transmission->bsl3_containment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/laboratories1030013 has no snippet
 data/traits/ecology/biosafety_level.yaml	biosafety_level_hazard_classification:aerosol_transmission->risk_assessment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1089/apb.2022.0040 has no snippet
@@ -73,7 +72,6 @@ data/traits/ecology/commensalism.yaml	commensalism_neutral_host:mucin_attachment
 data/traits/ecology/commensalism.yaml	commensalism_neutral_host:mucus_layer->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.adi3338 has no snippet
 data/traits/ecology/commensalism.yaml	commensalism_neutral_host:persistence_protection->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fcimb.2024.1357631 has no snippet
 data/traits/ecology/commensalism.yaml	commensalism_neutral_host:secretory_iga->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.adi3338 has no snippet
-data/traits/ecology/commensalism.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
 data/traits/ecology/commensalism.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduction:confined_intracellular_habitat->metabolic_gene_loss[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/ismejo/wrae117 has no snippet
 data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduction:endosymbiosis_trait->reductive_genome_evolution[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2670 has no snippet
@@ -82,7 +80,6 @@ data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduct
 data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduction:metabolic_gene_loss->reductive_genome_evolution[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/ismejo/wrae117 has no snippet
 data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduction:reductive_genome_evolution->intracellular_dependence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms25084228 has no snippet
 data/traits/ecology/endosymbiosis.yaml	endosymbiosis_intracellular_genome_reduction:transmission_bottleneck->limited_recombination[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/ismejo/wrae117 has no snippet
-data/traits/ecology/endosymbiosis.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2670 has no snippet
 data/traits/ecology/endosymbiosis.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.171 has no snippet
 data/traits/ecology/free_living.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1341 has no snippet
 data/traits/ecology/free_living.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.171 has no snippet
@@ -95,7 +92,6 @@ data/traits/ecology/free_living.yaml	free_living_environmental_habitat:free_livi
 data/traits/ecology/free_living.yaml	free_living_environmental_habitat:glycine_betaine_system->osmotic_stress_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pone.0287947 has no snippet
 data/traits/ecology/free_living.yaml	free_living_environmental_habitat:osmotic_stress_tolerance->free_living_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.48550/arxiv.2302.00582 has no snippet
 data/traits/ecology/free_living.yaml	free_living_environmental_habitat:trehalose_biosynthesis->environmental_stress_tolerance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pone.0287947 has no snippet
-data/traits/ecology/gut_associated.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.1104816 has no snippet
 data/traits/ecology/gut_associated.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/gut_associated.yaml	gut_associated_microbiota_metabolism:adhesins->mucosal_adhesion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12051026 has no snippet
 data/traits/ecology/gut_associated.yaml	gut_associated_microbiota_metabolism:antimicrobial_peptides->small_intestinal_bacterial_growth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.chom.2024.05.011 has no snippet
@@ -116,7 +112,6 @@ data/traits/ecology/habitat_association.yaml	habitat_association_biogeographic_s
 data/traits/ecology/habitat_association.yaml	habitat_association_biogeographic_structure:habitat_association_trait->biogeographic_structure[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.87 has no snippet
 data/traits/ecology/habitat_association.yaml	habitat_association_biogeographic_structure:salinity->community_composition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-024-01979-7 has no snippet
 data/traits/ecology/habitat_association.yaml	habitat_association_biogeographic_structure:salinity->osmolyte_transport_synthesis_proteins[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s40168-024-01979-7 has no snippet
-data/traits/ecology/host_associated.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/host_associated.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.1104816 has no snippet
 data/traits/ecology/host_associated.yaml	host_associated_microbiome:biofilm_formation->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae008 has no snippet
 data/traits/ecology/host_associated.yaml	host_associated_microbiome:chemotaxis_to_host->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology13020095 has no snippet
@@ -138,7 +133,6 @@ data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:typ
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:virulence_gene_acquisition->human_virulence_factors[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:within_host_adaptation->human_disease[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-pathmechdis-051122-111408 has no snippet
 data/traits/ecology/human_pathogen.yaml	human_pathogen_anthropoid_adaptation:within_host_genetic_diversification->within_host_adaptation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-pathmechdis-051122-111408 has no snippet
-data/traits/ecology/mutualism.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/mutualism.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.1104816 has no snippet
 data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:cross_feeding_architecture->obligate_mutualism_syntrophy[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-023-01596-4 has no snippet
 data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:host_beneficial_microbial_traits->mutualism_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.adi3338 has no snippet
@@ -147,7 +141,6 @@ data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:metabolite_secre
 data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:micronutrient_exchange->mutualism_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/plants13060829 has no snippet
 data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:nutrient_exchange->reciprocal_benefit[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.1104816 has no snippet
 data/traits/ecology/mutualism.yaml	mutualism_reciprocal_benefit:reciprocal_benefit->mutualism_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
-data/traits/ecology/nitrogen_fixing_symbiosis.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.171 has no snippet
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2990 has no snippet
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:flavonoids->nod_factor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fpls.2023.1284720 has no snippet
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:iron_availability->nitrogenase_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/pcp/pcae128 has no snippet
@@ -159,7 +152,6 @@ data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:n
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:nodule_oxygen_diffusion_barrier->microaerobic_environment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-024-01762-2 has no snippet
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:organic_acids->nitrogen_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-024-01762-2 has no snippet
 data/traits/ecology/nitrogen_fixing_symbiosis.yaml	rhizobia_legume_n2_fixation:symbiotic_signalling->n2_fix_symbiosis_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2990 has no snippet
-data/traits/ecology/opportunistic_pathogen.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2012.04.005 has no snippet
 data/traits/ecology/opportunistic_pathogen.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
 data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_dependent_virulence:antibiotic_exposure->microbiota_dysbiosis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s40588-023-00190-w has no snippet
 data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_dependent_virulence:barrier_breach->opportunistic_infection[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-024-01035-z has no snippet
@@ -170,7 +162,6 @@ data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_d
 data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_dependent_virulence:nutritional_immunity->high_affinity_iron_acquisition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1751-7915.14241 has no snippet
 data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_dependent_virulence:opportunist_colonization->opportunistic_infection[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s40588-023-00190-w has no snippet
 data/traits/ecology/opportunistic_pathogen.yaml	opportunistic_pathogen_context_dependent_virulence:opportunistic_infection->opportunistic_pathogen_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
-data/traits/ecology/parasitism.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
 data/traits/ecology/parasitism.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:bacterial_adhesin_activity->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuae019 has no snippet
 data/traits/ecology/parasitism.yaml	parasitism_host_fitness_cost:copper_stress->host_fitness_cost[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/ismejo/wrae100 has no snippet
@@ -198,7 +189,6 @@ data/traits/ecology/plant_pathogen.yaml	plant_pathogen_t3ss_effector_program:cwd
 data/traits/ecology/plant_pathogen.yaml	plant_pathogen_t3ss_effector_program:eps_production->biofilm_formation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/plants12112207 has no snippet
 data/traits/ecology/plant_pathogen.yaml	plant_pathogen_t3ss_effector_program:quorum_sensing->biofilm_formation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/plants12112207 has no snippet
 data/traits/ecology/plant_pathogen.yaml	plant_pathogen_t3ss_effector_program:quorum_sensing->eps_production[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/plants12112207 has no snippet
-data/traits/ecology/predatory_bacterium.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.091208.073346 has no snippet
 data/traits/ecology/predatory_bacterium.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1462-2920.13171 has no snippet
 data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:bdelloplast->intraperiplasmic_growth[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-023-01401-2 has no snippet
 data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:exit_lytic_activity->progeny_release[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-023-01401-2 has no snippet
@@ -206,7 +196,6 @@ data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:in
 data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:predatory_trait->prey_killing[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.091208.073346 has no snippet
 data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:prey_cell_wall_modification->bdelloplast[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-47412-3 has no snippet
 data/traits/ecology/predatory_bacterium.yaml	predatory_bacterium_prey_killing:prey_killing->prey_bacterium[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1462-2920.13171 has no snippet
-data/traits/ecology/rhizosphere_association.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3109 has no snippet
 data/traits/ecology/rhizosphere_association.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.87 has no snippet
 data/traits/ecology/rhizosphere_association.yaml	rhizosphere_root_exudate:bacterial_chemotaxis->root_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology13020095 has no snippet
 data/traits/ecology/rhizosphere_association.yaml	rhizosphere_root_exudate:biofilm_formation->rhizosphere_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biology13020095 has no snippet
@@ -237,7 +226,6 @@ data/traits/ecology/soil_dwelling.yaml	soil_dwelling_biogeochemistry:soil_dwelli
 data/traits/ecology/soil_dwelling.yaml	soil_dwelling_biogeochemistry:soil_habitat->soil_dwelling_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2017.87 has no snippet
 data/traits/ecology/soil_dwelling.yaml	soil_dwelling_biogeochemistry:soil_pH_precip_cn->life_history_axes[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41564-023-01465-0 has no snippet
 data/traits/ecology/soil_dwelling.yaml	soil_dwelling_biogeochemistry:soil_resource_availability->potential_growth_rate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-53753-w has no snippet
-data/traits/ecology/symbiosis.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.1218525110 has no snippet
 data/traits/ecology/symbiosis.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00550-7 has no snippet
 data/traits/ecology/symbiosis.yaml	symbiosis_host_interaction:adhesins->host_colonization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12051026 has no snippet
 data/traits/ecology/symbiosis.yaml	symbiosis_host_interaction:biofilm_formation->symbiotic_interaction[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuac048 has no snippet

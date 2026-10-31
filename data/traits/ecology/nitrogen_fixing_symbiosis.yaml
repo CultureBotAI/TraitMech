@@ -18,6 +18,8 @@ synonyms:
   source: DOI:10.1038/nrmicro2990
 evidence:
 - reference: DOI:10.1038/nrmicro.2017.171
+  snippet: Rhizobia are some of the best-studied plant microbiota. These oligotrophic
+    Alphaproteobacteria or Betaproteobacteria form symbioses with their legume hosts.
   notes: Poole et al. describe the free-living-to-endosymbiont transition of rhizobia
     that forms N2-fixing legume root nodules.
 - reference: DOI:10.1038/nrmicro2990
@@ -266,4 +268,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P00460 (158 -> 159 on nitrogenase_complex).'
+  llm_assisted: true
+- timestamp: '2026-10-31T10:45:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro.2017.171 (Poole
+    et al. 2018, already present on causal_graphs[0].edges[10].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 8 Stage 5 remediation of F-C8S4-DEF-SRC-007
+    in group G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
