@@ -921,4 +921,105 @@ def test_unquoted_definition_source_pmc_europepmc_and_repeated_def_source_aliase
     assert unquoted == []
 
 
+def test_unquoted_definition_source_corpus_16_when_def_source_repeated_outside_evidence(
+    tmp_path, monkeypatch
+):
+    """has_corpus_16_quote flags CLASS records whose definition_source is absent from
+    record-level evidence[].reference when definition_source is repeated in
+    synonyms[].source, canonical_examples[].reference, or
+    causal_graphs[].edges[].evidence[].reference and has a >=16-char quote in
+    corpus_quoted_refs_16 (#2002, traitmech-infra-0010)."""
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: traitmech:009001
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000901
+        definition_source: DOI:10.1126/science.1254070
+        evidence:
+          - reference: DOI:10.1126/science.1254070
+            supports: SUPPORT
+            snippet: Decoupling function and taxonomy in the global ocean microbiome
+          - reference: DOI:10.1038/nrmicro1852
+            supports: SUPPORT
+            snippet: The microbial Engines that Drive Earth Biogeochemical Cycles
+          - reference: DOI:10.1146/annurev.micro.62.081307.162918
+            supports: SUPPORT
+            snippet: Biogeochemical cycles of elements are driven by microbial metabolism
+        """)
+    (traits / "faprotax_syn.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000121
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000602
+        definition_source: DOI:10.1126/science.1254070
+        synonyms:
+          - label: human_gut
+            scope: EXACT
+            source: DOI:10.1126/science.1254070
+        evidence:
+          - reference: PMID:11111111
+            supports: SUPPORT
+            snippet: Supporting study for gut-associated microbial functional group
+        """))
+    (traits / "faprotax_ex.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000122
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000602
+        definition_source: DOI:10.1038/nrmicro1852
+        canonical_examples:
+          - taxon: Escherichia coli
+            ncbi_taxid: NCBITaxon:562
+            value: 'true'
+            reference: DOI:10.1038/nrmicro1852
+        evidence:
+          - reference: PMID:22222222
+            supports: SUPPORT
+            snippet: Supporting study for canonical example reference repetition
+        """))
+    (traits / "edge_repeat.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000123
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000602
+        definition_source: DOI:10.1146/annurev.micro.62.081307.162918
+        evidence:
+          - reference: PMID:33333333
+            supports: SUPPORT
+            snippet: Supporting study for causal graph edge reference repetition
+        causal_graphs:
+          - graph_id: g1
+            edges:
+              - subject: n1
+                object: n2
+                evidence:
+                  - reference: DOI:10.1146/annurev.micro.62.081307.162918
+                    supports: SUPPORT
+        """))
+    # A record in an unrelated cohort that does NOT cite or repeat definition_source
+    # anywhere in evidence, synonyms, canonical_examples, or causal_graphs is not flagged.
+    (traits / "unrepeated.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:000124
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000602
+        definition_source: DOI:10.1126/science.1254070
+        evidence:
+          - reference: PMID:44444444
+            supports: SUPPORT
+            snippet: Supporting study that does not repeat definition_source anywhere
+        """))
+
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = sorted(
+        f["file"].rsplit("/", 1)[-1]
+        for f in findings
+        if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"
+    )
+    assert unquoted == ["edge_repeat.yaml", "faprotax_ex.yaml", "faprotax_syn.yaml"]
+    for f in findings:
+        if f["defect"] == "UNQUOTED_DEFINITION_SOURCE":
+            assert "is absent from record-level evidence[].reference" in f["detail"]
+
+
 

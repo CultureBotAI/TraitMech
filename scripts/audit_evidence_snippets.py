@@ -163,7 +163,7 @@ _PRIMARY_REF_PREFIXES = (
 
 
 def _record_repeats_def_source(doc: dict, def_source: str) -> bool:
-    """Return True if canonical_examples[].reference or synonyms[].source repeats def_source."""
+    """Return True if canonical_examples[].reference, synonyms[].source, or causal_graphs[].edges[].evidence[].reference repeats def_source."""
     target = def_source.lower()
     for ex in doc.get("canonical_examples") or []:
         if isinstance(ex, dict):
@@ -175,6 +175,17 @@ def _record_repeats_def_source(doc: dict, def_source: str) -> bool:
             src = _norm(str(syn.get("source") or "")).lower()
             if src and src == target:
                 return True
+    for cg in doc.get("causal_graphs") or []:
+        if not isinstance(cg, dict):
+            continue
+        for edge in cg.get("edges") or []:
+            if not isinstance(edge, dict):
+                continue
+            for ev in edge.get("evidence") or []:
+                if isinstance(ev, dict):
+                    ref = _norm(str(ev.get("reference") or "")).lower()
+                    if ref and ref == target:
+                        return True
     return False
 
 
@@ -417,7 +428,7 @@ def audit(
                 )
             has_corpus_16_quote = (
                 not is_object_property
-                and def_source_in_ev
+                and (def_source_in_ev or _record_repeats_def_source(doc, def_source))
                 and def_source in corpus_quoted_refs_16
             )
             has_alias_quote = (
