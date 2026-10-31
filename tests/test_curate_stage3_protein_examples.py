@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -28,6 +29,8 @@ from curate_stage3_protein_examples import (  # noqa: E402
     C6S3_RETRIEVED_ON,
     C7S3_COHORT_J_PROMOTIONS,
     C7S3_RETRIEVED_ON,
+    C8S3_COHORT_K_PROMOTIONS,
+    C8S3_RETRIEVED_ON,
     ENTRY_VERSION_REFRESHES,
     NEW_PROTEIN_EXAMPLES,
     RETRIEVED_ON,
@@ -75,6 +78,11 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         len(spec["new_node"]["protein_examples"]) for spec in C7S3_COHORT_J_PROMOTIONS.values()
     )
     assert total_c7s3_examples == 3
+    assert len(C8S3_COHORT_K_PROMOTIONS) == 3
+    total_c8s3_examples = sum(
+        len(spec["new_node"]["protein_examples"]) for spec in C8S3_COHORT_K_PROMOTIONS.values()
+    )
+    assert total_c8s3_examples == 3
     all_files = (
         {r[0] for r in ENTRY_VERSION_REFRESHES}
         | set(NEW_PROTEIN_EXAMPLES)
@@ -86,8 +94,9 @@ def test_stage3_scope_excludes_do_not_work_and_matches_counts() -> None:
         | set(C5S3_COHORT_H_PROMOTIONS)
         | set(C6S3_COHORT_I_PROMOTIONS)
         | set(C7S3_COHORT_J_PROMOTIONS)
+        | set(C8S3_COHORT_K_PROMOTIONS)
     )
-    assert len(all_files) == 131
+    assert len(all_files) == 134
     assert "data/traits/physiology/spore_germination.yaml" not in all_files
 
 
@@ -126,6 +135,7 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
         (C5S3_COHORT_H_PROMOTIONS, C5S3_RETRIEVED_ON),
         (C6S3_COHORT_I_PROMOTIONS, C6S3_RETRIEVED_ON),
         (C7S3_COHORT_J_PROMOTIONS, C7S3_RETRIEVED_ON),
+        (C8S3_COHORT_K_PROMOTIONS, C8S3_RETRIEVED_ON),
     ]
     for promo_dict, expected_date in promotions:
         for rel_path, spec in promo_dict.items():
@@ -141,6 +151,25 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
             graph = graphs[0]
             assert graph["scope_status"] == "MECHANISTIC"
             assert graph["scope_notes"] == spec["scope_notes"]
+            if promo_dict is C8S3_COHORT_K_PROMOTIONS:
+                record_refs = {ev.get("reference") for ev in doc.get("evidence", [])}
+                canon_refs = {ce.get("reference") for ce in doc.get("canonical_examples", [])}
+                edge_refs = {
+                    ev.get("reference")
+                    for edge in graph.get("edges", [])
+                    for ev in edge.get("evidence", [])
+                }
+                pe_refs = {
+                    ev.get("reference")
+                    for n in graph.get("nodes", [])
+                    for pe in n.get("protein_examples", [])
+                    for ev in pe.get("evidence", [])
+                }
+                all_refs = record_refs | canon_refs | edge_refs | pe_refs
+                for doi in re.findall(r"DOI:[^\s,;]+", graph["scope_notes"]):
+                    assert doi.rstrip(".") in all_refs, (
+                        f"{rel_path}: unreferenced {doi} in scope_notes"
+                    )
             expected_node = spec["new_node"]
             nodes_by_id = {n["node_id"]: n for n in graph["nodes"]}
             assert expected_node["node_id"] in nodes_by_id
@@ -210,6 +239,7 @@ def test_protected_record_guard_raises(tmp_path: Path) -> None:
         | set(C5S3_COHORT_H_PROMOTIONS)
         | set(C6S3_COHORT_I_PROMOTIONS)
         | set(C7S3_COHORT_J_PROMOTIONS)
+        | set(C8S3_COHORT_K_PROMOTIONS)
     )
     for rel_path in all_rels:
         src = REPO_ROOT / rel_path

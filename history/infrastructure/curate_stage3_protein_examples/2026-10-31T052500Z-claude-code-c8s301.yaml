@@ -1,0 +1,39 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-10-31T052500Z-claude-code-c8s301
+  timestamp: '2026-10-31T05:25:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2053
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: 'Cycle 8 Stage 3 (protein_examples): promote 3 Cohort K trait graphs to MECHANISTIC
+    with verified UniProtKB protein examples'
+  details: Reviewed all 1,130 TraitRecord YAML files (1,129 curated, 1 DO_NOT_WORK protected)
+    for Cycle 8 Stage 3 (protein_examples). Promoted the 3 Cycle 8 Stage 2 Cohort K NONMECHANISTIC
+    records (carboxylesterase_activity, gamma_glutamyltransferase_activity, pyrrolidonyl_arylamidase_activity)
+    to MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified reviewed
+    UniProtKB protein_examples (P37967 PnbA on Bacillus subtilis 168 UP000001570, correcting the
+    EstA gene symbol mislabeled in the open discussion prompt; P18956 Ggt on Escherichia coli K-12
+    UP000000625 with dual EC 2.3.2.2 / EC 3.4.19.13 attribution; P28618 Pcp on Bacillus subtilis 168
+    UP000001570, replacing the mis-cited OpuAA accession P46920 in the open discussion note),
+    record-evidence-backed scope_notes, verbatim primary-source evidence snippets, and RESOLVED
+    CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv (197 uses across 163
+    unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv (159 MECHANISTIC pass,
+    597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    and all derived reports and pages.

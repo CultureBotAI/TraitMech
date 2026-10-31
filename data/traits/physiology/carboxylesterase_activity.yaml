@@ -24,12 +24,26 @@ evidence:
   notes: Otsuka et al. detected clear esterase (C4) and esterase lipase (C8) API ZYM
     reactions in the five Corynebacterium resistens isolates they characterized, supporting
     this as a directly assayed bacterial carboxylesterase activity phenotype.
+- reference: DOI:10.1016/0378-1119(94)90630-0
+  snippet: A Bacillus subtilis PNB carboxy-esterase (PNBCE) catalyzes hydrolysis of
+    several beta-lactam antibiotic PNB esters to the corresponding free acid and PNB
+    alcohol. This communication (i) describes cloning the pnbA gene, which encodes
+    PNBCE, (ii) provides the nucleotide sequence of the pnbA open reading frame (ORF)
+    and (iii) describes a method for efficiently expressing the ORF in Escherichia
+    coli.
+  notes: Zock et al. cloned and sequenced the Bacillus subtilis 168 pnbA gene encoding
+    para-nitrobenzyl carboxylesterase (UniProtKB:P37967).
 canonical_examples:
 - taxon_id: NCBITaxon:258224
   taxon_label: Corynebacterium resistens
   note: Otsuka et al. detected clear esterase (C4) and esterase lipase (C8) API ZYM
     reactions in Corynebacterium resistens isolates.
   reference: DOI:10.1128/JCM.43.8.3713-3717.2005
+- taxon_id: NCBITaxon:224308
+  taxon_label: Bacillus subtilis 168
+  note: Zock et al. cloned and sequenced the Bacillus subtilis 168 pnbA gene encoding
+    para-nitrobenzyl carboxylesterase (PnbA) that hydrolyzes carboxylic esters.
+  reference: DOI:10.1016/0378-1119(94)90630-0
 discussions:
 - discussion_id: carboxylesterase-activity-xref-gap
   prompt: Resolve an exact external ontology class for carboxylesterase activity before
@@ -71,7 +85,7 @@ discussions:
     carboxylesterase EstA (UniProtKB:P37967) so carboxylesterase_hydrolysis_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#carboxylesterase_hydrolysis_sketch
   rationale: The record's primary literature (EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005)
@@ -90,6 +104,13 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-10-31'
+  resolution_note: Added canonical_examples entry Bacillus subtilis 168 (NCBITaxon:224308;
+    DOI:10.1016/0378-1119(94)90630-0) and promoted carboxylesterase_hydrolysis_sketch
+    to MECHANISTIC by adding InterPro:IPR002018-grounded GENE_OR_PROTEIN node carboxylesterase_pnba
+    with reviewed Bacillus subtilis 168 (NCBITaxon:224308; UP000001570) protein_examples
+    UniProtKB:P37967 (PnbA / pnbA, para-nitrobenzyl esterase, correcting the EstA
+    symbol mislabeled in the open discussion prompt) backed by DOI:10.1016/0378-1119(94)90630-0.
 curation_history:
 - timestamp: '2026-09-12T03:42:43Z'
   curator: codex
@@ -111,16 +132,27 @@ curation_history:
     and OPEN CURATION_TODO discussion (carboxylesterase-activity-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-10-31T05:25:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Bacillus subtilis 168 (NCBITaxon:224308; DOI:10.1016/0378-1119(94)90630-0)
+    canonical example; promoted carboxylesterase_hydrolysis_sketch to MECHANISTIC;
+    added InterPro:IPR002018-grounded GENE_OR_PROTEIN node carboxylesterase_pnba with
+    reviewed Bacillus subtilis 168 (NCBITaxon:224308) protein_examples UniProtKB:P37967
+    (PnbA / pnbA, correcting the EstA symbol mislabeled in the open discussion prompt)
+    backed by DOI:10.1016/0378-1119(94)90630-0; resolved carboxylesterase-activity-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: carboxylesterase_hydrolysis_sketch
   title: Carboxylesterase hydrolysis of carboxylic esters
   description: Evidence-backed physiological mechanism sketch linking carboxylesterase
     catalytic activity and alcohol release from carboxylic esters to the carboxylesterase
     activity phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Activity-and-reaction sketch backed by EC 3.1.1.1 and DOI:10.1128/JCM.43.8.3713-3717.2005;
-    strain-matched UniProtKB protein examples for Bacillus subtilis 168 carboxylesterase
-    (EstA, UniProtKB:P37967) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005,
+    and DOI:10.1016/0378-1119(94)90630-0; exemplified on carboxylesterase_pnba with
+    Bacillus subtilis 168 (NCBITaxon:224308; UP000001570) para-nitrobenzyl esterase
+    PnbA (UniProtKB:P37967).
   nodes:
   - node_id: carboxylesterase_activity_trait
     label: carboxylesterase activity
@@ -141,6 +173,38 @@ causal_graphs:
     grounding: CHEBI:30879
     description: Alcohol product released alongside a carboxylate by carboxylesterase-catalyzed
       hydrolysis of a carboxylic ester.
+  - node_id: carboxylesterase_pnba
+    label: para-nitrobenzyl esterase PnbA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR002018
+    gene_symbols:
+    - pnbA
+    description: Carboxylesterase type B family enzyme (PnbA; EC 3.1.1.1) that catalyzes
+      the hydrolysis of carboxylic esters into a carboxylate and an alcohol.
+    protein_examples:
+    - uniprot_id: UniProtKB:P37967
+      protein_label: Para-nitrobenzyl esterase
+      gene_symbol: pnbA
+      taxon_id: NCBITaxon:224308
+      taxon_label: Bacillus subtilis 168
+      entry_status: REVIEWED
+      proteome_id: UP000001570
+      retrieved_on: '2026-10-31'
+      entry_version: 146
+      sequence_version: 2
+      role: PnbA is the Bacillus subtilis 168 para-nitrobenzyl carboxylesterase (EC
+        3.1.1.1) that catalyzes hydrolysis of carboxylic esters to the free acid and
+        alcohol.
+      evidence:
+      - reference: DOI:10.1016/0378-1119(94)90630-0
+        snippet: A Bacillus subtilis PNB carboxy-esterase (PNBCE) catalyzes hydrolysis
+          of several beta-lactam antibiotic PNB esters to the corresponding free acid
+          and PNB alcohol. This communication (i) describes cloning the pnbA gene,
+          which encodes PNBCE, (ii) provides the nucleotide sequence of the pnbA open
+          reading frame (ORF) and (iii) describes a method for efficiently expressing
+          the ORF in Escherichia coli.
+        notes: Zock et al. cloned and sequenced the Bacillus subtilis 168 pnbA gene
+          encoding para-nitrobenzyl esterase (UniProtKB:P37967).
   edges:
   - subject: carboxylesterase_catalytic_activity
     predicate: confers
@@ -167,3 +231,19 @@ causal_graphs:
       snippet: 'Reaction: A carboxylic ester + H_{2}O = an alcohol + a carboxylate'
       notes: IUBMB EC 3.1.1.1 defines the carboxylesterase reaction as a carboxylic
         ester + H2O = an alcohol + a carboxylate.
+  - subject: carboxylesterase_pnba
+    predicate: enables
+    predicate_id: RO:0002327
+    object: carboxylesterase_catalytic_activity
+    description: Para-nitrobenzyl esterase PnbA enables carboxylesterase catalytic
+      activity.
+    evidence:
+    - reference: DOI:10.1016/0378-1119(94)90630-0
+      snippet: A Bacillus subtilis PNB carboxy-esterase (PNBCE) catalyzes hydrolysis
+        of several beta-lactam antibiotic PNB esters to the corresponding free acid
+        and PNB alcohol. This communication (i) describes cloning the pnbA gene, which
+        encodes PNBCE, (ii) provides the nucleotide sequence of the pnbA open reading
+        frame (ORF) and (iii) describes a method for efficiently expressing the ORF
+        in Escherichia coli.
+      notes: Zock et al. characterized Bacillus subtilis 168 PnbA as a carboxylesterase
+        hydrolyzing carboxylic esters into the free acid and alcohol.
