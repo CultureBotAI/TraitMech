@@ -4616,8 +4616,8 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
         "graph_id": "carboxylesterase_hydrolysis_sketch",
         "discussion_id": "carboxylesterase-activity-protein-example-gap",
         "scope_notes": (
-            "Mechanistic graph backed by DOI:10.1074/jbc.M304425200, "
-            "DOI:10.1128/jcm.19.6.826-829.1984, and "
+            "Mechanistic graph backed by EC 3.1.1.1, "
+            "DOI:10.1128/JCM.43.8.3713-3717.2005, and "
             "DOI:10.1016/0378-1119(94)90630-0; exemplified on "
             "carboxylesterase_pnba with Bacillus subtilis 168 "
             "(NCBITaxon:224308; UP000001570) para-nitrobenzyl esterase PnbA "
@@ -4745,8 +4745,9 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
                 "by adding InterPro:IPR002018-grounded GENE_OR_PROTEIN node "
                 "carboxylesterase_pnba with reviewed Bacillus subtilis 168 "
                 "(NCBITaxon:224308; UP000001570) protein_examples "
-                "UniProtKB:P37967 (PnbA) backed by "
-                "DOI:10.1016/0378-1119(94)90630-0."
+                "UniProtKB:P37967 (PnbA / pnbA, para-nitrobenzyl esterase, "
+                "correcting the EstA symbol mislabeled in the open discussion "
+                "prompt) backed by DOI:10.1016/0378-1119(94)90630-0."
             ),
         },
         "changes_summary": (
@@ -4755,8 +4756,9 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
             "carboxylesterase_hydrolysis_sketch to MECHANISTIC; added "
             "InterPro:IPR002018-grounded GENE_OR_PROTEIN node "
             "carboxylesterase_pnba with reviewed Bacillus subtilis 168 "
-            "(NCBITaxon:224308) protein_examples UniProtKB:P37967 (PnbA) "
-            "backed by DOI:10.1016/0378-1119(94)90630-0; resolved "
+            "(NCBITaxon:224308) protein_examples UniProtKB:P37967 (PnbA / pnbA, "
+            "correcting the EstA symbol mislabeled in the open discussion "
+            "prompt) backed by DOI:10.1016/0378-1119(94)90630-0; resolved "
             "carboxylesterase-activity-protein-example-gap."
         ),
     },
@@ -4765,8 +4767,8 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
         "graph_id": "gamma_glutamyltransferase_hydrolysis_sketch",
         "discussion_id": "gamma-glutamyltransferase-activity-protein-example-gap",
         "scope_notes": (
-            "Mechanistic graph backed by DOI:10.1074/jbc.M109.054213, "
-            "DOI:10.1128/jcm.19.6.826-829.1984, and "
+            "Mechanistic graph backed by EC 3.4.19.13, "
+            "DOI:10.3389/fgene.2023.1240581, and "
             "DOI:10.1073/pnas.0511020103; exemplified on "
             "gamma_glutamyltransferase_ggt with Escherichia coli K-12 "
             "(NCBITaxon:83333; UP000000625) glutathione hydrolase proenzyme "
@@ -4807,10 +4809,11 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
             "grounding": "InterPro:IPR000101",
             "gene_symbols": ["ggt"],
             "description": (
-                "Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2) "
-                "that catalyzes the hydrolysis of gamma-glutamyl bonds in "
-                "glutathione and other gamma-glutamyl compounds and transfers "
-                "gamma-glutamyl moieties to amino acid or peptide acceptors."
+                "Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2 / "
+                "EC 3.4.19.13) that catalyzes the hydrolysis of gamma-glutamyl "
+                "bonds in glutathione and other gamma-glutamyl compounds and "
+                "transfers gamma-glutamyl moieties to amino acid or peptide "
+                "acceptors."
             ),
             "protein_examples": [
                 {
@@ -4916,8 +4919,8 @@ C8S3_COHORT_K_PROMOTIONS: dict[str, dict[str, Any]] = {
         "graph_id": "pyrrolidonyl_arylamidase_hydrolysis_sketch",
         "discussion_id": "pyrrolidonyl-arylamidase-activity-protein-example-gap",
         "scope_notes": (
-            "Mechanistic graph backed by DOI:10.1006/jmbi.1999.2995, "
-            "DOI:10.1128/jcm.15.6.987-990.1982, and "
+            "Mechanistic graph backed by EC 3.4.19.3, "
+            "DOI:10.1128/JCM.37.11.3443-3447.1999, and "
             "DOI:10.1016/0014-5793(92)80656-2; exemplified on "
             "pyrrolidonyl_arylamidase_pcp with Bacillus subtilis 168 "
             "(NCBITaxon:224308; UP000001570) pyrrolidone-carboxylate "

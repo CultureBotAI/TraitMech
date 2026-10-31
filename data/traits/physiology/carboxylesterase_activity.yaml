@@ -109,7 +109,8 @@ discussions:
     DOI:10.1016/0378-1119(94)90630-0) and promoted carboxylesterase_hydrolysis_sketch
     to MECHANISTIC by adding InterPro:IPR002018-grounded GENE_OR_PROTEIN node carboxylesterase_pnba
     with reviewed Bacillus subtilis 168 (NCBITaxon:224308; UP000001570) protein_examples
-    UniProtKB:P37967 (PnbA) backed by DOI:10.1016/0378-1119(94)90630-0.
+    UniProtKB:P37967 (PnbA / pnbA, para-nitrobenzyl esterase, correcting the EstA
+    symbol mislabeled in the open discussion prompt) backed by DOI:10.1016/0378-1119(94)90630-0.
 curation_history:
 - timestamp: '2026-09-12T03:42:43Z'
   curator: codex
@@ -138,7 +139,8 @@ curation_history:
     canonical example; promoted carboxylesterase_hydrolysis_sketch to MECHANISTIC;
     added InterPro:IPR002018-grounded GENE_OR_PROTEIN node carboxylesterase_pnba with
     reviewed Bacillus subtilis 168 (NCBITaxon:224308) protein_examples UniProtKB:P37967
-    (PnbA) backed by DOI:10.1016/0378-1119(94)90630-0; resolved carboxylesterase-activity-protein-example-gap.
+    (PnbA / pnbA, correcting the EstA symbol mislabeled in the open discussion prompt)
+    backed by DOI:10.1016/0378-1119(94)90630-0; resolved carboxylesterase-activity-protein-example-gap.
   llm_assisted: true
 causal_graphs:
 - graph_id: carboxylesterase_hydrolysis_sketch
@@ -147,7 +149,7 @@ causal_graphs:
     catalytic activity and alcohol release from carboxylic esters to the carboxylesterase
     activity phenotype.
   scope_status: MECHANISTIC
-  scope_notes: Mechanistic graph backed by DOI:10.1074/jbc.M304425200, DOI:10.1128/jcm.19.6.826-829.1984,
+  scope_notes: Mechanistic graph backed by EC 3.1.1.1, DOI:10.1128/JCM.43.8.3713-3717.2005,
     and DOI:10.1016/0378-1119(94)90630-0; exemplified on carboxylesterase_pnba with
     Bacillus subtilis 168 (NCBITaxon:224308; UP000001570) para-nitrobenzyl esterase
     PnbA (UniProtKB:P37967).

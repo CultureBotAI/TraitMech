@@ -14,6 +14,7 @@ session:
 links:
   issues:
   - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2053
 events:
 - type: EDIT
   outcome: changed
@@ -27,10 +28,12 @@ events:
     for Cycle 8 Stage 3 (protein_examples). Promoted the 3 Cycle 8 Stage 2 Cohort K NONMECHANISTIC
     records (carboxylesterase_activity, gamma_glutamyltransferase_activity, pyrrolidonyl_arylamidase_activity)
     to MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified reviewed
-    UniProtKB protein_examples (P37967 PnbA on Bacillus subtilis 168 UP000001570; P18956 Ggt on
-    Escherichia coli K-12 UP000000625; P28618 Pcp on Bacillus subtilis 168 UP000001570, replacing
-    the mis-cited OpuAA accession P46920 in the open discussion note), verbatim primary-source
-    evidence snippets, and RESOLVED CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv
-    (197 uses across 163 unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv
-    (159 MECHANISTIC pass, 597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    UniProtKB protein_examples (P37967 PnbA on Bacillus subtilis 168 UP000001570, correcting the
+    EstA gene symbol mislabeled in the open discussion prompt; P18956 Ggt on Escherichia coli K-12
+    UP000000625 with dual EC 2.3.2.2 / EC 3.4.19.13 attribution; P28618 Pcp on Bacillus subtilis 168
+    UP000001570, replacing the mis-cited OpuAA accession P46920 in the open discussion note),
+    record-evidence-backed scope_notes, verbatim primary-source evidence snippets, and RESOLVED
+    CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv (197 uses across 163
+    unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv (159 MECHANISTIC pass,
+    597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
     and all derived reports and pages.

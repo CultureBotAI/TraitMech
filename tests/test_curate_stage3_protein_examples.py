@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -150,6 +151,25 @@ def test_c2s3_and_c3s3_promotions_and_blockers_committed() -> None:
             graph = graphs[0]
             assert graph["scope_status"] == "MECHANISTIC"
             assert graph["scope_notes"] == spec["scope_notes"]
+            if promo_dict is C8S3_COHORT_K_PROMOTIONS:
+                record_refs = {ev.get("reference") for ev in doc.get("evidence", [])}
+                canon_refs = {ce.get("reference") for ce in doc.get("canonical_examples", [])}
+                edge_refs = {
+                    ev.get("reference")
+                    for edge in graph.get("edges", [])
+                    for ev in edge.get("evidence", [])
+                }
+                pe_refs = {
+                    ev.get("reference")
+                    for n in graph.get("nodes", [])
+                    for pe in n.get("protein_examples", [])
+                    for ev in pe.get("evidence", [])
+                }
+                all_refs = record_refs | canon_refs | edge_refs | pe_refs
+                for doi in re.findall(r"DOI:[^\s,;]+", graph["scope_notes"]):
+                    assert doi.rstrip(".") in all_refs, (
+                        f"{rel_path}: unreferenced {doi} in scope_notes"
+                    )
             expected_node = spec["new_node"]
             nodes_by_id = {n["node_id"]: n for n in graph["nodes"]}
             assert expected_node["node_id"] in nodes_by_id

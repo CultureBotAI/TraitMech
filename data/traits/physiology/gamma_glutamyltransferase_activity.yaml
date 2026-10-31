@@ -179,7 +179,7 @@ causal_graphs:
     catalytic activity and L-glutamate release via a gamma-glutamyl-enzyme intermediate
     to the gamma-glutamyltransferase activity phenotype.
   scope_status: MECHANISTIC
-  scope_notes: Mechanistic graph backed by DOI:10.1074/jbc.M109.054213, DOI:10.1128/jcm.19.6.826-829.1984,
+  scope_notes: Mechanistic graph backed by EC 3.4.19.13, DOI:10.3389/fgene.2023.1240581,
     and DOI:10.1073/pnas.0511020103; exemplified on gamma_glutamyltransferase_ggt
     with Escherichia coli K-12 (NCBITaxon:83333; UP000000625) glutathione hydrolase
     proenzyme Ggt (UniProtKB:P18956).
@@ -210,9 +210,10 @@ causal_graphs:
     grounding: InterPro:IPR000101
     gene_symbols:
     - ggt
-    description: Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2) that
-      catalyzes the hydrolysis of gamma-glutamyl bonds in glutathione and other gamma-glutamyl
-      compounds and transfers gamma-glutamyl moieties to amino acid or peptide acceptors.
+    description: Gamma-glutamyltranspeptidase family enzyme (Ggt; EC 2.3.2.2 / EC
+      3.4.19.13) that catalyzes the hydrolysis of gamma-glutamyl bonds in glutathione
+      and other gamma-glutamyl compounds and transfers gamma-glutamyl moieties to
+      amino acid or peptide acceptors.
     protein_examples:
     - uniprot_id: UniProtKB:P18956
       protein_label: Glutathione hydrolase proenzyme
