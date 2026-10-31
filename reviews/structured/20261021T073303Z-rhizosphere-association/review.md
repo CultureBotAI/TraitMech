@@ -1,0 +1,1215 @@
+# Evidence and ontology review of rhizosphere association (traitmech:000051)
+
+- Review: 20261021T073303Z-rhizosphere-association
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T07:25:18Z
+- Finished UTC: 2026-10-21T07:33:03Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The fallback identity, habitat-association parent and current external identifiers resolve. Two major findings concern five external relation mismatches and an unqualified motility-necessity claim that exceeds the inspected source context. One minor finding concerns locally undocumented human acceptance. Nine nodes and eight edges were inspected; source-specific support and limitations are retained rather than treating all root-associated organisms as sharing one mechanism.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Fifth batch003 target, selected in lexicographic path order after the saved plant-pathogen review; one entire previously uncovered TraitRecord.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000051 | data/traits/ecology/rhizosphere_association.yaml | maintained | rhizosphere association |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000051 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000051 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000051 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | traitmech:000051 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | traitmech:000051 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000051 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000051 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | traitmech:000051 | The selected record validates. |
+| Focused strict validation | passed | True | traitmech:000051 | One file scanned; zero strict errors. |
+| Focused snippet verification | passed | True | traitmech:000051 | Zero quoted snippets are asserted. This command does not verify six reference identities or their evidence notes. |
+| Structured-source adapter availability | unavailable | False | traitmech:000051 | No usable runner in the bounded current search; the official source catalog was inspected as fallback. |
+| Expression-module applicability | not_applicable | False | traitmech:000051 | No matching organism/dataset for the sole named species. CheA/CheW/CheY module queries would not establish a strain-specific assertion for this record. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: fallback, label, related adjective and class
+
+identity: supported. Targets: traitmech:000051.
+
+The fallback and proposal identify one habitat-association concept; no active exact METPO term is substituted by resemblance. The adjective is appropriately a related synonym.
+
+### Native checklist: habitat concept and source scope
+
+evidence: concern. Targets: traitmech:000051.
+
+The root-influenced habitat concept is supported. Exact high-activity wording and exudate-only causal framing were only partly verified; no absent-full-text-support inference is made.
+
+### Native checklist: strictly broader habitat parent
+
+consistency: supported. Targets: traitmech:000051.
+
+Root-influenced soil residence is narrower than the primary habitat/niche classifier.
+
+### Native checklist: ecological class and contextual graph
+
+representation: supported. Targets: traitmech:000051.
+
+ECOLOGY/CLASS and NONMECHANISTIC scope are appropriate. Substance and habitat condition are distinguished. Optional protein examples and a universal connected molecular model are not required.
+
+### Native checklist: canonical species and historical model context
+
+evidence: concern. Targets: traitmech:000051.
+
+The current taxon resolves and the cited review supports genus-level model context with historical species references. Modern assignment of historical strains to taxon294 and their direct experimental support remain unverified. This does not establish that the species example is false.
+
+### Native checklist: six references and all eight evidence-bearing edges
+
+evidence: concern. Targets: traitmech:000051.
+
+The relevant review passages support several notes and preserve the motile-bacteria qualifier at edge4. The100-fold wording is present, but edge5’s unqualified necessity exceeds its organism/assay context. Other explicitly bounded source-access limits are retained.
+
+### Native checklist: all nine nodes and eight edges
+
+graph: concern. Targets: traitmech:000051.
+
+Five external semantic endpoint errors are separate from the source-scope finding. The PATHWAY is explicitly a process; environmental confers is locally admitted.
+
+Zero-based ledger: node0 is the habitat trait, node1 substances, node2 environmental habitat, nodes3/4/7/8 processes, node5 a reviewed generic receptor family and node6 a signaling process represented as PATHWAY. Edge0 has broad Biolink-compatible endpoints with partly inspected source support. Edge1 fits the local environmental-condition-to-trait proposal; the biomass/activity distinction remains a source precision limit. Edge2 has a protein subject under process-to-process regulation. Edge3 has compatible processual endpoints and source-note support. Edge4 has a process subject under material-executor enables even though its motile-bacteria evidence wording is supported. Edges5/7 have TRAIT objects under process-range regulation. Edge6 has a substance subject under process regulation; the source supplies contextual prerequisite wording, not universal class proof. Edge5 additionally extends an assay-specific numerical review summary to unqualified necessity. No missing accession, alternative mechanism or experiment is invented.
+
+### Native checklist: structured-source applicability
+
+evidence: supported. Targets: traitmech:000051.
+
+A fresh bounded search found no usable adapter runner. Official catalog fallback contained no matching species dataset, so named-gene module queries were not applicable and no other species was substituted.
+
+### Native checklist: discussion and dataset slots
+
+completeness: supported. Targets: traitmech:000051.
+
+No discussion placeholder or asserted dataset accession requires resolution. Optional experimental/expression data are not invented.
+
+### Native checklist: REVIEWED and history
+
+provenance: concern. Targets: traitmech:000051.
+
+Eight AI-assisted events document curation but no explicit human scientific acceptance in the inspected target-specific material.
+
+## Findings
+
+### external-relation-endpoints: Five relation uses conflict with external endpoint meanings
+
+major / open / confirmed; issue key: rhizosphere-association-external-relation-endpoints.
+
+Edges2/6 use protein/substance subjects under RO positive regulation’s process domain. Edges5/7 have trait objects under its process range. Edge4 uses a process as the enables executor. Edge3’s signaling pathway is processual and edge1’s environmental subject is admitted by the local proposal; neither is counted as an error.
+
+### motility-necessity-overgeneralized: A contextual numerical result is extended to unqualified necessity
+
+major / open / confirmed; issue key: rhizosphere-association-motility-necessity-overgeneralized.
+
+Edge5 states that flagellar motility is required for efficient root colonization/rhizosphere association without the bacterial-system or assay qualifications of the evidence. The cited review really contains the100-fold statement, but one cited primary study reports comparable baseline colonization in a comparison, conditional differences, and distinguishes structural presence from movement. This does not establish class-wide necessity. NONMECHANISTIC breadth does not qualify the explicit required wording. The number is not called fabricated and no opposite universal effect is inferred.
+
+### reviewed-signoff-not-documented: Inspected REVIEWED provenance lacks a human-acceptance link
+
+minor / open / confirmed; issue key: rhizosphere-association-reviewed-signoff-not-documented.
+
+Eight AI-assisted events do not identify human scientific acceptance in inspected target-specific local material. The bounded search does not rule out private or remote approval.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-relations
+
+Reconcile existing endpoint concepts with actual external predicate meanings during separately authorized curation.
+
+- Check the selected external identifier and inherited endpoint meanings; distinguish substances, actors, processes and traits.
+- Preserve the processual pathway and already valid environmental-condition allowance.
+- Do not retype concepts merely to fit an identifier; authorized edits require guarded writes, history and applicable strict/graph/qc checks.
+
+### retain-quantitative-context
+
+Retain the cited bacterial-system and assay context and align necessity wording with inspected evidence.
+
+- Distinguish secondary review summary from the actual primary comparisons; keep structural presence and movement conceptually separate.
+- Do not replace an unsupported broad requirement with an opposite universal claim or suggest optimization experiments.
+- Keep the100-fold statement tied to its source and do not imply independent numerical reanalysis.
+
+### document-status
+
+Locate and document human scientific acceptance or retain the status-basis question.
+
+- AI history and successful automated validation do not identify a human approver.
+- Any scientific-status change requires separate curation authorization.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-rhizosphere_association-validate | /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-validate.log; Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:55Z; metadata rhizosphere_association-validate.json | context_only | The selected record validates. |
+| check-rhizosphere_association-strict | /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-strict.log; Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:56Z; metadata rhizosphere_association-strict.json | context_only | One file scanned; zero strict errors. |
+| check-rhizosphere_association-snippets | /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-snippets.log; Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:52Z; metadata rhizosphere_association-snippets.json | context_only | Zero quoted snippets are asserted. This command does not verify six reference identities or their evidence notes. |
+| record | data/traits/ecology/rhizosphere_association.yaml; Entire target, nine nodes, eight edges and eight history events | partial | The record describes root-influenced soil residence and a contextual bacterial graph. An explicit required claim at edge5 and external relation meanings require curation. |
+| identity | data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv; Complete RDF label/literal scan including normalized deprecated labels; proposal rows49/53 | supports | No exact active/deprecated rhizosphere-association term was found in the captured ontology. Fallback000051 maps to proposed1007650, beneath habitat parent000047/proposed1007646. Proposal IDs and confers2007700 are not asserted as active upstream terms. |
+| parent | data/traits/ecology/habitat_association.yaml; Entire context record; definition and identifier used for hierarchy | supports | The parent covers an organism’s primary environment/niche, explicitly including rhizosphere. Restriction to root-influenced soil is narrower. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042710; Live exact term label, aspect and active status | supports | GO:0042710 is active biofilm formation, a biological process matching the current node. |
+| taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=294; Live exact species identity | supports | NCBITaxon:294 resolves to Pseudomonas fluorescens. Taxon identity is distinct from historical strain naming and literature attribution. |
+| relations | Cached authoritative RO database; captured Biolink model; v8 confers proposal; Recursive relation definitions/domains/ranges and actual local environmental-subject allowance | partial | RO positive regulation is process-to-process, while enables inherits continuant/material-executor subject meanings. Five edges conflict with those semantics. The signaling PATHWAY is described as a process, and provisional confers explicitly admits environmental conditions. |
+| ledger | Read-only node/edge ledger; All nine nodes and eight edges, zero-based locators | partial | Five definite external endpoint mismatches are at2/4/5/6/7. Other compatible formal types do not establish source entailment. |
+| shape | Read-only graph check; Nine unique node identifiers, eight edges | supports | All endpoints resolve. |
+| owner-context | scripts/migrate_oxygen_senses.py; history/infrastructure/oxygen-senses/2026-08-17T031421Z-claude-code-76561e.yaml; Script lines35–40/125–131 and matching history lines36–38 | supports | Historical maintenance explicitly distinguishes root-exudate substances from the environmental habitat condition. The current record preserves that distinction. |
+| expression-runner | Local structured-source runner discovery; Fresh bounded ignored-inclusive PATH/install/project search | context_only | No usable kg-microbe-sources runner was identified in the declared search scope; this is not a disk-wide absence claim. |
+| expression-index | https://imodulondb.org/api/datasets; Complete retrieved official catalog and exact target-organism match | context_only | The retrieved catalog has20organisms/28datasets and no P. fluorescens entry. Other Pseudomonas species are not substituted. No matched dataset means gene/module queries are not applicable, not that the biology is absent. |
+| search | Local identity, ownership and provenance search; Ignored-inclusive identifier, label/slug, graph and matching target-scope search | partial | Eight AI-assisted events do not identify human scientific acceptance in inspected target-specific local provenance. Private/remote approval remains unknown. |
+| policy | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md; Source scope, graph semantics and human scientific acceptance rules | supports | A heterogeneous NONMECHANISTIC graph need not gain token accessions or every mechanism, but explicit claims must retain source scope and qualifier strength. Automated checks do not establish human acceptance. |
+| bibliography | Europe PMC; publisher previews; author-hosted PDFs; All six record references and explicit primary-source corroboration ledger | supports | All six record reference identities resolve. Relevant full text was inspected for four; two remained abstract/preview-only. Thirteen file receipts were hash-verified, including six reused accesses with original timestamps retained. |
+| philippot | https://www.nature.com/articles/nrmicro3109; PMID24056930 abstract and publisher Abstract/Key Points preview | partial | Supports the root-soil interface and root-associated community concept, with soil and other environmental determinants alongside plant effects. The exact exudate-causation statement was not fully audited against subscription text. |
+| fierer | https://www.fiererlab.org/s/Fierer_Nat_Rev_Micro_2017.pdf; PDFp2 Rhizosphere glossary/Figure1 caption; p5 plant effects and carbon discussion; DOI10.1038/nrmicro.2017.87 | partial | Supports rhizosphere habitat and typical enrichment in plant-derived carbon and microbial biomass. Biomass is not interchangeable with activity; the high-activity wording is only partly verified from the inspected passages, not disproved throughout the paper. |
+| example | https://www.annualreviews.org/content/journals/10.1146/annurev.phyto.39.1.461; PMID11701873 abstract; publisher bibliography references5/21 | partial | The abstract identifies Pseudomonas as a root-colonization model in a biocontrol context. Bibliography supplies historical P. fluorescens WCS365 context, but those experiments and modern strain-to-taxon294 assignment were not independently verified. The generic example is partly supported, not rejected. |
+| frontiers | https://pmc.ncbi.nlm.nih.gov/articles/PMC11600982/; Section s3 paragraph1; Figure1 caption in Introduction s1; DOI10.3389/fpls.2024.1491495 | supports | The receptor/signaling notes follow the review’s contextual description. The figure caption supplies the carbon-source/prerequisite wording while discussing most bacteria. Review-level context does not establish a requirement for every organism in the habitat class. |
+| biology | https://pmc.ncbi.nlm.nih.gov/articles/PMC10886372/; Introduction sec1-biology-13-00095 paragraph3; DOI10.3390/biology13020095 | supports | Direct support for the first-step description specifically for motile bacteria and the nutrient/protection biofilm context. Edge4 already retains the motile-bacteria qualifier; it is not flagged as missing. |
+| fems | https://pmc.ncbi.nlm.nih.gov/articles/PMC10786197/; Chemotaxis and motility sec2 paragraph2; references bib47/bib190; DOI10.1093/femsre/fuad066 | partial | The review explicitly reports the100-fold reduction. That number is not a transcription error. Its citations concern particular bacterial systems and do not alone establish a broad necessary condition for rhizosphere association. |
+| primary-context | https://par.nsf.gov/servlets/purl/10337659; DOI10.1016/j.chom.2021.09.005, PMID34610294; PDFp8 Results, subsection on adhesion and colony formation, lower-left/upper-right paragraph | partial | In the B. velezensis FZB42/Arabidopsis study, one comparison has similar baseline colonization and a contrast under an additional tested condition. The passage distinguishes structural presence from movement. This does not establish class-wide motility necessity. The100-fold magnitude was not independently reconstructed from figures. |
+| second-primary | https://pubmed.ncbi.nlm.nih.gov/29714096/; Indexed abstract; DOI10.1094/MPMI-01-18-0003-R | partial | The other review citation concerns historically named B. amyloliquefaciens SQR9. Only the abstract was inspected; publisher access failed403. Its100-fold effect was not independently verified from that abstract, and no modern taxonomic reassignment is inferred. |
+
+## Limits And Additional Notes
+
+- Four of six record sources had relevant full-text portions inspected; Philippot and Lugtenberg remained abstract/preview-only. Uninspected full text is not treated as absent support.
+- The exact high-activity/exudate-causation formulations are only partly verified. Microbial biomass and activity are not equated.
+- The generic species example has genus-level and historical species context; modern strain-to-taxon294 attribution and direct experiments were not independently verified.
+- The100-fold phrase is verified in the secondary review; its primary numerical magnitude was not independently reconstructed. One cited primary full-text comparison is condition-dependent; the other primary source was abstract-only.
+- Expression adapter runner was unavailable within the declared search; official catalog had no matching species. No module-based phenotype inference or negative biological inference is made.
+- The graph remains a contextual sketch, not a universal mechanism or experimental recommendation.
+- Local proposal status, bounded human-acceptance search and prior corpus-check failures/skips are retained. No scientific record, mapping, history, native status or generated product is changed.
+- The complete native input capture preceded judgment. Primary-source scrutiny qualified the secondary quantitative statement before the finding was authored.
+- A separate ontology critic checked the necessity finding independently of the formal range error; the two require distinct acceptance checks.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T073303Z-rhizosphere-association
+kind: record
+repository: CultureBotAI/TraitMech
+title: Evidence and ontology review of rhizosphere association (traitmech:000051)
+started_at: '2026-10-21T07:25:18Z'
+finished_at: '2026-10-21T07:33:03Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The fallback identity, habitat-association parent and current external identifiers
+  resolve. Two major findings concern five external relation mismatches and an unqualified
+  motility-necessity claim that exceeds the inspected source context. One minor finding
+  concerns locally undocumented human acceptance. Nine nodes and eight edges were
+  inspected; source-specific support and limitations are retained rather than treating
+  all root-associated organisms as sharing one mechanism.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/habitat_association.yaml
+    sha256: 623d18cf295c01782024055b4dca534217f52d3ef18d46f086af27fe504bbd2a
+    role: context
+  - path: data/traits/ecology/rhizosphere_association.yaml
+    sha256: 311fe0327d4b289718e9fcd0f2e287e119a8274a4293c591a24e654b548a88e7
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/oxygen-senses/2026-08-17T031421Z-claude-code-76561e.yaml
+    sha256: 2a021c768e6db37eed31e3ab73c9714bd85ef31bc5f04e986ac0642c16fbe2a3
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: research/traits/ecology/rhizosphere_association-deep-research-falcon.md
+    sha256: 76d9de13495dc5d24c4c508c220d1f141e95042ffa9495ae532f53ab93e1edbc
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000051
+  path: data/traits/ecology/rhizosphere_association.yaml
+  label: rhizosphere association
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Fifth batch003 target, selected in lexicographic path order after the
+    saved plant-pathogen review; one entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000051
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000051
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000051
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: rhizosphere_association-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just validate data/traits/ecology/rhizosphere_association.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-rhizosphere_association-validate
+- check_id: rhizosphere_association-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just validate-strict data/traits/ecology/rhizosphere_association.yaml --out
+    /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-rhizosphere_association-strict
+- check_id: rhizosphere_association-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000051
+  command: just verify-snippets --record data/traits/ecology/rhizosphere_association.yaml
+    --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Zero quoted snippets are asserted. This command does not verify six reference
+    identities or their evidence notes.
+  evidence_ids:
+  - check-rhizosphere_association-snippets
+- check_id: structured-source-runner
+  name: Structured-source adapter availability
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000051
+  summary: No usable runner in the bounded current search; the official source catalog
+    was inspected as fallback.
+  evidence_ids:
+  - expression-runner
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000051
+  summary: No matching organism/dataset for the sole named species. CheA/CheW/CheY
+    module queries would not establish a strain-specific assertion for this record.
+  evidence_ids:
+  - expression-index
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-rhizosphere_association-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-validate.log
+  locator: Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:55Z; metadata rhizosphere_association-validate.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: a1c9bc649001d3bc332cfea0e726b965e56b0a6ffcb89e02f1f40ab37cb55cb2
+- evidence_id: check-rhizosphere_association-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-strict.log
+  locator: Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:56Z; metadata rhizosphere_association-strict.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 06a98576f57d29b2f976684a5722e16e9e7ebfaaf39d17df90005194f90f0194
+- evidence_id: check-rhizosphere_association-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/rhizosphere_association-snippets.log
+  locator: Executed 2026-10-21T07:25:52Z through 2026-10-21T07:25:52Z; metadata rhizosphere_association-snippets.json
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: context_only
+  summary: Zero quoted snippets are asserted. This command does not verify six reference
+    identities or their evidence notes.
+  snapshot_sha256: b0dfa14fffc9f54c73907cf9358538277c28591dd123c4d024bd9c861093642b
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/rhizosphere_association.yaml
+  locator: Entire target, nine nodes, eight edges and eight history events
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: partial
+  summary: The record describes root-influenced soil residence and a contextual bacterial
+    graph. An explicit required claim at edge5 and external relation meanings require
+    curation.
+  snapshot_sha256: 311fe0327d4b289718e9fcd0f2e287e119a8274a4293c591a24e654b548a88e7
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Complete RDF label/literal scan including normalized deprecated labels;
+    proposal rows49/53
+  accessed_at: '2026-10-21T07:26:09Z'
+  support: supports
+  summary: No exact active/deprecated rhizosphere-association term was found in the
+    captured ontology. Fallback000051 maps to proposed1007650, beneath habitat parent000047/proposed1007646.
+    Proposal IDs and confers2007700 are not asserted as active upstream terms.
+  snapshot_sha256: 629b918d7a1309153b72bea283d01198a941ba542363b32148401a250510920d
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/ecology/habitat_association.yaml
+  locator: Entire context record; definition and identifier used for hierarchy
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: supports
+  summary: The parent covers an organism’s primary environment/niche, explicitly including
+    rhizosphere. Restriction to root-influenced soil is narrower.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042710
+  locator: Live exact term label, aspect and active status
+  accessed_at: '2026-10-21T07:26:19Z'
+  support: supports
+  summary: GO:0042710 is active biofilm formation, a biological process matching the
+    current node.
+  snapshot_sha256: 90945e2ee9c5c90e37fedd5936364b86af1ad1e4d5155239f31baae9765b35c8
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=294
+  locator: Live exact species identity
+  accessed_at: '2026-10-21T07:26:20Z'
+  support: supports
+  summary: NCBITaxon:294 resolves to Pseudomonas fluorescens. Taxon identity is distinct
+    from historical strain naming and literature attribution.
+  snapshot_sha256: 21b46c87e0e5af775b371bf29f4a8574308da49ca33d4e84f060d9c4ede3d7b8
+- evidence_id: relations
+  kind: authority
+  reference: Cached authoritative RO database; captured Biolink model; v8 confers
+    proposal
+  locator: Recursive relation definitions/domains/ranges and actual local environmental-subject
+    allowance
+  accessed_at: '2026-10-21T07:26:10Z'
+  support: partial
+  summary: RO positive regulation is process-to-process, while enables inherits continuant/material-executor
+    subject meanings. Five edges conflict with those semantics. The signaling PATHWAY
+    is described as a process, and provisional confers explicitly admits environmental
+    conditions.
+  snapshot_sha256: 2795e22a73a42fe6868841f96606c76402c2d8865a984efac151a559c4e4ea76
+- evidence_id: ledger
+  kind: validation
+  reference: Read-only node/edge ledger
+  locator: All nine nodes and eight edges, zero-based locators
+  accessed_at: '2026-10-21T07:27:46Z'
+  support: partial
+  summary: Five definite external endpoint mismatches are at2/4/5/6/7. Other compatible
+    formal types do not establish source entailment.
+  snapshot_sha256: a4f48e455e1b4a9a958bffa76415b064aef5b371dac5bc517626b497c7179552
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph check
+  locator: Nine unique node identifiers, eight edges
+  accessed_at: '2026-10-21T07:25:53Z'
+  support: supports
+  summary: All endpoints resolve.
+  snapshot_sha256: b7abad7e29c998b2fc58e980d8c0d5e0d4b328450537cc119e86373f7e0121d9
+- evidence_id: owner-context
+  kind: record_content
+  reference: scripts/migrate_oxygen_senses.py; history/infrastructure/oxygen-senses/2026-08-17T031421Z-claude-code-76561e.yaml
+  locator: Script lines35–40/125–131 and matching history lines36–38
+  accessed_at: '2026-10-21T07:27:46Z'
+  support: supports
+  summary: Historical maintenance explicitly distinguishes root-exudate substances
+    from the environmental habitat condition. The current record preserves that distinction.
+  snapshot_sha256: 3ca68972d94331fefd664f4473158dc294f463f86bdb8523108a55c772175f03
+- evidence_id: expression-runner
+  kind: search
+  reference: Local structured-source runner discovery
+  locator: Fresh bounded ignored-inclusive PATH/install/project search
+  accessed_at: '2026-10-21T07:27:49.297838Z'
+  support: context_only
+  summary: No usable kg-microbe-sources runner was identified in the declared search
+    scope; this is not a disk-wide absence claim.
+  snapshot_sha256: 26270cfd464db1f50706ddd16c97a141372c345e8c78a7061ffb468995ac7615
+  search_scope: The accompanying runner-discovery receipt records exact PATH/install/project
+    roots and ignored-inclusive traversal. No claim is made about unsearched directories.
+- evidence_id: expression-index
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Complete retrieved official catalog and exact target-organism match
+  accessed_at: '2026-10-21T07:28:12Z'
+  support: context_only
+  summary: The retrieved catalog has20organisms/28datasets and no P. fluorescens entry.
+    Other Pseudomonas species are not substituted. No matched dataset means gene/module
+    queries are not applicable, not that the biology is absent.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: search
+  kind: search
+  reference: Local identity, ownership and provenance search
+  locator: Ignored-inclusive identifier, label/slug, graph and matching target-scope
+    search
+  accessed_at: '2026-10-21T07:27:10.955771Z'
+  support: partial
+  summary: Eight AI-assisted events do not identify human scientific acceptance in
+    inspected target-specific local provenance. Private/remote approval remains unknown.
+  snapshot_sha256: 602875e0a3f6a4f8bce037382ba1922ae1375d48ad97374960edf3c3ef0cd83f
+  search_scope: Exact bounded commands/paths are recorded in the search receipt, including
+    ignored and hidden files. Complete METPO RDF was scanned separately. Provider
+    header was captured only as provenance; private/remote approvals were not searched.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Source scope, graph semantics and human scientific acceptance rules
+  accessed_at: '2026-10-21T07:33:03Z'
+  support: supports
+  summary: A heterogeneous NONMECHANISTIC graph need not gain token accessions or
+    every mechanism, but explicit claims must retain source scope and qualifier strength.
+    Automated checks do not establish human acceptance.
+- evidence_id: bibliography
+  kind: database
+  reference: Europe PMC; publisher previews; author-hosted PDFs
+  locator: All six record references and explicit primary-source corroboration ledger
+  accessed_at: '2026-10-21T07:31:53Z'
+  support: supports
+  summary: All six record reference identities resolve. Relevant full text was inspected
+    for four; two remained abstract/preview-only. Thirteen file receipts were hash-verified,
+    including six reused accesses with original timestamps retained.
+  snapshot_sha256: 01dd57589685792179708a0bca5973dbc40ee945a1a90698af7d20a902f281c6
+- evidence_id: philippot
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro3109
+  locator: PMID24056930 abstract and publisher Abstract/Key Points preview
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: partial
+  summary: Supports the root-soil interface and root-associated community concept,
+    with soil and other environmental determinants alongside plant effects. The exact
+    exudate-causation statement was not fully audited against subscription text.
+  snapshot_sha256: ed3cb2ae4ae9aa6470dd5d806fdc8c569b24bf9f40e4846957c53b6e246707f9
+- evidence_id: fierer
+  kind: primary_source
+  reference: https://www.fiererlab.org/s/Fierer_Nat_Rev_Micro_2017.pdf
+  locator: PDFp2 Rhizosphere glossary/Figure1 caption; p5 plant effects and carbon
+    discussion; DOI10.1038/nrmicro.2017.87
+  accessed_at: '2026-10-21T06:34:33Z'
+  support: partial
+  summary: Supports rhizosphere habitat and typical enrichment in plant-derived carbon
+    and microbial biomass. Biomass is not interchangeable with activity; the high-activity
+    wording is only partly verified from the inspected passages, not disproved throughout
+    the paper.
+  snapshot_sha256: eb3930ba598e301f098d61bab6f5f4a0047c8b1c55726618cce1494621ac31d4
+- evidence_id: example
+  kind: primary_source
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.phyto.39.1.461
+  locator: PMID11701873 abstract; publisher bibliography references5/21
+  accessed_at: '2026-10-21T07:26:00Z'
+  support: partial
+  summary: The abstract identifies Pseudomonas as a root-colonization model in a biocontrol
+    context. Bibliography supplies historical P. fluorescens WCS365 context, but those
+    experiments and modern strain-to-taxon294 assignment were not independently verified.
+    The generic example is partly supported, not rejected.
+  snapshot_sha256: 684d8f6b022483bf5eb1ff54f540a31784c22683b573049cefe0508e435c0bd2
+- evidence_id: frontiers
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11600982/
+  locator: Section s3 paragraph1; Figure1 caption in Introduction s1; DOI10.3389/fpls.2024.1491495
+  accessed_at: '2026-10-21T07:26:27Z'
+  support: supports
+  summary: The receptor/signaling notes follow the review’s contextual description.
+    The figure caption supplies the carbon-source/prerequisite wording while discussing
+    most bacteria. Review-level context does not establish a requirement for every
+    organism in the habitat class.
+  snapshot_sha256: 355bf2bb69b525efa485f0795ddba674f380e505716782720b36b8944a588fb2
+- evidence_id: biology
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10886372/
+  locator: Introduction sec1-biology-13-00095 paragraph3; DOI10.3390/biology13020095
+  accessed_at: '2026-10-21T06:39:21Z'
+  support: supports
+  summary: Direct support for the first-step description specifically for motile bacteria
+    and the nutrient/protection biofilm context. Edge4 already retains the motile-bacteria
+    qualifier; it is not flagged as missing.
+  snapshot_sha256: a17f86a0554f63181b61a9d4610c3ec11ccd2261709069d97ece8f2ada2b7633
+- evidence_id: fems
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10786197/
+  locator: Chemotaxis and motility sec2 paragraph2; references bib47/bib190; DOI10.1093/femsre/fuad066
+  accessed_at: '2026-10-21T06:39:24Z'
+  support: partial
+  summary: The review explicitly reports the100-fold reduction. That number is not
+    a transcription error. Its citations concern particular bacterial systems and
+    do not alone establish a broad necessary condition for rhizosphere association.
+  snapshot_sha256: 8d173b9fe1cb9e4ee78ff06d2ed5089d1a829b049e335de241b359ca079af649
+- evidence_id: primary-context
+  kind: primary_source
+  reference: https://par.nsf.gov/servlets/purl/10337659
+  locator: DOI10.1016/j.chom.2021.09.005, PMID34610294; PDFp8 Results, subsection
+    on adhesion and colony formation, lower-left/upper-right paragraph
+  accessed_at: '2026-10-21T07:26:56Z'
+  support: partial
+  summary: In the B. velezensis FZB42/Arabidopsis study, one comparison has similar
+    baseline colonization and a contrast under an additional tested condition. The
+    passage distinguishes structural presence from movement. This does not establish
+    class-wide motility necessity. The100-fold magnitude was not independently reconstructed
+    from figures.
+  snapshot_sha256: ec1281e910bd44f41dca2300cb9297f672c401932931fac6594cc078614769f6
+- evidence_id: second-primary
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/29714096/
+  locator: Indexed abstract; DOI10.1094/MPMI-01-18-0003-R
+  accessed_at: '2026-10-21T07:28:35Z'
+  support: partial
+  summary: The other review citation concerns historically named B. amyloliquefaciens
+    SQR9. Only the abstract was inspected; publisher access failed403. Its100-fold
+    effect was not independently verified from that abstract, and no modern taxonomic
+    reassignment is inferred.
+  snapshot_sha256: 275962655cab33783b7a0ad8cf64ae150929ae622da0b6bf4c03d58b0f814424
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback, label, related adjective and class'
+  outcome: supported
+  target_ids:
+  - traitmech:000051
+  summary: The fallback and proposal identify one habitat-association concept; no
+    active exact METPO term is substituted by resemblance. The adjective is appropriately
+    a related synonym.
+  evidence_ids:
+  - record
+  - identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: habitat concept and source scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000051
+  summary: The root-influenced habitat concept is supported. Exact high-activity wording
+    and exudate-only causal framing were only partly verified; no absent-full-text-support
+    inference is made.
+  evidence_ids:
+  - record
+  - philippot
+  - fierer
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader habitat parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000051
+  summary: Root-influenced soil residence is narrower than the primary habitat/niche
+    classifier.
+  evidence_ids:
+  - identity
+  - parent
+  - philippot
+  - fierer
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: ecological class and contextual graph'
+  outcome: supported
+  target_ids:
+  - traitmech:000051
+  summary: ECOLOGY/CLASS and NONMECHANISTIC scope are appropriate. Substance and habitat
+    condition are distinguished. Optional protein examples and a universal connected
+    molecular model are not required.
+  evidence_ids:
+  - record
+  - owner-context
+  - policy
+- assessment_id: example
+  area: evidence
+  topic: 'Native checklist: canonical species and historical model context'
+  outcome: concern
+  target_ids:
+  - traitmech:000051
+  summary: The current taxon resolves and the cited review supports genus-level model
+    context with historical species references. Modern assignment of historical strains
+    to taxon294 and their direct experimental support remain unverified. This does
+    not establish that the species example is false.
+  evidence_ids:
+  - taxon
+  - example
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: six references and all eight evidence-bearing edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000051
+  summary: The relevant review passages support several notes and preserve the motile-bacteria
+    qualifier at edge4. The100-fold wording is present, but edge5’s unqualified necessity
+    exceeds its organism/assay context. Other explicitly bounded source-access limits
+    are retained.
+  evidence_ids:
+  - bibliography
+  - philippot
+  - fierer
+  - example
+  - frontiers
+  - biology
+  - fems
+  - primary-context
+  - second-primary
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all nine nodes and eight edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000051
+  summary: Five external semantic endpoint errors are separate from the source-scope
+    finding. The PATHWAY is explicitly a process; environmental confers is locally
+    admitted.
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - shape
+  - go
+  - owner-context
+  - philippot
+  - fierer
+  - frontiers
+  - biology
+  - fems
+  - primary-context
+  details: 'Zero-based ledger: node0 is the habitat trait, node1 substances, node2
+    environmental habitat, nodes3/4/7/8 processes, node5 a reviewed generic receptor
+    family and node6 a signaling process represented as PATHWAY. Edge0 has broad Biolink-compatible
+    endpoints with partly inspected source support. Edge1 fits the local environmental-condition-to-trait
+    proposal; the biomass/activity distinction remains a source precision limit. Edge2
+    has a protein subject under process-to-process regulation. Edge3 has compatible
+    processual endpoints and source-note support. Edge4 has a process subject under
+    material-executor enables even though its motile-bacteria evidence wording is
+    supported. Edges5/7 have TRAIT objects under process-range regulation. Edge6 has
+    a substance subject under process regulation; the source supplies contextual prerequisite
+    wording, not universal class proof. Edge5 additionally extends an assay-specific
+    numerical review summary to unqualified necessity. No missing accession, alternative
+    mechanism or experiment is invented.'
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: structured-source applicability'
+  outcome: supported
+  target_ids:
+  - traitmech:000051
+  summary: A fresh bounded search found no usable adapter runner. Official catalog
+    fallback contained no matching species dataset, so named-gene module queries were
+    not applicable and no other species was substituted.
+  evidence_ids:
+  - expression-runner
+  - expression-index
+- assessment_id: optional
+  area: completeness
+  topic: 'Native checklist: discussion and dataset slots'
+  outcome: supported
+  target_ids:
+  - traitmech:000051
+  summary: No discussion placeholder or asserted dataset accession requires resolution.
+    Optional experimental/expression data are not invented.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: REVIEWED and history'
+  outcome: concern
+  target_ids:
+  - traitmech:000051
+  summary: Eight AI-assisted events document curation but no explicit human scientific
+    acceptance in the inspected target-specific material.
+  evidence_ids:
+  - record
+  - search
+  - policy
+  - check-validate-history
+findings:
+- finding_id: external-relation-endpoints
+  issue_key: rhizosphere-association-external-relation-endpoints
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Five relation uses conflict with external endpoint meanings
+  description: Edges2/6 use protein/substance subjects under RO positive regulation’s
+    process domain. Edges5/7 have trait objects under its process range. Edge4 uses
+    a process as the enables executor. Edge3’s signaling pathway is processual and
+    edge1’s environmental subject is admitted by the local proposal; neither is counted
+    as an error.
+  target_ids:
+  - traitmech:000051
+  field_paths:
+  - causal_graphs[0].edges[2].predicate_id
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  - causal_graphs[0].edges[6].predicate_id
+  - causal_graphs[0].edges[7].predicate_id
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - owner-context
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared maintained mapping; future changes require separate scope review
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: motility-necessity-overgeneralized
+  issue_key: rhizosphere-association-motility-necessity-overgeneralized
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A contextual numerical result is extended to unqualified necessity
+  description: Edge5 states that flagellar motility is required for efficient root
+    colonization/rhizosphere association without the bacterial-system or assay qualifications
+    of the evidence. The cited review really contains the100-fold statement, but one
+    cited primary study reports comparable baseline colonization in a comparison,
+    conditional differences, and distinguishes structural presence from movement.
+    This does not establish class-wide necessity. NONMECHANISTIC breadth does not
+    qualify the explicit required wording. The number is not called fabricated and
+    no opposite universal effect is inferred.
+  target_ids:
+  - traitmech:000051
+  field_paths:
+  - causal_graphs[0].edges[5].description
+  - causal_graphs[0].edges[5].evidence
+  evidence_ids:
+  - record
+  - fems
+  - primary-context
+  - second-primary
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: rhizosphere-association-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Inspected REVIEWED provenance lacks a human-acceptance link
+  description: Eight AI-assisted events do not identify human scientific acceptance
+    in inspected target-specific local material. The bounded search does not rule
+    out private or remote approval.
+  target_ids:
+  - traitmech:000051
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - search
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relations
+  description: Reconcile existing endpoint concepts with actual external predicate
+    meanings during separately authorized curation.
+  finding_ids:
+  - external-relation-endpoints
+  target_ids:
+  - traitmech:000051
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared maintained mapping; future changes require separate scope review
+  acceptance_checks:
+  - Check the selected external identifier and inherited endpoint meanings; distinguish
+    substances, actors, processes and traits.
+  - Preserve the processual pathway and already valid environmental-condition allowance.
+  - Do not retype concepts merely to fit an identifier; authorized edits require guarded
+    writes, history and applicable strict/graph/qc checks.
+- action_id: retain-quantitative-context
+  description: Retain the cited bacterial-system and assay context and align necessity
+    wording with inspected evidence.
+  finding_ids:
+  - motility-necessity-overgeneralized
+  target_ids:
+  - traitmech:000051
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish secondary review summary from the actual primary comparisons; keep
+    structural presence and movement conceptually separate.
+  - Do not replace an unsupported broad requirement with an opposite universal claim
+    or suggest optimization experiments.
+  - Keep the100-fold statement tied to its source and do not imply independent numerical
+    reanalysis.
+- action_id: document-status
+  description: Locate and document human scientific acceptance or retain the status-basis
+    question.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000051
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/rhizosphere_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - AI history and successful automated validation do not identify a human approver.
+  - Any scientific-status change requires separate curation authorization.
+limitations:
+- Four of six record sources had relevant full-text portions inspected; Philippot
+  and Lugtenberg remained abstract/preview-only. Uninspected full text is not treated
+  as absent support.
+- The exact high-activity/exudate-causation formulations are only partly verified.
+  Microbial biomass and activity are not equated.
+- The generic species example has genus-level and historical species context; modern
+  strain-to-taxon294 attribution and direct experiments were not independently verified.
+- The100-fold phrase is verified in the secondary review; its primary numerical magnitude
+  was not independently reconstructed. One cited primary full-text comparison is condition-dependent;
+  the other primary source was abstract-only.
+- Expression adapter runner was unavailable within the declared search; official catalog
+  had no matching species. No module-based phenotype inference or negative biological
+  inference is made.
+- The graph remains a contextual sketch, not a universal mechanism or experimental
+  recommendation.
+- Local proposal status, bounded human-acceptance search and prior corpus-check failures/skips
+  are retained. No scientific record, mapping, history, native status or generated
+  product is changed.
+notes:
+- The complete native input capture preceded judgment. Primary-source scrutiny qualified
+  the secondary quantitative statement before the finding was authored.
+- A separate ontology critic checked the necessity finding independently of the formal
+  range error; the two require distinct acceptance checks.
+tags:
+- record-review
+- rhizosphere-association
+- ecology
+- needs-curation
+```

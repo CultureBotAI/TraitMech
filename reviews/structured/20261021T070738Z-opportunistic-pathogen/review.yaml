@@ -1,0 +1,969 @@
+schema_version: 1.0.0
+review_id: 20261021T070738Z-opportunistic-pathogen
+kind: record
+repository: CultureBotAI/TraitMech
+title: Concept and source review of opportunistic pathogen (traitmech:000046)
+started_at: '2026-10-21T07:02:55Z'
+finished_at: '2026-10-21T07:07:38Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The fallback identity, pathogenic-to-host parent and generic species example
+  resolve. All ten nodes and nine edges were inspected for conceptual representation
+  and evidence framing. Three major findings concern unsupported definitional exclusivity,
+  external relation/endpoint meanings, and generic claims drawn from narrower source
+  scopes. One minor finding concerns the bounded lack of a human-acceptance link.
+  Six citation identities resolve. Detailed pathogen mechanisms are not independently
+  certified or reconstructed by this documentary review.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/opportunistic_pathogen.yaml
+    sha256: 9dde5e43eafc86ecd22089841463a8d6bfa703a8200a7179375217ed6dd03b52
+    role: target
+  - path: data/traits/ecology/pathogenic_to_host.yaml
+    sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: research/traits/ecology/opportunistic_pathogen-deep-research-falcon.md
+    sha256: 145d0df86322707eb4d5e1fa8d6805036cfe6fcbc161cd571b43ff1c5c3ce237
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000046
+  path: data/traits/ecology/opportunistic_pathogen.yaml
+  label: opportunistic pathogen
+  kind: maintained
+  record_class: TraitRecord
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: First target in batch003, selected in lexicographic path order from the
+    validated batch001/batch002 inventory union; one entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000046
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000046
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000046
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: opportunistic_pathogen-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just validate data/traits/ecology/opportunistic_pathogen.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-opportunistic_pathogen-validate
+- check_id: opportunistic_pathogen-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just validate-strict data/traits/ecology/opportunistic_pathogen.yaml --out
+    /private/tmp/traitmech-record-sweep-003.4opxlhgf/opportunistic_pathogen-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-opportunistic_pathogen-strict
+- check_id: opportunistic_pathogen-snippets
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000046
+  command: just verify-snippets --record data/traits/ecology/opportunistic_pathogen.yaml
+    --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/opportunistic_pathogen-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Zero snippet occurrences. Passing this command does not verify the six
+    references or their evidence notes.
+  evidence_ids:
+  - check-opportunistic_pathogen-snippets
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000046
+  summary: The generic NONMECHANISTIC graph names no gene, locus, protein accession
+    or strain-specific expression assertion. No expression module is used to infer
+    the disease class.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-opportunistic_pathogen-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/opportunistic_pathogen-validate.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:26Z; metadata opportunistic_pathogen-validate.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: 4c4fe08f3bbce5b11a1a3896c2da9837999ed3d73fd1b791412426bad069819e
+- evidence_id: check-opportunistic_pathogen-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/opportunistic_pathogen-strict.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:27Z; metadata opportunistic_pathogen-strict.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 3d00f55909f9feb7fac6824cdcc1bec22bfc532f0b32d2ce5c40e58578201fba
+- evidence_id: check-opportunistic_pathogen-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/opportunistic_pathogen-snippets.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:25Z; metadata opportunistic_pathogen-snippets.json
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: context_only
+  summary: Zero snippet occurrences. Passing this command does not verify the six
+    references or their evidence notes.
+  snapshot_sha256: 7f29deb7f2512154888f71f8842ad6a53011a204a9fb3f60dbb5a0472cf97434
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/opportunistic_pathogen.yaml
+  locator: Entire record, species example, ten nodes, nine edges and six history events
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: partial
+  summary: The definition and self-node use an exclusive only-when condition. The
+    graph declares NONMECHANISTIC scope but its generic evidence notes require separate
+    source-scope assessment.
+  snapshot_sha256: 9dde5e43eafc86ecd22089841463a8d6bfa703a8200a7179375217ed6dd03b52
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Complete normalized exact label/synonym RDF scan, including deprecated
+    entities; v5 row48
+  accessed_at: '2026-10-21T07:03:44Z'
+  support: supports
+  summary: No exact opportunistic-pathogen/infection match occurs in the captured
+    ontology. The fallback identifier maps to proposed METPO:1007645. Parent METPO:1004000
+    is active pathogenic to host. Local METPO:2007700 remains a documented proposal.
+  snapshot_sha256: 346b93886b764080f68b8e0e55d9962ec44fca95d48294de29afd394bb0e1a8e
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/ecology/pathogenic_to_host.yaml
+  locator: Full parent definition and active identifier
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: supports
+  summary: Context-dependent pathogenicity is narrower than capability to cause disease
+    in a host. Neither the parent nor this relation asserts exclusivity to humans.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=470
+  locator: Exact live taxonomy response
+  accessed_at: '2026-10-21T07:04:09Z'
+  support: supports
+  summary: NCBITaxon:470 resolves to species Acinetobacter baumannii. This verifies
+    identity, not a universal resistance phenotype.
+  snapshot_sha256: 25c9f786e05dfc037876360a2f492736d6599c87e73678d395637f04272b62f0
+- evidence_id: relations
+  kind: authority
+  reference: Previously downloaded RO database; captured Biolink model; proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+  locator: Selected predicates and recursive superproperty definitions, domains and
+    ranges
+  accessed_at: '2026-10-21T07:05:04Z'
+  support: partial
+  summary: RO positive regulation has process endpoint semantics; enables and contributes
+    to inherit material-actor subjects. Biolink causes has broader entity-level semantics.
+    The local confers proposal allows process-to-trait. External semantic concerns
+    are distinct from passing YAML validators.
+  snapshot_sha256: fd2b9c684219083b4805bcd09ae35b91ecf9809056d9709a414f6a4956fdd72a
+- evidence_id: node-types
+  kind: authority
+  reference: src/traitmech/schema/mech_shared.yaml; src/traitmech/schema/traitmech.yaml
+  locator: CausalNodeTypeEnum CHEMICAL and STATE definitions; actual node descriptions
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: partial
+  summary: The exposure node describes a treatment event while labelled CHEMICAL.
+    Community composition is represented as STATE although the native definition specifically
+    describes a cell’s bioenergetic or molecular state. These require representation
+    clarification; they do not identify a missing pathogen mechanism.
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: Six unique current references and explicit access/scope ledger
+  accessed_at: '2026-10-21T07:05:10Z'
+  support: supports
+  summary: All citation identities resolve. Sources are reviews and their metadata/topical
+    relevance are not direct experimental confirmation of the graph.
+  snapshot_sha256: 73f4c5de32ff5f40a8d3d51963a8325f48e4d8ac5e1cd4ca796394e74172aa61
+- evidence_id: brown
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3491314/
+  locator: Abstract; first body section sec0005 paragraphs1–3; DOI10.1016/j.tim.2012.04.005
+  accessed_at: '2026-10-21T07:04:00Z'
+  support: partial
+  summary: The source distinguishes a typical medical characterization using conditional
+    language from its own deliberately broader definition. Neither supplies the record’s
+    exclusive only-when rule. It also discusses non-parasitic contexts, which are
+    broader than outside-host contexts. This is a conceptual scope observation; no
+    biological counterexample list or alternative virulence route is supplied.
+  snapshot_sha256: 119796a5ed44dee708c66f5bad29a17a02d0b01fbf7a0e34d2fd11224e88a48d
+- evidence_id: drew
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC8054256/
+  locator: Abstract; Introduction paragraph1; Context-dependent shifts Sec12 paragraph1
+    first two sentences; DOI10.1038/s41579-021-00550-7
+  accessed_at: '2026-10-21T07:04:00Z'
+  support: supports
+  summary: The review explicitly includes within-generation context-dependent shifts,
+    not only evolutionary transitions. It supports conceptual continuum framing, without
+    independently proving the exclusive definition or every graph assertion.
+  snapshot_sha256: a431624c1430ff8e3076a79cf7304c19127c8a3813e2e49f018dc35a8eb2d5d6
+- evidence_id: example
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3442836/
+  locator: Abstract and Introduction sec1 paragraphs1–2; PMID22546906
+  accessed_at: '2026-10-21T07:04:00Z'
+  support: supports
+  summary: The review supports A. baumannii as an opportunistic hospital-associated
+    species, including susceptible-host context. Its multidrug-resistance wording
+    concerns strains and does not establish every strain as resistant. No resistance
+    mechanism is inferred.
+  snapshot_sha256: 073cae6412bc87939d69a46249376c6fcbfbb31b1bf2b761d6d943c9facc17ab
+- evidence_id: uberoi
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41579-024-01035-z
+  locator: Indexed abstract first three sentences and review-scope sentence; PMID38575708
+  accessed_at: '2026-10-21T07:03:34Z'
+  support: partial
+  summary: The source scope is human skin wounds and the abstract uses conditional
+    likelihood language. It distinguishes contamination from infection; it does not
+    establish all anatomical contexts or the record’s nearly-all-wounds quantitative
+    characterization. Detailed full-text support remains unverified.
+  snapshot_sha256: 0ae1edae7981730b3d43a9423d699be248d7dd866e840e4fba2f1e5cba0c9dd1
+- evidence_id: jacobsen
+  kind: primary_source
+  reference: https://doi.org/10.1007/s40588-023-00190-w
+  locator: Title and abstract Purpose of Review/Summary; publisher introductory framing
+  accessed_at: '2026-10-21T07:03:35Z'
+  support: partial
+  summary: The source specifically reviews Candida albicans and uses risk-factor/site-dependent
+    framing. That scope does not establish a generic causal sequence for all opportunists.
+    Detailed route support remains unverified.
+  snapshot_sha256: e59f92d70c2c629df5130ad28c53ed1d402dcb670a25a2eed9d8d8ccd8616253
+- evidence_id: sanchez
+  kind: primary_source
+  reference: https://doi.org/10.1111/1751-7915.14241
+  locator: Title and abstract taxonomic/review-scope framing; PMID36857468
+  accessed_at: '2026-10-21T07:03:35Z'
+  support: partial
+  summary: The source specifically reviews Pseudomonas aeruginosa. The inspected text
+    does not establish the record’s class-wide general-opportunist characterization.
+    Detailed molecular assertions are not assessed or supplied as a replacement model.
+  snapshot_sha256: f497626637152bc2f5769adaa4bff5cc20143297ae4a9497d6c59474cce3a7c1
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph ledger
+  locator: Ten nodes and nine edges
+  accessed_at: '2026-10-21T07:06:16Z'
+  support: supports
+  summary: All endpoints resolve. Structural validity does not establish causal sufficiency
+    or mechanistic correctness.
+  snapshot_sha256: 6a624c8440d4af084d62435f9ebb1f9970f9fb6c10b55d0865e293acee055904
+- evidence_id: search
+  kind: search
+  reference: Local target identity/ownership/provenance search
+  locator: Ignored-inclusive identifier, label and slug search
+  accessed_at: '2026-10-21T07:03:44Z'
+  support: partial
+  summary: All six target history events identify AI assistance. Inspected target-specific
+    local provenance does not identify human scientific acceptance; private or remote
+    approval remains unknown.
+  snapshot_sha256: fd13166ef610026d4c8313ac91596cff08e95cedd85563679b6abda44e6efa86
+  search_scope: rg --no-ignore --hidden across data/traits, scripts, history, mappings,
+    proposals, conf, docs and DO_NOT_WORK.md, including ignored files. The provider
+    header was separately inspected as provenance and captured. Complete captured
+    METPO RDF was scanned separately. No private/remote approval absence is claimed.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Claim-specific source scope, node/edge meaning and human sign-off rules
+  accessed_at: '2026-10-21T07:07:38Z'
+  support: supports
+  summary: NONMECHANISTIC scope does not justify unsupported generic assertions. A
+    review need not add molecular examples or new biological steps; REVIEWED requires
+    human scientific acceptance.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback identity, alias, polarity and class'
+  outcome: supported
+  target_ids:
+  - traitmech:000046
+  summary: The fallback and related infection alias identify a context-dependent pathogenic
+    lifestyle. Infection is related to, rather than an exact synonym of, the organism-level
+    trait. No exact active METPO term is substituted speculatively.
+  evidence_ids:
+  - record
+  - identity
+  - parent
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition-source correspondence'
+  outcome: concern
+  target_ids:
+  - traitmech:000046
+  summary: The clinical framing is recognizable, but exclusive only-when language
+    is not established by the designated source. Brown explicitly distinguishes typical
+    medical usage from the broader concept adopted in that review.
+  evidence_ids:
+  - record
+  - brown
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000046
+  summary: Pathogenic to host is broader than the selected opportunistic class. The
+    definition-source precision finding does not invalidate this hierarchy.
+  evidence_ids:
+  - record
+  - parent
+  - identity
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: ecological class and NONMECHANISTIC scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000046
+  summary: ECOLOGY and CLASS fit the lifestyle concept. The review does not require
+    additional molecular examples, a universal pathogenic mechanism or artificial
+    connectivity.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: example
+  area: evidence
+  topic: 'Native checklist: species exemplar and taxon'
+  outcome: supported
+  target_ids:
+  - traitmech:000046
+  summary: The exact taxon and narrow opportunistic/hospital-associated example are
+    supported. Resistance wording is interpreted as documented strain context rather
+    than universal species identity.
+  evidence_ids:
+  - taxon
+  - example
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: all six references and evidence scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000046
+  summary: All reference identities resolve. Brown’s qualifiers and the restricted
+    wound/species scopes of three later sources are lost in generic formulations.
+    Drew genuinely includes ecological shifts. Detailed mechanisms and the wound quantifier
+    remain unverified.
+  evidence_ids:
+  - bibliography
+  - brown
+  - drew
+  - example
+  - uberoi
+  - jacobsen
+  - sanchez
+  - check-opportunistic_pathogen-snippets
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all ten nodes and nine edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000046
+  summary: Every graph element was inspected for conceptual type and citation scope.
+    Five external edges have clear endpoint/role conflicts; the treatment-exposure
+    node also has a mismatched type label. One additional mixed condition/process
+    sense remains a bounded question. This does not certify or reconstruct pathogen
+    mechanisms.
+  evidence_ids:
+  - record
+  - shape
+  - relations
+  - node-types
+  - brown
+  - drew
+  - uberoi
+  - jacobsen
+  - sanchez
+  - policy
+  details: 'Zero-based ledger: node0 is the local trait; nodes2,6,7,9 describe processes.
+    Nodes1/3 are host/context conditions; node4 describes treatment exposure rather
+    than a chemical substance. Node5 describes community state beyond the native cell-state
+    definition. Node8 mixes a restriction activity with an environmental condition
+    and needs sense clarification. Edge0 has compatible Biolink endpoint types but
+    source conditionality is not an invariant sufficient cause. Edge1 fits the provisional
+    process-to-trait mapping and has conceptual continuum support. Edge2 uses a disruption/context
+    as an executor. Edge3 has a STATE object against a process range; its subject
+    may denote a treatment process despite the CHEMICAL label. Edge4 has a STATE subject
+    against a process domain. Edge5 has a process subject against material-actor enables.
+    Edge6 uses an ungrounded local phrase, which is permitted; its wound-quantifier
+    claim remains unverified. Edge7’s mixed restriction-activity/condition sense is
+    not counted as a definite type error. Edge8 has a process subject against material-actor
+    contributes to. No replacement biological route, molecular target or experimental
+    step is proposed.'
+- assessment_id: optional
+  area: completeness
+  topic: 'Native checklist: discussion and dataset slots'
+  outcome: supported
+  target_ids:
+  - traitmech:000046
+  summary: No discussion placeholder or asserted dataset accession requires resolution.
+    Optional data are not invented to complete this conceptual review.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: REVIEWED and history'
+  outcome: concern
+  target_ids:
+  - traitmech:000046
+  summary: Six AI-assisted events disclose work but do not identify human acceptance
+    in the inspected target-specific material. Provider provenance, automated validation
+    and publication do not supply that acceptance.
+  evidence_ids:
+  - record
+  - search
+  - policy
+  - check-validate-history
+findings:
+- finding_id: definition-source-exclusivity
+  issue_key: opportunistic-pathogen-definition-source-exclusivity
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The exclusive definition exceeds the cited source’s characterization
+  description: The record and self-node state disease occurs only under the listed
+    contexts. Brown gives a conditional typical medical characterization and then
+    explicitly adopts a broader definition. The cited text does not justify the exclusive
+    rule. Its non-parasitic-context framing also is not equivalent to outside-host
+    context. This finding concerns source fidelity, not a request to expand pathogen
+    capabilities or automatically adopt the paper’s broader taxonomy.
+  target_ids:
+  - traitmech:000046
+  field_paths:
+  - definition
+  - causal_graphs[0].nodes[0].description
+  - evidence[0].notes
+  evidence_ids:
+  - record
+  - brown
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: external-relation-and-node-roles
+  issue_key: opportunistic-pathogen-external-relation-and-node-roles
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Five relation uses conflict with endpoint meanings
+  description: Edges3/4 use community STATE where RO positive regulation expects processes;
+    edge5 has a process subject under material-actor enables; edge8 has a process
+    subject under material-actor contributes to. Edge2 describes disruption/access
+    context rather than an executing material actor. Node4 is labelled CHEMICAL although
+    its description is treatment exposure; treating that description as an event does
+    not repair edge3’s STATE range problem. This is semantic assessment, not a reported
+    YAML-validator failure. Edge7 is explicitly excluded from the definite-error count.
+  target_ids:
+  - traitmech:000046
+  field_paths:
+  - causal_graphs[0].nodes[4].node_type
+  - causal_graphs[0].nodes[5].node_type
+  - causal_graphs[0].edges[2].predicate_id
+  - causal_graphs[0].edges[3].predicate_id
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  - causal_graphs[0].edges[8].predicate_id
+  evidence_ids:
+  - record
+  - relations
+  - node-types
+  - shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared relation mapping; future changes require separately scoped review
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: generic-claims-from-restricted-sources
+  issue_key: opportunistic-pathogen-generic-claims-from-restricted-sources
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Generic graph claims lose source-specific context
+  description: The wound citation concerns human skin; Jacobsen concerns C. albicans;
+    Sánchez-Jiménez concerns P. aeruginosa. The graph’s generic nodes and explicitly
+    general-opportunist/generalizable notes do not retain those restrictions. Review/risk-factor
+    framing is not proof of an unconditional class-wide sequence. This bounded source-scope
+    finding does not assert that every broader statement is biologically false or
+    independently validate the detailed routes.
+  target_ids:
+  - traitmech:000046
+  field_paths:
+  - causal_graphs[0].edges[2].evidence
+  - causal_graphs[0].edges[3].evidence
+  - causal_graphs[0].edges[4].evidence
+  - causal_graphs[0].edges[5].evidence
+  - causal_graphs[0].edges[7].description
+  - causal_graphs[0].edges[7].evidence
+  - causal_graphs[0].edges[8].evidence
+  evidence_ids:
+  - record
+  - uberoi
+  - jacobsen
+  - sanchez
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: opportunistic-pathogen-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The inspected REVIEWED provenance lacks a human-acceptance link
+  description: The six AI-assisted events do not identify human scientific acceptance.
+    The native checklist requires it for REVIEWED. This local documentary finding
+    does not establish absence of private or remote approval.
+  target_ids:
+  - traitmech:000046
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - search
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: clarify-definition-source
+  description: Clarify the intended class scope and its cited definition during separately
+    authorized curation.
+  finding_ids:
+  - definition-source-exclusivity
+  target_ids:
+  - traitmech:000046
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish typical clinical usage from the cited authors’ explicitly broader
+    convention.
+  - Retain source qualifiers and avoid unsupported universal or exclusive wording.
+  - Resolve conceptual citation scope without adding a pathogen mechanism or experimental
+    recommendation.
+- action_id: reconcile-conceptual-types
+  description: Reconcile existing entity meanings with actual external and local schema
+    definitions.
+  finding_ids:
+  - external-relation-and-node-roles
+  target_ids:
+  - traitmech:000046
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared relation mapping; future changes require separately scoped review
+  acceptance_checks:
+  - Distinguish a substance, exposure event, community state, context and executing
+    actor.
+  - Preserve unresolved mixed senses; do not invent intermediates or retype biological
+    entities solely to fit a predicate.
+  - Any shared schema/mapping expansion requires separate scope review and authorized
+    guarded writes/history.
+- action_id: retain-source-context
+  description: Retain the cited taxonomic, anatomical and evidentiary scope.
+  finding_ids:
+  - generic-claims-from-restricted-sources
+  target_ids:
+  - traitmech:000046
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Record source-specific context and certainty rather than treating a named-species
+    review as class-wide proof.
+  - Keep detailed mechanistic assertions unverified where they have not been independently
+    assessed.
+  - No corrected virulence route, enhancement target or experimental procedure is
+    proposed.
+- action_id: document-status-basis
+  description: Locate and document the human acceptance basis or retain the question
+    as unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000046
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/opportunistic_pathogen.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - AI assistance and automated checks do not identify a human approver.
+  - Any scientific-status change requires separate curation authorization and a new
+    history event.
+limitations:
+- This whole-record review assesses identity, conceptual representation, source scope
+  and provenance. Detailed pathogen mechanisms are neither reconstructed nor independently
+  certified.
+- For Brown, Drew and the species example, only the identified conceptual/introduction
+  passages were assessed from full XML. Full-text availability is not presented as
+  a complete mechanistic literature review.
+- Uberoi was assessed from its abstract; the nearly-all-wounds quantitative assertion
+  remains unverified. Jacobsen and Sánchez-Jiménez detailed route support also remains
+  unverified.
+- The example’s resistance characterization is supported for strains; universality
+  across the species is not established.
+- Node8/edge7 mix an activity and a condition. This remains a bounded representation
+  question rather than a definite added ontology error.
+- Expression-module evidence is not used for this generic disease class. METPO:2007700
+  remains a local proposal.
+- Earlier non-history corpus diagnostics retain their actual f25 timestamps, failures
+  and skips. Fresh history validation at8eee checked1277records; the Git delta contains
+  seven workflow/skill/history additions and no scientific-record changes.
+- No scientific record, mapping, schema, history or native status is changed; no human
+  sign-off is conferred.
+notes:
+- The batch003 branch was created from freshly fetched origin/main8eee at07:02:26UTC.
+  The source capture preceded judgement and retains its32input hashes.
+- Independent source and ontology checks informed the manual assessment. Their summaries
+  are not substituted for the cited authority and primary-source surfaces.
+tags:
+- record-review
+- opportunistic-pathogen
+- ecology
+- needs-curation
