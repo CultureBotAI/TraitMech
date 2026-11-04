@@ -31,6 +31,13 @@ evidence:
     with a concomitant increase in the OD600.
   notes: Reyes-Umana et al. extend the dissimilatory iodate-reducing phenotype to
     the freshwater isolate Aromatoleum toluclasticum sp. TC-10.
+- reference: DOI:10.1111/1462-2920.14988
+  snippet: IdrA and IdrB were homologues of catalytic and electron transfer subunits
+    of respiratory arsenite oxidase (Aio); however, IdrA defined a novel clade within
+    the dimethylsulfoxide (DMSO) reductase family.
+  notes: Yamazaki et al. identify and characterize the periplasmic respiratory iodate
+    reductase catalytic subunit IdrA (encoded within the idrABP1P2 operon; UniProtKB:A0A391NTR7)
+    required for anaerobic iodate respiration in Pseudomonas sp. strain SCT.
 canonical_examples:
 - taxon_id: NCBITaxon:412955
   taxon_label: Pseudomonas sp. SCT
@@ -79,7 +86,7 @@ discussions:
     (IdrABP1P2) in Pseudomonas sp. SCT or Denitromonas sp. IR-12 so iodate_respiration_reduction_sketch
     can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#iodate_respiration_reduction_sketch
   rationale: The record's primary literature (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5,
@@ -98,6 +105,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-04'
+  resolution_note: Promoted iodate_respiration_reduction_sketch to MECHANISTIC by
+    adding InterPro:IPR014066-grounded GENE_OR_PROTEIN node iodate_reductase_idra
+    (operon idrABP1P2) with reviewed Pseudomonas sp. (strain SCT) (NCBITaxon:412955)
+    protein_examples UniProtKB:A0A391NTR7 (IdrA) backed by DOI:10.1111/1462-2920.14988.
 curation_history:
 - timestamp: '2026-09-15T03:53:45Z'
   curator: codex
@@ -120,16 +132,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (iodate-respiration-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-04T19:10:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted iodate_respiration_reduction_sketch to MECHANISTIC; added InterPro:IPR014066-grounded
+    GENE_OR_PROTEIN node iodate_reductase_idra with reviewed Pseudomonas sp. (strain
+    SCT) (NCBITaxon:412955) protein_examples UniProtKB:A0A391NTR7 (IdrA) backed by
+    DOI:10.1111/1462-2920.14988; resolved iodate-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: iodate_respiration_reduction_sketch
   title: Anaerobic respiratory reduction of iodate coupled to electron donor oxidation
   description: Evidence-backed metabolic mechanism sketch linking acetate-coupled
     anaerobic respiration with iodate as sole terminal electron acceptor to the iodate
     respiration phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Process-and-donor sketch backed by DOI:10.1128/AEM.00241-07 and DOI:10.3389/fmicb.2021.804181;
-    strain-matched UniProtKB protein examples for periplasmic iodate reductase (IdrABP1P2)
-    remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1128/AEM.00241-07, DOI:10.3389/fmicb.2021.804181,
+    and DOI:10.1111/1462-2920.14988; exemplified on iodate_reductase_idra with Pseudomonas
+    sp. (strain SCT) (NCBITaxon:412955) respiratory iodate reductase catalytic subunit
+    IdrA (UniProtKB:A0A391NTR7).
   nodes:
   - node_id: iodate_respiration_trait
     label: iodate respiration
@@ -149,6 +170,36 @@ causal_graphs:
     grounding: CHEBI:30089
     description: Acetate electron donor oxidized in coupling to respiratory iodate
       reduction.
+  - node_id: iodate_reductase_idra
+    label: iodate reductase catalytic subunit IdrA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR014066
+    gene_symbols:
+    - idrA
+    operon: idrABP1P2
+    description: Molybdopterin-containing catalytic subunit IdrA of periplasmic respiratory
+      iodate reductase (IdrABP1P2; DMSO reductase family; InterPro:IPR014066) that
+      catalyzes dissimilatory reduction of iodate during anaerobic iodate respiration.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A391NTR7
+      protein_label: Iodate reductase subunit IdrA
+      gene_symbol: idrA
+      taxon_id: NCBITaxon:412955
+      taxon_label: Pseudomonas sp. (strain SCT)
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-04'
+      entry_version: 30
+      sequence_version: 1
+      role: Catalytic molybdopterin subunit IdrA of the periplasmic respiratory iodate
+        reductase complex (IdrABP1P2) induced under iodate-respiring conditions in
+        Pseudomonas sp. strain SCT.
+      evidence:
+      - reference: DOI:10.1111/1462-2920.14988
+        snippet: IdrA and IdrB were homologues of catalytic and electron transfer
+          subunits of respiratory arsenite oxidase (Aio); however, IdrA defined a
+          novel clade within the dimethylsulfoxide (DMSO) reductase family.
+        notes: Yamazaki et al. characterized Pseudomonas sp. strain SCT iodate reductase
+          subunit IdrA (UniProtKB:A0A391NTR7).
   edges:
   - subject: iodate_respiration_anaerobic_respiration
     predicate: has input
@@ -174,3 +225,16 @@ causal_graphs:
         acceptor
       notes: Amachi et al. demonstrate that Pseudomonas sp. strain SCT performs anaerobic
         respiratory growth using 3 mM iodate as the sole terminal electron acceptor.
+  - subject: iodate_reductase_idra
+    predicate: is causal agent in
+    predicate_id: RO:0002608
+    object: iodate_respiration_anaerobic_respiration
+    description: Periplasmic respiratory iodate reductase catalytic subunit IdrA is
+      a causal agent in anaerobic iodate respiration by Pseudomonas sp. strain SCT.
+    evidence:
+    - reference: DOI:10.1111/1462-2920.14988
+      snippet: IdrA and IdrB were homologues of catalytic and electron transfer subunits
+        of respiratory arsenite oxidase (Aio); however, IdrA defined a novel clade
+        within the dimethylsulfoxide (DMSO) reductase family.
+      notes: Yamazaki et al. show that IdrA is the catalytic subunit of the periplasmic
+        respiratory iodate reductase in Pseudomonas sp. strain SCT.

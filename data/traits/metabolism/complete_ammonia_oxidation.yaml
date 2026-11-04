@@ -29,6 +29,17 @@ evidence:
     nitrate
   notes: Ghimire-Kafle et al. support the same ammonia-to-nitrate scope in a freshwater
     complete-ammonia-oxidizing Nitrospira enrichment.
+- reference: DOI:10.1038/nature16461
+  snippet: The genome of this chemolithoautotrophic organism encodes the pathways
+    both for ammonia and nitrite oxidation, which are concomitantly activated during
+    growth by ammonia oxidation to nitrate. Genes affiliated with the phylogenetically
+    distinct ammonia monooxygenase and hydroxylamine dehydrogenase genes of Nitrospira
+    are present in many environments and were retrieved on Nitrospira-contigs in new
+    metagenomes from engineered systems.
+  notes: Daims et al. show that Candidatus Nitrospira inopinata encodes and concomitantly
+    activates the phylogenetically distinct ammonia monooxygenase (AmoCAB; AmoA UniProtKB:A0A0S4KUL9)
+    and hydroxylamine/nitrite oxidation pathways during complete ammonia oxidation
+    to nitrate.
 canonical_examples:
 - taxon_id: NCBITaxon:1715989
   taxon_label: Candidatus Nitrospira inopinata
@@ -79,7 +90,7 @@ discussions:
     nitrite oxidoreductase (NxrAB) so complete_ammonia_oxidation_comammox_sketch can
     be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#complete_ammonia_oxidation_comammox_sketch
   rationale: The record's primary literature (DOI:10.1038/nature16459, DOI:10.1038/nature16461,
@@ -98,6 +109,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-04'
+  resolution_note: Promoted complete_ammonia_oxidation_comammox_sketch to MECHANISTIC
+    by adding InterPro:IPR003393-grounded GENE_OR_PROTEIN node ammonia_monooxygenase_amoa
+    with Candidatus Nitrospira inopinata (NCBITaxon:1715989; UP000066284) protein_examples
+    UniProtKB:A0A0S4KUL9 (AmoA; encoded alongside AmoB UniProtKB:A0A0S4KWM9, Hao UniProtKB:A0A0S4KTM8,
+    and NxrA UniProtKB:A0A0S4KRS1) backed by DOI:10.1038/nature16461.
 curation_history:
 - timestamp: '2026-09-14T19:03:57Z'
   curator: codex
@@ -120,17 +137,25 @@ curation_history:
     and OPEN CURATION_TODO discussion (complete-ammonia-oxidation-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-04T19:10:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted complete_ammonia_oxidation_comammox_sketch to MECHANISTIC; added
+    InterPro:IPR003393-grounded GENE_OR_PROTEIN node ammonia_monooxygenase_amoa with
+    Candidatus Nitrospira inopinata (NCBITaxon:1715989; UP000066284) protein_examples
+    UniProtKB:A0A0S4KUL9 (AmoA) backed by DOI:10.1038/nature16461; resolved complete-ammonia-oxidation-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: complete_ammonia_oxidation_comammox_sketch
   title: Single-organism complete oxidation of ammonia to nitrate (comammox)
   description: Evidence-backed metabolic mechanism sketch linking single-organism
     ammonia oxidation and nitrate formation to the complete ammonia oxidation (comammox)
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Process-and-product sketch backed by DOI:10.1038/nature16459 and DOI:10.1128/aem.01698-23;
-    strain-matched UniProtKB protein examples for Candidatus Nitrospira inopinata
-    ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite
-    oxidoreductase (NxrAB) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1038/nature16459, DOI:10.1038/nature16461,
+    and DOI:10.1128/aem.01698-23; exemplified on ammonia_monooxygenase_amoa with Candidatus
+    Nitrospira inopinata (NCBITaxon:1715989; UP000066284) ammonia monooxygenase subunit
+    A AmoA (UniProtKB:A0A0S4KUL9).
   nodes:
   - node_id: complete_ammonia_oxidation_trait
     label: complete ammonia oxidation
@@ -150,6 +175,39 @@ causal_graphs:
     grounding: CHEBI:17632
     description: Terminal nitrate product formed by single-organism complete oxidation
       of ammonia.
+  - node_id: ammonia_monooxygenase_amoa
+    label: ammonia monooxygenase subunit A AmoA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR003393
+    gene_symbols:
+    - amoA
+    description: Membrane-bound ammonia monooxygenase catalytic alpha subunit AmoA
+      (InterPro:IPR003393) that catalyzes the initial oxidation of ammonia to hydroxylamine
+      in complete ammonia-oxidizing (comammox) Nitrospira.
+    protein_examples:
+    - uniprot_id: UniProtKB:A0A0S4KUL9
+      protein_label: Ammonia monooxygenase, subunit A
+      gene_symbol: amoA
+      taxon_id: NCBITaxon:1715989
+      taxon_label: Candidatus Nitrospira inopinata
+      entry_status: UNREVIEWED
+      proteome_id: UP000066284
+      retrieved_on: '2026-11-04'
+      entry_version: 22
+      sequence_version: 1
+      role: Phylogenetically distinct comammox ammonia monooxygenase alpha subunit
+        AmoA encoded and expressed alongside the nitrite-oxidizing pathway during
+        complete oxidation of ammonia to nitrate in Candidatus Nitrospira inopinata.
+      evidence:
+      - reference: DOI:10.1038/nature16461
+        snippet: The genome of this chemolithoautotrophic organism encodes the pathways
+          both for ammonia and nitrite oxidation, which are concomitantly activated
+          during growth by ammonia oxidation to nitrate. Genes affiliated with the
+          phylogenetically distinct ammonia monooxygenase and hydroxylamine dehydrogenase
+          genes of Nitrospira are present in many environments and were retrieved
+          on Nitrospira-contigs in new metagenomes from engineered systems.
+        notes: Daims et al. identify the phylogenetically distinct comammox ammonia
+          monooxygenase in Candidatus Nitrospira inopinata (AmoA; UniProtKB:A0A0S4KUL9).
   edges:
   - subject: complete_ammonia_oxidation_process
     predicate: has output
@@ -176,3 +234,20 @@ causal_graphs:
         to nitrate
       notes: Ghimire-Kafle et al. report that comammox Nitrospira sp. BO4 generates
         energy through the complete oxidation of ammonia to nitrate.
+  - subject: ammonia_monooxygenase_amoa
+    predicate: is causal agent in
+    predicate_id: RO:0002608
+    object: complete_ammonia_oxidation_process
+    description: Comammox ammonia monooxygenase subunit A (AmoA) is a causal agent
+      in the initial ammonia-oxidation step of complete ammonia oxidation to nitrate.
+    evidence:
+    - reference: DOI:10.1038/nature16461
+      snippet: The genome of this chemolithoautotrophic organism encodes the pathways
+        both for ammonia and nitrite oxidation, which are concomitantly activated
+        during growth by ammonia oxidation to nitrate. Genes affiliated with the phylogenetically
+        distinct ammonia monooxygenase and hydroxylamine dehydrogenase genes of Nitrospira
+        are present in many environments and were retrieved on Nitrospira-contigs
+        in new metagenomes from engineered systems.
+      notes: Daims et al. demonstrate that the Candidatus Nitrospira inopinata ammonia
+        monooxygenase and nitrite-oxidation pathways are concomitantly activated during
+        growth by ammonia oxidation to nitrate.

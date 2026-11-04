@@ -38,12 +38,28 @@ evidence:
     selectivity to butyric acid
   notes: Baroi et al. directly studied butyric acid fermentation from pretreated and
     hydrolysed wheat straw by an adapted Clostridium tyrobutyricum strain.
+- reference: DOI:10.1099/mic.0.28412-0
+  snippet: A novel CoA-transferase gene is described from the colonic bacterium Roseburia
+    sp. A2-183, with similarity to acetyl-CoA hydrolase as well as 4-hydroxybutyrate
+    CoA-transferase sequences. The gene product, overexpressed in an Escherichia coli
+    lysate, showed activity with butyryl-CoA and to a lesser degree propionyl-CoA
+    in the presence of acetate.
+  notes: Charrier et al. identify and biochemically characterize the Roseburia sp.
+    (Roseburia hominis) A2-183 butyryl-CoA:acetate CoA-transferase (UniProtKB:G2SYC0)
+    catalyzing the terminal step of butyrate synthesis.
 canonical_examples:
 - taxon_id: NCBITaxon:1519
   taxon_label: Clostridium tyrobutyricum
   note: Butyric-acid fermenter used by Baroi et al. for fermentative conversion of
     wheat-straw hydrolysate to butyric acid.
   reference: DOI:10.1111/1751-7915.12304
+- taxon_id: NCBITaxon:585394
+  taxon_label: Roseburia hominis (strain DSM 16839 / JCM 17582 / NCIMB 14029 / A2-183)
+  note: Charrier et al. cloned and biochemically characterized the butyryl-CoA:acetate
+    CoA-transferase (RHOM_13820; UniProtKB:G2SYC0) catalyzing the terminal step of
+    butyrate formation from butyryl-CoA and acetate in the human colonic anaerobe
+    Roseburia sp. (Roseburia hominis) A2-183.
+  reference: DOI:10.1099/mic.0.28412-0
 discussions:
 - discussion_id: butyric-acid-fermentation-xref-gap
   prompt: Resolve an exact external ontology class for butyric acid fermentation before
@@ -94,7 +110,7 @@ discussions:
     kinase (Ptb/Buk) so butyric_acid_fermentation_pathway_sketch can be promoted from
     NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#butyric_acid_fermentation_pathway_sketch
   rationale: The record's primary literature (DOI:10.1111/j.1574-6968.2009.01514.x,
@@ -116,6 +132,13 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-04'
+  resolution_note: Added canonical_examples entry Roseburia hominis A2-183 (NCBITaxon:585394;
+    DOI:10.1099/mic.0.28412-0) and promoted butyric_acid_fermentation_pathway_sketch
+    to MECHANISTIC by adding InterPro:IPR023990-grounded GENE_OR_PROTEIN node butyryl_coa_acetate_coa_transferase
+    with reviewed Swiss-Prot protein_examples UniProtKB:G2SYC0 (RHOM_13820; UP000008178)
+    backed by DOI:10.1099/mic.0.28412-0 (whereas species-level Clostridium tyrobutyricum
+    NCBITaxon:1519 lacks a UniProtKB cat1/ptb/buk entry).
 curation_history:
 - timestamp: '2026-09-14T01:34:38Z'
   curator: codex
@@ -138,6 +161,15 @@ curation_history:
     and OPEN CURATION_TODO discussion (butyric-acid-fermentation-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-04T19:10:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Roseburia hominis A2-183 (NCBITaxon:585394; DOI:10.1099/mic.0.28412-0)
+    canonical example; promoted butyric_acid_fermentation_pathway_sketch to MECHANISTIC;
+    added InterPro:IPR023990-grounded GENE_OR_PROTEIN node butyryl_coa_acetate_coa_transferase
+    with reviewed protein_examples UniProtKB:G2SYC0 (RHOM_13820) backed by DOI:10.1099/mic.0.28412-0;
+    resolved butyric-acid-fermentation-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: butyric_acid_fermentation_pathway_sketch
   title: Clostridial butyrate biosynthesis via butyryl-CoA:acetate CoA-transferase
@@ -145,11 +177,11 @@ causal_graphs:
   description: Evidence-backed metabolic mechanism sketch linking terminal butyryl-CoA:acetate
     CoA-transferase activity and clostridial butyrate biosynthesis to the butyric
     acid fermentation phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Pathway-and-activity sketch backed by DOI:10.1111/j.1574-6968.2009.01514.x
-    and DOI:10.1111/1751-7915.12304; strain-matched UniProtKB protein examples for
-    Clostridium tyrobutyricum butyryl-CoA:acetate CoA-transferase (Cat1) or phosphotransbutyrylase/butyrate
-    kinase (Ptb/Buk) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304,
+    and DOI:10.1099/mic.0.28412-0; exemplified on butyryl_coa_acetate_coa_transferase
+    with Roseburia hominis A2-183 (NCBITaxon:585394; UP000008178) butyryl-CoA:acetate
+    CoA-transferase (UniProtKB:G2SYC0).
   nodes:
   - node_id: butyric_acid_fermentation_trait
     label: butyric acid fermentation
@@ -169,6 +201,41 @@ causal_graphs:
     grounding: GO:0008775
     description: Butyryl-CoA:acetate CoA-transferase catalytic activity performing
       the terminal step in clostridial butyrate synthesis.
+  - node_id: butyryl_coa_acetate_coa_transferase
+    label: butyryl-CoA:acetate CoA-transferase
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR023990
+    gene_symbols:
+    - but
+    - cat1
+    description: Butyryl-CoA:acetate CoA-transferase (EC 2.8.3.8 / 2.8.3.-; InterPro:IPR023990)
+      that transfers the CoA moiety from butyryl-CoA to exogenous acetate, releasing
+      butyrate and generating acetyl-CoA during the terminal step of anaerobic butyric
+      acid fermentation.
+    protein_examples:
+    - uniprot_id: UniProtKB:G2SYC0
+      protein_label: Butyryl-CoA:acetate CoA-transferase
+      gene_symbol: RHOM_13820
+      taxon_id: NCBITaxon:585394
+      taxon_label: Roseburia hominis (strain DSM 16839 / JCM 17582 / NCIMB 14029 /
+        A2-183)
+      entry_status: REVIEWED
+      proteome_id: UP000008178
+      retrieved_on: '2026-11-04'
+      entry_version: 62
+      sequence_version: 1
+      role: Catalyzes the terminal CoA-transfer step of butyric acid fermentation
+        in Roseburia hominis A2-183, converting butyryl-CoA and acetate into butyrate
+        and acetyl-CoA.
+      evidence:
+      - reference: DOI:10.1099/mic.0.28412-0
+        snippet: A novel CoA-transferase gene is described from the colonic bacterium
+          Roseburia sp. A2-183, with similarity to acetyl-CoA hydrolase as well as
+          4-hydroxybutyrate CoA-transferase sequences. The gene product, overexpressed
+          in an Escherichia coli lysate, showed activity with butyryl-CoA and to a
+          lesser degree propionyl-CoA in the presence of acetate.
+        notes: Charrier et al. cloned and assayed the Roseburia sp. (Roseburia hominis)
+          A2-183 butyryl-CoA:acetate CoA-transferase (RHOM_13820; UniProtKB:G2SYC0).
   edges:
   - subject: butyric_acid_fermentation_coa_transferase
     predicate: causally upstream of
@@ -202,3 +269,18 @@ causal_graphs:
         and selectivity to butyric acid
       notes: Baroi et al. report that the adapted Clostridium tyrobutyricum strain
         fermented substrates with high yield and selectivity to butyric acid.
+  - subject: butyryl_coa_acetate_coa_transferase
+    predicate: enables
+    predicate_id: RO:0002327
+    object: butyric_acid_fermentation_coa_transferase
+    description: Butyryl-CoA:acetate CoA-transferase enables acetate CoA-transferase
+      catalytic activity in the terminal step of fermentative butyrate synthesis.
+    evidence:
+    - reference: DOI:10.1099/mic.0.28412-0
+      snippet: A novel CoA-transferase gene is described from the colonic bacterium
+        Roseburia sp. A2-183, with similarity to acetyl-CoA hydrolase as well as 4-hydroxybutyrate
+        CoA-transferase sequences. The gene product, overexpressed in an Escherichia
+        coli lysate, showed activity with butyryl-CoA and to a lesser degree propionyl-CoA
+        in the presence of acetate.
+      notes: Charrier et al. demonstrated butyryl-CoA:acetate CoA-transferase catalytic
+        activity for the cloned Roseburia sp. A2-183 enzyme.

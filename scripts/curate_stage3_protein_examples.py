@@ -85,6 +85,15 @@
     `UniProtKB:P04825`, `UniProtKB:P00775`), 4 distinct verbatim record-level
     `evidence` items, 4 `canonical_examples` entries, and `RESOLVED`
     `CURATION_TODO` discussions.
+11. In Cycle 10 Stage 3 (`C10S3_COHORT_M_PROMOTIONS`), promotes all 4 Cohort M
+    `PATHWAY_SKETCH` records (`butyric_acid_fermentation.yaml`,
+    `complete_ammonia_oxidation.yaml`, `iodate_respiration.yaml`,
+    `organohalide_respiration.yaml`) to `MECHANISTIC` by adding 4
+    `InterPro`-grounded `GENE_OR_PROTEIN` nodes with 5 verified UniProtKB
+    `protein_examples` (`UniProtKB:G2SYC0`, `UniProtKB:A0A0S4KUL9`,
+    `UniProtKB:A0A391NTR7`, `UniProtKB:Q3Z9N3`, `UniProtKB:Q3ZAB8`), 4 distinct
+    verbatim record-level `evidence` items, 1 `canonical_examples` entry, and
+    `RESOLVED` `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -5676,6 +5685,641 @@ C9S3_COHORT_L_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C10S3_TIMESTAMP = "2026-11-04T19:10:00Z"
+C10S3_RETRIEVED_ON = "2026-11-04"
+
+C10S3_COHORT_M_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/metabolism/butyric_acid_fermentation.yaml": {
+        "identifier": "traitmech:000179",
+        "graph_id": "butyric_acid_fermentation_pathway_sketch",
+        "discussion_id": "butyric-acid-fermentation-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1111/j.1574-6968.2009.01514.x, "
+            "DOI:10.1111/1751-7915.12304, and DOI:10.1099/mic.0.28412-0; "
+            "exemplified on butyryl_coa_acetate_coa_transferase with Roseburia "
+            "hominis A2-183 (NCBITaxon:585394; UP000008178) butyryl-CoA:acetate "
+            "CoA-transferase (UniProtKB:G2SYC0)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1099/mic.0.28412-0",
+            "snippet": (
+                "A novel CoA-transferase gene is described from the colonic "
+                "bacterium Roseburia sp. A2-183, with similarity to acetyl-CoA "
+                "hydrolase as well as 4-hydroxybutyrate CoA-transferase sequences. "
+                "The gene product, overexpressed in an Escherichia coli lysate, "
+                "showed activity with butyryl-CoA and to a lesser degree "
+                "propionyl-CoA in the presence of acetate."
+            ),
+            "notes": (
+                "Charrier et al. identify and biochemically characterize the "
+                "Roseburia sp. (Roseburia hominis) A2-183 butyryl-CoA:acetate "
+                "CoA-transferase (UniProtKB:G2SYC0) catalyzing the terminal "
+                "step of butyrate synthesis."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:585394",
+            "taxon_label": "Roseburia hominis (strain DSM 16839 / JCM 17582 / NCIMB 14029 / A2-183)",
+            "note": (
+                "Charrier et al. cloned and biochemically characterized the "
+                "butyryl-CoA:acetate CoA-transferase (RHOM_13820; "
+                "UniProtKB:G2SYC0) catalyzing the terminal step of butyrate "
+                "formation from butyryl-CoA and acetate in the human colonic "
+                "anaerobe Roseburia sp. (Roseburia hominis) A2-183."
+            ),
+            "reference": "DOI:10.1099/mic.0.28412-0",
+        },
+        "new_node": {
+            "node_id": "butyryl_coa_acetate_coa_transferase",
+            "label": "butyryl-CoA:acetate CoA-transferase",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR023990",
+            "gene_symbols": ["but", "cat1"],
+            "description": (
+                "Butyryl-CoA:acetate CoA-transferase (EC 2.8.3.8 / 2.8.3.-; "
+                "InterPro:IPR023990) that transfers the CoA moiety from "
+                "butyryl-CoA to exogenous acetate, releasing butyrate and "
+                "generating acetyl-CoA during the terminal step of anaerobic "
+                "butyric acid fermentation."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:G2SYC0",
+                    "protein_label": "Butyryl-CoA:acetate CoA-transferase",
+                    "gene_symbol": "RHOM_13820",
+                    "taxon_id": "NCBITaxon:585394",
+                    "taxon_label": "Roseburia hominis (strain DSM 16839 / JCM 17582 / NCIMB 14029 / A2-183)",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000008178",
+                    "retrieved_on": C10S3_RETRIEVED_ON,
+                    "entry_version": 62,
+                    "sequence_version": 1,
+                    "role": (
+                        "Catalyzes the terminal CoA-transfer step of butyric "
+                        "acid fermentation in Roseburia hominis A2-183, "
+                        "converting butyryl-CoA and acetate into butyrate and "
+                        "acetyl-CoA."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1099/mic.0.28412-0",
+                            "snippet": (
+                                "A novel CoA-transferase gene is described from "
+                                "the colonic bacterium Roseburia sp. A2-183, "
+                                "with similarity to acetyl-CoA hydrolase as "
+                                "well as 4-hydroxybutyrate CoA-transferase "
+                                "sequences. The gene product, overexpressed in "
+                                "an Escherichia coli lysate, showed activity "
+                                "with butyryl-CoA and to a lesser degree "
+                                "propionyl-CoA in the presence of acetate."
+                            ),
+                            "notes": (
+                                "Charrier et al. cloned and assayed the "
+                                "Roseburia sp. (Roseburia hominis) A2-183 "
+                                "butyryl-CoA:acetate CoA-transferase "
+                                "(RHOM_13820; UniProtKB:G2SYC0)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "butyryl_coa_acetate_coa_transferase",
+            "predicate": "enables",
+            "predicate_id": "RO:0002327",
+            "object": "butyric_acid_fermentation_coa_transferase",
+            "description": (
+                "Butyryl-CoA:acetate CoA-transferase enables acetate "
+                "CoA-transferase catalytic activity in the terminal step of "
+                "fermentative butyrate synthesis."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1099/mic.0.28412-0",
+                    "snippet": (
+                        "A novel CoA-transferase gene is described from the "
+                        "colonic bacterium Roseburia sp. A2-183, with "
+                        "similarity to acetyl-CoA hydrolase as well as "
+                        "4-hydroxybutyrate CoA-transferase sequences. The gene "
+                        "product, overexpressed in an Escherichia coli lysate, "
+                        "showed activity with butyryl-CoA and to a lesser "
+                        "degree propionyl-CoA in the presence of acetate."
+                    ),
+                    "notes": (
+                        "Charrier et al. demonstrated butyryl-CoA:acetate "
+                        "CoA-transferase catalytic activity for the cloned "
+                        "Roseburia sp. A2-183 enzyme."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C10S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Roseburia hominis A2-183 "
+                "(NCBITaxon:585394; DOI:10.1099/mic.0.28412-0) and promoted "
+                "butyric_acid_fermentation_pathway_sketch to MECHANISTIC by "
+                "adding InterPro:IPR023990-grounded GENE_OR_PROTEIN node "
+                "butyryl_coa_acetate_coa_transferase with reviewed Swiss-Prot "
+                "protein_examples UniProtKB:G2SYC0 (RHOM_13820; UP000008178) "
+                "backed by DOI:10.1099/mic.0.28412-0 (whereas species-level "
+                "Clostridium tyrobutyricum NCBITaxon:1519 lacks a UniProtKB "
+                "cat1/ptb/buk entry)."
+            ),
+        },
+        "changes_summary": (
+            "Added Roseburia hominis A2-183 (NCBITaxon:585394; "
+            "DOI:10.1099/mic.0.28412-0) canonical example; promoted "
+            "butyric_acid_fermentation_pathway_sketch to MECHANISTIC; added "
+            "InterPro:IPR023990-grounded GENE_OR_PROTEIN node "
+            "butyryl_coa_acetate_coa_transferase with reviewed "
+            "protein_examples UniProtKB:G2SYC0 (RHOM_13820) backed by "
+            "DOI:10.1099/mic.0.28412-0; resolved "
+            "butyric-acid-fermentation-protein-example-gap."
+        ),
+    },
+    "data/traits/metabolism/complete_ammonia_oxidation.yaml": {
+        "identifier": "traitmech:000187",
+        "graph_id": "complete_ammonia_oxidation_comammox_sketch",
+        "discussion_id": "complete-ammonia-oxidation-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1038/nature16459, "
+            "DOI:10.1038/nature16461, and DOI:10.1128/aem.01698-23; "
+            "exemplified on ammonia_monooxygenase_amoa with Candidatus "
+            "Nitrospira inopinata (NCBITaxon:1715989; UP000066284) ammonia "
+            "monooxygenase subunit A AmoA (UniProtKB:A0A0S4KUL9)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1038/nature16461",
+            "snippet": (
+                "The genome of this chemolithoautotrophic organism encodes the "
+                "pathways both for ammonia and nitrite oxidation, which are "
+                "concomitantly activated during growth by ammonia oxidation to "
+                "nitrate. Genes affiliated with the phylogenetically distinct "
+                "ammonia monooxygenase and hydroxylamine dehydrogenase genes of "
+                "Nitrospira are present in many environments and were retrieved "
+                "on Nitrospira-contigs in new metagenomes from engineered systems."
+            ),
+            "notes": (
+                "Daims et al. show that Candidatus Nitrospira inopinata encodes "
+                "and concomitantly activates the phylogenetically distinct "
+                "ammonia monooxygenase (AmoCAB; AmoA UniProtKB:A0A0S4KUL9) "
+                "and hydroxylamine/nitrite oxidation pathways during complete "
+                "ammonia oxidation to nitrate."
+            ),
+        },
+        "new_node": {
+            "node_id": "ammonia_monooxygenase_amoa",
+            "label": "ammonia monooxygenase subunit A AmoA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR003393",
+            "gene_symbols": ["amoA"],
+            "description": (
+                "Membrane-bound ammonia monooxygenase catalytic alpha subunit "
+                "AmoA (InterPro:IPR003393) that catalyzes the initial oxidation "
+                "of ammonia to hydroxylamine in complete ammonia-oxidizing "
+                "(comammox) Nitrospira."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:A0A0S4KUL9",
+                    "protein_label": "Ammonia monooxygenase, subunit A",
+                    "gene_symbol": "amoA",
+                    "taxon_id": "NCBITaxon:1715989",
+                    "taxon_label": "Candidatus Nitrospira inopinata",
+                    "entry_status": "UNREVIEWED",
+                    "proteome_id": "UP000066284",
+                    "retrieved_on": C10S3_RETRIEVED_ON,
+                    "entry_version": 22,
+                    "sequence_version": 1,
+                    "role": (
+                        "Phylogenetically distinct comammox ammonia "
+                        "monooxygenase alpha subunit AmoA encoded and expressed "
+                        "alongside the nitrite-oxidizing pathway during "
+                        "complete oxidation of ammonia to nitrate in Candidatus "
+                        "Nitrospira inopinata."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1038/nature16461",
+                            "snippet": (
+                                "The genome of this chemolithoautotrophic "
+                                "organism encodes the pathways both for "
+                                "ammonia and nitrite oxidation, which are "
+                                "concomitantly activated during growth by "
+                                "ammonia oxidation to nitrate. Genes affiliated "
+                                "with the phylogenetically distinct ammonia "
+                                "monooxygenase and hydroxylamine dehydrogenase "
+                                "genes of Nitrospira are present in many "
+                                "environments and were retrieved on "
+                                "Nitrospira-contigs in new metagenomes from "
+                                "engineered systems."
+                            ),
+                            "notes": (
+                                "Daims et al. identify the phylogenetically "
+                                "distinct comammox ammonia monooxygenase in "
+                                "Candidatus Nitrospira inopinata "
+                                "(AmoA; UniProtKB:A0A0S4KUL9)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "ammonia_monooxygenase_amoa",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "complete_ammonia_oxidation_process",
+            "description": (
+                "Comammox ammonia monooxygenase subunit A (AmoA) is a causal "
+                "agent in the initial ammonia-oxidation step of complete "
+                "ammonia oxidation to nitrate."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1038/nature16461",
+                    "snippet": (
+                        "The genome of this chemolithoautotrophic organism "
+                        "encodes the pathways both for ammonia and nitrite "
+                        "oxidation, which are concomitantly activated during "
+                        "growth by ammonia oxidation to nitrate. Genes "
+                        "affiliated with the phylogenetically distinct ammonia "
+                        "monooxygenase and hydroxylamine dehydrogenase genes "
+                        "of Nitrospira are present in many environments and "
+                        "were retrieved on Nitrospira-contigs in new "
+                        "metagenomes from engineered systems."
+                    ),
+                    "notes": (
+                        "Daims et al. demonstrate that the Candidatus "
+                        "Nitrospira inopinata ammonia monooxygenase and "
+                        "nitrite-oxidation pathways are concomitantly "
+                        "activated during growth by ammonia oxidation to nitrate."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C10S3_TIMESTAMP,
+            "body": (
+                "Promoted complete_ammonia_oxidation_comammox_sketch to "
+                "MECHANISTIC by adding InterPro:IPR003393-grounded "
+                "GENE_OR_PROTEIN node ammonia_monooxygenase_amoa with "
+                "Candidatus Nitrospira inopinata (NCBITaxon:1715989; "
+                "UP000066284) protein_examples UniProtKB:A0A0S4KUL9 (AmoA; "
+                "encoded alongside AmoB UniProtKB:A0A0S4KWM9, Hao "
+                "UniProtKB:A0A0S4KTM8, and NxrA UniProtKB:A0A0S4KRS1) backed "
+                "by DOI:10.1038/nature16461."
+            ),
+        },
+        "changes_summary": (
+            "Promoted complete_ammonia_oxidation_comammox_sketch to "
+            "MECHANISTIC; added InterPro:IPR003393-grounded GENE_OR_PROTEIN "
+            "node ammonia_monooxygenase_amoa with Candidatus Nitrospira "
+            "inopinata (NCBITaxon:1715989; UP000066284) protein_examples "
+            "UniProtKB:A0A0S4KUL9 (AmoA) backed by DOI:10.1038/nature16461; "
+            "resolved complete-ammonia-oxidation-protein-example-gap."
+        ),
+    },
+    "data/traits/metabolism/iodate_respiration.yaml": {
+        "identifier": "traitmech:000203",
+        "graph_id": "iodate_respiration_reduction_sketch",
+        "discussion_id": "iodate-respiration-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1128/AEM.00241-07, "
+            "DOI:10.3389/fmicb.2021.804181, and DOI:10.1111/1462-2920.14988; "
+            "exemplified on iodate_reductase_idra with Pseudomonas sp. (strain "
+            "SCT) (NCBITaxon:412955) respiratory iodate reductase catalytic "
+            "subunit IdrA (UniProtKB:A0A391NTR7)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1111/1462-2920.14988",
+            "snippet": (
+                "IdrA and IdrB were homologues of catalytic and electron "
+                "transfer subunits of respiratory arsenite oxidase (Aio); "
+                "however, IdrA defined a novel clade within the "
+                "dimethylsulfoxide (DMSO) reductase family."
+            ),
+            "notes": (
+                "Yamazaki et al. identify and characterize the periplasmic "
+                "respiratory iodate reductase catalytic subunit IdrA (encoded "
+                "within the idrABP1P2 operon; UniProtKB:A0A391NTR7) required "
+                "for anaerobic iodate respiration in Pseudomonas sp. strain SCT."
+            ),
+        },
+        "new_node": {
+            "node_id": "iodate_reductase_idra",
+            "label": "iodate reductase catalytic subunit IdrA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR014066",
+            "gene_symbols": ["idrA"],
+            "operon": "idrABP1P2",
+            "description": (
+                "Molybdopterin-containing catalytic subunit IdrA of periplasmic "
+                "respiratory iodate reductase (IdrABP1P2; DMSO reductase family; "
+                "InterPro:IPR014066) that catalyzes dissimilatory reduction of "
+                "iodate during anaerobic iodate respiration."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:A0A391NTR7",
+                    "protein_label": "Iodate reductase subunit IdrA",
+                    "gene_symbol": "idrA",
+                    "taxon_id": "NCBITaxon:412955",
+                    "taxon_label": "Pseudomonas sp. (strain SCT)",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C10S3_RETRIEVED_ON,
+                    "entry_version": 30,
+                    "sequence_version": 1,
+                    "role": (
+                        "Catalytic molybdopterin subunit IdrA of the "
+                        "periplasmic respiratory iodate reductase complex "
+                        "(IdrABP1P2) induced under iodate-respiring conditions "
+                        "in Pseudomonas sp. strain SCT."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1111/1462-2920.14988",
+                            "snippet": (
+                                "IdrA and IdrB were homologues of catalytic and "
+                                "electron transfer subunits of respiratory "
+                                "arsenite oxidase (Aio); however, IdrA defined "
+                                "a novel clade within the dimethylsulfoxide "
+                                "(DMSO) reductase family."
+                            ),
+                            "notes": (
+                                "Yamazaki et al. characterized Pseudomonas sp. "
+                                "strain SCT iodate reductase subunit IdrA "
+                                "(UniProtKB:A0A391NTR7)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "iodate_reductase_idra",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "iodate_respiration_anaerobic_respiration",
+            "description": (
+                "Periplasmic respiratory iodate reductase catalytic subunit "
+                "IdrA is a causal agent in anaerobic iodate respiration by "
+                "Pseudomonas sp. strain SCT."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1111/1462-2920.14988",
+                    "snippet": (
+                        "IdrA and IdrB were homologues of catalytic and "
+                        "electron transfer subunits of respiratory arsenite "
+                        "oxidase (Aio); however, IdrA defined a novel clade "
+                        "within the dimethylsulfoxide (DMSO) reductase family."
+                    ),
+                    "notes": (
+                        "Yamazaki et al. show that IdrA is the catalytic "
+                        "subunit of the periplasmic respiratory iodate "
+                        "reductase in Pseudomonas sp. strain SCT."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C10S3_TIMESTAMP,
+            "body": (
+                "Promoted iodate_respiration_reduction_sketch to MECHANISTIC "
+                "by adding InterPro:IPR014066-grounded GENE_OR_PROTEIN node "
+                "iodate_reductase_idra (operon idrABP1P2) with reviewed "
+                "Pseudomonas sp. (strain SCT) (NCBITaxon:412955) "
+                "protein_examples UniProtKB:A0A391NTR7 (IdrA) backed by "
+                "DOI:10.1111/1462-2920.14988."
+            ),
+        },
+        "changes_summary": (
+            "Promoted iodate_respiration_reduction_sketch to MECHANISTIC; "
+            "added InterPro:IPR014066-grounded GENE_OR_PROTEIN node "
+            "iodate_reductase_idra with reviewed Pseudomonas sp. (strain SCT) "
+            "(NCBITaxon:412955) protein_examples UniProtKB:A0A391NTR7 (IdrA) "
+            "backed by DOI:10.1111/1462-2920.14988; resolved "
+            "iodate-respiration-protein-example-gap."
+        ),
+    },
+    "data/traits/metabolism/organohalide_respiration.yaml": {
+        "identifier": "traitmech:000204",
+        "graph_id": "organohalide_respiration_pce_sketch",
+        "discussion_id": "organohalide-respiration-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1098/rstb.2012.0322, "
+            "DOI:10.1126/science.276.5318.1568, DOI:10.1126/science.1102226, "
+            "and DOI:10.1128/aem.66.12.5141-5147.2000; exemplified on "
+            "reductive_dehalogenase_rdha with Dehalococcoides mccartyi strain "
+            "195 (NCBITaxon:243164; UP000008289) putative tetrachloroethene "
+            "reductive dehalogenase PceA (UniProtKB:Q3Z9N3; DET0318) and "
+            "reviewed trichloroethene reductive dehalogenase TceA "
+            "(UniProtKB:Q3ZAB8; tceA)."
+        ),
+        "new_evidence": [
+            {
+                "reference": "DOI:10.1126/science.1102226",
+                "snippet": (
+                    "Dehalococcoides ethenogenes is the only bacterium known "
+                    "to reductively dechlorinate the groundwater pollutants, "
+                    "tetrachloroethene (PCE) and trichloroethene, to ethene. "
+                    "Its 1,469,720-base pair chromosome contains large dynamic "
+                    "duplicated regions and integrated elements. Genes encoding "
+                    "17 putative reductive dehalogenases, nearly all of which "
+                    "were adjacent to genes for transcription regulators, and "
+                    "five hydrogenase complexes were identified."
+                ),
+                "notes": (
+                    "Seshadri et al. sequenced the Dehalococcoides mccartyi "
+                    "(D. ethenogenes) strain 195 genome and identified the "
+                    "reductive dehalogenase gene repertoire including "
+                    "tetrachloroethene reductive dehalogenase locus DET0318 "
+                    "(UniProtKB:Q3Z9N3)."
+                ),
+            },
+            {
+                "reference": "DOI:10.1128/aem.66.12.5141-5147.2000",
+                "snippet": (
+                    "The anaerobic bacterium Dehalococcoides ethenogenes is "
+                    "the only known organism that can completely dechlorinate "
+                    "tetrachloroethene or trichloroethene (TCE) to ethene via "
+                    "dehalorespiration. One of two corrinoid-containing enzymes "
+                    "responsible for this pathway, TCE reductive dehalogenase "
+                    "(TCE-RDase) catalyzes the dechlorination of TCE to ethene."
+                ),
+                "notes": (
+                    "Magnuson et al. cloned and sequenced tceA and "
+                    "characterized the membrane-associated corrinoid/iron-sulfur "
+                    "trichloroethene reductive dehalogenase TceA "
+                    "(UniProtKB:Q3ZAB8) acting alongside PCE reductive "
+                    "dehalogenase in Dehalococcoides mccartyi strain 195."
+                ),
+            },
+        ],
+        "new_node": {
+            "node_id": "reductive_dehalogenase_rdha",
+            "label": "reductive dehalogenase catalytic subunit RdhA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR012832",
+            "gene_symbols": ["pceA", "tceA"],
+            "description": (
+                "Twin-arginine-translocated corrinoid- and "
+                "iron-sulfur-cluster-containing reductive dehalogenase "
+                "catalytic subunit RdhA (PceA/TceA family; InterPro:IPR012832) "
+                "that catalyzes respiratory reductive dechlorination of "
+                "chlorinated ethenes during anaerobic organohalide respiration."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:Q3Z9N3",
+                    "protein_label": "Reductive dehalogenase, putative",
+                    "gene_symbol": "DET0318",
+                    "taxon_id": "NCBITaxon:243164",
+                    "taxon_label": "Dehalococcoides mccartyi (strain ATCC BAA-2266 / KCTC 15142 / 195)",
+                    "entry_status": "UNREVIEWED",
+                    "proteome_id": "UP000008289",
+                    "retrieved_on": C10S3_RETRIEVED_ON,
+                    "entry_version": 104,
+                    "sequence_version": 1,
+                    "role": (
+                        "Putative tetrachloroethene reductive dehalogenase "
+                        "catalytic subunit PceA (locus DET0318) encoded on the "
+                        "Dehalococcoides mccartyi strain 195 chromosome that "
+                        "initiates respiratory reductive dechlorination of "
+                        "tetrachloroethene (PCE) to trichloroethene."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1126/science.1102226",
+                            "snippet": (
+                                "Dehalococcoides ethenogenes is the only "
+                                "bacterium known to reductively dechlorinate "
+                                "the groundwater pollutants, tetrachloroethene "
+                                "(PCE) and trichloroethene, to ethene. Its "
+                                "1,469,720-base pair chromosome contains large "
+                                "dynamic duplicated regions and integrated "
+                                "elements. Genes encoding 17 putative reductive "
+                                "dehalogenases, nearly all of which were "
+                                "adjacent to genes for transcription "
+                                "regulators, and five hydrogenase complexes "
+                                "were identified."
+                            ),
+                            "notes": (
+                                "Seshadri et al. annotated the Dehalococcoides "
+                                "mccartyi strain 195 reductive dehalogenase "
+                                "gene set including DET0318 (UniProtKB:Q3Z9N3)."
+                            ),
+                        }
+                    ],
+                },
+                {
+                    "uniprot_id": "UniProtKB:Q3ZAB8",
+                    "protein_label": "Trichloroethene reductive dehalogenase",
+                    "gene_symbol": "tceA",
+                    "taxon_id": "NCBITaxon:243164",
+                    "taxon_label": "Dehalococcoides mccartyi (strain ATCC BAA-2266 / KCTC 15142 / 195)",
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000008289",
+                    "retrieved_on": C10S3_RETRIEVED_ON,
+                    "entry_version": 98,
+                    "sequence_version": 1,
+                    "role": (
+                        "Corrinoid/iron-sulfur reductive dehalogenase "
+                        "catalytic subunit TceA that catalyzes reductive "
+                        "dechlorination of trichloroethene and dichloroethenes "
+                        "to ethene in the respiratory dechlorination pathway "
+                        "of Dehalococcoides mccartyi strain 195."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/aem.66.12.5141-5147.2000",
+                            "snippet": (
+                                "The anaerobic bacterium Dehalococcoides "
+                                "ethenogenes is the only known organism that "
+                                "can completely dechlorinate tetrachloroethene "
+                                "or trichloroethene (TCE) to ethene via "
+                                "dehalorespiration. One of two "
+                                "corrinoid-containing enzymes responsible for "
+                                "this pathway, TCE reductive dehalogenase "
+                                "(TCE-RDase) catalyzes the dechlorination of "
+                                "TCE to ethene."
+                            ),
+                            "notes": (
+                                "Magnuson et al. cloned and characterized "
+                                "Dehalococcoides mccartyi strain 195 tceA "
+                                "(UniProtKB:Q3ZAB8)."
+                            ),
+                        }
+                    ],
+                },
+            ],
+        },
+        "new_edge": {
+            "subject": "reductive_dehalogenase_rdha",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "organohalide_respiration_anaerobic_respiration",
+            "description": (
+                "Reductive dehalogenase catalytic subunits (PceA/TceA; RdhA) "
+                "are causal agents in respiratory reductive dechlorination of "
+                "chlorinated ethenes during anaerobic organohalide respiration."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/aem.66.12.5141-5147.2000",
+                    "snippet": (
+                        "The anaerobic bacterium Dehalococcoides ethenogenes "
+                        "is the only known organism that can completely "
+                        "dechlorinate tetrachloroethene or trichloroethene "
+                        "(TCE) to ethene via dehalorespiration. One of two "
+                        "corrinoid-containing enzymes responsible for this "
+                        "pathway, TCE reductive dehalogenase (TCE-RDase) "
+                        "catalyzes the dechlorination of TCE to ethene."
+                    ),
+                    "notes": (
+                        "Magnuson et al. show that the two corrinoid-containing "
+                        "reductive dehalogenases (PCE-RDase and TCE-RDase) "
+                        "drive dehalorespiration of tetrachloroethene and "
+                        "trichloroethene to ethene in Dehalococcoides mccartyi "
+                        "strain 195."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C10S3_TIMESTAMP,
+            "body": (
+                "Promoted organohalide_respiration_pce_sketch to MECHANISTIC "
+                "by adding InterPro:IPR012832-grounded GENE_OR_PROTEIN node "
+                "reductive_dehalogenase_rdha with Dehalococcoides mccartyi "
+                "strain 195 (NCBITaxon:243164; UP000008289) protein_examples "
+                "UniProtKB:Q3Z9N3 (DET0318 / putative PceA; "
+                "DOI:10.1126/science.1102226) and reviewed Swiss-Prot "
+                "UniProtKB:Q3ZAB8 (tceA / TceA; "
+                "DOI:10.1128/aem.66.12.5141-5147.2000)."
+            ),
+        },
+        "changes_summary": (
+            "Promoted organohalide_respiration_pce_sketch to MECHANISTIC; "
+            "added InterPro:IPR012832-grounded GENE_OR_PROTEIN node "
+            "reductive_dehalogenase_rdha with Dehalococcoides mccartyi strain "
+            "195 (NCBITaxon:243164; UP000008289) protein_examples "
+            "UniProtKB:Q3Z9N3 (DET0318 / putative PceA) and reviewed "
+            "UniProtKB:Q3ZAB8 (tceA / TceA) backed by "
+            "DOI:10.1126/science.1102226 and "
+            "DOI:10.1128/aem.66.12.5141-5147.2000; resolved "
+            "organohalide-respiration-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -5710,6 +6354,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C7S3_COHORT_J_PROMOTIONS,
         **C8S3_COHORT_K_PROMOTIONS,
         **C9S3_COHORT_L_PROMOTIONS,
+        **C10S3_COHORT_M_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(
@@ -5818,13 +6463,15 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
             new_ev = spec.get("new_evidence")
             if new_ev is not None:
                 ev_list = doc.setdefault("evidence", [])
-                if not any(
-                    e.get("reference") == new_ev["reference"]
-                    and e.get("snippet") == new_ev["snippet"]
-                    for e in ev_list
-                ):
-                    ev_list.append(copy.deepcopy(new_ev))
-                    changed = True
+                new_evs = new_ev if isinstance(new_ev, list) else [new_ev]
+                for ev_item in new_evs:
+                    if not any(
+                        e.get("reference") == ev_item["reference"]
+                        and e.get("snippet") == ev_item["snippet"]
+                        for e in ev_list
+                    ):
+                        ev_list.append(copy.deepcopy(ev_item))
+                        changed = True
 
             new_ce = spec.get("new_canonical_example")
             if new_ce is not None:

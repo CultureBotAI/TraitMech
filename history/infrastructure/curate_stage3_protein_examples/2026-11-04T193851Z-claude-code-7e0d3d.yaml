@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-11-04T193851Z-claude-code-7e0d3d
+  timestamp: '2026-11-04T19:38:51Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2068
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1988
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: 'Cycle 10 Stage 3 (protein_examples): promote 4 Cohort M trait graphs to MECHANISTIC
+    with verified UniProtKB protein examples'
+  details: Reviewed all 1,130 TraitRecord YAML files (1,129 curated, 1 DO_NOT_WORK protected)
+    for Cycle 10 Stage 3 (protein_examples). Promoted the 4 Cycle 10 Stage 2 Cohort M PATHWAY_SKETCH
+    records (butyric_acid_fermentation, complete_ammonia_oxidation, iodate_respiration, organohalide_respiration)
+    to MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified UniProtKB
+    protein_examples (G2SYC0 But/Cat1 on Roseburia hominis A2-183 NCBITaxon:585394 UP000008178
+    for butyric_acid_fermentation; A0A0S4KUL9 AmoA on Candidatus Nitrospira inopinata NCBITaxon:1715989
+    UP000066284 for complete_ammonia_oxidation; A0A391NTR7 IdrA on Pseudomonas sp. strain
+    SCT NCBITaxon:412955 for iodate_respiration; Q3Z9N3 DET0318/PceA and Q3ZAB8 TceA on Dehalococcoides
+    mccartyi strain 195 NCBITaxon:243164 UP000008289 for organohalide_respiration), strain-matched
+    canonical_examples, distinct verbatim primary-source evidence snippets, record-evidence-backed
+    scope_notes, and RESOLVED CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv
+    (206 uses across 171 unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv
+    (167 MECHANISTIC pass, 597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    and all derived reports and pages.
