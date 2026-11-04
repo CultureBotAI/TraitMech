@@ -1,0 +1,285 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 10
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit 355a025427693833c681bbf1b2d33ee015e24dc5
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261104T211500Z-cycle10-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 9 Stage 5 evidence. Verified the 4 Cycle 10 Stage 2/3
+  Cohort M metabolism respiratory/fermentative records and beta_fucosidase_activity.yaml specificity upgrade
+  with 0 findings, identified 14 actionable open record-level definition_source missing-snippet findings
+  (F-C10S4-DEF-SRC-001..014) across data/traits/morphology/ (traitmech:000061..traitmech:000074) for Cycle
+  10 Stage 5 grouped remediation, and carried forward the 5 deferred source-limited/upstream-blocked cohort
+  findings.'
+source_revision: 355a025427693833c681bbf1b2d33ee015e24dc5
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-05/revision-0001/evidence.yaml
+  sha256: 40ebded105999810de326205b50c67abce8812baa5062f6b08c05d51c697e76a
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/review_report.md
+  sha256: 6eee5b0c7162b05062a0f82d79851a682a46716599be73b82e0458df3d85762a
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/review_findings.tsv
+  sha256: df13a97d940cefb174a418317e35885325ca5d5b6641f0f724c7826b1525c231
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: 9e3f88d947aafb515b169302310fd38c0152b37b9b36126ccaac2686352d4d92
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/structured_review.yaml
+  sha256: 51ac757cda8db526ed222560f762783e2c72472689ae285b6cb2f96e633e6bb9
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/structured_review.md
+  sha256: 3e8d2f374e8ccbfc4e13a94514cd19ee70dbe36cb93cebaa3ceeda7caa9d2f1a
+  kind: supporting
+findings:
+- finding_id: F-C10S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/morphology/capsule.yaml (traitmech:000063) declares definition_source: DOI:10.1146/annurev.micro.50.1.285
+    (Roberts 1996, Annu Rev Microbiol) and cites DOI:10.1146/annurev.micro.50.1.285 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1146/annurev.micro.50.1.285 (PMID:8905082) provides the
+    verified verbatim definitional quote "They can form an amorphous layer of extracellular polysaccharide
+    (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev.micro.50.1.285 to evidence[0].snippet in data/traits/morphology/capsule.yaml.'
+- finding_id: F-C10S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/morphology/carboxysome.yaml (traitmech:000072) declares definition_source: DOI:10.1038/nrmicro.2018.10
+    (Kerfeld et al. 2018, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro.2018.10 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro.2018.10 (PMID:29503457) provides the verified
+    verbatim definitional quote "Bacterial microcompartments (BMCs) are self-assembling organelles that
+    consist of an enzymatic core that is encapsulated by a selectively permeable protein shell. The potential
+    to form BMCs is widespread and found across the kingdom Bacteria. BMCs have crucial roles in carbon
+    dioxide fixation in autotrophs and the catabolism of organic substrates in heterotrophs.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro.2018.10 to evidence[0].snippet in data/traits/morphology/carboxysome.yaml.'
+- finding_id: F-C10S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/morphology/gas_vesicle.yaml (traitmech:000070) declares definition_source: DOI:10.1038/nrmicro2834
+    (Pfeifer 2012, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro2834 in record-level evidence[0] with
+    explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro2834 (PMID:22941504) provides the verified
+    verbatim definitional quote "A range of bacteria and archaea produce intracellular gas-filled proteinaceous
+    structures that function as flotation devices in order to maintain a suitable depth in the aqueous
+    environment.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro2834 to evidence[0].snippet in data/traits/morphology/gas_vesicle.yaml.'
+- finding_id: F-C10S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/morphology/heterocyst.yaml (traitmech:000073) declares definition_source: DOI:10.1101/cshperspect.a000315
+    (Kumar, Mella-Herrera & Golden 2010, Cold Spring Harb Perspect Biol) and cites DOI:10.1101/cshperspect.a000315
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1101/cshperspect.a000315
+    (PMID:20452939 / PMC2845205) provides the verified verbatim definitional quote "Many multicellular
+    cyanobacteria produce specialized nitrogen-fixing heterocysts. During diazotrophic growth of the model
+    organism Anabaena (Nostoc) sp. strain PCC 7120, a regulated developmental pattern of single heterocysts
+    separated by about 10 to 20 photosynthetic vegetative cells is maintained along filaments. Heterocyst
+    structure and metabolic activity function together to accommodate the oxygen-sensitive process of
+    nitrogen fixation.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1101/cshperspect.a000315 to evidence[0].snippet in data/traits/morphology/heterocyst.yaml.'
+- finding_id: F-C10S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/morphology/intracellular_inclusion.yaml (traitmech:000066) declares definition_source:
+    DOI:10.1038/s41579-020-0413-0 (Greening & Lithgow 2020, Nat Rev Microbiol) and cites DOI:10.1038/s41579-020-0413-0
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/s41579-020-0413-0
+    (PMID:32710089) provides the verified verbatim definitional quote "Advances in imaging technologies
+    have revealed that many bacteria possess organelles with a proteomically defined lumen and a macromolecular
+    boundary. Some are bound by a lipid bilayer (such as thylakoids, magnetosomes and anammoxosomes),
+    whereas others are defined by a lipid monolayer (such as lipid bodies), a proteinaceous coat (such
+    as carboxysomes) or have a phase-defined boundary (such as nucleolus-like compartments).".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/s41579-020-0413-0 to evidence[0].snippet in data/traits/morphology/intracellular_inclusion.yaml.'
+- finding_id: F-C10S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/morphology/magnetosome.yaml (traitmech:000071) declares definition_source: DOI:10.1038/nrmicro.2016.99
+    (Uebe & Schüler 2016, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro.2016.99 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro.2016.99 (PMID:27620945) provides the verified
+    verbatim definitional quote "Magnetotactic bacteria derive their magnetic orientation from magnetosomes,
+    which are unique organelles that contain nanometre-sized crystals of magnetic iron minerals.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro.2016.99 to evidence[0].snippet in data/traits/morphology/magnetosome.yaml.'
+- finding_id: F-C10S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/morphology/mycelial_growth.yaml (traitmech:000074) declares definition_source:
+    DOI:10.1038/nrmicro1968 (Flärdh & Buttner 2009, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro1968
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro1968
+    (PMID:19079351) provides the verified verbatim definitional quote "Not only are the bacterial cytoskeleton
+    and the machineries for cell-wall assembly, cell division and chromosome segregation reorganized during
+    sporulation, but the developmental programme of these fascinating organisms also has many unusual
+    elements, including the formation of a sporulating aerial mycelium and the production of a surfactant
+    peptide and a hydrophobic sheath that allow cells to escape from the surface tension of the growth
+    medium.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro1968 to evidence[0].snippet in data/traits/morphology/mycelial_growth.yaml.'
+- finding_id: F-C10S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/morphology/polyhydroxyalkanoate_granule.yaml (traitmech:000067) declares definition_source:
+    DOI:10.1128/mr.54.4.450-472.1990 (Anderson & Dawes 1990, Microbiol Rev) and cites DOI:10.1128/mr.54.4.450-472.1990
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1128/mr.54.4.450-472.1990
+    (PMID:2087222 / PMC372789) provides the verified verbatim definitional quote "Polyhydroxyalkanoates
+    (PHAs), of which polyhydroxybutyrate (PHB) is the most abundant, are bacterial carbon and energy reserve
+    materials of widespread occurrence. They are composed of 3-hydroxyacid monomer units and exist as
+    a small number of cytoplasmic granules per cell.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/mr.54.4.450-472.1990 to evidence[0].snippet in data/traits/morphology/polyhydroxyalkanoate_granule.yaml.'
+- finding_id: F-C10S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068) declares definition_source:
+    DOI:10.1146/annurev.biochem.77.083007.093039 (Rao, Gómez-García & Kornberg 2009, Annu Rev Biochem)
+    and cites DOI:10.1146/annurev.biochem.77.083007.093039 in record-level evidence[0] with explanatory
+    notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1146/annurev.biochem.77.083007.093039 (PMID:19344251) provides
+    the verified verbatim definitional quote "Inorganic polyphosphate (Poly P) is a polymer of tens to
+    hundreds of phosphate residues linked by "high-energy" phosphoanhydride bonds as in ATP. Found in
+    abundance in all cells in nature, it is unique in its likely role in the origin and survival of species.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev.biochem.77.083007.093039 to evidence[0].snippet
+    in data/traits/morphology/polyphosphate_granule.yaml.'
+- finding_id: F-C10S4-DEF-SRC-010
+  status: open
+  summary: 'data/traits/morphology/prosthecate.yaml (traitmech:000065) declares definition_source: DOI:10.1111/j.1365-2958.2007.05633.x
+    (Wagner & Brun 2007, Mol Microbiol) and cites DOI:10.1111/j.1365-2958.2007.05633.x in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1111/j.1365-2958.2007.05633.x
+    (PMID:17376069 / PMC2666341) provides the verified verbatim definitional quote "One remarkable example
+    of bacterial morphogenesis is the elaboration of long, tubular extensions of the cell envelope of
+    certain aquatic bacteria. These appendages (also called prosthecae or stalks) possess features that
+    make them particularly amenable models for experiments designed to uncover general principles of cell
+    morphogenesis and of cell shape function.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1111/j.1365-2958.2007.05633.x to evidence[0].snippet in data/traits/morphology/prosthecate.yaml.'
+- finding_id: F-C10S4-DEF-SRC-011
+  status: open
+  summary: 'data/traits/morphology/s_layer.yaml (traitmech:000064) declares definition_source: DOI:10.1038/nrmicro3213
+    (Fagan & Fairweather 2014, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro3213 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro3213 (PMID:24509785) provides the verified
+    verbatim definitional quote "The outer surface of many archaea and bacteria is coated with a proteinaceous
+    surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into
+    a regularly spaced, two-dimensional array.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro3213 to evidence[0].snippet in data/traits/morphology/s_layer.yaml.'
+- finding_id: F-C10S4-DEF-SRC-012
+  status: open
+  summary: 'data/traits/morphology/sulfur_globule.yaml (traitmech:000069) declares definition_source:
+    DOI:10.1016/S0065-2911(08)00002-7 (Frigaard & Dahl 2009, Adv Microb Physiol) and cites DOI:10.1016/S0065-2911(08)00002-7
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1016/S0065-2911(08)00002-7
+    (PMID:18929068) provides the verified verbatim definitional quote "Phototrophic sulfur bacteria are
+    characterized by oxidizing various inorganic sulfur compounds for use as electron donors in carbon
+    dioxide fixation during anoxygenic photosynthetic growth. These bacteria are divided into the purple
+    sulfur bacteria (PSB) and the green sulfur bacteria (GSB). They utilize various combinations of sulfide,
+    elemental sulfur, and thiosulfate and sometimes also ferrous iron and hydrogen as electron donors.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1016/S0065-2911(08)00002-7 to evidence[0].snippet in data/traits/morphology/sulfur_globule.yaml.'
+- finding_id: F-C10S4-DEF-SRC-013
+  status: open
+  summary: 'data/traits/morphology/swarming_motility.yaml (traitmech:000062) declares definition_source:
+    DOI:10.1038/nrmicro2405 (Kearns 2010, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro2405 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro2405 (PMID:20694026
+    / PMC3865293) provides the verified verbatim definitional quote "Here, I review the requirements that
+    define swarming motility in diverse bacterial model systems, including an increase in the number of
+    flagella per cell, the secretion of a surfactant to reduce surface tension and allow spreading, and
+    movement in multicellular groups rather than as individuals.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro2405 to evidence[0].snippet in data/traits/morphology/swarming_motility.yaml.'
+- finding_id: F-C10S4-DEF-SRC-014
+  status: open
+  summary: 'data/traits/morphology/twitching_motility.yaml (traitmech:000061) declares definition_source:
+    DOI:10.1146/annurev.micro.56.012302.160938 (Mattick 2002, Annu Rev Microbiol) and cites DOI:10.1146/annurev.micro.56.012302.160938
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1146/annurev.micro.56.012302.160938
+    (PMID:12142488) provides the verified verbatim definitional quote "Twitching motility is a flagella-independent
+    form of bacterial translocation over moist surfaces. It occurs by the extension, tethering, and then
+    retraction of polar type IV pili, which operate in a manner similar to a grappling hook.".'
+  disposition: 'Carry forward to Cycle 10 Stage 5 (resolve_review_findings) in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev.micro.56.012302.160938 to evidence[0].snippet
+    in data/traits/morphology/twitching_motility.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 365 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (343 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 347 in Cycle 9 after +4 Cycle 10 Stage 2/3 Cohort M metabolism respiratory/fermentative
+    graphs, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 365 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 29 of 1,129 eligible TraitRecord files (14 FAPROTAX metabolism records whose definition_source
+    DOI:10.1126/science.aaf4507 is cited with a verbatim snippet in edge-level causal_graphs[].edges[].evidence[].reference
+    and recognized by _record_repeats_def_source after traitmech-infra-0010 in Cycle 8 Stage 6, plus 15
+    records not repeating definition_source in record-level or edge-level evidence; alongside 29 empty-snippet
+    [31 <12-char] CLASS definition_source records without an in-corpus verbatim quote after promoting
+    14 morphology CLASS records to open findings F-C10S4-DEF-SRC-001..014, 94 OBJECT_PROPERTY records
+    in metabolism [71 with definition_source, including 31 with <12-char predicate-stem snippets resolved
+    under traitmech-infra-0006], and 50 records omitting definition_source) cite a primary discovery/characterization
+    reference in definition_source that is not repeated in record-level evidence[].
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C10S4-DEF-SRC-001
+- F-C10S4-DEF-SRC-002
+- F-C10S4-DEF-SRC-003
+- F-C10S4-DEF-SRC-004
+- F-C10S4-DEF-SRC-005
+- F-C10S4-DEF-SRC-006
+- F-C10S4-DEF-SRC-007
+- F-C10S4-DEF-SRC-008
+- F-C10S4-DEF-SRC-009
+- F-C10S4-DEF-SRC-010
+- F-C10S4-DEF-SRC-011
+- F-C10S4-DEF-SRC-012
+- F-C10S4-DEF-SRC-013
+- F-C10S4-DEF-SRC-014
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
