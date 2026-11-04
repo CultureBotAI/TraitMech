@@ -209251,6 +209251,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro3380",
+        "snippet": "This article reviews recent advances in our understanding of the mechanisms by which bacteria are either intrinsically resistant or acquire resistance to antibiotics, including the prevention of access to drug targets, changes in the structure and protection of antibiotic targets and the direct modification or inactivation of antibiotics.",
         "notes": "Blair et al. review the molecular mechanisms of antibiotic resistance (efflux, target alteration, drug inactivation, reduced uptake)."
       },
       {
@@ -209632,6 +209633,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P00807 (171 -> 172 on beta_lactamase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro3380 (Blair et al. 2015, PMID:25435309) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-001 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -212604,6 +212612,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1016/j.csbj.2018.11.003",
+        "snippet": "In bacteria, the heterodimeric luciferase catalyzes the monooxygenation of long-chain aliphatic aldehydes to the corresponding acids utilizing reduced FMN and molecular oxygen. The energy released as a photon results from an excited state flavin-4a-hydroxide, emitting light centered around 490 nm.",
         "notes": "Brodl, Winkler & Macheroux review the molecular mechanisms of bacterial bioluminescence and the luciferase reaction."
       },
       {
@@ -212980,6 +212989,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P12747 (97 -> 98 on lux_i).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1016/j.csbj.2018.11.003 (Brodl, Winkler & Macheroux 2018, PMID:30546856 / PMC6279958) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-002 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -219330,6 +219346,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrm1524",
+        "snippet": "Bacteria must be able to respond to a changing environment, and one way to respond is to move. The transduction of sensory signals alters the concentration of small phosphorylated response regulators that bind to the rotary flagellar motor and cause switching.",
         "notes": "Wadhams & Armitage review bacterial chemotaxis as gradient-guided movement controlled by a histidine-aspartate phosphorelay."
       },
       {
@@ -219681,6 +219698,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0AE67 (160 -> 161 on chey).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrm1524 (Wadhams & Armitage 2004, PMID:15573139) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-003 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -221698,6 +221722,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro2504",
+        "snippet": "Dormancy is a bet-hedging strategy used by a wide range of taxa, including microorganisms. It refers to an organism's ability to enter a reversible state of low metabolic activity when faced with unfavourable environmental conditions.",
         "notes": "Lennon & Jones review microbial seed banks and the mechanisms by which microorganisms enter and exit dormancy; parent of VBNC and persister sub-variants."
       },
       {
@@ -222000,6 +222025,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P9WG29 (53 -> 54 on rpf_proteins).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro2504 (Lennon & Jones 2011, PMID:21233850) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-004 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -231073,6 +231105,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro3199",
+        "snippet": "Natural bacterial transformation involves the internalization and chromosomal integration of DNA and has now been documented in ~80 species. Recent advances have established that phylogenetically distant species share conserved uptake and processing proteins but differ in the inducing cues and regulatory mechanisms that are involved.",
         "notes": "Johnston et al. review the distribution, shared mechanisms, and control of natural bacterial transformation (competence for DNA uptake)."
       },
       {
@@ -231429,6 +231462,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P0A452 (116 -> 117 on reca).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro3199 (Johnston et al. 2014, PMID:24509783) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-005 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -234603,6 +234643,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1146/annurev.micro.112408.134306",
+        "snippet": "Persisters are dormant variants of regular cells that form stochastically in microbial populations and are highly tolerant to antibiotics.",
         "notes": "Lewis reviews persister cells as dormant variants highly tolerant to antibiotics."
       },
       {
@@ -234943,6 +234984,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P23874 (176 -> 177 on hipa_toxin).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1146/annurev.micro.112408.134306 (Lewis 2010, PMID:20528688) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-006 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -241624,6 +241672,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1146/annurev-micro-090110-102946",
+        "snippet": "Under conditions of nutrient deprivation or stress, or as cells enter stationary phase, Escherichia coli and related bacteria increase the accumulation of RpoS, a specialized sigma factor. RpoS-dependent gene expression leads to general stress resistance of cells.",
         "notes": "Battesti, Majdalani & Gottesman review the RpoS-mediated general stress response, a broad protective program induced by stress and stationary phase."
       },
       {
@@ -241959,6 +242008,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13445 (207 -> 208 on rpos).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1146/annurev-micro-090110-102946 (Battesti, Majdalani & Gottesman 2011, PMID:21639793 / PMC7356644) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-007 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -243507,6 +243563,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/mr.59.3.451-480.1995",
+        "snippet": "Urease (urea amidohydrolase; EC 3.5.1.5) catalyzes the hydrolysis of urea to yield ammonia and carbamate. The latter compound spontaneously decomposes to yield another molecule of ammonia and carbonic acid.",
         "notes": "Mobley, Island & Hausinger review the molecular biology of microbial ureases that hydrolyze urea to ammonia and carbon dioxide."
       },
       {
@@ -243903,6 +243960,13 @@
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P41020 (152 -> 153 on urease), UniProtKB:P41021 (127 -> 128 on urease), UniProtKB:P41022 (129 -> 130 on urease).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/mr.59.3.451-480.1995 (Mobley, Island & Hausinger 1995, PMID:7565414 / PMC239369) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-008 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -244006,6 +244070,7 @@
     "evidence": [
       {
         "reference": "DOI:10.1111/j.1574-6976.2009.00200.x",
+        "snippet": "Many bacteria, including a variety of important human pathogens, are known to respond to various environmental stresses by entry into a novel physiological state, where the cells remain viable, but are no longer culturable on standard laboratory media. On resuscitation from this 'viable but nonculturable' (VBNC) state, the cells regain culturability and the renewed ability to cause infection.",
         "notes": "Oliver reviews the viable-but-nonculturable state, in which stressed cells stay viable yet unculturable until resuscitated."
       },
       {
@@ -244312,6 +244377,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P13445 (207 -> 208 on rpos).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-04T11:10:00Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1111/j.1574-6976.2009.00200.x (Oliver 2010, PMID:20059548) to record-level evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-009 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]

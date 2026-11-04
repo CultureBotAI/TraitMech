@@ -18,6 +18,9 @@ synonyms:
   source: DOI:10.1126/science.aaf4507
 evidence:
 - reference: DOI:10.1128/mr.59.3.451-480.1995
+  snippet: Urease (urea amidohydrolase; EC 3.5.1.5) catalyzes the hydrolysis of urea
+    to yield ammonia and carbamate. The latter compound spontaneously decomposes to
+    yield another molecule of ammonia and carbonic acid.
   notes: Mobley, Island & Hausinger review the molecular biology of microbial ureases
     that hydrolyze urea to ammonia and carbon dioxide.
 - reference: DOI:10.1128/mr.53.1.85-108.1989
@@ -339,4 +342,12 @@ curation_history:
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P41020 (152 -> 153 on urease), UniProtKB:P41021 (127 -> 128 on urease),
     UniProtKB:P41022 (129 -> 130 on urease).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/mr.59.3.451-480.1995
+    (Mobley, Island & Hausinger 1995, PMID:7565414 / PMC239369) to record-level evidence[0]
+    to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-008
+    in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

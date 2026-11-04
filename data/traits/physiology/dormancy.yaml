@@ -15,6 +15,9 @@ synonyms:
   source: DOI:10.1038/nrmicro2504
 evidence:
 - reference: DOI:10.1038/nrmicro2504
+  snippet: Dormancy is a bet-hedging strategy used by a wide range of taxa, including
+    microorganisms. It refers to an organism's ability to enter a reversible state
+    of low metabolic activity when faced with unfavourable environmental conditions.
   notes: Lennon & Jones review microbial seed banks and the mechanisms by which microorganisms
     enter and exit dormancy; parent of VBNC and persister sub-variants.
 - reference: DOI:10.1038/nrmicro1557
@@ -260,4 +263,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P9WG29 (53 -> 54 on rpf_proteins).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro2504 (Lennon &
+    Jones 2011, PMID:21233850) to record-level evidence[0] to match definition_source
+    (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-004 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

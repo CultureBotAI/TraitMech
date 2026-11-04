@@ -1,0 +1,44 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+  slug: curate_stage5_review_findings
+session:
+  id: 2026-11-04T111000Z-claude-code-c9a509
+  timestamp: '2026-11-04T11:10:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 9 actionable Cycle 9 Stage 4 open findings in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019,
+    cycle 9 consuming Cycle 9 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml,
+    sha256 c60bb53c4e81dc930cc78c72c9a8a801aa1566cae8e3b0388c21bf2491f5b19a). Grouped all
+    14 carried-forward findings into 6 cause-and-ownership groups, deduplicated against all
+    live GitHub issues, and reused real GitHub issues (#2002 for resolved group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+    cohort groups). Remediated all 9 open findings (F-C9S4-DEF-SRC-001 through F-C9S4-DEF-SRC-009)
+    via guarded writer scripts/curate_stage5_review_findings.py across antibiotic_resistance.yaml,
+    bioluminescence.yaml, chemotaxis.yaml, dormancy.yaml, natural_competence.yaml,
+    persister_cell_formation.yaml, stress_response.yaml, urease_activity.yaml, and
+    viable_but_nonculturable_state.yaml, and removed the 9 resolved evidence[0]
+    MISSING_SNIPPET entries from conf/evidence_snippet_baseline.tsv. Persisted fresh structured
+    review bundle reviews/structured/20261104T111500Z-cycle9-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 9 remediated records, regenerated
+    pages/, and preserved all immutable Stage 4 review artifacts untouched.'

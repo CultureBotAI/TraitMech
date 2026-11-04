@@ -15,6 +15,11 @@ synonyms:
   source: DOI:10.1111/j.1574-6976.2009.00200.x
 evidence:
 - reference: DOI:10.1111/j.1574-6976.2009.00200.x
+  snippet: Many bacteria, including a variety of important human pathogens, are known
+    to respond to various environmental stresses by entry into a novel physiological
+    state, where the cells remain viable, but are no longer culturable on standard
+    laboratory media. On resuscitation from this 'viable but nonculturable' (VBNC)
+    state, the cells regain culturability and the renewed ability to cause infection.
   notes: Oliver reviews the viable-but-nonculturable state, in which stressed cells
     stay viable yet unculturable until resuscitated.
 - reference: DOI:10.1038/nrmicro2504
@@ -251,4 +256,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P13445 (207 -> 208 on rpos).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1111/j.1574-6976.2009.00200.x
+    (Oliver 2010, PMID:20059548) to record-level evidence[0] to match definition_source
+    (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-009 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
