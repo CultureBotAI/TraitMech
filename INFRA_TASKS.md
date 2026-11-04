@@ -86,12 +86,14 @@ tasks:
     disposition: "Resolved in Cycle 8 Stage 6 (issue #2002, follow-up to #1981); extended _record_repeats_def_source() in scripts/audit_evidence_snippets.py to inspect causal_graphs[].edges[].evidence[].reference alongside canonical_examples[].reference and synonyms[].source, and updated has_corpus_16_quote to trigger for non-OBJECT_PROPERTY records whenever (def_source_in_ev or _record_repeats_def_source(doc, def_source)) and def_source in corpus_quoted_refs_16, covered by unit tests in tests/test_audit_evidence_snippets.py."
   - task_id: traitmech-infra-0011
     summary: Add HTTP 5xx/429 retry with backoff to fetch() in scripts/audit_uniprot_grounding.py so transient rest.uniprot.org 500 responses do not cause false API_ERROR failures during full-corpus refreshes
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+    disposition: "Resolved in Cycle 9 Stage 6 (issue #1988); updated fetch() in scripts/audit_uniprot_grounding.py with RETRYABLE_HTTP_CODES ({429, 500, 502, 503, 504}) and bounded exponential-backoff retries for transient HTTP 5xx/429 and URLError/TimeoutError exceptions while returning immediately on HTTP 404 or non-retryable 4xx errors, covered by unit tests in tests/test_audit_uniprot_grounding.py."
   - task_id: traitmech-infra-0012
     summary: Canonicalize DOI reference casing via _norm_ref() across record_refs, record_any_refs, family_quoted, and corpus_quoted_refs_16 in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE matches case-variant DOI citations
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    disposition: "Resolved in Cycle 9 Stage 6 (issue #2002, follow-up to #1981); added _norm_ref() in scripts/audit_evidence_snippets.py to canonicalize DOI CURIEs to DOI:<lowercase> across quoted, corpus_quoted_refs_16, refs_by_record_id, refs_by_parent_id, record_refs, record_any_refs, def_source, _load_defense_finder_ref_aliases(), _record_wiki_doi_aliases(), and _record_repeats_def_source(), covered by unit tests in tests/test_audit_evidence_snippets.py."
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -210,21 +212,23 @@ tasks:
 ### `traitmech-infra-0011` — Add HTTP 5xx/429 retry with backoff to `fetch()` in `scripts/audit_uniprot_grounding.py`
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 9, Stage 3 (`protein_examples`)
 - **Issue**: https://github.com/CultureBotAI/TraitMech/issues/1988
-- **Status**: `open`
+- **Status**: `resolved`
 - **Observation**: In `scripts/audit_uniprot_grounding.py`, `fetch(accession)` (lines 147–162) executes a single `urllib.request.urlopen` call against `https://rest.uniprot.org/uniprotkb/{accession}.json` and immediately returns `{"_error": f"HTTP {exc.code}"}` on any `urllib.error.HTTPError` other than `404` or `410`. During the Cycle 9 Stage 3 live refresh of `reports/uniprot_grounding_audit.tsv` across 165 unique accessions (201 uses), `rest.uniprot.org` returned transient `HTTP 500` errors on 3 accessions (`P0DW05`, `A0A099LW44`, and `Q9Z4S6`), causing `audit_uses()` to emit false `API_ERROR` findings even though each accession succeeded immediately on retry.
 - **Desired outcome**: In Cycle 9 Stage 6, update `fetch(accession)` in `scripts/audit_uniprot_grounding.py` to retry transient `HTTPError` (`500`, `502`, `503`, `504`, `429`) and `URLError` exceptions with configurable bounded retries and backoff before recording `_error`, with unit tests in `tests/test_audit_uniprot_grounding.py`.
-- **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`
+- **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/evidence.yaml`
 - **Priority**: Medium
 - **Dependencies**: None
+- **Disposition**: Resolved in Cycle 9 Stage 6 (issue #1988) by updating `fetch()` in `scripts/audit_uniprot_grounding.py` with `RETRYABLE_HTTP_CODES = frozenset({429, 500, 502, 503, 504})` and bounded exponential-backoff retries (`max_retries=3`, `retry_delay`) for transient HTTP 5xx/429 and `URLError`/`TimeoutError` failures while returning immediately on HTTP 404 or non-retryable 4xx errors, verified by unit tests in `tests/test_audit_uniprot_grounding.py` and offline `check_inventory()` (`201 uses match reports/uniprot_grounding_audit.tsv`).
 
 ### `traitmech-infra-0012` — Canonicalize `DOI:` reference casing via `_norm_ref()` across `record_refs`, `record_any_refs`, `family_quoted`, and `corpus_quoted_refs_16` in `scripts/audit_evidence_snippets.py`
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 9, Stage 4 (`review_records`)
 - **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
-- **Status**: `open`
+- **Status**: `resolved`
 - **Observation**: In `scripts/audit_evidence_snippets.py`, `_record_repeats_def_source(doc, def_source)` (lines 165–189) normalizes references with `.lower()`, while `quoted`, `corpus_quoted_refs_16`, `record_refs`, and `record_any_refs` in `audit()` (lines 368–446) store raw `_norm()` strings without canonicalizing `DOI:` letter casing (for example `DOI:10.1016/S0140-6736(00)04403-2` vs `DOI:10.1016/s0140-6736(00)04403-2` or `DOI:10.1128/AEM.01298-18` vs `DOI:10.1128/aem.01298-18`). Consequently, if `definition_source` and an `evidence[].reference` entry on the same record, a sibling/parent record, or a corpus record differ only in `DOI:` case, `def_source in record_refs`, `def_source in record_any_refs`, `def_source in family_quoted`, and `def_source in corpus_quoted_refs_16` fail to match.
 - **Desired outcome**: In Cycle 9 Stage 6, add a `_norm_ref(text: str) -> str` helper in `scripts/audit_evidence_snippets.py` that canonicalizes `DOI:` prefixes and suffixes to lowercase (`f"DOI:{val[4:].lower()}"`) while preserving non-DOI schemes (`PMID:`, `https://...`), and use `_norm_ref()` when populating and querying `quoted`, `corpus_quoted_refs_16`, `record_refs`, `record_any_refs`, and `def_source` in `UNQUOTED_DEFINITION_SOURCE`, with unit tests in `tests/test_audit_evidence_snippets.py`.
-- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/evidence.yaml`
 - **Priority**: Medium
 - **Dependencies**: None
+- **Disposition**: Resolved in Cycle 9 Stage 6 (issue #2002, follow-up to #1981) by adding `_norm_ref()` in `scripts/audit_evidence_snippets.py` to canonicalize `DOI:` CURIEs to `DOI:<lowercase>` across `quoted`, `corpus_quoted_refs_16`, `refs_by_record_id`, `refs_by_parent_id`, `record_refs`, `record_any_refs`, `def_source`, `_load_defense_finder_ref_aliases()`, `_record_wiki_doi_aliases()`, and `_record_repeats_def_source()`, verified by unit tests in `tests/test_audit_evidence_snippets.py` and full-corpus `audit(check_definition_sources=True)` (`0` `UNQUOTED_DEFINITION_SOURCE` findings across all 1,130 records).
 
 

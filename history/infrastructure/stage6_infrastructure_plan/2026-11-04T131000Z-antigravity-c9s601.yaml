@@ -1,0 +1,51 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: INFRA_TASKS.md
+session:
+  id: 2026-11-04T131000Z-antigravity-c9s601
+  timestamp: '2026-11-04T13:10:00Z'
+  actors:
+  - type: ai_agent
+    name: antigravity
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2062
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1962
+  - https://github.com/CultureBotAI/TraitMech/issues/1981
+  - https://github.com/CultureBotAI/TraitMech/issues/1988
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+events:
+- type: EDIT
+  outcome: changed
+  summary: Sync verified Cycle 9 Stage 5 closure in reviews/workflow/latest.yaml
+  details: 'Updated reviews/workflow/latest.yaml from the supervisor-verified evidence
+    index (authority: verified_closure) to record Cycle 9 Stage 5 closure (reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-05/revision-0001/evidence.yaml,
+    PR #2062, merged commit be688e11b51e5e428db1e118944bdc5c90ce806a).'
+- type: EDIT
+  outcome: changed
+  sections:
+  - INFRA_TASKS
+  - scripts
+  - tests
+  summary: Freeze INFRA_TASKS.md at Cycle 9 Stage 6 cutoff and resolve traitmech-infra-0011
+    (HTTP 5xx/429 retry with backoff in scripts/audit_uniprot_grounding.py) and traitmech-infra-0012
+    (DOI reference case canonicalization via _norm_ref() in scripts/audit_evidence_snippets.py)
+  details: 'Executed Stage 6 (infrastructure) of run mech-goal-sequence-20261019,
+    cycle 9 using the exact supervisor-frozen INFRA_TASKS.md snapshot (frozen_at 2026-11-04T13:01:27Z,
+    sha256 801753500782790b7f82089d1a9236286d062795b0af2f1b813edad885081cf1) at
+    source revision be688e11b51e5e428db1e118944bdc5c90ce806a. Implemented both open
+    tasks in the frozen scope: traitmech-infra-0011 (linked to issue #1988), adding
+    bounded exponential-backoff retries for transient HTTP 5xx/429 and URLError/TimeoutError
+    exceptions in fetch() in scripts/audit_uniprot_grounding.py with unit tests in
+    tests/test_audit_uniprot_grounding.py; and traitmech-infra-0012 (linked to issue
+    #2002, follow-up to #1981), adding _norm_ref() in scripts/audit_evidence_snippets.py
+    to canonicalize DOI CURIEs to DOI:<lowercase> across quoted, corpus_quoted_refs_16,
+    refs_by_record_id, refs_by_parent_id, record_refs, record_any_refs, def_source,
+    _load_defense_finder_ref_aliases(), _record_wiki_doi_aliases(), and _record_repeats_def_source()
+    with unit tests in tests/test_audit_evidence_snippets.py. Updated INFRA_TASKS.md
+    to mark both traitmech-infra-0011 and traitmech-infra-0012 as resolved with 0
+    deferred or blocked tasks.'

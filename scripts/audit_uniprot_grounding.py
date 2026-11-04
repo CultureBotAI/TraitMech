@@ -150,18 +150,47 @@ def _gene_symbol(data: dict[str, Any]) -> str:
     return str((first.get("geneName") or {}).get("value") or "")
 
 
-def fetch(accession: str, delay: float = 0.1) -> dict[str, Any]:
+RETRYABLE_HTTP_CODES = frozenset({429, 500, 502, 503, 504})
+
+
+def fetch(
+    accession: str,
+    delay: float = 0.1,
+    *,
+    max_retries: int = 3,
+    retry_delay: float | None = None,
+) -> dict[str, Any]:
     """Resolve one accession and normalize the fields the audit compares."""
-    time.sleep(delay)
-    try:
-        with urllib.request.urlopen(API.format(acc=accession), timeout=30) as resp:
-            data = json.load(resp)
-    except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            return {"status": "deleted"}
-        return {"status": "error", "uniprot_name": f"HTTP {exc.code}"}
-    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        return {"status": "error", "uniprot_name": str(exc)[:120]}
+    base_backoff = (
+        (0.0 if delay == 0 else max(delay, 0.5))
+        if retry_delay is None
+        else retry_delay
+    )
+    url = API.format(acc=accession)
+    data: dict[str, Any] | None = None
+    for attempt in range(max_retries + 1):
+        if attempt == 0:
+            time.sleep(delay)
+        else:
+            time.sleep(base_backoff * (2 ** (attempt - 1)))
+        try:
+            with urllib.request.urlopen(url, timeout=30) as resp:
+                data = json.load(resp)
+            break
+        except urllib.error.HTTPError as exc:
+            if exc.code == 404:
+                return {"status": "deleted"}
+            if exc.code in RETRYABLE_HTTP_CODES and attempt < max_retries:
+                continue
+            return {"status": "error", "uniprot_name": f"HTTP {exc.code}"}
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            if (
+                isinstance(exc, (urllib.error.URLError, TimeoutError))
+                and attempt < max_retries
+            ):
+                continue
+            return {"status": "error", "uniprot_name": str(exc)[:120]}
+    assert data is not None
 
     entry_type = str(data.get("entryType") or "")
     if entry_type == "Inactive":

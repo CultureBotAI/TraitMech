@@ -1022,4 +1022,80 @@ def test_unquoted_definition_source_corpus_16_when_def_source_repeated_outside_e
             assert "is absent from record-level evidence[].reference" in f["detail"]
 
 
+def test_unquoted_definition_source_canonicalizes_doi_casing_across_sets(
+    tmp_path, monkeypatch
+):
+    """_norm_ref canonicalizes DOI casing across record_refs, record_any_refs,
+    family_quoted, and corpus_quoted_refs_16 so case-variant DOI citations match
+    without false positives or false negatives (#2002, traitmech-infra-0012)."""
+    assert aes._norm_ref("doi:10.1093/NAR/GKY781") == "DOI:10.1093/nar/gky781"
+    assert aes._norm_ref("PMID:12345678") == "PMID:12345678"
+
+    # Donor record provides uppercase DOI quote in family_quoted (for METPO:1000800)
+    # and corpus_quoted_refs_16.
+    traits = _write_trait(tmp_path, monkeypatch, """
+        identifier: traitmech:009100
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000800
+        definition_source: DOI:10.1002/(SICI)1097-0290(19991005)65:1<1::AID-BIT1>3.0.CO;2-H
+        evidence:
+          - reference: DOI:10.1002/(SICI)1097-0290(19991005)65:1<1::AID-BIT1>3.0.CO;2-H
+            supports: SUPPORT
+            snippet: Bioreactor cultivation of hyperthermophilic archaea at high temperature
+          - reference: DOI:10.1093/NAR/GKY781
+            supports: SUPPORT
+            snippet: Functional metagenomic selections for DNA modifications identify a family
+        """)
+    # 1. Same-record case-variant match in record_refs: definition_source has uppercase SICI
+    # while record-level evidence[0].reference has lowercase sici -> must NOT be flagged.
+    (traits / "same_record_case_match.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:009101
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000800
+        definition_source: DOI:10.1002/(SICI)1097-0290(19991005)65:1<1::AID-BIT1>3.0.CO;2-H
+        evidence:
+          - reference: DOI:10.1002/(sici)1097-0290(19991005)65:1<1::aid-bit1>3.0.co;2-h
+            supports: SUPPORT
+            snippet: Bioreactor cultivation of hyperthermophilic archaea at high temperature
+        """))
+    # 2. Sibling record in family_quoted with lowercase definition_source and no quote -> flagged.
+    (traits / "family_case_unquoted.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:009102
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000800
+        definition_source: DOI:10.1002/(sici)1097-0290(19991005)65:1<1::aid-bit1>3.0.co;2-h
+        evidence:
+          - reference: PMID:88888888
+            supports: SUPPORT
+            snippet: An unrelated reference on a sibling record lacking the DOI quote
+        """))
+    # 3. Unrelated cohort record in corpus_quoted_refs_16 with lowercase definition_source
+    # and uppercase snippet-less evidence[0].reference (record_any_refs) -> flagged with
+    # "lacks a non-elliptical verbatim snippet in record-level evidence[]".
+    (traits / "corpus_case_unquoted.yaml").write_text(textwrap.dedent("""
+        identifier: traitmech:009103
+        term_kind: CLASS
+        parent_traits:
+          - METPO:1000999
+        definition_source: DOI:10.1093/nar/gky781
+        evidence:
+          - reference: DOI:10.1093/NAR/GKY781
+            supports: SUPPORT
+        """))
+
+    findings = audit(check_reports=False, check_definition_sources=True)
+    unquoted = {
+        f["file"].rsplit("/", 1)[-1]: f["detail"]
+        for f in findings
+        if f["defect"] == "UNQUOTED_DEFINITION_SOURCE"
+    }
+    assert set(unquoted) == {"corpus_case_unquoted.yaml", "family_case_unquoted.yaml"}
+    assert "is absent from record-level evidence[].reference" in unquoted["family_case_unquoted.yaml"]
+    assert "lacks a non-elliptical verbatim snippet in record-level evidence[]" in unquoted["corpus_case_unquoted.yaml"]
+
+
+
 
