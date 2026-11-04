@@ -1,0 +1,73 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 9
+stage: 6
+revision: 1
+source_revision: be688e11b51e5e428db1e118944bdc5c90ce806a
+scope_frozen_at: '2026-11-04T13:01:27Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-11-04T13:01:27Z,
+  sha256 801753500782790b7f82089d1a9236286d062795b0af2f1b813edad885081cf1),
+  reconciled the 2 pending infrastructure tasks in the frozen scope
+  (traitmech-infra-0011 linked to GitHub issue #1988 and traitmech-infra-0012
+  linked to GitHub issue #2002 as follow-up to #1981), added bounded
+  exponential-backoff retry for transient HTTP 5xx/429 and URLError/TimeoutError
+  exceptions to fetch() in scripts/audit_uniprot_grounding.py with unit tests in
+  tests/test_audit_uniprot_grounding.py, added _norm_ref() in
+  scripts/audit_evidence_snippets.py to canonicalize DOI CURIEs to
+  DOI:<lowercase> across quoted, corpus_quoted_refs_16, refs_by_record_id,
+  refs_by_parent_id, record_refs, record_any_refs, def_source,
+  _load_defense_finder_ref_aliases(), _record_wiki_doi_aliases(), and
+  _record_repeats_def_source() with unit tests in
+  tests/test_audit_evidence_snippets.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0011 and traitmech-infra-0012 as
+  resolved in INFRA_TASKS.md with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: 801753500782790b7f82089d1a9236286d062795b0af2f1b813edad885081cf1
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: 502d52b9ade2fd4a343d9641e447e44b053f065b2d643dee43b624174e10f5b0
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: 7e5bd4545aadf2e6af4e725a84e4560949b554c99c3c3a4353a441070f616b35
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/c9s6_coverage_full.json
+    kind: supporting
+    sha256: 403b844351e5e7582c01f468f83b58f8106ad2ea6a389a48761013237beafeb9
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0011
+    summary: Add HTTP 5xx/429 retry with backoff to fetch() in scripts/audit_uniprot_grounding.py so transient rest.uniprot.org 500 responses do not cause false API_ERROR failures during full-corpus refreshes
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 9 Stage 6 (issue #1988); updated fetch() in
+      scripts/audit_uniprot_grounding.py with RETRYABLE_HTTP_CODES ({429, 500,
+      502, 503, 504}) and bounded exponential-backoff retries for transient HTTP
+      5xx/429 and URLError/TimeoutError exceptions while returning immediately
+      on HTTP 404 or non-retryable 4xx errors, covered by unit tests in
+      tests/test_audit_uniprot_grounding.py.
+  - task_id: traitmech-infra-0012
+    summary: Canonicalize DOI reference casing via _norm_ref() across record_refs, record_any_refs, family_quoted, and corpus_quoted_refs_16 in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE matches case-variant DOI citations
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 9 Stage 6 (issue #2002, follow-up to #1981); added
+      _norm_ref() in scripts/audit_evidence_snippets.py to canonicalize DOI
+      CURIEs to DOI:<lowercase> across quoted, corpus_quoted_refs_16,
+      refs_by_record_id, refs_by_parent_id, record_refs, record_any_refs,
+      def_source, _load_defense_finder_ref_aliases(), _record_wiki_doi_aliases(),
+      and _record_repeats_def_source(), covered by unit tests in
+      tests/test_audit_evidence_snippets.py.
+carry_forward_ids: []

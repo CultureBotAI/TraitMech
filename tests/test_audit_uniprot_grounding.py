@@ -13,6 +13,7 @@ from audit_uniprot_grounding import (  # noqa: E402
     FIELDS,
     audit_uses,
     check_inventory,
+    fetch,
     iter_nodes,
     iter_uses,
     write_report,
@@ -239,4 +240,86 @@ def test_check_inventory_detects_missing_or_drifted_report_rows(tmp_path):
 
 def test_committed_uniprot_grounding_audit_matches_corpus_inventory():
     assert check_inventory() == []
+
+
+def test_fetch_retries_transient_http_5xx_and_429_then_succeeds(monkeypatch):
+    import io
+    import json
+
+    payload = {
+        "entryType": "UniProtKB reviewed (Swiss-Prot)",
+        "primaryAccession": "P0A6Y8",
+        "proteinDescription": {
+            "recommendedName": {"fullName": {"value": "Chaperone protein DnaK"}}
+        },
+        "genes": [{"geneName": {"value": "dnaK"}}],
+        "organism": {"scientificName": "Escherichia coli", "taxonId": 562},
+        "entryAudit": {"entryVersion": 180, "sequenceVersion": 1},
+        "uniProtKBCrossReferences": [{"database": "Proteomes", "id": "UP000000625"}],
+    }
+    attempts = []
+    sleeps = []
+
+    class _DummyResp(io.StringIO):
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            self.close()
+
+    def flaky_urlopen(url, timeout):
+        attempts.append(url)
+        if len(attempts) == 1:
+            raise urllib.error.HTTPError(url, 500, "Internal Server Error", {}, None)
+        if len(attempts) == 2:
+            raise urllib.error.HTTPError(url, 429, "Too Many Requests", {}, None)
+        return _DummyResp(json.dumps(payload))
+
+    monkeypatch.setattr("audit_uniprot_grounding.urllib.request.urlopen", flaky_urlopen)
+    monkeypatch.setattr("audit_uniprot_grounding.time.sleep", sleeps.append)
+
+    resolved = fetch("P0A6Y8", delay=0.1, max_retries=3, retry_delay=0.5)
+    assert len(attempts) == 3
+    assert sleeps == [0.1, 0.5, 1.0]
+    assert resolved["status"] == "reviewed"
+    assert resolved["primary_accession"] == "P0A6Y8"
+    assert resolved["taxon_id"] == "562"
+
+
+def test_fetch_does_not_retry_http_404_or_400_and_retries_urlerror(monkeypatch):
+    attempts_404 = []
+
+    def not_found(url, timeout):
+        attempts_404.append(url)
+        raise urllib.error.HTTPError(url, 404, "Not Found", {}, None)
+
+    monkeypatch.setattr("audit_uniprot_grounding.urllib.request.urlopen", not_found)
+    assert fetch("P00000", delay=0, max_retries=3) == {"status": "deleted"}
+    assert len(attempts_404) == 1
+
+    attempts_400 = []
+
+    def bad_request(url, timeout):
+        attempts_400.append(url)
+        raise urllib.error.HTTPError(url, 400, "Bad Request", {}, None)
+
+    monkeypatch.setattr("audit_uniprot_grounding.urllib.request.urlopen", bad_request)
+    assert fetch("BADACC", delay=0, max_retries=3) == {
+        "status": "error",
+        "uniprot_name": "HTTP 400",
+    }
+    assert len(attempts_400) == 1
+
+    attempts_net = []
+
+    def net_down(url, timeout):
+        attempts_net.append(url)
+        raise urllib.error.URLError("temporary DNS failure")
+
+    monkeypatch.setattr("audit_uniprot_grounding.urllib.request.urlopen", net_down)
+    res_net = fetch("P0A6Y8", delay=0, max_retries=2)
+    assert len(attempts_net) == 3
+    assert res_net["status"] == "error"
+    assert "temporary DNS failure" in res_net["uniprot_name"]
+
 

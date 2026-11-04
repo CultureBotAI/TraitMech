@@ -147,10 +147,12 @@ def _load_defense_finder_ref_aliases(path: Path | None = None) -> dict[str, set[
                 if re.fullmatch(r"\d{6,10}", token):
                     pmids.add(f"PMID:{token}")
         for doi_ref in dois:
+            norm_doi = _norm_ref(doi_ref)
             for pmid_ref in pmids:
                 aliases.setdefault(doi_ref, set()).add(pmid_ref)
-                aliases.setdefault(f"DOI:{doi_ref[4:].lower()}", set()).add(pmid_ref)
+                aliases.setdefault(norm_doi, set()).add(pmid_ref)
                 aliases.setdefault(pmid_ref, set()).add(doi_ref)
+                aliases.setdefault(pmid_ref, set()).add(norm_doi)
     return aliases
 
 
@@ -164,15 +166,17 @@ _PRIMARY_REF_PREFIXES = (
 
 def _record_repeats_def_source(doc: dict, def_source: str) -> bool:
     """Return True if canonical_examples[].reference, synonyms[].source, or causal_graphs[].edges[].evidence[].reference repeats def_source."""
-    target = def_source.lower()
+    target = _norm_ref(def_source).lower()
+    if not target:
+        return False
     for ex in doc.get("canonical_examples") or []:
         if isinstance(ex, dict):
-            ref = _norm(str(ex.get("reference") or "")).lower()
+            ref = _norm_ref(str(ex.get("reference") or "")).lower()
             if ref and ref == target:
                 return True
     for syn in doc.get("synonyms") or []:
         if isinstance(syn, dict):
-            src = _norm(str(syn.get("source") or "")).lower()
+            src = _norm_ref(str(syn.get("source") or "")).lower()
             if src and src == target:
                 return True
     for cg in doc.get("causal_graphs") or []:
@@ -183,7 +187,7 @@ def _record_repeats_def_source(doc: dict, def_source: str) -> bool:
                 continue
             for ev in edge.get("evidence") or []:
                 if isinstance(ev, dict):
-                    ref = _norm(str(ev.get("reference") or "")).lower()
+                    ref = _norm_ref(str(ev.get("reference") or "")).lower()
                     if ref and ref == target:
                         return True
     return False
@@ -206,8 +210,8 @@ def _record_wiki_doi_aliases(doc: dict, record_refs: set[str]) -> dict[str, set[
         snip = _norm(str(item.get("snippet") or ""))
         for doi_ref in _extract_wiki_dois(snip):
             wiki_dois.add(doi_ref)
-            wiki_dois.add(f"DOI:{doi_ref[4:].lower()}")
-    def_source = _norm(str(doc.get("definition_source") or ""))
+            wiki_dois.add(_norm_ref(doi_ref))
+    def_source = _norm_ref(str(doc.get("definition_source") or ""))
     if (
         len(quoted_primary) == 1
         and def_source.startswith("DOI:")
@@ -215,7 +219,6 @@ def _record_wiki_doi_aliases(doc: dict, record_refs: set[str]) -> dict[str, set[
         and (has_wiki_ref or _record_repeats_def_source(doc, def_source))
     ):
         wiki_dois.add(def_source)
-        wiki_dois.add(f"DOI:{def_source[4:].lower()}")
     if not wiki_dois:
         return {}
     aliases: dict[str, set[str]] = {}
@@ -241,6 +244,14 @@ def _safe_rel(path: Path) -> str:
 
 def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", (text or "")).strip()
+
+
+def _norm_ref(text: str) -> str:
+    """Collapse whitespace and canonicalize DOI CURIEs to ``DOI:<lowercase>`` (#2002)."""
+    val = _norm(text)
+    if val.upper().startswith("DOI:"):
+        return f"DOI:{val[4:].strip().lower()}"
+    return val
 
 
 def _fold(text: str) -> str:
@@ -365,7 +376,7 @@ def audit(
             quoted: set[str] = set()
             if not is_object_property:
                 for _loc, item, _gid in iter_evidence(doc):
-                    ref = _norm(str(item.get("reference") or ""))
+                    ref = _norm_ref(str(item.get("reference") or ""))
                     snip = _norm(str(item.get("snippet") or ""))
                     if (ref and len(snip) >= MIN_SNIPPET_CHARS
                             and "..." not in snip and "…" not in snip):
@@ -395,14 +406,15 @@ def audit(
             for item in doc.get("evidence") or []:
                 if not isinstance(item, dict):
                     continue
-                ref = _norm(str(item.get("reference") or ""))
+                ref = _norm_ref(str(item.get("reference") or ""))
                 snip = _norm(str(item.get("snippet") or ""))
                 if ref:
                     record_any_refs.add(ref)
                 if (ref and len(snip) >= min_snip_chars
                         and "..." not in snip and "…" not in snip):
                     record_refs.add(ref)
-            def_source = _norm(str(doc.get("definition_source") or ""))
+            raw_def_source = _norm(str(doc.get("definition_source") or ""))
+            def_source = _norm_ref(raw_def_source)
             def_source_in_ev = def_source in record_any_refs
             rec_id = _norm(str(doc.get("identifier") or doc.get("id") or path.stem))
             parents = [
@@ -415,17 +427,12 @@ def audit(
             for parent_id in parents:
                 family_quoted.update(refs_by_record_id.get(parent_id, set()))
                 family_quoted.update(refs_by_parent_id.get(parent_id, set()))
-            def_aliases = set(ref_aliases.get(def_source, set()))
-            if def_source.startswith("DOI:"):
-                def_aliases.update(
-                    ref_aliases.get(f"DOI:{def_source[4:].lower()}", set())
-                )
+            def_aliases = set(ref_aliases.get(def_source, set())) | set(
+                ref_aliases.get(raw_def_source, set())
+            )
             in_rec_aliases = _record_wiki_doi_aliases(doc, record_refs)
             def_aliases.update(in_rec_aliases.get(def_source, set()))
-            if def_source.startswith("DOI:"):
-                def_aliases.update(
-                    in_rec_aliases.get(f"DOI:{def_source[4:].lower()}", set())
-                )
+            def_aliases.update(in_rec_aliases.get(raw_def_source, set()))
             has_corpus_16_quote = (
                 not is_object_property
                 and (def_source_in_ev or _record_repeats_def_source(doc, def_source))
@@ -455,7 +462,7 @@ def audit(
                     "defect": "UNQUOTED_DEFINITION_SOURCE",
                     "severity": SEVERITY["UNQUOTED_DEFINITION_SOURCE"],
                     "detail": (
-                        f"definition_source={def_source} {reason} despite carrying a "
+                        f"definition_source={raw_def_source} {reason} despite carrying a "
                         "verbatim snippet on causal_graphs or parent/sibling/child records"
                     ),
                 })
