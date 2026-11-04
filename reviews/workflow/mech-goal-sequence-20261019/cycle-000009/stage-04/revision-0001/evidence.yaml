@@ -1,0 +1,217 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 9
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit 6c40bd0fdd324c2dfa3c79061be085988c8de004
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 8 Stage 5 evidence. Verified the 4 Cycle 9 Stage 2/3
+  Cohort L diagnostic enzyme-assay records with 0 findings, identified 9 actionable open record-level
+  definition_source missing-snippet findings (F-C9S4-DEF-SRC-001..009) across data/traits/physiology/
+  for Cycle 9 Stage 5 grouped remediation, logged traitmech-infra-0012 in INFRA_TASKS.md (#2002), and
+  carried forward the 5 deferred source-limited/upstream-blocked cohort findings.'
+source_revision: 6c40bd0fdd324c2dfa3c79061be085988c8de004
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-05/revision-0001/evidence.yaml
+  sha256: 723e71394a60bd3e5b1bfa0d4b3f44c4ba764b3f8940096af31393010f7d4f4a
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/review_report.md
+  sha256: 176ebb06c7012c7e0e734931dfa9b6544364e1a2a29bcc82c4c4dbfc8a7a289a
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/review_findings.tsv
+  sha256: 6363022db48c868381d8c01a78612a7a1c8bc276f2c9ed3dab45e1d391bda6bb
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: e2f4252977a4efd1fafd0419b4671b39edec66429a4c5d3bde7fc0cfd406e0dc
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/structured_review.yaml
+  sha256: 93b534d8ffac7e5660f8cab2ba2df79b15d8e8a9c5c316dbd7b7eb7d9afa1182
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/structured_review.md
+  sha256: f0d48b5b6d3b13ac39c414bd3ed61a880becae673c54d1cabd30e19fa10bdc89
+  kind: supporting
+findings:
+- finding_id: F-C9S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/physiology/antibiotic_resistance.yaml (traitmech:000088) declares definition_source:
+    DOI:10.1038/nrmicro3380 (Blair et al. 2015, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro3380 in
+    record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro3380
+    (PMID:25435309) provides the verified verbatim definitional quote "This article reviews recent advances
+    in our understanding of the mechanisms by which bacteria are either intrinsically resistant or acquire
+    resistance to antibiotics, including the prevention of access to drug targets, changes in the structure
+    and protection of antibiotic targets and the direct modification or inactivation of antibiotics.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro3380 to evidence[0].snippet in data/traits/physiology/antibiotic_resistance.yaml.'
+- finding_id: F-C9S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/physiology/bioluminescence.yaml (traitmech:000085) declares definition_source:
+    DOI:10.1016/j.csbj.2018.11.003 (Brodl, Winkler & Macheroux 2018, Comput Struct Biotechnol J) and cites
+    DOI:10.1016/j.csbj.2018.11.003 in record-level evidence[0] with explanatory notes but omits evidence[0].snippet
+    (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract
+    for DOI:10.1016/j.csbj.2018.11.003 (PMID:30546856 / PMC6279958) provides the verified verbatim definitional
+    quote "In bacteria, the heterodimeric luciferase catalyzes the monooxygenation of long-chain aliphatic
+    aldehydes to the corresponding acids utilizing reduced FMN and molecular oxygen. The energy released
+    as a photon results from an excited state flavin-4a-hydroxide, emitting light centered around 490
+    nm.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1016/j.csbj.2018.11.003 to evidence[0].snippet in data/traits/physiology/bioluminescence.yaml.'
+- finding_id: F-C9S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/physiology/chemotaxis.yaml (traitmech:000086) declares definition_source: DOI:10.1038/nrm1524
+    (Wadhams & Armitage 2004, Nat Rev Mol Cell Biol) and cites DOI:10.1038/nrm1524 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrm1524 (PMID:15573139) provides the verified verbatim
+    definitional quote "Bacteria must be able to respond to a changing environment, and one way to respond
+    is to move. The transduction of sensory signals alters the concentration of small phosphorylated response
+    regulators that bind to the rotary flagellar motor and cause switching.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrm1524 to evidence[0].snippet in data/traits/physiology/chemotaxis.yaml.'
+- finding_id: F-C9S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/physiology/dormancy.yaml (traitmech:000080) declares definition_source: DOI:10.1038/nrmicro2504
+    (Lennon & Jones 2011, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro2504 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro2504 (PMID:21233850) provides the verified
+    verbatim definitional quote "Dormancy is a bet-hedging strategy used by a wide range of taxa, including
+    microorganisms. It refers to an organism''s ability to enter a reversible state of low metabolic activity
+    when faced with unfavourable environmental conditions.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro2504 to evidence[0].snippet in data/traits/physiology/dormancy.yaml.'
+- finding_id: F-C9S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/physiology/natural_competence.yaml (traitmech:000087) declares definition_source:
+    DOI:10.1038/nrmicro3199 (Johnston et al. 2014, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro3199
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro3199
+    (PMID:24509783) provides the verified verbatim definitional quote "Natural bacterial transformation
+    involves the internalization and chromosomal integration of DNA and has now been documented in ~80
+    species. Recent advances have established that phylogenetically distant species share conserved uptake
+    and processing proteins but differ in the inducing cues and regulatory mechanisms that are involved.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro3199 to evidence[0].snippet in data/traits/physiology/natural_competence.yaml.'
+- finding_id: F-C9S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/physiology/persister_cell_formation.yaml (traitmech:000082) declares definition_source:
+    DOI:10.1146/annurev.micro.112408.134306 (Lewis 2010, Annu Rev Microbiol) and cites DOI:10.1146/annurev.micro.112408.134306
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1146/annurev.micro.112408.134306
+    (PMID:20528688) provides the verified verbatim definitional quote "Persisters are dormant variants
+    of regular cells that form stochastically in microbial populations and are highly tolerant to antibiotics.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev.micro.112408.134306 to evidence[0].snippet in
+    data/traits/physiology/persister_cell_formation.yaml.'
+- finding_id: F-C9S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/physiology/stress_response.yaml (traitmech:000078) declares definition_source:
+    DOI:10.1146/annurev-micro-090110-102946 (Battesti, Majdalani & Gottesman 2011, Annu Rev Microbiol)
+    and cites DOI:10.1146/annurev-micro-090110-102946 in record-level evidence[0] with explanatory notes
+    but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1146/annurev-micro-090110-102946 (PMID:21639793 / PMC7356644)
+    provides the verified verbatim definitional quote "Under conditions of nutrient deprivation or stress,
+    or as cells enter stationary phase, Escherichia coli and related bacteria increase the accumulation
+    of RpoS, a specialized sigma factor. RpoS-dependent gene expression leads to general stress resistance
+    of cells.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1146/annurev-micro-090110-102946 to evidence[0].snippet in
+    data/traits/physiology/stress_response.yaml.'
+- finding_id: F-C9S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/physiology/urease_activity.yaml (traitmech:000077) declares definition_source:
+    DOI:10.1128/mr.59.3.451-480.1995 (Mobley, Island & Hausinger 1995, Microbiol Rev) and cites DOI:10.1128/mr.59.3.451-480.1995
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1128/mr.59.3.451-480.1995
+    (PMID:7565414 / PMC239369) provides the verified verbatim definitional quote "Urease (urea amidohydrolase;
+    EC 3.5.1.5) catalyzes the hydrolysis of urea to yield ammonia and carbamate. The latter compound spontaneously
+    decomposes to yield another molecule of ammonia and carbonic acid.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/mr.59.3.451-480.1995 to evidence[0].snippet in data/traits/physiology/urease_activity.yaml.'
+- finding_id: F-C9S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/physiology/viable_but_nonculturable_state.yaml (traitmech:000081) declares definition_source:
+    DOI:10.1111/j.1574-6976.2009.00200.x (Oliver 2010, FEMS Microbiol Rev) and cites DOI:10.1111/j.1574-6976.2009.00200.x
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1111/j.1574-6976.2009.00200.x
+    (PMID:20059548) provides the verified verbatim definitional quote "Many bacteria, including a variety
+    of important human pathogens, are known to respond to various environmental stresses by entry into
+    a novel physiological state, where the cells remain viable, but are no longer culturable on standard
+    laboratory media. On resuscitation from this ''viable but nonculturable'' (VBNC) state, the cells
+    regain culturability and the renewed ability to cause infection.".'
+  disposition: 'Carry forward to Cycle 9 Stage 5 (resolve_review_findings) in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1111/j.1574-6976.2009.00200.x to evidence[0].snippet in data/traits/physiology/viable_but_nonculturable_state.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 369 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (347 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 351 in Cycle 8 after +4 Cycle 9 Stage 2/3 Cohort L diagnostic enzyme-assay graphs,
+    plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 369 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 29 of 1,129 eligible TraitRecord files (14 FAPROTAX metabolism records whose definition_source
+    DOI:10.1126/science.aaf4507 is cited with a verbatim snippet in edge-level causal_graphs[].edges[].evidence[].source
+    and recognized by _record_repeats_def_source after traitmech-infra-0010 in Cycle 8 Stage 6, plus 15
+    records not repeating definition_source in record-level or edge-level evidence; alongside 43 empty-snippet
+    [45 <12-char] CLASS definition_source records without an in-corpus verbatim quote after promoting
+    9 physiology records to open findings F-C9S4-DEF-SRC-001..009, 94 OBJECT_PROPERTY records in metabolism
+    [71 without a >=12-char snippet on definition_source, including 31 with predicate-stem snippets resolved
+    under traitmech-infra-0006], and 50 records omitting definition_source) cite a primary discovery/characterization
+    reference in definition_source that is not repeated in record-level evidence[].
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C9S4-DEF-SRC-001
+- F-C9S4-DEF-SRC-002
+- F-C9S4-DEF-SRC-003
+- F-C9S4-DEF-SRC-004
+- F-C9S4-DEF-SRC-005
+- F-C9S4-DEF-SRC-006
+- F-C9S4-DEF-SRC-007
+- F-C9S4-DEF-SRC-008
+- F-C9S4-DEF-SRC-009
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
