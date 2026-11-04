@@ -8329,8 +8329,8 @@
       "slug": "organohalide_respiration",
       "score": 15.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 2,
-      "nodes": 3,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -8341,7 +8341,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (2 edges) +12",
+        "thin graph (3 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -14586,11 +14586,11 @@
       "slug": "butyric_acid_fermentation",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 2,
-      "nodes": 3,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
-      "examples": 1,
+      "examples": 2,
       "canonical_examples_reviewed_empty": false,
       "children": 0,
       "series": null,
@@ -14598,7 +14598,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (2 edges) +12"
+        "thin graph (3 edges) +12"
       ]
     },
     {
@@ -14630,8 +14630,8 @@
       "slug": "complete_ammonia_oxidation",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 2,
-      "nodes": 3,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -14642,7 +14642,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (2 edges) +12"
+        "thin graph (3 edges) +12"
       ]
     },
     {
@@ -14718,8 +14718,8 @@
       "slug": "iodate_respiration",
       "score": 12.0,
       "action": "DEEPEN_CAUSAL_GRAPH",
-      "edges": 2,
-      "nodes": 3,
+      "edges": 3,
+      "nodes": 4,
       "components": 1,
       "orphans": 0,
       "examples": 1,
@@ -14730,7 +14730,7 @@
       "series_overlap": null,
       "researched": false,
       "reasons": [
-        "thin graph (2 edges) +12"
+        "thin graph (3 edges) +12"
       ]
     },
     {
