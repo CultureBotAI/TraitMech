@@ -88,6 +88,10 @@ tasks:
     summary: Add HTTP 5xx/429 retry with backoff to fetch() in scripts/audit_uniprot_grounding.py so transient rest.uniprot.org 500 responses do not cause false API_ERROR failures during full-corpus refreshes
     status: open
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+  - task_id: traitmech-infra-0012
+    summary: Canonicalize DOI reference casing via _norm_ref() across record_refs, record_any_refs, family_quoted, and corpus_quoted_refs_16 in scripts/audit_evidence_snippets.py so UNQUOTED_DEFINITION_SOURCE matches case-variant DOI citations
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -212,4 +216,15 @@ tasks:
 - **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`
 - **Priority**: Medium
 - **Dependencies**: None
+
+### `traitmech-infra-0012` — Canonicalize `DOI:` reference casing via `_norm_ref()` across `record_refs`, `record_any_refs`, `family_quoted`, and `corpus_quoted_refs_16` in `scripts/audit_evidence_snippets.py`
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 9, Stage 4 (`review_records`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: In `scripts/audit_evidence_snippets.py`, `_record_repeats_def_source(doc, def_source)` (lines 165–189) normalizes references with `.lower()`, while `quoted`, `corpus_quoted_refs_16`, `record_refs`, and `record_any_refs` in `audit()` (lines 368–446) store raw `_norm()` strings without canonicalizing `DOI:` letter casing (for example `DOI:10.1016/S0140-6736(00)04403-2` vs `DOI:10.1016/s0140-6736(00)04403-2` or `DOI:10.1128/AEM.01298-18` vs `DOI:10.1128/aem.01298-18`). Consequently, if `definition_source` and an `evidence[].reference` entry on the same record, a sibling/parent record, or a corpus record differ only in `DOI:` case, `def_source in record_refs`, `def_source in record_any_refs`, `def_source in family_quoted`, and `def_source in corpus_quoted_refs_16` fail to match.
+- **Desired outcome**: In Cycle 9 Stage 6, add a `_norm_ref(text: str) -> str` helper in `scripts/audit_evidence_snippets.py` that canonicalizes `DOI:` prefixes and suffixes to lowercase (`f"DOI:{val[4:].lower()}"`) while preserving non-DOI schemes (`PMID:`, `https://...`), and use `_norm_ref()` when populating and querying `quoted`, `corpus_quoted_refs_16`, `record_refs`, `record_any_refs`, and `def_source` in `UNQUOTED_DEFINITION_SOURCE`, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
+
 
