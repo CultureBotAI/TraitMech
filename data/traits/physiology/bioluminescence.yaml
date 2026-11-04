@@ -15,6 +15,10 @@ synonyms:
   source: DOI:10.1016/j.csbj.2018.11.003
 evidence:
 - reference: DOI:10.1016/j.csbj.2018.11.003
+  snippet: In bacteria, the heterodimeric luciferase catalyzes the monooxygenation
+    of long-chain aliphatic aldehydes to the corresponding acids utilizing reduced
+    FMN and molecular oxygen. The energy released as a photon results from an excited
+    state flavin-4a-hydroxide, emitting light centered around 490 nm.
   notes: Brodl, Winkler & Macheroux review the molecular mechanisms of bacterial bioluminescence
     and the luciferase reaction.
 - reference: DOI:10.1146/annurev.cellbio.21.012704.131001
@@ -319,4 +323,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P12747 (97 -> 98 on lux_i).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1016/j.csbj.2018.11.003 (Brodl,
+    Winkler & Macheroux 2018, PMID:30546856 / PMC6279958) to record-level evidence[0]
+    to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-002
+    in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

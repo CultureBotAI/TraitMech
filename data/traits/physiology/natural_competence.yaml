@@ -14,6 +14,11 @@ synonyms:
   source: DOI:10.1038/nrmicro3199
 evidence:
 - reference: DOI:10.1038/nrmicro3199
+  snippet: Natural bacterial transformation involves the internalization and chromosomal
+    integration of DNA and has now been documented in ~80 species. Recent advances
+    have established that phylogenetically distant species share conserved uptake
+    and processing proteins but differ in the inducing cues and regulatory mechanisms
+    that are involved.
   notes: Johnston et al. review the distribution, shared mechanisms, and control of
     natural bacterial transformation (competence for DNA uptake).
 - reference: DOI:10.1038/s41579-021-00650-4
@@ -300,4 +305,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P0A452 (116 -> 117 on reca).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro3199 (Johnston
+    et al. 2014, PMID:24509783) to record-level evidence[0] to match definition_source
+    (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-005 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

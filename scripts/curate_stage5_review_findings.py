@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–8 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–9 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -21,9 +21,12 @@ Cycle 6 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 15 actionable open findings from the
 Cycle 7 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000007/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 12 actionable open findings from the
+tracked in GitHub issue #2002), the 12 actionable open findings from the
 Cycle 8 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 9 actionable open findings from the
+Cycle 9 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
@@ -33,6 +36,7 @@ tracked in GitHub issue #2002):
 - `F-C6S4-DEF-SRC-001`..`013` (Cycle 6 #2002, 13 records)
 - `F-C7S4-DEF-SRC-001`..`015` (Cycle 7 #2002, 15 records)
 - `F-C8S4-DEF-SRC-001`..`012` (Cycle 8 #2002, 12 records)
+- `F-C9S4-DEF-SRC-001`..`009` (Cycle 9 #2002, 9 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -72,6 +76,7 @@ CYCLE5_TIMESTAMP = "2026-10-25T21:40:00Z"
 CYCLE6_TIMESTAMP = "2026-10-26T08:15:00Z"
 CYCLE7_TIMESTAMP = "2026-10-30T22:10:00Z"
 CYCLE8_TIMESTAMP = "2026-10-31T10:45:00Z"
+CYCLE9_TIMESTAMP = "2026-11-04T11:10:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -2527,6 +2532,256 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C8S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    # Cycle 9 Stage 5 remediation (#2002): 9 open findings from Cycle 9 Stage 4
+    "data/traits/physiology/antibiotic_resistance.yaml": {
+        "identifier": "traitmech:000088",
+        "finding_id": "F-C9S4-DEF-SRC-001",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro3380",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro3380",
+            "snippet": (
+                "This article reviews recent advances in our understanding of the "
+                "mechanisms by which bacteria are either intrinsically resistant or "
+                "acquire resistance to antibiotics, including the prevention of "
+                "access to drug targets, changes in the structure and protection of "
+                "antibiotic targets and the direct modification or inactivation of "
+                "antibiotics."
+            ),
+            "notes": (
+                "Blair et al. review the molecular mechanisms of antibiotic "
+                "resistance (efflux, target alteration, drug inactivation, reduced "
+                "uptake)."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro3380 "
+            "(Blair et al. 2015, PMID:25435309) to record-level evidence[0] to "
+            "match definition_source (Cycle 9 Stage 5 remediation of "
+            "F-C9S4-DEF-SRC-001 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/bioluminescence.yaml": {
+        "identifier": "traitmech:000085",
+        "finding_id": "F-C9S4-DEF-SRC-002",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1016/j.csbj.2018.11.003",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/j.csbj.2018.11.003",
+            "snippet": (
+                "In bacteria, the heterodimeric luciferase catalyzes the "
+                "monooxygenation of long-chain aliphatic aldehydes to the "
+                "corresponding acids utilizing reduced FMN and molecular oxygen. "
+                "The energy released as a photon results from an excited state "
+                "flavin-4a-hydroxide, emitting light centered around 490 nm."
+            ),
+            "notes": (
+                "Brodl, Winkler & Macheroux review the molecular mechanisms of "
+                "bacterial bioluminescence and the luciferase reaction."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1016/j.csbj.2018.11.003 "
+            "(Brodl, Winkler & Macheroux 2018, PMID:30546856 / PMC6279958) to "
+            "record-level evidence[0] to match definition_source (Cycle 9 Stage 5 "
+            "remediation of F-C9S4-DEF-SRC-002 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/chemotaxis.yaml": {
+        "identifier": "traitmech:000086",
+        "finding_id": "F-C9S4-DEF-SRC-003",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrm1524",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrm1524",
+            "snippet": (
+                "Bacteria must be able to respond to a changing environment, and "
+                "one way to respond is to move. The transduction of sensory signals "
+                "alters the concentration of small phosphorylated response "
+                "regulators that bind to the rotary flagellar motor and cause "
+                "switching."
+            ),
+            "notes": (
+                "Wadhams & Armitage review bacterial chemotaxis as gradient-guided "
+                "movement controlled by a histidine-aspartate phosphorelay."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrm1524 "
+            "(Wadhams & Armitage 2004, PMID:15573139) to record-level evidence[0] "
+            "to match definition_source (Cycle 9 Stage 5 remediation of "
+            "F-C9S4-DEF-SRC-003 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/dormancy.yaml": {
+        "identifier": "traitmech:000080",
+        "finding_id": "F-C9S4-DEF-SRC-004",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro2504",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro2504",
+            "snippet": (
+                "Dormancy is a bet-hedging strategy used by a wide range of taxa, "
+                "including microorganisms. It refers to an organism's ability to "
+                "enter a reversible state of low metabolic activity when faced with "
+                "unfavourable environmental conditions."
+            ),
+            "notes": (
+                "Lennon & Jones review microbial seed banks and the mechanisms by "
+                "which microorganisms enter and exit dormancy; parent of VBNC and "
+                "persister sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro2504 "
+            "(Lennon & Jones 2011, PMID:21233850) to record-level evidence[0] to "
+            "match definition_source (Cycle 9 Stage 5 remediation of "
+            "F-C9S4-DEF-SRC-004 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/natural_competence.yaml": {
+        "identifier": "traitmech:000087",
+        "finding_id": "F-C9S4-DEF-SRC-005",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro3199",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro3199",
+            "snippet": (
+                "Natural bacterial transformation involves the internalization and "
+                "chromosomal integration of DNA and has now been documented in ~80 "
+                "species. Recent advances have established that phylogenetically "
+                "distant species share conserved uptake and processing proteins "
+                "but differ in the inducing cues and regulatory mechanisms that are "
+                "involved."
+            ),
+            "notes": (
+                "Johnston et al. review the distribution, shared mechanisms, and "
+                "control of natural bacterial transformation (competence for DNA "
+                "uptake)."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro3199 "
+            "(Johnston et al. 2014, PMID:24509783) to record-level evidence[0] to "
+            "match definition_source (Cycle 9 Stage 5 remediation of "
+            "F-C9S4-DEF-SRC-005 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/persister_cell_formation.yaml": {
+        "identifier": "traitmech:000082",
+        "finding_id": "F-C9S4-DEF-SRC-006",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.micro.112408.134306",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.micro.112408.134306",
+            "snippet": (
+                "Persisters are dormant variants of regular cells that form "
+                "stochastically in microbial populations and are highly tolerant "
+                "to antibiotics."
+            ),
+            "notes": (
+                "Lewis reviews persister cells as dormant variants highly tolerant "
+                "to antibiotics."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1146/annurev.micro.112408.134306 (Lewis 2010, PMID:20528688) "
+            "to record-level evidence[0] to match definition_source (Cycle 9 "
+            "Stage 5 remediation of F-C9S4-DEF-SRC-006 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/stress_response.yaml": {
+        "identifier": "traitmech:000078",
+        "finding_id": "F-C9S4-DEF-SRC-007",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev-micro-090110-102946",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev-micro-090110-102946",
+            "snippet": (
+                "Under conditions of nutrient deprivation or stress, or as cells "
+                "enter stationary phase, Escherichia coli and related bacteria "
+                "increase the accumulation of RpoS, a specialized sigma factor. "
+                "RpoS-dependent gene expression leads to general stress resistance "
+                "of cells."
+            ),
+            "notes": (
+                "Battesti, Majdalani & Gottesman review the RpoS-mediated general "
+                "stress response, a broad protective program induced by stress and "
+                "stationary phase."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1146/annurev-micro-090110-102946 (Battesti, Majdalani & "
+            "Gottesman 2011, PMID:21639793 / PMC7356644) to record-level "
+            "evidence[0] to match definition_source (Cycle 9 Stage 5 remediation "
+            "of F-C9S4-DEF-SRC-007 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/urease_activity.yaml": {
+        "identifier": "traitmech:000077",
+        "finding_id": "F-C9S4-DEF-SRC-008",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1128/mr.59.3.451-480.1995",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/mr.59.3.451-480.1995",
+            "snippet": (
+                "Urease (urea amidohydrolase; EC 3.5.1.5) catalyzes the hydrolysis "
+                "of urea to yield ammonia and carbamate. The latter compound "
+                "spontaneously decomposes to yield another molecule of ammonia and "
+                "carbonic acid."
+            ),
+            "notes": (
+                "Mobley, Island & Hausinger review the molecular biology of "
+                "microbial ureases that hydrolyze urea to ammonia and carbon "
+                "dioxide."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/mr.59.3.451-480.1995 "
+            "(Mobley, Island & Hausinger 1995, PMID:7565414 / PMC239369) to "
+            "record-level evidence[0] to match definition_source (Cycle 9 Stage 5 "
+            "remediation of F-C9S4-DEF-SRC-008 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/physiology/viable_but_nonculturable_state.yaml": {
+        "identifier": "traitmech:000081",
+        "finding_id": "F-C9S4-DEF-SRC-009",
+        "timestamp": CYCLE9_TIMESTAMP,
+        "definition_source": "DOI:10.1111/j.1574-6976.2009.00200.x",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/j.1574-6976.2009.00200.x",
+            "snippet": (
+                "Many bacteria, including a variety of important human pathogens, "
+                "are known to respond to various environmental stresses by entry "
+                "into a novel physiological state, where the cells remain viable, "
+                "but are no longer culturable on standard laboratory media. On "
+                "resuscitation from this 'viable but nonculturable' (VBNC) state, "
+                "the cells regain culturability and the renewed ability to cause "
+                "infection."
+            ),
+            "notes": (
+                "Oliver reviews the viable-but-nonculturable state, in which "
+                "stressed cells stay viable yet unculturable until resuscitated."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1111/j.1574-6976.2009.00200.x (Oliver 2010, PMID:20059548) to "
+            "record-level evidence[0] to match definition_source (Cycle 9 Stage 5 "
+            "remediation of F-C9S4-DEF-SRC-009 in group "
+            "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -2605,7 +2860,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 92 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 101 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

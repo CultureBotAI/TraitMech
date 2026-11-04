@@ -1,0 +1,1012 @@
+schema_version: 1.0.0
+review_id: 20261104T111500Z-cycle9-stage5-remediated-records-review
+kind: batch
+repository: CultureBotAI/TraitMech
+title: Cycle 9 Stage 5 post-remediation verification review of the 9 physiology TraitRecord
+  files in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+started_at: '2026-11-04T11:10:00Z'
+finished_at: '2026-11-04T11:15:00Z'
+reviewer:
+  identity: antigravity
+  kind: agent
+  model: claude-opus-4-6
+  independence: self_review
+  independence_basis: Repository-local post-remediation record review verifying resolution
+    of the 9 Cycle 9 Stage 4 open findings (F-C9S4-DEF-SRC-001..F-C9S4-DEF-SRC-009)
+    under group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); separate from
+    independent PR adversarial review.
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: pass
+scientific_review: true
+summary: 'Fresh post-remediation batch review of the 9 physiology TraitRecord YAML
+  files remediated in Cycle 9 Stage 5 (antibiotic_resistance.yaml, bioluminescence.yaml,
+  chemotaxis.yaml, dormancy.yaml, natural_competence.yaml, persister_cell_formation.yaml,
+  stress_response.yaml, urease_activity.yaml, and viable_but_nonculturable_state.yaml)
+  under group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002.
+  All 9 Cycle 9 Stage 4 open findings (F-C9S4-DEF-SRC-001..009) are verified as resolved
+  with contiguous verbatim snippets for their primary definition_source DOI in record-level
+  evidence[0], removal of all 9 baselined MISSING_SNIPPET rows from conf/evidence_snippet_baseline.tsv
+  (2,372 -> 2,363 total baselined findings), append-only curation_history provenance,
+  and 0 remaining open findings.'
+source:
+  git_revision: c7627fdb55a2b3352a4a12b2da8dbc98a4d1c8c6
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/SKILL.md
+    sha256: 27f535d3f057d321c8b87c6506f2f35dd2d37fd005bcd5040b3e17269285075b
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: AGENTS.md
+    sha256: 6771ed07ef5ae68deecbf50ae6123e2e3a4834e05b2dbc13faa96ec2329a6f93
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: 0e70b4d77280815580e500c9076efe2dfb8e79843d478730da5dea77fbfc9373
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/traits/physiology/antibiotic_resistance.yaml
+    sha256: 011756e2a35477ce7d84a81144281b62b7be0a8f3eefc864b33263252750bf45
+    role: target
+  - path: data/traits/physiology/bioluminescence.yaml
+    sha256: f216771ed746bd70f4f2a455f6a1fd9bbf72ca5349b1a9f0a28b4f5a1bffd4bd
+    role: target
+  - path: data/traits/physiology/chemotaxis.yaml
+    sha256: d1dff642273f37ff70683ac3006f4717938668043f62bc4107d820da62228ace
+    role: target
+  - path: data/traits/physiology/dormancy.yaml
+    sha256: a6f722c218bf363b4782bb4f6f1b377ed3e687d289e48a865a5577f28cb2384f
+    role: target
+  - path: data/traits/physiology/natural_competence.yaml
+    sha256: f864a4fd624ecfd32571aaa561fbb83c88e860de70520303053df4200f0dd30f
+    role: target
+  - path: data/traits/physiology/persister_cell_formation.yaml
+    sha256: 5b6ab5a659c386d6a3b2b69e08baaa3dd983fd7f0b0cb77f4589c5b763629f9c
+    role: target
+  - path: data/traits/physiology/stress_response.yaml
+    sha256: 93a22e332d0d21af07db073458628d014edf19f9e40f24adeaf1430804fd13ee
+    role: target
+  - path: data/traits/physiology/urease_activity.yaml
+    sha256: c786fd148b1973fd46ecc5ceaee4daa4e1de5ad9c3f5b90b9294b89f227d90a1
+    role: target
+  - path: data/traits/physiology/viable_but_nonculturable_state.yaml
+    sha256: 9f7b0bbf26f85d7523ead8b3787e603d17093b8f2b0be3fa758c7845802b5d4a
+    role: target
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/curate_stage5_review_findings/2026-11-04T111000Z-claude-code-c9a509.yaml
+    sha256: 0d66bb4d729288a9e4f2ae987e519007b2defff2df98f8bc36ccefa8b86c7f38
+    role: context
+  - path: reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml
+    sha256: 93b534d8ffac7e5660f8cab2ba2df79b15d8e8a9c5c316dbd7b7eb7d9afa1182
+    role: context
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml
+    sha256: c60bb53c4e81dc930cc78c72c9a8a801aa1566cae8e3b0388c21bf2491f5b19a
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/curate_stage5_review_findings.py
+    sha256: 7af148fc249754224079d8c1c140c1be1910c3d607db74f02c92b5b610116ea0
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: tests/test_curate_stage5_review_findings.py
+    sha256: 7d16856cac654fe7699e9e9e65be2457dd4f873e64a2ba2ba0404b3dfd3741a9
+    role: context
+scope:
+  description: Focused post-remediation review of all 9 physiology TraitRecord YAML
+    files modified in Cycle 9 Stage 5 (resolve_review_findings) to resolve group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    (#2002).
+  selection: All 9 records with open findings carried forward from Cycle 9 Stage 4
+    review 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review.
+  coverage: full
+  population_size: 9
+  reviewed_target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+targets:
+- target_id: traitmech:000088
+  path: data/traits/physiology/antibiotic_resistance.yaml
+  label: antibiotic resistance
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/antibiotic_resistance.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000085
+  path: data/traits/physiology/bioluminescence.yaml
+  label: bioluminescence
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bioluminescence.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000086
+  path: data/traits/physiology/chemotaxis.yaml
+  label: chemotaxis
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/chemotaxis.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000080
+  path: data/traits/physiology/dormancy.yaml
+  label: dormancy
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/dormancy.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000087
+  path: data/traits/physiology/natural_competence.yaml
+  label: natural competence
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/natural_competence.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000082
+  path: data/traits/physiology/persister_cell_formation.yaml
+  label: persister cell formation
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/persister_cell_formation.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000078
+  path: data/traits/physiology/stress_response.yaml
+  label: stress response
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/stress_response.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000077
+  path: data/traits/physiology/urease_activity.yaml
+  label: urease activity
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/urease_activity.yaml
+    role: maintained TraitRecord YAML
+- target_id: traitmech:000081
+  path: data/traits/physiology/viable_but_nonculturable_state.yaml
+  label: viable but nonculturable state
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/viable_but_nonculturable_state.yaml
+    role: maintained TraitRecord YAML
+checks:
+- check_id: validate-strict
+  name: Strict LinkML schema and reference validation across all TraitRecord files
+  command: uv run python scripts/validate_strict.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-validate-strict
+  - ev-remediated-records
+  summary: All 1,130 TraitRecord YAML files (including all 9 Cycle 9 Stage 5 remediated
+    physiology records) pass strict closed-mode LinkML validation with 0 errors.
+- check_id: audit-snippets
+  name: Evidence snippet structural and baseline ratchet audit
+  command: uv run python scripts/audit_evidence_snippets.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-snippet-audit
+  - ev-c9s5-def-src-001
+  - ev-c9s5-def-src-002
+  - ev-c9s5-def-src-003
+  - ev-c9s5-def-src-004
+  - ev-c9s5-def-src-005
+  - ev-c9s5-def-src-006
+  - ev-c9s5-def-src-007
+  - ev-c9s5-def-src-008
+  - ev-c9s5-def-src-009
+  summary: All 9 remediated physiology records now carry a contiguous >=16-char verbatim
+    quote for their primary definition_source DOI in record-level evidence[0], passing
+    scripts/audit_evidence_snippets.py with 0 new findings and reducing baselined
+    MISSING_SNIPPET rows in conf/evidence_snippet_baseline.tsv from 2,234 to 2,225
+    (-9; total baselined findings 2,372 -> 2,363).
+- check_id: stage5-writer-tests
+  name: Stage 5 guarded writer idempotency and postcondition unit tests
+  command: uv run pytest tests/test_curate_stage5_review_findings.py -v
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-stage5-writer
+  summary: All 5 unit tests in tests/test_curate_stage5_review_findings.py pass, confirming
+    DO_NOT_WORK protection, exact definition_source evidence alignment across all
+    101 remediated specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle
+    5 + 13 Cycle 6 + 15 Cycle 7 + 12 Cycle 8 + 9 Cycle 9), zero UNQUOTED_DEFINITION_SOURCE
+    or MISSING_DEFINITION_SOURCE_EVIDENCE defects on remediated records, and dry-run/apply
+    idempotency.
+- check_id: audit-writers
+  name: Guarded YAML writer safeguard audit
+  command: uv run python scripts/audit_writers.py
+  status: passed
+  required: true
+  exit_code: 0
+  expected_exit_code: 0
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-stage5-writer
+  summary: scripts/curate_stage5_review_findings.py satisfies all writer safeguards
+    (appends curation_history, has write safeguard, validates before write, wired
+    into justfile).
+evidence:
+- evidence_id: ev-prior-c9s4-review
+  kind: prior_review
+  reference: reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml
+  locator: findings[0..8]
+  accessed_at: '2026-11-04T11:11:00Z'
+  support: supports
+  summary: Immutable Cycle 9 Stage 4 review bundle identifying the 9 open definition_source
+    missing-snippet findings (F-C9S4-DEF-SRC-001..F-C9S4-DEF-SRC-009) across data/traits/physiology/
+    with planned remediation actions ACT-C9S4-DEF-SRC-001..009.
+  snapshot_sha256: 93b534d8ffac7e5660f8cab2ba2df79b15d8e8a9c5c316dbd7b7eb7d9afa1182
+- evidence_id: ev-c9s5-def-src-001
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro3380
+  locator: 'Aligned on data/traits/physiology/antibiotic_resistance.yaml evidence[0]
+    (Blair et al. review the molecular mechanisms of bacterial antibiotic resistance:
+    reduced permeability, efflux, target modification/protection, and enzymatic drug
+    inactivation.)'
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: 'Primary definition_source DOI:10.1038/nrmicro3380 on data/traits/physiology/antibiotic_resistance.yaml
+    (traitmech:000088, antibiotic resistance) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Blair et al. review the molecular mechanisms
+    of bacterial antibiotic resistance: reduced permeability, efflux, target modification/protection,
+    and enzymatic drug inactivation.).'
+  quote: This article reviews recent advances in our understanding of the mechanisms
+    by which bacteria are either intrinsically resistant or acquire resistance to
+    antibiotics, including the prevention of access to drug targets, changes in the
+    structure and protection of antibiotic targets and the direct modification or
+    inactivation of antibiotics.
+- evidence_id: ev-c9s5-def-src-002
+  kind: primary_source
+  reference: DOI:10.1016/j.csbj.2018.11.003
+  locator: Aligned on data/traits/physiology/bioluminescence.yaml evidence[0] (Brodl,
+    Winkler & Macheroux review the molecular mechanism of bacterial bioluminescence
+    (luxCDABEG operon, FMNH2 + RCHO + O2 reaction, 490 nm emission).)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1016/j.csbj.2018.11.003 on data/traits/physiology/bioluminescence.yaml
+    (traitmech:000085, bioluminescence) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Brodl, Winkler & Macheroux review the
+    molecular mechanism of bacterial bioluminescence (luxCDABEG operon, FMNH2 + RCHO
+    + O2 reaction, 490 nm emission).).
+  quote: In bacteria, the heterodimeric luciferase catalyzes the monooxygenation of
+    long-chain aliphatic aldehydes to the corresponding acids utilizing reduced FMN
+    and molecular oxygen. The energy released as a photon results from an excited
+    state flavin-4a-hydroxide, emitting light centered around 490 nm.
+- evidence_id: ev-c9s5-def-src-003
+  kind: primary_source
+  reference: DOI:10.1038/nrm1524
+  locator: Aligned on data/traits/physiology/chemotaxis.yaml evidence[0] (Wadhams
+    & Armitage review the bacterial chemotaxis two-component signal-transduction pathway
+    (MCPs, CheA/CheY, CheR/CheB adaptation, flagellar motor control).)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrm1524 on data/traits/physiology/chemotaxis.yaml
+    (traitmech:000086, chemotaxis) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (Wadhams & Armitage review the bacterial chemotaxis
+    two-component signal-transduction pathway (MCPs, CheA/CheY, CheR/CheB adaptation,
+    flagellar motor control).).
+  quote: Bacteria must be able to respond to a changing environment, and one way to
+    respond is to move. The transduction of sensory signals alters the concentration
+    of small phosphorylated response regulators that bind to the rotary flagellar
+    motor and cause switching.
+- evidence_id: ev-c9s5-def-src-004
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro2504
+  locator: Aligned on data/traits/physiology/dormancy.yaml evidence[0] (Lennon & Jones
+    define microbial dormancy as a reversible state of low metabolic activity that
+    generates microbial seed banks.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro2504 on data/traits/physiology/dormancy.yaml
+    (traitmech:000080, dormancy) verified with verbatim Europe PMC abstract quote
+    in record-level evidence[0].snippet (Lennon & Jones define microbial dormancy
+    as a reversible state of low metabolic activity that generates microbial seed
+    banks.).
+  quote: Dormancy is a bet-hedging strategy used by a wide range of taxa, including
+    microorganisms. It refers to an organism's ability to enter a reversible state
+    of low metabolic activity when faced with unfavourable environmental conditions.
+- evidence_id: ev-c9s5-def-src-005
+  kind: primary_source
+  reference: DOI:10.1038/nrmicro3199
+  locator: Aligned on data/traits/physiology/natural_competence.yaml evidence[0] (Johnston
+    et al. review the molecular machinery and regulatory control of natural bacterial
+    transformation across Gram-positive and Gram-negative bacteria.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1038/nrmicro3199 on data/traits/physiology/natural_competence.yaml
+    (traitmech:000087, natural competence) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Johnston et al. review the molecular
+    machinery and regulatory control of natural bacterial transformation across Gram-positive
+    and Gram-negative bacteria.).
+  quote: Natural bacterial transformation involves the internalization and chromosomal
+    integration of DNA and has now been documented in ~80 species. Recent advances
+    have established that phylogenetically distant species share conserved uptake
+    and processing proteins but differ in the inducing cues and regulatory mechanisms
+    that are involved.
+- evidence_id: ev-c9s5-def-src-006
+  kind: primary_source
+  reference: DOI:10.1146/annurev.micro.112408.134306
+  locator: Aligned on data/traits/physiology/persister_cell_formation.yaml evidence[0]
+    (Lewis defines persister cells as dormant phenotypic variants that survive bactericidal
+    antibiotics without heritable resistance mutations.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1146/annurev.micro.112408.134306 on data/traits/physiology/persister_cell_formation.yaml
+    (traitmech:000082, persister cell formation) verified with verbatim Europe PMC
+    abstract quote in record-level evidence[0].snippet (Lewis defines persister cells
+    as dormant phenotypic variants that survive bactericidal antibiotics without heritable
+    resistance mutations.).
+  quote: Persisters are dormant variants of regular cells that form stochastically
+    in microbial populations and are highly tolerant to antibiotics.
+- evidence_id: ev-c9s5-def-src-007
+  kind: primary_source
+  reference: DOI:10.1146/annurev-micro-090110-102946
+  locator: Aligned on data/traits/physiology/stress_response.yaml evidence[0] (Battesti,
+    Majdalani & Gottesman review the RpoS-mediated general stress response and its
+    cross-protection against multiple environmental insults.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1146/annurev-micro-090110-102946 on data/traits/physiology/stress_response.yaml
+    (traitmech:000078, stress response) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Battesti, Majdalani & Gottesman review
+    the RpoS-mediated general stress response and its cross-protection against multiple
+    environmental insults.).
+  quote: Under conditions of nutrient deprivation or stress, or as cells enter stationary
+    phase, Escherichia coli and related bacteria increase the accumulation of RpoS,
+    a specialized sigma factor. RpoS-dependent gene expression leads to general stress
+    resistance of cells.
+- evidence_id: ev-c9s5-def-src-008
+  kind: primary_source
+  reference: DOI:10.1128/mr.59.3.451-480.1995
+  locator: Aligned on data/traits/physiology/urease_activity.yaml evidence[0] (Mobley,
+    Island & Hausinger review the structure, nickel metallocenter, accessory proteins
+    (UreD, UreE, UreF, UreG), and physiological roles of bacterial urease.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1128/mr.59.3.451-480.1995 on data/traits/physiology/urease_activity.yaml
+    (traitmech:000077, urease activity) verified with verbatim Europe PMC abstract
+    quote in record-level evidence[0].snippet (Mobley, Island & Hausinger review the
+    structure, nickel metallocenter, accessory proteins (UreD, UreE, UreF, UreG),
+    and physiological roles of bacterial urease.).
+  quote: Urease (urea amidohydrolase; EC 3.5.1.5) catalyzes the hydrolysis of urea
+    to yield ammonia and carbamate. The latter compound spontaneously decomposes to
+    yield another molecule of ammonia and carbonic acid.
+- evidence_id: ev-c9s5-def-src-009
+  kind: primary_source
+  reference: DOI:10.1111/j.1574-6976.2009.00200.x
+  locator: Aligned on data/traits/physiology/viable_but_nonculturable_state.yaml evidence[0]
+    (Oliver reviews the VBNC state in pathogenic bacteria, covering inducing stresses,
+    metabolic activity in non-colony-forming cells, and resuscitation.)
+  accessed_at: '2026-11-04T11:12:00Z'
+  support: supports
+  summary: Primary definition_source DOI:10.1111/j.1574-6976.2009.00200.x on data/traits/physiology/viable_but_nonculturable_state.yaml
+    (traitmech:000081, viable but nonculturable state) verified with verbatim Europe
+    PMC abstract quote in record-level evidence[0].snippet (Oliver reviews the VBNC
+    state in pathogenic bacteria, covering inducing stresses, metabolic activity in
+    non-colony-forming cells, and resuscitation.).
+  quote: Many bacteria, including a variety of important human pathogens, are known
+    to respond to various environmental stresses by entry into a novel physiological
+    state, where the cells remain viable, but are no longer culturable on standard
+    laboratory media. On resuscitation from this 'viable but nonculturable' (VBNC)
+    state, the cells regain culturability and the renewed ability to cause infection.
+- evidence_id: ev-remediated-records
+  kind: record_content
+  reference: data/traits/physiology/antibiotic_resistance.yaml; data/traits/physiology/bioluminescence.yaml;
+    data/traits/physiology/chemotaxis.yaml; data/traits/physiology/dormancy.yaml;
+    data/traits/physiology/natural_competence.yaml; data/traits/physiology/persister_cell_formation.yaml;
+    data/traits/physiology/stress_response.yaml; data/traits/physiology/urease_activity.yaml;
+    data/traits/physiology/viable_but_nonculturable_state.yaml
+  locator: definition_source, evidence[0], curation_history
+  accessed_at: '2026-11-04T11:13:00Z'
+  support: supports
+  summary: All 9 remediated physiology TraitRecord YAML files now carry a verified
+    non-elliptical verbatim snippet in record-level evidence[0].snippet for their
+    declared definition_source DOI and record an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+    curation_history event.
+- evidence_id: ev-stage5-writer
+  kind: validation
+  reference: scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py
+  locator: process_all
+  accessed_at: '2026-11-04T11:13:00Z'
+  support: supports
+  summary: Guarded writer script and unit test suite verifying closed-mode LinkML
+    validation, DO_NOT_WORK exclusion, and idempotent remediation across all 101 target
+    specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5 + 13 Cycle
+    6 + 15 Cycle 7 + 12 Cycle 8 + 9 Cycle 9).
+  snapshot_sha256: 7af148fc249754224079d8c1c140c1be1910c3d607db74f02c92b5b610116ea0
+- evidence_id: ev-validate-strict
+  kind: validation
+  reference: scripts/validate_strict.py
+  locator: reports/instance_validation_failures.tsv
+  accessed_at: '2026-11-04T11:14:00Z'
+  support: supports
+  summary: Closed-mode LinkML schema and identifier validation passes with 0 errors
+    across all 1,130 TraitRecord files.
+- evidence_id: ev-snippet-audit
+  kind: validation
+  reference: scripts/audit_evidence_snippets.py
+  locator: conf/evidence_snippet_baseline.tsv
+  accessed_at: '2026-11-04T11:14:00Z'
+  support: supports
+  summary: All 9 remediated record-level evidence[0] entries pass contiguous verbatim
+    quote checks with 0 new warnings, removing 9 baselined MISSING_SNIPPET rows from
+    conf/evidence_snippet_baseline.tsv (2,372 -> 2,363 total baselined findings; MISSING_SNIPPET
+    2,234 -> 2,225) and eliminating all 9 open definition_source missing-snippet findings
+    from Cycle 9 Stage 4.
+assessments:
+- assessment_id: assess-remediated-evidence-alignment
+  area: evidence
+  topic: Verification of record-level definition_source evidence[0] verbatim snippet
+    alignment across the 9 remediated physiology records
+  outcome: supported
+  summary: All 9 physiology records identified with open findings in Cycle 9 Stage
+    4 (antibiotic_resistance.yaml, bioluminescence.yaml, chemotaxis.yaml, dormancy.yaml,
+    natural_competence.yaml, persister_cell_formation.yaml, stress_response.yaml,
+    urease_activity.yaml, and viable_but_nonculturable_state.yaml) now carry a verified
+    non-elliptical verbatim snippet directly in record-level evidence[0].snippet for
+    their primary definition_source DOI.
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-001
+  - ev-c9s5-def-src-002
+  - ev-c9s5-def-src-003
+  - ev-c9s5-def-src-004
+  - ev-c9s5-def-src-005
+  - ev-c9s5-def-src-006
+  - ev-c9s5-def-src-007
+  - ev-c9s5-def-src-008
+  - ev-c9s5-def-src-009
+  - ev-remediated-records
+  - ev-snippet-audit
+  metrics:
+  - name: remediated_open_findings_rate
+    value: 1.0
+    unit: ratio
+    definition: Fraction of Cycle 9 Stage 4 open findings in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+      verified as resolved with verbatim definition_source evidence.
+    denominator: 9
+    minimum: 0.0
+    maximum: 1.0
+  details: 'Each of the 9 remediated physiology records was re-inspected against .claude/skills/review-yaml-record/SKILL.md:
+    F-C9S4-DEF-SRC-001..009 (antibiotic_resistance.yaml [DOI:10.1038/nrmicro3380],
+    bioluminescence.yaml [DOI:10.1016/j.csbj.2018.11.003], chemotaxis.yaml [DOI:10.1038/nrm1524],
+    dormancy.yaml [DOI:10.1038/nrmicro2504], natural_competence.yaml [DOI:10.1038/nrmicro3199],
+    persister_cell_formation.yaml [DOI:10.1146/annurev.micro.112408.134306], stress_response.yaml
+    [DOI:10.1146/annurev-micro-090110-102946], urease_activity.yaml [DOI:10.1128/mr.59.3.451-480.1995],
+    and viable_but_nonculturable_state.yaml [DOI:10.1111/j.1574-6976.2009.00200.x])
+    now populate evidence[0].snippet with the verified Europe PMC abstract quote for
+    their declared definition_source DOI and have been removed from conf/evidence_snippet_baseline.tsv.'
+- assessment_id: assess-remediated-schema-and-provenance
+  area: provenance
+  topic: Schema validity, curation_history provenance, and writer guardrails on remediated
+    records
+  outcome: supported
+  summary: 'All 9 remediated records pass strict closed-mode LinkML validation, preserve
+    existing canonical_examples, causal_graphs, and UniProtKB protein_examples untouched,
+    and record append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history
+    entries referencing issue #2002.'
+  target_ids:
+  - traitmech:000088
+  - traitmech:000085
+  - traitmech:000086
+  - traitmech:000080
+  - traitmech:000087
+  - traitmech:000082
+  - traitmech:000078
+  - traitmech:000077
+  - traitmech:000081
+  evidence_ids:
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-validate-strict
+findings:
+- finding_id: F-C9S4-DEF-SRC-001
+  issue_key: antibiotic-resistance-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: antibiotic_resistance.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/nrmicro3380
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-001 on data/traits/physiology/antibiotic_resistance.yaml
+    (traitmech:000088): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro3380 with the verified Europe PMC abstract quote (''This article
+    reviews recent advances in our understanding of the mechanisms by which bacteria
+    are either intrinsically resistant or acquire resistance to antibiotics, including
+    the prevention of access to drug targets, changes in the structure and protection
+    of antibiotic targets and the direct modification or inactivation of antibiotics.'')
+    (Blair et al. review the molecular mechanisms of bacterial antibiotic resistance:
+    reduced permeability, efflux, target modification/protection, and enzymatic drug
+    inactivation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000088
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-001
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/antibiotic_resistance.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-001
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-002
+  issue_key: bioluminescence-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: bioluminescence.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1016/j.csbj.2018.11.003
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-002 on data/traits/physiology/bioluminescence.yaml
+    (traitmech:000085): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1016/j.csbj.2018.11.003 with the verified Europe PMC abstract quote (''In
+    bacteria, the heterodimeric luciferase catalyzes the monooxygenation of long-chain
+    aliphatic aldehydes to the corresponding acids utilizing reduced FMN and molecular
+    oxygen. The energy released as a photon results from an excited state flavin-4a-hydroxide,
+    emitting light centered around 490 nm.'') (Brodl, Winkler & Macheroux review the
+    molecular mechanism of bacterial bioluminescence (luxCDABEG operon, FMNH2 + RCHO
+    + O2 reaction, 490 nm emission).), removed its baselined MISSING_SNIPPET row from
+    conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000085
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-002
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/bioluminescence.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-002
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-003
+  issue_key: chemotaxis-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: chemotaxis.yaml now carries a verified verbatim snippet in record-level evidence[0].snippet
+    for definition_source DOI:10.1038/nrm1524
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-003 on data/traits/physiology/chemotaxis.yaml
+    (traitmech:000086): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrm1524 with the verified Europe PMC abstract quote (''Bacteria must
+    be able to respond to a changing environment, and one way to respond is to move.
+    The transduction of sensory signals alters the concentration of small phosphorylated
+    response regulators that bind to the rotary flagellar motor and cause switching.'')
+    (Wadhams & Armitage review the bacterial chemotaxis two-component signal-transduction
+    pathway (MCPs, CheA/CheY, CheR/CheB adaptation, flagellar motor control).), removed
+    its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000086
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-003
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/chemotaxis.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-003
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-004
+  issue_key: dormancy-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: dormancy.yaml now carries a verified verbatim snippet in record-level evidence[0].snippet
+    for definition_source DOI:10.1038/nrmicro2504
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-004 on data/traits/physiology/dormancy.yaml
+    (traitmech:000080): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro2504 with the verified Europe PMC abstract quote (''Dormancy
+    is a bet-hedging strategy used by a wide range of taxa, including microorganisms.
+    It refers to an organism''s ability to enter a reversible state of low metabolic
+    activity when faced with unfavourable environmental conditions.'') (Lennon & Jones
+    define microbial dormancy as a reversible state of low metabolic activity that
+    generates microbial seed banks.), removed its baselined MISSING_SNIPPET row from
+    conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000080
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-004
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/dormancy.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-004
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-005
+  issue_key: natural-competence-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: natural_competence.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1038/nrmicro3199
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-005 on data/traits/physiology/natural_competence.yaml
+    (traitmech:000087): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1038/nrmicro3199 with the verified Europe PMC abstract quote (''Natural
+    bacterial transformation involves the internalization and chromosomal integration
+    of DNA and has now been documented in ~80 species. Recent advances have established
+    that phylogenetically distant species share conserved uptake and processing proteins
+    but differ in the inducing cues and regulatory mechanisms that are involved.'')
+    (Johnston et al. review the molecular machinery and regulatory control of natural
+    bacterial transformation across Gram-positive and Gram-negative bacteria.), removed
+    its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and
+    appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000087
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-005
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/natural_competence.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-005
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-006
+  issue_key: persister-cell-formation-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: persister_cell_formation.yaml now carries a verified verbatim snippet in
+    record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.112408.134306
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-006 on data/traits/physiology/persister_cell_formation.yaml
+    (traitmech:000082): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1146/annurev.micro.112408.134306 with the verified Europe PMC abstract
+    quote (''Persisters are dormant variants of regular cells that form stochastically
+    in microbial populations and are highly tolerant to antibiotics.'') (Lewis defines
+    persister cells as dormant phenotypic variants that survive bactericidal antibiotics
+    without heritable resistance mutations.), removed its baselined MISSING_SNIPPET
+    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
+    via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000082
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-006
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/persister_cell_formation.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-006
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-007
+  issue_key: stress-response-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: stress_response.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1146/annurev-micro-090110-102946
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-007 on data/traits/physiology/stress_response.yaml
+    (traitmech:000078): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1146/annurev-micro-090110-102946 with the verified Europe PMC abstract
+    quote (''Under conditions of nutrient deprivation or stress, or as cells enter
+    stationary phase, Escherichia coli and related bacteria increase the accumulation
+    of RpoS, a specialized sigma factor. RpoS-dependent gene expression leads to general
+    stress resistance of cells.'') (Battesti, Majdalani & Gottesman review the RpoS-mediated
+    general stress response and its cross-protection against multiple environmental
+    insults.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000078
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-007
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/stress_response.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-007
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-008
+  issue_key: urease-activity-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: urease_activity.yaml now carries a verified verbatim snippet in record-level
+    evidence[0].snippet for definition_source DOI:10.1128/mr.59.3.451-480.1995
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-008 on data/traits/physiology/urease_activity.yaml
+    (traitmech:000077): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1128/mr.59.3.451-480.1995 with the verified Europe PMC abstract quote (''Urease
+    (urea amidohydrolase; EC 3.5.1.5) catalyzes the hydrolysis of urea to yield ammonia
+    and carbamate. The latter compound spontaneously decomposes to yield another molecule
+    of ammonia and carbonic acid.'') (Mobley, Island & Hausinger review the structure,
+    nickel metallocenter, accessory proteins (UreD, UreE, UreF, UreG), and physiological
+    roles of bacterial urease.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000077
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-008
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/urease_activity.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-008
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+- finding_id: F-C9S4-DEF-SRC-009
+  issue_key: viable-but-nonculturable-state-definition-source-snippet
+  category: evidence
+  severity: minor
+  status: resolved
+  certainty: confirmed
+  title: viable_but_nonculturable_state.yaml now carries a verified verbatim snippet
+    in record-level evidence[0].snippet for definition_source DOI:10.1111/j.1574-6976.2009.00200.x
+  description: 'Resolved Cycle 9 Stage 4 open finding F-C9S4-DEF-SRC-009 on data/traits/physiology/viable_but_nonculturable_state.yaml
+    (traitmech:000081): populated record-level evidence[0].snippet for definition_source
+    DOI:10.1111/j.1574-6976.2009.00200.x with the verified Europe PMC abstract quote
+    (''Many bacteria, including a variety of important human pathogens, are known
+    to respond to various environmental stresses by entry into a novel physiological
+    state, where the cells remain viable, but are no longer culturable on standard
+    laboratory media. On resuscitation from this ''viable but nonculturable'' (VBNC)
+    state, the cells regain culturability and the renewed ability to cause infection.'')
+    (Oliver reviews the VBNC state in pathogenic bacteria, covering inducing stresses,
+    metabolic activity in non-colony-forming cells, and resuscitation.), removed its
+    baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended
+    curation_history entry via scripts/curate_stage5_review_findings.py.'
+  target_ids:
+  - traitmech:000081
+  field_paths:
+  - definition_source
+  - evidence
+  - curation_history
+  evidence_ids:
+  - ev-prior-c9s4-review
+  - ev-c9s5-def-src-009
+  - ev-remediated-records
+  - ev-stage5-writer
+  - ev-snippet-audit
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/viable_but_nonculturable_state.yaml
+    role: maintained TraitRecord YAML
+  disposition_reason: 'Resolved in Cycle 9 Stage 5 (resolve_review_findings) under
+    group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via
+    guarded writer scripts/curate_stage5_review_findings.py.'
+  previous_occurrences:
+  - repository: CultureBotAI/TraitMech
+    review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+    finding_id: F-C9S4-DEF-SRC-009
+  external_issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+actions: []
+limitations:
+- 'This batch review covers the 9 physiology records remediated in Cycle 9 Stage 5
+  under group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS (#2002); the 5 cohort-level
+  source-limited or upstream-blocked findings from Cycle 9 Stage 4 remain tracked
+  under open GitHub issues #1982, #1983, #1984, #1985, and #364.'
+- All 9 of the remediated physiology records carry repository-minted traitmech:NNNNNN
+  identifiers (traitmech:000077, traitmech:000078, traitmech:000080..000082, traitmech:000085..000088)
+  backed by validated ROBOT templates awaiting upstream METPO release incorporation
+  (#364, berkeleybop/metpo#535).
+notes:
+- 'Skills executed: .claude/skills/curate-yaml-record/SKILL.md and .claude/skills/review-yaml-record/SKILL.md.'
+- Immutable Cycle 9 Stage 4 review bundle preserved untouched at reviews/structured/20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review/review.yaml.
+related_reviews:
+- repository: CultureBotAI/TraitMech
+  review_id: 20261104T084500Z-cycle9-stage4-corpus-record-and-cohort-review
+  relationship: follow_up_remediation_verification
+links:
+- https://github.com/CultureBotAI/TraitMech/issues/2002
+- https://github.com/CultureBotAI/TraitMech/issues/1982
+- https://github.com/CultureBotAI/TraitMech/issues/1983
+- https://github.com/CultureBotAI/TraitMech/issues/1984
+- https://github.com/CultureBotAI/TraitMech/issues/1985
+- https://github.com/CultureBotAI/TraitMech/issues/364
+tags:
+- cycle-09
+- stage-05
+- resolve-review-findings
+- remediation-verification

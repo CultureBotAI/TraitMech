@@ -2261,7 +2261,6 @@ data/traits/physiology/antibiotic_resistance.yaml	antibiotic_resistance_mechanis
 data/traits/physiology/antibiotic_resistance.yaml	antibiotic_resistance_mechanisms:outer_membrane_porin->antibiotic_influx[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/pharmaceutics16020170 has no snippet
 data/traits/physiology/antibiotic_resistance.yaml	antibiotic_resistance_mechanisms:qrdr_mutation->fluoroquinolone[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fphar.2024.1444781 has no snippet
 data/traits/physiology/antibiotic_resistance.yaml	antibiotic_resistance_mechanisms:rrna_methylation_23s->macrolide_antibiotic[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fphar.2024.1444781 has no snippet
-data/traits/physiology/antibiotic_resistance.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3380 has no snippet
 data/traits/physiology/antibiotic_resistance.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-022-00820-y has no snippet
 data/traits/physiology/autotrophic.yaml	autotrophic_inorganic_carbon_fixation:carbon_concentrating_mechanism->co2_fixation_pathway[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01557-23 has no snippet
 data/traits/physiology/autotrophic.yaml	autotrophic_inorganic_carbon_fixation:carbonic_anhydrase->carbon_dioxide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01075-24 has no snippet
@@ -2285,7 +2284,6 @@ data/traits/physiology/bioluminescence.yaml	bioluminescence_luciferase:lux_i->au
 data/traits/physiology/bioluminescence.yaml	bioluminescence_luciferase:lux_locus_expression->luciferase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00035-24 has no snippet
 data/traits/physiology/bioluminescence.yaml	bioluminescence_luciferase:lux_r->lux_locus_expression[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00035-24 has no snippet
 data/traits/physiology/bioluminescence.yaml	bioluminescence_luciferase:luxcde_complex->long_chain_aldehyde[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.csbj.2018.11.003 has no snippet
-data/traits/physiology/bioluminescence.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.csbj.2018.11.003 has no snippet
 data/traits/physiology/bioluminescence.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.cellbio.21.012704.131001 has no snippet
 data/traits/physiology/catalase_activity.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/s00018-003-3206-5 has no snippet
 data/traits/physiology/catalase_activity.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3032 has no snippet
@@ -2350,7 +2348,6 @@ data/traits/physiology/chemotaxis.yaml	chemotaxis_gradient_response:cher->chemor
 data/traits/physiology/chemotaxis.yaml	chemotaxis_gradient_response:chew->chea_kinase[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-032421-110850 has no snippet
 data/traits/physiology/chemotaxis.yaml	chemotaxis_gradient_response:chey->cw_flagellar_rotation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-032421-110850 has no snippet
 data/traits/physiology/chemotaxis.yaml	chemotaxis_gradient_response:chez->chey[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-032421-110850 has no snippet
-data/traits/physiology/chemotaxis.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrm1524 has no snippet
 data/traits/physiology/chemotaxis.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2505 has no snippet
 data/traits/physiology/chemotrophic.yaml	chemotrophic_chemical_redox_energy:proton_motive_force->quinone_quinol_cycling[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.bbabio.2008.09.008 has no snippet
 data/traits/physiology/chemotrophic.yaml	chemotrophic_chemical_redox_energy:proton_pumping->proton_motive_force[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.bbabio.2008.09.008 has no snippet
@@ -2372,7 +2369,6 @@ data/traits/physiology/dormancy.yaml	dormancy_seed_bank:ribosome_hibernation_fac
 data/traits/physiology/dormancy.yaml	dormancy_seed_bank:ribosome_hibernation_factors->ribosome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1386179 has no snippet
 data/traits/physiology/dormancy.yaml	dormancy_seed_bank:rpf_proteins->dormancy_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12081528 has no snippet
 data/traits/physiology/dormancy.yaml	dormancy_seed_bank:unfavorable_conditions->dormancy_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2504 has no snippet
-data/traits/physiology/dormancy.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2504 has no snippet
 data/traits/physiology/dormancy.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1557 has no snippet
 data/traits/physiology/heterotrophic.yaml	evidence[1]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'organic molecules ... carbon source'
 data/traits/physiology/heterotrophic.yaml	heterotrophic_organic_carbon_assimilation:catabolism->aerobic_respiration[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2024.1441865 has no snippet
@@ -2426,7 +2422,6 @@ data/traits/physiology/mixotrophic.yaml	mixotrophic_dual_carbon_energy_use:organ
 data/traits/physiology/mixotrophic.yaml	mixotrophic_dual_carbon_energy_use:phototrophic_energy_capture->proton_motive_force[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.02177-23 has no snippet
 data/traits/physiology/mixotrophic.yaml	mixotrophic_dual_carbon_energy_use:proton_motive_force->atp_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/spectrum.02177-23 has no snippet
 data/traits/physiology/mixotrophic.yaml	mixotrophic_dual_carbon_energy_use:rubisco->cbb_cycle[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.00599-24 has no snippet
-data/traits/physiology/natural_competence.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3199 has no snippet
 data/traits/physiology/natural_competence.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-021-00650-4 has no snippet
 data/traits/physiology/natural_competence.yaml	natural_competence_dna_uptake:comea->periplasm[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2024.02.06.579203 has no snippet
 data/traits/physiology/natural_competence.yaml	natural_competence_dna_uptake:comec->dna_uptake[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2024.02.06.579203 has no snippet
@@ -2472,7 +2467,6 @@ data/traits/physiology/oxidative_stress_response.yaml	oxidative_stress_response_
 data/traits/physiology/oxidative_stress_response.yaml	oxidative_stress_response_ros_defense:oxyr_regulator->oxidative_stress_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1099/mic.0.001481 has no snippet
 data/traits/physiology/oxidative_stress_response.yaml	oxidative_stress_response_ros_defense:rpos_sigma_factor->oxidative_stress_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mmbr.00151-22 has no snippet
 data/traits/physiology/oxidative_stress_response.yaml	oxidative_stress_response_ros_defense:thioredoxin_system->oxidative_stress_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1012001 has no snippet
-data/traits/physiology/persister_cell_formation.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.112408.134306 has no snippet
 data/traits/physiology/persister_cell_formation.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1557 has no snippet
 data/traits/physiology/persister_cell_formation.yaml	persister_dormancy_tolerance:antibiotic_resistance->elevated_mic[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12866-024-03628-3 has no snippet
 data/traits/physiology/persister_cell_formation.yaml	persister_dormancy_tolerance:antibiotic_tolerance->whole_population_phenotype[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12866-024-03628-3 has no snippet
@@ -2526,7 +2520,6 @@ data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigge
 data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigger:germinant->spore_germination_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.mib.2003.10.001 has no snippet
 data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigger:spore_germination_process->cadpa_release[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1126/science.adg9829 has no snippet
 data/traits/physiology/spore_germination.yaml	spore_germination_germinant_trigger:spore_germination_process->spore_germination_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2504 has no snippet
-data/traits/physiology/stress_response.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-090110-102946 has no snippet
 data/traits/physiology/stress_response.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3032 has no snippet
 data/traits/physiology/stress_response.yaml	stress_response_induction:environmental_stress->stress_response_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-090110-102946 has no snippet
 data/traits/physiology/stress_response.yaml	stress_response_induction:general_stress_resistance->stress_response_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-090110-102946 has no snippet
@@ -2545,7 +2538,6 @@ data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:co2_fi
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:nife_hydrogenase_h2_oxidation->electron_donor_use[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mSystems.00148-24 has no snippet
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:sox_sulfur_oxidation->electron_donor_use[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00599-24 has no snippet
 data/traits/physiology/trophic_type.yaml	trophic_type_classification_axes:sugar_uptake_cazyme_catabolism->carbon_source_use[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.00599-24 has no snippet
-data/traits/physiology/urease_activity.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.59.3.451-480.1995 has no snippet
 data/traits/physiology/urease_activity.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.53.1.85-108.1989 has no snippet
 data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:carbon_dioxide->carbonic_anhydrase_function[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acs.est.3c06617 has no snippet
 data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:carbonic_anhydrase_function->bicarbonate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acs.est.3c06617 has no snippet
@@ -2557,7 +2549,6 @@ data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:urea
 data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:urease_function->ph_quality[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acs.est.3c06617 has no snippet
 data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:urease_function->urea[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.59.3.451-480.1995 has no snippet
 data/traits/physiology/urease_activity.yaml	urease_activity_urea_hydrolysis:urease_function->urease_activity_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.59.3.451-480.1995 has no snippet
-data/traits/physiology/viable_but_nonculturable_state.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/j.1574-6976.2009.00200.x has no snippet
 data/traits/physiology/viable_but_nonculturable_state.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2504 has no snippet
 data/traits/physiology/viable_but_nonculturable_state.yaml	vbnc_stress_induced_dormancy:atp->nad_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.jare.2023.08.002 has no snippet
 data/traits/physiology/viable_but_nonculturable_state.yaml	vbnc_stress_induced_dormancy:atp->resuscitation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.jare.2023.08.002 has no snippet

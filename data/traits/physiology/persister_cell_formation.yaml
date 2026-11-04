@@ -15,6 +15,8 @@ synonyms:
   source: DOI:10.1146/annurev.micro.112408.134306
 evidence:
 - reference: DOI:10.1146/annurev.micro.112408.134306
+  snippet: Persisters are dormant variants of regular cells that form stochastically
+    in microbial populations and are highly tolerant to antibiotics.
   notes: Lewis reviews persister cells as dormant variants highly tolerant to antibiotics.
 - reference: DOI:10.1038/nrmicro1557
   notes: Lewis links persister-cell dormancy to the recalcitrance of chronic infections.
@@ -306,4 +308,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P23874 (176 -> 177 on hipa_toxin).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1146/annurev.micro.112408.134306
+    (Lewis 2010, PMID:20528688) to record-level evidence[0] to match definition_source
+    (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-006 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

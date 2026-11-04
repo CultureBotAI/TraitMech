@@ -20,6 +20,10 @@ xrefs:
 - GO:0006935
 evidence:
 - reference: DOI:10.1038/nrm1524
+  snippet: Bacteria must be able to respond to a changing environment, and one way
+    to respond is to move. The transduction of sensory signals alters the concentration
+    of small phosphorylated response regulators that bind to the rotary flagellar
+    motor and cause switching.
   notes: Wadhams & Armitage review bacterial chemotaxis as gradient-guided movement
     controlled by a histidine-aspartate phosphorelay.
 - reference: DOI:10.1038/nrmicro2505
@@ -300,4 +304,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P0AE67 (160 -> 161 on chey).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrm1524 (Wadhams & Armitage
+    2004, PMID:15573139) to record-level evidence[0] to match definition_source (Cycle
+    9 Stage 5 remediation of F-C9S4-DEF-SRC-003 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

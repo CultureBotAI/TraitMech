@@ -15,6 +15,10 @@ synonyms:
   source: DOI:10.1146/annurev-micro-090110-102946
 evidence:
 - reference: DOI:10.1146/annurev-micro-090110-102946
+  snippet: Under conditions of nutrient deprivation or stress, or as cells enter stationary
+    phase, Escherichia coli and related bacteria increase the accumulation of RpoS,
+    a specialized sigma factor. RpoS-dependent gene expression leads to general stress
+    resistance of cells.
   notes: Battesti, Majdalani & Gottesman review the RpoS-mediated general stress response,
     a broad protective program induced by stress and stationary phase.
 - reference: DOI:10.1038/nrmicro3032
@@ -275,4 +279,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P13445 (207 -> 208 on rpos).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1146/annurev-micro-090110-102946
+    (Battesti, Majdalani & Gottesman 2011, PMID:21639793 / PMC7356644) to record-level
+    evidence[0] to match definition_source (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-007
+    in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

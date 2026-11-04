@@ -15,6 +15,11 @@ synonyms:
   source: DOI:10.1038/nrmicro3380
 evidence:
 - reference: DOI:10.1038/nrmicro3380
+  snippet: This article reviews recent advances in our understanding of the mechanisms
+    by which bacteria are either intrinsically resistant or acquire resistance to
+    antibiotics, including the prevention of access to drug targets, changes in the
+    structure and protection of antibiotic targets and the direct modification or
+    inactivation of antibiotics.
   notes: Blair et al. review the molecular mechanisms of antibiotic resistance (efflux,
     target alteration, drug inactivation, reduced uptake).
 - reference: DOI:10.1038/s41579-022-00820-y
@@ -332,4 +337,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P00807 (171 -> 172 on beta_lactamase).'
+  llm_assisted: true
+- timestamp: '2026-11-04T11:10:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro3380 (Blair et
+    al. 2015, PMID:25435309) to record-level evidence[0] to match definition_source
+    (Cycle 9 Stage 5 remediation of F-C9S4-DEF-SRC-001 in group G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
