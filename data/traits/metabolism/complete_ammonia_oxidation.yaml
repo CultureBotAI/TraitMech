@@ -52,9 +52,9 @@ discussions:
     dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox
     Nitrospira before constructing causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#complete_ammonia_oxidation_comammox_sketch
   rationale: The current record carries three discovery and ecological-dominance snippets
     on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23)
     without distinct intermediate nitrite-step or enzyme quotes.
@@ -69,6 +69,35 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-11-04'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (complete_ammonia_oxidation_comammox_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in complete-ammonia-oxidation-protein-example-gap.
+- discussion_id: complete-ammonia-oxidation-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for Candidatus Nitrospira
+    inopinata ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and
+    nitrite oxidoreductase (NxrAB) so complete_ammonia_oxidation_comammox_sketch can
+    be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#complete_ammonia_oxidation_comammox_sketch
+  rationale: The record's primary literature (DOI:10.1038/nature16459, DOI:10.1038/nature16461,
+    DOI:10.1128/aem.01698-23) establishes single-organism complete oxidation of ammonia
+    to nitrate in Candidatus Nitrospira inopinata (NCBITaxon:1715989), but verified
+    strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated
+    before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1038/nature16461
+    supports: PARTIAL
+    snippet: Here we report on the discovery and cultivation of a completely nitrifying
+      bacterium from the genus Nitrospira, a globally distributed group of nitrite
+      oxidizers.
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-14T19:03:57Z'
   curator: codex
@@ -84,3 +113,66 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (complete-ammonia-oxidation-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-11-04T17:01:56Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (complete_ammonia_oxidation_comammox_sketch)
+    and OPEN CURATION_TODO discussion (complete-ammonia-oxidation-protein-example-gap)
+    anchored on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: complete_ammonia_oxidation_comammox_sketch
+  title: Single-organism complete oxidation of ammonia to nitrate (comammox)
+  description: Evidence-backed metabolic mechanism sketch linking single-organism
+    ammonia oxidation and nitrate formation to the complete ammonia oxidation (comammox)
+    phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Process-and-product sketch backed by DOI:10.1038/nature16459 and DOI:10.1128/aem.01698-23;
+    strain-matched UniProtKB protein examples for Candidatus Nitrospira inopinata
+    ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite
+    oxidoreductase (NxrAB) remain to be curated.
+  nodes:
+  - node_id: complete_ammonia_oxidation_trait
+    label: complete ammonia oxidation
+    node_type: TRAIT
+    grounding: traitmech:000187
+    description: Nitrification metabolism in which a single organism oxidizes ammonia
+      via nitrite to nitrate (comammox).
+  - node_id: complete_ammonia_oxidation_process
+    label: ammonia oxidation
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0019329
+    description: Complete chemolithoautotrophic oxidation of ammonia to nitrate within
+      a single comammox Nitrospira organism.
+  - node_id: complete_ammonia_oxidation_nitrate
+    label: nitrate
+    node_type: CHEMICAL
+    grounding: CHEBI:17632
+    description: Terminal nitrate product formed by single-organism complete oxidation
+      of ammonia.
+  edges:
+  - subject: complete_ammonia_oxidation_process
+    predicate: has output
+    predicate_id: RO:0002234
+    object: complete_ammonia_oxidation_nitrate
+    description: Complete ammonia oxidation in a single organism oxidizes ammonia
+      completely to nitrate.
+    evidence:
+    - reference: DOI:10.1038/nature16459
+      snippet: Complete oxidation of ammonia to nitrate in one organism (complete
+        ammonia oxidation; comammox) is energetically feasible
+      notes: van Kessel et al. establish that complete oxidation of ammonia to nitrate
+        in one organism (comammox) is energetically feasible.
+  - subject: complete_ammonia_oxidation_process
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: complete_ammonia_oxidation_trait
+    description: Energy conservation through complete oxidation of ammonia to nitrate
+      in comammox Nitrospira confers the complete ammonia oxidation phenotype.
+    evidence:
+    - reference: DOI:10.1128/aem.01698-23
+      snippet: The dominance of Nitrospira sp. BO4 could be explained by the ability
+        of comammox to generate more energy through the complete oxidation of ammonia
+        to nitrate
+      notes: Ghimire-Kafle et al. report that comammox Nitrospira sp. BO4 generates
+        energy through the complete oxidation of ammonia to nitrate.

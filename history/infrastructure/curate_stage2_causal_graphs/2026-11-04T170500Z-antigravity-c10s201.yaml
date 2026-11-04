@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+  slug: curate_stage2_causal_graphs
+session:
+  id: 2026-11-04T170500Z-antigravity-c10s201
+  timestamp: '2026-11-04T17:05:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2059
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2066
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Curate Cycle 10 Stage 2 causal_graphs for 4 Cohort M metabolism traits (butyric_acid_fermentation,
+    complete_ammonia_oxidation, iodate_respiration, organohalide_respiration)
+  details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 10 Stage 2 (causal_graphs).
+    Verified 760 existing eligible CLASS records with causal_graphs have 0 new structural
+    errors, 0 new predicate-domain errors, and 0 protein-taxon gaps (164 MECHANISTIC
+    with 1,710/1,710 100.0% wired nodes attached, 596 NONMECHANISTIC). Extended scripts/curate_stage2_causal_graphs.py
+    with Cohort M (4 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions
+    for butyric_acid_fermentation, complete_ammonia_oxidation, iodate_respiration,
+    and organohalide_respiration, resolving each record's <slug>-causal-graph-source-gap).
+    After this batch, 764/1,129 eligible records carry connected schema-valid causal_graphs
+    (164 MECHANISTIC, 600 NONMECHANISTIC), 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (241/241) of active CLASS records without causal_graphs carry
+    an explicit OPEN KNOWLEDGE_GAP (199) or CURATION_TODO (42) discussion.
