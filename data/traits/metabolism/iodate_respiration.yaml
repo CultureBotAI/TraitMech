@@ -53,9 +53,9 @@ discussions:
     (IdrABP1P2) and electron-transport coupling plus strain-matched UniProtKB protein
     accessions before constructing causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#iodate_respiration_reduction_sketch
   rationale: The current record carries growth and whole-cell IO3- to I- reduction
     snippets across three taxa (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5,
     DOI:10.3389/fmicb.2021.804181) without enzyme-complex or electron-transfer quotes.
@@ -70,6 +70,34 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-11-04'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (iodate_respiration_reduction_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in iodate-respiration-protein-example-gap.
+- discussion_id: iodate-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for periplasmic iodate reductase
+    (IdrABP1P2) in Pseudomonas sp. SCT or Denitromonas sp. IR-12 so iodate_respiration_reduction_sketch
+    can be promoted from NONMECHANISTIC to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#iodate_respiration_reduction_sketch
+  rationale: The record's primary literature (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5,
+    DOI:10.3389/fmicb.2021.804181) establishes anaerobic respiratory growth using
+    iodate as terminal electron acceptor coupled to acetate oxidation in Pseudomonas
+    sp. SCT (NCBITaxon:412955) and Aromatoleum toluclasticum sp. TC-10, but verified
+    strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated
+    before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-11-04'
+  evidence:
+  - reference: DOI:10.1038/s41396-021-01034-5
+    supports: PARTIAL
+    snippet: dissimilatory IO3− reduction to iodide (I−) by a novel estuarine bacterium,
+      Denitromonas sp. IR-12
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T03:53:45Z'
   curator: codex
@@ -85,3 +113,64 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (iodate-respiration-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-11-04T17:01:56Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (iodate_respiration_reduction_sketch)
+    and OPEN CURATION_TODO discussion (iodate-respiration-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: iodate_respiration_reduction_sketch
+  title: Anaerobic respiratory reduction of iodate coupled to electron donor oxidation
+  description: Evidence-backed metabolic mechanism sketch linking acetate-coupled
+    anaerobic respiration with iodate as sole terminal electron acceptor to the iodate
+    respiration phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Process-and-donor sketch backed by DOI:10.1128/AEM.00241-07 and DOI:10.3389/fmicb.2021.804181;
+    strain-matched UniProtKB protein examples for periplasmic iodate reductase (IdrABP1P2)
+    remain to be curated.
+  nodes:
+  - node_id: iodate_respiration_trait
+    label: iodate respiration
+    node_type: TRAIT
+    grounding: traitmech:000203
+    description: Anaerobic respiration phenotype in which an organism uses iodate
+      as the terminal electron acceptor for energy conservation.
+  - node_id: iodate_respiration_anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Anaerobic respiratory electron transport coupling electron donor
+      oxidation to dissimilatory iodate reduction.
+  - node_id: iodate_respiration_acetate
+    label: acetate
+    node_type: CHEMICAL
+    grounding: CHEBI:30089
+    description: Acetate electron donor oxidized in coupling to respiratory iodate
+      reduction.
+  edges:
+  - subject: iodate_respiration_anaerobic_respiration
+    predicate: has input
+    predicate_id: RO:0002233
+    object: iodate_respiration_acetate
+    description: Dissimilatory iodate-reducing bacteria couple acetate oxidation to
+      iodate reduction during anaerobic growth.
+    evidence:
+    - reference: DOI:10.3389/fmicb.2021.804181
+      snippet: A. toluclasticum sp. TC-10 couples acetate oxidation to iodate reduction
+        with a concomitant increase in the OD600.
+      notes: Reyes-Umana et al. show that Aromatoleum toluclasticum sp. TC-10 couples
+        acetate oxidation to respiratory iodate reduction during anaerobic growth.
+  - subject: iodate_respiration_anaerobic_respiration
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: iodate_respiration_trait
+    description: Anaerobic respiratory growth with iodate as the sole terminal electron
+      acceptor confers the iodate respiration phenotype.
+    evidence:
+    - reference: DOI:10.1128/AEM.00241-07
+      snippet: SCT was capable of anaerobic growth with 3 mM iodate as the sole electron
+        acceptor
+      notes: Amachi et al. demonstrate that Pseudomonas sp. strain SCT performs anaerobic
+        respiratory growth using 3 mM iodate as the sole terminal electron acceptor.

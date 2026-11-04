@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 240,
-      "DEEPEN_CAUSAL_GRAPH": 428,
+      "BUILD_CAUSAL_GRAPH": 236,
+      "DEEPEN_CAUSAL_GRAPH": 432,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -5718,29 +5718,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000204",
-      "label": "organohalide respiration",
-      "category": "metabolism",
-      "slug": "organohalide_respiration",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000185",
       "label": "akinete",
       "category": "morphology",
@@ -7567,72 +7544,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000179",
-      "label": "butyric acid fermentation",
-      "category": "metabolism",
-      "slug": "butyric_acid_fermentation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000187",
-      "label": "complete ammonia oxidation",
-      "category": "metabolism",
-      "slug": "complete_ammonia_oxidation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000203",
-      "label": "iodate respiration",
-      "category": "metabolism",
-      "slug": "iodate_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "traitmech:000202",
       "label": "selenate respiration",
       "category": "metabolism",
@@ -8408,6 +8319,29 @@
       "researched": false,
       "reasons": [
         "thin graph (5 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000204",
+      "label": "organohalide respiration",
+      "category": "metabolism",
+      "slug": "organohalide_respiration",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -14646,6 +14580,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000179",
+      "label": "butyric acid fermentation",
+      "category": "metabolism",
+      "slug": "butyric_acid_fermentation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000198",
       "label": "chlorate respiration",
       "category": "metabolism",
@@ -14665,6 +14621,28 @@
       "researched": false,
       "reasons": [
         "thin graph (4 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000187",
+      "label": "complete ammonia oxidation",
+      "category": "metabolism",
+      "slug": "complete_ammonia_oxidation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {
@@ -14731,6 +14709,28 @@
       "researched": false,
       "reasons": [
         "thin graph (3 edges) +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000203",
+      "label": "iodate respiration",
+      "category": "metabolism",
+      "slug": "iodate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {

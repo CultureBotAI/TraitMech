@@ -9260,13 +9260,13 @@ window.searchData = [
   "discussion_id": "butyric-acid-fermentation-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for thiolase, 3-hydroxybutyryl-CoA dehydrogenase, crotonase, butyryl-CoA dehydrogenase/EtfAB, and phosphotransbutyrylase/butyrate kinase or butyryl-CoA:acetate CoA-transferase in Clostridium tyrobutyricum before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "butyric acid fermentation",
   "source_id": "traitmech:000179",
   "source_file": "butyric_acid_fermentation.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#butyric_acid_fermentation_pathway_sketch"
   ],
   "rationale": "The current record summarizes anaerobe energy-conservation history, gene-cluster arrangements, and strain yield (DOI:10.3389/fmicb.2021.703525, DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) without distinct step-by-step enzymatic reaction quotes.",
   "num_experiments": 0,
@@ -9276,6 +9276,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "butyric-acid-fermentation-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Clostridium tyrobutyricum butyryl-CoA:acetate CoA-transferase (Cat1) or phosphotransbutyrylase/butyrate kinase (Ptb/Buk) so butyric_acid_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "butyric acid fermentation",
+  "source_id": "traitmech:000179",
+  "source_file": "butyric_acid_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs#butyric_acid_fermentation_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) establishes terminal butyrate synthesis via butyryl-CoA:acetate CoA-transferase and high-yield butyric acid fermentation in Clostridium tyrobutyricum (NCBITaxon:1519), but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1111/j.1574-6968.2009.01514.x"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/butyric_acid_fermentation.html#butyric-acid-fermentation-protein-example-gap"
  },
  {
   "discussion_id": "chlorate-respiration-xref-gap",
@@ -9374,13 +9395,13 @@ window.searchData = [
   "discussion_id": "complete-ammonia-oxidation-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox Nitrospira before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "complete ammonia oxidation",
   "source_id": "traitmech:000187",
   "source_file": "complete_ammonia_oxidation.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#complete_ammonia_oxidation_comammox_sketch"
   ],
   "rationale": "The current record carries three discovery and ecological-dominance snippets on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) without distinct intermediate nitrite-step or enzyme quotes.",
   "num_experiments": 0,
@@ -9390,6 +9411,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "complete-ammonia-oxidation-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Candidatus Nitrospira inopinata ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) so complete_ammonia_oxidation_comammox_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "complete ammonia oxidation",
+  "source_id": "traitmech:000187",
+  "source_file": "complete_ammonia_oxidation.yaml",
+  "attaches_to": [
+   "causal_graphs#complete_ammonia_oxidation_comammox_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) establishes single-organism complete oxidation of ammonia to nitrate in Candidatus Nitrospira inopinata (NCBITaxon:1715989), but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/nature16461"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/complete_ammonia_oxidation.html#complete-ammonia-oxidation-protein-example-gap"
  },
  {
   "discussion_id": "dark-hydrogen-oxidation-causal-graph-source-gap",
@@ -9564,13 +9606,13 @@ window.searchData = [
   "discussion_id": "iodate-respiration-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for the periplasmic iodate reductase complex (IdrABP1P2) and electron-transport coupling plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "iodate respiration",
   "source_id": "traitmech:000203",
   "source_file": "iodate_respiration.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#iodate_respiration_reduction_sketch"
   ],
   "rationale": "The current record carries growth and whole-cell IO3- to I- reduction snippets across three taxa (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5, DOI:10.3389/fmicb.2021.804181) without enzyme-complex or electron-transfer quotes.",
   "num_experiments": 0,
@@ -9580,6 +9622,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "iodate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for periplasmic iodate reductase (IdrABP1P2) in Pseudomonas sp. SCT or Denitromonas sp. IR-12 so iodate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "iodate respiration",
+  "source_id": "traitmech:000203",
+  "source_file": "iodate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#iodate_respiration_reduction_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5, DOI:10.3389/fmicb.2021.804181) establishes anaerobic respiratory growth using iodate as terminal electron acceptor coupled to acetate oxidation in Pseudomonas sp. SCT (NCBITaxon:412955) and Aromatoleum toluclasticum sp. TC-10, but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1038/s41396-021-01034-5"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/iodate_respiration.html#iodate-respiration-protein-example-gap"
  },
  {
   "discussion_id": "lipolysis-xref-gap",
@@ -9811,13 +9874,13 @@ window.searchData = [
   "discussion_id": "organohalide-respiration-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for corrinoid-dependent reductive dehalogenase catalysis (e.g. PceA, TceA, RdhA) and menaquinone/hydrogenase electron transport before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "organohalide respiration",
   "source_id": "traitmech:000204",
   "source_file": "organohalide_respiration.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#organohalide_respiration_pce_sketch"
   ],
   "rationale": "The current record carries definition, phylogenetic-distribution, and mixed-culture cofactor snippets (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568) without reductive dehalogenase enzyme or dechlorination-product quotes.",
   "num_experiments": 0,
@@ -9827,6 +9890,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "organohalide-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Dehalococcoides mccartyi 195 tetrachloroethene reductive dehalogenase PceA (UniProtKB:Q3Z9N3) so organohalide_respiration_pce_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "organohalide respiration",
+  "source_id": "traitmech:000204",
+  "source_file": "organohalide_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#organohalide_respiration_pce_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568) establishes anaerobic respiratory energy conservation using halogenated hydrocarbons as terminal electron acceptors and H2-coupled tetrachloroethene respiration in Dehalococcoides mccartyi 195 (NCBITaxon:243164), but a verified strain-matched UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1098/rstb.2012.0322"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/organohalide_respiration.html#organohalide-respiration-protein-example-gap"
  },
  {
   "discussion_id": "perchlorate-respiration-xref-gap",
@@ -18254,7 +18338,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 917,
+ "total_discussions": 921,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [

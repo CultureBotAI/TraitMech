@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Curate Stage 2 causal_graphs and source-limited knowledge-gap discussions.
 
-Addresses 120 active CLASS records across Cohorts A through L in environment/,
+Addresses 120 active CLASS records across Cohorts A through M in environment/,
 metabolism/, morphology/, and physiology/:
 
 - Cohort A (10 multi-evidence records): adds a connected, schema-valid
@@ -16,12 +16,12 @@ metabolism/, morphology/, and physiology/:
   record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
   source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
-- Cohorts C, E, G, H, I, J, K, and L (29 multi-evidence physiology/metabolism
+- Cohorts C, E, G, H, I, J, K, L, and M (33 multi-evidence physiology/metabolism
   records): adds connected NONMECHANISTIC causal_graphs entries anchored on
   existing verbatim record evidence snippets, resolves prior source-gap
   discussions where applicable, and records OPEN CURATION_TODO discussions
   for strain-matched UniProtKB protein_examples.
-- Cohorts D and F (67 single-mechanism-quote records): adds structured
+- Cohorts D and F (63 single-mechanism-quote records): adds structured
   OPEN KNOWLEDGE_GAP discussions documenting source-limited mechanism gaps.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
@@ -65,6 +65,7 @@ POSED_DATE_C6 = "2026-10-26"
 POSED_DATE_C7 = "2026-10-30"
 POSED_DATE_C8 = "2026-10-30"
 POSED_DATE_C9 = "2026-10-31"
+POSED_DATE_C10 = "2026-11-04"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2107,21 +2108,9 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary literature evidence for periplasmic arsenite oxidase (AioAB or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.",
     ),
-    "data/traits/metabolism/butyric_acid_fermentation.yaml": (
-        "Add primary literature evidence for thiolase, 3-hydroxybutyryl-CoA dehydrogenase, crotonase, butyryl-CoA dehydrogenase/EtfAB, and phosphotransbutyrylase/butyrate kinase or butyryl-CoA:acetate CoA-transferase in Clostridium tyrobutyricum before constructing causal_graphs.",
-        "The current record summarizes anaerobe energy-conservation history, gene-cluster arrangements, and strain yield (DOI:10.3389/fmicb.2021.703525, DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) without distinct step-by-step enzymatic reaction quotes.",
-    ),
     "data/traits/metabolism/citrate_fermentation.yaml": (
         "Add primary literature evidence for citrate uptake (CitH/CitS), citrate lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB) before constructing causal_graphs.",
         "The current record carries two growth-and-prevalence snippets in Klebsiella pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) without enzymatic step or intermediate quotes.",
-    ),
-    "data/traits/metabolism/complete_ammonia_oxidation.yaml": (
-        "Add primary literature evidence for ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) catalysis in comammox Nitrospira before constructing causal_graphs.",
-        "The current record carries three discovery and ecological-dominance snippets on comammox Nitrospira (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) without distinct intermediate nitrite-step or enzyme quotes.",
-    ),
-    "data/traits/metabolism/iodate_respiration.yaml": (
-        "Add primary literature evidence for the periplasmic iodate reductase complex (IdrABP1P2) and electron-transport coupling plus strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record carries growth and whole-cell IO3- to I- reduction snippets across three taxa (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5, DOI:10.3389/fmicb.2021.804181) without enzyme-complex or electron-transfer quotes.",
     ),
     "data/traits/metabolism/lipolysis.yaml": (
         "Add primary literature evidence for extracellular triacylglycerol lipase secretion, fatty-acid/glycerol uptake, and a strain-matched canonical example before constructing causal_graphs.",
@@ -2134,10 +2123,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/metabolism/nitrification.yaml": (
         "Add a second independent evidence snippet covering ammonia monooxygenase / hydroxylamine oxidoreductase and nitrite oxidoreductase steps plus a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries a single overview snippet (DOI:10.3389/fmicb.2020.01900) describing two-step oxidation of ammonia to nitrite and nitrate; a connected multi-edge graph requires at least two independent verbatim snippets without clause-splitting.",
-    ),
-    "data/traits/metabolism/organohalide_respiration.yaml": (
-        "Add primary literature evidence for corrinoid-dependent reductive dehalogenase catalysis (e.g. PceA, TceA, RdhA) and menaquinone/hydrogenase electron transport before constructing causal_graphs.",
-        "The current record carries definition, phylogenetic-distribution, and mixed-culture cofactor snippets (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568) without reductive dehalogenase enzyme or dechlorination-product quotes.",
     ),
     "data/traits/metabolism/selenate_respiration.yaml": (
         "Add primary literature evidence for periplasmic respiratory selenate reductase (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing causal_graphs.",
@@ -4701,8 +4686,378 @@ def build_cohort_l_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_M_PATHS: tuple[str, ...] = (
+    "data/traits/metabolism/butyric_acid_fermentation.yaml",
+    "data/traits/metabolism/complete_ammonia_oxidation.yaml",
+    "data/traits/metabolism/iodate_respiration.yaml",
+    "data/traits/metabolism/organohalide_respiration.yaml",
+)
+
+COHORT_M_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/metabolism/butyric_acid_fermentation.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Clostridium tyrobutyricum butyryl-CoA:acetate CoA-transferase (Cat1) or phosphotransbutyrylase/butyrate kinase (Ptb/Buk) so butyric_acid_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1111/j.1574-6968.2009.01514.x, DOI:10.1111/1751-7915.12304) establishes terminal butyrate synthesis via butyryl-CoA:acetate CoA-transferase and high-yield butyric acid fermentation in Clostridium tyrobutyricum (NCBITaxon:1519), but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/metabolism/complete_ammonia_oxidation.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Candidatus Nitrospira inopinata ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase (Hao), and nitrite oxidoreductase (NxrAB) so complete_ammonia_oxidation_comammox_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1038/nature16459, DOI:10.1038/nature16461, DOI:10.1128/aem.01698-23) establishes single-organism complete oxidation of ammonia to nitrate in Candidatus Nitrospira inopinata (NCBITaxon:1715989), but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        1,
+    ),
+    "data/traits/metabolism/iodate_respiration.yaml": (
+        "Add strain-matched UniProtKB protein_examples for periplasmic iodate reductase (IdrABP1P2) in Pseudomonas sp. SCT or Denitromonas sp. IR-12 so iodate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/AEM.00241-07, DOI:10.1038/s41396-021-01034-5, DOI:10.3389/fmicb.2021.804181) establishes anaerobic respiratory growth using iodate as terminal electron acceptor coupled to acetate oxidation in Pseudomonas sp. SCT (NCBITaxon:412955) and Aromatoleum toluclasticum sp. TC-10, but verified strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        2,
+    ),
+    "data/traits/metabolism/organohalide_respiration.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Dehalococcoides mccartyi 195 tetrachloroethene reductive dehalogenase PceA (UniProtKB:Q3Z9N3) so organohalide_respiration_pce_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1098/rstb.2012.0322, DOI:10.1126/science.276.5318.1568) establishes anaerobic respiratory energy conservation using halogenated hydrocarbons as terminal electron acceptors and H2-coupled tetrachloroethene respiration in Dehalococcoides mccartyi 195 (NCBITaxon:243164), but a verified strain-matched UniProtKB accession on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        0,
+    ),
+}
+
+
+def build_cohort_m_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort M record."""
+    if rel_path == "data/traits/metabolism/butyric_acid_fermentation.yaml":
+        return [
+            {
+                "graph_id": "butyric_acid_fermentation_pathway_sketch",
+                "title": "Clostridial butyrate biosynthesis via butyryl-CoA:acetate CoA-transferase and fermentative butyric acid production",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking terminal "
+                    "butyryl-CoA:acetate CoA-transferase activity and clostridial "
+                    "butyrate biosynthesis to the butyric acid fermentation phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Pathway-and-activity sketch backed by DOI:10.1111/j.1574-6968.2009.01514.x "
+                    "and DOI:10.1111/1751-7915.12304; strain-matched UniProtKB "
+                    "protein examples for Clostridium tyrobutyricum butyryl-CoA:acetate "
+                    "CoA-transferase (Cat1) or phosphotransbutyrylase/butyrate kinase "
+                    "(Ptb/Buk) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "butyric_acid_fermentation_trait",
+                        "label": "butyric acid fermentation",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000179",
+                        "description": "Fermentation phenotype in which anaerobic bacteria convert organic substrates to butyric acid/butyrate as a major reduced end product.",
+                    },
+                    {
+                        "node_id": "butyric_acid_fermentation_butyrate_biosynthesis",
+                        "label": "butyrate biosynthetic process",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0046358",
+                        "description": "Central clostridial butyrate biosynthetic process coupled to energy generation via substrate-level phosphorylation and proton gradients.",
+                    },
+                    {
+                        "node_id": "butyric_acid_fermentation_coa_transferase",
+                        "label": "acetate CoA-transferase activity",
+                        "node_type": "MOLECULAR_FUNCTION",
+                        "grounding": "GO:0008775",
+                        "description": "Butyryl-CoA:acetate CoA-transferase catalytic activity performing the terminal step in clostridial butyrate synthesis.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "butyric_acid_fermentation_coa_transferase",
+                        "predicate": "causally upstream of",
+                        "predicate_id": "RO:0002411",
+                        "object": "butyric_acid_fermentation_butyrate_biosynthesis",
+                        "description": "Butyryl-CoA:acetate CoA-transferase performs the terminal step in central clostridial butyrate synthesis coupled to energy generation via substrate-level phosphorylation and proton gradients.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Louis and Flint report that across five central butyrate-synthesis gene arrangements, butyryl-CoA:acetate CoA-transferase typically catalyzes the final step in butyrate synthesis coupled to energy generation via substrate-level phosphorylation and proton gradients.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "butyric_acid_fermentation_butyrate_biosynthesis",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "butyric_acid_fermentation_trait",
+                        "description": "Fermentative butyrate biosynthesis in Clostridium tyrobutyricum yields butyric acid with high selectivity and confers the butyric acid fermentation phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "Baroi et al. report that the adapted Clostridium tyrobutyricum strain fermented substrates with high yield and selectivity to butyric acid.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/metabolism/complete_ammonia_oxidation.yaml":
+        return [
+            {
+                "graph_id": "complete_ammonia_oxidation_comammox_sketch",
+                "title": "Single-organism complete oxidation of ammonia to nitrate (comammox)",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "single-organism ammonia oxidation and nitrate formation to "
+                    "the complete ammonia oxidation (comammox) phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-product sketch backed by DOI:10.1038/nature16459 "
+                    "and DOI:10.1128/aem.01698-23; strain-matched UniProtKB "
+                    "protein examples for Candidatus Nitrospira inopinata "
+                    "ammonia monooxygenase (AmoCAB), hydroxylamine dehydrogenase "
+                    "(Hao), and nitrite oxidoreductase (NxrAB) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "complete_ammonia_oxidation_trait",
+                        "label": "complete ammonia oxidation",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000187",
+                        "description": "Nitrification metabolism in which a single organism oxidizes ammonia via nitrite to nitrate (comammox).",
+                    },
+                    {
+                        "node_id": "complete_ammonia_oxidation_process",
+                        "label": "ammonia oxidation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0019329",
+                        "description": "Complete chemolithoautotrophic oxidation of ammonia to nitrate within a single comammox Nitrospira organism.",
+                    },
+                    {
+                        "node_id": "complete_ammonia_oxidation_nitrate",
+                        "label": "nitrate",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:17632",
+                        "description": "Terminal nitrate product formed by single-organism complete oxidation of ammonia.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "complete_ammonia_oxidation_process",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "complete_ammonia_oxidation_nitrate",
+                        "description": "Complete ammonia oxidation in a single organism oxidizes ammonia completely to nitrate.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "van Kessel et al. establish that complete oxidation of ammonia to nitrate in one organism (comammox) is energetically feasible.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "complete_ammonia_oxidation_process",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "complete_ammonia_oxidation_trait",
+                        "description": "Energy conservation through complete oxidation of ammonia to nitrate in comammox Nitrospira confers the complete ammonia oxidation phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "Ghimire-Kafle et al. report that comammox Nitrospira sp. BO4 generates energy through the complete oxidation of ammonia to nitrate.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/metabolism/iodate_respiration.yaml":
+        return [
+            {
+                "graph_id": "iodate_respiration_reduction_sketch",
+                "title": "Anaerobic respiratory reduction of iodate coupled to electron donor oxidation",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "acetate-coupled anaerobic respiration with iodate as sole "
+                    "terminal electron acceptor to the iodate respiration phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-donor sketch backed by DOI:10.1128/AEM.00241-07 "
+                    "and DOI:10.3389/fmicb.2021.804181; strain-matched UniProtKB "
+                    "protein examples for periplasmic iodate reductase (IdrABP1P2) "
+                    "remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "iodate_respiration_trait",
+                        "label": "iodate respiration",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000203",
+                        "description": "Anaerobic respiration phenotype in which an organism uses iodate as the terminal electron acceptor for energy conservation.",
+                    },
+                    {
+                        "node_id": "iodate_respiration_anaerobic_respiration",
+                        "label": "anaerobic respiration",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0009061",
+                        "description": "Anaerobic respiratory electron transport coupling electron donor oxidation to dissimilatory iodate reduction.",
+                    },
+                    {
+                        "node_id": "iodate_respiration_acetate",
+                        "label": "acetate",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:30089",
+                        "description": "Acetate electron donor oxidized in coupling to respiratory iodate reduction.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "iodate_respiration_anaerobic_respiration",
+                        "predicate": "has input",
+                        "predicate_id": "RO:0002233",
+                        "object": "iodate_respiration_acetate",
+                        "description": "Dissimilatory iodate-reducing bacteria couple acetate oxidation to iodate reduction during anaerobic growth.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                3,
+                                "Reyes-Umana et al. show that Aromatoleum toluclasticum sp. TC-10 couples acetate oxidation to respiratory iodate reduction during anaerobic growth.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "iodate_respiration_anaerobic_respiration",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "iodate_respiration_trait",
+                        "description": "Anaerobic respiratory growth with iodate as the sole terminal electron acceptor confers the iodate respiration phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Amachi et al. demonstrate that Pseudomonas sp. strain SCT performs anaerobic respiratory growth using 3 mM iodate as the sole terminal electron acceptor.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/metabolism/organohalide_respiration.yaml":
+        return [
+            {
+                "graph_id": "organohalide_respiration_pce_sketch",
+                "title": "Anaerobic organohalide respiratory electron transport with dihydrogen donor",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "dihydrogen-coupled anaerobic respiratory electron transport "
+                    "with halogenated hydrocarbon acceptors to the organohalide "
+                    "respiration phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-donor sketch backed by DOI:10.1098/rstb.2012.0322 "
+                    "and DOI:10.1126/science.276.5318.1568; strain-matched UniProtKB "
+                    "protein examples for Dehalococcoides mccartyi 195 "
+                    "tetrachloroethene reductive dehalogenase PceA (UniProtKB:Q3Z9N3) "
+                    "remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "organohalide_respiration_trait",
+                        "label": "organohalide respiration",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000204",
+                        "description": "Anaerobic respiration phenotype in which an organism uses an organohalide as the terminal electron acceptor for energy conservation.",
+                    },
+                    {
+                        "node_id": "organohalide_respiration_anaerobic_respiration",
+                        "label": "anaerobic respiration",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0009061",
+                        "description": "Anaerobic bacterial respiratory electron transport using halogenated hydrocarbons such as tetrachloroethene as terminal electron acceptors.",
+                    },
+                    {
+                        "node_id": "organohalide_respiration_dihydrogen",
+                        "label": "dihydrogen",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:18276",
+                        "description": "Molecular hydrogen (H2) electron donor coupled to organohalide reduction in Dehalococcoides mccartyi strain 195.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "organohalide_respiration_anaerobic_respiration",
+                        "predicate": "has input",
+                        "predicate_id": "RO:0002233",
+                        "object": "organohalide_respiration_dihydrogen",
+                        "description": "Dehalococcoides mccartyi strain 195 uses H2 as the electron donor paired with tetrachloroethene as terminal electron acceptor during anaerobic respiratory growth.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "Maymo-Gatell et al. show that Dehalococcoides mccartyi strain 195 grows anaerobically with H2 as electron donor and tetrachloroethene as terminal electron acceptor.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "organohalide_respiration_anaerobic_respiration",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "organohalide_respiration_trait",
+                        "description": "Anaerobic bacterial respiratory electron transport using halogenated hydrocarbons as terminal electron acceptors confers the organohalide respiration phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Hug et al. define organohalide respiration as an anaerobic bacterial respiratory process using halogenated hydrocarbons as terminal electron acceptors for electron-transport energy conservation.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort M path: {rel_path}")
+
+
+def build_cohort_m_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort M record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_M_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C10,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A, B, C, D, E, F, G, H, I, J, K, and L records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A through M records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -5475,6 +5830,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C9
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_M_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_m_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_m_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C10
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
