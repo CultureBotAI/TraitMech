@@ -31,12 +31,31 @@ evidence:
     isolated from an estuarine sediment enrichment culture
   notes: Narasingarao and Haggblom described Sedimenticola selenatireducens AK4OH1
     as an anaerobic selenate-respiring bacterium isolated from estuarine sediment.
+- reference: DOI:10.3109/10425170009015604
+  snippet: The periplasmic selenate reductase (Ser) of Thauera selennatis is a component
+    of the electron transport chain catalyzing selenate reduction with acetate as
+    the electron donor (i.e., selenate respiration). The purified enzyme consists
+    of three subunits (SerA, SerB and SerC). Using transposon (i.e., Tn5) mutagenesis
+    selenate reductase mutants were isolated. Junction fragments of DNA adjacent to
+    the integrated Tn5 were used, together with oligonucleotides derived from the
+    N-termini of SerA and SerB, to clone from a gene bank a DNA fragment that contained
+    the corresponding genes. After sequencing, serA, serB and serC were identified
+    by sequence comparison with the N-termini of the three subunits.
+  notes: Krafft et al. cloned and sequenced the Thauera selenatis serABC operon encoding
+    the periplasmic respiratory selenate reductase subunits SerA (UniProtKB:Q9S1H0),
+    SerB (UniProtKB:Q9S1G9), and SerC (UniProtKB:Q9S1G7).
 canonical_examples:
 - taxon_id: NCBITaxon:1111735
   taxon_label: Sedimenticola selenatireducens DSM 17993
   note: Narasingarao and Haggblom isolated and described Sedimenticola selenatireducens
     strain AK4OH1 as an anaerobic selenate-respiring bacterium.
   reference: DOI:10.1016/j.syapm.2005.12.011
+- taxon_id: NCBITaxon:33058
+  taxon_label: Thauera selenatis
+  note: Krafft et al. cloned and sequenced the Thauera selenatis serABC operon encoding
+    the periplasmic respiratory selenate reductase subunits SerA (UniProtKB:Q9S1H0),
+    SerB, and SerC catalyzing selenate reduction during selenate respiration.
+  reference: DOI:10.3109/10425170009015604
 discussions:
 - discussion_id: selenate-respiration-xref-gap
   prompt: Resolve an exact external ontology class for organism-level selenate respiration
@@ -80,7 +99,7 @@ discussions:
     selenatis so selenate_respiration_reduction_sketch can be promoted from NONMECHANISTIC
     to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#selenate_respiration_reduction_sketch
   rationale: The record's primary literature (DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011,
@@ -98,6 +117,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-05'
+  resolution_note: Added canonical_examples entry Thauera selenatis (NCBITaxon:33058;
+    DOI:10.3109/10425170009015604) and promoted selenate_respiration_reduction_sketch
+    to MECHANISTIC by adding InterPro:IPR017840-grounded GENE_OR_PROTEIN node selenate_reductase_sera
+    (operon serABC) with reviewed Thauera selenatis (NCBITaxon:33058) protein_examples
+    UniProtKB:Q9S1H0 (SerA) backed by DOI:10.3109/10425170009015604.
 curation_history:
 - timestamp: '2026-09-15T03:22:39Z'
   curator: codex
@@ -120,6 +145,15 @@ curation_history:
     and OPEN CURATION_TODO discussion (selenate-respiration-protein-example-gap) anchored
     on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-05T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Thauera selenatis (NCBITaxon:33058; DOI:10.3109/10425170009015604)
+    canonical example; promoted selenate_respiration_reduction_sketch to MECHANISTIC;
+    added InterPro:IPR017840-grounded GENE_OR_PROTEIN node selenate_reductase_sera
+    with reviewed Thauera selenatis (NCBITaxon:33058) protein_examples UniProtKB:Q9S1H0
+    (SerA) backed by DOI:10.3109/10425170009015604; resolved selenate-respiration-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: selenate_respiration_reduction_sketch
   title: Anaerobic respiratory electron transport with selenate as terminal electron
@@ -127,11 +161,11 @@ causal_graphs:
   description: Evidence-backed metabolic mechanism sketch linking anaerobic respiratory
     electron transport with selenate terminal electron acceptors to the selenate respiration
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Process-and-acceptor sketch backed by DOI:10.1128/AEM.02737-06 and
-    DOI:10.1016/j.syapm.2005.12.011; strain-matched UniProtKB protein examples for
-    periplasmic selenate reductase SerABC in Sedimenticola selenatireducens DSM 17993
-    (NCBITaxon:1111735) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011,
+    and DOI:10.3109/10425170009015604; exemplified on selenate_reductase_sera with
+    Thauera selenatis (NCBITaxon:33058) periplasmic selenate reductase alpha subunit
+    SerA (UniProtKB:Q9S1H0).
   nodes:
   - node_id: selenate_respiration_trait
     label: selenate respiration
@@ -152,6 +186,43 @@ causal_graphs:
     grounding: METPO:1007504
     description: Oxyanion terminal electron acceptor (selenate) reduced during anaerobic
       respiratory energy conservation.
+  - node_id: selenate_reductase_sera
+    label: selenate reductase catalytic subunit SerA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR017840
+    gene_symbols:
+    - serA
+    operon: serABC
+    description: Periplasmic molybdopterin-binding catalytic alpha subunit (SerA;
+      EC 1.97.1.9; InterPro:IPR017840) of the respiratory selenate reductase complex
+      SerABC that reduces selenate to selenite during anaerobic selenate respiration.
+    protein_examples:
+    - uniprot_id: UniProtKB:Q9S1H0
+      protein_label: Selenate reductase subunit alpha
+      gene_symbol: serA
+      taxon_id: NCBITaxon:33058
+      taxon_label: Thauera selenatis
+      entry_status: REVIEWED
+      retrieved_on: '2026-11-05'
+      entry_version: 105
+      sequence_version: 1
+      role: Periplasmic molybdopterin-containing catalytic alpha subunit SerA of the
+        Thauera selenatis selenate reductase complex (SerABC) that catalyzes respiratory
+        selenate reduction to selenite.
+      evidence:
+      - reference: DOI:10.3109/10425170009015604
+        snippet: The periplasmic selenate reductase (Ser) of Thauera selennatis is
+          a component of the electron transport chain catalyzing selenate reduction
+          with acetate as the electron donor (i.e., selenate respiration). The purified
+          enzyme consists of three subunits (SerA, SerB and SerC). Using transposon
+          (i.e., Tn5) mutagenesis selenate reductase mutants were isolated. Junction
+          fragments of DNA adjacent to the integrated Tn5 were used, together with
+          oligonucleotides derived from the N-termini of SerA and SerB, to clone from
+          a gene bank a DNA fragment that contained the corresponding genes. After
+          sequencing, serA, serB and serC were identified by sequence comparison with
+          the N-termini of the three subunits.
+        notes: Krafft et al. cloned and sequenced Thauera selenatis serA encoding
+          the periplasmic selenate reductase alpha subunit (UniProtKB:Q9S1H0).
   edges:
   - subject: selenate_respiration_anaerobic_respiration
     predicate: has input
@@ -177,3 +248,24 @@ causal_graphs:
         isolated from an estuarine sediment enrichment culture
       notes: Narasingarao and Haggblom characterize Sedimenticola selenatireducens
         strain AK4OH1T as a novel selenate-respiring bacterium.
+  - subject: selenate_reductase_sera
+    predicate: is causal agent in
+    predicate_id: RO:0002608
+    object: selenate_respiration_anaerobic_respiration
+    description: Periplasmic selenate reductase catalytic subunit SerA is a causal
+      agent in anaerobic respiratory electron transport reducing selenate to selenite.
+    evidence:
+    - reference: DOI:10.3109/10425170009015604
+      snippet: The periplasmic selenate reductase (Ser) of Thauera selennatis is a
+        component of the electron transport chain catalyzing selenate reduction with
+        acetate as the electron donor (i.e., selenate respiration). The purified enzyme
+        consists of three subunits (SerA, SerB and SerC). Using transposon (i.e.,
+        Tn5) mutagenesis selenate reductase mutants were isolated. Junction fragments
+        of DNA adjacent to the integrated Tn5 were used, together with oligonucleotides
+        derived from the N-termini of SerA and SerB, to clone from a gene bank a DNA
+        fragment that contained the corresponding genes. After sequencing, serA, serB
+        and serC were identified by sequence comparison with the N-termini of the
+        three subunits.
+      notes: Krafft et al. demonstrate that the periplasmic selenate reductase (SerABC)
+        of Thauera selenatis is an electron-transport-chain component catalyzing selenate
+        reduction during selenate respiration.

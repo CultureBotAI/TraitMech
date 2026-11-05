@@ -30,6 +30,14 @@ evidence:
     the largest industrial fermentation processes early in the 20th century.
   notes: Lee et al. independently review fermentative butanol production with acetone
     and ethanol by Clostridia.
+- reference: DOI:10.1128/aem.56.11.3491-3498.1990
+  snippet: In Clostridium acetobutylicum ATCC 824, acetoacetate decarboxylase (EC
+    4.1.1.4) is essential for solvent production, catalyzing the decarboxylation of
+    acetoacetate to acetone. We report here the purification of the enzyme from C.
+    acetobutylicum ATCC 824 and the cloning and expression of the gene encoding the
+    acetoacetate decarboxylase enzyme in Escherichia coli.
+  notes: Petersen and Bennett purified Clostridium acetobutylicum ATCC 824 acetoacetate
+    decarboxylase (Adc; UniProtKB:P23670) and cloned its structural gene adc.
 canonical_examples:
 - taxon_id: NCBITaxon:272562
   taxon_label: Clostridium acetobutylicum ATCC 824
@@ -84,7 +92,7 @@ discussions:
     (UniProtKB:P33744) so acetone_butanol_ethanol_fermentation_pathway_sketch can
     be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#acetone_butanol_ethanol_fermentation_pathway_sketch
   rationale: The record's primary literature (DOI:10.1073/pnas.1423143112, DOI:10.1002/bit.22003,
@@ -104,6 +112,11 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-05'
+  resolution_note: Promoted acetone_butanol_ethanol_fermentation_pathway_sketch to
+    MECHANISTIC by adding InterPro:IPR010451-grounded GENE_OR_PROTEIN node acetoacetate_decarboxylase_adc
+    with reviewed Clostridium acetobutylicum ATCC 824 (NCBITaxon:272562; UP000000814)
+    protein_examples UniProtKB:P23670 (Adc) backed by DOI:10.1128/aem.56.11.3491-3498.1990.
 curation_history:
 - timestamp: '2026-09-14T02:40:39Z'
   curator: codex
@@ -126,18 +139,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (acetone-butanol-ethanol-fermentation-protein-example-gap)
     anchored on existing verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-05T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Promoted acetone_butanol_ethanol_fermentation_pathway_sketch to MECHANISTIC;
+    added InterPro:IPR010451-grounded GENE_OR_PROTEIN node acetoacetate_decarboxylase_adc
+    with reviewed Clostridium acetobutylicum ATCC 824 (NCBITaxon:272562; UP000000814)
+    protein_examples UniProtKB:P23670 (Adc) backed by DOI:10.1128/aem.56.11.3491-3498.1990;
+    resolved acetone-butanol-ethanol-fermentation-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: acetone_butanol_ethanol_fermentation_pathway_sketch
   title: Solventogenic fermentation producing acetone, butanol, and ethanol
   description: Evidence-backed metabolic mechanism sketch linking solventogenic fermentation
     and ethanol/butanol/acetone production to the acetone-butanol-ethanol fermentation
     phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Process-and-product sketch backed by DOI:10.1073/pnas.1423143112 and
-    DOI:10.1002/bit.22003; strain-matched UniProtKB protein examples for Clostridium
-    acetobutylicum ATCC 824 acetoacetate decarboxylase Adc (UniProtKB:P23670), CoA-transferase
-    CtfAB (UniProtKB:P33752 / UniProtKB:P23673), and aldehyde-alcohol dehydrogenase
-    AdhE1 (UniProtKB:P33744) remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1073/pnas.1423143112, DOI:10.1002/bit.22003,
+    and DOI:10.1128/aem.56.11.3491-3498.1990; exemplified on acetoacetate_decarboxylase_adc
+    with Clostridium acetobutylicum ATCC 824 (NCBITaxon:272562; UP000000814) acetoacetate
+    decarboxylase Adc (UniProtKB:P23670).
   nodes:
   - node_id: acetone_butanol_ethanol_fermentation_trait
     label: acetone-butanol-ethanol fermentation
@@ -157,6 +178,39 @@ causal_graphs:
     grounding: CHEBI:16236
     description: Ethanol coproduct formed alongside acetone and butanol in the canonical
       3:6:1 molar solvent ratio.
+  - node_id: acetoacetate_decarboxylase_adc
+    label: acetoacetate decarboxylase Adc
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR010451
+    gene_symbols:
+    - adc
+    description: Acetoacetate decarboxylase (Adc; EC 4.1.1.4; InterPro:IPR010451)
+      that catalyzes the decarboxylation of acetoacetate to acetone and CO2 during
+      the solventogenic phase of acetone-butanol-ethanol fermentation.
+    protein_examples:
+    - uniprot_id: UniProtKB:P23670
+      protein_label: Acetoacetate decarboxylase
+      gene_symbol: adc
+      taxon_id: NCBITaxon:272562
+      taxon_label: Clostridium acetobutylicum (strain ATCC 824 / DSM 792 / JCM 1419
+        / IAM 19013 / LMG 5710 / NBRC 13948 / NRRL B-527 / VKM B-1787 / 2291 / W)
+      entry_status: REVIEWED
+      proteome_id: UP000000814
+      retrieved_on: '2026-11-05'
+      entry_version: 148
+      sequence_version: 1
+      role: Solventogenic acetoacetate decarboxylase (Adc) that catalyzes decarboxylation
+        of acetoacetate to acetone during acetone-butanol-ethanol fermentation in
+        Clostridium acetobutylicum ATCC 824.
+      evidence:
+      - reference: DOI:10.1128/aem.56.11.3491-3498.1990
+        snippet: In Clostridium acetobutylicum ATCC 824, acetoacetate decarboxylase
+          (EC 4.1.1.4) is essential for solvent production, catalyzing the decarboxylation
+          of acetoacetate to acetone. We report here the purification of the enzyme
+          from C. acetobutylicum ATCC 824 and the cloning and expression of the gene
+          encoding the acetoacetate decarboxylase enzyme in Escherichia coli.
+        notes: Petersen and Bennett purified and cloned Clostridium acetobutylicum
+          ATCC 824 acetoacetate decarboxylase (UniProtKB:P23670).
   edges:
   - subject: acetone_butanol_ethanol_fermentation_process
     predicate: has output
@@ -186,3 +240,19 @@ causal_graphs:
       notes: Liao et al. show that Clostridium acetobutylicum ATCC 824 performs a
         biphasic fermentation shifting from acidogenesis to solventogenesis to produce
         butanol, acetone, and ethanol.
+  - subject: acetoacetate_decarboxylase_adc
+    predicate: is causal agent in
+    predicate_id: RO:0002608
+    object: acetone_butanol_ethanol_fermentation_process
+    description: Acetoacetate decarboxylase (Adc) is a causal agent in solventogenic
+      acetone production during acetone-butanol-ethanol fermentation.
+    evidence:
+    - reference: DOI:10.1128/aem.56.11.3491-3498.1990
+      snippet: In Clostridium acetobutylicum ATCC 824, acetoacetate decarboxylase
+        (EC 4.1.1.4) is essential for solvent production, catalyzing the decarboxylation
+        of acetoacetate to acetone. We report here the purification of the enzyme
+        from C. acetobutylicum ATCC 824 and the cloning and expression of the gene
+        encoding the acetoacetate decarboxylase enzyme in Escherichia coli.
+      notes: Petersen and Bennett demonstrate that Clostridium acetobutylicum ATCC
+        824 acetoacetate decarboxylase is essential for solvent production, catalyzing
+        acetoacetate decarboxylation to acetone.

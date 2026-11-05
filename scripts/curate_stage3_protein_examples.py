@@ -94,6 +94,14 @@
     `UniProtKB:A0A391NTR7`, `UniProtKB:Q3Z9N3`, `UniProtKB:Q3ZAB8`), 4 distinct
     verbatim record-level `evidence` items, 1 `canonical_examples` entry, and
     `RESOLVED` `CURATION_TODO` discussions.
+12. In Cycle 11 Stage 3 (`C11S3_COHORT_N_PROMOTIONS`), promotes all 4 Cohort N
+    `NONMECHANISTIC` records (`acetone_butanol_ethanol_fermentation.yaml`,
+    `citrate_fermentation.yaml`, `selenate_respiration.yaml`, `holdfast.yaml`)
+    to `MECHANISTIC` by adding 4 `InterPro`-grounded `GENE_OR_PROTEIN` nodes with
+    4 verified reviewed UniProtKB `protein_examples` (`UniProtKB:P23670`,
+    `UniProtKB:P17725`, `UniProtKB:Q9S1H0`, `UniProtKB:P27342`), 4 distinct
+    verbatim record-level `evidence` items, 2 `canonical_examples` entries, and
+    `RESOLVED` `CURATION_TODO` discussions.
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -4400,8 +4408,7 @@ C7S3_COHORT_J_PROMOTIONS: dict[str, dict[str, Any]] = {
                 {
                     "uniprot_id": "UniProtKB:Q99YP5",
                     "protein_label": (
-                        "Glycoside hydrolase family 38 central "
-                        "domain-containing protein"
+                        "Glycoside hydrolase family 38 central domain-containing protein"
                     ),
                     "gene_symbol": "SPy_1604",
                     "taxon_id": "NCBITaxon:301447",
@@ -5333,9 +5340,7 @@ C9S3_COHORT_L_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate": "enables",
             "predicate_id": "RO:0002327",
             "object": "alpha_chymotrypsin_catalytic_activity",
-            "description": (
-                "Streptogrisin-A SprA enables alpha-chymotrypsin catalytic activity."
-            ),
+            "description": ("Streptogrisin-A SprA enables alpha-chymotrypsin catalytic activity."),
             "evidence": [
                 {
                     "reference": "DOI:10.1128/jb.169.8.3778-3784.1987",
@@ -5635,9 +5640,7 @@ C9S3_COHORT_L_PROMOTIONS: dict[str, dict[str, Any]] = {
             "predicate": "enables",
             "predicate_id": "RO:0002327",
             "object": "trypsin_catalytic_activity",
-            "description": (
-                "Trypsin SprT enables trypsin catalytic activity."
-            ),
+            "description": ("Trypsin SprT enables trypsin catalytic activity."),
             "evidence": [
                 {
                     "reference": "DOI:10.1016/0006-291x(91)91248-b",
@@ -6320,6 +6323,671 @@ C10S3_COHORT_M_PROMOTIONS: dict[str, dict[str, Any]] = {
     },
 }
 
+C11S3_TIMESTAMP = "2026-11-05T08:45:00Z"
+C11S3_RETRIEVED_ON = "2026-11-05"
+
+C11S3_COHORT_N_PROMOTIONS: dict[str, dict[str, Any]] = {
+    "data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml": {
+        "identifier": "traitmech:000180",
+        "graph_id": "acetone_butanol_ethanol_fermentation_pathway_sketch",
+        "discussion_id": "acetone-butanol-ethanol-fermentation-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1073/pnas.1423143112, "
+            "DOI:10.1002/bit.22003, and DOI:10.1128/aem.56.11.3491-3498.1990; "
+            "exemplified on acetoacetate_decarboxylase_adc with Clostridium "
+            "acetobutylicum ATCC 824 (NCBITaxon:272562; UP000000814) "
+            "acetoacetate decarboxylase Adc (UniProtKB:P23670)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1128/aem.56.11.3491-3498.1990",
+            "snippet": (
+                "In Clostridium acetobutylicum ATCC 824, acetoacetate "
+                "decarboxylase (EC 4.1.1.4) is essential for solvent production, "
+                "catalyzing the decarboxylation of acetoacetate to acetone. We "
+                "report here the purification of the enzyme from C. "
+                "acetobutylicum ATCC 824 and the cloning and expression of the "
+                "gene encoding the acetoacetate decarboxylase enzyme in "
+                "Escherichia coli."
+            ),
+            "notes": (
+                "Petersen and Bennett purified Clostridium acetobutylicum ATCC "
+                "824 acetoacetate decarboxylase (Adc; UniProtKB:P23670) and "
+                "cloned its structural gene adc."
+            ),
+        },
+        "new_node": {
+            "node_id": "acetoacetate_decarboxylase_adc",
+            "label": "acetoacetate decarboxylase Adc",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR010451",
+            "gene_symbols": ["adc"],
+            "description": (
+                "Acetoacetate decarboxylase (Adc; EC 4.1.1.4; "
+                "InterPro:IPR010451) that catalyzes the decarboxylation of "
+                "acetoacetate to acetone and CO2 during the solventogenic phase "
+                "of acetone-butanol-ethanol fermentation."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P23670",
+                    "protein_label": "Acetoacetate decarboxylase",
+                    "gene_symbol": "adc",
+                    "taxon_id": "NCBITaxon:272562",
+                    "taxon_label": (
+                        "Clostridium acetobutylicum (strain ATCC 824 / DSM 792 "
+                        "/ JCM 1419 / IAM 19013 / LMG 5710 / NBRC 13948 / NRRL "
+                        "B-527 / VKM B-1787 / 2291 / W)"
+                    ),
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000000814",
+                    "retrieved_on": C11S3_RETRIEVED_ON,
+                    "entry_version": 148,
+                    "sequence_version": 1,
+                    "role": (
+                        "Solventogenic acetoacetate decarboxylase (Adc) that "
+                        "catalyzes decarboxylation of acetoacetate to acetone "
+                        "during acetone-butanol-ethanol fermentation in "
+                        "Clostridium acetobutylicum ATCC 824."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/aem.56.11.3491-3498.1990",
+                            "snippet": (
+                                "In Clostridium acetobutylicum ATCC 824, "
+                                "acetoacetate decarboxylase (EC 4.1.1.4) is "
+                                "essential for solvent production, catalyzing "
+                                "the decarboxylation of acetoacetate to acetone. "
+                                "We report here the purification of the enzyme "
+                                "from C. acetobutylicum ATCC 824 and the "
+                                "cloning and expression of the gene encoding "
+                                "the acetoacetate decarboxylase enzyme in "
+                                "Escherichia coli."
+                            ),
+                            "notes": (
+                                "Petersen and Bennett purified and cloned "
+                                "Clostridium acetobutylicum ATCC 824 "
+                                "acetoacetate decarboxylase (UniProtKB:P23670)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "acetoacetate_decarboxylase_adc",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "acetone_butanol_ethanol_fermentation_process",
+            "description": (
+                "Acetoacetate decarboxylase (Adc) is a causal agent in "
+                "solventogenic acetone production during "
+                "acetone-butanol-ethanol fermentation."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/aem.56.11.3491-3498.1990",
+                    "snippet": (
+                        "In Clostridium acetobutylicum ATCC 824, acetoacetate "
+                        "decarboxylase (EC 4.1.1.4) is essential for solvent "
+                        "production, catalyzing the decarboxylation of "
+                        "acetoacetate to acetone. We report here the "
+                        "purification of the enzyme from C. acetobutylicum "
+                        "ATCC 824 and the cloning and expression of the gene "
+                        "encoding the acetoacetate decarboxylase enzyme in "
+                        "Escherichia coli."
+                    ),
+                    "notes": (
+                        "Petersen and Bennett demonstrate that Clostridium "
+                        "acetobutylicum ATCC 824 acetoacetate decarboxylase is "
+                        "essential for solvent production, catalyzing "
+                        "acetoacetate decarboxylation to acetone."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C11S3_TIMESTAMP,
+            "body": (
+                "Promoted acetone_butanol_ethanol_fermentation_pathway_sketch "
+                "to MECHANISTIC by adding InterPro:IPR010451-grounded "
+                "GENE_OR_PROTEIN node acetoacetate_decarboxylase_adc with "
+                "reviewed Clostridium acetobutylicum ATCC 824 "
+                "(NCBITaxon:272562; UP000000814) protein_examples "
+                "UniProtKB:P23670 (Adc) backed by "
+                "DOI:10.1128/aem.56.11.3491-3498.1990."
+            ),
+        },
+        "changes_summary": (
+            "Promoted acetone_butanol_ethanol_fermentation_pathway_sketch to "
+            "MECHANISTIC; added InterPro:IPR010451-grounded GENE_OR_PROTEIN "
+            "node acetoacetate_decarboxylase_adc with reviewed Clostridium "
+            "acetobutylicum ATCC 824 (NCBITaxon:272562; UP000000814) "
+            "protein_examples UniProtKB:P23670 (Adc) backed by "
+            "DOI:10.1128/aem.56.11.3491-3498.1990; resolved "
+            "acetone-butanol-ethanol-fermentation-protein-example-gap."
+        ),
+    },
+    "data/traits/metabolism/citrate_fermentation.yaml": {
+        "identifier": "traitmech:000182",
+        "graph_id": "citrate_fermentation_pathway_sketch",
+        "discussion_id": "citrate-fermentation-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1128/JB.183.18.5248-5256.2001, "
+            "DOI:10.1186/1471-2180-9-168, and "
+            "DOI:10.1111/j.1365-2958.1994.tb01295.x; exemplified on "
+            "citrate_lyase_beta_cite with Klebsiella pneumoniae (NCBITaxon:573) "
+            "citrate lyase subunit beta CitE (UniProtKB:P17725)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1111/j.1365-2958.1994.tb01295.x",
+            "snippet": (
+                "In the course of studies on anaerobic citrate metabolism in "
+                "Klebsiella pneumoniae, the DNA region upstream of the gene for "
+                "the sodium-dependent citrate carrier (citS) was investigated. "
+                "Nucleotide sequence analysis revealed a cluster of five new "
+                "genes that were oriented inversely to citS and probably form "
+                "an operon. The genes were named citCDEFG. Based on known "
+                "protein sequence data, the gene products derived from citD, "
+                "citE and citF could be identified as the gamma-, beta-, and "
+                "alpha-subunits of citrate lyase, respectively. This enzyme "
+                "catalyses the cleavage of citrate to oxaloacetate and acetate."
+            ),
+            "notes": (
+                "Bott and Dimroth sequenced and expressed the Klebsiella "
+                "pneumoniae citCDEFG gene cluster encoding citrate lyase "
+                "subunits CitD, CitE (UniProtKB:P17725), and CitF "
+                "(UniProtKB:P45413) for anaerobic citrate cleavage."
+            ),
+        },
+        "new_node": {
+            "node_id": "citrate_lyase_beta_cite",
+            "label": "citrate lyase beta subunit CitE",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR006475",
+            "gene_symbols": ["citE"],
+            "operon": "citCDEFG",
+            "description": (
+                "Citrate lyase catalytic beta subunit (citryl-CoA lyase, CitE; "
+                "EC 4.1.3.34; InterPro:IPR006475) of the bacterial citrate "
+                "lyase complex (CitDEF) that cleaves citrate into acetate and "
+                "oxaloacetate during anaerobic citrate fermentation."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P17725",
+                    "protein_label": "Citrate lyase subunit beta",
+                    "gene_symbol": "citE",
+                    "taxon_id": "NCBITaxon:573",
+                    "taxon_label": "Klebsiella pneumoniae",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C11S3_RETRIEVED_ON,
+                    "entry_version": 131,
+                    "sequence_version": 2,
+                    "role": (
+                        "Catalytic beta (acyl-lyase) subunit CitE of the "
+                        "Klebsiella pneumoniae citrate lyase complex that "
+                        "cleaves citrate to oxaloacetate and acetate during "
+                        "anaerobic citrate fermentation."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1111/j.1365-2958.1994.tb01295.x",
+                            "snippet": (
+                                "In the course of studies on anaerobic citrate "
+                                "metabolism in Klebsiella pneumoniae, the DNA "
+                                "region upstream of the gene for the "
+                                "sodium-dependent citrate carrier (citS) was "
+                                "investigated. Nucleotide sequence analysis "
+                                "revealed a cluster of five new genes that were "
+                                "oriented inversely to citS and probably form "
+                                "an operon. The genes were named citCDEFG. "
+                                "Based on known protein sequence data, the gene "
+                                "products derived from citD, citE and citF "
+                                "could be identified as the gamma-, beta-, and "
+                                "alpha-subunits of citrate lyase, respectively. "
+                                "This enzyme catalyses the cleavage of citrate "
+                                "to oxaloacetate and acetate."
+                            ),
+                            "notes": (
+                                "Bott and Dimroth characterized the Klebsiella "
+                                "pneumoniae citCDEFG cluster encoding the "
+                                "citrate lyase beta subunit CitE "
+                                "(UniProtKB:P17725)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "citrate_lyase_beta_cite",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "citrate_fermentation_process",
+            "description": (
+                "Citrate lyase beta subunit (CitE) is a catalytic subunit and "
+                "causal agent in citrate lyase cleavage of citrate into acetate "
+                "and oxaloacetate during anaerobic citrate fermentation."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1111/j.1365-2958.1994.tb01295.x",
+                    "snippet": (
+                        "In the course of studies on anaerobic citrate "
+                        "metabolism in Klebsiella pneumoniae, the DNA region "
+                        "upstream of the gene for the sodium-dependent citrate "
+                        "carrier (citS) was investigated. Nucleotide sequence "
+                        "analysis revealed a cluster of five new genes that "
+                        "were oriented inversely to citS and probably form an "
+                        "operon. The genes were named citCDEFG. Based on known "
+                        "protein sequence data, the gene products derived from "
+                        "citD, citE and citF could be identified as the gamma-, "
+                        "beta-, and alpha-subunits of citrate lyase, "
+                        "respectively. This enzyme catalyses the cleavage of "
+                        "citrate to oxaloacetate and acetate."
+                    ),
+                    "notes": (
+                        "Bott and Dimroth identify CitE as the beta subunit of "
+                        "Klebsiella pneumoniae citrate lyase catalyzing the "
+                        "cleavage of citrate to oxaloacetate and acetate in "
+                        "anaerobic citrate metabolism."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C11S3_TIMESTAMP,
+            "body": (
+                "Promoted citrate_fermentation_pathway_sketch to MECHANISTIC "
+                "by adding InterPro:IPR006475-grounded GENE_OR_PROTEIN node "
+                "citrate_lyase_beta_cite (operon citCDEFG) with reviewed "
+                "Klebsiella pneumoniae (NCBITaxon:573) protein_examples "
+                "UniProtKB:P17725 (CitE) backed by "
+                "DOI:10.1111/j.1365-2958.1994.tb01295.x."
+            ),
+        },
+        "changes_summary": (
+            "Promoted citrate_fermentation_pathway_sketch to MECHANISTIC; "
+            "added InterPro:IPR006475-grounded GENE_OR_PROTEIN node "
+            "citrate_lyase_beta_cite with reviewed Klebsiella pneumoniae "
+            "(NCBITaxon:573) protein_examples UniProtKB:P17725 (CitE) backed "
+            "by DOI:10.1111/j.1365-2958.1994.tb01295.x; resolved "
+            "citrate-fermentation-protein-example-gap."
+        ),
+    },
+    "data/traits/metabolism/selenate_respiration.yaml": {
+        "identifier": "traitmech:000202",
+        "graph_id": "selenate_respiration_reduction_sketch",
+        "discussion_id": "selenate-respiration-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1128/AEM.02737-06, "
+            "DOI:10.1016/j.syapm.2005.12.011, and "
+            "DOI:10.3109/10425170009015604; exemplified on "
+            "selenate_reductase_sera with Thauera selenatis (NCBITaxon:33058) "
+            "periplasmic selenate reductase alpha subunit SerA "
+            "(UniProtKB:Q9S1H0)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.3109/10425170009015604",
+            "snippet": (
+                "The periplasmic selenate reductase (Ser) of Thauera selennatis "
+                "is a component of the electron transport chain catalyzing "
+                "selenate reduction with acetate as the electron donor (i.e., "
+                "selenate respiration). The purified enzyme consists of three "
+                "subunits (SerA, SerB and SerC). Using transposon (i.e., Tn5) "
+                "mutagenesis selenate reductase mutants were isolated. Junction "
+                "fragments of DNA adjacent to the integrated Tn5 were used, "
+                "together with oligonucleotides derived from the N-termini of "
+                "SerA and SerB, to clone from a gene bank a DNA fragment that "
+                "contained the corresponding genes. After sequencing, serA, "
+                "serB and serC were identified by sequence comparison with the "
+                "N-termini of the three subunits."
+            ),
+            "notes": (
+                "Krafft et al. cloned and sequenced the Thauera selenatis "
+                "serABC operon encoding the periplasmic respiratory selenate "
+                "reductase subunits SerA (UniProtKB:Q9S1H0), SerB "
+                "(UniProtKB:Q9S1G9), and SerC (UniProtKB:Q9S1G7)."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:33058",
+            "taxon_label": "Thauera selenatis",
+            "note": (
+                "Krafft et al. cloned and sequenced the Thauera selenatis "
+                "serABC operon encoding the periplasmic respiratory selenate "
+                "reductase subunits SerA (UniProtKB:Q9S1H0), SerB, and SerC "
+                "catalyzing selenate reduction during selenate respiration."
+            ),
+            "reference": "DOI:10.3109/10425170009015604",
+        },
+        "new_node": {
+            "node_id": "selenate_reductase_sera",
+            "label": "selenate reductase catalytic subunit SerA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR017840",
+            "gene_symbols": ["serA"],
+            "operon": "serABC",
+            "description": (
+                "Periplasmic molybdopterin-binding catalytic alpha subunit "
+                "(SerA; EC 1.97.1.9; InterPro:IPR017840) of the respiratory "
+                "selenate reductase complex SerABC that reduces selenate to "
+                "selenite during anaerobic selenate respiration."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:Q9S1H0",
+                    "protein_label": "Selenate reductase subunit alpha",
+                    "gene_symbol": "serA",
+                    "taxon_id": "NCBITaxon:33058",
+                    "taxon_label": "Thauera selenatis",
+                    "entry_status": "REVIEWED",
+                    "retrieved_on": C11S3_RETRIEVED_ON,
+                    "entry_version": 105,
+                    "sequence_version": 1,
+                    "role": (
+                        "Periplasmic molybdopterin-containing catalytic alpha "
+                        "subunit SerA of the Thauera selenatis selenate "
+                        "reductase complex (SerABC) that catalyzes respiratory "
+                        "selenate reduction to selenite."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.3109/10425170009015604",
+                            "snippet": (
+                                "The periplasmic selenate reductase (Ser) of "
+                                "Thauera selennatis is a component of the "
+                                "electron transport chain catalyzing selenate "
+                                "reduction with acetate as the electron donor "
+                                "(i.e., selenate respiration). The purified "
+                                "enzyme consists of three subunits (SerA, SerB "
+                                "and SerC). Using transposon (i.e., Tn5) "
+                                "mutagenesis selenate reductase mutants were "
+                                "isolated. Junction fragments of DNA adjacent "
+                                "to the integrated Tn5 were used, together with "
+                                "oligonucleotides derived from the N-termini of "
+                                "SerA and SerB, to clone from a gene bank a DNA "
+                                "fragment that contained the corresponding "
+                                "genes. After sequencing, serA, serB and serC "
+                                "were identified by sequence comparison with "
+                                "the N-termini of the three subunits."
+                            ),
+                            "notes": (
+                                "Krafft et al. cloned and sequenced Thauera "
+                                "selenatis serA encoding the periplasmic "
+                                "selenate reductase alpha subunit "
+                                "(UniProtKB:Q9S1H0)."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "selenate_reductase_sera",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "selenate_respiration_anaerobic_respiration",
+            "description": (
+                "Periplasmic selenate reductase catalytic subunit SerA is a "
+                "causal agent in anaerobic respiratory electron transport "
+                "reducing selenate to selenite."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.3109/10425170009015604",
+                    "snippet": (
+                        "The periplasmic selenate reductase (Ser) of Thauera "
+                        "selennatis is a component of the electron transport "
+                        "chain catalyzing selenate reduction with acetate as "
+                        "the electron donor (i.e., selenate respiration). The "
+                        "purified enzyme consists of three subunits (SerA, "
+                        "SerB and SerC). Using transposon (i.e., Tn5) "
+                        "mutagenesis selenate reductase mutants were isolated. "
+                        "Junction fragments of DNA adjacent to the integrated "
+                        "Tn5 were used, together with oligonucleotides derived "
+                        "from the N-termini of SerA and SerB, to clone from a "
+                        "gene bank a DNA fragment that contained the "
+                        "corresponding genes. After sequencing, serA, serB and "
+                        "serC were identified by sequence comparison with the "
+                        "N-termini of the three subunits."
+                    ),
+                    "notes": (
+                        "Krafft et al. demonstrate that the periplasmic "
+                        "selenate reductase (SerABC) of Thauera selenatis is an "
+                        "electron-transport-chain component catalyzing selenate "
+                        "reduction during selenate respiration."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C11S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Thauera selenatis "
+                "(NCBITaxon:33058; DOI:10.3109/10425170009015604) and promoted "
+                "selenate_respiration_reduction_sketch to MECHANISTIC by adding "
+                "InterPro:IPR017840-grounded GENE_OR_PROTEIN node "
+                "selenate_reductase_sera (operon serABC) with reviewed Thauera "
+                "selenatis (NCBITaxon:33058) protein_examples UniProtKB:Q9S1H0 "
+                "(SerA) backed by DOI:10.3109/10425170009015604."
+            ),
+        },
+        "changes_summary": (
+            "Added Thauera selenatis (NCBITaxon:33058; "
+            "DOI:10.3109/10425170009015604) canonical example; promoted "
+            "selenate_respiration_reduction_sketch to MECHANISTIC; added "
+            "InterPro:IPR017840-grounded GENE_OR_PROTEIN node "
+            "selenate_reductase_sera with reviewed Thauera selenatis "
+            "(NCBITaxon:33058) protein_examples UniProtKB:Q9S1H0 (SerA) backed "
+            "by DOI:10.3109/10425170009015604; resolved "
+            "selenate-respiration-protein-example-gap."
+        ),
+    },
+    "data/traits/morphology/holdfast.yaml": {
+        "identifier": "traitmech:000184",
+        "graph_id": "holdfast_polar_adhesion_sketch",
+        "discussion_id": "holdfast-protein-example-gap",
+        "scope_notes": (
+            "Mechanistic graph backed by DOI:10.1128/jb.00276-19, "
+            "DOI:10.1128/jb.00273-22, and DOI:10.1128/jb.181.4.1118-1125.1999; "
+            "exemplified on holdfast_attachment_protein_hfaa with Caulobacter "
+            "vibrioides strain CB15 (NCBITaxon:190650; UP000001816) holdfast "
+            "attachment protein A HfaA (UniProtKB:P27342)."
+        ),
+        "new_evidence": {
+            "reference": "DOI:10.1128/jb.181.4.1118-1125.1999",
+            "snippet": (
+                "Attachment to surfaces by the prosthecate bacterium "
+                "Caulobacter crescentus is mediated by an adhesive organelle, "
+                "the holdfast, found at the tip of the stalk. Indirect evidence "
+                "suggested that the holdfast first appears at the swarmer pole "
+                "of the predivisional cell. We used fluorescently labeled "
+                "lectin and transmission electron microscopy to detect the "
+                "holdfast in different cell types. While the holdfast was "
+                "readily detectable in stalked cells and at the stalked poles "
+                "of predivisional cells, we were unable to detect the holdfast "
+                "in swarmer cells or at the flagellated poles of predivisional "
+                "cells. This suggests that exposure of the holdfast to the "
+                "outside of the cell occurs during the differentiation of "
+                "swarmer to stalked cells. To investigate the timing of "
+                "holdfast synthesis and exposure to the outside of the cell, "
+                "we have examined the regulation of a holdfast attachment gene, "
+                "hfaA. The hfaA gene is part of a cluster of four genes "
+                "(hfaABDC), identified in strain CB2A and involved in "
+                "attachment of the holdfast to the polar region of the cell. "
+                "We have identified the hfaA gene in the synchronizable C. "
+                "crescentus strain CB15."
+            ),
+            "notes": (
+                "Janakiraman and Brun identified and characterized the "
+                "Caulobacter vibrioides (C. crescentus) strain CB15 holdfast "
+                "attachment gene hfaA (UniProtKB:P27342) required for anchoring "
+                "the polar holdfast adhesin to the stalk tip."
+            ),
+        },
+        "new_canonical_example": {
+            "taxon_id": "NCBITaxon:190650",
+            "taxon_label": "Caulobacter vibrioides CB15",
+            "note": (
+                "Janakiraman and Brun identified and characterized the holdfast "
+                "attachment gene hfaA (UniProtKB:P27342) within the hfaABDC "
+                "cluster anchoring the polar holdfast adhesin at the stalk tip "
+                "in Caulobacter vibrioides (C. crescentus) strain CB15."
+            ),
+            "reference": "DOI:10.1128/jb.181.4.1118-1125.1999",
+        },
+        "new_node": {
+            "node_id": "holdfast_attachment_protein_hfaa",
+            "label": "holdfast attachment protein HfaA",
+            "node_type": "GENE_OR_PROTEIN",
+            "grounding": "InterPro:IPR049851",
+            "gene_symbols": ["hfaA"],
+            "operon": "hfaABDC",
+            "description": (
+                "Holdfast attachment protein HfaA (InterPro:IPR049851) of the "
+                "HfaABD outer-membrane anchor complex that tethers the secreted "
+                "holdfast polysaccharide adhesin to the polar stalk tip."
+            ),
+            "protein_examples": [
+                {
+                    "uniprot_id": "UniProtKB:P27342",
+                    "protein_label": "Holdfast attachment protein A",
+                    "gene_symbol": "hfaA",
+                    "taxon_id": "NCBITaxon:190650",
+                    "taxon_label": (
+                        "Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)"
+                    ),
+                    "entry_status": "REVIEWED",
+                    "proteome_id": "UP000001816",
+                    "retrieved_on": C11S3_RETRIEVED_ON,
+                    "entry_version": 105,
+                    "sequence_version": 3,
+                    "role": (
+                        "Holdfast attachment protein HfaA that anchors the "
+                        "secreted holdfast polysaccharide adhesin to the polar "
+                        "stalk tip in Caulobacter vibrioides strain CB15."
+                    ),
+                    "evidence": [
+                        {
+                            "reference": "DOI:10.1128/jb.181.4.1118-1125.1999",
+                            "snippet": (
+                                "Attachment to surfaces by the prosthecate "
+                                "bacterium Caulobacter crescentus is mediated "
+                                "by an adhesive organelle, the holdfast, found "
+                                "at the tip of the stalk. Indirect evidence "
+                                "suggested that the holdfast first appears at "
+                                "the swarmer pole of the predivisional cell. "
+                                "We used fluorescently labeled lectin and "
+                                "transmission electron microscopy to detect the "
+                                "holdfast in different cell types. While the "
+                                "holdfast was readily detectable in stalked "
+                                "cells and at the stalked poles of "
+                                "predivisional cells, we were unable to detect "
+                                "the holdfast in swarmer cells or at the "
+                                "flagellated poles of predivisional cells. This "
+                                "suggests that exposure of the holdfast to the "
+                                "outside of the cell occurs during the "
+                                "differentiation of swarmer to stalked cells. "
+                                "To investigate the timing of holdfast "
+                                "synthesis and exposure to the outside of the "
+                                "cell, we have examined the regulation of a "
+                                "holdfast attachment gene, hfaA. The hfaA gene "
+                                "is part of a cluster of four genes (hfaABDC), "
+                                "identified in strain CB2A and involved in "
+                                "attachment of the holdfast to the polar region "
+                                "of the cell. We have identified the hfaA gene "
+                                "in the synchronizable C. crescentus strain CB15."
+                            ),
+                            "notes": (
+                                "Janakiraman and Brun identified and "
+                                "characterized Caulobacter vibrioides strain "
+                                "CB15 hfaA (UniProtKB:P27342) within the "
+                                "hfaABDC holdfast attachment cluster."
+                            ),
+                        }
+                    ],
+                }
+            ],
+        },
+        "new_edge": {
+            "subject": "holdfast_attachment_protein_hfaa",
+            "predicate": "is causal agent in",
+            "predicate_id": "RO:0002608",
+            "object": "holdfast_biofilm_formation",
+            "description": (
+                "Holdfast attachment protein HfaA is a causal agent in "
+                "anchoring the polar holdfast adhesin that mediates permanent "
+                "surface attachment and biofilm formation."
+            ),
+            "evidence": [
+                {
+                    "reference": "DOI:10.1128/jb.181.4.1118-1125.1999",
+                    "snippet": (
+                        "Attachment to surfaces by the prosthecate bacterium "
+                        "Caulobacter crescentus is mediated by an adhesive "
+                        "organelle, the holdfast, found at the tip of the "
+                        "stalk. Indirect evidence suggested that the holdfast "
+                        "first appears at the swarmer pole of the predivisional "
+                        "cell. We used fluorescently labeled lectin and "
+                        "transmission electron microscopy to detect the "
+                        "holdfast in different cell types. While the holdfast "
+                        "was readily detectable in stalked cells and at the "
+                        "stalked poles of predivisional cells, we were unable "
+                        "to detect the holdfast in swarmer cells or at the "
+                        "flagellated poles of predivisional cells. This "
+                        "suggests that exposure of the holdfast to the outside "
+                        "of the cell occurs during the differentiation of "
+                        "swarmer to stalked cells. To investigate the timing of "
+                        "holdfast synthesis and exposure to the outside of the "
+                        "cell, we have examined the regulation of a holdfast "
+                        "attachment gene, hfaA. The hfaA gene is part of a "
+                        "cluster of four genes (hfaABDC), identified in strain "
+                        "CB2A and involved in attachment of the holdfast to the "
+                        "polar region of the cell. We have identified the hfaA "
+                        "gene in the synchronizable C. crescentus strain CB15."
+                    ),
+                    "notes": (
+                        "Janakiraman and Brun show that hfaA (part of the "
+                        "hfaABDC cluster) is involved in attachment of the "
+                        "adhesive holdfast organelle to the polar region of "
+                        "Caulobacter crescentus cells for surface attachment."
+                    ),
+                }
+            ],
+        },
+        "resolution_message": {
+            "author": CURATOR,
+            "timestamp": C11S3_TIMESTAMP,
+            "body": (
+                "Added canonical_examples entry Caulobacter vibrioides CB15 "
+                "(NCBITaxon:190650; DOI:10.1128/jb.181.4.1118-1125.1999) and "
+                "promoted holdfast_polar_adhesion_sketch to MECHANISTIC by "
+                "adding InterPro:IPR049851-grounded GENE_OR_PROTEIN node "
+                "holdfast_attachment_protein_hfaa (operon hfaABDC) with "
+                "reviewed Caulobacter vibrioides strain CB15 "
+                "(NCBITaxon:190650; UP000001816) protein_examples "
+                "UniProtKB:P27342 (HfaA) backed by "
+                "DOI:10.1128/jb.181.4.1118-1125.1999."
+            ),
+        },
+        "changes_summary": (
+            "Added Caulobacter vibrioides CB15 (NCBITaxon:190650; "
+            "DOI:10.1128/jb.181.4.1118-1125.1999) canonical example; promoted "
+            "holdfast_polar_adhesion_sketch to MECHANISTIC; added "
+            "InterPro:IPR049851-grounded GENE_OR_PROTEIN node "
+            "holdfast_attachment_protein_hfaa with reviewed Caulobacter "
+            "vibrioides strain CB15 (NCBITaxon:190650; UP000001816) "
+            "protein_examples UniProtKB:P27342 (HfaA) backed by "
+            "DOI:10.1128/jb.181.4.1118-1125.1999; resolved "
+            "holdfast-protein-example-gap."
+        ),
+    },
+}
+
 
 def _protected_paths(repo_root: Path = REPO_ROOT) -> set[str]:
     dnw = repo_root / "DO_NOT_WORK.md"
@@ -6355,6 +7023,7 @@ def process_all(apply: bool = False, repo_root: Path = REPO_ROOT) -> tuple[int, 
         **C8S3_COHORT_K_PROMOTIONS,
         **C9S3_COHORT_L_PROMOTIONS,
         **C10S3_COHORT_M_PROMOTIONS,
+        **C11S3_COHORT_N_PROMOTIONS,
     }
     blockers_by_file = {**C2S3_COHORT_C_BLOCKERS, **C3S3_COHORT_E_BLOCKERS}
     all_rel_paths = sorted(

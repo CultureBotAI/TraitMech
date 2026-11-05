@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage3_protein_examples.py
+  slug: curate_stage3_protein_examples
+session:
+  id: 2026-11-05T084500Z-antigravity-c11s301
+  timestamp: '2026-11-05T08:45:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/1988
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - evidence
+  - canonical_examples
+  - discussions
+  - curation_history
+  summary: 'Cycle 11 Stage 3 (protein_examples): promote 4 Cohort N trait graphs to MECHANISTIC
+    with verified UniProtKB protein examples'
+  details: Reviewed all 1,130 TraitRecord YAML files (1,129 curated, 1 DO_NOT_WORK protected)
+    for Cycle 11 Stage 3 (protein_examples). Promoted the 4 Cycle 11 Stage 2 Cohort N PATHWAY_SKETCH
+    records (acetone_butanol_ethanol_fermentation, citrate_fermentation, selenate_respiration, holdfast)
+    to MECHANISTIC by adding InterPro-grounded GENE_OR_PROTEIN nodes with live-verified UniProtKB
+    protein_examples (P23670 Adc on Clostridium acetobutylicum ATCC 824 NCBITaxon:272562 UP000000814
+    for acetone_butanol_ethanol_fermentation; P17725 CitE on Klebsiella pneumoniae NCBITaxon:573
+    for citrate_fermentation; Q9S1H0 SerA on Thauera selenatis NCBITaxon:33058 for selenate_respiration;
+    P27342 HfaA on Caulobacter vibrioides CB15 NCBITaxon:190650 UP000001816 for holdfast), strain-matched
+    canonical_examples, distinct verbatim primary-source evidence snippets, record-evidence-backed
+    scope_notes, and RESOLVED CURATION_TODO discussions. Refreshed reports/uniprot_grounding_audit.tsv
+    (210 uses across 175 unique accessions, 0 findings), reports/graph_protein_taxon_coverage.tsv
+    (171 MECHANISTIC pass, 597 NONMECHANISTIC, 0 gap, 1 protected, 0 error), reports/causal_graph_connectivity.tsv,
+    and all derived reports and pages.
