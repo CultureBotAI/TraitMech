@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Curate Stage 2 causal_graphs and source-limited knowledge-gap discussions.
 
-Addresses 120 active CLASS records across Cohorts A through M in environment/,
+Addresses 120 active CLASS records across Cohorts A through N in environment/,
 metabolism/, morphology/, and physiology/:
 
 - Cohort A (10 multi-evidence records): adds a connected, schema-valid
@@ -16,12 +16,12 @@ metabolism/, morphology/, and physiology/:
   record-level OPEN Discussion (kind=KNOWLEDGE_GAP) documenting the
   source-limited mechanism gap and what multi-step pathway/enzyme/taxon
   evidence is required before constructing a causal graph.
-- Cohorts C, E, G, H, I, J, K, L, and M (33 multi-evidence physiology/metabolism
+- Cohorts C, E, G, H, I, J, K, L, M, and N (37 multi-evidence physiology/metabolism/morphology
   records): adds connected NONMECHANISTIC causal_graphs entries anchored on
   existing verbatim record evidence snippets, resolves prior source-gap
   discussions where applicable, and records OPEN CURATION_TODO discussions
   for strain-matched UniProtKB protein_examples.
-- Cohorts D and F (63 single-mechanism-quote records): adds structured
+- Cohorts D and F (59 single-mechanism-quote records): adds structured
   OPEN KNOWLEDGE_GAP discussions documenting source-limited mechanism gaps.
 
 Default is dry-run; pass --apply to write changes via the guarded writer
@@ -66,6 +66,7 @@ POSED_DATE_C7 = "2026-10-30"
 POSED_DATE_C8 = "2026-10-30"
 POSED_DATE_C9 = "2026-10-31"
 POSED_DATE_C10 = "2026-11-04"
+POSED_DATE_C11 = "2026-11-05"
 
 
 def _ev_item(doc: dict[str, Any], index: int, notes: str) -> dict[str, str]:
@@ -2096,10 +2097,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add primary literature evidence for acetate activation (AckA-Pta or Acs), acetyl-CoA decarbonylase/synthase (CdhCDE), and methyl-CoM reductase (McrABG) plus a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries two broad overview snippets (DOI:10.1007/s00253-023-12700-3, DOI:10.3389/fmicb.2017.01198) stating that acetoclastic methanogens split acetate to CH4 and CO2, without enzymatic step quotes or a cited canonical example.",
     ),
-    "data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml": (
-        "Add primary literature evidence for the acidogenic-to-solventogenic pathway enzymes (e.g. CoA-transferase CtfAB, acetoacetate decarboxylase Adc, and aldehyde/alcohol dehydrogenase AdhE) and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
-        "The current record carries one overview snippet on Clostridium acetobutylicum acid reassimilation (DOI:10.1073/pnas.1423143112) and one historical industrial fermentation snippet (DOI:10.1002/bit.22003), which cannot ground a multi-edge enzymatic mechanism graph without inventing unsupported edges.",
-    ),
     "data/traits/metabolism/anaerobic_ammonium_oxidation.yaml": (
         "Add primary literature evidence for nitrite reduction to nitric oxide (NirS), hydrazine synthase (HzsABC), and hydrazine dehydrogenase (Hdh) plus a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries overall stoichiometry and substrate-affinity snippets (DOI:10.1038/22749, DOI:10.1128/AEM.65.7.3248-3250.1999, DOI:10.1038/nature10453) without intermediate hydrazine-pathway enzyme quotes or a cited canonical example.",
@@ -2107,10 +2104,6 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
     "data/traits/metabolism/arsenite_oxidation.yaml": (
         "Add primary literature evidence for periplasmic arsenite oxidase (AioAB or ArxAB), electron transfer to c-type cytochrome/azurin, and a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries general detoxification/energy and strain-isolation snippets (DOI:10.3389/fmicb.2020.569282, DOI:10.1128/AEM.66.1.92-97.2000, DOI:10.1186/s12866-024-03676-9) without enzyme-level catalytic quotes or a cited canonical example.",
-    ),
-    "data/traits/metabolism/citrate_fermentation.yaml": (
-        "Add primary literature evidence for citrate uptake (CitH/CitS), citrate lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB) before constructing causal_graphs.",
-        "The current record carries two growth-and-prevalence snippets in Klebsiella pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) without enzymatic step or intermediate quotes.",
     ),
     "data/traits/metabolism/lipolysis.yaml": (
         "Add primary literature evidence for extracellular triacylglycerol lipase secretion, fatty-acid/glycerol uptake, and a strain-matched canonical example before constructing causal_graphs.",
@@ -2124,17 +2117,9 @@ COHORT_D_GAPS: dict[str, tuple[str, str]] = {
         "Add a second independent evidence snippet covering ammonia monooxygenase / hydroxylamine oxidoreductase and nitrite oxidoreductase steps plus a strain-matched canonical example before constructing causal_graphs.",
         "The current record carries a single overview snippet (DOI:10.3389/fmicb.2020.01900) describing two-step oxidation of ammonia to nitrite and nitrate; a connected multi-edge graph requires at least two independent verbatim snippets without clause-splitting.",
     ),
-    "data/traits/metabolism/selenate_respiration.yaml": (
-        "Add primary literature evidence for periplasmic respiratory selenate reductase (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing causal_graphs.",
-        "The current record carries strain-isolation and terminal-electron-acceptor snippets (DOI:10.1128/aem.60.8.3011-3019.1994, DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011) without enzymatic reductase or selenite-product quotes.",
-    ),
     "data/traits/morphology/akinete.yaml": (
         "Add primary literature evidence for cyanobacterial akinete differentiation regulators (e.g. AvaK, HepA) and envelope glycolipid/polysaccharide biosynthesis before constructing causal_graphs.",
         "The current record carries morphological and ecological-survival snippets in Nostocales (DOI:10.1159/000517443, DOI:10.3389/fmicb.2025.1677844) without developmental gene or biosynthetic pathway quotes.",
-    ),
-    "data/traits/morphology/holdfast.yaml": (
-        "Add primary literature evidence for holdfast polysaccharide biosynthesis/export proteins (HfsDABCHG) and outer-membrane anchoring proteins (HfaABD) before constructing causal_graphs.",
-        "The current record carries polar adhesin function and monosaccharide-composition snippets in Caulobacterales (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22) without biosynthetic or anchoring protein quotes.",
     ),
     "data/traits/physiology/acid_phosphatase_activity.yaml": (
         "Add primary microbial literature evidence for secreted or periplasmic acid phosphatase catalysis (EC 3.1.3.2, e.g. SapM, AphA, PhoN) and substrate dephosphorylation products before constructing causal_graphs.",
@@ -5056,8 +5041,380 @@ def build_cohort_m_discussion(rel_path: str, doc: dict[str, Any], graph_id: str)
     return discussion
 
 
+COHORT_N_PATHS: tuple[str, ...] = (
+    "data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml",
+    "data/traits/metabolism/citrate_fermentation.yaml",
+    "data/traits/metabolism/selenate_respiration.yaml",
+    "data/traits/morphology/holdfast.yaml",
+)
+
+COHORT_N_PROTEIN_GAPS: dict[str, tuple[str, str, int]] = {
+    "data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Clostridium acetobutylicum ATCC 824 acetoacetate decarboxylase Adc (UniProtKB:P23670), CoA-transferase CtfAB (UniProtKB:P33752 / UniProtKB:P23673), and aldehyde-alcohol dehydrogenase AdhE1 (UniProtKB:P33744) so acetone_butanol_ethanol_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1073/pnas.1423143112, DOI:10.1002/bit.22003, DOI:10.1186/s13068-016-0605-x) establishes biphasic acidogenic-to-solventogenic fermentation producing acetone, butanol, and ethanol in Clostridium acetobutylicum ATCC 824 (NCBITaxon:272562), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+        0,
+    ),
+    "data/traits/metabolism/citrate_fermentation.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae citrate lyase CitDEF (UniProtKB:P45413 / UniProtKB:P45414 / UniProtKB:P45415) and Na+-translocating oxaloacetate decarboxylase OadGAB (UniProtKB:P13187) so citrate_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) establishes anaerobic citrate fermentation via citrate lyase and Na+-translocating oxaloacetate decarboxylase in Klebsiella pneumoniae (NCBITaxon:573), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+        0,
+    ),
+    "data/traits/metabolism/selenate_respiration.yaml": (
+        "Add strain-matched UniProtKB protein_examples for periplasmic selenate reductase SerABC in Sedimenticola selenatireducens DSM 17993 (NCBITaxon:1111735) or Thauera selenatis so selenate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011, DOI:10.1111/j.1574-6976.1999.tb00414.x) establishes anaerobic respiratory reduction of selenate as a terminal electron acceptor in Sedimenticola selenatireducens AK4OH1T (DSM 17993, NCBITaxon:1111735), but strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+        3,
+    ),
+    "data/traits/morphology/holdfast.yaml": (
+        "Add strain-matched UniProtKB protein_examples for Caulobacter vibrioides holdfast synthesis and anchor proteins HfsDAB (UniProtKB:Q9A5V2) and HfaABD so holdfast_polar_adhesion_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+        "The record's primary literature (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22) establishes synthesis of the polar polysaccharide holdfast adhesin mediating permanent surface attachment in Caulobacter vibrioides (NCBITaxon:155892), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+        0,
+    ),
+}
+
+
+def build_cohort_n_graphs(rel_path: str, doc: dict[str, Any]) -> list[dict[str, Any]]:
+    """Construct the connected NONMECHANISTIC causal_graphs list for a Cohort N record."""
+    if rel_path == "data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml":
+        return [
+            {
+                "graph_id": "acetone_butanol_ethanol_fermentation_pathway_sketch",
+                "title": "Solventogenic fermentation producing acetone, butanol, and ethanol",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "solventogenic fermentation and ethanol/butanol/acetone "
+                    "production to the acetone-butanol-ethanol fermentation phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-product sketch backed by DOI:10.1073/pnas.1423143112 "
+                    "and DOI:10.1002/bit.22003; strain-matched UniProtKB protein "
+                    "examples for Clostridium acetobutylicum ATCC 824 acetoacetate "
+                    "decarboxylase Adc (UniProtKB:P23670), CoA-transferase CtfAB "
+                    "(UniProtKB:P33752 / UniProtKB:P23673), and aldehyde-alcohol "
+                    "dehydrogenase AdhE1 (UniProtKB:P33744) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "acetone_butanol_ethanol_fermentation_trait",
+                        "label": "acetone-butanol-ethanol fermentation",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000180",
+                        "description": "Fermentation phenotype in which solventogenic clostridia convert carbohydrates and organic acids into acetone, n-butanol, and ethanol.",
+                    },
+                    {
+                        "node_id": "acetone_butanol_ethanol_fermentation_process",
+                        "label": "fermentation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0006113",
+                        "description": "Biphasic acidogenic-to-solventogenic fermentative catabolism re-assimilating acetate and butyrate into neutral solvents.",
+                    },
+                    {
+                        "node_id": "acetone_butanol_ethanol_fermentation_ethanol",
+                        "label": "ethanol",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16236",
+                        "description": "Ethanol coproduct formed alongside acetone and butanol in the canonical 3:6:1 molar solvent ratio.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "acetone_butanol_ethanol_fermentation_process",
+                        "predicate": "has output",
+                        "predicate_id": "RO:0002234",
+                        "object": "acetone_butanol_ethanol_fermentation_ethanol",
+                        "description": "Typical ABE fermentation by Clostridium acetobutylicum produces acetone, butanol, and ethanol in a 3:6:1 molar ratio.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Lee et al. state that typical ABE fermentation by Clostridium acetobutylicum produces acetone, butanol, and ethanol in a ratio of 3:6:1.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "acetone_butanol_ethanol_fermentation_process",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "acetone_butanol_ethanol_fermentation_trait",
+                        "description": "Biphasic fermentation shifting from acetic and butyric acid production to solventogenesis producing butanol, acetone, and ethanol confers the ABE fermentation phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Liao et al. show that Clostridium acetobutylicum ATCC 824 performs a biphasic fermentation shifting from acidogenesis to solventogenesis to produce butanol, acetone, and ethanol.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/metabolism/citrate_fermentation.yaml":
+        return [
+            {
+                "graph_id": "citrate_fermentation_pathway_sketch",
+                "title": "Anaerobic fermentative catabolism of citrate",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "anaerobic citrate-consuming fermentation to the citrate "
+                    "fermentation phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-substrate sketch backed by DOI:10.1128/JB.183.18.5248-5256.2001 "
+                    "and DOI:10.1186/1471-2180-9-168; strain-matched UniProtKB "
+                    "protein examples for Klebsiella pneumoniae citrate lyase "
+                    "CitDEF (UniProtKB:P45413 / UniProtKB:P45414 / UniProtKB:P45415) "
+                    "and Na+-translocating oxaloacetate decarboxylase OadGAB "
+                    "(UniProtKB:P13187) remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "citrate_fermentation_trait",
+                        "label": "citrate fermentation",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000182",
+                        "description": "Fermentation phenotype in which a microorganism catabolizes citrate anaerobically via citrate lyase and oxaloacetate decarboxylase.",
+                    },
+                    {
+                        "node_id": "citrate_fermentation_process",
+                        "label": "fermentation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0006113",
+                        "description": "Anaerobic fermentative catabolism of citrate via CitS uptake, CitDEF cleavage to acetate and oxaloacetate, and OadGAB decarboxylation to pyruvate.",
+                    },
+                    {
+                        "node_id": "citrate_fermentation_citrate",
+                        "label": "citrate",
+                        "node_type": "CHEMICAL",
+                        "grounding": "CHEBI:16947",
+                        "description": "Tricarboxylic acid substrate imported and cleaved into acetate and oxaloacetate during anaerobic citrate fermentation.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "citrate_fermentation_process",
+                        "predicate": "has input",
+                        "predicate_id": "RO:0002233",
+                        "object": "citrate_fermentation_citrate",
+                        "description": "Klebsiella pneumoniae grows anaerobically with citrate as the sole carbon source via the citS-oadGAB and citCDEFG citrate fermentation gene clusters.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Meyer et al. describe the genes required in Klebsiella pneumoniae for anaerobic growth with citrate as sole carbon source.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "citrate_fermentation_process",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "citrate_fermentation_trait",
+                        "description": "Citrate fermentation in Enterobacteria and lactic acid bacteria proceeds via CitS uptake, citrate lyase cleavage, and oxaloacetate decarboxylation, conferring the citrate fermentation phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Repizo et al. detail the conserved bacterial citrate fermentation pathway involving CitS uptake, CitDEF cleavage of citrate into acetate and oxaloacetate, and oxaloacetate decarboxylation to pyruvate and CO2.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/metabolism/selenate_respiration.yaml":
+        return [
+            {
+                "graph_id": "selenate_respiration_reduction_sketch",
+                "title": "Anaerobic respiratory electron transport with selenate as terminal electron acceptor",
+                "description": (
+                    "Evidence-backed metabolic mechanism sketch linking "
+                    "anaerobic respiratory electron transport with selenate "
+                    "terminal electron acceptors to the selenate respiration phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Process-and-acceptor sketch backed by DOI:10.1128/AEM.02737-06 "
+                    "and DOI:10.1016/j.syapm.2005.12.011; strain-matched UniProtKB "
+                    "protein examples for periplasmic selenate reductase SerABC "
+                    "in Sedimenticola selenatireducens DSM 17993 (NCBITaxon:1111735) "
+                    "remain to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "selenate_respiration_trait",
+                        "label": "selenate respiration",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000202",
+                        "description": "Anaerobic respiration phenotype in which a microorganism uses selenate (SeO4^2-) as the terminal electron acceptor to support growth.",
+                    },
+                    {
+                        "node_id": "selenate_respiration_anaerobic_respiration",
+                        "label": "anaerobic respiration",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0009061",
+                        "description": "Anaerobic respiratory electron transport coupling electron donor oxidation to the dissimilatory reduction of selenate to selenite or elemental selenium.",
+                    },
+                    {
+                        "node_id": "selenate_respiration_terminal_acceptor",
+                        "label": "terminal electron acceptor",
+                        "node_type": "CHEMICAL",
+                        "grounding": "METPO:1007504",
+                        "description": "Oxyanion terminal electron acceptor (selenate) reduced during anaerobic respiratory energy conservation.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "selenate_respiration_anaerobic_respiration",
+                        "predicate": "has input",
+                        "predicate_id": "RO:0002233",
+                        "object": "selenate_respiration_terminal_acceptor",
+                        "description": "Anaerobically grown selenate-respiring bacteria use selenate as a terminal electron acceptor.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                1,
+                                "Narasingarao and Haggblom report organisms capable of using selenate as a terminal electron acceptor during anaerobic growth.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "selenate_respiration_anaerobic_respiration",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "selenate_respiration_trait",
+                        "description": "Anaerobic respiratory growth coupling organic electron donors to selenate reduction defines selenate-respiring bacteria and confers the selenate respiration phenotype.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                3,
+                                "Narasingarao and Haggblom characterize Sedimenticola selenatireducens strain AK4OH1T as a novel selenate-respiring bacterium.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    if rel_path == "data/traits/morphology/holdfast.yaml":
+        return [
+            {
+                "graph_id": "holdfast_polar_adhesion_sketch",
+                "title": "Polar holdfast adhesin synthesis and permanent surface attachment",
+                "description": (
+                    "Evidence-backed morphological mechanism sketch linking "
+                    "polar adhesin synthesis at the cell pole and biofilm "
+                    "surface attachment to the holdfast phenotype."
+                ),
+                "scope_status": "NONMECHANISTIC",
+                "scope_notes": (
+                    "Localization-and-process sketch backed by DOI:10.1128/jb.00276-19 "
+                    "and DOI:10.1128/jb.00273-22; strain-matched UniProtKB protein "
+                    "examples for Caulobacter vibrioides holdfast synthesis and "
+                    "anchor proteins HfsDAB (UniProtKB:Q9A5V2) and HfaABD remain "
+                    "to be curated."
+                ),
+                "nodes": [
+                    {
+                        "node_id": "holdfast_trait",
+                        "label": "holdfast",
+                        "node_type": "TRAIT",
+                        "grounding": "traitmech:000184",
+                        "description": "Morphological trait in which a bacterial cell produces a polar polysaccharide-rich adhesive holdfast structure that mediates permanent attachment to surfaces.",
+                    },
+                    {
+                        "node_id": "holdfast_biofilm_formation",
+                        "label": "biofilm formation",
+                        "node_type": "BIOLOGICAL_PROCESS",
+                        "grounding": "GO:0042710",
+                        "description": "Permanent bacterial attachment to exogenous surfaces and biofilm formation mediated by the polar holdfast adhesin.",
+                    },
+                    {
+                        "node_id": "holdfast_cell_pole",
+                        "label": "cell pole",
+                        "node_type": "CELLULAR_LOCALIZATION",
+                        "grounding": "GO:0060187",
+                        "description": "Bacterial cell pole where the polysaccharide-based holdfast adhesin is secreted and anchored.",
+                    },
+                ],
+                "edges": [
+                    {
+                        "subject": "holdfast_biofilm_formation",
+                        "predicate": "occurs in",
+                        "predicate_id": "biolink:occurs_in",
+                        "object": "holdfast_cell_pole",
+                        "description": "Caulobacter crescentus synthesizes the polysaccharide-based holdfast adhesin at one of its cell poles to enable tight attachment to exogenous surfaces.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                0,
+                                "Hershey et al. state that Caulobacter crescentus synthesizes a polysaccharide-based adhesin known as the holdfast at one of its cell poles, where it enables tight attachment to exogenous surfaces.",
+                            )
+                        ],
+                    },
+                    {
+                        "subject": "holdfast_biofilm_formation",
+                        "predicate": "confers",
+                        "predicate_id": "METPO:2007700",
+                        "object": "holdfast_trait",
+                        "description": "Production of the specialized polar holdfast adhesin required for permanent attachment to surfaces confers the holdfast trait.",
+                        "evidence": [
+                            _ev_item(
+                                doc,
+                                2,
+                                "Chepkwony et al. state that Caulobacterales produce a specialized polar adhesin, the holdfast, that is required for permanent attachment to surfaces.",
+                            )
+                        ],
+                    },
+                ],
+            }
+        ]
+
+    raise KeyError(f"Unexpected Cohort N path: {rel_path}")
+
+
+def build_cohort_n_discussion(rel_path: str, doc: dict[str, Any], graph_id: str) -> dict[str, Any]:
+    """Construct the CURATION_TODO DiscussionItem for a Cohort N record."""
+    slug = Path(rel_path).stem.replace("_", "-")
+    prompt, rationale, ev_index = COHORT_N_PROTEIN_GAPS[rel_path]
+    ev_list = doc.get("evidence") or []
+    supporting_ev: list[dict[str, str]] = []
+    if len(ev_list) > ev_index and isinstance(ev_list[ev_index], dict):
+        src = ev_list[ev_index]
+        ref = str(src.get("reference") or "").strip()
+        snip = str(src.get("snippet") or "").strip()
+        if ref and snip:
+            supporting_ev.append(
+                {
+                    "reference": ref,
+                    "supports": "PARTIAL",
+                    "snippet": snip,
+                    "explanation": (
+                        "Existing record-level evidence supports the connected "
+                        "NONMECHANISTIC pathway/function graph but does not provide "
+                        "strain-matched UniProtKB protein accessions for protein_examples."
+                    ),
+                }
+            )
+    discussion: dict[str, Any] = {
+        "discussion_id": f"{slug}-protein-example-gap",
+        "prompt": prompt,
+        "kind": "CURATION_TODO",
+        "status": "OPEN",
+        "attaches_to": [f"causal_graphs#{graph_id}"],
+        "rationale": rationale,
+        "posed_by": CURATOR,
+        "posed_date": POSED_DATE_C11,
+    }
+    if supporting_ev:
+        discussion["evidence"] = supporting_ev
+    return discussion
+
+
 def process_all(apply: bool = False) -> tuple[int, int]:
-    """Process Cohort A through M records. Returns (graphs_added, gaps_added)."""
+    """Process Cohort A through N records. Returns (graphs_added, gaps_added)."""
     graphs_added = 0
     gaps_added = 0
 
@@ -5914,6 +6271,90 @@ def process_all(apply: bool = False) -> tuple[int, int]:
             if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
                 d["status"] = "RESOLVED"
                 d["resolved_date"] = POSED_DATE_C10
+                d["attaches_to"] = [f"causal_graphs#{graph_id}"]
+                d["resolution_note"] = (
+                    f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "
+                    "anchored on existing verbatim record evidence snippets, and "
+                    "tracked the remaining strain-matched UniProtKB protein-example "
+                    f"requirement in {disc_id}."
+                )
+        if matched:
+            for idx, d in enumerate(existing_disc):
+                if isinstance(d, dict) and d.get("discussion_id") == disc_id:
+                    existing_disc[idx] = disc
+            doc["discussions"] = existing_disc
+        else:
+            existing_disc.append(disc)
+            doc["discussions"] = existing_disc
+            scope_status = graphs[0]["scope_status"]
+            record_curation_event(
+                doc,
+                action=CURATION_ACTION_GRAPH,
+                curator=CURATOR,
+                changes=(
+                    f"Added {scope_status} causal_graphs entry ({graph_id}) "
+                    f"and OPEN CURATION_TODO discussion ({disc_id}) anchored on "
+                    "existing verbatim record evidence snippets."
+                ),
+                llm_assisted=True,
+            )
+        errors = validate_trait(doc)
+        if errors:
+            raise ValidationFailedError(path, errors)
+        if apply:
+            write_validated_trait(doc, path)
+        graphs_added += 1
+
+    for rel_path in COHORT_N_PATHS:
+        path = REPO_ROOT / rel_path
+        doc = yaml.safe_load(path.read_text(encoding="utf-8"))
+        graphs = build_cohort_n_graphs(rel_path, doc)
+        graph_id = graphs[0]["graph_id"]
+        disc = build_cohort_n_discussion(rel_path, doc, graph_id)
+        disc_id = disc["discussion_id"]
+        existing_disc = doc.get("discussions") or []
+        matched = [
+            d for d in existing_disc if isinstance(d, dict) and d.get("discussion_id") == disc_id
+        ]
+        existing_graphs = doc.get("causal_graphs") or []
+        source_gap_id = f"{path.stem.replace('_', '-')}-causal-graph-source-gap"
+        open_source_gaps = [
+            d
+            for d in existing_disc
+            if isinstance(d, dict)
+            and d.get("discussion_id") == source_gap_id
+            and (d.get("status") == "OPEN" or d.get("attaches_to") != [f"causal_graphs#{graph_id}"])
+        ]
+        if existing_graphs == graphs and matched and matched[0] == disc and not open_source_gaps:
+            continue
+        if (
+            len(existing_graphs) == 1
+            and existing_graphs[0].get("graph_id") == graph_id
+            and matched
+            and matched[0].get("kind") == "CURATION_TODO"
+            and matched[0].get("attaches_to") == [f"causal_graphs#{graph_id}"]
+            and not open_source_gaps
+            and (
+                (
+                    existing_graphs[0].get("scope_status") == "MECHANISTIC"
+                    and matched[0].get("status") == "RESOLVED"
+                    and matched[0].get("resolution_note")
+                )
+                or (
+                    existing_graphs == graphs
+                    and matched[0].get("status") == "OPEN"
+                    and matched[0].get("notes")
+                )
+            )
+        ):
+            _verify_graph_invariants(rel_path, doc, existing_graphs)
+            continue
+        _verify_graph_invariants(rel_path, doc, graphs)
+        doc["causal_graphs"] = graphs
+        for d in existing_disc:
+            if isinstance(d, dict) and d.get("discussion_id") == source_gap_id:
+                d["status"] = "RESOLVED"
+                d["resolved_date"] = POSED_DATE_C11
                 d["attaches_to"] = [f"causal_graphs#{graph_id}"]
                 d["resolution_note"] = (
                     f"Added connected NONMECHANISTIC causal_graphs entry ({graph_id}) "

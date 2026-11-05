@@ -22,8 +22,8 @@
       "LUMP_INTO_PARENT": 0,
       "CURATE_ROOT_WITH_SUBTYPES": 13,
       "ADD_CANONICAL_EXAMPLES": 102,
-      "BUILD_CAUSAL_GRAPH": 236,
-      "DEEPEN_CAUSAL_GRAPH": 432,
+      "BUILD_CAUSAL_GRAPH": 232,
+      "DEEPEN_CAUSAL_GRAPH": 436,
       "ALREADY_DEEP": 59,
       "CURATE_ROOT": 159
     }
@@ -5695,29 +5695,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000182",
-      "label": "citrate fermentation",
-      "category": "metabolism",
-      "slug": "citrate_fermentation",
-      "score": 28.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25",
-        "no synonyms +3"
-      ]
-    },
-    {
       "identifier": "traitmech:000185",
       "label": "akinete",
       "category": "morphology",
@@ -7522,72 +7499,6 @@
       ]
     },
     {
-      "identifier": "traitmech:000180",
-      "label": "acetone-butanol-ethanol fermentation",
-      "category": "metabolism",
-      "slug": "acetone_butanol_ethanol_fermentation",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000202",
-      "label": "selenate respiration",
-      "category": "metabolism",
-      "slug": "selenate_respiration",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
-      "identifier": "traitmech:000184",
-      "label": "holdfast",
-      "category": "morphology",
-      "slug": "holdfast",
-      "score": 25.0,
-      "action": "BUILD_CAUSAL_GRAPH",
-      "edges": 0,
-      "nodes": 0,
-      "components": 0,
-      "orphans": 0,
-      "examples": 1,
-      "canonical_examples_reviewed_empty": false,
-      "children": 0,
-      "series": null,
-      "series_size": 0,
-      "series_overlap": null,
-      "researched": false,
-      "reasons": [
-        "no causal graph +25"
-      ]
-    },
-    {
       "identifier": "METPO:1007084",
       "label": "catalase negative",
       "category": "other",
@@ -8319,6 +8230,29 @@
       "researched": false,
       "reasons": [
         "thin graph (5 edges) +12",
+        "no synonyms +3"
+      ]
+    },
+    {
+      "identifier": "traitmech:000182",
+      "label": "citrate fermentation",
+      "category": "metabolism",
+      "slug": "citrate_fermentation",
+      "score": 15.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12",
         "no synonyms +3"
       ]
     },
@@ -14536,6 +14470,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000180",
+      "label": "acetone-butanol-ethanol fermentation",
+      "category": "metabolism",
+      "slug": "acetone_butanol_ethanol_fermentation",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000195",
       "label": "arsenate respiration",
       "category": "metabolism",
@@ -14778,6 +14734,28 @@
       ]
     },
     {
+      "identifier": "traitmech:000202",
+      "label": "selenate respiration",
+      "category": "metabolism",
+      "slug": "selenate_respiration",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
+      ]
+    },
+    {
       "identifier": "traitmech:000115",
       "label": "starch degradation",
       "category": "metabolism",
@@ -14973,6 +14951,28 @@
       "researched": true,
       "reasons": [
         "5 components +12"
+      ]
+    },
+    {
+      "identifier": "traitmech:000184",
+      "label": "holdfast",
+      "category": "morphology",
+      "slug": "holdfast",
+      "score": 12.0,
+      "action": "DEEPEN_CAUSAL_GRAPH",
+      "edges": 2,
+      "nodes": 3,
+      "components": 1,
+      "orphans": 0,
+      "examples": 1,
+      "canonical_examples_reviewed_empty": false,
+      "children": 0,
+      "series": null,
+      "series_size": 0,
+      "series_overlap": null,
+      "researched": false,
+      "reasons": [
+        "thin graph (2 edges) +12"
       ]
     },
     {

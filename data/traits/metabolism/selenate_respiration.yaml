@@ -53,9 +53,9 @@ discussions:
     (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing
     causal_graphs.
   kind: KNOWLEDGE_GAP
-  status: OPEN
+  status: RESOLVED
   attaches_to:
-  - causal_graphs
+  - causal_graphs#selenate_respiration_reduction_sketch
   rationale: The current record carries strain-isolation and terminal-electron-acceptor
     snippets (DOI:10.1128/aem.60.8.3011-3019.1994, DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011)
     without enzymatic reductase or selenite-product quotes.
@@ -70,6 +70,34 @@ discussions:
       diagnostic or organismal occurrence, but lacks multiple distinct pathway/enzyme
       quotes and strain-matched UniProtKB protein accessions needed for a connected
       causal graph.
+  resolved_date: '2026-11-05'
+  resolution_note: Added connected NONMECHANISTIC causal_graphs entry (selenate_respiration_reduction_sketch)
+    anchored on existing verbatim record evidence snippets, and tracked the remaining
+    strain-matched UniProtKB protein-example requirement in selenate-respiration-protein-example-gap.
+- discussion_id: selenate-respiration-protein-example-gap
+  prompt: Add strain-matched UniProtKB protein_examples for periplasmic selenate reductase
+    SerABC in Sedimenticola selenatireducens DSM 17993 (NCBITaxon:1111735) or Thauera
+    selenatis so selenate_respiration_reduction_sketch can be promoted from NONMECHANISTIC
+    to MECHANISTIC.
+  kind: CURATION_TODO
+  status: OPEN
+  attaches_to:
+  - causal_graphs#selenate_respiration_reduction_sketch
+  rationale: The record's primary literature (DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011,
+    DOI:10.1111/j.1574-6976.1999.tb00414.x) establishes anaerobic respiratory reduction
+    of selenate as a terminal electron acceptor in Sedimenticola selenatireducens
+    AK4OH1T (DSM 17993, NCBITaxon:1111735), but strain-matched UniProtKB accessions
+    on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.
+  posed_by: claude
+  posed_date: '2026-11-05'
+  evidence:
+  - reference: DOI:10.1016/j.syapm.2005.12.011
+    supports: PARTIAL
+    snippet: Here we characterize a novel selenate-respiring bacterium, strain AK4OH1,
+      isolated from an estuarine sediment enrichment culture
+    explanation: Existing record-level evidence supports the connected NONMECHANISTIC
+      pathway/function graph but does not provide strain-matched UniProtKB protein
+      accessions for protein_examples.
 curation_history:
 - timestamp: '2026-09-15T03:22:39Z'
   curator: codex
@@ -85,3 +113,67 @@ curation_history:
   changes: Recorded OPEN KNOWLEDGE_GAP discussion (selenate-respiration-causal-graph-source-gap)
     attached to causal_graphs documenting the source-limited mechanism gap.
   llm_assisted: true
+- timestamp: '2026-11-05T06:45:35Z'
+  curator: claude
+  action: CURATE_CAUSAL_GRAPH
+  changes: Added NONMECHANISTIC causal_graphs entry (selenate_respiration_reduction_sketch)
+    and OPEN CURATION_TODO discussion (selenate-respiration-protein-example-gap) anchored
+    on existing verbatim record evidence snippets.
+  llm_assisted: true
+causal_graphs:
+- graph_id: selenate_respiration_reduction_sketch
+  title: Anaerobic respiratory electron transport with selenate as terminal electron
+    acceptor
+  description: Evidence-backed metabolic mechanism sketch linking anaerobic respiratory
+    electron transport with selenate terminal electron acceptors to the selenate respiration
+    phenotype.
+  scope_status: NONMECHANISTIC
+  scope_notes: Process-and-acceptor sketch backed by DOI:10.1128/AEM.02737-06 and
+    DOI:10.1016/j.syapm.2005.12.011; strain-matched UniProtKB protein examples for
+    periplasmic selenate reductase SerABC in Sedimenticola selenatireducens DSM 17993
+    (NCBITaxon:1111735) remain to be curated.
+  nodes:
+  - node_id: selenate_respiration_trait
+    label: selenate respiration
+    node_type: TRAIT
+    grounding: traitmech:000202
+    description: Anaerobic respiration phenotype in which a microorganism uses selenate
+      (SeO4^2-) as the terminal electron acceptor to support growth.
+  - node_id: selenate_respiration_anaerobic_respiration
+    label: anaerobic respiration
+    node_type: BIOLOGICAL_PROCESS
+    grounding: GO:0009061
+    description: Anaerobic respiratory electron transport coupling electron donor
+      oxidation to the dissimilatory reduction of selenate to selenite or elemental
+      selenium.
+  - node_id: selenate_respiration_terminal_acceptor
+    label: terminal electron acceptor
+    node_type: CHEMICAL
+    grounding: METPO:1007504
+    description: Oxyanion terminal electron acceptor (selenate) reduced during anaerobic
+      respiratory energy conservation.
+  edges:
+  - subject: selenate_respiration_anaerobic_respiration
+    predicate: has input
+    predicate_id: RO:0002233
+    object: selenate_respiration_terminal_acceptor
+    description: Anaerobically grown selenate-respiring bacteria use selenate as a
+      terminal electron acceptor.
+    evidence:
+    - reference: DOI:10.1128/AEM.02737-06
+      snippet: use selenate as a terminal electron acceptor
+      notes: Narasingarao and Haggblom report organisms capable of using selenate
+        as a terminal electron acceptor during anaerobic growth.
+  - subject: selenate_respiration_anaerobic_respiration
+    predicate: confers
+    predicate_id: METPO:2007700
+    object: selenate_respiration_trait
+    description: Anaerobic respiratory growth coupling organic electron donors to
+      selenate reduction defines selenate-respiring bacteria and confers the selenate
+      respiration phenotype.
+    evidence:
+    - reference: DOI:10.1016/j.syapm.2005.12.011
+      snippet: Here we characterize a novel selenate-respiring bacterium, strain AK4OH1,
+        isolated from an estuarine sediment enrichment culture
+      notes: Narasingarao and Haggblom characterize Sedimenticola selenatireducens
+        strain AK4OH1T as a novel selenate-respiring bacterium.
