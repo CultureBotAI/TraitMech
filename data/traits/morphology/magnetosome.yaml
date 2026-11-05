@@ -349,7 +349,7 @@ curation_history:
   curator: claude
   action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
   changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.99 (Uebe
-    & Schüler 2016, already present on causal_graphs[0].edges[9].evidence[0]) to record-level
-    evidence[0] to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-006
+    & Schüler 2016 Europe PMC abstract, ACT-C10S4-DEF-SRC-006) to record-level evidence[0]
+    to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-006
     in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

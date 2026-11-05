@@ -178,8 +178,8 @@ curation_history:
 - timestamp: '2026-11-04T23:20:00Z'
   curator: claude
   action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
-  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro2405 (Kearns 2010,
-    already present on causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0]
-    to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-013
-    in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro2405 (Kearns 2010
+    Europe PMC abstract, ACT-C10S4-DEF-SRC-013) to record-level evidence[0] to match
+    definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-013 in group
+    G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

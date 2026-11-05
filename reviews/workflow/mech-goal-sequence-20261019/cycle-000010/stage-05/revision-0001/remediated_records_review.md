@@ -70,7 +70,7 @@ All 14 remediated records pass strict closed-mode LinkML validation, preserve ex
 
 minor / resolved / confirmed; issue key: capsule-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-001 on data/traits/morphology/capsule.yaml (traitmech:000063): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.50.1.285 with the verified Europe PMC abstract quote ('Many bacteria are surrounded by a polysaccharide layer outside the outer membrane of Gram-negative bacteria and the peptidoglycan layer of Gram-positive bacteria.') (Roberts reviews the biochemistry, genetics, group I-IV classification, export/assembly pathways (Wzx/Wzy and ABC transporter systems), and virulence roles of bacterial polysaccharide capsules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-001 on data/traits/morphology/capsule.yaml (traitmech:000063): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.50.1.285 with the verified Europe PMC abstract quote ('They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding the cell that may be further organized into a distinct structure termed a capsule.') (Roberts, "The biochemistry and genetics of capsular polysaccharide production in bacteria", treats the capsule as an organized external polysaccharide layer.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -78,7 +78,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: carboxysome-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-002 on data/traits/morphology/carboxysome.yaml (traitmech:000072): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2018.10 with the verified Europe PMC abstract quote ('Bacterial microcompartments (BMCs) are self-assembling organelles that consist of an enzymatic core that is encapsulated by a selectively permeable protein shell.') (Kerfeld et al. review bacterial microcompartments, with detailed coverage of alpha- and beta-carboxysome shell architecture (BMC-H, BMC-T, BMC-P), RuBisCO/carbonic anhydrase encapsulation, and CO2-concentrating function.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-002 on data/traits/morphology/carboxysome.yaml (traitmech:000072): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2018.10 with the verified Europe PMC abstract quote ('Bacterial microcompartments (BMCs) are self-assembling organelles that consist of an enzymatic core that is encapsulated by a selectively permeable protein shell. The potential to form BMCs is widespread and found across the kingdom Bacteria. BMCs have crucial roles in carbon dioxide fixation in autotrophs and the catabolism of organic substrates in heterotrophs.') (Kerfeld et al. review bacterial microcompartments; the carboxysome is the archetypal protein-shelled CO2-fixing microcompartment.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -86,7 +86,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: gas-vesicle-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-003 on data/traits/morphology/gas_vesicle.yaml (traitmech:000070): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro2834 with the verified Europe PMC abstract quote ('Gas vesicles are hollow, proteinaceous structures that are filled with gas and allow halophilic and methanogenic archaea as well as photosynthetic and heterotrophic bacteria to thrive at vertical positions with favourable growth conditions in watery environments.') (Pfeifer reviews the structure, gvp gene clusters, GvpA/GvpC shell assembly, regulation, and buoyancy function of bacterial and archaeal gas vesicles.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-003 on data/traits/morphology/gas_vesicle.yaml (traitmech:000070): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro2834 with the verified Europe PMC abstract quote ('A range of bacteria and archaea produce intracellular gas-filled proteinaceous structures that function as flotation devices in order to maintain a suitable depth in the aqueous environment.') (Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous flotation structures in bacteria and archaea.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -94,7 +94,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: heterocyst-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-004 on data/traits/morphology/heterocyst.yaml (traitmech:000073): populated record-level evidence[0].snippet for definition_source DOI:10.1101/cshperspect.a000315 with the verified Europe PMC abstract quote ('Heterocysts are terminally differentiated nitrogen-fixing cells formed at semiregular intervals along filaments of certain cyanobacteria, such as Anabaena (Nostoc) sp. strain PCC 7120, when fixed nitrogen is limiting.') (Kumar, Mella-Herrera &amp; Golden review cyanobacterial heterocyst differentiation, NtcA/HetR regulatory control, PatS/HetN spacing, envelope glycolipid/polysaccharide layers, and microoxic nitrogen fixation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-004 on data/traits/morphology/heterocyst.yaml (traitmech:000073): populated record-level evidence[0].snippet for definition_source DOI:10.1101/cshperspect.a000315 with the verified Europe PMC abstract quote ('Many multicellular cyanobacteria produce specialized nitrogen-fixing heterocysts. During diazotrophic growth of the model organism Anabaena (Nostoc) sp. strain PCC 7120, a regulated developmental pattern of single heterocysts separated by about 10 to 20 photosynthetic vegetative cells is maintained along filaments. Heterocyst structure and metabolic activity function together to accommodate the oxygen-sensitive process of nitrogen fixation.') (Kumar, Mella-Herrera &amp; Golden describe heterocysts as differentiated cells whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -102,7 +102,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: intracellular-inclusion-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-005 on data/traits/morphology/intracellular_inclusion.yaml (traitmech:000066): populated record-level evidence[0].snippet for definition_source DOI:10.1038/s41579-020-0413-0 with the verified Europe PMC abstract quote ('Prokaryotes synthesize diverse intracellular nanostructures and bodies to compartmentalize metabolic pathways, store reserves and enhance survival under stress.') (Greening &amp; Lithgow review the biogenesis, classification, and physiological functions of prokaryotic intracellular inclusions, storage granules, and microcompartments across bacteria and archaea.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-005 on data/traits/morphology/intracellular_inclusion.yaml (traitmech:000066): populated record-level evidence[0].snippet for definition_source DOI:10.1038/s41579-020-0413-0 with the verified Europe PMC abstract quote ('Advances in imaging technologies have revealed that many bacteria possess organelles with a proteomically defined lumen and a macromolecular boundary. Some are bound by a lipid bilayer (such as thylakoids, magnetosomes and anammoxosomes), whereas others are defined by a lipid monolayer (such as lipid bodies), a proteinaceous coat (such as carboxysomes) or have a phase-defined boundary (such as nucleolus-like compartments).') (Greening &amp; Lithgow, "Formation and function of bacterial organelles", establish that bacteria contain diverse inclusions/organelles (storage granules, gas vesicles, microcompartments, magnetosomes); parent of the inclusion sub-variants.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -110,7 +110,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: magnetosome-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-006 on data/traits/morphology/magnetosome.yaml (traitmech:000071): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2016.99 with the verified Europe PMC abstract quote ('Magnetotactic bacteria (MTB) orient and navigate along geomagnetic field lines, a behaviour that is enabled by magnetosomes — unique intracellular organelles that consist of magnetic iron mineral crystals enclosed by a specialized membrane bilayer.') (Uebe &amp; Schüler review magnetosome membrane invagination, iron uptake and biomineralization, MamK/MamJ chain assembly, and magnetotactic navigation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-006 on data/traits/morphology/magnetosome.yaml (traitmech:000071): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro.2016.99 with the verified Europe PMC abstract quote ('Magnetotactic bacteria derive their magnetic orientation from magnetosomes, which are unique organelles that contain nanometre-sized crystals of magnetic iron minerals.') (Uebe &amp; Schüler review magnetosome biogenesis as the formation of membrane-bounded magnetic-mineral organelles in magnetotactic bacteria.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -118,7 +118,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: mycelial-growth-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-007 on data/traits/morphology/mycelial_growth.yaml (traitmech:000074): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro1968 with the verified Europe PMC abstract quote ('Streptomycetes are filamentous bacteria that grow by tip extension and hyphal branching to form a dense vegetative mycelium.') (Flärdh &amp; Buttner review polar tip extension, DivIVA polarisome function, lateral branching, vegetative vs. aerial mycelium differentiation, and sporulation in Streptomyces.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-007 on data/traits/morphology/mycelial_growth.yaml (traitmech:000074): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro1968 with the verified Europe PMC abstract quote ('Not only are the bacterial cytoskeleton and the machineries for cell-wall assembly, cell division and chromosome segregation reorganized during sporulation, but the developmental programme of these fascinating organisms also has many unusual elements, including the formation of a sporulating aerial mycelium and the production of a surfactant peptide and a hydrophobic sheath that allow cells to escape from the surface tension of the growth medium.') (Flärdh &amp; Buttner describe Streptomyces growth as a branching hyphal mycelium with subsequent morphological differentiation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -126,7 +126,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: polyhydroxyalkanoate-granule-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-008 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml (traitmech:000067): populated record-level evidence[0].snippet for definition_source DOI:10.1128/mr.54.4.450-472.1990 with the verified Europe PMC abstract quote ('Polyhydroxyalkanoates (PHAs) are polyesters of various hydroxyalkanoates that are synthesized by numerous microorganisms and accumulated as intracellular carbon and energy storage granules.') (Anderson &amp; Dawes review the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic pathway, and physiological regulation of bacterial polyhydroxyalkanoate storage granules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-008 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml (traitmech:000067): populated record-level evidence[0].snippet for definition_source DOI:10.1128/mr.54.4.450-472.1990 with the verified Europe PMC abstract quote ('Polyhydroxyalkanoates (PHAs), of which polyhydroxybutyrate (PHB) is the most abundant, are bacterial carbon and energy reserve materials of widespread occurrence. They are composed of 3-hydroxyacid monomer units and exist as a small number of cytoplasmic granules per cell.') (Anderson &amp; Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy reserves stored as cytoplasmic granules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -134,7 +134,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: polyphosphate-granule-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-009 on data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.biochem.77.083007.093039 with the verified Europe PMC abstract quote ('Inorganic polyphosphate (poly P) is a linear polymer of many tens or hundreds of orthophosphate (Pi) residues linked by high-energy phosphoanhydride bonds.') (Rao, Gómez-García &amp; Kornberg review polyphosphate kinases (PPK1, PPK2), exopolyphosphatase (PPX), polyphosphate granule storage, and physiological roles in stress survival, motility, and virulence.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-009 on data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.biochem.77.083007.093039 with the verified Europe PMC abstract quote ('Inorganic polyphosphate (Poly P) is a polymer of tens to hundreds of phosphate residues linked by "high-energy" phosphoanhydride bonds as in ATP. Found in abundance in all cells in nature, it is unique in its likely role in the origin and survival of species.') (Rao, Gómez-García &amp; Kornberg review inorganic polyphosphate, accumulated as granules, as a phosphate/energy reserve essential for growth and survival.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -142,7 +142,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: prosthecate-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-010 on data/traits/morphology/prosthecate.yaml (traitmech:000065): populated record-level evidence[0].snippet for definition_source DOI:10.1111/j.1365-2958.2007.05633.x with the verified Europe PMC abstract quote ('Prosthecae are narrow extensions of the bacterial cell wall that contain cytoplasm and are bounded by the cell envelope.') (Wagner &amp; Brun review the structure, peptidoglycan synthesis, developmental regulation, and nutrient-acquisition role of bacterial prosthecae (stalks).), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-010 on data/traits/morphology/prosthecate.yaml (traitmech:000065): populated record-level evidence[0].snippet for definition_source DOI:10.1111/j.1365-2958.2007.05633.x with the verified Europe PMC abstract quote ('One remarkable example of bacterial morphogenesis is the elaboration of long, tubular extensions of the cell envelope of certain aquatic bacteria. These appendages (also called prosthecae or stalks) possess features that make them particularly amenable models for experiments designed to uncover general principles of cell morphogenesis and of cell shape function.') (Wagner &amp; Brun describe the Caulobacter stalk (prostheca) as a cell-envelope extension and a specialized form of cell elongation aiding nutrient uptake.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -150,7 +150,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: s-layer-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-011 on data/traits/morphology/s_layer.yaml (traitmech:000064): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro3213 with the verified Europe PMC abstract quote ('Surface layers (S-layers) are two-dimensional crystalline arrays of protein or glycoprotein subunits that form the outermost cell envelope component of many bacteria and almost all archaea.') (Fagan &amp; Fairweather review S-layer protein secretion, cell-wall anchoring (SLH and CWB2 domains), self-assembly into paracrystalline lattices, and functional roles across Bacteria and Archaea.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-011 on data/traits/morphology/s_layer.yaml (traitmech:000064): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro3213 with the verified Europe PMC abstract quote ('The outer surface of many archaea and bacteria is coated with a proteinaceous surface layer (known as an S-layer), which is formed by the self-assembly of monomeric proteins into a regularly spaced, two-dimensional array.') (Fagan &amp; Fairweather describe the S-layer as a self-assembled, regularly spaced two-dimensional protein array coating the cell surface.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -158,7 +158,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: sulfur-globule-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-012 on data/traits/morphology/sulfur_globule.yaml (traitmech:000069): populated record-level evidence[0].snippet for definition_source DOI:10.1016/S0065-2911(08)00002-7 with the verified Europe PMC abstract quote ('Many sulfur-oxidizing bacteria form globules of elemental sulfur as an obligate or facultative intermediate during the oxidation of reduced inorganic sulfur compounds such as sulfide and thiosulfate.') (Frigaard &amp; Dahl review the biogenesis, SgpA/SgpB/SgpC protein envelope, chemical speciation, and Dsr-mediated oxidation of bacterial sulfur globules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-012 on data/traits/morphology/sulfur_globule.yaml (traitmech:000069): populated record-level evidence[0].snippet for definition_source DOI:10.1016/S0065-2911(08)00002-7 with the verified Europe PMC abstract quote ('Phototrophic sulfur bacteria are characterized by oxidizing various inorganic sulfur compounds for use as electron donors in carbon dioxide fixation during anoxygenic photosynthetic growth. These bacteria are divided into the purple sulfur bacteria (PSB) and the green sulfur bacteria (GSB). They utilize various combinations of sulfide, elemental sulfur, and thiosulfate and sometimes also ferrous iron and hydrogen as electron donors.') (Frigaard &amp; Dahl describe sulfur globules as sulfur-storage inclusions formed during oxidative sulfur metabolism in phototrophic sulfur bacteria.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -166,7 +166,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: swarming-motility-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-013 on data/traits/morphology/swarming_motility.yaml (traitmech:000062): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro2405 with the verified Europe PMC abstract quote ('Swarming motility is a rapid, multicellular movement of bacteria across a surface, powered by rotating flagella.') (Kearns reviews bacterial swarming motility, covering hyperflagellation, biosurfactant wetting agents, cell elongation, and surface sensing.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-013 on data/traits/morphology/swarming_motility.yaml (traitmech:000062): populated record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro2405 with the verified Europe PMC abstract quote ('Here, I review the requirements that define swarming motility in diverse bacterial model systems, including an increase in the number of flagella per cell, the secretion of a surfactant to reduce surface tension and allow spreading, and movement in multicellular groups rather than as individuals.') (Kearns, "A field guide to bacterial swarming motility", defines swarming via increased flagella per cell, surfactant secretion, and movement in multicellular groups.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -174,7 +174,7 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 
 minor / resolved / confirmed; issue key: twitching-motility-definition-source-snippet.
 
-Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-014 on data/traits/morphology/twitching_motility.yaml (traitmech:000061): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.56.012302.160938 with the verified Europe PMC abstract quote ('Twitching motility is a mode of surface translocation mediated by the extension, tethering, and retraction of type IV pili.') (Mattick reviews the genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction mechanics, and physiological roles of type IV pili-mediated twitching motility.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
+Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-014 on data/traits/morphology/twitching_motility.yaml (traitmech:000061): populated record-level evidence[0].snippet for definition_source DOI:10.1146/annurev.micro.56.012302.160938 with the verified Europe PMC abstract quote ('Twitching motility is a flagella-independent form of bacterial translocation over moist surfaces. It occurs by the extension, tethering, and then retraction of polar type IV pili, which operate in a manner similar to a grappling hook.') (Mattick, "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven surface translocation operating like a grappling hook.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.
 
 Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS and GitHub issue #2002 via guarded writer scripts/curate_stage5_review_findings.py.
 
@@ -188,20 +188,20 @@ Disposition: Resolved in Cycle 10 Stage 5 (resolve_review_findings) under group 
 | Evidence | Reference / locator | Support | Observation |
 | --- | --- | --- | --- |
 | ev-prior-c10s4-review | reviews/structured/20261104T211500Z-cycle10-stage4-corpus-record-and-cohort-review/review.yaml; findings[0..13] | supports | Immutable Cycle 10 Stage 4 review bundle identifying the 14 open definition_source missing-snippet findings (F-C10S4-DEF-SRC-001..F-C10S4-DEF-SRC-014) across data/traits/morphology/ with planned remediation actions ACT-C10S4-DEF-SRC-001..014. |
-| ev-c10s5-def-src-001 | DOI:10.1146/annurev.micro.50.1.285; Aligned on data/traits/morphology/capsule.yaml evidence[0] (Roberts reviews the biochemistry, genetics, group I-IV classification, export/assembly pathways (Wzx/Wzy and ABC transporter systems), and virulence roles of bacterial polysaccharide capsules.) | supports | Primary definition_source DOI:10.1146/annurev.micro.50.1.285 on data/traits/morphology/capsule.yaml (traitmech:000063, capsule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Roberts reviews the biochemistry, genetics, group I-IV classification, export/assembly pathways (Wzx/Wzy and ABC transporter systems), and virulence roles of bacterial polysaccharide capsules.). |
-| ev-c10s5-def-src-002 | DOI:10.1038/nrmicro.2018.10; Aligned on data/traits/morphology/carboxysome.yaml evidence[0] (Kerfeld et al. review bacterial microcompartments, with detailed coverage of alpha- and beta-carboxysome shell architecture (BMC-H, BMC-T, BMC-P), RuBisCO/carbonic anhydrase encapsulation, and CO2-concentrating function.) | supports | Primary definition_source DOI:10.1038/nrmicro.2018.10 on data/traits/morphology/carboxysome.yaml (traitmech:000072, carboxysome) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kerfeld et al. review bacterial microcompartments, with detailed coverage of alpha- and beta-carboxysome shell architecture (BMC-H, BMC-T, BMC-P), RuBisCO/carbonic anhydrase encapsulation, and CO2-concentrating function.). |
-| ev-c10s5-def-src-003 | DOI:10.1038/nrmicro2834; Aligned on data/traits/morphology/gas_vesicle.yaml evidence[0] (Pfeifer reviews the structure, gvp gene clusters, GvpA/GvpC shell assembly, regulation, and buoyancy function of bacterial and archaeal gas vesicles.) | supports | Primary definition_source DOI:10.1038/nrmicro2834 on data/traits/morphology/gas_vesicle.yaml (traitmech:000070, gas vesicle) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Pfeifer reviews the structure, gvp gene clusters, GvpA/GvpC shell assembly, regulation, and buoyancy function of bacterial and archaeal gas vesicles.). |
-| ev-c10s5-def-src-004 | DOI:10.1101/cshperspect.a000315; Aligned on data/traits/morphology/heterocyst.yaml evidence[0] (Kumar, Mella-Herrera &amp; Golden review cyanobacterial heterocyst differentiation, NtcA/HetR regulatory control, PatS/HetN spacing, envelope glycolipid/polysaccharide layers, and microoxic nitrogen fixation.) | supports | Primary definition_source DOI:10.1101/cshperspect.a000315 on data/traits/morphology/heterocyst.yaml (traitmech:000073, heterocyst) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kumar, Mella-Herrera &amp; Golden review cyanobacterial heterocyst differentiation, NtcA/HetR regulatory control, PatS/HetN spacing, envelope glycolipid/polysaccharide layers, and microoxic nitrogen fixation.). |
-| ev-c10s5-def-src-005 | DOI:10.1038/s41579-020-0413-0; Aligned on data/traits/morphology/intracellular_inclusion.yaml evidence[0] (Greening &amp; Lithgow review the biogenesis, classification, and physiological functions of prokaryotic intracellular inclusions, storage granules, and microcompartments across bacteria and archaea.) | supports | Primary definition_source DOI:10.1038/s41579-020-0413-0 on data/traits/morphology/intracellular_inclusion.yaml (traitmech:000066, intracellular inclusion) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Greening &amp; Lithgow review the biogenesis, classification, and physiological functions of prokaryotic intracellular inclusions, storage granules, and microcompartments across bacteria and archaea.). |
-| ev-c10s5-def-src-006 | DOI:10.1038/nrmicro.2016.99; Aligned on data/traits/morphology/magnetosome.yaml evidence[0] (Uebe &amp; Schüler review magnetosome membrane invagination, iron uptake and biomineralization, MamK/MamJ chain assembly, and magnetotactic navigation.) | supports | Primary definition_source DOI:10.1038/nrmicro.2016.99 on data/traits/morphology/magnetosome.yaml (traitmech:000071, magnetosome) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Uebe &amp; Schüler review magnetosome membrane invagination, iron uptake and biomineralization, MamK/MamJ chain assembly, and magnetotactic navigation.). |
-| ev-c10s5-def-src-007 | DOI:10.1038/nrmicro1968; Aligned on data/traits/morphology/mycelial_growth.yaml evidence[0] (Flärdh &amp; Buttner review polar tip extension, DivIVA polarisome function, lateral branching, vegetative vs. aerial mycelium differentiation, and sporulation in Streptomyces.) | supports | Primary definition_source DOI:10.1038/nrmicro1968 on data/traits/morphology/mycelial_growth.yaml (traitmech:000074, mycelial growth) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Flärdh &amp; Buttner review polar tip extension, DivIVA polarisome function, lateral branching, vegetative vs. aerial mycelium differentiation, and sporulation in Streptomyces.). |
-| ev-c10s5-def-src-008 | DOI:10.1128/mr.54.4.450-472.1990; Aligned on data/traits/morphology/polyhydroxyalkanoate_granule.yaml evidence[0] (Anderson &amp; Dawes review the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic pathway, and physiological regulation of bacterial polyhydroxyalkanoate storage granules.) | supports | Primary definition_source DOI:10.1128/mr.54.4.450-472.1990 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml (traitmech:000067, polyhydroxyalkanoate granule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Anderson &amp; Dawes review the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic pathway, and physiological regulation of bacterial polyhydroxyalkanoate storage granules.). |
-| ev-c10s5-def-src-009 | DOI:10.1146/annurev.biochem.77.083007.093039; Aligned on data/traits/morphology/polyphosphate_granule.yaml evidence[0] (Rao, Gómez-García &amp; Kornberg review polyphosphate kinases (PPK1, PPK2), exopolyphosphatase (PPX), polyphosphate granule storage, and physiological roles in stress survival, motility, and virulence.) | supports | Primary definition_source DOI:10.1146/annurev.biochem.77.083007.093039 on data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068, polyphosphate granule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Rao, Gómez-García &amp; Kornberg review polyphosphate kinases (PPK1, PPK2), exopolyphosphatase (PPX), polyphosphate granule storage, and physiological roles in stress survival, motility, and virulence.). |
-| ev-c10s5-def-src-010 | DOI:10.1111/j.1365-2958.2007.05633.x; Aligned on data/traits/morphology/prosthecate.yaml evidence[0] (Wagner &amp; Brun review the structure, peptidoglycan synthesis, developmental regulation, and nutrient-acquisition role of bacterial prosthecae (stalks).) | supports | Primary definition_source DOI:10.1111/j.1365-2958.2007.05633.x on data/traits/morphology/prosthecate.yaml (traitmech:000065, prosthecate) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Wagner &amp; Brun review the structure, peptidoglycan synthesis, developmental regulation, and nutrient-acquisition role of bacterial prosthecae (stalks).). |
-| ev-c10s5-def-src-011 | DOI:10.1038/nrmicro3213; Aligned on data/traits/morphology/s_layer.yaml evidence[0] (Fagan &amp; Fairweather review S-layer protein secretion, cell-wall anchoring (SLH and CWB2 domains), self-assembly into paracrystalline lattices, and functional roles across Bacteria and Archaea.) | supports | Primary definition_source DOI:10.1038/nrmicro3213 on data/traits/morphology/s_layer.yaml (traitmech:000064, S-layer) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Fagan &amp; Fairweather review S-layer protein secretion, cell-wall anchoring (SLH and CWB2 domains), self-assembly into paracrystalline lattices, and functional roles across Bacteria and Archaea.). |
-| ev-c10s5-def-src-012 | DOI:10.1016/S0065-2911(08)00002-7; Aligned on data/traits/morphology/sulfur_globule.yaml evidence[0] (Frigaard &amp; Dahl review the biogenesis, SgpA/SgpB/SgpC protein envelope, chemical speciation, and Dsr-mediated oxidation of bacterial sulfur globules.) | supports | Primary definition_source DOI:10.1016/S0065-2911(08)00002-7 on data/traits/morphology/sulfur_globule.yaml (traitmech:000069, sulfur globule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Frigaard &amp; Dahl review the biogenesis, SgpA/SgpB/SgpC protein envelope, chemical speciation, and Dsr-mediated oxidation of bacterial sulfur globules.). |
-| ev-c10s5-def-src-013 | DOI:10.1038/nrmicro2405; Aligned on data/traits/morphology/swarming_motility.yaml evidence[0] (Kearns reviews bacterial swarming motility, covering hyperflagellation, biosurfactant wetting agents, cell elongation, and surface sensing.) | supports | Primary definition_source DOI:10.1038/nrmicro2405 on data/traits/morphology/swarming_motility.yaml (traitmech:000062, swarming motility) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kearns reviews bacterial swarming motility, covering hyperflagellation, biosurfactant wetting agents, cell elongation, and surface sensing.). |
-| ev-c10s5-def-src-014 | DOI:10.1146/annurev.micro.56.012302.160938; Aligned on data/traits/morphology/twitching_motility.yaml evidence[0] (Mattick reviews the genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction mechanics, and physiological roles of type IV pili-mediated twitching motility.) | supports | Primary definition_source DOI:10.1146/annurev.micro.56.012302.160938 on data/traits/morphology/twitching_motility.yaml (traitmech:000061, twitching motility) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Mattick reviews the genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction mechanics, and physiological roles of type IV pili-mediated twitching motility.). |
+| ev-c10s5-def-src-001 | DOI:10.1146/annurev.micro.50.1.285; Aligned on data/traits/morphology/capsule.yaml evidence[0] (Roberts, "The biochemistry and genetics of capsular polysaccharide production in bacteria", treats the capsule as an organized external polysaccharide layer.) | supports | Primary definition_source DOI:10.1146/annurev.micro.50.1.285 on data/traits/morphology/capsule.yaml (traitmech:000063, capsule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Roberts, "The biochemistry and genetics of capsular polysaccharide production in bacteria", treats the capsule as an organized external polysaccharide layer.). |
+| ev-c10s5-def-src-002 | DOI:10.1038/nrmicro.2018.10; Aligned on data/traits/morphology/carboxysome.yaml evidence[0] (Kerfeld et al. review bacterial microcompartments; the carboxysome is the archetypal protein-shelled CO2-fixing microcompartment.) | supports | Primary definition_source DOI:10.1038/nrmicro.2018.10 on data/traits/morphology/carboxysome.yaml (traitmech:000072, carboxysome) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kerfeld et al. review bacterial microcompartments; the carboxysome is the archetypal protein-shelled CO2-fixing microcompartment.). |
+| ev-c10s5-def-src-003 | DOI:10.1038/nrmicro2834; Aligned on data/traits/morphology/gas_vesicle.yaml evidence[0] (Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous flotation structures in bacteria and archaea.) | supports | Primary definition_source DOI:10.1038/nrmicro2834 on data/traits/morphology/gas_vesicle.yaml (traitmech:000070, gas vesicle) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Pfeifer describes gas vesicles as intracellular gas-filled proteinaceous flotation structures in bacteria and archaea.). |
+| ev-c10s5-def-src-004 | DOI:10.1101/cshperspect.a000315; Aligned on data/traits/morphology/heterocyst.yaml evidence[0] (Kumar, Mella-Herrera &amp; Golden describe heterocysts as differentiated cells whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.) | supports | Primary definition_source DOI:10.1101/cshperspect.a000315 on data/traits/morphology/heterocyst.yaml (traitmech:000073, heterocyst) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kumar, Mella-Herrera &amp; Golden describe heterocysts as differentiated cells whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.). |
+| ev-c10s5-def-src-005 | DOI:10.1038/s41579-020-0413-0; Aligned on data/traits/morphology/intracellular_inclusion.yaml evidence[0] (Greening &amp; Lithgow, "Formation and function of bacterial organelles", establish that bacteria contain diverse inclusions/organelles (storage granules, gas vesicles, microcompartments, magnetosomes); parent of the inclusion sub-variants.) | supports | Primary definition_source DOI:10.1038/s41579-020-0413-0 on data/traits/morphology/intracellular_inclusion.yaml (traitmech:000066, intracellular inclusion) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Greening &amp; Lithgow, "Formation and function of bacterial organelles", establish that bacteria contain diverse inclusions/organelles (storage granules, gas vesicles, microcompartments, magnetosomes); parent of the inclusion sub-variants.). |
+| ev-c10s5-def-src-006 | DOI:10.1038/nrmicro.2016.99; Aligned on data/traits/morphology/magnetosome.yaml evidence[0] (Uebe &amp; Schüler review magnetosome biogenesis as the formation of membrane-bounded magnetic-mineral organelles in magnetotactic bacteria.) | supports | Primary definition_source DOI:10.1038/nrmicro.2016.99 on data/traits/morphology/magnetosome.yaml (traitmech:000071, magnetosome) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Uebe &amp; Schüler review magnetosome biogenesis as the formation of membrane-bounded magnetic-mineral organelles in magnetotactic bacteria.). |
+| ev-c10s5-def-src-007 | DOI:10.1038/nrmicro1968; Aligned on data/traits/morphology/mycelial_growth.yaml evidence[0] (Flärdh &amp; Buttner describe Streptomyces growth as a branching hyphal mycelium with subsequent morphological differentiation.) | supports | Primary definition_source DOI:10.1038/nrmicro1968 on data/traits/morphology/mycelial_growth.yaml (traitmech:000074, mycelial growth) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Flärdh &amp; Buttner describe Streptomyces growth as a branching hyphal mycelium with subsequent morphological differentiation.). |
+| ev-c10s5-def-src-008 | DOI:10.1128/mr.54.4.450-472.1990; Aligned on data/traits/morphology/polyhydroxyalkanoate_granule.yaml evidence[0] (Anderson &amp; Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy reserves stored as cytoplasmic granules.) | supports | Primary definition_source DOI:10.1128/mr.54.4.450-472.1990 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml (traitmech:000067, polyhydroxyalkanoate granule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Anderson &amp; Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy reserves stored as cytoplasmic granules.). |
+| ev-c10s5-def-src-009 | DOI:10.1146/annurev.biochem.77.083007.093039; Aligned on data/traits/morphology/polyphosphate_granule.yaml evidence[0] (Rao, Gómez-García &amp; Kornberg review inorganic polyphosphate, accumulated as granules, as a phosphate/energy reserve essential for growth and survival.) | supports | Primary definition_source DOI:10.1146/annurev.biochem.77.083007.093039 on data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068, polyphosphate granule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Rao, Gómez-García &amp; Kornberg review inorganic polyphosphate, accumulated as granules, as a phosphate/energy reserve essential for growth and survival.). |
+| ev-c10s5-def-src-010 | DOI:10.1111/j.1365-2958.2007.05633.x; Aligned on data/traits/morphology/prosthecate.yaml evidence[0] (Wagner &amp; Brun describe the Caulobacter stalk (prostheca) as a cell-envelope extension and a specialized form of cell elongation aiding nutrient uptake.) | supports | Primary definition_source DOI:10.1111/j.1365-2958.2007.05633.x on data/traits/morphology/prosthecate.yaml (traitmech:000065, prosthecate) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Wagner &amp; Brun describe the Caulobacter stalk (prostheca) as a cell-envelope extension and a specialized form of cell elongation aiding nutrient uptake.). |
+| ev-c10s5-def-src-011 | DOI:10.1038/nrmicro3213; Aligned on data/traits/morphology/s_layer.yaml evidence[0] (Fagan &amp; Fairweather describe the S-layer as a self-assembled, regularly spaced two-dimensional protein array coating the cell surface.) | supports | Primary definition_source DOI:10.1038/nrmicro3213 on data/traits/morphology/s_layer.yaml (traitmech:000064, S-layer) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Fagan &amp; Fairweather describe the S-layer as a self-assembled, regularly spaced two-dimensional protein array coating the cell surface.). |
+| ev-c10s5-def-src-012 | DOI:10.1016/S0065-2911(08)00002-7; Aligned on data/traits/morphology/sulfur_globule.yaml evidence[0] (Frigaard &amp; Dahl describe sulfur globules as sulfur-storage inclusions formed during oxidative sulfur metabolism in phototrophic sulfur bacteria.) | supports | Primary definition_source DOI:10.1016/S0065-2911(08)00002-7 on data/traits/morphology/sulfur_globule.yaml (traitmech:000069, sulfur globule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Frigaard &amp; Dahl describe sulfur globules as sulfur-storage inclusions formed during oxidative sulfur metabolism in phototrophic sulfur bacteria.). |
+| ev-c10s5-def-src-013 | DOI:10.1038/nrmicro2405; Aligned on data/traits/morphology/swarming_motility.yaml evidence[0] (Kearns, "A field guide to bacterial swarming motility", defines swarming via increased flagella per cell, surfactant secretion, and movement in multicellular groups.) | supports | Primary definition_source DOI:10.1038/nrmicro2405 on data/traits/morphology/swarming_motility.yaml (traitmech:000062, swarming motility) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Kearns, "A field guide to bacterial swarming motility", defines swarming via increased flagella per cell, surfactant secretion, and movement in multicellular groups.). |
+| ev-c10s5-def-src-014 | DOI:10.1146/annurev.micro.56.012302.160938; Aligned on data/traits/morphology/twitching_motility.yaml evidence[0] (Mattick, "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven surface translocation operating like a grappling hook.) | supports | Primary definition_source DOI:10.1146/annurev.micro.56.012302.160938 on data/traits/morphology/twitching_motility.yaml (traitmech:000061, twitching motility) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet (Mattick, "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven surface translocation operating like a grappling hook.). |
 | ev-remediated-records | data/traits/morphology/capsule.yaml; data/traits/morphology/carboxysome.yaml; data/traits/morphology/gas_vesicle.yaml; data/traits/morphology/heterocyst.yaml; data/traits/morphology/intracellular_inclusion.yaml; data/traits/morphology/magnetosome.yaml; data/traits/morphology/mycelial_growth.yaml; data/traits/morphology/polyhydroxyalkanoate_granule.yaml; data/traits/morphology/polyphosphate_granule.yaml; data/traits/morphology/prosthecate.yaml; data/traits/morphology/s_layer.yaml; data/traits/morphology/sulfur_globule.yaml; data/traits/morphology/swarming_motility.yaml; data/traits/morphology/twitching_motility.yaml; definition_source, evidence[0], curation_history | supports | All 14 remediated morphology TraitRecord YAML files now carry a verified non-elliptical verbatim snippet in record-level evidence[0].snippet for their declared definition_source DOI and record an append-only ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE curation_history event. |
 | ev-stage5-writer | scripts/curate_stage5_review_findings.py; tests/test_curate_stage5_review_findings.py; process_all | supports | Guarded writer script and unit test suite verifying closed-mode LinkML validation, DO_NOT_WORK exclusion, and idempotent remediation across all 115 target specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5 + 13 Cycle 6 + 15 Cycle 7 + 12 Cycle 8 + 9 Cycle 9 + 14 Cycle 10). |
 | ev-validate-strict | scripts/validate_strict.py; reports/instance_validation_failures.tsv | supports | Closed-mode LinkML schema and identifier validation passes with 0 errors across all 1,130 TraitRecord files. |
@@ -274,46 +274,46 @@ source:
     sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
     role: context
   - path: data/traits/morphology/capsule.yaml
-    sha256: a01202723c37add15896a3d93972b1579248e8d11e37724e159eef2d259fd476
+    sha256: 9368ea661f56b4ac94c9455074a0bbb9c7b0936683f71f9d4ab152ad6ee93076
     role: target
   - path: data/traits/morphology/carboxysome.yaml
-    sha256: 08e80c83c10dd41e27d470519aa276a1e1576432487bca39defc90774c2a6752
+    sha256: 14355749918a16e924013ca2037ac3aeb3cbbd6836ba5840dff05244638597cf
     role: target
   - path: data/traits/morphology/gas_vesicle.yaml
-    sha256: 73689d0f603b573879c5f8942d60ee3ceecea00e5bbec304c5a4b51db6d39b8d
+    sha256: aec635a3cb2b29525bc875d6949b7c7217cbbc1f46b5f139c4adb095b1d32bf2
     role: target
   - path: data/traits/morphology/heterocyst.yaml
-    sha256: aba174bfeefbb211ad84fc296432d870f6b627df6901ec934a3f23a9f5af9ace
+    sha256: f8e1f4d989a4c511e6a742c52b8bb19be776c6df709ba90bc804168fa1b9fb4b
     role: target
   - path: data/traits/morphology/intracellular_inclusion.yaml
-    sha256: 044c2fc8562e499f2c46bf68d4149776045f8f0bb6f98dd5501310f10532f415
+    sha256: 05ac1f59757bc15b8a4fccdbf8b7a5cacf34c1fdb22cf388e2251b5a724a7ce5
     role: target
   - path: data/traits/morphology/magnetosome.yaml
-    sha256: 84789a7ff755b3d4e48174b52fef9a15323dd3abf9d1eb1c868b305a8724439f
+    sha256: 4fc50fa69c225055864a9aba328f92b1e44076994a4a97cfb2ccf83485534e31
     role: target
   - path: data/traits/morphology/mycelial_growth.yaml
-    sha256: 7e6643b29b7af5e880db1a08efb66b0b3fe65a93e59c5a3f49c590c91f99e33f
+    sha256: d8da4544dead1aded24535b569f1fbc23301c84d35290fe78e4cabb2a045935e
     role: target
   - path: data/traits/morphology/polyhydroxyalkanoate_granule.yaml
-    sha256: 37ddf1be7d4a5a97876c0c66e5c57cabf03a0baca1480e5678ca0cd5693ae695
+    sha256: 31d35df19a6ecc1f9d837235df8f96b8d42d7901876dc957cd98dcc4aea021c4
     role: target
   - path: data/traits/morphology/polyphosphate_granule.yaml
-    sha256: 23f27641fb086d537ba21a163e3aa61c982394582603d8918e9a1208ad5ab8e5
+    sha256: 33fe017cdb74efa9909cf5c412ec69d0e9eb2f24677e00d342e16a3505b05ca8
     role: target
   - path: data/traits/morphology/prosthecate.yaml
-    sha256: 54e4d3cea8a5526cf1ff6e98a2a9216de9a40bc9f8d569c777d0e2c0547dbf40
+    sha256: 21ad384649a1514ecb666320eccf6dc9d338282e8c4ef79754017d972ab57266
     role: target
   - path: data/traits/morphology/s_layer.yaml
-    sha256: 2d44b1c614d57c36b8fc8b14a5dc9eda776c97708126fc577e113e763650b9a5
+    sha256: e8cbff2ffab4c089387f648e314f47241eced97dbda65b284885724a3621e260
     role: target
   - path: data/traits/morphology/sulfur_globule.yaml
-    sha256: c11cffdd6704a769778fe7197a34890741da4a196c33fd2c0ae873c0b3a811a1
+    sha256: 5c64b772678d7a95ad542e22daf2cf3a3c3cab8cb8bc54dac0aa171a61f39600
     role: target
   - path: data/traits/morphology/swarming_motility.yaml
-    sha256: 6522c5326c4329d2f84d7dfe32e27b70acff6fc33733606e97195209848165d4
+    sha256: c7748b3685769727ff1b5b5785765661f03dd23cf7709bd98c10ee681c110bfa
     role: target
   - path: data/traits/morphology/twitching_motility.yaml
-    sha256: d79325768f28c81d35a1bd309a092abd54f78f532935c27126a5735ddd82d317
+    sha256: da08866cc7b730f501e4089b45dd168a7e09bc87cc08f6427ae0172fa07438d6
     role: target
   - path: docs/record-review-profile.md
     sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
@@ -334,7 +334,7 @@ source:
     sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
     role: context
   - path: scripts/curate_stage5_review_findings.py
-    sha256: 6a4eee55337a5b10cb703b98ef38c1ff0ac5d87efc0ec31231aee1b6609284e4
+    sha256: 85aa96a9cbd0c24defbd510228800def4303c1556cc5e9005d68633755a3e8de
     role: context
   - path: src/traitmech/schema/traitmech.yaml
     sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
@@ -634,232 +634,244 @@ evidence:
 - evidence_id: ev-c10s5-def-src-001
   kind: primary_source
   reference: DOI:10.1146/annurev.micro.50.1.285
-  locator: Aligned on data/traits/morphology/capsule.yaml evidence[0] (Roberts reviews
-    the biochemistry, genetics, group I-IV classification, export/assembly pathways
-    (Wzx/Wzy and ABC transporter systems), and virulence roles of bacterial polysaccharide
-    capsules.)
+  locator: Aligned on data/traits/morphology/capsule.yaml evidence[0] (Roberts, "The
+    biochemistry and genetics of capsular polysaccharide production in bacteria",
+    treats the capsule as an organized external polysaccharide layer.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1146/annurev.micro.50.1.285 on data/traits/morphology/capsule.yaml
     (traitmech:000063, capsule) verified with verbatim Europe PMC abstract quote in
-    record-level evidence[0].snippet (Roberts reviews the biochemistry, genetics,
-    group I-IV classification, export/assembly pathways (Wzx/Wzy and ABC transporter
-    systems), and virulence roles of bacterial polysaccharide capsules.).
-  quote: Many bacteria are surrounded by a polysaccharide layer outside the outer
-    membrane of Gram-negative bacteria and the peptidoglycan layer of Gram-positive
-    bacteria.
+    record-level evidence[0].snippet (Roberts, "The biochemistry and genetics of capsular
+    polysaccharide production in bacteria", treats the capsule as an organized external
+    polysaccharide layer.).
+  quote: They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding
+    the cell that may be further organized into a distinct structure termed a capsule.
 - evidence_id: ev-c10s5-def-src-002
   kind: primary_source
   reference: DOI:10.1038/nrmicro.2018.10
   locator: Aligned on data/traits/morphology/carboxysome.yaml evidence[0] (Kerfeld
-    et al. review bacterial microcompartments, with detailed coverage of alpha- and
-    beta-carboxysome shell architecture (BMC-H, BMC-T, BMC-P), RuBisCO/carbonic anhydrase
-    encapsulation, and CO2-concentrating function.)
+    et al. review bacterial microcompartments; the carboxysome is the archetypal protein-shelled
+    CO2-fixing microcompartment.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro.2018.10 on data/traits/morphology/carboxysome.yaml
     (traitmech:000072, carboxysome) verified with verbatim Europe PMC abstract quote
-    in record-level evidence[0].snippet (Kerfeld et al. review bacterial microcompartments,
-    with detailed coverage of alpha- and beta-carboxysome shell architecture (BMC-H,
-    BMC-T, BMC-P), RuBisCO/carbonic anhydrase encapsulation, and CO2-concentrating
-    function.).
+    in record-level evidence[0].snippet (Kerfeld et al. review bacterial microcompartments;
+    the carboxysome is the archetypal protein-shelled CO2-fixing microcompartment.).
   quote: Bacterial microcompartments (BMCs) are self-assembling organelles that consist
     of an enzymatic core that is encapsulated by a selectively permeable protein shell.
+    The potential to form BMCs is widespread and found across the kingdom Bacteria.
+    BMCs have crucial roles in carbon dioxide fixation in autotrophs and the catabolism
+    of organic substrates in heterotrophs.
 - evidence_id: ev-c10s5-def-src-003
   kind: primary_source
   reference: DOI:10.1038/nrmicro2834
   locator: Aligned on data/traits/morphology/gas_vesicle.yaml evidence[0] (Pfeifer
-    reviews the structure, gvp gene clusters, GvpA/GvpC shell assembly, regulation,
-    and buoyancy function of bacterial and archaeal gas vesicles.)
+    describes gas vesicles as intracellular gas-filled proteinaceous flotation structures
+    in bacteria and archaea.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro2834 on data/traits/morphology/gas_vesicle.yaml
     (traitmech:000070, gas vesicle) verified with verbatim Europe PMC abstract quote
-    in record-level evidence[0].snippet (Pfeifer reviews the structure, gvp gene clusters,
-    GvpA/GvpC shell assembly, regulation, and buoyancy function of bacterial and archaeal
-    gas vesicles.).
-  quote: Gas vesicles are hollow, proteinaceous structures that are filled with gas
-    and allow halophilic and methanogenic archaea as well as photosynthetic and heterotrophic
-    bacteria to thrive at vertical positions with favourable growth conditions in
-    watery environments.
+    in record-level evidence[0].snippet (Pfeifer describes gas vesicles as intracellular
+    gas-filled proteinaceous flotation structures in bacteria and archaea.).
+  quote: A range of bacteria and archaea produce intracellular gas-filled proteinaceous
+    structures that function as flotation devices in order to maintain a suitable
+    depth in the aqueous environment.
 - evidence_id: ev-c10s5-def-src-004
   kind: primary_source
   reference: DOI:10.1101/cshperspect.a000315
   locator: Aligned on data/traits/morphology/heterocyst.yaml evidence[0] (Kumar, Mella-Herrera
-    & Golden review cyanobacterial heterocyst differentiation, NtcA/HetR regulatory
-    control, PatS/HetN spacing, envelope glycolipid/polysaccharide layers, and microoxic
-    nitrogen fixation.)
+    & Golden describe heterocysts as differentiated cells whose structure and metabolism
+    accommodate oxygen-sensitive nitrogen fixation.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1101/cshperspect.a000315 on data/traits/morphology/heterocyst.yaml
     (traitmech:000073, heterocyst) verified with verbatim Europe PMC abstract quote
-    in record-level evidence[0].snippet (Kumar, Mella-Herrera & Golden review cyanobacterial
-    heterocyst differentiation, NtcA/HetR regulatory control, PatS/HetN spacing, envelope
-    glycolipid/polysaccharide layers, and microoxic nitrogen fixation.).
-  quote: Heterocysts are terminally differentiated nitrogen-fixing cells formed at
-    semiregular intervals along filaments of certain cyanobacteria, such as Anabaena
-    (Nostoc) sp. strain PCC 7120, when fixed nitrogen is limiting.
+    in record-level evidence[0].snippet (Kumar, Mella-Herrera & Golden describe heterocysts
+    as differentiated cells whose structure and metabolism accommodate oxygen-sensitive
+    nitrogen fixation.).
+  quote: Many multicellular cyanobacteria produce specialized nitrogen-fixing heterocysts.
+    During diazotrophic growth of the model organism Anabaena (Nostoc) sp. strain
+    PCC 7120, a regulated developmental pattern of single heterocysts separated by
+    about 10 to 20 photosynthetic vegetative cells is maintained along filaments.
+    Heterocyst structure and metabolic activity function together to accommodate the
+    oxygen-sensitive process of nitrogen fixation.
 - evidence_id: ev-c10s5-def-src-005
   kind: primary_source
   reference: DOI:10.1038/s41579-020-0413-0
   locator: Aligned on data/traits/morphology/intracellular_inclusion.yaml evidence[0]
-    (Greening & Lithgow review the biogenesis, classification, and physiological functions
-    of prokaryotic intracellular inclusions, storage granules, and microcompartments
-    across bacteria and archaea.)
+    (Greening & Lithgow, "Formation and function of bacterial organelles", establish
+    that bacteria contain diverse inclusions/organelles (storage granules, gas vesicles,
+    microcompartments, magnetosomes); parent of the inclusion sub-variants.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/s41579-020-0413-0 on data/traits/morphology/intracellular_inclusion.yaml
     (traitmech:000066, intracellular inclusion) verified with verbatim Europe PMC
-    abstract quote in record-level evidence[0].snippet (Greening & Lithgow review
-    the biogenesis, classification, and physiological functions of prokaryotic intracellular
-    inclusions, storage granules, and microcompartments across bacteria and archaea.).
-  quote: Prokaryotes synthesize diverse intracellular nanostructures and bodies to
-    compartmentalize metabolic pathways, store reserves and enhance survival under
-    stress.
+    abstract quote in record-level evidence[0].snippet (Greening & Lithgow, "Formation
+    and function of bacterial organelles", establish that bacteria contain diverse
+    inclusions/organelles (storage granules, gas vesicles, microcompartments, magnetosomes);
+    parent of the inclusion sub-variants.).
+  quote: Advances in imaging technologies have revealed that many bacteria possess
+    organelles with a proteomically defined lumen and a macromolecular boundary. Some
+    are bound by a lipid bilayer (such as thylakoids, magnetosomes and anammoxosomes),
+    whereas others are defined by a lipid monolayer (such as lipid bodies), a proteinaceous
+    coat (such as carboxysomes) or have a phase-defined boundary (such as nucleolus-like
+    compartments).
 - evidence_id: ev-c10s5-def-src-006
   kind: primary_source
   reference: DOI:10.1038/nrmicro.2016.99
   locator: Aligned on data/traits/morphology/magnetosome.yaml evidence[0] (Uebe &
-    Schüler review magnetosome membrane invagination, iron uptake and biomineralization,
-    MamK/MamJ chain assembly, and magnetotactic navigation.)
+    Schüler review magnetosome biogenesis as the formation of membrane-bounded magnetic-mineral
+    organelles in magnetotactic bacteria.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro.2016.99 on data/traits/morphology/magnetosome.yaml
     (traitmech:000071, magnetosome) verified with verbatim Europe PMC abstract quote
-    in record-level evidence[0].snippet (Uebe & Schüler review magnetosome membrane
-    invagination, iron uptake and biomineralization, MamK/MamJ chain assembly, and
-    magnetotactic navigation.).
-  quote: Magnetotactic bacteria (MTB) orient and navigate along geomagnetic field
-    lines, a behaviour that is enabled by magnetosomes — unique intracellular organelles
-    that consist of magnetic iron mineral crystals enclosed by a specialized membrane
-    bilayer.
+    in record-level evidence[0].snippet (Uebe & Schüler review magnetosome biogenesis
+    as the formation of membrane-bounded magnetic-mineral organelles in magnetotactic
+    bacteria.).
+  quote: Magnetotactic bacteria derive their magnetic orientation from magnetosomes,
+    which are unique organelles that contain nanometre-sized crystals of magnetic
+    iron minerals.
 - evidence_id: ev-c10s5-def-src-007
   kind: primary_source
   reference: DOI:10.1038/nrmicro1968
   locator: Aligned on data/traits/morphology/mycelial_growth.yaml evidence[0] (Flärdh
-    & Buttner review polar tip extension, DivIVA polarisome function, lateral branching,
-    vegetative vs. aerial mycelium differentiation, and sporulation in Streptomyces.)
+    & Buttner describe Streptomyces growth as a branching hyphal mycelium with subsequent
+    morphological differentiation.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro1968 on data/traits/morphology/mycelial_growth.yaml
     (traitmech:000074, mycelial growth) verified with verbatim Europe PMC abstract
-    quote in record-level evidence[0].snippet (Flärdh & Buttner review polar tip extension,
-    DivIVA polarisome function, lateral branching, vegetative vs. aerial mycelium
-    differentiation, and sporulation in Streptomyces.).
-  quote: Streptomycetes are filamentous bacteria that grow by tip extension and hyphal
-    branching to form a dense vegetative mycelium.
+    quote in record-level evidence[0].snippet (Flärdh & Buttner describe Streptomyces
+    growth as a branching hyphal mycelium with subsequent morphological differentiation.).
+  quote: Not only are the bacterial cytoskeleton and the machineries for cell-wall
+    assembly, cell division and chromosome segregation reorganized during sporulation,
+    but the developmental programme of these fascinating organisms also has many unusual
+    elements, including the formation of a sporulating aerial mycelium and the production
+    of a surfactant peptide and a hydrophobic sheath that allow cells to escape from
+    the surface tension of the growth medium.
 - evidence_id: ev-c10s5-def-src-008
   kind: primary_source
   reference: DOI:10.1128/mr.54.4.450-472.1990
   locator: Aligned on data/traits/morphology/polyhydroxyalkanoate_granule.yaml evidence[0]
-    (Anderson & Dawes review the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic
-    pathway, and physiological regulation of bacterial polyhydroxyalkanoate storage
-    granules.)
+    (Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy
+    reserves stored as cytoplasmic granules.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1128/mr.54.4.450-472.1990 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml
     (traitmech:000067, polyhydroxyalkanoate granule) verified with verbatim Europe
-    PMC abstract quote in record-level evidence[0].snippet (Anderson & Dawes review
-    the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic pathway, and physiological
-    regulation of bacterial polyhydroxyalkanoate storage granules.).
-  quote: Polyhydroxyalkanoates (PHAs) are polyesters of various hydroxyalkanoates
-    that are synthesized by numerous microorganisms and accumulated as intracellular
-    carbon and energy storage granules.
+    PMC abstract quote in record-level evidence[0].snippet (Anderson & Dawes describe
+    polyhydroxyalkanoates (chiefly PHB) as carbon/energy reserves stored as cytoplasmic
+    granules.).
+  quote: Polyhydroxyalkanoates (PHAs), of which polyhydroxybutyrate (PHB) is the most
+    abundant, are bacterial carbon and energy reserve materials of widespread occurrence.
+    They are composed of 3-hydroxyacid monomer units and exist as a small number of
+    cytoplasmic granules per cell.
 - evidence_id: ev-c10s5-def-src-009
   kind: primary_source
   reference: DOI:10.1146/annurev.biochem.77.083007.093039
   locator: Aligned on data/traits/morphology/polyphosphate_granule.yaml evidence[0]
-    (Rao, Gómez-García & Kornberg review polyphosphate kinases (PPK1, PPK2), exopolyphosphatase
-    (PPX), polyphosphate granule storage, and physiological roles in stress survival,
-    motility, and virulence.)
+    (Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated as granules,
+    as a phosphate/energy reserve essential for growth and survival.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1146/annurev.biochem.77.083007.093039
     on data/traits/morphology/polyphosphate_granule.yaml (traitmech:000068, polyphosphate
     granule) verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet
-    (Rao, Gómez-García & Kornberg review polyphosphate kinases (PPK1, PPK2), exopolyphosphatase
-    (PPX), polyphosphate granule storage, and physiological roles in stress survival,
-    motility, and virulence.).
-  quote: Inorganic polyphosphate (poly P) is a linear polymer of many tens or hundreds
-    of orthophosphate (Pi) residues linked by high-energy phosphoanhydride bonds.
+    (Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated as granules,
+    as a phosphate/energy reserve essential for growth and survival.).
+  quote: Inorganic polyphosphate (Poly P) is a polymer of tens to hundreds of phosphate
+    residues linked by "high-energy" phosphoanhydride bonds as in ATP. Found in abundance
+    in all cells in nature, it is unique in its likely role in the origin and survival
+    of species.
 - evidence_id: ev-c10s5-def-src-010
   kind: primary_source
   reference: DOI:10.1111/j.1365-2958.2007.05633.x
   locator: Aligned on data/traits/morphology/prosthecate.yaml evidence[0] (Wagner
-    & Brun review the structure, peptidoglycan synthesis, developmental regulation,
-    and nutrient-acquisition role of bacterial prosthecae (stalks).)
+    & Brun describe the Caulobacter stalk (prostheca) as a cell-envelope extension
+    and a specialized form of cell elongation aiding nutrient uptake.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1111/j.1365-2958.2007.05633.x on data/traits/morphology/prosthecate.yaml
     (traitmech:000065, prosthecate) verified with verbatim Europe PMC abstract quote
-    in record-level evidence[0].snippet (Wagner & Brun review the structure, peptidoglycan
-    synthesis, developmental regulation, and nutrient-acquisition role of bacterial
-    prosthecae (stalks).).
-  quote: Prosthecae are narrow extensions of the bacterial cell wall that contain
-    cytoplasm and are bounded by the cell envelope.
+    in record-level evidence[0].snippet (Wagner & Brun describe the Caulobacter stalk
+    (prostheca) as a cell-envelope extension and a specialized form of cell elongation
+    aiding nutrient uptake.).
+  quote: One remarkable example of bacterial morphogenesis is the elaboration of long,
+    tubular extensions of the cell envelope of certain aquatic bacteria. These appendages
+    (also called prosthecae or stalks) possess features that make them particularly
+    amenable models for experiments designed to uncover general principles of cell
+    morphogenesis and of cell shape function.
 - evidence_id: ev-c10s5-def-src-011
   kind: primary_source
   reference: DOI:10.1038/nrmicro3213
   locator: Aligned on data/traits/morphology/s_layer.yaml evidence[0] (Fagan & Fairweather
-    review S-layer protein secretion, cell-wall anchoring (SLH and CWB2 domains),
-    self-assembly into paracrystalline lattices, and functional roles across Bacteria
-    and Archaea.)
+    describe the S-layer as a self-assembled, regularly spaced two-dimensional protein
+    array coating the cell surface.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro3213 on data/traits/morphology/s_layer.yaml
     (traitmech:000064, S-layer) verified with verbatim Europe PMC abstract quote in
-    record-level evidence[0].snippet (Fagan & Fairweather review S-layer protein secretion,
-    cell-wall anchoring (SLH and CWB2 domains), self-assembly into paracrystalline
-    lattices, and functional roles across Bacteria and Archaea.).
-  quote: Surface layers (S-layers) are two-dimensional crystalline arrays of protein
-    or glycoprotein subunits that form the outermost cell envelope component of many
-    bacteria and almost all archaea.
+    record-level evidence[0].snippet (Fagan & Fairweather describe the S-layer as
+    a self-assembled, regularly spaced two-dimensional protein array coating the cell
+    surface.).
+  quote: The outer surface of many archaea and bacteria is coated with a proteinaceous
+    surface layer (known as an S-layer), which is formed by the self-assembly of monomeric
+    proteins into a regularly spaced, two-dimensional array.
 - evidence_id: ev-c10s5-def-src-012
   kind: primary_source
   reference: DOI:10.1016/S0065-2911(08)00002-7
   locator: Aligned on data/traits/morphology/sulfur_globule.yaml evidence[0] (Frigaard
-    & Dahl review the biogenesis, SgpA/SgpB/SgpC protein envelope, chemical speciation,
-    and Dsr-mediated oxidation of bacterial sulfur globules.)
+    & Dahl describe sulfur globules as sulfur-storage inclusions formed during oxidative
+    sulfur metabolism in phototrophic sulfur bacteria.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1016/S0065-2911(08)00002-7 on data/traits/morphology/sulfur_globule.yaml
     (traitmech:000069, sulfur globule) verified with verbatim Europe PMC abstract
-    quote in record-level evidence[0].snippet (Frigaard & Dahl review the biogenesis,
-    SgpA/SgpB/SgpC protein envelope, chemical speciation, and Dsr-mediated oxidation
-    of bacterial sulfur globules.).
-  quote: Many sulfur-oxidizing bacteria form globules of elemental sulfur as an obligate
-    or facultative intermediate during the oxidation of reduced inorganic sulfur compounds
-    such as sulfide and thiosulfate.
+    quote in record-level evidence[0].snippet (Frigaard & Dahl describe sulfur globules
+    as sulfur-storage inclusions formed during oxidative sulfur metabolism in phototrophic
+    sulfur bacteria.).
+  quote: Phototrophic sulfur bacteria are characterized by oxidizing various inorganic
+    sulfur compounds for use as electron donors in carbon dioxide fixation during
+    anoxygenic photosynthetic growth. These bacteria are divided into the purple sulfur
+    bacteria (PSB) and the green sulfur bacteria (GSB). They utilize various combinations
+    of sulfide, elemental sulfur, and thiosulfate and sometimes also ferrous iron
+    and hydrogen as electron donors.
 - evidence_id: ev-c10s5-def-src-013
   kind: primary_source
   reference: DOI:10.1038/nrmicro2405
-  locator: Aligned on data/traits/morphology/swarming_motility.yaml evidence[0] (Kearns
-    reviews bacterial swarming motility, covering hyperflagellation, biosurfactant
-    wetting agents, cell elongation, and surface sensing.)
+  locator: Aligned on data/traits/morphology/swarming_motility.yaml evidence[0] (Kearns,
+    "A field guide to bacterial swarming motility", defines swarming via increased
+    flagella per cell, surfactant secretion, and movement in multicellular groups.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1038/nrmicro2405 on data/traits/morphology/swarming_motility.yaml
     (traitmech:000062, swarming motility) verified with verbatim Europe PMC abstract
-    quote in record-level evidence[0].snippet (Kearns reviews bacterial swarming motility,
-    covering hyperflagellation, biosurfactant wetting agents, cell elongation, and
-    surface sensing.).
-  quote: Swarming motility is a rapid, multicellular movement of bacteria across a
-    surface, powered by rotating flagella.
+    quote in record-level evidence[0].snippet (Kearns, "A field guide to bacterial
+    swarming motility", defines swarming via increased flagella per cell, surfactant
+    secretion, and movement in multicellular groups.).
+  quote: Here, I review the requirements that define swarming motility in diverse
+    bacterial model systems, including an increase in the number of flagella per cell,
+    the secretion of a surfactant to reduce surface tension and allow spreading, and
+    movement in multicellular groups rather than as individuals.
 - evidence_id: ev-c10s5-def-src-014
   kind: primary_source
   reference: DOI:10.1146/annurev.micro.56.012302.160938
-  locator: Aligned on data/traits/morphology/twitching_motility.yaml evidence[0] (Mattick
-    reviews the genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction mechanics,
-    and physiological roles of type IV pili-mediated twitching motility.)
+  locator: Aligned on data/traits/morphology/twitching_motility.yaml evidence[0] (Mattick,
+    "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven
+    surface translocation operating like a grappling hook.)
   accessed_at: '2026-11-04T23:22:00Z'
   support: supports
   summary: Primary definition_source DOI:10.1146/annurev.micro.56.012302.160938 on
     data/traits/morphology/twitching_motility.yaml (traitmech:000061, twitching motility)
     verified with verbatim Europe PMC abstract quote in record-level evidence[0].snippet
-    (Mattick reviews the genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction
-    mechanics, and physiological roles of type IV pili-mediated twitching motility.).
-  quote: Twitching motility is a mode of surface translocation mediated by the extension,
-    tethering, and retraction of type IV pili.
+    (Mattick, "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven
+    surface translocation operating like a grappling hook.).
+  quote: Twitching motility is a flagella-independent form of bacterial translocation
+    over moist surfaces. It occurs by the extension, tethering, and then retraction
+    of polar type IV pili, which operate in a manner similar to a grappling hook.
 - evidence_id: ev-remediated-records
   kind: record_content
   reference: data/traits/morphology/capsule.yaml; data/traits/morphology/carboxysome.yaml;
@@ -886,7 +898,7 @@ evidence:
     validation, DO_NOT_WORK exclusion, and idempotent remediation across all 115 target
     specs (4 Cycle 1 + 6 Cycle 2 + 17 Cycle 3 + 18 Cycle 4 + 7 Cycle 5 + 13 Cycle
     6 + 15 Cycle 7 + 12 Cycle 8 + 9 Cycle 9 + 14 Cycle 10).
-  snapshot_sha256: 6a4eee55337a5b10cb703b98ef38c1ff0ac5d87efc0ec31231aee1b6609284e4
+  snapshot_sha256: 85aa96a9cbd0c24defbd510228800def4303c1556cc5e9005d68633755a3e8de
 - evidence_id: ev-validate-strict
   kind: validation
   reference: scripts/validate_strict.py
@@ -1014,11 +1026,11 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-001 on data/traits/morphology/capsule.yaml
     (traitmech:000063): populated record-level evidence[0].snippet for definition_source
     DOI:10.1146/annurev.micro.50.1.285 with the verified Europe PMC abstract quote
-    (''Many bacteria are surrounded by a polysaccharide layer outside the outer membrane
-    of Gram-negative bacteria and the peptidoglycan layer of Gram-positive bacteria.'')
-    (Roberts reviews the biochemistry, genetics, group I-IV classification, export/assembly
-    pathways (Wzx/Wzy and ABC transporter systems), and virulence roles of bacterial
-    polysaccharide capsules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    (''They can form an amorphous layer of extracellular polysaccharide (EPS) surrounding
+    the cell that may be further organized into a distinct structure termed a capsule.'')
+    (Roberts, "The biochemistry and genetics of capsular polysaccharide production
+    in bacteria", treats the capsule as an organized external polysaccharide layer.),
+    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
     and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000063
@@ -1057,12 +1069,13 @@ findings:
     (traitmech:000072): populated record-level evidence[0].snippet for definition_source
     DOI:10.1038/nrmicro.2018.10 with the verified Europe PMC abstract quote (''Bacterial
     microcompartments (BMCs) are self-assembling organelles that consist of an enzymatic
-    core that is encapsulated by a selectively permeable protein shell.'') (Kerfeld
-    et al. review bacterial microcompartments, with detailed coverage of alpha- and
-    beta-carboxysome shell architecture (BMC-H, BMC-T, BMC-P), RuBisCO/carbonic anhydrase
-    encapsulation, and CO2-concentrating function.), removed its baselined MISSING_SNIPPET
-    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
-    via scripts/curate_stage5_review_findings.py.'
+    core that is encapsulated by a selectively permeable protein shell. The potential
+    to form BMCs is widespread and found across the kingdom Bacteria. BMCs have crucial
+    roles in carbon dioxide fixation in autotrophs and the catabolism of organic substrates
+    in heterotrophs.'') (Kerfeld et al. review bacterial microcompartments; the carboxysome
+    is the archetypal protein-shelled CO2-fixing microcompartment.), removed its baselined
+    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000072
   field_paths:
@@ -1098,12 +1111,11 @@ findings:
     evidence[0].snippet for definition_source DOI:10.1038/nrmicro2834
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-003 on data/traits/morphology/gas_vesicle.yaml
     (traitmech:000070): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1038/nrmicro2834 with the verified Europe PMC abstract quote (''Gas vesicles
-    are hollow, proteinaceous structures that are filled with gas and allow halophilic
-    and methanogenic archaea as well as photosynthetic and heterotrophic bacteria
-    to thrive at vertical positions with favourable growth conditions in watery environments.'')
-    (Pfeifer reviews the structure, gvp gene clusters, GvpA/GvpC shell assembly, regulation,
-    and buoyancy function of bacterial and archaeal gas vesicles.), removed its baselined
+    DOI:10.1038/nrmicro2834 with the verified Europe PMC abstract quote (''A range
+    of bacteria and archaea produce intracellular gas-filled proteinaceous structures
+    that function as flotation devices in order to maintain a suitable depth in the
+    aqueous environment.'') (Pfeifer describes gas vesicles as intracellular gas-filled
+    proteinaceous flotation structures in bacteria and archaea.), removed its baselined
     MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
     entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
@@ -1141,13 +1153,15 @@ findings:
     for definition_source DOI:10.1101/cshperspect.a000315
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-004 on data/traits/morphology/heterocyst.yaml
     (traitmech:000073): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1101/cshperspect.a000315 with the verified Europe PMC abstract quote (''Heterocysts
-    are terminally differentiated nitrogen-fixing cells formed at semiregular intervals
-    along filaments of certain cyanobacteria, such as Anabaena (Nostoc) sp. strain
-    PCC 7120, when fixed nitrogen is limiting.'') (Kumar, Mella-Herrera & Golden review
-    cyanobacterial heterocyst differentiation, NtcA/HetR regulatory control, PatS/HetN
-    spacing, envelope glycolipid/polysaccharide layers, and microoxic nitrogen fixation.),
-    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    DOI:10.1101/cshperspect.a000315 with the verified Europe PMC abstract quote (''Many
+    multicellular cyanobacteria produce specialized nitrogen-fixing heterocysts. During
+    diazotrophic growth of the model organism Anabaena (Nostoc) sp. strain PCC 7120,
+    a regulated developmental pattern of single heterocysts separated by about 10
+    to 20 photosynthetic vegetative cells is maintained along filaments. Heterocyst
+    structure and metabolic activity function together to accommodate the oxygen-sensitive
+    process of nitrogen fixation.'') (Kumar, Mella-Herrera & Golden describe heterocysts
+    as differentiated cells whose structure and metabolism accommodate oxygen-sensitive
+    nitrogen fixation.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
     and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000073
@@ -1184,13 +1198,17 @@ findings:
     evidence[0].snippet for definition_source DOI:10.1038/s41579-020-0413-0
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-005 on data/traits/morphology/intracellular_inclusion.yaml
     (traitmech:000066): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1038/s41579-020-0413-0 with the verified Europe PMC abstract quote (''Prokaryotes
-    synthesize diverse intracellular nanostructures and bodies to compartmentalize
-    metabolic pathways, store reserves and enhance survival under stress.'') (Greening
-    & Lithgow review the biogenesis, classification, and physiological functions of
-    prokaryotic intracellular inclusions, storage granules, and microcompartments
-    across bacteria and archaea.), removed its baselined MISSING_SNIPPET row from
-    conf/evidence_snippet_baseline.tsv, and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+    DOI:10.1038/s41579-020-0413-0 with the verified Europe PMC abstract quote (''Advances
+    in imaging technologies have revealed that many bacteria possess organelles with
+    a proteomically defined lumen and a macromolecular boundary. Some are bound by
+    a lipid bilayer (such as thylakoids, magnetosomes and anammoxosomes), whereas
+    others are defined by a lipid monolayer (such as lipid bodies), a proteinaceous
+    coat (such as carboxysomes) or have a phase-defined boundary (such as nucleolus-like
+    compartments).'') (Greening & Lithgow, "Formation and function of bacterial organelles",
+    establish that bacteria contain diverse inclusions/organelles (storage granules,
+    gas vesicles, microcompartments, magnetosomes); parent of the inclusion sub-variants.),
+    removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000066
   field_paths:
@@ -1227,11 +1245,10 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-006 on data/traits/morphology/magnetosome.yaml
     (traitmech:000071): populated record-level evidence[0].snippet for definition_source
     DOI:10.1038/nrmicro.2016.99 with the verified Europe PMC abstract quote (''Magnetotactic
-    bacteria (MTB) orient and navigate along geomagnetic field lines, a behaviour
-    that is enabled by magnetosomes — unique intracellular organelles that consist
-    of magnetic iron mineral crystals enclosed by a specialized membrane bilayer.'')
-    (Uebe & Schüler review magnetosome membrane invagination, iron uptake and biomineralization,
-    MamK/MamJ chain assembly, and magnetotactic navigation.), removed its baselined
+    bacteria derive their magnetic orientation from magnetosomes, which are unique
+    organelles that contain nanometre-sized crystals of magnetic iron minerals.'')
+    (Uebe & Schüler review magnetosome biogenesis as the formation of membrane-bounded
+    magnetic-mineral organelles in magnetotactic bacteria.), removed its baselined
     MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
     entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
@@ -1269,13 +1286,16 @@ findings:
     evidence[0].snippet for definition_source DOI:10.1038/nrmicro1968
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-007 on data/traits/morphology/mycelial_growth.yaml
     (traitmech:000074): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1038/nrmicro1968 with the verified Europe PMC abstract quote (''Streptomycetes
-    are filamentous bacteria that grow by tip extension and hyphal branching to form
-    a dense vegetative mycelium.'') (Flärdh & Buttner review polar tip extension,
-    DivIVA polarisome function, lateral branching, vegetative vs. aerial mycelium
-    differentiation, and sporulation in Streptomyces.), removed its baselined MISSING_SNIPPET
-    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
-    via scripts/curate_stage5_review_findings.py.'
+    DOI:10.1038/nrmicro1968 with the verified Europe PMC abstract quote (''Not only
+    are the bacterial cytoskeleton and the machineries for cell-wall assembly, cell
+    division and chromosome segregation reorganized during sporulation, but the developmental
+    programme of these fascinating organisms also has many unusual elements, including
+    the formation of a sporulating aerial mycelium and the production of a surfactant
+    peptide and a hydrophobic sheath that allow cells to escape from the surface tension
+    of the growth medium.'') (Flärdh & Buttner describe Streptomyces growth as a branching
+    hyphal mycelium with subsequent morphological differentiation.), removed its baselined
+    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000074
   field_paths:
@@ -1312,12 +1332,13 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-008 on data/traits/morphology/polyhydroxyalkanoate_granule.yaml
     (traitmech:000067): populated record-level evidence[0].snippet for definition_source
     DOI:10.1128/mr.54.4.450-472.1990 with the verified Europe PMC abstract quote (''Polyhydroxyalkanoates
-    (PHAs) are polyesters of various hydroxyalkanoates that are synthesized by numerous
-    microorganisms and accumulated as intracellular carbon and energy storage granules.'')
-    (Anderson & Dawes review the occurrence, biochemistry, PhaA/PhaB/PhaC biosynthetic
-    pathway, and physiological regulation of bacterial polyhydroxyalkanoate storage
-    granules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
-    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+    (PHAs), of which polyhydroxybutyrate (PHB) is the most abundant, are bacterial
+    carbon and energy reserve materials of widespread occurrence. They are composed
+    of 3-hydroxyacid monomer units and exist as a small number of cytoplasmic granules
+    per cell.'') (Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as
+    carbon/energy reserves stored as cytoplasmic granules.), removed its baselined
+    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000067
   field_paths:
@@ -1354,13 +1375,13 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-009 on data/traits/morphology/polyphosphate_granule.yaml
     (traitmech:000068): populated record-level evidence[0].snippet for definition_source
     DOI:10.1146/annurev.biochem.77.083007.093039 with the verified Europe PMC abstract
-    quote (''Inorganic polyphosphate (poly P) is a linear polymer of many tens or
-    hundreds of orthophosphate (Pi) residues linked by high-energy phosphoanhydride
-    bonds.'') (Rao, Gómez-García & Kornberg review polyphosphate kinases (PPK1, PPK2),
-    exopolyphosphatase (PPX), polyphosphate granule storage, and physiological roles
-    in stress survival, motility, and virulence.), removed its baselined MISSING_SNIPPET
-    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
-    via scripts/curate_stage5_review_findings.py.'
+    quote (''Inorganic polyphosphate (Poly P) is a polymer of tens to hundreds of
+    phosphate residues linked by "high-energy" phosphoanhydride bonds as in ATP. Found
+    in abundance in all cells in nature, it is unique in its likely role in the origin
+    and survival of species.'') (Rao, Gómez-García & Kornberg review inorganic polyphosphate,
+    accumulated as granules, as a phosphate/energy reserve essential for growth and
+    survival.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000068
   field_paths:
@@ -1397,10 +1418,13 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-010 on data/traits/morphology/prosthecate.yaml
     (traitmech:000065): populated record-level evidence[0].snippet for definition_source
     DOI:10.1111/j.1365-2958.2007.05633.x with the verified Europe PMC abstract quote
-    (''Prosthecae are narrow extensions of the bacterial cell wall that contain cytoplasm
-    and are bounded by the cell envelope.'') (Wagner & Brun review the structure,
-    peptidoglycan synthesis, developmental regulation, and nutrient-acquisition role
-    of bacterial prosthecae (stalks).), removed its baselined MISSING_SNIPPET row
+    (''One remarkable example of bacterial morphogenesis is the elaboration of long,
+    tubular extensions of the cell envelope of certain aquatic bacteria. These appendages
+    (also called prosthecae or stalks) possess features that make them particularly
+    amenable models for experiments designed to uncover general principles of cell
+    morphogenesis and of cell shape function.'') (Wagner & Brun describe the Caulobacter
+    stalk (prostheca) as a cell-envelope extension and a specialized form of cell
+    elongation aiding nutrient uptake.), removed its baselined MISSING_SNIPPET row
     from conf/evidence_snippet_baseline.tsv, and appended curation_history entry via
     scripts/curate_stage5_review_findings.py.'
   target_ids:
@@ -1438,14 +1462,13 @@ findings:
     for definition_source DOI:10.1038/nrmicro3213
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-011 on data/traits/morphology/s_layer.yaml
     (traitmech:000064): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1038/nrmicro3213 with the verified Europe PMC abstract quote (''Surface
-    layers (S-layers) are two-dimensional crystalline arrays of protein or glycoprotein
-    subunits that form the outermost cell envelope component of many bacteria and
-    almost all archaea.'') (Fagan & Fairweather review S-layer protein secretion,
-    cell-wall anchoring (SLH and CWB2 domains), self-assembly into paracrystalline
-    lattices, and functional roles across Bacteria and Archaea.), removed its baselined
-    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
-    entry via scripts/curate_stage5_review_findings.py.'
+    DOI:10.1038/nrmicro3213 with the verified Europe PMC abstract quote (''The outer
+    surface of many archaea and bacteria is coated with a proteinaceous surface layer
+    (known as an S-layer), which is formed by the self-assembly of monomeric proteins
+    into a regularly spaced, two-dimensional array.'') (Fagan & Fairweather describe
+    the S-layer as a self-assembled, regularly spaced two-dimensional protein array
+    coating the cell surface.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000064
   field_paths:
@@ -1482,11 +1505,14 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-012 on data/traits/morphology/sulfur_globule.yaml
     (traitmech:000069): populated record-level evidence[0].snippet for definition_source
     DOI:10.1016/S0065-2911(08)00002-7 with the verified Europe PMC abstract quote
-    (''Many sulfur-oxidizing bacteria form globules of elemental sulfur as an obligate
-    or facultative intermediate during the oxidation of reduced inorganic sulfur compounds
-    such as sulfide and thiosulfate.'') (Frigaard & Dahl review the biogenesis, SgpA/SgpB/SgpC
-    protein envelope, chemical speciation, and Dsr-mediated oxidation of bacterial
-    sulfur globules.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
+    (''Phototrophic sulfur bacteria are characterized by oxidizing various inorganic
+    sulfur compounds for use as electron donors in carbon dioxide fixation during
+    anoxygenic photosynthetic growth. These bacteria are divided into the purple sulfur
+    bacteria (PSB) and the green sulfur bacteria (GSB). They utilize various combinations
+    of sulfide, elemental sulfur, and thiosulfate and sometimes also ferrous iron
+    and hydrogen as electron donors.'') (Frigaard & Dahl describe sulfur globules
+    as sulfur-storage inclusions formed during oxidative sulfur metabolism in phototrophic
+    sulfur bacteria.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
     and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000069
@@ -1523,12 +1549,15 @@ findings:
     evidence[0].snippet for definition_source DOI:10.1038/nrmicro2405
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-013 on data/traits/morphology/swarming_motility.yaml
     (traitmech:000062): populated record-level evidence[0].snippet for definition_source
-    DOI:10.1038/nrmicro2405 with the verified Europe PMC abstract quote (''Swarming
-    motility is a rapid, multicellular movement of bacteria across a surface, powered
-    by rotating flagella.'') (Kearns reviews bacterial swarming motility, covering
-    hyperflagellation, biosurfactant wetting agents, cell elongation, and surface
-    sensing.), removed its baselined MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv,
-    and appended curation_history entry via scripts/curate_stage5_review_findings.py.'
+    DOI:10.1038/nrmicro2405 with the verified Europe PMC abstract quote (''Here, I
+    review the requirements that define swarming motility in diverse bacterial model
+    systems, including an increase in the number of flagella per cell, the secretion
+    of a surfactant to reduce surface tension and allow spreading, and movement in
+    multicellular groups rather than as individuals.'') (Kearns, "A field guide to
+    bacterial swarming motility", defines swarming via increased flagella per cell,
+    surfactant secretion, and movement in multicellular groups.), removed its baselined
+    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000062
   field_paths:
@@ -1565,12 +1594,13 @@ findings:
   description: 'Resolved Cycle 10 Stage 4 open finding F-C10S4-DEF-SRC-014 on data/traits/morphology/twitching_motility.yaml
     (traitmech:000061): populated record-level evidence[0].snippet for definition_source
     DOI:10.1146/annurev.micro.56.012302.160938 with the verified Europe PMC abstract
-    quote (''Twitching motility is a mode of surface translocation mediated by the
-    extension, tethering, and retraction of type IV pili.'') (Mattick reviews the
-    genetics, PilA/PilB/PilT/PilQ machinery, extension-retraction mechanics, and physiological
-    roles of type IV pili-mediated twitching motility.), removed its baselined MISSING_SNIPPET
-    row from conf/evidence_snippet_baseline.tsv, and appended curation_history entry
-    via scripts/curate_stage5_review_findings.py.'
+    quote (''Twitching motility is a flagella-independent form of bacterial translocation
+    over moist surfaces. It occurs by the extension, tethering, and then retraction
+    of polar type IV pili, which operate in a manner similar to a grappling hook.'')
+    (Mattick, "Type IV pili and twitching motility", describes twitching as type-IV-pilus-driven
+    surface translocation operating like a grappling hook.), removed its baselined
+    MISSING_SNIPPET row from conf/evidence_snippet_baseline.tsv, and appended curation_history
+    entry via scripts/curate_stage5_review_findings.py.'
   target_ids:
   - traitmech:000061
   field_paths:

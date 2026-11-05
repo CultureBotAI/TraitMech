@@ -2808,7 +2808,7 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1146/annurev.micro.50.1.285 "
-            "(Roberts 1996, already present on causal_graphs[0].edges[11].evidence[0]) "
+            "(Roberts 1996 Europe PMC abstract, ACT-C10S4-DEF-SRC-001) "
             "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
             "remediation of F-C10S4-DEF-SRC-001 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
@@ -2836,10 +2836,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro.2018.10 "
-            "(Kerfeld et al. 2018, already present on "
-            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-002 in group "
+            "(Kerfeld et al. 2018 Europe PMC abstract, ACT-C10S4-DEF-SRC-002) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-002 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -2862,10 +2861,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro2834 "
-            "(Pfeifer 2012, already present on "
-            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-003 in group "
+            "(Pfeifer 2012 Europe PMC abstract, ACT-C10S4-DEF-SRC-003) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-003 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -2894,11 +2892,10 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1101/cshperspect.a000315 "
-            "(Kumar, Mella-Herrera & Golden 2010, already present on "
-            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-004 in group "
-            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+            "(Kumar, Mella-Herrera & Golden 2010 Europe PMC abstract, "
+            "ACT-C10S4-DEF-SRC-004) to record-level evidence[0] to match "
+            "definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-004 in "
+            "group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
     "data/traits/morphology/intracellular_inclusion.yaml": {
@@ -2927,10 +2924,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/s41579-020-0413-0 "
-            "(Greening & Lithgow 2020, already present on "
-            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-005 in group "
+            "(Greening & Lithgow 2020 Europe PMC abstract, ACT-C10S4-DEF-SRC-005) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-005 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -2954,10 +2950,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.99 "
-            "(Uebe & Sch\u00fcler 2016, already present on "
-            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-006 in group "
+            "(Uebe & Sch\u00fcler 2016 Europe PMC abstract, ACT-C10S4-DEF-SRC-006) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-006 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -2985,10 +2980,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro1968 "
-            "(Fl\u00e4rdh & Buttner 2009, already present on "
-            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-007 in group "
+            "(Fl\u00e4rdh & Buttner 2009 Europe PMC abstract, ACT-C10S4-DEF-SRC-007) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-007 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -3013,10 +3007,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1128/mr.54.4.450-472.1990 "
-            "(Anderson & Dawes 1990, already present on "
-            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-008 in group "
+            "(Anderson & Dawes 1990 Europe PMC abstract, ACT-C10S4-DEF-SRC-008) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-008 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -3042,9 +3035,8 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         "changes": (
             "Added verified verbatim snippet from "
             "DOI:10.1146/annurev.biochem.77.083007.093039 (Rao, G\u00f3mez-Garc\u00eda & "
-            "Kornberg 2009, already present on "
-            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "Kornberg 2009 Europe PMC abstract, ACT-C10S4-DEF-SRC-009) to record-level "
+            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation of "
             "F-C10S4-DEF-SRC-009 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
@@ -3072,11 +3064,10 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from "
-            "DOI:10.1111/j.1365-2958.2007.05633.x (Wagner & Brun 2007, already "
-            "present on causal_graphs[0].edges[12].evidence[0]) to record-level "
-            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
-            "of F-C10S4-DEF-SRC-010 in group "
-            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+            "DOI:10.1111/j.1365-2958.2007.05633.x (Wagner & Brun 2007 Europe PMC "
+            "abstract, ACT-C10S4-DEF-SRC-010) to record-level evidence[0] to match "
+            "definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-010 in "
+            "group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
     "data/traits/morphology/s_layer.yaml": {
@@ -3100,10 +3091,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro3213 "
-            "(Fagan & Fairweather 2014, already present on "
-            "causal_graphs[0].edges[10].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-011 in group "
+            "(Fagan & Fairweather 2014 Europe PMC abstract, ACT-C10S4-DEF-SRC-011) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-011 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -3131,11 +3121,10 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from "
-            "DOI:10.1016/S0065-2911(08)00002-7 (Frigaard & Dahl 2008, already "
-            "present on causal_graphs[0].edges[10].evidence[0]) to record-level "
-            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
-            "of F-C10S4-DEF-SRC-012 in group "
-            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+            "DOI:10.1016/S0065-2911(08)00002-7 (Frigaard & Dahl 2008 Europe PMC "
+            "abstract, ACT-C10S4-DEF-SRC-012) to record-level evidence[0] to match "
+            "definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-012 in "
+            "group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
     "data/traits/morphology/swarming_motility.yaml": {
@@ -3160,10 +3149,9 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from DOI:10.1038/nrmicro2405 "
-            "(Kearns 2010, already present on "
-            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
-            "match definition_source (Cycle 10 Stage 5 remediation of "
-            "F-C10S4-DEF-SRC-013 in group "
+            "(Kearns 2010 Europe PMC abstract, ACT-C10S4-DEF-SRC-013) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-013 in group "
             "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
@@ -3188,11 +3176,10 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
         },
         "changes": (
             "Added verified verbatim snippet from "
-            "DOI:10.1146/annurev.micro.56.012302.160938 (Mattick 2002, already "
-            "present on causal_graphs[0].edges[8].evidence[0]) to record-level "
-            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
-            "of F-C10S4-DEF-SRC-014 in group "
-            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+            "DOI:10.1146/annurev.micro.56.012302.160938 (Mattick 2002 Europe PMC "
+            "abstract, ACT-C10S4-DEF-SRC-014) to record-level evidence[0] to match "
+            "definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-014 in "
+            "group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
 }
