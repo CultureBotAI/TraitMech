@@ -7,7 +7,9 @@ A re-pin that leaves a claw ref behind now fails here. claw's
 file, so the re-pin commit knows to change both.
 
 The workflow is parsed as YAML, not matched line by line, so quoting a call or
-commenting it neither hides a stale ref nor breaks the check (#2077).
+commenting it neither hides a stale ref nor breaks the check (#2077). GitHub
+resolves a call's owner and repository case-insensitively, so they are compared
+that way; the path and ref are compared exactly (#2078).
 """
 
 from __future__ import annotations
@@ -23,6 +25,15 @@ CLAW = "CultureBotAI/culturebotai-claw/"
 REUSABLE = CLAW + ".github/workflows/label-correspondence-reusable.yaml"
 
 
+def _canonical(uses: str) -> str:
+    """`uses` with its owner and repository in one case, as GitHub resolves them."""
+    parts = uses.split("/", 2)
+    if len(parts) < 3:
+        return uses
+    owner, repository, rest = parts
+    return f"{owner.lower()}/{repository.lower()}/{rest}"
+
+
 def claw_calls(workflow_text: str) -> list[str]:
     """Every job- or step-level `uses` naming culturebotai-claw, as written."""
     document = yaml.safe_load(workflow_text)
@@ -32,7 +43,7 @@ def claw_calls(workflow_text: str) -> list[str]:
             continue
         for uses in [job.get("uses")] + [step.get("uses") for step in job.get("steps") or []
                                          if isinstance(step, dict)]:
-            if isinstance(uses, str) and uses.startswith(CLAW):
+            if isinstance(uses, str) and _canonical(uses).startswith(_canonical(CLAW)):
                 calls.append(uses)
     return calls
 
@@ -40,7 +51,7 @@ def claw_calls(workflow_text: str) -> list[str]:
 def problems(workflow_text: str, pin: str) -> list[str]:
     calls = claw_calls(workflow_text)
     found = [f"{call} is not at the pin {pin}" for call in calls if call.rpartition("@")[2] != pin]
-    reusable = [call for call in calls if call.rpartition("@")[0] == REUSABLE]
+    reusable = [call for call in calls if _canonical(call).rpartition("@")[0] == _canonical(REUSABLE)]
     if len(reusable) != 1:
         found.append(f"expected one call to {REUSABLE}, found {len(reusable)}")
     return found
@@ -72,6 +83,10 @@ jobs:
      [f"{REUSABLE}@{OLD} is not at the pin {PIN}", f"expected one call to {REUSABLE}, found 2"]),
     (GOOD + f"  second:\n    uses: {REUSABLE}@{OLD}  # old\n",
      [f"{REUSABLE}@{OLD} is not at the pin {PIN}", f"expected one call to {REUSABLE}, found 2"]),
+    # GitHub resolves the owner and repository case-insensitively (#2078).
+    (GOOD + f"  second:\n    uses: {REUSABLE.lower()}@{OLD}\n",
+     [f"{REUSABLE.lower()}@{OLD} is not at the pin {PIN}", f"expected one call to {REUSABLE}, found 2"]),
+    (GOOD.replace("CultureBotAI/culturebotai-claw", "CULTUREBOTAI/CultureBotAI-Claw"), []),
     # Another claw file called at a stale ref, in a step, is a coupling too.
     (GOOD + f"  other:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: {CLAW}.github/actions/x@{OLD}\n",
      [f"{CLAW}.github/actions/x@{OLD} is not at the pin {PIN}"]),
