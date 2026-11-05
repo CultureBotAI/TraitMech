@@ -1,0 +1,1985 @@
+schema_version: 1.0.0
+review_id: 20261021T223501Z-salinity-phenotype-with-numerical-limits
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of salinity phenotype with numerical limits
+started_at: '2026-10-21T22:28:29.845725Z'
+finished_at: '2026-10-21T22:35:01Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and root primary/owner readings. Generic environmental classification, existing
+    measurement identity, source attribution and formal roles assessed. Detailed pathogenic
+    fitness, AMR, osmostress interventions and mechanistic efficacy remain UNASSESSED_SCOPE;
+    no optimization or protocol recommendations.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: two major findings concern the unrelated definition source
+  and imported process roles; two minor findings concern generic strategy typing and
+  bounded human-acceptance traceability.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/pathway_context_links.yaml
+    sha256: 067da370d4adacac209893e65cf369e16b79d30121bb596141b09f58e411d032
+    role: context
+  - path: conf/pathwaymech_index.json
+    sha256: 83e698f179caa0ca058989326d58eda780ea70269990ae5fc91fd2c285cef5b6
+    role: context
+  - path: conf/pathwaymech_pin.yaml
+    sha256: 5a8f6487d9b8e23d881d112cbe58b3c548133f9ca7c9fc80761793860204eb9c
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/nacl_delta.yaml
+    sha256: 902bec51cfb3915906b69bd7d35db4b31740f1c7fc0d0e0dd4fa60f39823c553
+    role: context
+  - path: data/traits/environment/nacl_optimum.yaml
+    sha256: 530e0dd8a618ebef463fc9de538bf3d3d08cccdec8aee025cfb5b42d7a821945
+    role: context
+  - path: data/traits/environment/nacl_range.yaml
+    sha256: 7f2e247297c3053e2d800cb41a3bbf04c9cc362ed1f1fc927b84570ff56d315e
+    role: context
+  - path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    sha256: 429c11858371b7d407914e75a632071c749e3be29f496b7555c75c7f19fbf5bb
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/add-pathway-context-links/2026-10-05T174737Z-claude-code-bbc882.yaml
+    sha256: 3ff71695cb77ae0bcfa4425b6a442a2eb6cdcd06809d669b93cb93e786e88d99
+    role: context
+  - path: history/infrastructure/add-pathway-context-links/2026-10-05T174844Z-codex-eb7286.yaml
+    sha256: 29eb0756544d96221e4054b92e484454491d04070a8bcb67960b755e33705b01
+    role: context
+  - path: history/infrastructure/canonical-example-bin-placement/2026-08-30T200048Z-codex-1c6d49.yaml
+    sha256: 9230da48fa0a53ea5b56a45fb046376ec0359eb29199a1d46e653cd866d54fe6
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T030032Z-claude-code-d72d86.yaml
+    sha256: efe9fd09e810c5d0d0c447b74bdf1038d2bcf7fd3524f13c3a6b3aa67f0b6ced
+    role: context
+  - path: history/infrastructure/migration-history-idempotency/2026-08-16T190120Z-claude-code-49ec94.yaml
+    sha256: 460cfeb1207d22e3577b1b211c1d357cdae25013127ca985a5bb2244de6cb459
+    role: context
+  - path: history/infrastructure/pathway-context-reconciliation/2026-10-07T190512Z-codex-79d7cd.yaml
+    sha256: bfb7989e28af181f7e4d1d808eb270cc12856d4cb956d1522f52eee90fb7dad3
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-06T171200Z-codex-3c8677.yaml
+    sha256: 0f9e6e876c4253ad25767d9f195f373a376abd716f364ae0ab8c90362e0fd6cc
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-06T202800Z-codex-7d3f87.yaml
+    sha256: 4757f8282af2bd095b1e1c33ade94e85796216325e0102fa3d956c9ea2eaee09
+    role: context
+  - path: history/other/canonical-examples-batch1/2026-08-20T074839Z-claude-code-6fb2f5.yaml
+    sha256: c938f2928f2eb41505d58c2fb72d8de01d99534d766de9af400010e8778988a4
+    role: context
+  - path: history/records/dumbbell_shaped/2026-08-03T230903Z-claude-code-90a277.yaml
+    sha256: b7e24af45b29278753dadb97864eb29d72cc41a8fb22ca592b37109eb46af5e9
+    role: context
+  - path: history/records/nacl_delta/2026-09-04T072000Z-codex-469a73.yaml
+    sha256: a84da899cf444fdc8d64592ad1ada2505991f5cddd55beabf9bcba6a8127d3e0
+    role: context
+  - path: history/records/nacl_delta_high/2026-08-26T104405Z-codex-cab03f4.yaml
+    sha256: a1df0f2ddb83be0f817dc58b24bdfa20424ca6475fffedee0dbaf7df930a98cb
+    role: context
+  - path: history/records/nacl_delta_mid2/2026-09-04T074000Z-codex-0fe1eb.yaml
+    sha256: 42a76487ab3e8affb09f3f4ede908071c5eb6d7c8f72f9829a7b595ade60d09c
+    role: context
+  - path: history/records/nacl_optimum/2026-09-04T010000Z-codex-5941be.yaml
+    sha256: 600d42877b14849c9eb2363c58bf35ec529cc232f6fea19d2ab0f19dc6f24483
+    role: context
+  - path: history/records/nacl_optimum/2026-09-04T140000Z-codex-183.yaml
+    sha256: a6c9caf44895b447f4096a71fb6e114fb8aaf0c65f1bdfb014b01a2cc5c6c52a
+    role: context
+  - path: history/records/nacl_range_low/2026-09-04T080000Z-codex-6bb1d6.yaml
+    sha256: c6df582d788b6933d481dbc23eeaec57be8e2239d3d56ba33b837723a0468c2d
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+    sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+    role: context
+  - path: proposals/metpo_traitmech_v4/proposal.md
+    sha256: c35d12fec87a3efdcfa320125446320315fca17bdb9228dd2b98ed00fe991bd8
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v7/proposal.md
+    sha256: bc6ea10ebc4bec0f446cee92578602889ec464295ce5ecce27fed76eb06528ce
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/salinity_phenotype_with_numerical_limits-deep-research-falcon.md
+    sha256: fa9148f286bf731a9a98aade9dc523ee4809fe4a9bf77e23da129af7b1eabf9d
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_pathway_context_links.py
+    sha256: 4e9ba44d2306f5d0f86b39fb8f59fc6be5cd200767854dd2987a32b39252fc24
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/build_embedding_index.py
+    sha256: d5ebf6612a04a67d74b2a245014a3624253d25f8d2b810e0b0ce528b7c851cd7
+    role: context
+  - path: scripts/check_pathway_links.py
+    sha256: 208abc567fe7036a181eea579ae0e4c686949af2c7f11f09547111791cf5ad4a
+    role: context
+  - path: scripts/connect_free_living_trehalose_osmotic.py
+    sha256: 7b39fbf6fdae76a319dd88115888ac66137c1cbc5e798d1aaaaa35692df26252
+    role: context
+  - path: scripts/connect_nacl_optimum_graph_183.py
+    sha256: f1608bd82c1323c7d2306268860502ae3483d40f093e055b9b70cd463a1ecf04
+    role: context
+  - path: scripts/connect_temperature_optimum_very_low_graph_183.py
+    sha256: 4749be5b5aacc87817ea013e587c41096e8a213c93dde74546f4906a0a08dc7e
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/move_nacl_optimum_exemplar.py
+    sha256: 6fb557492a86daebc54de6315a7f6b8b20780cace9bdd47cddafc69ec6a2cbe6
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/repair_legacy_canonical_citations_1626.py
+    sha256: 36b4338cc42b002eca7698ac4fb060aa31ff4a14112a9ba52e9e7295a8c186e2
+    role: context
+  - path: scripts/repair_pr664_adversarial_review.py
+    sha256: 5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96
+    role: context
+  - path: scripts/review_nacl_delta_graph_183.py
+    sha256: 91b85da640baff48e0d317c206aaa24c1216b3725d9c9814c6fb9d4d975e192c
+    role: context
+  - path: scripts/review_nacl_delta_mid2_graph_183.py
+    sha256: 7d628bb0265a6f689dbeb47509be8c6528c0c64e6b3d59d84e5a8a0b9cb5e1a5
+    role: context
+  - path: scripts/review_nacl_optimum_graph_183.py
+    sha256: 6d0de1ccb1604fb87294432692cc051e3a8a1d52e082eaff6aa1f8d3cb621ffd
+    role: context
+  - path: scripts/review_nacl_range_low_graph_183.py
+    sha256: d7e6669f6d2aa295487a34cba7fe14666a979404614bdbdd3be529194649accf
+    role: context
+  - path: scripts/review_temperature_optimum_very_low_graph_183.py
+    sha256: 17e41b0426e6c41a43e7624799cf35db9737ef372d3aeb3ea40ac0a2dce20869
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/pathway_links.py
+    sha256: 0e0c97a353437fa9214347a75dc8596d0f56c4e984c6d208a326d8f3246bd470
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000532
+  path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+  label: salinity phenotype with numerical limits
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Eighth record of the actual locally initialized batch 012 queue. Entire
+    309-line target and all 97 captured inputs verified before assessment, including
+    the internal NaCl descriptors and pinned PathwayMech context addendum. Local initialization
+    does not assert B11 publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000532
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000532
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000532
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: salinity-phenotype-with-numerical-limits-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just validate data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-salinity-phenotype-with-numerical-limits-native
+- check_id: salinity-phenotype-with-numerical-limits-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just validate-strict data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-salinity-phenotype-with-numerical-limits-strict
+- check_id: salinity-phenotype-with-numerical-limits-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just verify-snippets --record data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct network invocation passed: six fields over one reference, one VERIFIED
+    and five NOT_IN_ABSTRACT. Source audit retains one literal and five body-unverified
+    phrases; no quote falsehood inferred and no initial target-specific failed snippet
+    attempt.'
+  evidence_ids:
+  - check-salinity-phenotype-with-numerical-limits-snippets-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000532
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual prior QC qualified against B12 bytes; independent of publication
+    status.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000532
+  summary: No current GENE_OR_PROTEIN classes or instances. Named process/pathway
+    context does not require token proteins or an inherited accession/version check.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-salinity-phenotype-with-numerical-limits-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-native.log
+  locator: Executed 2026-10-21T22:28:49.293366+00:00 through 2026-10-21T22:28:49.838447+00:00;
+    metadata salinity-phenotype-with-numerical-limits-native.json
+  accessed_at: '2026-10-21T22:28:49.838447Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: 5192b9321fda53a6bee4dae25c19a30a2d1328d5f836dc363b06b437dff8f6ed
+- evidence_id: check-salinity-phenotype-with-numerical-limits-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-strict.log
+  locator: Executed 2026-10-21T22:28:49.293651+00:00 through 2026-10-21T22:28:50.196720+00:00;
+    metadata salinity-phenotype-with-numerical-limits-strict.json
+  accessed_at: '2026-10-21T22:28:50.196720Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: 8bdd7c1643c493c35e7e4064c94e8778a1eae13bae1f92cca4abe10d1fd94cb0
+- evidence_id: check-salinity-phenotype-with-numerical-limits-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-snippets-network.log
+  locator: Executed 2026-10-21T22:29:05.072401+00:00 through 2026-10-21T22:29:06.827724+00:00;
+    metadata salinity-phenotype-with-numerical-limits-snippets-network.json
+  accessed_at: '2026-10-21T22:29:06.827724Z'
+  support: context_only
+  summary: 'Direct network invocation passed: six fields over one reference, one VERIFIED
+    and five NOT_IN_ABSTRACT. Source audit retains one literal and five body-unverified
+    phrases; no quote falsehood inferred and no initial target-specific failed snippet
+    attempt.'
+  snapshot_sha256: 59b5ba39cddbe83afce70b5572251c6d78acd8d8ee56efd1617b72d2f5faf8d8
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual prior QC qualified against B12 bytes; independent of publication
+    status.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+  locator: Entire current 309-line record
+  accessed_at: '2026-10-21T22:28:30.492457Z'
+  support: supports
+  summary: Thirteen nodes, eleven edges, six snippets, one canonical example and one
+    explicit contextual route link covered.
+  snapshot_sha256: 429c11858371b7d407914e75a632071c749e3be29f496b7555c75c7f19fbf5bb
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Actual referents and optional protein applicability.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Source scope, copied spans and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Current facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Whole-record scientific/documentary checklist.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: predicate-mapping-primary
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Conditional imported predicate mappings and compatible local gates.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and current byte comparisons.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck, not new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Actual local initialization preserves separately documented publication
+    status.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:28:51.884798Z'
+  support: supports
+  summary: All 97 inputs verified before grounding assessment.
+  snapshot_sha256: d72c212a46355d17920bbef41542588e925417fd25a6300b10cfbea5cec6faac
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/identity-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.716546Z'
+  support: supports
+  summary: Current quantitative phenotype, parent and internal NaCl descriptors.
+  snapshot_sha256: 06afb92a6b1180b04d5060933dfa7a71d750887bc2c29591708314b0dae79936
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/node-edge-grounding-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.717291Z'
+  support: supports
+  summary: All thirteen nodes and eleven edges; current formal role boundaries.
+  snapshot_sha256: c4c035ef0dece1b1a0b0a1b4dfab17c7267a295d2e359dd54ed2ea43b7fed7ea
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.717487Z'
+  support: supports
+  summary: Current assertions and actual guarded mapping/writer responsibilities.
+  snapshot_sha256: fc37eeb8c41dec779a336bcf651554ffc144be0a79b724c3c4abfdec615e1a6d
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/expression-and-readiness.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.717814Z'
+  support: supports
+  summary: Exact canonical/catalog scope; no forced protein instance.
+  snapshot_sha256: 56956a51a1ca4e4829e61ec31afc52d712ffb9cfe2a33f17b8cfce47dcd52ab7
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/catalog-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:22.755548Z'
+  support: supports
+  summary: Original catalog acquisition and current copies distinct.
+  snapshot_sha256: 5831efaf9208adbd4072a9fb1ccfced81cf92638f54d69c134d9c49d10969afc
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/local-authority-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.677725Z'
+  support: supports
+  summary: Exact v4 defines/v7 salt-in/current mapping rows.
+  snapshot_sha256: a849f786a202750daf0be6d7e9362282b98390ddc400c31396995e9bfbd184b0
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.678451Z'
+  support: supports
+  summary: Selected direct writer/migration and maintained route/process policy windows;
+    node6 remains record-owned.
+  snapshot_sha256: 01805e4d40e61e06ccc50d87de7901b8c642c81f4831573bbebad042eb669c77
+- evidence_id: pathway-context
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/pathway-context-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.684338Z'
+  support: supports
+  summary: Actual pin/index/manifest/writer/validator; null current_link projection
+    is superseded by separate correction.
+  snapshot_sha256: 2f88fc3e63c3e805e9f0b1657415f7def6c3977b91fee2d5b05bf27254032fbf
+- evidence_id: pathway-projection
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/pathway-current-link-projection-addendum.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:33:10.221635Z'
+  support: supports
+  summary: Actual related_records link matches the pin/index/manifest. Original frozen
+    receipt remains unchanged.
+  snapshot_sha256: 3053513a2926e0ffd5bdd022b546016d3cdd27d9c34b4a50f212e3a1915c326e
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.718155Z'
+  support: supports
+  summary: Actual authorities, histories and selected owner reading.
+  snapshot_sha256: bd453f0a334fa5ba76bc128256ea34dbe2deab6d351b7d94ff217c21c2c4e3ac
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.724139Z'
+  support: supports
+  summary: Frozen grounding artifacts verified.
+  snapshot_sha256: d1580be7a8c0a134eb1da90397df9fb26034029827d6ab50e2dcecfec0247a04
+- evidence_id: ground-disposition
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/documentary-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:57.717964Z'
+  support: supports
+  summary: Formal findings and all qualified nonfindings retained.
+  snapshot_sha256: 886109b700adfe81adb60712d155b29ae224f06ef928881a95775e01069307a7
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Captured raw METPO selected classes
+  accessed_at: '2026-10-21T22:29:12.162678Z'
+  support: supports
+  summary: Whole salinity phenotype and NaCl child descriptors retain distinct scopes.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Selected inherited imported relation rules
+  accessed_at: '2026-10-21T22:29:10.500135Z'
+  support: supports
+  summary: Process regulation is distinct from chemical-to-trait attribution; other
+    positive roles remain.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: chebi-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/chebi.db
+  locator: Selected actual CHEBI17750 statements
+  accessed_at: '2026-10-21T22:29:10.502498Z'
+  support: supports
+  summary: Glycine betaine chemical identity, not universal efficacy.
+  snapshot_sha256: 26ad4890cdcf6ee357760d815dfee8f5ba81e0873e62cb379369b04205722b0f
+- evidence_id: taxon
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/taxon375929.xml
+  locator: Whole successful official taxonomy response; original acquisition time
+  accessed_at: '2026-10-21T10:34:42.587030Z'
+  support: supports
+  summary: Natranaerobius thermophilus species and type-strain aliases; phenotype
+    assessed separately.
+  snapshot_sha256: 13cb75c0ec8d575c71e7b41f1ecfacfb25660ecc5f319356311e7db4efa6fd20
+- evidence_id: taxon-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-grounding-agent/taxonomy-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:22.594427Z'
+  support: supports
+  summary: Original successful 10:34 acquisition, initial DNS failure and current
+    copying remain distinct.
+  snapshot_sha256: c0b211a6d120e1994cf8ab3007200d1d7e7f7bdcb915985e5e9da16100fdc238
+- evidence_id: retained-osmoadaptation-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/osmoadaptation-metadata.json
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:47:46.665724Z'
+  support: supports
+  summary: Assigned review identity and abstract only; one supplied phrase literal,
+    five body phrases unresolved.
+  snapshot_sha256: 9996b056788e13d02fc59a5b94b3a77ecb24c2266fb8b6f22c4ae17dc45a63b6
+- evidence_id: retained-canonical-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/canonical-metadata.json
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:47:46.696227Z'
+  support: supports
+  summary: Assigned N. thermophilus study identity and abstract exposure scope; body
+    growth-range sentence separately bound.
+  snapshot_sha256: 71125b1dd76f9af6658c2c5b40cc768cdaf8f90a2bf3f8d1fb0c3ede4d92457f
+- evidence_id: retained-proline-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/proline-metadata.json
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:47:47.416295Z'
+  support: supports
+  summary: Assigned title identifies an engineered ectoine-deficient H. elongata cohort.
+    Only generic identity/context assessed, not intervention efficacy.
+  snapshot_sha256: 31c3b62e4fc5dee2c814616ee71c0ab9a8ca0ca5831a31d5ed4e0802b2dce867
+- evidence_id: retained-strategies-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/strategies-metadata.json
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:22:18.827339Z'
+  support: supports
+  summary: Environmental hybrid osmoregulation study identity/abstract; no universal
+    exclusivity asserted.
+  snapshot_sha256: 72355d94a7cc71b3aff4baff005dc4dc83626f2f734315c56e16d5da79b0118a
+- evidence_id: retained-nature-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/nature-metadata.json
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T13:31:04.150985Z'
+  support: supports
+  summary: Environmental brine study identity/abstract and preprint linkage; not a
+    correction/retraction.
+  snapshot_sha256: cf6057cfee28c74c2f1617bca4d7f7dff5cda4f3d73d1375db7af12cd684c339
+- evidence_id: retained-strategies
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/strategies.xml
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:22:45.504545Z'
+  support: supports
+  summary: Actual JATS introduction paragraph1 defines generic salt-in/salt-out strategies.
+  snapshot_sha256: 8cbee2e3122994bcbf42bce40fb3e1fa1975cb88d7de232a45dec91dde5aa899
+- evidence_id: retained-nature
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/nature.html
+  locator: Actual original acquisition distinct from current copying
+  accessed_at: '2026-10-21T12:36:28.415348Z'
+  support: supports
+  summary: Accessible publisher abstract/preview and references only; not a full-body
+    claim.
+  snapshot_sha256: b6eaecf0571813494d6044354815c7557b306ed24124047f60645875ffdf8765
+- evidence_id: meta-definition
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/definition-metadata.json
+  locator: Actual indexed identity/title/abstract
+  accessed_at: '2026-10-21T22:29:18.620022Z'
+  support: refutes
+  summary: Assigned DOI resolves to GO phylogenetic annotation, not quantitative salinity.
+  snapshot_sha256: 309607a918d712bee89668bb8ba41e85ce414aec132a80a0beb223011bc58b3b
+- evidence_id: body-definition
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/definition.xml
+  locator: Actual title/abstract/first three body paragraphs; full-body machine search
+    separately receipted
+  accessed_at: '2026-10-21T22:29:46.288167Z'
+  support: refutes
+  summary: Primary article subject establishes a material definition-source mismatch.
+  snapshot_sha256: 3bd2c7cb2cb3d4f69adb9f73c2e991bb29aacc7ef99bad5f75c205bf9e228340
+- evidence_id: body-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/canonical-pmc.html
+  locator: Raw HTML paragraph9 exposures; paragraph13 first growth-range sentence;
+    paragraph15 first strain/carbonate-context sentence
+  accessed_at: '2026-10-21T22:29:18.395454Z'
+  support: supports
+  summary: 2.5–4.3 M Na+ study exposures and reported 3.1–4.9 M Na+ growth range are
+    positive and distinct; no conversion to NaCl.
+  snapshot_sha256: 77aa5d9d29c2ea2ca2f1752646320af740114fb9b8ecb3d1f545b12a91589196
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/source-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.520170Z'
+  support: supports
+  summary: Six source identities; overall UNKNOWN for unresolved body and detailed
+    claims.
+  snapshot_sha256: 3b29feeb561aa9e65e659ef48f9aa9f09f752091d2d575052c277ea5fe8f806c
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.518203Z'
+  support: supports
+  summary: All six actual bibliographic identities and bounded reading scopes.
+  snapshot_sha256: 76d1754c58980ff2a195ffddba8c61654b8d174dbb6b5cbba7c812451f43499e
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/placement-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.518463Z'
+  support: supports
+  summary: Fifteen external placements, fourteen grounding fields and one explicit
+    related-record link.
+  snapshot_sha256: 28fbd4b06a29785304275c54e6b8b22d713dd03548ae3db7f87bc465b07fbb6e
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/snippet-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.518746Z'
+  support: supports
+  summary: 'Six fields: one literal and five body-unverified, no copied-span finding.'
+  snapshot_sha256: 13a86f1d975a8732ae47d53c632822e4eb4edca6d1b93ce57dcdd3e5d282b82a
+- evidence_id: definition-mismatch
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/definition-primary-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.516928Z'
+  support: supports
+  summary: Actual primary topic and bounded complete-body search establish wrong assigned
+    definition source.
+  snapshot_sha256: 0c328de4748891d3a505ac2a794f7a1cc09225d506ebb8b2572b6800aa9b4527
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/node-edge-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.519043Z'
+  support: supports
+  summary: All thirteen source node and eleven edge assessments.
+  snapshot_sha256: 5711b292b68304be0697aeebb643cf7cd03b59a8d6adf428cee48f7847e2e221
+- evidence_id: source-notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/note-attribution-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.519200Z'
+  support: supports
+  summary: Current notes and explicit route-context limitations retained.
+  snapshot_sha256: 0c35066c1289a5e8adfed455a63f36d361a3b755bd89bfdc781caa63ba3f8aef
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/publication-status-audit.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.518328Z'
+  support: supports
+  summary: Indexed notice scope and Nature preprint linkage.
+  snapshot_sha256: 6afa565d501c02998ef83f5dc2dcc34e2af707576036c304dc46d04b90662ce7
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/primary-reading-scope.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.519978Z'
+  support: supports
+  summary: Selected generic measurement/source reading; incidental detailed content
+    not adopted.
+  snapshot_sha256: c0545a310928830f17bee24fb787a111207e6726edf20a32a8099498a2bfdb3a
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/access-limits.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.519296Z'
+  support: supports
+  summary: Failed publisher routes and accessible preview/body distinctions.
+  snapshot_sha256: 1fe4908ed48e3ca8a85dd4cdd9a5ce2bec36292ee1dbf4fb34126a87b6b05281
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/source-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:17.970254Z'
+  support: supports
+  summary: Original requests and current copies remain separately timed.
+  snapshot_sha256: 1e32619b128c9aa18868a73f13cb376de59237d489e907778e91ff4f89740af2
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/canonical-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.518831Z'
+  support: supports
+  summary: Existing sodium study values and reported growth interval preserved.
+  snapshot_sha256: 5cc4e15680d5b6f9e879ab1b427382680402ec68e44bd42440bbbf06ec2e517a
+- evidence_id: source-locators
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/selected-primary-locators.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.517227Z'
+  support: supports
+  summary: Exact safe primary locators and source limitations.
+  snapshot_sha256: a48a12b3e63fe2e86c57802a4c8b03bf608ef63eac9f9ee0fa92db91b90c7ef4
+- evidence_id: source-browser
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/browser-access-observation.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.517984Z'
+  support: supports
+  summary: Tentative failed publisher path distinct from DOI-resolved inaccessible
+    redirect; no body hash inferred.
+  snapshot_sha256: e7f55db0996bea93f5fd12fd682f1e39bb9823d8fcd4a4747d4eb95d3090eebe
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/native-check-context.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.519900Z'
+  support: supports
+  summary: Actual current root-owned commands passed; no initial target snippet failure.
+  snapshot_sha256: cc6b596ac1c2b2992e7d663fd9c2a9ecb58b0f42312f6c6fff304608e8f311f4
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:28:47.197567Z'
+  support: supports
+  summary: All 97 source inputs verified.
+  snapshot_sha256: 0b791c6ecdc8311b794d395083fa69b96be682d80529f6250aaae2d533ce41f3
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:32.525386Z'
+  support: supports
+  summary: Frozen thirty-four source artifacts verified.
+  snapshot_sha256: 276a7682e300e42618de1e9b77effc09c68f1c35ee3436a420efe37ed5a6fe83
+- evidence_id: root-reading-75
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/canonical-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:30:38.154184Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: bb449a089ae6e991f00143f40a2b93cc478de04f787a7b74bb27c948cee6c0e5
+- evidence_id: root-reading-76
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:06.280687Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: f0847b3c30441404d47011e05ce131d3dcd3247f13bb2b49257b36a1bcaf2cb7
+- evidence_id: root-reading-77
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/history-provenance-reading-addendum.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:38.098514Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 6a8038103cada491e9a76989f21eee29234f723ef5934f29f2b6f67d32a43e90
+- evidence_id: root-reading-78
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/local-authority-pathway-reading-correction.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:25.659614Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: d5e7e1d99ac3b21f453b22bfc996bc77d6f3698de6cea7051f0592719c483517
+- evidence_id: root-reading-79
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/local-authority-pathway-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:17.119716Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 97566ba29ccae7dce52cff64e1a0aff8cb95112b55855ecdb5c9a36c8b7b5730
+- evidence_id: root-reading-80
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/metadata-definition-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:30:04.259884Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 439d97e5476310c270c6d2eebbe87bd55b9dbcb3bdfa306e24843a1930da6897
+- evidence_id: root-reading-81
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/ontology-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:08.387025Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 0cb728666d33ca44db36a5c070736017fb138636e7a843ec0b04e0a25448fc8f
+- evidence_id: root-reading-82
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/owner-schema-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:29:41.995050Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 37b59b8fc955303e86868ebb2aec489fccb7fb5ad73727edeabd0f99debb4be2
+- evidence_id: root-reading-83
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/pathway-context-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:38.254354Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 3e061d76e27911508a88d050c538cc25fd5887e39e947e6a561da05b71a25b19
+- evidence_id: root-reading-84
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/pathway-owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:30:29.881103Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: e5397d301b03b008a92827251c448b982040cb3992ecb8b2fffe24fa8e822f7e
+- evidence_id: root-reading-85
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/playbook-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:31:07.779302Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: a8a8bd642122ec89e87ab13fb1145b3b615ae2326b607dd6e222d28e77b317c9
+- evidence_id: root-reading-86
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/provenance-projection-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:29.679975Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 8077ba82f2329fff595311cefea84a54796573ff931996363891afa2b99f1deb
+- evidence_id: root-reading-87
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/ro-output-ancestor-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:33:36.837808Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: b8ace99ab7e753c426c5a2e8449e44f2137db2f33263f265ffe2b929e931841f
+- evidence_id: root-reading-88
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/strategies-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:08.679001Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: c71523d8e5679aacdf25ca28a7977012a9cf191831510e1ff49439e5aebb5d71
+- evidence_id: root-reading-89
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-source-root/taxonomy-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:32:22.881491Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 32fa13a99bb098ca5a264660a8b123a861b94f1364d6db4c17a1c3cdb48b8fcc
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T22:34:01.015538Z'
+  support: supports
+  summary: Actual disposition and hash bindings verified.
+  snapshot_sha256: f59b01d72591f18161dfa93b98d549e9427e2d5da4a2d3e106feb9bc2be90507
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/salinity-phenotype-with-numerical-limits-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T22:34:17.825863Z'
+  support: supports
+  summary: Final findings control serialization; no scope expansion.
+  snapshot_sha256: 1073b5ef65e4dbac6c42b6b4ca1618f374365c484842e21af420046190010d95
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: quantitative phenotype and current descriptors'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: Active METPO1000532 represents numerical salinity limits, with a phenotype
+    parent. Internal NaCl optimum/range/delta terms are explicit child descriptors
+    rather than equivalents of all salt compositions. Official canonical taxonomy
+    is positive.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - taxon
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: assigned definition source'
+  outcome: concern
+  target_ids:
+  - METPO:1000532
+  summary: DOI baw155 is a GO phylogenetic annotation paper using apoptosis/autophagy
+    examples. Its actual primary topic does not establish the numerical salinity phenotype
+    definition; this is not a retrieval failure or merely a short-phrase nonmatch.
+  evidence_ids:
+  - record
+  - sources
+  - definition-mismatch
+  - meta-definition
+  - body-definition
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: NaCl branch and whole-class scope'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: The graph expressly models a NaCl measurement branch and its optimum/range/delta
+    descriptors. Node0 wording narrows the broad class to NaCl while the whole definition
+    and sodium canonical are broader; retain this interpretive qualification without
+    silently converting concentrations.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - local-authority
+  - node-edges
+  - node-sources
+  - canonical-scope
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: six assigned works and every placement'
+  outcome: unknown
+  target_ids:
+  - METPO:1000532
+  summary: All six identities are established, but the definition source is substantively
+    unrelated and five short phrase occurrences remain body-unverified. Environmental
+    category and measured sodium scope are supported. Engineered-cohort or detailed
+    intervention claims do not become universal from identity alone.
+  evidence_ids:
+  - sources
+  - source-ledger
+  - placements
+  - source-status
+  - source-access
+  - source-reuse
+  - node-sources
+  details: '{"completed_at": "2026-10-21T22:31:32.519043+00:00", "nodes": [{"index":
+    0, "node_id": "salinity_phenotype_trait", "node_type": "TRAIT", "incident_edges":
+    [0, 1, 2, 3, 7, 9, 10], "assessment": "qualified", "scope": "Current numerical
+    descriptor/measurement semantics and explicit NaCl graph branch; broader salt
+    phenotype remains distinct. Current node0 description narrows the broader whole-class
+    definition to NaCl while graph description names a NaCl branch and canonical example
+    preserves sodium. This is a scope qualification to be calibrated separately, not
+    a new source finding from omission alone."}, {"index": 1, "node_id": "nacl_concentration_axis",
+    "node_type": "ENVIRONMENTAL_FACTOR", "incident_edges": [0], "assessment": "qualified",
+    "scope": "Current numerical descriptor/measurement semantics and explicit NaCl
+    graph branch; broader salt phenotype remains distinct."}, {"index": 2, "node_id":
+    "nacl_optimum", "node_type": "TRAIT", "incident_edges": [1], "assessment": "qualified",
+    "scope": "Current numerical descriptor/measurement semantics and explicit NaCl
+    graph branch; broader salt phenotype remains distinct."}, {"index": 3, "node_id":
+    "nacl_range", "node_type": "TRAIT", "incident_edges": [2], "assessment": "qualified",
+    "scope": "Current numerical descriptor/measurement semantics and explicit NaCl
+    graph branch; broader salt phenotype remains distinct."}, {"index": 4, "node_id":
+    "nacl_delta", "node_type": "TRAIT", "incident_edges": [3], "assessment": "qualified",
+    "scope": "Current numerical descriptor/measurement semantics and explicit NaCl
+    graph branch; broader salt phenotype remains distinct."}, {"index": 5, "node_id":
+    "intracellular_osmotic_balance", "node_type": "BIOLOGICAL_PROCESS", "incident_edges":
+    [4, 5, 6], "assessment": "qualified", "scope": "Generic environmental/source identity
+    only; exact detailed causal efficacy and cross-taxon transfer remain qualified
+    or UNASSESSED_SCOPE."}, {"index": 6, "node_id": "salt_out_compatible_solute_strategy",
+    "node_type": "PATHWAY", "incident_edges": [4], "assessment": "qualified", "scope":
+    "Generic environmental/source identity only; exact detailed causal efficacy and
+    cross-taxon transfer remain qualified or UNASSESSED_SCOPE."}, {"index": 7, "node_id":
+    "salt_in_strategy", "node_type": "BIOLOGICAL_PROCESS", "incident_edges": [5],
+    "assessment": "qualified", "scope": "Generic environmental/source identity only;
+    exact detailed causal efficacy and cross-taxon transfer remain qualified or UNASSESSED_SCOPE."},
+    {"index": 8, "node_id": "glycine_betaine", "node_type": "CHEMICAL", "incident_edges":
+    [6], "assessment": "qualified", "scope": "Generic environmental/source identity
+    only; exact detailed causal efficacy and cross-taxon transfer remain qualified
+    or UNASSESSED_SCOPE."}, {"index": 9, "node_id": "l_proline", "node_type": "CHEMICAL",
+    "incident_edges": [7, 8], "assessment": "qualified", "scope": "Generic environmental/source
+    identity only; exact detailed causal efficacy and cross-taxon transfer remain
+    qualified or UNASSESSED_SCOPE."}, {"index": 10, "node_id": "proline_biosynthesis_pathway",
+    "node_type": "PATHWAY", "incident_edges": [8], "assessment": "qualified", "scope":
+    "Generic environmental/source identity only; exact detailed causal efficacy and
+    cross-taxon transfer remain qualified or UNASSESSED_SCOPE. Pinned PathwayMech
+    E.coli route is explicitly PATHWAY_CONTEXT, not exact equivalence or transfer
+    of organism scope."}, {"index": 11, "node_id": "chaotropic_ions", "node_type":
+    "CHEMICAL", "incident_edges": [9], "assessment": "qualified", "scope": "Generic
+    environmental/source identity only; exact detailed causal efficacy and cross-taxon
+    transfer remain qualified or UNASSESSED_SCOPE."}, {"index": 12, "node_id": "water_activity",
+    "node_type": "ENVIRONMENTAL_FACTOR", "incident_edges": [10], "assessment": "qualified",
+    "scope": "Generic environmental/source identity only; exact detailed causal efficacy
+    and cross-taxon transfer remain qualified or UNASSESSED_SCOPE."}], "edges": [{"index":
+    0, "subject": "nacl_concentration_axis", "predicate": "defines", "object": "salinity_phenotype_trait",
+    "source_key": "osmoadaptation", "assessment": "unknown", "scope": "Indexed review
+    addresses hypersaline environments and named adaptation strategies. One supplied
+    abstract phrase is literal; five body-only short phrase occurrences remain unknown.
+    Optimum/range descriptions are plausible generic context, but the source is not
+    shown here to define the complete optimum/range/delta ontology taxonomy. Numerical
+    range breadth can be derived, but this audit does not assert that the review coins
+    the current delta label or verifies every hierarchy edge.", "formal_roles": "Independent
+    grounding audit owns formal endpoint judgments."}, {"index": 1, "subject": "nacl_optimum",
+    "predicate": "is a", "object": "salinity_phenotype_trait", "source_key": "osmoadaptation",
+    "assessment": "unknown", "scope": "Indexed review addresses hypersaline environments
+    and named adaptation strategies. One supplied abstract phrase is literal; five
+    body-only short phrase occurrences remain unknown. Optimum/range descriptions
+    are plausible generic context, but the source is not shown here to define the
+    complete optimum/range/delta ontology taxonomy. Numerical range breadth can be
+    derived, but this audit does not assert that the review coins the current delta
+    label or verifies every hierarchy edge.", "formal_roles": "Independent grounding
+    audit owns formal endpoint judgments."}, {"index": 2, "subject": "nacl_range",
+    "predicate": "is a", "object": "salinity_phenotype_trait", "source_key": "osmoadaptation",
+    "assessment": "unknown", "scope": "Indexed review addresses hypersaline environments
+    and named adaptation strategies. One supplied abstract phrase is literal; five
+    body-only short phrase occurrences remain unknown. Optimum/range descriptions
+    are plausible generic context, but the source is not shown here to define the
+    complete optimum/range/delta ontology taxonomy. Numerical range breadth can be
+    derived, but this audit does not assert that the review coins the current delta
+    label or verifies every hierarchy edge.", "formal_roles": "Independent grounding
+    audit owns formal endpoint judgments."}, {"index": 3, "subject": "nacl_delta",
+    "predicate": "is a", "object": "salinity_phenotype_trait", "source_key": "osmoadaptation",
+    "assessment": "unknown", "scope": "Indexed review addresses hypersaline environments
+    and named adaptation strategies. One supplied abstract phrase is literal; five
+    body-only short phrase occurrences remain unknown. Optimum/range descriptions
+    are plausible generic context, but the source is not shown here to define the
+    complete optimum/range/delta ontology taxonomy. Numerical range breadth can be
+    derived, but this audit does not assert that the review coins the current delta
+    label or verifies every hierarchy edge.", "formal_roles": "Independent grounding
+    audit owns formal endpoint judgments."}, {"index": 4, "subject": "salt_out_compatible_solute_strategy",
+    "predicate": "maintains", "object": "intracellular_osmotic_balance", "source_key":
+    "strategies", "assessment": "supported_generic_context", "scope": "Actual JATS
+    introduction defines salt-in as high intracellular salts, mainly potassium, and
+    salt-out as compatible-solute accumulation. Hybrid environmental systems are explicitly
+    discussed; these are not universal mutually exclusive classes.", "formal_roles":
+    "Independent grounding audit owns formal endpoint judgments."}, {"index": 5, "subject":
+    "salt_in_strategy", "predicate": "maintains", "object": "intracellular_osmotic_balance",
+    "source_key": "strategies", "assessment": "supported_generic_context", "scope":
+    "Actual JATS introduction defines salt-in as high intracellular salts, mainly
+    potassium, and salt-out as compatible-solute accumulation. Hybrid environmental
+    systems are explicitly discussed; these are not universal mutually exclusive classes.",
+    "formal_roles": "Independent grounding audit owns formal endpoint judgments."},
+    {"index": 6, "subject": "glycine_betaine", "predicate": "contributes to", "object":
+    "intracellular_osmotic_balance", "source_key": "canonical", "assessment": "supported_generic_context",
+    "scope": "Actual source explicitly separates the study exposures spanning2.5–4.3
+    M Na+ from its reported3.1–4.9 M Na+ growth range for N.thermophilus. The note
+    preserves sodium identity and does not convert it to NaCl. Generic environmental
+    compatible-solute observation is source-scoped; no intervention assessment.",
+    "formal_roles": "Independent grounding audit owns formal endpoint judgments."},
+    {"index": 7, "subject": "l_proline", "predicate": "increases", "object": "salinity_phenotype_trait",
+    "source_key": "proline", "assessment": "unknown", "scope": "Title/metadata identify
+    an engineered ectoine-deficient H.elongata cohort. That identity does not alone
+    establish universal proline effects across organisms. Generic route attribution
+    and explicit PathwayMech context stay separate; detailed engineering/efficacy/optimization
+    is UNASSESSED_SCOPE. No detailed proline engineering/efficacy or recipe evaluation;
+    source scope is the explicitly named experimental cohort, while the link states
+    limited route context.", "formal_roles": "Independent grounding audit owns formal
+    endpoint judgments."}, {"index": 8, "subject": "proline_biosynthesis_pathway",
+    "predicate": "has output", "object": "l_proline", "source_key": "proline", "assessment":
+    "unknown", "scope": "Title/metadata identify an engineered ectoine-deficient H.elongata
+    cohort. That identity does not alone establish universal proline effects across
+    organisms. Generic route attribution and explicit PathwayMech context stay separate;
+    detailed engineering/efficacy/optimization is UNASSESSED_SCOPE. No detailed proline
+    engineering/efficacy or recipe evaluation; source scope is the explicitly named
+    experimental cohort, while the link states limited route context.", "formal_roles":
+    "Independent grounding audit owns formal endpoint judgments."}, {"index": 9, "subject":
+    "chaotropic_ions", "predicate": "decreases", "object": "salinity_phenotype_trait",
+    "source_key": "nature", "assessment": "unknown", "scope": "Actual environmental
+    brine study identity and abstract salinity-chaotropicity context positive. The
+    retained HTML is an accessible abstract/preview with references, not proof that
+    the complete claimed water-activity/chaotropic-salt argument was read. Exact detailed
+    note support remains qualified/unknown.", "formal_roles": "Independent grounding
+    audit owns formal endpoint judgments."}, {"index": 10, "subject": "water_activity",
+    "predicate": "constrains", "object": "salinity_phenotype_trait", "source_key":
+    "nature", "assessment": "unknown", "scope": "Actual environmental brine study
+    identity and abstract salinity-chaotropicity context positive. The retained HTML
+    is an accessible abstract/preview with references, not proof that the complete
+    claimed water-activity/chaotropic-salt argument was read. Exact detailed note
+    support remains qualified/unknown.", "formal_roles": "Independent grounding audit
+    owns formal endpoint judgments."}], "scope": "Generic environmental salinity classification,
+    existing reported measurement identity, source identity/attribution and literal
+    supplied snippets. Detailed pathogenic fitness, AMR, osmostress interventions
+    and mechanistic efficacy remain UNASSESSED_SCOPE; no engineering, optimization
+    or protocol recommendation."}'
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: six supplied snippet fields'
+  outcome: unknown
+  target_ids:
+  - METPO:1000532
+  summary: Hypersaline environments is literal in the assigned review abstract. Five
+    salinity-range/optimal-NaCl occurrences remain unknown because the assigned body
+    was not inspected. Native results are one VERIFIED and five NOT_IN_ABSTRACT; no
+    automatic false-quote finding.
+  evidence_ids:
+  - snippets
+  - source-reading
+  - source-browser
+  - native-checks
+  - playbook
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: sodium identity and two interval roles'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: 'N. thermophilus source explicitly uses sodium concentration: study exposures
+    span 2.5–4.3 M Na+, while an introductory sentence reports 3.1–4.9 M Na+ growth.
+    These are different source roles, not a numeric contradiction or NaCl conversion.
+    Type-strain identity and carbonate-buffered context are retained without protocols
+    or optimization.'
+  evidence_ids:
+  - canonical-scope
+  - body-canonical
+  - retained-canonical-metadata
+  - taxon
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all thirteen current referents'
+  outcome: concern
+  target_ids:
+  - METPO:1000532
+  summary: Current chemical and numerical referents are coherent. Node6 describes
+    a generic compatible-solute strategy, not a named enumerable route, so its PATHWAY
+    type has a bounded precision defect. Node10 explicitly names the sequential proline
+    route and remains a positive PATHWAY control. NaCl-axis versus whole-salinity
+    qualification is explicit. No token protein instance is introduced into the NONMECHANISTIC
+    numerical phenotype.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - chebi-primary
+  details: '[{"index": 0, "node_id": "salinity_phenotype_trait", "label": "salinity
+    phenotype with numerical limits", "node_type": "TRAIT", "grounding": "METPO:1000532",
+    "outcome": "qualified", "assessment": "Active broad salinity class matches record.
+    Current description uses NaCl shorthand within an explicitly NaCl-scoped graph;
+    retain broader salt versus NaCl limitation, no extra identity major."}, {"index":
+    1, "node_id": "nacl_concentration_axis", "label": "NaCl concentration axis", "node_type":
+    "ENVIRONMENTAL_FACTOR", "grounding": null, "outcome": "supported", "assessment":
+    "Environmental concentration axis is a scalar/condition referent; local defines
+    allows feature-to-trait. No categorical ENVIRONMENTAL_FACTOR process exclusion
+    inferred."}, {"index": 2, "node_id": "nacl_optimum", "label": "NaCl optimum",
+    "node_type": "TRAIT", "grounding": "METPO:1000333", "outcome": "supported", "assessment":
+    "Active NaCl optimum1000333 and captured record identify the best-growth concentration;
+    explicit raw subclass relationship positive."}, {"index": 3, "node_id": "nacl_range",
+    "label": "NaCl range", "node_type": "TRAIT", "grounding": "METPO:1000334", "outcome":
+    "supported", "assessment": "Active NaCl range1000334 and internal interval definition
+    agree; explicit raw subclass positive."}, {"index": 4, "node_id": "nacl_delta",
+    "label": "NaCl delta", "node_type": "TRAIT", "grounding": "METPO:1000335", "outcome":
+    "supported", "assessment": "Active NaCl delta1000335 and internal max-minus-min
+    breadth definition agree; distinct from interval and explicit raw subclass positive."},
+    {"index": 5, "node_id": "intracellular_osmotic_balance", "label": "intracellular
+    osmotic balance across salinity", "node_type": "BIOLOGICAL_PROCESS", "grounding":
+    null, "outcome": "supported", "assessment": "Description is maintenance of equilibrium,
+    an explicit biological process; the osmotic-balance label alone does not force
+    STATE retyping."}, {"index": 6, "node_id": "salt_out_compatible_solute_strategy",
+    "label": "compatible-solute (salt-out) strategy", "node_type": "PATHWAY", "grounding":
+    null, "outcome": "minor", "assessment": "Generic compatible-solute accumulation
+    strategy lacks an enumerated named route. Schema PATHWAY is broad, but maintained
+    migration rule reserves it for named enumerable routes and puts strategies under
+    BIOLOGICAL_PROCESS. Bounded typing precision only, no mechanism reconstruction
+    or hard ontology-domain claim."}, {"index": 7, "node_id": "salt_in_strategy",
+    "label": "salt-in strategy", "node_type": "BIOLOGICAL_PROCESS", "grounding": "METPO:1007720",
+    "outcome": "supported", "assessment": "Explicit osmoadaptation process matches
+    the v7 proposed salt-in class and maintained strategy typing. Not active upstream
+    identity."}, {"index": 8, "node_id": "glycine_betaine", "label": "glycine betaine",
+    "node_type": "CHEMICAL", "grounding": "CHEBI:17750", "outcome": "supported", "assessment":
+    "CHEBI17750 is glycine betaine, an amino-acid betaine chemical. Material referent
+    and process object at edge6 fit inherited RO endpoints."}, {"index": 9, "node_id":
+    "l_proline", "label": "L-proline", "node_type": "CHEMICAL", "grounding": null,
+    "outcome": "supported", "assessment": "L-proline is an explicitly chemical referent;
+    no forced grounding is required. This material facet independently exposes edge7
+    formal mismatch."}, {"index": 10, "node_id": "proline_biosynthesis_pathway", "label":
+    "proB/proA/proC proline biosynthesis pathway", "node_type": "PATHWAY", "grounding":
+    null, "outcome": "supported", "assessment": "Named ProB/ProA/ProC multistep route
+    satisfies maintained PATHWAY convention. Pinned PathwayMech link is limited context
+    with explicit organism scope, not exact equivalence or efficacy."}, {"index":
+    11, "node_id": "chaotropic_ions", "label": "chaotropic ions (Mg/Ca/Li/Fe salts)",
+    "node_type": "CHEMICAL", "grounding": null, "outcome": "supported", "assessment":
+    "Chaotropic-ion aggregate is material chemical scope. Multiple salts do not require
+    an invented single CHEBI term; edge9 process-only predicate is formally incompatible."},
+    {"index": 12, "node_id": "water_activity", "label": "water activity", "node_type":
+    "ENVIRONMENTAL_FACTOR", "grounding": null, "outcome": "supported", "assessment":
+    "Water activity is explicitly an environmental availability parameter. Current
+    lexical constrains relation does not impose an unstated ontology domain."}]'
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all eleven relation roles'
+  outcome: concern
+  target_ids:
+  - METPO:1000532
+  summary: Imported process-regulation predicates on edges7/9 relate chemicals to
+    the phenotype trait, conflicting with process domain/range. Material-to-process
+    contributes-to and process-output roles remain distinct positive controls; source
+    biological efficacy is separately scoped.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - owners
+  - ground-disposition
+  - challenge
+  - adjudication
+  details: '[{"index": 0, "subject": "nacl_concentration_axis", "predicate": "defines",
+    "predicate_id": "METPO:2007500", "object": "salinity_phenotype_trait", "outcome":
+    "supported", "assessment": "V4 defines admits environmental feature-to-trait with
+    broad scaffold endpoints. Current NaCl branch scope is explicit; not a claim all
+    salinity equalsNaCl."}, {"index": 1, "subject": "nacl_optimum", "predicate": "is
+    a", "predicate_id": "rdfs:subClassOf", "object": "salinity_phenotype_trait", "outcome":
+    "supported", "assessment": "Actual raw1000333 subclass1000532 supports this descriptive
+    hierarchy edge."}, {"index": 2, "subject": "nacl_range", "predicate": "is a",
+    "predicate_id": "rdfs:subClassOf", "object": "salinity_phenotype_trait", "outcome":
+    "supported", "assessment": "Actual raw1000334 subclass1000532 supports this descriptive
+    hierarchy edge."}, {"index": 3, "subject": "nacl_delta", "predicate": "is a",
+    "predicate_id": "rdfs:subClassOf", "object": "salinity_phenotype_trait", "outcome":
+    "supported", "assessment": "Actual raw1000335 subclass1000532 supports this descriptive
+    hierarchy edge."}, {"index": 4, "subject": "salt_out_compatible_solute_strategy",
+    "predicate": "maintains", "predicate_id": null, "object": "intracellular_osmotic_balance",
+    "outcome": "qualified", "assessment": "Lexical maintains transparently links strategy/process
+    to a maintenance process. No invented imported domain or forced connector."},
+    {"index": 5, "subject": "salt_in_strategy", "predicate": "maintains", "predicate_id":
+    null, "object": "intracellular_osmotic_balance", "outcome": "qualified", "assessment":
+    "Lexical maintains is transparent; current proposed process identity positive,
+    exact biological attribution source-scoped."}, {"index": 6, "subject": "glycine_betaine",
+    "predicate": "contributes to", "predicate_id": "RO:0002326", "object": "intracellular_osmotic_balance",
+    "outcome": "supported", "assessment": "RO2326 inherited material entity to process
+    endpoints are met by chemical betaine and maintenance process. Direct osmolyte
+    action can support contribution; no automatic protein-only/MF-only restriction
+    imposed."}, {"index": 7, "subject": "l_proline", "predicate": "increases", "predicate_id":
+    "RO:0002213", "object": "salinity_phenotype_trait", "outcome": "major", "assessment":
+    "RO2213 inherits RO2211 process domain/range. Current L-proline chemical subject
+    and salinity trait object are not processes; grouped formal-role error independent
+    of biological support."}, {"index": 8, "subject": "proline_biosynthesis_pathway",
+    "predicate": "has output", "predicate_id": "RO:0002234", "object": "l_proline",
+    "outcome": "supported", "assessment": "RO2234 has output inherits has-participant
+    occurrent-to-continuant endpoints. Named biosynthetic process to chemical product
+    fits; no invented material-only range beyond actual authority."}, {"index": 9,
+    "subject": "chaotropic_ions", "predicate": "decreases", "predicate_id": "RO:0002212",
+    "object": "salinity_phenotype_trait", "outcome": "major", "assessment": "RO2212
+    inherits RO2211 process domain/range. Current chemical-ion subject and trait object
+    fail those roles; grouped with edge7, no separate mechanism claim."}, {"index":
+    10, "subject": "water_activity", "predicate": "constrains", "predicate_id": null,
+    "object": "salinity_phenotype_trait", "outcome": "qualified", "assessment": "Ungrounded
+    lexical constrains is explicit. Environmental parameter-to-trait statement is
+    source-scoped; no imported relation constraint fabricated."}]'
+- assessment_id: biology
+  area: scope
+  topic: 'Native checklist: generic environment and excluded interventions'
+  outcome: unknown
+  target_ids:
+  - METPO:1000532
+  summary: Generic environmental categories and existing measurements are assessed.
+    Detailed pathogenic fitness, AMR and osmostress intervention mechanisms/efficacy
+    remain UNASSESSED_SCOPE. The engineered H. elongata source is bounded to its stated
+    cohort; no mechanism expansion or optimization is proposed.
+  evidence_ids:
+  - node-sources
+  - source-reading
+  - source-access
+  - ground-reading
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: contextual graph and route link'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: The NONMECHANISTIC graph has no protein instances. Its PathwayMech link
+    expressly declares PATHWAY_CONTEXT, a pinned route and E. coli organism limitation;
+    it asserts neither exact equivalence nor organism transfer. No additional connector,
+    accession or experimental completion is required.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - placements
+  - pathway-context
+  - pathway-projection
+  - ground-reading
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: bounded catalog applicability'
+  outcome: unknown
+  target_ids:
+  - METPO:1000532
+  summary: No exact canonical organism or alias matches the retained 20-organism /
+    28-dataset catalog. E. coli is covered by five datasets but is only the limited
+    contextual route organism. The E. coli route context is not substituted for the
+    canonical species or transferred to the entire salinity class. No detailed stress-intervention
+    expression query is inferred.
+  evidence_ids:
+  - expression
+  - catalog-reuse
+  - taxon
+  - placements
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: current claims and actual guarded writers'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: Current record owns definition-source attribution and relation assertions.
+    Conditional mapping/grounding skips existing nonempty IDs; source correction and
+    current-edge correction require their own guarded curation. The explicit contextual-link
+    writer does not imply biological identity across corpora.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - predicate-mapping-primary
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - METPO:1000532
+  summary: Thirteen embedded events contain twelve AI events and an automated seed.
+    Sixteen complete captured histories are AI contexts; ignored-inclusive 193 paths
+    and 67 actual review target arrays contain zero exact current targets and do not
+    supply attributable current-target human acceptance. Private or off-repository
+    acceptance is not excluded.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual current commands and qualified reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000532
+  summary: All 97 captured inputs match. Native/strict/direct network snippet commands
+    passed. Original taxonomy failure/success and current copying are distinct; no
+    current protein check applies. Existing common failures/retries and actual prior
+    QC remain explicit. Local initialization does not assert B11 remote publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - native-checks
+  - taxon
+  - taxon-reuse
+findings:
+- finding_id: definition-source-mismatch
+  issue_key: salinity-phenotype-with-numerical-limits-definition-source-mismatch
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The assigned definition source concerns a different subject
+  description: Actual DOI baw155 identifies GO phylogenetic gene-function annotation
+    with apoptosis/autophagy case studies. The primary title, abstract and selected
+    body do not establish this numerical salinity definition. The source is real and
+    accessible, but its attribution to the definition is materially wrong.
+  target_ids:
+  - METPO:1000532
+  field_paths:
+  - definition_source
+  evidence_ids:
+  - definition-mismatch
+  - meta-definition
+  - body-definition
+  - source-ledger
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: imported-process-roles
+  issue_key: salinity-phenotype-with-numerical-limits-imported-process-roles
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported process regulation connects chemicals to a trait
+  description: RO2213/2212 require process endpoints. Current proline and chaotropic-ion
+    subjects are chemical entities and the shared object is a salinity phenotype trait.
+    These represented roles conflict with imported process regulation independently
+    of whether an underlying environmental effect exists.
+  target_ids:
+  - METPO:1000532
+  field_paths:
+  - causal_graphs[0].edges[7]
+  - causal_graphs[0].edges[9]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional mappings populate only empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping changes alone do not repair current
+      assertions.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: salt-out-strategy-type
+  issue_key: salinity-phenotype-with-numerical-limits-salt-out-strategy-type
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: A generic osmoadaptation strategy is typed as a named pathway
+  description: Current node6 describes a generic compatible-solute accumulation strategy
+    without an enumerable named route. Maintained policy distinguishes such a process
+    from PATHWAY. This is a bounded type precision issue; node10 explicitly names
+    the proline route and remains positive. The salt-in migration does not demonstrate
+    ownership or a repair path for current node6.
+  target_ids:
+  - METPO:1000532
+  field_paths:
+  - causal_graphs[0].nodes[6].node_type
+  evidence_ids:
+  - node-edges
+  - playbook
+  - owners
+  - owner-primary
+  - ground-disposition
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: salinity-phenotype-with-numerical-limits-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reviewed status lacks a locally attributable acceptance link
+  description: Twelve AI events and an automated seed, sixteen complete AI-context
+    histories and ignored-inclusive 193 paths / 67 parsed target arrays / zero exact
+    current targets do not establish current-target human acceptance. Private or off-repository
+    review remains unexcluded.
+  target_ids:
+  - METPO:1000532
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-definition-source
+  description: Bind a source that actually establishes the stated quantitative salinity
+    definition during authorized curation.
+  finding_ids:
+  - definition-source-mismatch
+  target_ids:
+  - METPO:1000532
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Verify source identity and exact definition support.
+  - Do not silently substitute a general ontology-methods citation.
+- action_id: reconcile-regulation-roles
+  description: Reconcile imported relations with actual current endpoint referents.
+  finding_ids:
+  - imported-process-roles
+  target_ids:
+  - METPO:1000532
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional mappings populate only empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping changes alone do not repair current
+      assertions.
+  acceptance_checks:
+  - Retain meaningful chemical and phenotype nodes and compatible positive roles.
+  - Respect nonempty-ID guards; no mapping-only repair claim.
+  - No biological intervention optimization or detailed mechanism reconstruction.
+- action_id: clarify-strategy-type
+  description: Align the generic salt-out strategy facet with maintained process-versus-route
+    policy.
+  finding_ids:
+  - salt-out-strategy-type
+  target_ids:
+  - METPO:1000532
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the intended compatible-solute strategy and explicit node10 proline route.
+  - Do not assign the salt-in migration as a current node6 repair owner or reconstruct
+    detailed intervention mechanisms.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000532
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/salinity_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain existing events and bounded search receipts.
+  - No contact or automatic status promotion.
+limitations:
+- Detailed pathogenic fitness, AMR and osmostress intervention mechanisms/efficacy
+  remain UNASSESSED_SCOPE; incidental source details are not adopted.
+- The graph declares a NaCl branch, while node0 broad-class wording, the full definition
+  and canonical total-sodium example require explicit scope distinction. No concentration
+  is silently converted.
+- Five short body-only snippet occurrences remain unknown after failed publisher access;
+  no absence or false-quote finding follows.
+- Canonical study exposures and reported growth range are distinct and positive; no
+  assay or optimized condition is recommended.
+- The engineered proline study is a named cohort, not evidence of universal protection.
+  Detailed intervention claims remain unassessed.
+- Nature retained HTML supplies abstract/preview and references, not full inspected
+  primary-body support for every detailed note. Preprint linkage is not a correction/retraction.
+- Pinned PathwayMech context limits route/organism scope and does not assert equivalence
+  or transfer. The original ground receipt used the wrong optional projection key
+  and recorded null; a separately bound correction verifies the actual related_records
+  link without altering the frozen manifest.
+- Original metadata/body access, older failures and current copies are distinct from
+  new definition/canonical requests. The tentative failed publisher path differs from
+  the actual DOI redirect.
+- Local provenance search does not exclude private or off-repository acceptance; actual
+  QC/reuse/local initialization do not assert remote publication.
+notes:
+- Final grounding, root and independent challenge are pinned; builder and helper were
+  not imported or executed during preparation.
+- 'Coverage: six works, fifteen external placements, fourteen grounding fields, one
+  related-record link, thirteen nodes/eleven edges, six snippets, one canonical example,
+  two components, thirteen events and sixteen complete contextual histories.'
+- No scientific record, native inventory, Git or sweep-state mutation by serializer
+  preparation.
+tags:
+- record-review
+- salinity-phenotype-with-numerical-limits
+- environment
+- needs-curation
+native_verdict: needs_curation
