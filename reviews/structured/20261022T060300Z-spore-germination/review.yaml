@@ -1,0 +1,1924 @@
+schema_version: 1.0.0
+review_id: 20261022T060300Z-spore-germination
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record read-only review of protected spore germination
+started_at: '2026-10-22T05:51:17.540906Z'
+finished_at: '2026-10-22T06:03:00Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Separate source and grounding audits plus root primary reading
+    and final adjudication provide scientific judgments. Serializer preparation is
+    not another whole-paper review.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole protected-record review found two minor documentary issues: mark the
+  bacterial/endospore scope of the definition’s explanation and link human acceptance.
+  Formal graph roles are compatible. Source access and phase limits remain explicit;
+  no scientific record edits or curation are authorized.'
+source:
+  git_revision: c1000884f018e65f7b637db8bd395ff669f3132c
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/physiology/spore_germination.yaml
+    sha256: b614eb85872d7301bf8cac01d04ff4688047b379e0c2a97fc39af0cfad1e8cdf
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/add-pathway-context-links/2026-10-05T174737Z-claude-code-bbc882.yaml
+    sha256: 3ff71695cb77ae0bcfa4425b6a442a2eb6cdcd06809d669b93cb93e786e88d99
+    role: context
+  - path: history/infrastructure/curate_stage3_protein_examples/2026-10-22T013500Z-claude-code-30c043.yaml
+    sha256: 771b27da8eceee09a81b1107bd0b02f8734b4c1698bc94e1019cf6181c1984b9
+    role: context
+  - path: history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml
+    sha256: dbd304ce7c2dfaf1525a12c1d5b4bf04a1ec66f00b92e4917d642c5fba6370fd
+    role: context
+  - path: history/records/bacterial_mycophagy/2026-10-11T102255Z-codex-d97695.yaml
+    sha256: ae41a7f1a85eac01f105ec4bc5b537eba63942fa48d22b57b7a5ac01bf863a1a
+    role: context
+  - path: history/records/ballistospore_discharge/2026-10-07T084444Z-codex-95a938.yaml
+    sha256: 868bca3a13fc63dca57d42283fa79b522f3b1258bdd13680c954d34960ac1657
+    role: context
+  - path: history/records/behavioral_habituation/2026-10-13T044851Z-codex-a7c22a.yaml
+    sha256: 9fbc5acc85558262c7ffa9aaaf68ea8aba4f2f0808682be080dc8fab1c5cc386
+    role: context
+  - path: history/records/carbon_source_memory/2026-10-12T033222Z-claude-code-032113.yaml
+    sha256: 58141f5f6ac9a9c122ad4eeec8c6d6e443f65acbb1aa3cbdca4e6e298007777f
+    role: context
+  - path: history/records/cell_body_contraction/2026-10-14T173532Z-codex-c9af70.yaml
+    sha256: defd3d917ca15678d1f8a62ebcdd1355b385607ad595729bcf0e9f071eb30038
+    role: context
+  - path: history/records/coccolith_production/2026-10-10T063341Z-codex-352eeb.yaml
+    sha256: 88b0076561d270d9d2cfab482b903f10336dcc62421a2b2556d64929d9ea4e61
+    role: context
+  - path: history/records/collective_bacterial_predation/2026-10-11T170332Z-codex-7ff761.yaml
+    sha256: f1216c1035bb59ca044e86957fa7c82a942afcd147953c2a3de0ddee3f886e4c
+    role: context
+  - path: history/records/diauxic_growth/2026-10-11T234456Z-codex-3340ab.yaml
+    sha256: fa623d2da679073ba46a2bb6cc12bd3469582c9c123ab388f853c8e66cc4f04d
+    role: context
+  - path: history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml
+    sha256: c143617c3b8d0a3abefd6daa3553ea2e826e587e09bb47d8af6220e3984eca13
+    role: context
+  - path: history/records/fungal_adhesive_knob_trap_formation/2026-10-08T113608Z-codex-0dc81e.yaml
+    sha256: 07d113051be7a5d57d95c9ef6daa2e915875293f551a1ad58e44f5f0511b0be9
+    role: context
+  - path: history/records/fungal_nematode_egg_parasitism/2026-10-14T115348Z-codex-baf9ad.yaml
+    sha256: 94e4725293d0da01f544ed019ed4e41282e350f5731e4a21a114af86cde06fc9
+    role: context
+  - path: history/records/fungal_nematode_endoparasitism/2026-10-14T152236Z-codex-4a2724.yaml
+    sha256: 316392e969a9bcf5741ac4cc945ef4b1956382cf84ca113b1fe9697229980476
+    role: context
+  - path: history/records/heat_shock_response/2026-09-15T045516Z-codex-99d094.yaml
+    sha256: 366d74be568eff883e61578bb63e3ad1f0d44f44b30a8b41adb83890ef94c2ec
+    role: context
+  - path: history/records/lethal_algicidal_activity/2026-10-11T085403Z-codex-03b40b.yaml
+    sha256: 22cd02d6aa247d7ed5a0296ecd1982fbbefdef00e4789d987b3fa72127e5377c
+    role: context
+  - path: history/records/lethal_nematicidal_activity/2026-10-13T173540Z-codex-8ffeaf.yaml
+    sha256: baba486ea8391aa0a78553ad8bc7dc7e530394a474e54a53ab9e016a41a74771
+    role: context
+  - path: history/records/nematode_attracting_activity/2026-10-13T230410Z-codex-4535c3.yaml
+    sha256: 7a541594eb59d40bc3bb57c70cd4069034a6c5de7d88fa49431fb9ececfff0ec
+    role: context
+  - path: history/records/nematode_egg_hatching_inhibitory_activity/2026-10-14T031430Z-codex-f597d7.yaml
+    sha256: ae365d285cf93c9e74a42e0b8f5c18e33cb9fb664765d97e5dd74162a285d61c
+    role: context
+  - path: history/records/nematode_egg_hatching_stimulatory_activity/2026-10-14T060657Z-codex-b4a201.yaml
+    sha256: 44e960c1627dce2f79b972485a5e72c1e0cf6fef6f930adf59993ec35d923d6b
+    role: context
+  - path: history/records/nematode_repelling_activity/2026-10-14T091602Z-codex-145498.yaml
+    sha256: 059a4efea230964a99db696f3b4272a8c9d4d4a73adb746d258225945fc3a496
+    role: context
+  - path: history/records/peritrichous/2026-08-21T165530Z-codex-21ea8d.yaml
+    sha256: 2161b4b47c831a49e2b2dbb20241ffdc967a3cf0a7e93db97b1810fa25ebbe84
+    role: context
+  - path: history/records/quorum_quenching/2026-10-11T024948Z-codex-e72d59.yaml
+    sha256: 3f0522d906f43ea204cb1df1bc8fe2e5be36bfccf5bd19edf3b2675e9cba8689
+    role: context
+  - path: history/records/reversible_nematode_paralyzing_activity/2026-10-14T010522Z-codex-860a55.yaml
+    sha256: 0246961184457578292805f765821673a71acb150e1b0a34093ddec857d1ac96
+    role: context
+  - path: history/records/rheotropism/2026-10-04T164645Z-codex-e13da9.yaml
+    sha256: cdb9ab4830186a49f0487a432cf60d231b7bac2557a6e17797bf9e06a78bb4a7
+    role: context
+  - path: history/records/thermotaxis/2026-10-03T222004Z-codex-1fe3c7.yaml
+    sha256: 2ad641e9a7c05913b8042053cfb9a2bf7db61c28a96f30401d84e85301f261c2
+    role: context
+  - path: history/report/stage4-corpus-record-and-cohort-review/2026-10-22T033000Z-claude-code-050624.yaml
+    sha256: bdac6c395832cbcea37355c5d585822a1a7045e3b48e8df40d743614c906263a
+    role: context
+  - path: justfile
+    sha256: 5c78469eb97ccef4b6016ae6ee6ecabd4b8cb988e42f28da35e7c4e888b15551
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/physiology/spore_germination-deep-research-falcon.md
+    sha256: f96c79996c9d468e5bad2732c965299708c7387ecbbefc47ed409c4f976a4035
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_aerotropism_trait.py
+    sha256: 65a3a7a7ca3c039c05b5d7653a5d13e3f066c79f7ef3e4e8d3a7d349aadde1b3
+    role: context
+  - path: scripts/add_akinete_trait.py
+    sha256: ee4a826f3942e31ca2665decf049637c28666e9ed6019e7d96883c7d9d486a06
+    role: context
+  - path: scripts/add_brex_system_trait.py
+    sha256: 37456f34d921aaa3956172891ea3046557209f2376a7c72ad1c6f99b10a2e67f
+    role: context
+  - path: scripts/add_ds_12_system_trait.py
+    sha256: c1782426a389340c1f2f47a0057a4793ed5fe5263ecbc5549887b4cd29fc0a6f
+    role: context
+  - path: scripts/add_dsr_system_trait.py
+    sha256: 2b939673fba342e5cd497c047eeb945327b131d0dabc7a736a74af96adf39581
+    role: context
+  - path: scripts/add_extracellular_membrane_vesicle_production_trait.py
+    sha256: 16faa5e9c3ca214c128c972589cd4e5c341a5c7762b603aa0b3f191e9029ae1a
+    role: context
+  - path: scripts/add_fungal_appressorium_formation_trait.py
+    sha256: fc62b168bc471ee8435ec132473845cfc76b324fcfdad20ab7390367f3628066
+    role: context
+  - path: scripts/add_fungal_chlamydospore_formation_trait.py
+    sha256: 0287933b79334a3108de8d2e668cab279a0f1016c87ad5f891572f1ede10591c
+    role: context
+  - path: scripts/add_fungal_conidiation_trait.py
+    sha256: ff77e2db95478e2119db2b5f2602e981ed72d5fc7d5f6753102be0c2c34fc972
+    role: context
+  - path: scripts/add_fungal_nematode_endoparasitism_trait.py
+    sha256: eaee0101a3b7c3151bbb7fb95bbf630c7ea6837fdfaec5bcbf95d0bcc8eb47b8
+    role: context
+  - path: scripts/add_fungal_sclerotium_formation_trait.py
+    sha256: 26d84dbf01ff3ea10c835aa6831441a6742097a1c8ea877d6e49b7e0dbeac7a9
+    role: context
+  - path: scripts/add_galvanotropism_trait.py
+    sha256: e00b1f5efb18fdc0bd88f401af71643da55542ef51707610977a3b4719b072bf
+    role: context
+  - path: scripts/add_heat_shock_response_trait.py
+    sha256: 359af09c3e8a77c1fa4143638a3c85daa221d9966a829a35bd4d5574448b9b7b
+    role: context
+  - path: scripts/add_homeoviscous_adaptation_trait.py
+    sha256: 1c757fd67bda18d2f4afb2fbf63d899844d416d084e2b9d53e298182ae2e4d09
+    role: context
+  - path: scripts/add_integrative_conjugative_element_trait.py
+    sha256: e514a7345f776a990cd9cfa1dbae98f905498287c0721a3226292e3c717adaeb
+    role: context
+  - path: scripts/add_negative_autotropism_trait.py
+    sha256: 4886c03e15e49f0e3ae0960e7fa9b2b7864026ec9b3e312182c2ab8e45f12a12
+    role: context
+  - path: scripts/add_ph_taxis_trait.py
+    sha256: 0ad99e09f21a49b7fa976553570a9883dba7c6e960224f742dbe6d1eaaf99179
+    role: context
+  - path: scripts/add_positive_autotropism_trait.py
+    sha256: 1c9b8f35ce4e700527f47137d77f1a29fc4cda035774c173ea6868f3047d2473
+    role: context
+  - path: scripts/add_pseudobipolar_mating_trait.py
+    sha256: 5bede984282ee6465566f3273c127c95bcc3c89057a4a3340d024bd301817d6d
+    role: context
+  - path: scripts/add_rheotaxis_trait.py
+    sha256: 032e7d998421ebef21a002457e992aab7663c6b0361ae0512c1c7ab0267e7f1e
+    role: context
+  - path: scripts/add_rheotropism_trait.py
+    sha256: d388cbb67b65ae1a9cd3a9094ff0ae5daa7aed9ffb58622fce3dd578e02e9648
+    role: context
+  - path: scripts/add_spbk_system_trait.py
+    sha256: e87ecfb055fc178af15188e70582867b73effa8eb8bf1bbadd2629d22a14be15
+    role: context
+  - path: scripts/add_tripolar_mating_trait.py
+    sha256: f432cb101dc4759b742f29801240be0e1ca88d79d58965b8b1e694d0828ba681
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_morphology_tail_graphs_183.py
+    sha256: eefc69133e0d628a130215dbc439d7e86e1b4f08b0c6f2b4b024c6849f80a7f0
+    role: context
+  - path: scripts/curate_stage2_causal_graphs.py
+    sha256: 14ea57b818e455a77dff319ab1550a92a3af70430ca30d9d243e6e2f567c97bb
+    role: context
+  - path: scripts/curate_stage3_protein_examples.py
+    sha256: d62807440f19d5a16a03e19cec916c9606ef6e7f738b563aead5d5b93803578f
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000083
+  path: data/traits/physiology/spore_germination.yaml
+  label: spore germination
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/spore_germination.yaml
+    role: Protected maintained record; read-only review only. Agentic curation and
+      editing remain prohibited.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Sole remaining B16 path in the successful native baseline:93 bundles,1129
+    of1130 paths covered. Authorized capture preceded local initialization; its exact
+    bytes were subsequently retained by that initializer.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000083
+  exclusions:
+  - target: Record curation, status/history changes and generated products
+    reason: DO_NOT_WORK protection remains active. Any future record-side correction
+      requires the user explicitly to remove that entry first.
+checks:
+- check_id: new-base-qc
+  name: Fresh B16 corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are integrity diagnostics, not scientific validation
+    of this target.'
+  evidence_ids:
+  - check-new-base-qc
+  - fresh-common-completion
+  scope_note: Actual B16 execution at c1000884f018e65f7b637db8bd395ff669f3132c. QC
+    children share the aggregate interval; no invented child times. Current source
+    maps/cache bytes are checked; no older diagnostic run is relabelled fresh.
+- check_id: new-base-history
+  name: Fresh B16 history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1280 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1281 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  evidence_ids:
+  - check-new-base-history
+  - fresh-common-completion
+  scope_note: Actual B16 execution at c1000884f018e65f7b637db8bd395ff669f3132c. QC
+    children share the aggregate interval; no invented child times. Current source
+    maps/cache bytes are checked; no older diagnostic run is relabelled fresh.
+- check_id: new-base-products
+  name: Fresh B16 mapping identifier/label validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: env PYSTOW_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow OAKLIB_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib
+    SQLITE_TMPDIR=/private/tmp/traitmech-record-sweep.FU79Gr/sqlite-tmp just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is two grounding mappings, not every target identifier
+    or scientific claim.
+  evidence_ids:
+  - check-new-base-products
+  - fresh-common-completion
+  scope_note: Actual B16 execution at c1000884f018e65f7b637db8bd395ff669f3132c. QC
+    children share the aggregate interval; no invented child times. Current source
+    maps/cache bytes are checked; no older diagnostic run is relabelled fresh.
+- check_id: new-base-stage2-tests
+  name: Fresh B16 focused Stage2 writer tests
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000083
+  command: uv run pytest tests/test_curate_stage2_causal_graphs.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Five selected Stage2 tests passed. Full just test was NOT_RUN; these tests
+    are not biological validation.
+  evidence_ids:
+  - check-new-base-stage2-tests
+  - fresh-common-completion
+  scope_note: Actual B16 execution at c1000884f018e65f7b637db8bd395ff669f3132c. QC
+    children share the aggregate interval; no invented child times. Current source
+    maps/cache bytes are checked; no older diagnostic run is relabelled fresh.
+- check_id: spore-germination-target-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: just validate data/traits/physiology/spore_germination.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Current native validation passed; scientific support is assessed separately.
+  evidence_ids:
+  - check-spore-germination-target-validate
+- check_id: spore-germination-target-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: just validate-strict data/traits/physiology/spore_germination.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual current validate-strict passed without record changes.
+  evidence_ids:
+  - check-spore-germination-target-strict
+- check_id: spore-germination-snippets
+  name: Focused snippet applicability
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: just verify-snippets --record data/traits/physiology/spore_germination.yaml
+    --out /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native snippet command passed with zero schema snippets. Notes are paraphrases;
+    absence of snippets is not automatically a defect.
+  evidence_ids:
+  - check-spore-germination-snippets
+- check_id: native-inspect
+  name: One-target native review capture
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000083
+  command: uv run python scripts/record_review.py inspect --targets /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination.targets.json
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/manage-identifiers/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input DO_NOT_WORK.md --input conf/evidence_snippet_baseline.tsv
+    --input conf/record_review.yaml --input data/raw/biolink-model.yaml --input data/raw/metpo.owl
+    --input data/traits/upper/phenotype.yaml --input docs/CURATION_PLAYBOOK.md --input
+    docs/GROUNDING_POLICY.md --input docs/PATHWAY_LINKS.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input history/infrastructure/add-pathway-context-links/2026-10-05T174737Z-claude-code-bbc882.yaml
+    --input history/infrastructure/curate_stage3_protein_examples/2026-10-22T013500Z-claude-code-30c043.yaml
+    --input history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml
+    --input history/records/bacterial_mycophagy/2026-10-11T102255Z-codex-d97695.yaml
+    --input history/records/ballistospore_discharge/2026-10-07T084444Z-codex-95a938.yaml
+    --input history/records/behavioral_habituation/2026-10-13T044851Z-codex-a7c22a.yaml
+    --input history/records/carbon_source_memory/2026-10-12T033222Z-claude-code-032113.yaml
+    --input history/records/cell_body_contraction/2026-10-14T173532Z-codex-c9af70.yaml
+    --input history/records/coccolith_production/2026-10-10T063341Z-codex-352eeb.yaml
+    --input history/records/collective_bacterial_predation/2026-10-11T170332Z-codex-7ff761.yaml
+    --input history/records/diauxic_growth/2026-10-11T234456Z-codex-3340ab.yaml --input
+    history/records/enhanced_transcriptional_reactivation_memory/2026-10-13T003746Z-claude-code-cf0b17.yaml
+    --input history/records/fungal_adhesive_knob_trap_formation/2026-10-08T113608Z-codex-0dc81e.yaml
+    --input history/records/fungal_nematode_egg_parasitism/2026-10-14T115348Z-codex-baf9ad.yaml
+    --input history/records/fungal_nematode_endoparasitism/2026-10-14T152236Z-codex-4a2724.yaml
+    --input history/records/heat_shock_response/2026-09-15T045516Z-codex-99d094.yaml
+    --input history/records/lethal_algicidal_activity/2026-10-11T085403Z-codex-03b40b.yaml
+    --input history/records/lethal_nematicidal_activity/2026-10-13T173540Z-codex-8ffeaf.yaml
+    --input history/records/nematode_attracting_activity/2026-10-13T230410Z-codex-4535c3.yaml
+    --input history/records/nematode_egg_hatching_inhibitory_activity/2026-10-14T031430Z-codex-f597d7.yaml
+    --input history/records/nematode_egg_hatching_stimulatory_activity/2026-10-14T060657Z-codex-b4a201.yaml
+    --input history/records/nematode_repelling_activity/2026-10-14T091602Z-codex-145498.yaml
+    --input history/records/peritrichous/2026-08-21T165530Z-codex-21ea8d.yaml --input
+    history/records/quorum_quenching/2026-10-11T024948Z-codex-e72d59.yaml --input
+    history/records/reversible_nematode_paralyzing_activity/2026-10-14T010522Z-codex-860a55.yaml
+    --input history/records/rheotropism/2026-10-04T164645Z-codex-e13da9.yaml --input
+    history/records/thermotaxis/2026-10-03T222004Z-codex-1fe3c7.yaml --input history/report/stage4-corpus-record-and-cohort-review/2026-10-22T033000Z-claude-code-050624.yaml
+    --input justfile --input mappings/node_grounding.tsv --input mappings/predicate_grounding.tsv
+    --input mappings/trait_exact_match_review.tsv --input mappings/uniprot_regrounding_candidates.tsv
+    --input proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv --input
+    proposals/metpo_traitmech_v5/proposal.md --input proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    --input proposals/metpo_traitmech_v8/proposal.md --input reports/metpo_2026_06_12_active_review.tsv
+    --input reports/metpo_2026_06_12_release_delta.tsv --input reports/ontology_snapshot_manifest.tsv
+    --input research/traits/physiology/spore_germination-deep-research-falcon.md --input
+    schema/record_review.yaml --input scripts/add_aerotropism_trait.py --input scripts/add_akinete_trait.py
+    --input scripts/add_brex_system_trait.py --input scripts/add_ds_12_system_trait.py
+    --input scripts/add_dsr_system_trait.py --input scripts/add_extracellular_membrane_vesicle_production_trait.py
+    --input scripts/add_fungal_appressorium_formation_trait.py --input scripts/add_fungal_chlamydospore_formation_trait.py
+    --input scripts/add_fungal_conidiation_trait.py --input scripts/add_fungal_nematode_endoparasitism_trait.py
+    --input scripts/add_fungal_sclerotium_formation_trait.py --input scripts/add_galvanotropism_trait.py
+    --input scripts/add_heat_shock_response_trait.py --input scripts/add_homeoviscous_adaptation_trait.py
+    --input scripts/add_integrative_conjugative_element_trait.py --input scripts/add_negative_autotropism_trait.py
+    --input scripts/add_ph_taxis_trait.py --input scripts/add_positive_autotropism_trait.py
+    --input scripts/add_pseudobipolar_mating_trait.py --input scripts/add_rheotaxis_trait.py
+    --input scripts/add_rheotropism_trait.py --input scripts/add_spbk_system_trait.py
+    --input scripts/add_tripolar_mating_trait.py --input scripts/audit_causal_graphs.py
+    --input scripts/audit_graph_protein_taxa.py --input scripts/audit_predicate_domains.py
+    --input scripts/audit_unapplied_groundings.py --input scripts/audit_uniprot_grounding.py
+    --input scripts/backfill_canonical_examples_444.py --input scripts/connect_morphology_tail_graphs_183.py
+    --input scripts/curate_stage2_causal_graphs.py --input scripts/curate_stage3_protein_examples.py
+    --input scripts/finalize_metpo_2026_06_12_review.py --input scripts/ground_causal_nodes.py
+    --input scripts/ground_causal_predicates.py --input scripts/migrate_disposition_typing.py
+    --input scripts/migrate_enables_range_edges.py --input scripts/migrate_enables_trait_edges.py
+    --input scripts/migrate_metpo_2026_06_12.py --input scripts/migrate_microbe_domain_edges.py
+    --input scripts/migrate_name_match_groundings.py --input scripts/migrate_node_type_consistency.py
+    --input scripts/migrate_pathway_vs_process.py --input scripts/migrate_process_quality_consistency.py
+    --input scripts/migrate_protein_vs_activity.py --input scripts/migrate_remaining_microbe_domain_edges.py
+    --input scripts/migrate_uniprot_instance_groundings.py --input scripts/record_review.py
+    --input scripts/seed_from_metpo.py --input scripts/verify_metpo_proposal.py --input
+    src/traitmech/schema/mech_shared.yaml --input src/traitmech/schema/traitmech.yaml
+    --input src/traitmech/validation/write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Authorized immutable capture predates initialization;111 current inputs
+    and exact target.
+  evidence_ids:
+  - capture
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000083
+  summary: No protein nodes or instances. Protected legacy graph coverage exception
+    is retained without imposing new accessions.
+  evidence_ids:
+  - record
+  - policy
+  - expression
+  - protected-policy
+- check_id: expression-adapter-availability
+  name: Structured expression-query availability
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000083
+  summary: Current bounded runner discovery unavailable; catalog species coverage
+    is not a strain/module or efficacy result.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - catalog-original
+evidence:
+- evidence_id: fresh-common-completion
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/fresh-diagnostic-completion.json
+  locator: Actual four B16 executions, source maps and cache provenance
+  accessed_at: '2026-10-22T05:37:20.008111Z'
+  support: context_only
+  summary: Fresh current-base checks; B15 comparison remains false, including 106
+    changed trait records.
+  snapshot_sha256: 0c2d1706de1560fdd96ef76a703bed336eba26f2651f80dddc0face2e6849e9f
+- evidence_id: check-new-base-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/new-base-qc.log
+  locator: Executed 2026-10-22T05:35:25.522716+00:00 through 2026-10-22T05:36:58.906865+00:00;
+    metadata new-base-qc.json
+  accessed_at: '2026-10-22T05:36:58.906865Z'
+  support: context_only
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are integrity diagnostics, not scientific validation
+    of this target.'
+  snapshot_sha256: 7afb9f479365f4aa4b167e85324effc495b92670ebf8ea8dc79814e953d43a55
+- evidence_id: check-new-base-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/new-base-history.log
+  locator: Executed 2026-10-22T05:35:25.523734+00:00 through 2026-10-22T05:35:31.134974+00:00;
+    metadata new-base-history.json
+  accessed_at: '2026-10-22T05:35:31.134974Z'
+  support: context_only
+  summary: 1280 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1281 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  snapshot_sha256: 09910f1009c7f935946369603be4178b34d3b4c4a4356a5edbbc55660707a23f
+- evidence_id: check-new-base-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/new-base-products.log
+  locator: Executed 2026-10-22T05:35:25.522297+00:00 through 2026-10-22T05:35:47.745088+00:00;
+    metadata new-base-products.json
+  accessed_at: '2026-10-22T05:35:47.745088Z'
+  support: context_only
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is two grounding mappings, not every target identifier
+    or scientific claim.
+  snapshot_sha256: 060fcb191c9b0fceb7dd8ebf172d1055f794292211401b30fa4e7f4ffa819141
+- evidence_id: check-new-base-stage2-tests
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/new-base-stage2-tests.log
+  locator: Executed 2026-10-22T05:35:25.524813+00:00 through 2026-10-22T05:35:27.868481+00:00;
+    metadata new-base-stage2-tests.json
+  accessed_at: '2026-10-22T05:35:27.868481Z'
+  support: context_only
+  summary: Five selected Stage2 tests passed. Full just test was NOT_RUN; these tests
+    are not biological validation.
+  snapshot_sha256: f931ef0b26a1e41a6ca6e192babe44f04c236aa11c27815d1807b276669fe219
+- evidence_id: check-spore-germination-target-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-target-validate.log
+  locator: Executed 2026-10-22T05:51:45.326858+00:00 through 2026-10-22T05:51:45.916099+00:00;
+    metadata spore-germination-target-validate.json
+  accessed_at: '2026-10-22T05:51:45.916099Z'
+  support: context_only
+  summary: Current native validation passed; scientific support is assessed separately.
+  snapshot_sha256: 442fad94852c2bffd493d440bdc82a46d6159573a495b9295db19ba41076d7a9
+- evidence_id: check-spore-germination-target-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-target-strict.log
+  locator: Executed 2026-10-22T05:51:45.326841+00:00 through 2026-10-22T05:51:46.334226+00:00;
+    metadata spore-germination-target-strict.json
+  accessed_at: '2026-10-22T05:51:46.334226Z'
+  support: context_only
+  summary: Actual current validate-strict passed without record changes.
+  snapshot_sha256: b3c9b6d80ef0eb4a50d836c57c13828537faead0ded6b7303ac7772e39dc815b
+- evidence_id: check-spore-germination-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-snippets.log
+  locator: Executed 2026-10-22T05:51:52.010400+00:00 through 2026-10-22T05:51:52.083042+00:00;
+    metadata spore-germination-snippets.json
+  accessed_at: '2026-10-22T05:51:52.083042Z'
+  support: context_only
+  summary: Native snippet command passed with zero schema snippets. Notes are paraphrases;
+    absence of snippets is not automatically a defect.
+  snapshot_sha256: c0ea5d22aa5e173b6140b7ce64d68a750b3e2e3ddb8f0aaf2a56806f78280cd9
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination.inspect.json
+  locator: Actual successful preinitialization native inspect,111 inputs
+  accessed_at: '2026-10-22T05:51:18.434504Z'
+  support: context_only
+  summary: All current captured inputs and protected target bytes are verified before
+    serialization.
+  snapshot_sha256: 325869ef719b74353346cf5da92953e49bc1ec8f7a37fd0a74e54a925e5bb951
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/physiology/spore_germination.yaml
+  locator: Whole protected current record
+  accessed_at: '2026-10-22T05:51:18.434504Z'
+  support: supports
+  summary: Six nodes,six edges,six AI-assisted embedded events,one canonical example
+    and no protein nodes or instances. Target remains byte-identical.
+  snapshot_sha256: b614eb85872d7301bf8cac01d04ff4688047b379e0c2a97fc39af0cfad1e8cdf
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/batch016-local-initialization-receipt.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:57:44.188806Z'
+  support: context_only
+  summary: Actual sole-target initialization explicitly retains the earlier authorized
+    capture; no capture-time state assumption.
+  snapshot_sha256: d6fb69362fd5361e8092e89391a9e91338b0e3eff8107bab2bc65112c40b5712
+- evidence_id: protected-policy
+  kind: authority
+  reference: DO_NOT_WORK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:56:31.316194Z'
+  support: supports
+  summary: Agentic curation and editing remain prohibited until the user removes the
+    entry; read-only review does not remove protection.
+  snapshot_sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:56:31.316194Z'
+  support: supports
+  summary: Protected legacy coverage exception; no mandatory token protein, accession
+    or scope repair.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:56:31.316194Z'
+  support: supports
+  summary: Source scope and attributable scientific acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:56:31.316194Z'
+  support: supports
+  summary: Current class and relation representation contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/identity-and-hierarchy.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315612Z'
+  support: context_only
+  summary: Local trait identity,active parent and GO xref; reserved fallback proposal
+    is not an active minted replacement.
+  snapshot_sha256: d0b254c5dcf46a59a8db24e29d21d843b528e0daccab95dc7d288a7936869f35
+- evidence_id: nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/node-edge-grounding-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315512Z'
+  support: context_only
+  summary: All six nodes and six relations; no confirmed formal defect, phase and
+    realization qualifications retained.
+  snapshot_sha256: 16919c00fca558a9abe15d5c994120b3af20410b962834bbf710294eaa791d88
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/ownership-assessment.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315682Z'
+  support: context_only
+  summary: Protected maintained record and conditional generic grounder/migration
+    context; no faulty payload producer established.
+  snapshot_sha256: dfde701a82064eaf9855e4ef6f3742397efa91689abd90c65ca68f1abce99b32
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/owner-primary-reading.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.313513Z'
+  support: context_only
+  summary: Selected maintained writer/guard windows only; no writer executed.
+  snapshot_sha256: d7f9f947f9533f6581948ef27f2460e2e6c49f09adfdbdb127f0e306759ada69
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/local-authority-reading.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315315Z'
+  support: context_only
+  summary: Actual mappings and v5/v8 proposal authority; not proof of human signoff.
+  snapshot_sha256: ac6937b6500cdc3298d76a267598a2f567fbcb771af35e1b40c9c805e7c60aab
+- evidence_id: raw-id-check
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/raw-identifier-and-overlap.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:53:11.127531Z'
+  support: context_only
+  summary: Bounded exact raw identifiers and lexical overlap search.
+  snapshot_sha256: bc0694026ca22cf12e688c5162bc921b54e7d5fa135ccb4c6d44d928b9f5bc96
+- evidence_id: embedded-events
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/embedded-history-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315830Z'
+  support: context_only
+  summary: All six current events are explicitly AI-assisted.
+  snapshot_sha256: 65d289e80ab97a9736c32fd7c8d983fd05a9e8486d932d01c99ddaa32c9590b9
+- evidence_id: histories
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/history-reading-provenance.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:53:42.149748Z'
+  support: context_only
+  summary: 28 current history actor/target/event projections; zero current or prior
+    whole-body history reads claimed.
+  snapshot_sha256: f2e3c15944385ff21ded2230ea5db97d1119262216c161822d4177dc58c973b4
+- evidence_id: human-search
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/search-and-provenance.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:43.763438Z'
+  support: context_only
+  summary: 279 matching paths,81 matching arrays,all93 local review arrays and no
+    exact prior target; bounded local scope.
+  snapshot_sha256: 89e4ecbe2fa02fd23ea4b82e08fbba41f332ec11d79d6d4520b65ee51d744e89
+- evidence_id: discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/discovery-dispositions.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.315764Z'
+  support: context_only
+  summary: 26 captured script leads are context, not26 whole-script audits; exact
+    selector and protected guards retain scope.
+  snapshot_sha256: a6d91695051dbcbc3421166ef0cde0dc1c037af202042706edaa7aa998a555e4
+- evidence_id: node-owner-search
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/all-node-owner-search.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:55.716844Z'
+  support: context_only
+  summary: Ignored-inclusive all-node discovery; no global producer-absence claim.
+  snapshot_sha256: 6b4fe301dd01e111bae36acb67715009feeb590cb708fb2d2559fd4350643ee9
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/expression-and-readiness.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.316069Z'
+  support: context_only
+  summary: B.subtilis catalog coverage is species context; no exact strain/module
+    result. Protected legacy readiness exception retained.
+  snapshot_sha256: eeeb5a6966ba885c9b4c8f3d2afcf5383553037202d80897a32989f73e92d69e
+- evidence_id: expression-discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/adapter-discovery.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:54:24.521132Z'
+  support: context_only
+  summary: Current bounded runner unavailable; no expression query.
+  snapshot_sha256: 67092d78120b0f953d11d89a7cf63a4479b5e8a7749c6ac30d95d7c02ec3fcb3
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/catalog-reuse.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:54:24.522585Z'
+  support: context_only
+  summary: Original catalog request, current copying and reading remain distinct.
+  snapshot_sha256: 49de1634903609432dcf10cf91bcd4d72541e77e20084a496595f105ced9802f
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/reading-scope-receipt.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.316314Z'
+  support: context_only
+  summary: Whole target,selected authorities and28 history projections; scope explicitly
+    bounded.
+  snapshot_sha256: 266b671df914e496ef7be3c0be97db241a7bbf2df0f5c57ab382ab482613cda6
+- evidence_id: ground-assessment
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/grounding-assessment.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:31.316194Z'
+  support: context_only
+  summary: Only human-link minor in formal subaudit; no additional source judgment.
+  snapshot_sha256: 4a9fd49373a567b742cf91a50cc2c477af4247cff1f7c3445c9a1cafb6a21b2a
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/evidence-manifest.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:56:55.342726Z'
+  support: context_only
+  summary: All27 immutable grounding artifacts verified.
+  snapshot_sha256: d89a47a0ebba0f02c1f1ee504770804bb64adb4a28efe1db094fbd62b380e4ea
+- evidence_id: ontology-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-root/selected-ontology-primary.json
+  locator: Original current query 2026-10-22T05:52:08.168401+00:00 through 2026-10-22T05:52:08.173746+00:00
+  accessed_at: '2026-10-22T05:52:08.173746Z'
+  support: supports
+  summary: Selected GO/RO and raw/local authority responses; query clock differs from
+    grounding-copy/read clock. No scientific efficacy follows from formal compatibility.
+  snapshot_sha256: 964b86fcf71c020be53a58289bd9570ba1b48e3be94df2f8d5da37747b711690
+- evidence_id: authority-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-root/selected-authority-primary.json
+  locator: Original current query 2026-10-22T05:52:08.168401+00:00 through 2026-10-22T05:52:08.415043+00:00
+  accessed_at: '2026-10-22T05:52:08.415043Z'
+  support: supports
+  summary: Selected GO/RO and raw/local authority responses; query clock differs from
+    grounding-copy/read clock. No scientific efficacy follows from formal compatibility.
+  snapshot_sha256: 76078173db46e7e818bce7e0aeb5074ad72a997dc75af814dc673b6fa4f76051
+- evidence_id: authority-provenance
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/primary-reuse-provenance.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:53:11.114942Z'
+  support: context_only
+  summary: Actual root query times and separate grounding copies; no repeat ground-auditor
+    DB query or hash claimed.
+  snapshot_sha256: 7a81c2d4dcb54b4c610cc65d30007f852966b4a0a833f90b2addf01f1b7e6b78
+- evidence_id: catalog-original
+  kind: authority
+  reference: https://imodulondb.org/api/datasets
+  locator: Original retained public20-organism/28-dataset catalog
+  accessed_at: '2026-10-21T07:36:12.858149Z'
+  support: context_only
+  summary: B.subtilis entries do not establish strain168,module membership or germination
+    efficacy.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: taxonomy
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1423&retmode=xml
+  locator: Actual request 2026-10-22T05:53:18.576693+00:00 through 2026-10-22T05:53:18.912488+00:00
+  accessed_at: '2026-10-22T05:53:18.912488Z'
+  support: supports
+  summary: Official Bacillus subtilis species identity. OtherNames strain168 is not
+    an exact strain accession or assay result.
+  snapshot_sha256: 3acf923cb755e3184466b4dba362a904c6ecc91f785e3c8b6a41cf2f9c4e4c4b
+- evidence_id: taxonomy-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/taxonomy-retry-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:53:18.912488Z'
+  support: context_only
+  summary: Actual access outcome and original response hash.
+  snapshot_sha256: fb7ca91ae382f589b46c559fa063121fc1245b1977ed38b110c6dc8c153b55aa
+- evidence_id: taxonomy-initial-failure
+  kind: validation
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1423&retmode=xml
+  locator: Actual request 2026-10-22T05:52:43.619100+00:00 through 2026-10-22T05:52:43.632835+00:00
+  accessed_at: '2026-10-22T05:52:43.632835Z'
+  support: context_only
+  summary: Initial DNS error bytes retained separately; not primary taxonomy XML or
+    a biological failure.
+  snapshot_sha256: 35281279d8e2164cee8666d6f8aad891326911e887ab1b2ab778c8ac6d09dc6c
+- evidence_id: taxonomy-initial-failure-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/taxonomy-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:43.632835Z'
+  support: context_only
+  summary: Actual access outcome and original response hash.
+  snapshot_sha256: b52474a4f06aab64d98d25dfc8e632c4f1862262dacb9a5d4d0628f926eddb73
+- evidence_id: taxonomy-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-grounding-agent/taxonomy-identity.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:54:24.523199Z'
+  support: context_only
+  summary: Official species identity and bounded strain-name qualification.
+  snapshot_sha256: 029470320f734a87f5413a39f3610b07d21cc839378afe0f9271a6c3f3f5a95f
+- evidence_id: setlow-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.mib.2003.10.001&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:51:53.803106+00:00 through 2026-10-22T05:51:54.491577+00:00
+  accessed_at: '2026-10-22T05:51:54.491577Z'
+  support: supports
+  summary: Selected abstract supports generic Bacillus/endospore germination; it does
+    not establish unqualified all-spore DPA/core scope.
+  snapshot_sha256: 88f106df74e5f3062bdc4b30cf978a4c05256cae6cef299d7146d08a7bb267bc
+- evidence_id: setlow-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/setlow-metadata-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:51:54.491577Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: e0a212ed55c6a462e3748fad55640d7926440d7a2103079e3060b2766d2c2922
+- evidence_id: lennon-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fnrmicro2504&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:51:53.803424+00:00 through 2026-10-22T05:51:54.424613+00:00
+  accessed_at: '2026-10-22T05:51:54.424613Z'
+  support: supports
+  summary: Reversible dormancy and seed-bank resuscitation context only.
+  snapshot_sha256: b23af7356337e46411a06a242b0fe404de193cac308f0caec2c091aa4117a0f8
+- evidence_id: lennon-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/lennon-metadata-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:51:54.424613Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: c3125e13f8d1c4f42596732d1d7f62c4ab54444026afec7c57715b0be6069ce1
+- evidence_id: science-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1126%2Fscience.adg9829&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:51:53.803536+00:00 through 2026-10-22T05:51:54.468265+00:00
+  accessed_at: '2026-10-22T05:51:54.468265Z'
+  support: context_only
+  summary: Identity and general ion-release initiation context; displayed engineering
+    details unadopted. Comment in relation is not a correction or retraction.
+  snapshot_sha256: 416f2c7feccf0e39eefe1b9f647790ed320f9847c89b131ba1b44746d3804809
+- evidence_id: science-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/science-metadata-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:51:54.468265Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: 089f8baf2b5e966c1f8c50eafe346cfe5b60fe93162b94f72c3c6afceec0a520
+- evidence_id: mbio-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1128%2Fmbio.02220-23&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:51:53.803613+00:00 through 2026-10-22T05:51:54.436071+00:00
+  accessed_at: '2026-10-22T05:51:54.436071Z'
+  support: context_only
+  summary: Identity and bounded context; stimulus-memory,eradication and protocol
+    details unadopted.
+  snapshot_sha256: 8d9e3d21d2f1e9ab87f48b6e3d77a769aaef7cfebbf61f75372e20363bc3cf9c
+- evidence_id: mbio-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/mbio-metadata-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:51:54.436071Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: 0ea3d080e57f0f95dbdd4c4f2237fdad4882cbf2faff57d95ef59292ddf86ee5
+- evidence_id: canonical-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A39772627+AND+SRC%3AMED&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:51:53.803673+00:00 through 2026-10-22T05:51:54.428955+00:00
+  accessed_at: '2026-10-22T05:51:54.428955Z'
+  support: supports
+  summary: B.subtilis model explicit; no new strain-specific experiment inferred.
+  snapshot_sha256: 32752a5b0d54aee9379e641ee3ccad56ec51559e05bdddad9fc8e523424a413d
+- evidence_id: canonical-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/canonical-metadata-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:51:54.428955Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: d866b115ceb1e4a1c9a970f2cd916d4b2b3c5d8617d07c9d34d9f9cef7a6ad38
+- evidence_id: mbio-body
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10653816/fullTextXML
+  locator: Actual request 2026-10-22T05:52:20.739843+00:00 through 2026-10-22T05:52:22.305951+00:00
+  accessed_at: '2026-10-22T05:52:22.305951Z'
+  support: supports
+  summary: Selected introduction generic release,cortex,water uptake and metabolic-resumption
+    clauses only; no trigger,pressure,recipe or efficacy adoption.
+  snapshot_sha256: e42c9d11afd9119c3127883e28ff4302544ea2e78219ed6fb745631980a95a37
+- evidence_id: mbio-body-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/mbio-body-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:22.305951Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: c251b87e68051f7a0acfb318c52516e1251b10c9d1ccc753da6f79a9c9554292
+- evidence_id: canonical-body
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11841064/fullTextXML
+  locator: Actual request 2026-10-22T05:52:20.739919+00:00 through 2026-10-22T05:52:22.623709+00:00
+  accessed_at: '2026-10-22T05:52:22.623709Z'
+  support: supports
+  summary: Model,short phase distinction and three reference-list strain168 titles
+    only; composite node is not inherently wrong.
+  snapshot_sha256: 9c444ce022651cd758622f01493e09315c36716c838876a9ee5597d194b5ad6b
+- evidence_id: canonical-body-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/canonical-body-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:22.623709Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: 0d356f6048e89cdb881427bcc9f64e78d15b663a5de089655aec074f79dc1fbc
+- evidence_id: science-body-failure
+  kind: validation
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11154005/fullTextXML
+  locator: Actual request 2026-10-22T05:52:20.739635+00:00 through 2026-10-22T05:52:21.724745+00:00
+  accessed_at: '2026-10-22T05:52:21.724745Z'
+  support: context_only
+  summary: HTTP500 error bytes,not article XML. Exact body attribution remains unknown,not
+    false.
+  snapshot_sha256: e1faa17639b6dcfaac5b507b7775fe497809a62addef5942fc17b75c6e86bbb7
+- evidence_id: science-body-failure-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/science-body-access.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:52:21.724745Z'
+  support: context_only
+  summary: Current request receipt and actual response; no reuse or retry invented.
+  snapshot_sha256: 9ac0f88474fd035093bcff071304e2b3a60051da97c21f4a0e9ad4ec8ada4635
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-assessment.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Five works,one bounded definition-scope minor and explicit unknowns.
+  snapshot_sha256: 2e4b1548975a0a55ef1a5f4da96041d3bcc5b52d3e94b2ea2701d91f2698370c
+- evidence_id: source-identities
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: All five current source identities with exact acquisitions.
+  snapshot_sha256: 5fd2e323fc959a1335bbd259055a0b2a95ba4654d7bc9e7a8d6b0d9236e0a895
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-status-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Returned notice fields; Science Comment in is not a correction/retraction.
+  snapshot_sha256: d80ad1e1949708e8b25a4c784e81bc8eb85ea725005641c0eeddf2c0ebde43d6
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-placement-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: All11 source placements and their narrow support scopes.
+  snapshot_sha256: 1383916f9e455e234ad7c414884b85a20c20961a705a15f012067bac3fd8e044
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/snippet-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Zero schema snippets or explicit note quotations; no automatic missing-snippet
+    defect.
+  snapshot_sha256: fcb6be3b0e8debf95200e4e8e25a16b7e2b7fb8c5ed6585792f7ee3b1b48f65f
+- evidence_id: scope-phase
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/scope-and-phase-reading.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Bacillus/endospore scope minor and non-finding phase-boundary qualification.
+  snapshot_sha256: 7412aac764d65d1e87c79aa70f689c734b91587fe7884c7e6c77526c72825aa8
+- evidence_id: notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-note-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: All nine notes as paraphrases,including singular canonical note.
+  snapshot_sha256: c91e147116e877177c5f8d5c27c509ea0679b19a577c0062851ce925850671ac
+- evidence_id: source-nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/node-edge-source-ledger.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Complete six-node/six-edge raw arrays and bounded source dispositions.
+  snapshot_sha256: 3eb6fb37aaf31d1befe86c0ef1796b33a75230e897bb111be78759fa597f646c
+- evidence_id: canonical
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/canonical-assessment.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: B.subtilis model supported; strain168 cited historical context qualified.
+  snapshot_sha256: 783c73b85fc789c9fbe618a4a1eb38bc29b7f2683af4f7f681d10fde486542bc
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/primary-reading-scope.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Selected generic/identity readings and incidental material explicitly unadopted.
+  snapshot_sha256: 13f768590abaa1f61f06d67a3ca93d72b1058709655a283b7e3400aae23d49ef
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-access-limits.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Five current metadata successes,two body successes and one HTTP500; no
+    false-source inference.
+  snapshot_sha256: 3b620d8358a531a6dca10366f2d87a84b9a314efe5bbaad823cb32dd3c0344dd
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/source-reuse-receipt.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: No prior raw source reuse; bounded ignored-inclusive discovery documented.
+  snapshot_sha256: c68fc8965be3b2a62cfaf99ff353fa45df973bc9bf5fd6cd8f20201d5fafcab0
+- evidence_id: source-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/native-context.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.295187Z'
+  support: context_only
+  summary: Actual current B16 focused checks,zero snippet fields; no source-agent
+    native run.
+  snapshot_sha256: 1aecb4016db59cfdf8fb67fd23a543a4ad198f558dc4fd6c88d444be31318591
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-agent/evidence-manifest.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:55:22.310858Z'
+  support: context_only
+  summary: All30 immutable source artifacts verified.
+  snapshot_sha256: ba47aab1441b992721ac7e5f0da08b7118a1058cd6b051f904652e93be5eba3b
+- evidence_id: root-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-source-root/selected-primary-reading.json
+  locator: Current frozen audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:58:56.426661Z'
+  support: context_only
+  summary: Root selected current primary/authority scopes; incidental mechanisms unadopted.
+  snapshot_sha256: 359952de7bf9b691ca8ff96548f0170423f8cc37bf60e5952157c03731f456a2
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-016.7v60nxq8/spore-germination-root-adjudication.json
+  locator: Actual root FINAL
+  accessed_at: '2026-10-22T05:58:56.439616Z'
+  support: supports
+  summary: Final fields,severities,owners and conditional proposals control this combined
+    review.
+  snapshot_sha256: 55b4dd3fac05bcd5ec1ed45f19de4b02d5eabeb7a7288a9990aca08d62321932
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: local phenotype and active process xref'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: Local traitmech:000083 and active phenotype parent are maintained; GO:0009847
+    is an active biological process with local exact-xref review provenance. Reserved
+    v5 METPO:1007682 is not a minted replacement. Trait/process realization and earliest-growth
+    boundaries remain qualifications.
+  evidence_ids:
+  - identity
+  - raw-id-check
+  - local-authority
+  - ontology-primary
+  - authority-primary
+  - record
+  - adjudication
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: bacterial-endospore explanation scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000083
+  summary: Selected Setlow support explicitly concerns dormant Bacillus spores. The
+    unqualified dormant-spore definition embeds its DPA/core explanation without marking
+    that scope. This is bounded source precision,not a claim that other spore types
+    lack every shared feature. Any record correction remains conditional on removing
+    its protected entry.
+  evidence_ids:
+  - scope-phase
+  - setlow-metadata
+  - sources
+  - protected-policy
+  - root-reading
+  - adjudication
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: model species and historical strain context'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: The assigned review explicitly uses B.subtilis as a model. Strain168 occurs
+    in historical reference titles and official OtherNames; neither makes the species
+    ID a strain accession or the review a new experiment. Receptor/cortex context
+    remains bounded.
+  evidence_ids:
+  - canonical
+  - canonical-metadata
+  - canonical-body
+  - taxonomy
+  - taxonomy-reading
+  - adjudication
+- assessment_id: source-support
+  area: evidence
+  topic: 'Native checklist: five works and11 placements'
+  outcome: unknown
+  target_ids:
+  - traitmech:000083
+  summary: Generic bacterial germination and reversible dormancy context are positive.
+    The Science body request failed,so its exact CaDPA/SpoVA attribution remains unknown
+    rather than false. mBio introductory support retains Bacillus scope; protected
+    status does not itself make generic source support unassessed. Operational,pathogen-specific
+    intervention and optimization material is excluded.
+  evidence_ids:
+  - sources
+  - source-identities
+  - source-status
+  - placements
+  - notes
+  - source-reading
+  - source-access
+  - science-body-failure
+  - adjudication
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: paraphrase evidence without schema snippets'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: There are no schema snippets or explicit note quotations. All nine notes
+    were assessed as paraphrases; the successful zero-snippet native command is not
+    scientific verification,and missing snippets are not automatically defects.
+  evidence_ids:
+  - snippets
+  - notes
+  - source-native
+  - adjudication
+- assessment_id: nodes
+  area: representation
+  topic: 'Native checklist: all six referents'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: No confirmed node-type or identity defect. Capacity/process realization
+    is explicit; release,hydrolysis and hydration are processual. Node5 names a composite,so
+    the germination/subsequent-outgrowth distinction is a qualification,not an automatic
+    retype or identity failure.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - schema
+  - scope-phase
+  - ontology-primary
+  - adjudication
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].nodes[0]\",\n      \"node\": {\n        \"node_id\": \"spore_germination_trait\"\
+    ,\n        \"label\": \"spore germination\",\n        \"node_type\": \"TRAIT\"\
+    ,\n        \"grounding\": \"traitmech:000083\",\n        \"description\": \"Capacity\
+    \ of a dormant spore to resume growth.\"\n      },\n      \"grounding_status\"\
+    : \"local_record\",\n      \"outcome\": \"compatible\",\n      \"judgment\": \"\
+    Local trait identifier resolves to this whole protected record. Capacity wording\
+    \ is the phenotype abstraction of an explicitly described process; distinguish\
+    \ the trait disposition from its realization without forcing a wrong-identity\
+    \ or CAPACITY retype finding.\"\n    },\n    {\n      \"index\": 1,\n      \"\
+    field\": \"causal_graphs[0].nodes[1]\",\n      \"node\": {\n        \"node_id\"\
+    : \"germinant\",\n        \"label\": \"germinant\",\n        \"node_type\": \"\
+    CHEMICAL\",\n        \"description\": \"Nutrient signal that triggers germination.\"\
+    \n      },\n      \"grounding_status\": \"not_supplied\",\n      \"outcome\":\
+    \ \"compatible\",\n      \"judgment\": \"Generic nutrient chemical/material signal.\
+    \ No identifier is supplied; chemical facet is internally consistent. No compulsory\
+    \ molecule accession or operational germinant choice inferred.\"\n    },\n   \
+    \ {\n      \"index\": 2,\n      \"field\": \"causal_graphs[0].nodes[2]\",\n  \
+    \    \"node\": {\n        \"node_id\": \"spore_germination_process\",\n      \
+    \  \"label\": \"spore germination\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"grounding\": \"GO:0009847\",\n        \"description\": \"Dipicolinic-acid\
+    \ release and core rehydration.\"\n      },\n      \"grounding_status\": \"active_GO_biological_process\"\
+    ,\n      \"outcome\": \"compatible\",\n      \"judgment\": \"Active GO0009847\
+    \ biological_process spore germination, bounded through earliest growth. Description\
+    \ names constituent events; exact process realization and outgrowth boundary are\
+    \ not independently mechanistically assessed.\"\n    },\n    {\n      \"index\"\
+    : 3,\n      \"field\": \"causal_graphs[0].nodes[3]\",\n      \"node\": {\n   \
+    \     \"node_id\": \"cadpa_release\",\n        \"label\": \"CaDPA release from\
+    \ spore core\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\",\n        \"description\"\
+    : \"SpoVA-mediated efflux of calcium dipicolinate (CaDPA) from the dormant spore\
+    \ core during germination.\"\n      },\n      \"grounding_status\": \"not_supplied\"\
+    ,\n      \"outcome\": \"compatible\",\n      \"judgment\": \"Explicit release/efflux\
+    \ event is a process. Mentioned SpoVA is contextual prose, not a mandatory separate\
+    \ protein instance or instruction to add steps.\"\n    },\n    {\n      \"index\"\
+    : 4,\n      \"field\": \"causal_graphs[0].nodes[4]\",\n      \"node\": {\n   \
+    \     \"node_id\": \"cortex_hydrolysis\",\n        \"label\": \"cortex peptidoglycan\
+    \ hydrolysis\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\",\n        \"description\"\
+    : \"Degradation of the spore cortex peptidoglycan by germination-specific lytic\
+    \ enzymes.\"\n      },\n      \"grounding_status\": \"not_supplied\",\n      \"\
+    outcome\": \"compatible\",\n      \"judgment\": \"Explicit degradation/hydrolysis\
+    \ event is a process; no biochemical efficacy or broad-species transfer inferred.\"\
+    \n    },\n    {\n      \"index\": 5,\n      \"field\": \"causal_graphs[0].nodes[5]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"core_rehydration_outgrowth\",\n \
+    \       \"label\": \"core rehydration and outgrowth\",\n        \"node_type\"\
+    : \"BIOLOGICAL_PROCESS\",\n        \"description\": \"Full expansion and rehydration\
+    \ of the spore core enabling resumption of metabolism and initiation of outgrowth.\"\
+    \n      },\n      \"grounding_status\": \"not_supplied\",\n      \"outcome\":\
+    \ \"compatible_with_limitations\",\n      \"judgment\": \"Core expansion/rehydration\
+    \ and initiation of outgrowth are processual events. The boundary between germination\
+    \ and later outgrowth needs source scope, not an automatic ontology/type fault.\"\
+    \n    }\n  ],\n  \"source\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].nodes[0]\",\n      \"node\": {\n        \"node_id\": \"spore_germination_trait\"\
+    ,\n        \"label\": \"spore germination\",\n        \"node_type\": \"TRAIT\"\
+    ,\n        \"grounding\": \"traitmech:000083\",\n        \"description\": \"Capacity\
+    \ of a dormant spore to resume growth.\"\n      },\n      \"outcome\": \"supported_context\"\
+    ,\n      \"scope\": \"Generic return-from-dormancy classification supported; source\
+    \ scope distinguished from process/disposition formal representation.\"\n    },\n\
+    \    {\n      \"index\": 1,\n      \"field\": \"causal_graphs[0].nodes[1]\",\n\
+    \      \"node\": {\n        \"node_id\": \"germinant\",\n        \"label\": \"\
+    germinant\",\n        \"node_type\": \"CHEMICAL\",\n        \"description\": \"\
+    Nutrient signal that triggers germination.\"\n      },\n      \"outcome\": \"\
+    supported_with_limits\",\n      \"scope\": \"General nutrient signal context in\
+    \ Bacillus supported; no recipe, compound choice or optimization adopted.\"\n\
+    \    },\n    {\n      \"index\": 2,\n      \"field\": \"causal_graphs[0].nodes[2]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"spore_germination_process\",\n  \
+    \      \"label\": \"spore germination\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"grounding\": \"GO:0009847\",\n        \"description\": \"Dipicolinic-acid\
+    \ release and core rehydration.\"\n      },\n      \"outcome\": \"supported_with_limits\"\
+    ,\n      \"scope\": \"DPA/core hydration explanation supported for bacterial/endospore\
+    \ context; broader spore class requires scope clarity.\"\n    },\n    {\n    \
+    \  \"index\": 3,\n      \"field\": \"causal_graphs[0].nodes[3]\",\n      \"node\"\
+    : {\n        \"node_id\": \"cadpa_release\",\n        \"label\": \"CaDPA release\
+    \ from spore core\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\",\n       \
+    \ \"description\": \"SpoVA-mediated efflux of calcium dipicolinate (CaDPA) from\
+    \ the dormant spore core during germination.\"\n      },\n      \"outcome\": \"\
+    supported_with_limits\",\n      \"scope\": \"High-level named release context\
+    \ supported by mBio introduction; no engineered regulation or efficacy adopted.\"\
+    \n    },\n    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].nodes[4]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"cortex_hydrolysis\",\n        \"\
+    label\": \"cortex peptidoglycan hydrolysis\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"description\": \"Degradation of the spore cortex peptidoglycan by\
+    \ germination-specific lytic enzymes.\"\n      },\n      \"outcome\": \"supported_with_limits\"\
+    ,\n      \"scope\": \"High-level cortex breakdown context supported for Bacillus;\
+    \ no intervention or cross-taxon universality inferred.\"\n    },\n    {\n   \
+    \   \"index\": 5,\n      \"field\": \"causal_graphs[0].nodes[5]\",\n      \"node\"\
+    : {\n        \"node_id\": \"core_rehydration_outgrowth\",\n        \"label\":\
+    \ \"core rehydration and outgrowth\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"description\": \"Full expansion and rehydration of the spore core\
+    \ enabling resumption of metabolism and initiation of outgrowth.\"\n      },\n\
+    \      \"outcome\": \"supported_with_limits\",\n      \"scope\": \"Composite hydration/outgrowth\
+    \ context supported with phase distinction; the composite label itself is not\
+    \ an error.\"\n    }\n  ]\n}"
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all six current relation roles'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: RO:0002213 connects two represented processes and satisfies its process
+    roles. Biolink causes permits the current broad endpoints; local proposed confers
+    links realization to trait. Formal compatibility does not establish intervention
+    efficacy or erase source-scope qualifications.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - ontology-primary
+  - authority-primary
+  - local-authority
+  - adjudication
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].edges[0]\",\n      \"edge\": {\n        \"subject\": \"germinant\"\
+    ,\n        \"predicate\": \"causes\",\n        \"object\": \"spore_germination_process\"\
+    ,\n        \"description\": \"Germinant binding triggers the germination process.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1016/j.mib.2003.10.001\"\
+    ,\n            \"notes\": \"Setlow reviews germinant-triggered spore germination.\"\
+    \n          }\n        ],\n        \"predicate_id\": \"biolink:causes\"\n    \
+    \  },\n      \"subject_type\": \"CHEMICAL\",\n      \"object_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"outcome\": \"compatible\",\n      \"judgment\": \"Material signal to\
+    \ process fits broad Biolink causes inherited NamedThing roles. Causal efficacy\
+    \ unassessed.\"\n    },\n    {\n      \"index\": 1,\n      \"field\": \"causal_graphs[0].edges[1]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"spore_germination_process\",\n  \
+    \      \"predicate\": \"confers\",\n        \"object\": \"spore_germination_trait\"\
+    ,\n        \"description\": \"The germination process realizes the spore-germination\
+    \ trait.\",\n        \"evidence\": [\n          {\n            \"reference\":\
+    \ \"DOI:10.1038/nrmicro2504\",\n            \"notes\": \"Lennon & Jones frame\
+    \ germination as resuscitation from dormancy.\"\n          }\n        ],\n   \
+    \     \"predicate_id\": \"METPO:2007700\"\n      },\n      \"subject_type\": \"\
+    BIOLOGICAL_PROCESS\",\n      \"object_type\": \"TRAIT\",\n      \"outcome\": \"\
+    compatible\",\n      \"judgment\": \"Process realization to trait fits proposed\
+    \ v8 confers; placeholder status explicitly retained.\"\n    },\n    {\n     \
+    \ \"index\": 2,\n      \"field\": \"causal_graphs[0].edges[2]\",\n      \"edge\"\
+    : {\n        \"subject\": \"spore_germination_process\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"cadpa_release\",\n        \"description\"\
+    : \"The germination process drives SpoVA-mediated release of calcium dipicolinate\
+    \ from the spore core.\",\n        \"evidence\": [\n          {\n            \"\
+    reference\": \"DOI:10.1126/science.adg9829\",\n            \"notes\": \"Ion release\
+    \ during germination drives expulsion of dipicolinic acid (CaDPA) through the\
+    \ SpoVA transport complex.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"biolink:causes\"\n      },\n      \"subject_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n      \"object_type\": \"BIOLOGICAL_PROCESS\",\n      \"outcome\": \"compatible\"\
+    ,\n      \"judgment\": \"Process to process fits broad Biolink causes. Parthood\
+    \ versus upstream mechanism and pathway timing remain source-scope questions,\
+    \ not a formal type failure.\"\n    },\n    {\n      \"index\": 3,\n      \"field\"\
+    : \"causal_graphs[0].edges[3]\",\n      \"edge\": {\n        \"subject\": \"cadpa_release\"\
+    ,\n        \"predicate\": \"activates\",\n        \"object\": \"cortex_hydrolysis\"\
+    ,\n        \"description\": \"Released CaDPA acts as a signal activating germination-specific\
+    \ cortex-lytic enzymes to begin cortex degradation.\",\n        \"evidence\":\
+    \ [\n          {\n            \"reference\": \"DOI:10.1128/mbio.02220-23\",\n\
+    \            \"notes\": \"Ca-DPA release acts as a signal for a germination-specific\
+    \ cortex-lytic enzyme to begin cortex degradation.\"\n          }\n        ],\n\
+    \        \"predicate_id\": \"RO:0002213\"\n      },\n      \"subject_type\": \"\
+    BIOLOGICAL_PROCESS\",\n      \"object_type\": \"BIOLOGICAL_PROCESS\",\n      \"\
+    outcome\": \"compatible\",\n      \"judgment\": \"RO2213 inherits RO2211 process\
+    \ domain and process range. Actual CaDPA release event and cortex hydrolysis event\
+    \ satisfy both roles. Description mentions released material acting on enzymes,\
+    \ but the current process-level causal assertion is not a chemical-subject assertion;\
+    \ no enum-only or inferred material error. Regulatory efficacy unassessed.\"\n\
+    \    },\n    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].edges[4]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"cortex_hydrolysis\",\n        \"\
+    predicate\": \"causes\",\n        \"object\": \"core_rehydration_outgrowth\",\n\
+    \        \"description\": \"Once the cortex is hydrolyzed, the core can fully\
+    \ expand and rehydrate, enabling outgrowth.\",\n        \"evidence\": [\n    \
+    \      {\n            \"reference\": \"DOI:10.1128/mbio.02220-23\",\n        \
+    \    \"notes\": \"Once the cortex is hydrolyzed, the core can fully expand and\
+    \ rehydrate, allowing full metabolic capabilities and initiation of outgrowth;\
+    \ broadly supported across endospore formers.\"\n          }\n        ],\n   \
+    \     \"predicate_id\": \"biolink:causes\"\n      },\n      \"subject_type\":\
+    \ \"BIOLOGICAL_PROCESS\",\n      \"object_type\": \"BIOLOGICAL_PROCESS\",\n  \
+    \    \"outcome\": \"compatible\",\n      \"judgment\": \"Process to process fits\
+    \ broad Biolink causes; downstream biological support belongs to source audit.\"\
+    \n    },\n    {\n      \"index\": 5,\n      \"field\": \"causal_graphs[0].edges[5]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"core_rehydration_outgrowth\",\n \
+    \       \"predicate\": \"confers\",\n        \"object\": \"spore_germination_trait\"\
+    ,\n        \"description\": \"Core rehydration and outgrowth complete realization\
+    \ of the spore-germination trait.\",\n        \"evidence\": [\n          {\n \
+    \           \"reference\": \"DOI:10.1128/mbio.02220-23\",\n            \"notes\"\
+    : \"Core rehydration following cortex hydrolysis allows full metabolic capabilities\
+    \ and initiation of outgrowth, completing germination.\"\n          }\n      \
+    \  ],\n        \"predicate_id\": \"METPO:2007700\"\n      },\n      \"subject_type\"\
+    : \"BIOLOGICAL_PROCESS\",\n      \"object_type\": \"TRAIT\",\n      \"outcome\"\
+    : \"compatible_with_limitations\",\n      \"judgment\": \"Process to trait fits\
+    \ local confers. Completion/outgrowth wording must retain source temporal scope;\
+    \ no detailed growth or intervention assessment.\"\n    }\n  ],\n  \"source\"\
+    : [\n    {\n      \"index\": 0,\n      \"field\": \"causal_graphs[0].edges[0]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"germinant\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"spore_germination_process\",\n        \"\
+    description\": \"Germinant binding triggers the germination process.\",\n    \
+    \    \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1016/j.mib.2003.10.001\"\
+    ,\n            \"notes\": \"Setlow reviews germinant-triggered spore germination.\"\
+    \n          }\n        ],\n        \"predicate_id\": \"biolink:causes\"\n    \
+    \  },\n      \"outcome\": \"supported_with_limits\",\n      \"scope\": \"General\
+    \ germinant-triggered Bacillus spore process supported by Setlow abstract; no\
+    \ protocol or generic fungal-spore extrapolation.\"\n    },\n    {\n      \"index\"\
+    : 1,\n      \"field\": \"causal_graphs[0].edges[1]\",\n      \"edge\": {\n   \
+    \     \"subject\": \"spore_germination_process\",\n        \"predicate\": \"confers\"\
+    ,\n        \"object\": \"spore_germination_trait\",\n        \"description\":\
+    \ \"The germination process realizes the spore-germination trait.\",\n       \
+    \ \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1038/nrmicro2504\"\
+    ,\n            \"notes\": \"Lennon & Jones frame germination as resuscitation\
+    \ from dormancy.\"\n          }\n        ],\n        \"predicate_id\": \"METPO:2007700\"\
+    \n      },\n      \"outcome\": \"supported_context\",\n      \"scope\": \"Dormancy/resuscitation\
+    \ context supports the conceptual connection; formal confers semantics are separate.\"\
+    \n    },\n    {\n      \"index\": 2,\n      \"field\": \"causal_graphs[0].edges[2]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"spore_germination_process\",\n  \
+    \      \"predicate\": \"causes\",\n        \"object\": \"cadpa_release\",\n  \
+    \      \"description\": \"The germination process drives SpoVA-mediated release\
+    \ of calcium dipicolinate from the spore core.\",\n        \"evidence\": [\n \
+    \         {\n            \"reference\": \"DOI:10.1126/science.adg9829\",\n   \
+    \         \"notes\": \"Ion release during germination drives expulsion of dipicolinic\
+    \ acid (CaDPA) through the SpoVA transport complex.\"\n          }\n        ],\n\
+    \        \"predicate_id\": \"biolink:causes\"\n      },\n      \"outcome\": \"\
+    partial\",\n      \"scope\": \"Science abstract supports general ion-release initiation,\
+    \ but does not itself name the complete current CaDPA/SpoVA attribution. Primary\
+    \ body request failed; current exact nearest-source detail remains unknown, not\
+    \ false. mBio introductory context separately supports the generic named sequence.\"\
+    \n    },\n    {\n      \"index\": 3,\n      \"field\": \"causal_graphs[0].edges[3]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"cadpa_release\",\n        \"predicate\"\
+    : \"activates\",\n        \"object\": \"cortex_hydrolysis\",\n        \"description\"\
+    : \"Released CaDPA acts as a signal activating germination-specific cortex-lytic\
+    \ enzymes to begin cortex degradation.\",\n        \"evidence\": [\n         \
+    \ {\n            \"reference\": \"DOI:10.1128/mbio.02220-23\",\n            \"\
+    notes\": \"Ca-DPA release acts as a signal for a germination-specific cortex-lytic\
+    \ enzyme to begin cortex degradation.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"RO:0002213\"\n      },\n      \"outcome\": \"supported_with_limits\",\n  \
+    \    \"scope\": \"mBio intro states release triggers Bacillus cortex hydrolysis.\
+    \ This supports the high-level sequence; not unrestricted species or intervention\
+    \ efficacy.\"\n    },\n    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].edges[4]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"cortex_hydrolysis\",\n        \"\
+    predicate\": \"causes\",\n        \"object\": \"core_rehydration_outgrowth\",\n\
+    \        \"description\": \"Once the cortex is hydrolyzed, the core can fully\
+    \ expand and rehydrate, enabling outgrowth.\",\n        \"evidence\": [\n    \
+    \      {\n            \"reference\": \"DOI:10.1128/mbio.02220-23\",\n        \
+    \    \"notes\": \"Once the cortex is hydrolyzed, the core can fully expand and\
+    \ rehydrate, allowing full metabolic capabilities and initiation of outgrowth;\
+    \ broadly supported across endospore formers.\"\n          }\n        ],\n   \
+    \     \"predicate_id\": \"biolink:causes\"\n      },\n      \"outcome\": \"supported_with_limits\"\
+    ,\n      \"scope\": \"mBio intro links cortex hydrolysis to water uptake/core\
+    \ expansion and metabolism. Broad all-endospore-former generality and exact outgrowth\
+    \ completion are qualified.\"\n    },\n    {\n      \"index\": 5,\n      \"field\"\
+    : \"causal_graphs[0].edges[5]\",\n      \"edge\": {\n        \"subject\": \"core_rehydration_outgrowth\"\
+    ,\n        \"predicate\": \"confers\",\n        \"object\": \"spore_germination_trait\"\
+    ,\n        \"description\": \"Core rehydration and outgrowth complete realization\
+    \ of the spore-germination trait.\",\n        \"evidence\": [\n          {\n \
+    \           \"reference\": \"DOI:10.1128/mbio.02220-23\",\n            \"notes\"\
+    : \"Core rehydration following cortex hydrolysis allows full metabolic capabilities\
+    \ and initiation of outgrowth, completing germination.\"\n          }\n      \
+    \  ],\n        \"predicate_id\": \"METPO:2007700\"\n      },\n      \"outcome\"\
+    : \"supported_with_limits\",\n      \"scope\": \"Hydration/metabolic resumption\
+    \ supports the composite context; distinguish subsequent outgrowth. No inherent\
+    \ defect is inferred from the explicitly composite node.\"\n    }\n  ]\n}"
+- assessment_id: owners
+  area: ownership
+  topic: 'Native checklist: protected record and conditional recurrence'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: The record is the documentary owner; protection prohibits edits until the
+    user removes its entry. Populated mapping slots and empty current migration selection
+    prevent claims of an automatic correction. Captured script leads are contextual,not
+    demonstrated faulty payload writers.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - discovery
+  - node-owner-search
+  - protected-policy
+  - adjudication
+- assessment_id: provenance
+  area: provenance
+  topic: 'Native checklist: bounded human-acceptance traceability'
+  outcome: concern
+  target_ids:
+  - traitmech:000083
+  summary: Six embedded events are AI-assisted.28 current contextual history actor/target/event
+    projections are AI; no whole-history reading is claimed. Ignored-inclusive search
+    found279 paths,81 matching arrays and93 actual local review arrays with zero exact
+    prior target. Remote/private human acceptance remains unknown.
+  evidence_ids:
+  - human-search
+  - histories
+  - embedded-events
+  - discovery
+  - ground-reading
+  - record
+  - adjudication
+- assessment_id: expression
+  area: completeness
+  topic: 'Native checklist: species catalog and unavailable runner'
+  outcome: unknown
+  target_ids:
+  - traitmech:000083
+  summary: Retained catalog includes B.subtilis species datasets; it establishes neither
+    strain168 nor a germination module or efficacy. Current bounded runner discovery
+    found no applicable adapter,and no expression query ran.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - catalog-original
+  - catalog-reuse
+  - adjudication
+- assessment_id: readiness
+  area: completeness
+  topic: 'Native checklist: protected legacy graph coverage'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: One component,six nodes/six edges and no protein nodes or instances. Maintained
+    policy reports this excluded legacy record as PROTECTED; no missing scope,connector,protein
+    or accession is automatically a defect. Review adds evidence without curing the
+    protected record.
+  evidence_ids:
+  - record
+  - nodes-edges
+  - expression
+  - policy
+  - protected-policy
+  - adjudication
+- assessment_id: validation
+  area: schema
+  topic: 'Native checklist: fresh B16 and focused current diagnostics'
+  outcome: supported
+  target_ids:
+  - traitmech:000083
+  summary: Four common checks are actual fresh B16 executions on c1000884; comparison
+    with B15 remains false. Current inspect,validation,strict and zero-snippet commands
+    passed. Capture legitimately preceded initialization and is explicitly retained
+    by it. Product skips,omitted full just test and common limitations remain; diagnostics
+    do not certify source truth or human acceptance.
+  evidence_ids:
+  - capture
+  - fresh-common-completion
+  - local-init
+  - check-spore-germination-target-validate
+  - check-spore-germination-target-strict
+  - check-spore-germination-snippets
+  - source-native
+findings:
+- finding_id: bacterial-endospore-source-scope
+  issue_key: spore-germination-bacterial-endospore-source-scope
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Bacterial endospore source scope
+  description: The unqualified dormant-spore definition embeds a DPA/core-hydration
+    explanation whose nearest source explicitly concerns dormant Bacillus spores.
+    Mark the bacterial/endospore scope of that explanation. This does not assert that
+    other spores lack all shared features or that a new mechanism should be added.
+  target_ids:
+  - traitmech:000083
+  field_paths:
+  - definition
+  evidence_ids:
+  - scope-phase
+  - sources
+  - setlow-metadata
+  - owners
+  - protected-policy
+  - root-reading
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/spore_germination.yaml
+    role: Protected maintained record; no record-side correction until user explicitly
+      removes DO_NOT_WORK entry
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: spore-germination-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human acceptance link
+  description: REVIEWED and the approved exact-xref lack a linked human acceptance
+    decision in bounded current evidence. All six embedded events and all28 contextual
+    history actor projections are AI. Ignored/hidden-inclusive local search excluding
+    .git/.venv found279 matching paths;81 matching review arrays and all93 actual
+    target arrays yielded no exact prior review. This is traceability evidence, not
+    proof that private or remote acceptance never occurred.
+  target_ids:
+  - traitmech:000083
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - human-search
+  - histories
+  - embedded-events
+  - owners
+  - protected-policy
+  - root-reading
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/spore_germination.yaml
+    role: Protected maintained record; no record-side correction until user explicitly
+      removes DO_NOT_WORK entry
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: curate-bacterial-endospore-source-scope
+  description: After the user explicitly removes the DO_NOT_WORK entry, clarify the
+    definition’s bacterial/endospore mechanism scope during separately authorized
+    curation.
+  finding_ids:
+  - bacterial-endospore-source-scope
+  target_ids:
+  - traitmech:000083
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/spore_germination.yaml
+    role: Protected maintained record; no record-side correction until user explicitly
+      removes DO_NOT_WORK entry
+  acceptance_checks:
+  - Distinguish generic spore return from dormancy from the source-specific bacterial/endospore
+    explanation.
+  - Retain source-supported context and distinguish germination from subsequent outgrowth;
+    no operational mechanism or protocol repair is prescribed.
+  - Until the user removes the exclusion, leave record, status, curation history and
+    generated artifacts unchanged.
+- action_id: curate-human-acceptance-link
+  description: Locate or obtain an attributable human acceptance decision and link
+    it in a separate immutable review; defer record-side changes until the user explicitly
+    removes the DO_NOT_WORK entry.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000083
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/physiology/spore_germination.yaml
+    role: Protected maintained record; no record-side correction until user explicitly
+      removes DO_NOT_WORK entry
+  acceptance_checks:
+  - Identify the human actor, exact record/revision and retrievable scientific acceptance.
+  - Preserve local-search boundaries and uncertainty about private or remote decisions.
+  - Keep protected record bytes, status and history unchanged while the exclusion
+    remains active.
+limitations:
+- 'Fresh diagnostic preparation scope: Full just test was NOT_RUN; only five expressly
+  selected Stage2 tests executed.'
+- 'Fresh diagnostic preparation scope: 123 mapping pairs retain SKIPPED_NO_ADAPTER.
+  QC includes baseline findings and source-registry licence warnings; exit0 does not
+  erase them.'
+- 'Fresh diagnostic preparation scope: QC children use the actual aggregate execution
+  interval; no invented individual times.'
+- 'Fresh diagnostic preparation scope: These are software/data integrity diagnostics,
+  not whole-record scientific reviews or biological validation.'
+- 'Fresh diagnostic preparation scope: B16 differs from B15; no prior diagnostic execution
+  is relabelled fresh. Original ontology acquisition provenance is retained in cache
+  receipt.'
+- 'Fresh diagnostic preparation scope: No queue selection, sweep-state initialization,
+  source scientific repair, publication, or future-target judgment occurred.'
+- Serializers must append to helper notes/limitations. Full just test was NOT_RUN;
+  123 no-adapter skips and two registry licence warnings remain. These common checks
+  do not replace current target scientific assessment or focused validation.
+- All five metadata responses acquired currently; no prior raw source copies or reuse
+  clock chains.
+- Science fullTextXML returned HTTP500; science.xml holds16 error bytes, not article
+  XML. Failure does not imply a false citation.
+- mBio and canonical bodies were acquired but only declared generic introductory/identity
+  passages adopted.
+- All five abstract texts were displayed; intervening engineering, stimulus-memory,
+  eradication, pressure/chemical trigger and virulence material was incidental and
+  unadopted.
+- No operational germination recipe, optimization or pathogen-specific intervention/efficacy
+  review.
+- Returned indexed notice fields are bounded; Science Comment in is not a correction/retraction.
+- Protected DO_NOT_WORK entry remains authoritative for edits/curation. This review
+  and source audit do not remove it.
+- 'Protected record: no edit, curation, status promotion, writer execution or generated
+  changes are authorized; any future record correction requires the user to remove
+  its DO_NOT_WORK entry first.'
+- Detailed efficacy, mechanisms, interventions and culture optimization UNASSESSED_SCOPE;
+  formal compatibility is not scientific validation.
+- GO earliest-growth boundary versus outgrowth wording and trait-versus-realization
+  abstraction are qualified, not automatically wrong IDs.
+- Current history projections do not establish whole-body historical science or remote/private
+  acceptance.
+- Canonical taxon1423 is species-level; no strain-specific assay inference.
+- Structured runner unavailable in bounded discovery; retained original catalog is
+  not a fresh dataset or module check.
+- Ground auditor did not rerun native checks, common diagnostics or ontology database
+  hashes.
+- Root and delegated primary-reading scopes are distinct and recorded; all28 histories
+  were metadata projections, zero whole-body historical readings.
+- Native snippet check covered0 snippets over0 references, not the nine prose notes.
+- Fresh B16 common diagnostics apply; cross-batch source equality is false and old
+  B15 diagnostics are not relabeled current.
+- All111 captured inputs were verified; schema validity and formal compatibility do
+  not establish every biological assertion.
+- Explicit composite node5 is not inherently wrong; distinguish germination and subsequent
+  outgrowth without forcing a second finding.
+- Science exact current CaDPA/SpoVA nearest-body attribution remains unknown after
+  access failure, not false.
+- mBio broad endospore-former generality is qualified by the selected Bacillus introductory
+  context.
+- The broad phenotype parent, process definition and trait-capacity node represent
+  different abstraction levels; no wrong-ID or forced retype finding is established.
+- Reserved METPO1007682 and proposed confers2007700 remain local proposal authorities,
+  not claims of current upstream minting.
+- No new protein instances or scope-status fix is required by this protected legacy
+  record exception.
+- Canonical taxon1423 is species-level and strain168 has historical reference-list
+  context, not a new assay or exact-strain identifier.
+- RO2213 actual endpoints are release and hydrolysis processes; Biolink broad roles
+  do not inherit RO constraints through mappings.
+- Zero completed review validation failures are recorded; native focused validation
+  and strict checks passed.
+notes:
+- B16 fresh diagnostic receipts and original shared-cache provenance are retained
+  in /private/tmp/traitmech-record-sweep-016.7v60nxq8/fresh-diagnostic-completion.json.
+  Cross-batch source equality remains false; diagnostic success is separate from prior-batch
+  finalization and publication.
+- Two minor findings come only from root FINAL. Protected record,status,history and
+  generated artifacts remain untouched; proposed record corrections require the user
+  explicitly to remove the exclusion first.
+- Current source requests,failed Science body response,taxonomy failure/retry and
+  original catalog acquisition have distinct clocks. Ground-auditor non-repetition
+  is actor-specific; serializer fresh-common guard separately verifies current maps
+  and cache pins. No inherited B15 diagnostic reuse is claimed.
+tags:
+- record-review
+- spore-germination
+- needs-curation
