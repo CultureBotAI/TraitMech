@@ -99,6 +99,10 @@ tasks:
     status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
     disposition: "Resolved in Cycle 10 Stage 6 (issue #1988); added --merge-existing and --accession CLI modes, load_report_rows(), _is_reusable_existing_row(), and _normalize_accessions() in scripts/audit_uniprot_grounding.py so unchanged clean rows in reports/uniprot_grounding_audit.tsv are preserved offline while newly added, modified, dirty, or --accession-selected rows are live-audited and merged in iter_uses() corpus order, covered by unit tests in tests/test_audit_uniprot_grounding.py."
+  - task_id: traitmech-infra-0014
+    summary: Add a --prune-baseline mode to scripts/audit_evidence_snippets.py that ratchets conf/evidence_snippet_baseline.tsv downward when findings are resolved without freezing new unbaselined findings
+    status: open
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -247,5 +251,13 @@ tasks:
 - **Dependencies**: None
 - **Disposition**: Resolved in Cycle 10 Stage 6 (issue #1988) by adding `--merge-existing` and `--accession` CLI modes, `load_report_rows()`, `_is_reusable_existing_row()`, and `_normalize_accessions()` to `scripts/audit_uniprot_grounding.py`, extending `audit_uses()` to preserve clean, unchanged rows from `reports/uniprot_grounding_audit.tsv` (while recomputing `reused_in_n_files`) and live-audit only newly added, modified, dirty, or `--accession`-selected accessions in `iter_uses()` corpus order, verified by unit tests in `tests/test_audit_uniprot_grounding.py` and full-corpus `--check-inventory` / `--merge-existing` (`206 uses match reports/uniprot_grounding_audit.tsv`).
 
-
+### `traitmech-infra-0014` — Add a `--prune-baseline` mode to `scripts/audit_evidence_snippets.py` that ratchets `conf/evidence_snippet_baseline.tsv` downward when findings are resolved without freezing new unbaselined findings
+- **Origin**: `mech-goal-sequence-20261019`, Cycle 11, Stage 4 (`record_review`)
+- **Issue**: https://github.com/CultureBotAI/TraitMech/issues/2002 (follow-up to https://github.com/CultureBotAI/TraitMech/issues/1981)
+- **Status**: `open`
+- **Observation**: In `scripts/audit_evidence_snippets.py`, `--write-baseline` (`main()`, line 755) unconditionally overwrites `conf/evidence_snippet_baseline.tsv` with all current `findings` (`write_tsv(Path(args.baseline), findings)`), which as documented in the script's `_key()` docstring (lines 545–546) would silently freeze any newly introduced unbaselined findings if run after a curation edit. Because there is no downward-only `--prune-baseline` option in `scripts/audit_evidence_snippets.py` (one that fails if `compare(findings, baseline)` is non-empty and otherwise writes only the remaining baselined findings to `conf/evidence_snippet_baseline.tsv`), resolving `MISSING_SNIPPET` cohorts in Stage 5 (`F-C8S4-DEF-SRC-001..012`, `F-C9S4-DEF-SRC-001..009`, `F-C10S4-DEF-SRC-001..014`, and `F-C11S4-DEF-SRC-001..012`) requires manual TSV row pruning outside `scripts/audit_evidence_snippets.py`.
+- **Desired outcome**: In Cycle 11 Stage 6, add a `prune_baseline()` helper and `--prune-baseline` CLI flag to `scripts/audit_evidence_snippets.py` that verifies `compare(findings, baseline)` is empty (returning non-zero without modifying the baseline if any unbaselined finding or magnitude increase is present) and otherwise ratchets `conf/evidence_snippet_baseline.tsv` downward to the current findings, with unit tests in `tests/test_audit_evidence_snippets.py`.
+- **Evidence paths**: `scripts/audit_evidence_snippets.py`, `tests/test_audit_evidence_snippets.py`, `conf/evidence_snippet_baseline.tsv`, `reviews/structured/20261105T102500Z-cycle11-stage4-corpus-record-and-cohort-review/review.yaml`, `reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/evidence.yaml`
+- **Priority**: Medium
+- **Dependencies**: None
 
