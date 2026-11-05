@@ -1,0 +1,264 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 11
+stage: 4
+revision: 1
+outcome: completed
+summary: 'Reviewed all 1,129 eligible TraitRecord YAML files (1,130 total minus 1 DO_NOT_WORK.md exclusion:
+  data/traits/physiology/spore_germination.yaml, traitmech:000083; 395 eligible METPO: records and 734
+  eligible traitmech:NNNNNN records) across all 10 category cohorts at frozen inventory commit d948161fcc73640b89cc0fd0dcb7ad4b1208425d
+  using repository-local review-yaml-record and review-yaml-category skills and persisted the versioned
+  structured review bundle (reviews/structured/20261105T102500Z-cycle11-stage4-corpus-record-and-cohort-review/)
+  plus parent workflow evidence referencing Cycle 10 Stage 5 evidence. Verified the 4 Cycle 11 Stage 2/3
+  Cohort N fermentation, respiratory, and attachment records with 0 findings, identified 12 actionable
+  open record-level definition_source missing-snippet findings (F-C11S4-DEF-SRC-001..012) across data/traits/genomics/
+  (traitmech:000089..000092, 000094..000098, 000100..000102) for Cycle 11 Stage 5 grouped remediation,
+  logged traitmech-infra-0014 in INFRA_TASKS.md (#2002), and carried forward the 5 deferred source-limited/upstream-blocked
+  cohort findings.'
+source_revision: d948161fcc73640b89cc0fd0dcb7ad4b1208425d
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-05/revision-0001/evidence.yaml
+  sha256: a4cd05f1cb00ada781adcd72c9e984263556173296ace607b3bc386b6b951a28
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/review_report.md
+  sha256: dcf513cda23636c266de888189863e3f758e907c6155c0e077d40d036f12fde4
+  kind: review_report
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/review_findings.tsv
+  sha256: dacc6bb33b593c5c16d5c04cc7fcb3464896e4e8ee426b63c92a90b293b540bc
+  kind: review_findings
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/frozen_inventory_coverage.json
+  sha256: a32472b42ece86cb64b6e02586e9de6e795a34f7f144b8fddf02e3303a5d7e00
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/structured_review.yaml
+  sha256: 49062de9bd3998348e20ccdefbdeadb1ef749359d2d8340b02f48740f960a840
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/structured_review.md
+  sha256: 37372cacaada216660651d459142099eb530e9c3229f9043ddd3992f24236cb8
+  kind: supporting
+findings:
+- finding_id: F-C11S4-DEF-SRC-001
+  status: open
+  summary: 'data/traits/genomics/codon_usage_bias.yaml (traitmech:000096) declares definition_source:
+    DOI:10.1038/nrg2899 (Plotkin & Kudla 2011, Nat Rev Genet) and cites DOI:10.1038/nrg2899 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrg2899 (PMID:21102527
+    / PMC3074964) provides the verified verbatim definitional quote "Despite their name, synonymous mutations
+    have significant consequences for cellular processes in all taxa. As a result, an understanding of
+    codon bias is central to fields as diverse as molecular evolution and biotechnology.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrg2899 to evidence[0].snippet in data/traits/genomics/codon_usage_bias.yaml.'
+- finding_id: F-C11S4-DEF-SRC-002
+  status: open
+  summary: 'data/traits/genomics/crispr_cas_system.yaml (traitmech:000094) declares definition_source:
+    DOI:10.1038/s41579-019-0299-x (Makarova et al. 2020, Nat Rev Microbiol) and cites DOI:10.1038/s41579-019-0299-x
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/s41579-019-0299-x
+    (PMID:31857715 / PMC8905525) provides the verified verbatim definitional quote "The number and diversity
+    of known CRISPR-Cas systems have substantially increased in recent years. Here, we provide an updated
+    evolutionary classification of CRISPR-Cas systems and cas genes, with an emphasis on the major developments
+    that have occurred since the publication of the latest classification, in 2015. The new classification
+    includes 2 classes, 6 types and 33 subtypes, compared with 5 types and 16 subtypes in 2015.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/s41579-019-0299-x to evidence[0].snippet in data/traits/genomics/crispr_cas_system.yaml.'
+- finding_id: F-C11S4-DEF-SRC-003
+  status: open
+  summary: 'data/traits/genomics/gc_skew.yaml (traitmech:000097) declares definition_source: DOI:10.1093/oxfordjournals.molbev.a025626
+    (Lobry 1996, Mol Biol Evol) and cites DOI:10.1093/oxfordjournals.molbev.a025626 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1093/oxfordjournals.molbev.a025626 (PMID:8676740) provides
+    the verified verbatim definitional quote "There was a departure from intrastrand equifrequency between
+    A and T or between C and G, showing that the substitution patterns of the two strands of DNA were
+    asymmetric. The positions of the boundaries between these compartments were found to coincide with
+    the origin and terminus of chromosome replication, and there were more A-T and C-G deviations in intergenic
+    regions and third codon positions, suggesting that a mutational bias was responsible for this asymmetry.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1093/oxfordjournals.molbev.a025626 to evidence[0].snippet
+    in data/traits/genomics/gc_skew.yaml.'
+- finding_id: F-C11S4-DEF-SRC-004
+  status: open
+  summary: 'data/traits/genomics/genome_size.yaml (traitmech:000098) declares definition_source: DOI:10.1038/nrmicro3331
+    (Batut et al. 2014, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro3331 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1038/nrmicro3331 (PMID:25220308) provides the verified
+    verbatim definitional quote "Bacterial genomes show substantial variations in size. The smallest bacterial
+    genomes are those of endocellular symbionts of eukaryotic hosts, which have undergone massive genome
+    reduction and show patterns that are consistent with the degenerative processes that are predicted
+    to occur in species with small effective population sizes. However, similar genome reduction is found
+    in some free-living marine cyanobacteria that are characterized by extremely large populations.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro3331 to evidence[0].snippet in data/traits/genomics/genome_size.yaml.'
+- finding_id: F-C11S4-DEF-SRC-005
+  status: open
+  summary: 'data/traits/genomics/mobile_genetic_element.yaml (traitmech:000089) declares definition_source:
+    DOI:10.1038/nrmicro1235 (Frost et al. 2005, Nat Rev Microbiol) and cites DOI:10.1038/nrmicro1235 in
+    record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1038/nrmicro1235
+    (PMID:16138100) provides the verified verbatim definitional quote "Horizontal genomics is a new field
+    in prokaryotic biology that is focused on the analysis of DNA sequences in prokaryotic chromosomes
+    that seem to have originated from other prokaryotes or eukaryotes. However, it is equally important
+    to understand the agents that effect DNA movement: plasmids, bacteriophages and transposons.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1038/nrmicro1235 to evidence[0].snippet in data/traits/genomics/mobile_genetic_element.yaml.'
+- finding_id: F-C11S4-DEF-SRC-006
+  status: open
+  summary: 'data/traits/genomics/pangenome_openness.yaml (traitmech:000102) declares definition_source:
+    DOI:10.1073/pnas.0506758102 (Tettelin et al. 2005, Proc Natl Acad Sci U S A) and cites DOI:10.1073/pnas.0506758102
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1073/pnas.0506758102
+    (PMID:16172379 / PMC1216834) provides the verified verbatim definitional quote "Analysis of these
+    genomes and those available in databases showed that the S. agalactiae species can be described by
+    a pan-genome consisting of a core genome shared by all isolates, accounting for approximately 80%
+    of any single genome, plus a dispensable genome consisting of partially shared and strain-specific
+    genes. Mathematical extrapolation of the data suggests that the gene reservoir available for inclusion
+    in the S. agalactiae pan-genome is vast and that unique genes will continue to be identified even
+    after sequencing hundreds of genomes.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1073/pnas.0506758102 to evidence[0].snippet in data/traits/genomics/pangenome_openness.yaml.'
+- finding_id: F-C11S4-DEF-SRC-007
+  status: open
+  summary: 'data/traits/genomics/plasmid_carriage.yaml (traitmech:000090) declares definition_source:
+    DOI:10.1128/MMBR.00020-10 (Smillie et al. 2010, Microbiol Mol Biol Rev) and cites DOI:10.1128/MMBR.00020-10
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1128/MMBR.00020-10
+    (PMID:20805406 / PMC2937521) provides the verified verbatim definitional quote "Plasmids are key vectors
+    of horizontal gene transfer and essential genetic engineering tools. They code for genes involved
+    in many aspects of microbial biology, including detoxication, virulence, ecological interactions,
+    and antibiotic resistance.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/MMBR.00020-10 to evidence[0].snippet in data/traits/genomics/plasmid_carriage.yaml.'
+- finding_id: F-C11S4-DEF-SRC-008
+  status: open
+  summary: 'data/traits/genomics/ploidy.yaml (traitmech:000100) declares definition_source: DOI:10.1159/000368855
+    (Soppa 2014, J Mol Microbiol Biotechnol) and cites DOI:10.1159/000368855 in record-level evidence[0]
+    with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv),
+    even though Europe PMC abstract for DOI:10.1159/000368855 (PMID:25732342) provides the verified verbatim
+    definitional quote "During recent years, it has become clear that many species of archaea and bacteria
+    are polyploid and contain more than 10 copies of their chromosome.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1159/000368855 to evidence[0].snippet in data/traits/genomics/ploidy.yaml.'
+- finding_id: F-C11S4-DEF-SRC-009
+  status: open
+  summary: 'data/traits/genomics/prophage.yaml (traitmech:000091) declares definition_source: DOI:10.1128/MMBR.67.2.238-276.2003
+    (Canchaya et al. 2003, Microbiol Mol Biol Rev) and cites DOI:10.1128/MMBR.67.2.238-276.2003 in record-level
+    evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET in
+    conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1128/MMBR.67.2.238-276.2003
+    (PMID:12794192 / PMC156470) provides the verified verbatim definitional quote "The majority of the
+    bacterial genome sequences deposited in the National Center for Biotechnology Information database
+    contain prophage sequences. Analysis of the prophages suggested that after being integrated into bacterial
+    genomes, they undergo a complex decay process consisting of inactivating point mutations, genome rearrangements,
+    modular exchanges, invasion by further mobile DNA elements, and massive DNA deletion.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/MMBR.67.2.238-276.2003 to evidence[0].snippet in data/traits/genomics/prophage.yaml.'
+- finding_id: F-C11S4-DEF-SRC-010
+  status: open
+  summary: 'data/traits/genomics/restriction_modification_system.yaml (traitmech:000095) declares definition_source:
+    DOI:10.1128/MMBR.00044-12 (Vasu & Nagaraja 2013, Microbiol Mol Biol Rev) and cites DOI:10.1128/MMBR.00044-12
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1128/MMBR.00044-12
+    (PMID:23471617 / PMC3591985) provides the verified verbatim definitional quote "Restriction-modification
+    (R-M) systems are ubiquitous and are often considered primitive immune systems in bacteria. Their
+    diversity and prevalence across the prokaryotic kingdom are an indication of their success as a defense
+    mechanism against invading genomes.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/MMBR.00044-12 to evidence[0].snippet in data/traits/genomics/restriction_modification_system.yaml.'
+- finding_id: F-C11S4-DEF-SRC-011
+  status: open
+  summary: 'data/traits/genomics/rrna_operon_copy_number.yaml (traitmech:000101) declares definition_source:
+    DOI:10.1128/AEM.66.4.1328-1333.2000 (Klappenbach, Dunbar & Schmidt 2000, Appl Environ Microbiol) and
+    cites DOI:10.1128/AEM.66.4.1328-1333.2000 in record-level evidence[0] with explanatory notes but omits
+    evidence[0].snippet (baselined as MISSING_SNIPPET in conf/evidence_snippet_baseline.tsv), even though
+    Europe PMC abstract for DOI:10.1128/AEM.66.4.1328-1333.2000 (PMID:10742207 / PMC91988) provides the
+    verified verbatim definitional quote "Although natural selection appears to favor the elimination
+    of gene redundancy in prokaryotes, multiple copies of each rRNA-encoding gene are common on bacterial
+    chromosomes. Despite this conspicuous deviation from single-copy genes, no phenotype has been consistently
+    associated with rRNA gene copy number. We found that the number of rRNA genes correlates with the
+    rate at which phylogenetically diverse bacteria respond to resource availability.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1128/AEM.66.4.1328-1333.2000 to evidence[0].snippet in data/traits/genomics/rrna_operon_copy_number.yaml.'
+- finding_id: F-C11S4-DEF-SRC-012
+  status: open
+  summary: 'data/traits/genomics/transposable_element.yaml (traitmech:000092) declares definition_source:
+    DOI:10.1111/1574-6976.12067 (Siguier, Gourbeyre & Chandler 2014, FEMS Microbiol Rev) and cites DOI:10.1111/1574-6976.12067
+    in record-level evidence[0] with explanatory notes but omits evidence[0].snippet (baselined as MISSING_SNIPPET
+    in conf/evidence_snippet_baseline.tsv), even though Europe PMC abstract for DOI:10.1111/1574-6976.12067
+    (PMID:24499397 / PMC7190074) provides the verified verbatim definitional quote "Insertion sequences
+    (ISs), arguably the smallest and most numerous autonomous transposable elements (TEs), are important
+    players in shaping their host genomes.".'
+  disposition: 'Carry forward to Cycle 11 Stage 5 (resolve_review_findings) in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS:
+    add verified verbatim snippet for DOI:10.1111/1574-6976.12067 to evidence[0].snippet in data/traits/genomics/transposable_element.yaml.'
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  summary: 361 of 1,129 eligible TraitRecord files lack causal_graphs due to documented source limitations
+    (339 records where open-access PubMed/PMC/EuropePMC literature lacks a multi-step causal mechanism
+    snippet, reduced from 343 in Cycle 10 after +4 Cycle 11 Stage 2/3 Cohort N fermentation, respiratory,
+    and attachment graphs, plus 22 SUPPORTING_FIELD_VOCABULARY non-mechanistic hierarchy/measurement/observation
+    records).
+  disposition: 'Deferred (source-limited) under open GitHub issue #1982: every one of the 361 records
+    already documents its exact literature limitation in an open CURATION_TODO DiscussionItem; requires
+    full-text PDF acquisition or paid deep-research approval outside Stage 4/5 scope.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  summary: 551 of 1,129 eligible TraitRecord files lack canonical_examples (578 eligible records and 579
+    total records carry verified canonical_examples) because open-access abstracts do not report a verbatim
+    strain-designated or species-specific positive/negative value.
+  disposition: 'Deferred (source-limited) under open GitHub issue #1983: tracked in scripts/backfill_canonical_examples_444.py
+    (POST_444_CANONICAL_EXAMPLE_QUEUE) and record-level CURATION_TODO DiscussionItems; requires primary
+    strain characterization literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  summary: 85 baselined cross-record causal-graph audit warning rows (83 INCONSISTENT_NODE_TYPE, 2 DUPLICATE_GROUNDING)
+    across 72 unique eligible TraitRecord files in conf/causal_graph_audit_baseline.tsv.
+  disposition: 'Deferred to cross-cohort ontology harmonization tracked in open GitHub issue #1984 (follow-up
+    to #356) and conf/causal_graph_audit_baseline.tsv (0 unbaselined regressions).'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  summary: 29 of 1,129 eligible TraitRecord files (14 FAPROTAX metabolism records whose definition_source
+    DOI:10.1126/science.aaf4507 is cited with a verbatim snippet in edge-level causal_graphs[].edges[].evidence[].reference
+    and recognized by _record_repeats_def_source after traitmech-infra-0010 in Cycle 8 Stage 6, plus 15
+    records not repeating definition_source in record-level or edge-level evidence; alongside 17 empty-snippet
+    [19 <12-char] CLASS definition_source records without an in-corpus verbatim quote after promoting
+    12 genomics CLASS records to open findings F-C11S4-DEF-SRC-001..012, 94 OBJECT_PROPERTY records in
+    metabolism [71 with definition_source, including 31 with <12-char predicate-stem snippets resolved
+    under traitmech-infra-0006], and 50 records omitting definition_source) cite a primary discovery/characterization
+    reference in definition_source that is not repeated in record-level evidence[].
+  disposition: 'Deferred (source-limited) under open GitHub issue #1985: requires full-text access to
+    paywalled primary characterization articles to extract verbatim definitional snippets.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  summary: 734 of 1,129 eligible TraitRecord files (735 total including excluded traitmech:000083) use
+    repository-minted traitmech:NNNNNN identifiers awaiting upstream METPO term incorporation across proposals/metpo_traitmech_v1..v611.
+  disposition: 'Deferred (upstream-blocked) under open GitHub issue #364: all 734 eligible traitmech:NNNNNN
+    records (735 total) are already packaged into verified ROBOT templates under proposals/metpo_traitmech_v1..v611
+    and submitted upstream in berkeleybop/metpo#535.'
+groups: []
+carry_forward_ids:
+- F-C11S4-DEF-SRC-001
+- F-C11S4-DEF-SRC-002
+- F-C11S4-DEF-SRC-003
+- F-C11S4-DEF-SRC-004
+- F-C11S4-DEF-SRC-005
+- F-C11S4-DEF-SRC-006
+- F-C11S4-DEF-SRC-007
+- F-C11S4-DEF-SRC-008
+- F-C11S4-DEF-SRC-009
+- F-C11S4-DEF-SRC-010
+- F-C11S4-DEF-SRC-011
+- F-C11S4-DEF-SRC-012
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
