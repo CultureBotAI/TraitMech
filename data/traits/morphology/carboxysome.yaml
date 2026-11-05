@@ -17,6 +17,11 @@ xrefs:
 - GO:0031470
 evidence:
 - reference: DOI:10.1038/nrmicro.2018.10
+  snippet: Bacterial microcompartments (BMCs) are self-assembling organelles that
+    consist of an enzymatic core that is encapsulated by a selectively permeable protein
+    shell. The potential to form BMCs is widespread and found across the kingdom Bacteria.
+    BMCs have crucial roles in carbon dioxide fixation in autotrophs and the catabolism
+    of organic substrates in heterotrophs.
   notes: Kerfeld et al. review bacterial microcompartments; the carboxysome is the
     archetypal protein-shelled CO2-fixing microcompartment.
 - reference: DOI:10.1038/nrmicro1913
@@ -272,4 +277,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q03511 (110 -> 111 on bmc_shell_proteins).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro.2018.10 (Kerfeld
+    et al. 2018, already present on causal_graphs[0].edges[5].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-002
+    in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

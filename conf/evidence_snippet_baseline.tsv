@@ -1669,7 +1669,6 @@ data/traits/morphology/capsule.yaml	capsule_polysaccharide_protection:wza_export
 data/traits/morphology/capsule.yaml	capsule_polysaccharide_protection:wzb_phosphatase_cycle->wzc_capsule_assembly[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41522-024-00497-6 has no snippet
 data/traits/morphology/capsule.yaml	capsule_polysaccharide_protection:wzx_flippase->lipid_linked_repeat_unit[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41522-024-00497-6 has no snippet
 data/traits/morphology/capsule.yaml	capsule_polysaccharide_protection:wzy_polymerase->capsular_polysaccharide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41522-024-00497-6 has no snippet
-data/traits/morphology/capsule.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.50.1.285 has no snippet
 data/traits/morphology/capsule.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.biochem.75.103004.142545 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:bmc_shell_proteins->carboxysome_shell[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carbon_dioxide->carboxysome_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
@@ -1681,7 +1680,6 @@ data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysom
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_shell->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/plphys/kiae438 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_trait->bacterial_microcompartment[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1913 has no snippet
 data/traits/morphology/carboxysome.yaml	carboxysome_co2_concentrating:carboxysome_trait->carbon_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
-data/traits/morphology/carboxysome.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
 data/traits/morphology/carboxysome.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1913 has no snippet
 data/traits/morphology/carotenoid_pigmentation.yaml	carotenoid_pigmentation_crt_pathway:crt_enzymes->carotenoid_biosynthesis[0]	ELLIPTICAL_SNIPPET	ERROR	non-contiguous quote: 'crt genes ... reactions they catalyze'
 data/traits/morphology/carotenoid_pigmentation.yaml	carotenoid_pigmentation_crt_pathway:cyclic_carotenes->conjugated_carotenoids[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/molecules29174235 has no snippet
@@ -1835,7 +1833,6 @@ data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth
 data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth:roda->lateral_pg_synthesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.mib.2021.01.011 has no snippet
 data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth:rodz->elongasome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0366-3 has no snippet
 data/traits/morphology/fusiform_shaped.yaml	fusiform_shaped_tapered_polar_growth:rodz->mreb_localization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1186/s12964-025-02373-y has no snippet
-data/traits/morphology/gas_vesicle.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2834 has no snippet
 data/traits/morphology/gas_vesicle.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/gas_vesicle.yaml	gas_vesicle_buoyancy:buoyancy->water_column_positioning[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/gas_vesicle.yaml	gas_vesicle_buoyancy:gas_vesicle_shell->ultrasound_scattering[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1021/acssynbio.4c00283 has no snippet
@@ -1886,7 +1883,6 @@ data/traits/morphology/helical_shaped.yaml	helical_shaped_pg_relaxation:pg_dl_ca
 data/traits/morphology/helical_shaped.yaml	helical_shaped_pg_relaxation:pg_modifying_enzyme_loss->rod_shaped_morphology[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1002602 has no snippet
 data/traits/morphology/helical_shaped.yaml	helical_shaped_pg_relaxation:pg_stem_peptide_trimming->helical_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1002602 has no snippet
 data/traits/morphology/helical_shaped.yaml	helical_shaped_pg_relaxation:rod_shaped_morphology->helical_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.ppat.1002602 has no snippet
-data/traits/morphology/heterocyst.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/cshperspect.a000315 has no snippet
 data/traits/morphology/heterocyst.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuw029 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:cell_differentiation->heterocyst_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/femsre/fuw029 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:glycolipid_layer->molecular_oxygen[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
@@ -1897,7 +1893,6 @@ data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:he
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:microoxic_interior->nitrogen_fixation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/cshperspect.a000315 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:pats_peptide->het_diff_process[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation:polysaccharide_layer->glycolipid_layer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2023.10.04.560878 has no snippet
-data/traits/morphology/intracellular_inclusion.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/intracellular_inclusion.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
 data/traits/morphology/intracellular_inclusion.yaml	inclusion_compartmentalization:bacterial_microcompartment->bmc_metabolic_cargo[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1042/bst20230229 has no snippet
 data/traits/morphology/intracellular_inclusion.yaml	inclusion_compartmentalization:bacterial_microcompartment->inclusion_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2018.10 has no snippet
@@ -1923,7 +1918,6 @@ data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft:flhg_protein-
 data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft:flhg_protein->flhf_protein[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-50274-4 has no snippet
 data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft:flig_protein->flif_protein[0]	MISSING_SNIPPET	WARN	reference=DOI:10.7554/eLife.93004.3 has no snippet
 data/traits/morphology/lophotrichous.yaml	lophotrichous_polar_tuft:lophotrichous_trait->polar_tuft_placement[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biom9070279 has no snippet
-data/traits/morphology/magnetosome.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro.2016.99 has no snippet
 data/traits/morphology/magnetosome.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro842 has no snippet
 data/traits/morphology/magnetosome.yaml	magnetosome_magnetotaxis:biomineralization->magnetic_mineral_crystal[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/mmi.15330 has no snippet
 data/traits/morphology/magnetosome.yaml	magnetosome_magnetotaxis:low_sulfide_environment->magnetite_magnetosome[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/mmi.15330 has no snippet
@@ -1965,7 +1959,6 @@ data/traits/morphology/motility.yaml	motility_locomotion_machinery:pilb_extensio
 data/traits/morphology/motility.yaml	motility_locomotion_machinery:pilt_retraction_atpase->type_iv_pilus[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00359-24 has no snippet
 data/traits/morphology/motility.yaml	motility_locomotion_machinery:t4p_retraction->twitching_motility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00442-23 has no snippet
 data/traits/morphology/motility.yaml	motility_locomotion_machinery:type_iv_pilus->twitching_motility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/msphere.00390-24 has no snippet
-data/traits/morphology/mycelial_growth.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1968 has no snippet
 data/traits/morphology/mycelial_growth.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3178 has no snippet
 data/traits/morphology/mycelial_growth.yaml	mycelial_branching_hyphal_growth:cglA_ligase->ftsz_ring_positioning[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mbio.01492-24 has no snippet
 data/traits/morphology/mycelial_growth.yaml	mycelial_branching_hyphal_growth:cglA_ligase->hyphal_tip_growth_zones[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mbio.01492-24 has no snippet
@@ -2049,7 +2042,6 @@ data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_
 data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_control:loss_of_cell_wall->pleomorphic_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/bioengineering11010081 has no snippet
 data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_control:oxidative_stress_ros->lform_wall_deficient_state[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.tim.2019.07.008 has no snippet
 data/traits/morphology/pleomorphic_shaped.yaml	pleomorphic_shaped_relaxed_shape_control:pg_synthesis_inhibition->lform_wall_deficient_state[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1098/rstb.2015.0494 has no snippet
-data/traits/morphology/polyhydroxyalkanoate_granule.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.54.4.450-472.1990 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:carbon_starvation->phb_degradation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:nutrient_limitation_high_cn->pha_accumulation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/molecules29102293 has no snippet
@@ -2060,7 +2052,6 @@ data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_ener
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:phasin_phap->phb_granule_size_number[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:phasin_phap->polyhydroxyalkanoate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/polym15143027 has no snippet
 data/traits/morphology/polyhydroxyalkanoate_granule.yaml	pha_granule_carbon_energy_storage:polyhydroxyalkanoate->pha_granule_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mr.54.4.450-472.1990 has no snippet
-data/traits/morphology/polyphosphate_granule.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.biochem.77.083007.093039 has no snippet
 data/traits/morphology/polyphosphate_granule.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:inorganic_polyphosphate->divalent_cations[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/biom14080937 has no snippet
 data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:inorganic_polyphosphate->polyp_granule_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.biochem.77.083007.093039 has no snippet
@@ -2068,7 +2059,6 @@ data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:
 data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:polyp_granule_trait->phosphate_energy_reserve[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:ppk->inorganic_polyphosphate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pbio.3002558 has no snippet
 data/traits/morphology/polyphosphate_granule.yaml	polyphosphate_granule_storage:ppx->inorganic_polyphosphate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pbio.3002558 has no snippet
-data/traits/morphology/prosthecate.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/j.1365-2958.2007.05633.x has no snippet
 data/traits/morphology/prosthecate.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00040-09 has no snippet
 data/traits/morphology/prosthecate.yaml	prosthecate_stalk_nutrient_uptake:bactofilins->cell_wall_growth_zone[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pgen.1010788 has no snippet
 data/traits/morphology/prosthecate.yaml	prosthecate_stalk_nutrient_uptake:mreb->stalk_extension[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00384-22 has no snippet
@@ -2096,7 +2086,6 @@ data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan:pbp2_struct
 data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan:pbp2_structural_opening->rodA_polymerization[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-023-39037-9 has no snippet
 data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan:rodA_pbp2_complex->rod_shaped_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-023-39037-9 has no snippet
 data/traits/morphology/rod_shaped.yaml	rod_shaped_mreB_peptidoglycan:rodA_polymerization->elongasome_processivity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-49785-x has no snippet
-data/traits/morphology/s_layer.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3213 has no snippet
 data/traits/morphology/s_layer.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-025-01258-8 has no snippet
 data/traits/morphology/s_layer.yaml	s_layer_2d_protein_array:s_layer_assembly->s_layer_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-025-01258-8 has no snippet
 data/traits/morphology/s_layer.yaml	s_layer_2d_protein_array:s_layer_subunits->s_layer_2d_lattice[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.2401686121 has no snippet
@@ -2187,7 +2176,6 @@ data/traits/morphology/streptococcus_arrangement.yaml	streptococcus_parallel_div
 data/traits/morphology/streptococcus_arrangement.yaml	streptococcus_parallel_division_chain:pcsb_autolysin->pg_remodeling[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mSphere.00119-21 has no snippet
 data/traits/morphology/streptococcus_arrangement.yaml	streptococcus_parallel_division_chain:pg_hydrolases->pg_remodeling[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.737396 has no snippet
 data/traits/morphology/streptococcus_arrangement.yaml	streptococcus_parallel_division_chain:pg_remodeling->daughter_cell_separation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/mSphere.00119-21 has no snippet
-data/traits/morphology/sulfur_globule.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/S0065-2911(08)00002-7 has no snippet
 data/traits/morphology/sulfur_globule.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_intermediate:elemental_sulfur->sulfur_globule_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-020-0413-0 has no snippet
 data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_intermediate:oxidative_sulfur_metabolism->elemental_sulfur[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/S0065-2911(08)00002-7 has no snippet
@@ -2195,7 +2183,6 @@ data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_inter
 data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_intermediate:polysulfide->sulfur_globule_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01941-21 has no snippet
 data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_intermediate:sqr->polysulfide[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01941-21 has no snippet
 data/traits/morphology/sulfur_globule.yaml	sulfur_globule_sulfur_oxidation_intermediate:sqr->sulfane_sulfur[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/ijms252010962 has no snippet
-data/traits/morphology/swarming_motility.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2405 has no snippet
 data/traits/morphology/swarming_motility.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.57.030502.091014 has no snippet
 data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfactant:bacterial_flagellum->swarm_expansion[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1063/5.0128140 has no snippet
 data/traits/morphology/swarming_motility.yaml	swarming_hyperflagellation_surfactant:bacterial_flagellum->swarming_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro2405 has no snippet
@@ -2223,7 +2210,6 @@ data/traits/morphology/triangular_shaped.yaml	triangular_shaped_planar_polygonal
 data/traits/morphology/triangular_shaped.yaml	triangular_shaped_planar_polygonal_growth:polygonal_geometry->peptidoglycan_layer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.766527 has no snippet
 data/traits/morphology/triangular_shaped.yaml	triangular_shaped_planar_polygonal_growth:rigid_slayer_sheets->polygonal_geometry[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.766527 has no snippet
 data/traits/morphology/triangular_shaped.yaml	triangular_shaped_planar_polygonal_growth:slayer_constraints->polygonal_geometry[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2021.766527 has no snippet
-data/traits/morphology/twitching_motility.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.56.012302.160938 has no snippet
 data/traits/morphology/twitching_motility.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.micro.57.030502.091014 has no snippet
 data/traits/morphology/twitching_motility.yaml	twitching_type_iv_pilus_retraction:pilb_extension_atpase->pilus_extension[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/jb.00359-24 has no snippet
 data/traits/morphology/twitching_motility.yaml	twitching_type_iv_pilus_retraction:pilmnop_alignment_complex->t4p_machine[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-53638-y has no snippet

@@ -23,6 +23,10 @@ xrefs:
 - GO:0070088
 evidence:
 - reference: DOI:10.1128/mr.54.4.450-472.1990
+  snippet: Polyhydroxyalkanoates (PHAs), of which polyhydroxybutyrate (PHB) is the
+    most abundant, are bacterial carbon and energy reserve materials of widespread
+    occurrence. They are composed of 3-hydroxyacid monomer units and exist as a small
+    number of cytoplasmic granules per cell.
   notes: Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as carbon/energy
     reserves stored as cytoplasmic granules.
 - reference: DOI:10.1038/s41579-020-0413-0
@@ -318,4 +322,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P23608 (137 -> 138 on pha_synthase_phac).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/mr.54.4.450-472.1990
+    (Anderson & Dawes 1990, already present on causal_graphs[0].edges[8].evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 remediation
+    of F-C10S4-DEF-SRC-008 in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

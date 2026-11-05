@@ -15,6 +15,12 @@ synonyms:
   source: DOI:10.1101/cshperspect.a000315
 evidence:
 - reference: DOI:10.1101/cshperspect.a000315
+  snippet: Many multicellular cyanobacteria produce specialized nitrogen-fixing heterocysts.
+    During diazotrophic growth of the model organism Anabaena (Nostoc) sp. strain
+    PCC 7120, a regulated developmental pattern of single heterocysts separated by
+    about 10 to 20 photosynthetic vegetative cells is maintained along filaments.
+    Heterocyst structure and metabolic activity function together to accommodate the
+    oxygen-sensitive process of nitrogen fixation.
   notes: Kumar, Mella-Herrera & Golden describe heterocysts as differentiated cells
     whose structure and metabolism accommodate oxygen-sensitive nitrogen fixation.
 - reference: DOI:10.1093/femsre/fuw029
@@ -316,4 +322,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P27709 (120 -> 121 on hetr_regulator).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1101/cshperspect.a000315 (Kumar,
+    Mella-Herrera & Golden 2010, already present on causal_graphs[0].edges[9].evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 remediation
+    of F-C10S4-DEF-SRC-004 in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

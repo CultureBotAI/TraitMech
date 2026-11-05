@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–9 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–10 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -24,9 +24,12 @@ Cycle 7 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 12 actionable open findings from the
 Cycle 8 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000008/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 9 actionable open findings from the
+tracked in GitHub issue #2002), the 9 actionable open findings from the
 Cycle 9 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 14 actionable open findings from the
+Cycle 10 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
@@ -37,6 +40,7 @@ tracked in GitHub issue #2002):
 - `F-C7S4-DEF-SRC-001`..`015` (Cycle 7 #2002, 15 records)
 - `F-C8S4-DEF-SRC-001`..`012` (Cycle 8 #2002, 12 records)
 - `F-C9S4-DEF-SRC-001`..`009` (Cycle 9 #2002, 9 records)
+- `F-C10S4-DEF-SRC-001`..`014` (Cycle 10 #2002, 14 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -77,6 +81,7 @@ CYCLE6_TIMESTAMP = "2026-10-26T08:15:00Z"
 CYCLE7_TIMESTAMP = "2026-10-30T22:10:00Z"
 CYCLE8_TIMESTAMP = "2026-10-31T10:45:00Z"
 CYCLE9_TIMESTAMP = "2026-11-04T11:10:00Z"
+CYCLE10_TIMESTAMP = "2026-11-04T23:20:00Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -2782,6 +2787,414 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "G-C9S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    # Cycle 10 Stage 5 remediation (#2002): 14 open findings from Cycle 10 Stage 4
+    "data/traits/morphology/capsule.yaml": {
+        "identifier": "traitmech:000063",
+        "finding_id": "F-C10S4-DEF-SRC-001",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.micro.50.1.285",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.micro.50.1.285",
+            "snippet": (
+                "They can form an amorphous layer of extracellular polysaccharide "
+                "(EPS) surrounding the cell that may be further organized into a "
+                "distinct structure termed a capsule."
+            ),
+            "notes": (
+                'Roberts, "The biochemistry and genetics of capsular '
+                'polysaccharide production in bacteria", treats the capsule as an '
+                "organized external polysaccharide layer."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1146/annurev.micro.50.1.285 "
+            "(Roberts 1996, already present on causal_graphs[0].edges[11].evidence[0]) "
+            "to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 "
+            "remediation of F-C10S4-DEF-SRC-001 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/carboxysome.yaml": {
+        "identifier": "traitmech:000072",
+        "finding_id": "F-C10S4-DEF-SRC-002",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro.2018.10",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro.2018.10",
+            "snippet": (
+                "Bacterial microcompartments (BMCs) are self-assembling organelles "
+                "that consist of an enzymatic core that is encapsulated by a "
+                "selectively permeable protein shell. The potential to form BMCs is "
+                "widespread and found across the kingdom Bacteria. BMCs have crucial "
+                "roles in carbon dioxide fixation in autotrophs and the catabolism "
+                "of organic substrates in heterotrophs."
+            ),
+            "notes": (
+                "Kerfeld et al. review bacterial microcompartments; the carboxysome "
+                "is the archetypal protein-shelled CO2-fixing microcompartment."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro.2018.10 "
+            "(Kerfeld et al. 2018, already present on "
+            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-002 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/gas_vesicle.yaml": {
+        "identifier": "traitmech:000070",
+        "finding_id": "F-C10S4-DEF-SRC-003",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro2834",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro2834",
+            "snippet": (
+                "A range of bacteria and archaea produce intracellular gas-filled "
+                "proteinaceous structures that function as flotation devices in "
+                "order to maintain a suitable depth in the aqueous environment."
+            ),
+            "notes": (
+                "Pfeifer describes gas vesicles as intracellular gas-filled "
+                "proteinaceous flotation structures in bacteria and archaea."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro2834 "
+            "(Pfeifer 2012, already present on "
+            "causal_graphs[0].edges[5].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-003 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/heterocyst.yaml": {
+        "identifier": "traitmech:000073",
+        "finding_id": "F-C10S4-DEF-SRC-004",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1101/cshperspect.a000315",
+        "evidence_entry": {
+            "reference": "DOI:10.1101/cshperspect.a000315",
+            "snippet": (
+                "Many multicellular cyanobacteria produce specialized "
+                "nitrogen-fixing heterocysts. During diazotrophic growth of the "
+                "model organism Anabaena (Nostoc) sp. strain PCC 7120, a regulated "
+                "developmental pattern of single heterocysts separated by about 10 "
+                "to 20 photosynthetic vegetative cells is maintained along "
+                "filaments. Heterocyst structure and metabolic activity function "
+                "together to accommodate the oxygen-sensitive process of nitrogen "
+                "fixation."
+            ),
+            "notes": (
+                "Kumar, Mella-Herrera & Golden describe heterocysts as "
+                "differentiated cells whose structure and metabolism accommodate "
+                "oxygen-sensitive nitrogen fixation."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1101/cshperspect.a000315 "
+            "(Kumar, Mella-Herrera & Golden 2010, already present on "
+            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-004 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/intracellular_inclusion.yaml": {
+        "identifier": "traitmech:000066",
+        "finding_id": "F-C10S4-DEF-SRC-005",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/s41579-020-0413-0",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/s41579-020-0413-0",
+            "snippet": (
+                "Advances in imaging technologies have revealed that many bacteria "
+                "possess organelles with a proteomically defined lumen and a "
+                "macromolecular boundary. Some are bound by a lipid bilayer (such "
+                "as thylakoids, magnetosomes and anammoxosomes), whereas others are "
+                "defined by a lipid monolayer (such as lipid bodies), a "
+                "proteinaceous coat (such as carboxysomes) or have a phase-defined "
+                "boundary (such as nucleolus-like compartments)."
+            ),
+            "notes": (
+                'Greening & Lithgow, "Formation and function of bacterial '
+                'organelles", establish that bacteria contain diverse '
+                "inclusions/organelles (storage granules, gas vesicles, "
+                "microcompartments, magnetosomes); parent of the inclusion "
+                "sub-variants."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/s41579-020-0413-0 "
+            "(Greening & Lithgow 2020, already present on "
+            "causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-005 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/magnetosome.yaml": {
+        "identifier": "traitmech:000071",
+        "finding_id": "F-C10S4-DEF-SRC-006",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro.2016.99",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro.2016.99",
+            "snippet": (
+                "Magnetotactic bacteria derive their magnetic orientation from "
+                "magnetosomes, which are unique organelles that contain "
+                "nanometre-sized crystals of magnetic iron minerals."
+            ),
+            "notes": (
+                "Uebe & Sch\u00fcler review magnetosome biogenesis as the formation "
+                "of membrane-bounded magnetic-mineral organelles in magnetotactic "
+                "bacteria."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.99 "
+            "(Uebe & Sch\u00fcler 2016, already present on "
+            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-006 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/mycelial_growth.yaml": {
+        "identifier": "traitmech:000074",
+        "finding_id": "F-C10S4-DEF-SRC-007",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro1968",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro1968",
+            "snippet": (
+                "Not only are the bacterial cytoskeleton and the machineries for "
+                "cell-wall assembly, cell division and chromosome segregation "
+                "reorganized during sporulation, but the developmental programme of "
+                "these fascinating organisms also has many unusual elements, "
+                "including the formation of a sporulating aerial mycelium and the "
+                "production of a surfactant peptide and a hydrophobic sheath that "
+                "allow cells to escape from the surface tension of the growth "
+                "medium."
+            ),
+            "notes": (
+                "Fl\u00e4rdh & Buttner describe Streptomyces growth as a branching "
+                "hyphal mycelium with subsequent morphological differentiation."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro1968 "
+            "(Fl\u00e4rdh & Buttner 2009, already present on "
+            "causal_graphs[0].edges[9].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-007 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/polyhydroxyalkanoate_granule.yaml": {
+        "identifier": "traitmech:000067",
+        "finding_id": "F-C10S4-DEF-SRC-008",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1128/mr.54.4.450-472.1990",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/mr.54.4.450-472.1990",
+            "snippet": (
+                "Polyhydroxyalkanoates (PHAs), of which polyhydroxybutyrate (PHB) "
+                "is the most abundant, are bacterial carbon and energy reserve "
+                "materials of widespread occurrence. They are composed of "
+                "3-hydroxyacid monomer units and exist as a small number of "
+                "cytoplasmic granules per cell."
+            ),
+            "notes": (
+                "Anderson & Dawes describe polyhydroxyalkanoates (chiefly PHB) as "
+                "carbon/energy reserves stored as cytoplasmic granules."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/mr.54.4.450-472.1990 "
+            "(Anderson & Dawes 1990, already present on "
+            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-008 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/polyphosphate_granule.yaml": {
+        "identifier": "traitmech:000068",
+        "finding_id": "F-C10S4-DEF-SRC-009",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.biochem.77.083007.093039",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.biochem.77.083007.093039",
+            "snippet": (
+                "Inorganic polyphosphate (Poly P) is a polymer of tens to hundreds "
+                'of phosphate residues linked by "high-energy" phosphoanhydride '
+                "bonds as in ATP. Found in abundance in all cells in nature, it is "
+                "unique in its likely role in the origin and survival of species."
+            ),
+            "notes": (
+                "Rao, G\u00f3mez-Garc\u00eda & Kornberg review inorganic polyphosphate, "
+                "accumulated as granules, as a phosphate/energy reserve essential "
+                "for growth and survival."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1146/annurev.biochem.77.083007.093039 (Rao, G\u00f3mez-Garc\u00eda & "
+            "Kornberg 2009, already present on "
+            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-009 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/prosthecate.yaml": {
+        "identifier": "traitmech:000065",
+        "finding_id": "F-C10S4-DEF-SRC-010",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1111/j.1365-2958.2007.05633.x",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/j.1365-2958.2007.05633.x",
+            "snippet": (
+                "One remarkable example of bacterial morphogenesis is the "
+                "elaboration of long, tubular extensions of the cell envelope of "
+                "certain aquatic bacteria. These appendages (also called prosthecae "
+                "or stalks) possess features that make them particularly amenable "
+                "models for experiments designed to uncover general principles of "
+                "cell morphogenesis and of cell shape function."
+            ),
+            "notes": (
+                "Wagner & Brun describe the Caulobacter stalk (prostheca) as a "
+                "cell-envelope extension and a specialized form of cell elongation "
+                "aiding nutrient uptake."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1111/j.1365-2958.2007.05633.x (Wagner & Brun 2007, already "
+            "present on causal_graphs[0].edges[12].evidence[0]) to record-level "
+            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
+            "of F-C10S4-DEF-SRC-010 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/s_layer.yaml": {
+        "identifier": "traitmech:000064",
+        "finding_id": "F-C10S4-DEF-SRC-011",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro3213",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro3213",
+            "snippet": (
+                "The outer surface of many archaea and bacteria is coated with a "
+                "proteinaceous surface layer (known as an S-layer), which is formed "
+                "by the self-assembly of monomeric proteins into a regularly "
+                "spaced, two-dimensional array."
+            ),
+            "notes": (
+                "Fagan & Fairweather describe the S-layer as a self-assembled, "
+                "regularly spaced two-dimensional protein array coating the cell "
+                "surface."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro3213 "
+            "(Fagan & Fairweather 2014, already present on "
+            "causal_graphs[0].edges[10].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-011 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/sulfur_globule.yaml": {
+        "identifier": "traitmech:000069",
+        "finding_id": "F-C10S4-DEF-SRC-012",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1016/S0065-2911(08)00002-7",
+        "evidence_entry": {
+            "reference": "DOI:10.1016/S0065-2911(08)00002-7",
+            "snippet": (
+                "Phototrophic sulfur bacteria are characterized by oxidizing "
+                "various inorganic sulfur compounds for use as electron donors in "
+                "carbon dioxide fixation during anoxygenic photosynthetic growth. "
+                "These bacteria are divided into the purple sulfur bacteria (PSB) "
+                "and the green sulfur bacteria (GSB). They utilize various "
+                "combinations of sulfide, elemental sulfur, and thiosulfate and "
+                "sometimes also ferrous iron and hydrogen as electron donors."
+            ),
+            "notes": (
+                "Frigaard & Dahl describe sulfur globules as sulfur-storage "
+                "inclusions formed during oxidative sulfur metabolism in "
+                "phototrophic sulfur bacteria."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1016/S0065-2911(08)00002-7 (Frigaard & Dahl 2008, already "
+            "present on causal_graphs[0].edges[10].evidence[0]) to record-level "
+            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
+            "of F-C10S4-DEF-SRC-012 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/swarming_motility.yaml": {
+        "identifier": "traitmech:000062",
+        "finding_id": "F-C10S4-DEF-SRC-013",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro2405",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro2405",
+            "snippet": (
+                "Here, I review the requirements that define swarming motility in "
+                "diverse bacterial model systems, including an increase in the "
+                "number of flagella per cell, the secretion of a surfactant to "
+                "reduce surface tension and allow spreading, and movement in "
+                "multicellular groups rather than as individuals."
+            ),
+            "notes": (
+                'Kearns, "A field guide to bacterial swarming motility", defines '
+                "swarming via increased flagella per cell, surfactant secretion, "
+                "and movement in multicellular groups."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro2405 "
+            "(Kearns 2010, already present on "
+            "causal_graphs[0].edges[8].evidence[0]) to record-level evidence[0] to "
+            "match definition_source (Cycle 10 Stage 5 remediation of "
+            "F-C10S4-DEF-SRC-013 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/morphology/twitching_motility.yaml": {
+        "identifier": "traitmech:000061",
+        "finding_id": "F-C10S4-DEF-SRC-014",
+        "timestamp": CYCLE10_TIMESTAMP,
+        "definition_source": "DOI:10.1146/annurev.micro.56.012302.160938",
+        "evidence_entry": {
+            "reference": "DOI:10.1146/annurev.micro.56.012302.160938",
+            "snippet": (
+                "Twitching motility is a flagella-independent form of bacterial "
+                "translocation over moist surfaces. It occurs by the extension, "
+                "tethering, and then retraction of polar type IV pili, which "
+                "operate in a manner similar to a grappling hook."
+            ),
+            "notes": (
+                'Mattick, "Type IV pili and twitching motility", describes '
+                "twitching as type-IV-pilus-driven surface translocation operating "
+                "like a grappling hook."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1146/annurev.micro.56.012302.160938 (Mattick 2002, already "
+            "present on causal_graphs[0].edges[8].evidence[0]) to record-level "
+            "evidence[0] to match definition_source (Cycle 10 Stage 5 remediation "
+            "of F-C10S4-DEF-SRC-014 in group "
+            "G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -2860,7 +3273,7 @@ def process_all(
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 101 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 115 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0

@@ -15,6 +15,12 @@ synonyms:
   source: DOI:10.1016/S0065-2911(08)00002-7
 evidence:
 - reference: DOI:10.1016/S0065-2911(08)00002-7
+  snippet: Phototrophic sulfur bacteria are characterized by oxidizing various inorganic
+    sulfur compounds for use as electron donors in carbon dioxide fixation during
+    anoxygenic photosynthetic growth. These bacteria are divided into the purple sulfur
+    bacteria (PSB) and the green sulfur bacteria (GSB). They utilize various combinations
+    of sulfide, elemental sulfur, and thiosulfate and sometimes also ferrous iron
+    and hydrogen as electron donors.
   notes: Frigaard & Dahl describe sulfur globules as sulfur-storage inclusions formed
     during oxidative sulfur metabolism in phototrophic sulfur bacteria.
 - reference: DOI:10.1038/s41579-020-0413-0
@@ -231,4 +237,13 @@ curation_history:
     the tranche: set graph scope sulfur_globule_sulfur_oxidation_intermediate=NONMECHANISTIC
     with scope_notes; marked 1 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (persulfide_dioxygenase).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1016/S0065-2911(08)00002-7
+    (Frigaard & Dahl 2008, already present on causal_graphs[0].edges[10].evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 remediation
+    of F-C10S4-DEF-SRC-012 in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true

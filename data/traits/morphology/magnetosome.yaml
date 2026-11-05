@@ -13,6 +13,9 @@ xrefs:
 - GO:0110143
 evidence:
 - reference: DOI:10.1038/nrmicro.2016.99
+  snippet: Magnetotactic bacteria derive their magnetic orientation from magnetosomes,
+    which are unique organelles that contain nanometre-sized crystals of magnetic
+    iron minerals.
   notes: Uebe & Schüler review magnetosome biogenesis as the formation of membrane-bounded
     magnetic-mineral organelles in magnetotactic bacteria.
 - reference: DOI:10.1038/nrmicro842
@@ -341,4 +344,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:Q6NE59 (86 -> 87 on mamk_protein).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro.2016.99 (Uebe
+    & Schüler 2016, already present on causal_graphs[0].edges[9].evidence[0]) to record-level
+    evidence[0] to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-006
+    in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

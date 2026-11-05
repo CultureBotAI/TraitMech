@@ -18,6 +18,10 @@ synonyms:
   source: DOI:10.1146/annurev.biochem.77.083007.093039
 evidence:
 - reference: DOI:10.1146/annurev.biochem.77.083007.093039
+  snippet: Inorganic polyphosphate (Poly P) is a polymer of tens to hundreds of phosphate
+    residues linked by "high-energy" phosphoanhydride bonds as in ATP. Found in abundance
+    in all cells in nature, it is unique in its likely role in the origin and survival
+    of species.
   notes: Rao, Gómez-García & Kornberg review inorganic polyphosphate, accumulated
     as granules, as a phosphate/energy reserve essential for growth and survival.
 - reference: DOI:10.1038/s41579-020-0413-0
@@ -210,4 +214,13 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:F5XF46 (69 -> 70 on ppk).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1146/annurev.biochem.77.083007.093039
+    (Rao, Gómez-García & Kornberg 2009, already present on causal_graphs[0].edges[8].evidence[0])
+    to record-level evidence[0] to match definition_source (Cycle 10 Stage 5 remediation
+    of F-C10S4-DEF-SRC-009 in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS,
+    issue #2002).'
   llm_assisted: true
