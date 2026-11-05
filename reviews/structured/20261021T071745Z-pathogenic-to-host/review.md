@@ -1,0 +1,1335 @@
+# Documentary and ontology review of pathogenic to host (METPO:1004000)
+
+- Review: 20261021T071745Z-pathogenic-to-host
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T07:13:55Z
+- Finished UTC: 2026-10-21T07:17:45Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The active METPO class, broader phenotype parent, two GO identifiers and two generic species examples resolve. Two major findings concern foundational citation mischaracterization and seven external relation mismatches plus a property/process distinction. Three minor findings concern imported field-path aliases, the provisional manifestation relation and locally undocumented human acceptance. All fourteen nodes and twelve edges were inspected for documentary scope and ontology meaning. Detailed virulence, immune-evasion and antimicrobial-response mechanisms remain unverified.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Third target in batch003, following the saved parasitism review in lexicographic path order; one entire previously uncovered TraitRecord.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1004000 | data/traits/ecology/pathogenic_to_host.yaml | maintained | pathogenic to host |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1004000 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1004000 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1004000 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1004000 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1004000 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1004000 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1004000 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | METPO:1004000 | The selected record validates. |
+| Focused strict validation | passed | True | METPO:1004000 | One file scanned; zero strict errors. |
+| Initial focused snippet check | failed | False | METPO:1004000 | Network lookup failed for both references; all six occurrences unresolved. Superseded by the successful network-enabled command. |
+| Focused snippet check with network access | passed | True | METPO:1004000 | Six occurrences over two references: four NOT_IN_ABSTRACT and two UNRESOLVED. Exit0 indicates completion, not quotation support; all six remain inconclusive. |
+| Expression-module applicability | not_applicable | False | METPO:1004000 | Generic aggregates and species examples do not assert a specific strain/locus expression result. No expression module is used to establish this host-pathogenicity class or detailed mechanisms. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: active identity, label, polarity and kind
+
+identity: supported. Targets: METPO:1004000.
+
+The active METPO class and local record denote host pathogenicity. The self-node provides a recognizable disease-capability gloss; no host exclusivity is implied.
+
+### Native checklist: definition and source characterization
+
+evidence: concern. Targets: METPO:1004000.
+
+The ontology supports the concept, but the literature source is a narrow Ag43 review and does not establish the record’s broad characterization from inspected text. The definition also relies on the unexplained word pathogen; its self-node is clearer.
+
+### Native checklist: strictly broader parent
+
+consistency: supported. Targets: METPO:1004000.
+
+Phenotype is the active broader parent and the maintained context record agrees.
+
+### Native checklist: source-field strings as related synonyms
+
+provenance: concern. Targets: METPO:1004000.
+
+Both annotations are faithfully imported with their upstream type/source. Their field-path-like meaning should remain distinguishable from biological names; missing provenance or import corruption is not alleged.
+
+### Native checklist: ecological class and NONMECHANISTIC scope
+
+representation: supported. Targets: METPO:1004000.
+
+ECOLOGY and CLASS are coherent. Generic reviewed aggregates do not require token molecular examples or a single universal mechanism.
+
+### Native checklist: two exact taxa and narrow source claims
+
+evidence: supported. Targets: METPO:1004000.
+
+Both taxon identities and generic species examples are supported. Neither example is used to validate every contextual graph branch.
+
+### Native checklist: ten references and six snippet occurrences
+
+evidence: concern. Targets: METPO:1004000.
+
+All ten identities resolve. Foundational publication characterization is wrong or too broad. Six short snippet occurrences remain inconclusive after the completed native check. Other graph references are verified for identity/context only, including the valid unindexed article and chapter.
+
+### Native checklist: all fourteen nodes and twelve edges
+
+graph: concern. Targets: METPO:1004000.
+
+All nodes/edges were inspected for conceptual type and source framing. Seven external relation uses conflict with endpoint meanings; node10 describes a property despite process typing. The provisional manifestation relation also has a narrower subject meaning. Detailed biological routes remain unverified.
+
+Zero-based ledger: node0 is the trait; nodes1/2 are reviewed generic material aggregates; nodes3/4/6/7/8/11/13 denote processes, with two matching GO process IDs. Node5 denotes chemical substances. Nodes9/12 denote physical structures despite their localization enum. Node10 explicitly describes reduced susceptibility, a property. Edge0 has compatible actor/process types but problematic citation scope. Edge1 uses an allowed local ungrounded relation and cites the wrong publication type. Edges2/6/8/10 use process subjects under enables. Edge3 uses the local microorganism-state manifestation relation for host damage. Edges4/5 use substance subjects under process-to-process positive regulation. Edges7/9 have material-compatible structure subjects and are not counted as formal domain errors. Edge11 uses a process subject and protein object where contributes-to inherits continuant-to-process semantics. Formal compatibility does not establish mechanistic support; no alternative biological route, target or procedure is supplied.
+
+### Native checklist: discussion and datasets
+
+completeness: supported. Targets: METPO:1004000.
+
+No discussion placeholder or dataset assertion requires resolution. These optional slots are not required for the ecological classifier.
+
+### Native checklist: history and REVIEWED basis
+
+provenance: concern. Targets: METPO:1004000.
+
+Nine assisted events and one script event document provenance, but no explicit human scientific acceptance is identified in the bounded local inspection.
+
+## Findings
+
+### foundational-citation-characterization: Foundational citations are mischaracterized
+
+major / open / confirmed; issue key: pathogenic-to-host-foundational-citation-characterization.
+
+The purported secretion-systems review resolves to In this issue, a one-page editorial. The definition DOI resolves to a specific Ag43 E. coli review, not the broad source described in the evidence notes. The inspected publication identities and text do not establish the attached general assertions. This does not deny the class identity or claim that inaccessible full text was exhaustively searched.
+
+### external-endpoints-and-property-type: Seven relation uses and one node type conflict with their stated meanings
+
+major / open / confirmed; issue key: pathogenic-to-host-external-endpoints-and-property-type.
+
+Edges2/6/8/10 use processes as enables subjects. Edges4/5 use chemical substances with RO process-to-process positive regulation. Edge11 uses process-to-protein endpoints with contributes-to, which inherits continuant-to-process constraints and executor semantics. Node10 describes a susceptibility property while typed BIOLOGICAL_PROCESS. Physical structures on edges7/9 are not automatically invalid material subjects. This is semantic assessment, not a reported YAML or reasoner failure.
+
+### imported-field-path-synonyms: Imported source-field strings are presented as related names
+
+minor / open / confirmed; issue key: pathogenic-to-host-imported-field-path-synonyms.
+
+General.keywords and Safety information.risk assessment are upstream related-synonym annotations faithfully copied by the seeder. They describe metadata fields rather than biological alternative names. The local representation should distinguish source lookup metadata from semantic synonyms, with any policy change reviewed at the upstream/import owner. This is not a missing-source or corrupted-import finding.
+
+### provisional-manifestation-scope: A local manifestation relation is used outside its subject meaning
+
+minor / open / confirmed; issue key: pathogenic-to-host-provisional-manifestation-scope.
+
+The v2 proposal describes a physiological or molecular state of a microorganism manifesting its phenotype. Edge3 instead uses damage in the host. Its wildcard mapping allows the shape but does not establish this semantic extension. METPO:2007400 remains a proposal in the captured ontology context.
+
+### reviewed-signoff-not-documented: Inspected REVIEWED provenance lacks a human-acceptance link
+
+minor / open / confirmed; issue key: pathogenic-to-host-reviewed-signoff-not-documented.
+
+The scripted import and nine AI-assisted events do not identify human scientific acceptance in the inspected target-specific local provenance. Private or remote approval remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-citations
+
+Reconcile publication identity, source characterization and evidence placement during separately authorized curation.
+
+- Confirm the exact cited publication and the narrow claim it supports.
+- Keep snippet-access limitations explicit; a generic two-word phrase does not substantiate a detailed assertion.
+- Limit this follow-up to documentary fidelity and the ecological definition; no mechanism reconstruction is proposed.
+
+### reconcile-meaning
+
+Reconcile existing node concepts with selected ontology and proposal meanings.
+
+- Distinguish process, property, substance, physical actor and host-versus-microorganism state.
+- Do not invent biological intermediates or retype entities solely to fit preferred predicate IDs.
+- Any shared mapping change requires separate scope review, guarded writes, appended history and applicable strict/graph/qc checks.
+
+### clarify-import-metadata
+
+Review how upstream source-field annotations are represented by the maintained importer.
+
+- Preserve the fact that the import matches upstream annotations and distinguish lookup metadata from biological names.
+- Any importer policy change requires separately scoped impact review; this observation does not authorize upstream mutation or bulk deletion.
+
+### document-status
+
+Locate and document human scientific acceptance or retain the question as unresolved.
+
+- Scripted import, AI history and successful validation do not identify a human approver.
+- Any native-status change requires separate curation authorization.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-pathogenic_to_host-validate | /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-validate.log; Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:16Z; metadata pathogenic_to_host-validate.json | context_only | The selected record validates. |
+| check-pathogenic_to_host-strict | /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-strict.log; Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:16Z; metadata pathogenic_to_host-strict.json | context_only | One file scanned; zero strict errors. |
+| check-pathogenic_to_host-snippets | /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets.log; Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:29Z; metadata pathogenic_to_host-snippets.json | context_only | Network lookup failed for both references; all six occurrences unresolved. Superseded by the successful network-enabled command. |
+| check-pathogenic_to_host-snippets-network | /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets-network.log; Executed 2026-10-21T07:14:40Z through 2026-10-21T07:14:44Z; metadata pathogenic_to_host-snippets-network.json | context_only | Six occurrences over two references: four NOT_IN_ABSTRACT and two UNRESOLVED. Exit0 indicates completion, not quotation support; all six remain inconclusive. |
+| record | data/traits/ecology/pathogenic_to_host.yaml; Entire target, fourteen nodes, twelve edges, two examples and ten history events | partial | The ecological class is recognizable; bibliography characterization, external relation meanings and metadata aliases require attention. |
+| identity | data/raw/metpo.owl; Complete captured RDF subject scan, including deprecated entities; exact target and parent entities | supports | METPO:1004000 is active pathogenic to host below active phenotype METPO:1000059. The local definition preserves the upstream concept while removing a duplicated word. Both field-path-like related synonyms are present upstream. METPO:2007400 is absent from the complete captured release and remains locally proposed. |
+| parent | data/traits/upper/phenotype.yaml; Entire context record; definition and identifier used for parent check | supports | The maintained phenotype class is broader than pathogenicity to a host; its context graph includes the target. This is not a separate scientific review of that parent. |
+| go | https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042710%2CGO%3A0009292; Exact live labels, aspects and obsolete flags | supports | Both GO identifiers are active biological processes and match their stated node labels. This is identity/type verification only. |
+| taxa | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=287,1280&amp;retmode=xml; Exact live taxonomy identities | supports | NCBITaxon:287 and NCBITaxon:1280 resolve to Pseudomonas aeruginosa and Staphylococcus aureus. This does not certify any detailed phenotype or mechanism. |
+| relations | Authoritative cached RO database; local v2 predicate proposal; Recursive relation definitions, inherited domains/ranges and local manifests-as definition | partial | Enables/contributes-to inherit an independent-continuant subject domain and material-executor textual semantics; positive regulation is process-to-process. Seven selected uses conflict with those meanings. Material structures are not automatically invalid enables subjects. The local manifestation proposal specifically describes a microorganism state, not host pathology. |
+| ledger | Documentary node/edge ledger; Every node and edge, zero-based indices | partial | Fourteen nodes and twelve edges were inspected for identity/type consistency. A susceptibility property is labelled BIOLOGICAL_PROCESS at node10. This is not an assay or mechanism judgment. |
+| shape | Read-only endpoint check; Fourteen unique node identifiers; twelve edges | supports | Every endpoint resolves. Structural correctness does not establish biological support. |
+| aliases | scripts/seed_from_metpo.py; data/raw/metpo.owl; Parser and to_record synonym handling; exact upstream synonym annotations | partial | The two strings are imported faithfully as RELATED_SYNONYM with source metpo.owl. They look like source-field locators rather than alternative biological names. Ownership includes the upstream annotations and the maintained import representation, not a later hand-curated invention. |
+| bibliography | https://www.ebi.ac.uk/europepmc/webservices/rest/search; https://api.crossref.org/works/; Ten unique references: eight DOIs and two PMIDs; embedded cross-citation repeats an existing DOI | partial | The source ledger retains fresh and reused accesses and distinguishes bibliographic identity from support for specific claims. |
+| definition-source | https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938; Publisher title and indexed abstract, PMID18785838 | partial | The DOI identifies Regulation and Function of Ag43 (Flu), a narrow E. coli review. It is mischaracterized as the broad source for the class definition and general evidence notes. A short generic phrase does not establish those broader claims; inaccessible full-text occurrence is unverified. |
+| editorial | https://www.nature.com/articles/nrmicro1592; Previously inspected publisher title and displayed editorial paragraphs; cross-checked exact DOI metadata | refutes | The DOI identifies In this issue, a one-page editorial, rather than the secretion-systems review named in the record. Original preview access was bounded by06:44:37–06:45:22UTC; later challenge/failure responses are not source text. |
+| search | Local identity, ownership and provenance search; Ignored-inclusive identifier, slug and metadata-string search | partial | Ten events comprise one scripted import and nine AI-assisted events. No human scientific acceptance is identified in inspected target-specific local material; private/remote approval remains unknown. |
+| policy | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md; Identity, nearest-claim source support, graph semantics and REVIEWED acceptance rules | supports | NONMECHANISTIC contextual aggregates do not require token protein accessions or a universal connected mechanism. Source identity and local schema success do not certify scientific truth. |
+| example-pa | https://pubmed.ncbi.nlm.nih.gov/31597590/; Title and abstract first sentence | supports | Supports the generic P. aeruginosa opportunistic-pathogen example without mechanistic inference. |
+| example-sa | https://pubmed.ncbi.nlm.nih.gov/33522395/; Indexed abstract first two sentences | supports | Supports the generic S. aureus host-pathogen example without strain or mechanism extrapolation. |
+| ijms | https://doi.org/10.3390/ijms25052655; PMID38473900 title and abstract framing | partial | Bacterial biofilm review identity/context verified. Detailed regulatory assertions and the embedded numerical comparison remain unverified. |
+| tcsw | https://doi.org/10.1016/j.tcsw.2024.100133; PMID39634722 title and abstract opening | partial | Clinical biofilm-associated infection review; detailed causal assertions remain unverified. |
+| bacteria | https://doi.org/10.3390/bacteria3030008; Crossref metadata and abstract framing; publisher title | partial | A systematic review published in Bacteria resolves despite no Europe PMC result. Crossref429 was followed by successful retrieval. Detailed antimicrobial-response assertions remain unverified. |
+| antibiotics | https://doi.org/10.3390/antibiotics13070619; PMID39061301 title and abstract framing | partial | A bacterial-biofilm review resolves. Its detailed immune-evasion claim is not independently verified. |
+| chapter | https://doi.org/10.58532/nbennurmmch1; Crossref metadata and abstract opening | partial | BACTERIAL PATHOGENESIS is an IIP book chapter dated2024-12-01. Lack of PubMed indexing does not invalidate it. Detailed graph support remains unverified. |
+| hgt | https://doi.org/10.1093/femsre/fuae019; PMID39003250 title and abstract review framing | partial | Bacterial host-adaptation review identity established; no detailed mechanism or across-kingdom universality is inferred. |
+
+## Limits And Additional Notes
+
+- Whole-record documentary/conceptual inspection is complete; detailed virulence, immune-evasion, antimicrobial-response and host-exploitation mechanisms are not independently certified, reconstructed or improved.
+- Source assessment used titles, abstracts, bibliographic metadata and the identified earlier publisher preview. Complete subscription full text was not exhaustively searched.
+- Native snippet verification initially failed due network lookup, then completed with four NOT_IN_ABSTRACT and two UNRESOLVED occurrences. None is a verified full-text quotation.
+- Detailed support and the embedded numerical assertion remain unverified, not declared false. No source-specific biological branch is transferred to either species example.
+- The unindexed journal article and book chapter resolve; absence from Europe PMC is not evidence of invalidity. Original reused receipt timestamps and unsuccessful accesses are retained.
+- Two reviewed generic aggregates do not require token accessions. Expression evidence is not used to infer host pathogenicity.
+- The local manifestation predicate is provisional, and common corpus diagnostics retain original scope, failures and adapter skips.
+- No scientific record, importer, mapping, native status or generated product is changed.
+- Native capture preceded judgment at the fresh batch003 base.
+- Independent source/ontology inspections informed the manually authored review; provider text was used only as provenance.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T071745Z-pathogenic-to-host
+kind: record
+repository: CultureBotAI/TraitMech
+title: Documentary and ontology review of pathogenic to host (METPO:1004000)
+started_at: '2026-10-21T07:13:55Z'
+finished_at: '2026-10-21T07:17:45Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The active METPO class, broader phenotype parent, two GO identifiers and
+  two generic species examples resolve. Two major findings concern foundational citation
+  mischaracterization and seven external relation mismatches plus a property/process
+  distinction. Three minor findings concern imported field-path aliases, the provisional
+  manifestation relation and locally undocumented human acceptance. All fourteen nodes
+  and twelve edges were inspected for documentary scope and ontology meaning. Detailed
+  virulence, immune-evasion and antimicrobial-response mechanisms remain unverified.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/pathogenic_to_host.yaml
+    sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: research/traits/ecology/pathogenic_to_host-deep-research-falcon.md
+    sha256: 1ed6a9dfdfdab722d0fb1a21da184cbbb32191332120aea4651fed3d27096a6a
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1004000
+  path: data/traits/ecology/pathogenic_to_host.yaml
+  label: pathogenic to host
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: METPO seeder owning imported source metadata
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Third target in batch003, following the saved parasitism review in lexicographic
+    path order; one entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1004000
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1004000
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1004000
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: pathogenic_to_host-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just validate data/traits/ecology/pathogenic_to_host.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-pathogenic_to_host-validate
+- check_id: pathogenic_to_host-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just validate-strict data/traits/ecology/pathogenic_to_host.yaml --out
+    /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-pathogenic_to_host-strict
+- check_id: pathogenic_to_host-snippets
+  name: Initial focused snippet check
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1004000
+  command: just verify-snippets --record data/traits/ecology/pathogenic_to_host.yaml
+    --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets.tsv
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Network lookup failed for both references; all six occurrences unresolved.
+    Superseded by the successful network-enabled command.
+  evidence_ids:
+  - check-pathogenic_to_host-snippets
+- check_id: pathogenic_to_host-snippets-network
+  name: Focused snippet check with network access
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1004000
+  command: just verify-snippets --record data/traits/ecology/pathogenic_to_host.yaml
+    --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Six occurrences over two references: four NOT_IN_ABSTRACT and two UNRESOLVED.
+    Exit0 indicates completion, not quotation support; all six remain inconclusive.'
+  evidence_ids:
+  - check-pathogenic_to_host-snippets-network
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1004000
+  summary: Generic aggregates and species examples do not assert a specific strain/locus
+    expression result. No expression module is used to establish this host-pathogenicity
+    class or detailed mechanisms.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-pathogenic_to_host-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-validate.log
+  locator: Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:16Z; metadata pathogenic_to_host-validate.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: c9ecb85e7bdbc9d49713292b3d1827017ddef4c25c5528bbc830d585487737c8
+- evidence_id: check-pathogenic_to_host-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-strict.log
+  locator: Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:16Z; metadata pathogenic_to_host-strict.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 070b1fd7b83f8b92ad0c07891bf55903bfa50ce5ea01c5fd3ade892e634f1fac
+- evidence_id: check-pathogenic_to_host-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets.log
+  locator: Executed 2026-10-21T07:14:14Z through 2026-10-21T07:14:29Z; metadata pathogenic_to_host-snippets.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: Network lookup failed for both references; all six occurrences unresolved.
+    Superseded by the successful network-enabled command.
+  snapshot_sha256: b3b228147525803ad81bc415da69c6f0ecee5539f14936b495b241dd93ecb39b
+- evidence_id: check-pathogenic_to_host-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/pathogenic_to_host-snippets-network.log
+  locator: Executed 2026-10-21T07:14:40Z through 2026-10-21T07:14:44Z; metadata pathogenic_to_host-snippets-network.json
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: context_only
+  summary: 'Six occurrences over two references: four NOT_IN_ABSTRACT and two UNRESOLVED.
+    Exit0 indicates completion, not quotation support; all six remain inconclusive.'
+  snapshot_sha256: 169478ebae7be05ff9bfa78477cd269a622530efe20baed87619b6e9398d0606
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/pathogenic_to_host.yaml
+  locator: Entire target, fourteen nodes, twelve edges, two examples and ten history
+    events
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: partial
+  summary: The ecological class is recognizable; bibliography characterization, external
+    relation meanings and metadata aliases require attention.
+  snapshot_sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: Complete captured RDF subject scan, including deprecated entities; exact
+    target and parent entities
+  accessed_at: '2026-10-21T07:14:43Z'
+  support: supports
+  summary: METPO:1004000 is active pathogenic to host below active phenotype METPO:1000059.
+    The local definition preserves the upstream concept while removing a duplicated
+    word. Both field-path-like related synonyms are present upstream. METPO:2007400
+    is absent from the complete captured release and remains locally proposed.
+  snapshot_sha256: 61dec0ea1adeb562b2bb15de185f542be48e1b8426f73645f949b4ae31023361
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/upper/phenotype.yaml
+  locator: Entire context record; definition and identifier used for parent check
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: supports
+  summary: The maintained phenotype class is broader than pathogenicity to a host;
+    its context graph includes the target. This is not a separate scientific review
+    of that parent.
+- evidence_id: go
+  kind: authority
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0042710%2CGO%3A0009292
+  locator: Exact live labels, aspects and obsolete flags
+  accessed_at: '2026-10-21T07:14:57Z'
+  support: supports
+  summary: Both GO identifiers are active biological processes and match their stated
+    node labels. This is identity/type verification only.
+  snapshot_sha256: b5784490df6cd71f8dccba2033e4ba58a170d594db63ce413efc9e626e6ffd3e
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=287,1280&retmode=xml
+  locator: Exact live taxonomy identities
+  accessed_at: '2026-10-21T07:14:57Z'
+  support: supports
+  summary: NCBITaxon:287 and NCBITaxon:1280 resolve to Pseudomonas aeruginosa and
+    Staphylococcus aureus. This does not certify any detailed phenotype or mechanism.
+  snapshot_sha256: d7b0cb1b4f4195bae31baa917c2e5578c60b50d0744971af1e5d1775070fcda5
+- evidence_id: relations
+  kind: authority
+  reference: Authoritative cached RO database; local v2 predicate proposal
+  locator: Recursive relation definitions, inherited domains/ranges and local manifests-as
+    definition
+  accessed_at: '2026-10-21T07:16:21Z'
+  support: partial
+  summary: Enables/contributes-to inherit an independent-continuant subject domain
+    and material-executor textual semantics; positive regulation is process-to-process.
+    Seven selected uses conflict with those meanings. Material structures are not
+    automatically invalid enables subjects. The local manifestation proposal specifically
+    describes a microorganism state, not host pathology.
+  snapshot_sha256: a4c68d190cfe246a7e0ea6754f4f162a6888abd7f79ee93e7c0cb54d15192d2b
+- evidence_id: ledger
+  kind: validation
+  reference: Documentary node/edge ledger
+  locator: Every node and edge, zero-based indices
+  accessed_at: '2026-10-21T07:16:21Z'
+  support: partial
+  summary: Fourteen nodes and twelve edges were inspected for identity/type consistency.
+    A susceptibility property is labelled BIOLOGICAL_PROCESS at node10. This is not
+    an assay or mechanism judgment.
+  snapshot_sha256: 2825eeed671d0b8715404350d0f0fe84ee3287d68662079aa1f8d6ff634a998f
+- evidence_id: shape
+  kind: validation
+  reference: Read-only endpoint check
+  locator: Fourteen unique node identifiers; twelve edges
+  accessed_at: '2026-10-21T07:14:31Z'
+  support: supports
+  summary: Every endpoint resolves. Structural correctness does not establish biological
+    support.
+  snapshot_sha256: f1c6f035f75c2f4a770812e70725c1164f4b24dc3c2afadf137452c7f253cbc7
+- evidence_id: aliases
+  kind: record_content
+  reference: scripts/seed_from_metpo.py; data/raw/metpo.owl
+  locator: Parser and to_record synonym handling; exact upstream synonym annotations
+  accessed_at: '2026-10-21T07:16:21Z'
+  support: partial
+  summary: The two strings are imported faithfully as RELATED_SYNONYM with source
+    metpo.owl. They look like source-field locators rather than alternative biological
+    names. Ownership includes the upstream annotations and the maintained import representation,
+    not a later hand-curated invention.
+  snapshot_sha256: 05d9f05599fd7f57cebe2e63fc87e1da7821da58a00e67b62ba522e2637c6e98
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search; https://api.crossref.org/works/
+  locator: 'Ten unique references: eight DOIs and two PMIDs; embedded cross-citation
+    repeats an existing DOI'
+  accessed_at: '2026-10-21T07:16:24Z'
+  support: partial
+  summary: The source ledger retains fresh and reused accesses and distinguishes bibliographic
+    identity from support for specific claims.
+  snapshot_sha256: 7e396ad73deb1e9ea25a81de3a80c39373afd43e7c996ee7c758f3257fd1b850
+- evidence_id: definition-source
+  kind: primary_source
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938
+  locator: Publisher title and indexed abstract, PMID18785838
+  accessed_at: '2026-10-21T06:44:10Z'
+  support: partial
+  summary: The DOI identifies Regulation and Function of Ag43 (Flu), a narrow E. coli
+    review. It is mischaracterized as the broad source for the class definition and
+    general evidence notes. A short generic phrase does not establish those broader
+    claims; inaccessible full-text occurrence is unverified.
+  snapshot_sha256: 3ac9bf7cc5e3640ff3d1e0a7401d46eea30b470ecf86a4a5b43ae69d46418013
+- evidence_id: editorial
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro1592
+  locator: Previously inspected publisher title and displayed editorial paragraphs;
+    cross-checked exact DOI metadata
+  accessed_at: '2026-10-21T06:45:22Z'
+  support: refutes
+  summary: The DOI identifies In this issue, a one-page editorial, rather than the
+    secretion-systems review named in the record. Original preview access was bounded
+    by06:44:37–06:45:22UTC; later challenge/failure responses are not source text.
+  snapshot_sha256: 3f1e1c7a624cb8dc2befe101212b0b7d1620576412afe10710170cae73315dae
+- evidence_id: search
+  kind: search
+  reference: Local identity, ownership and provenance search
+  locator: Ignored-inclusive identifier, slug and metadata-string search
+  accessed_at: '2026-10-21T07:14:43Z'
+  support: partial
+  summary: Ten events comprise one scripted import and nine AI-assisted events. No
+    human scientific acceptance is identified in inspected target-specific local material;
+    private/remote approval remains unknown.
+  snapshot_sha256: 0b6c3795290d4ca26f118a9a8dbf32b7c87920c03e7c377b3ac35efd7e94fe7e
+  search_scope: rg --no-ignore --hidden across data/traits, scripts, history, mappings,
+    proposals, conf, docs and DO_NOT_WORK.md, including ignored files; provider header
+    captured as provenance. Complete captured METPO RDF separately inspected. No private/remote
+    approval absence is asserted.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Identity, nearest-claim source support, graph semantics and REVIEWED acceptance
+    rules
+  accessed_at: '2026-10-21T07:17:45Z'
+  support: supports
+  summary: NONMECHANISTIC contextual aggregates do not require token protein accessions
+    or a universal connected mechanism. Source identity and local schema success do
+    not certify scientific truth.
+- evidence_id: example-pa
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/31597590/
+  locator: Title and abstract first sentence
+  accessed_at: '2026-10-21T07:14:31Z'
+  support: supports
+  summary: Supports the generic P. aeruginosa opportunistic-pathogen example without
+    mechanistic inference.
+  snapshot_sha256: ef4e7c12e5d0be26750e45276ba34cf65d785f4e69c5c1c2d2860098c60a6493
+- evidence_id: example-sa
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/33522395/
+  locator: Indexed abstract first two sentences
+  accessed_at: '2026-10-21T07:14:31Z'
+  support: supports
+  summary: Supports the generic S. aureus host-pathogen example without strain or
+    mechanism extrapolation.
+  snapshot_sha256: 2b25f0ff418135f812dcb4f4d8d47441f5dded5a0e90896d24743cb5d4e7187b
+- evidence_id: ijms
+  kind: primary_source
+  reference: https://doi.org/10.3390/ijms25052655
+  locator: PMID38473900 title and abstract framing
+  accessed_at: '2026-10-21T07:14:31Z'
+  support: partial
+  summary: Bacterial biofilm review identity/context verified. Detailed regulatory
+    assertions and the embedded numerical comparison remain unverified.
+  snapshot_sha256: 0aab9671af3a145946ccb436533eacb6da84773e491d9e3d59bbb9516cd927d0
+- evidence_id: tcsw
+  kind: primary_source
+  reference: https://doi.org/10.1016/j.tcsw.2024.100133
+  locator: PMID39634722 title and abstract opening
+  accessed_at: '2026-10-21T07:14:31Z'
+  support: partial
+  summary: Clinical biofilm-associated infection review; detailed causal assertions
+    remain unverified.
+  snapshot_sha256: 6d6e82cb51bceac4bce850f67d75435811e90e63d64121524538c31bc1e1ac56
+- evidence_id: bacteria
+  kind: primary_source
+  reference: https://doi.org/10.3390/bacteria3030008
+  locator: Crossref metadata and abstract framing; publisher title
+  accessed_at: '2026-10-21T07:15:31Z'
+  support: partial
+  summary: A systematic review published in Bacteria resolves despite no Europe PMC
+    result. Crossref429 was followed by successful retrieval. Detailed antimicrobial-response
+    assertions remain unverified.
+  snapshot_sha256: 35163981d5551cdb9e451c62162952686365647006af8fb2f501409881f72354
+- evidence_id: antibiotics
+  kind: primary_source
+  reference: https://doi.org/10.3390/antibiotics13070619
+  locator: PMID39061301 title and abstract framing
+  accessed_at: '2026-10-21T07:14:32Z'
+  support: partial
+  summary: A bacterial-biofilm review resolves. Its detailed immune-evasion claim
+    is not independently verified.
+  snapshot_sha256: c263280f8bc66d0decf1c70101761567d81b32ee609d3b16562f54442bf98000
+- evidence_id: chapter
+  kind: primary_source
+  reference: https://doi.org/10.58532/nbennurmmch1
+  locator: Crossref metadata and abstract opening
+  accessed_at: '2026-10-21T07:15:07Z'
+  support: partial
+  summary: BACTERIAL PATHOGENESIS is an IIP book chapter dated2024-12-01. Lack of
+    PubMed indexing does not invalidate it. Detailed graph support remains unverified.
+  snapshot_sha256: 103fd03e20a9a06f5aaadf60c2ec8b5f42de7678b812b0f480ab53f3684456fd
+- evidence_id: hgt
+  kind: primary_source
+  reference: https://doi.org/10.1093/femsre/fuae019
+  locator: PMID39003250 title and abstract review framing
+  accessed_at: '2026-10-21T06:44:10Z'
+  support: partial
+  summary: Bacterial host-adaptation review identity established; no detailed mechanism
+    or across-kingdom universality is inferred.
+  snapshot_sha256: 3fcc332b6a09b2b5be7029f400fefe32d9c2d43c6d5f70e2b0fdbfd3a92aaf8c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active identity, label, polarity and kind'
+  outcome: supported
+  target_ids:
+  - METPO:1004000
+  summary: The active METPO class and local record denote host pathogenicity. The
+    self-node provides a recognizable disease-capability gloss; no host exclusivity
+    is implied.
+  evidence_ids:
+  - record
+  - identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and source characterization'
+  outcome: concern
+  target_ids:
+  - METPO:1004000
+  summary: The ontology supports the concept, but the literature source is a narrow
+    Ag43 review and does not establish the record’s broad characterization from inspected
+    text. The definition also relies on the unexplained word pathogen; its self-node
+    is clearer.
+  evidence_ids:
+  - record
+  - identity
+  - definition-source
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader parent'
+  outcome: supported
+  target_ids:
+  - METPO:1004000
+  summary: Phenotype is the active broader parent and the maintained context record
+    agrees.
+  evidence_ids:
+  - identity
+  - parent
+- assessment_id: aliases
+  area: provenance
+  topic: 'Native checklist: source-field strings as related synonyms'
+  outcome: concern
+  target_ids:
+  - METPO:1004000
+  summary: Both annotations are faithfully imported with their upstream type/source.
+    Their field-path-like meaning should remain distinguishable from biological names;
+    missing provenance or import corruption is not alleged.
+  evidence_ids:
+  - record
+  - identity
+  - aliases
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: ecological class and NONMECHANISTIC scope'
+  outcome: supported
+  target_ids:
+  - METPO:1004000
+  summary: ECOLOGY and CLASS are coherent. Generic reviewed aggregates do not require
+    token molecular examples or a single universal mechanism.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: two exact taxa and narrow source claims'
+  outcome: supported
+  target_ids:
+  - METPO:1004000
+  summary: Both taxon identities and generic species examples are supported. Neither
+    example is used to validate every contextual graph branch.
+  evidence_ids:
+  - taxa
+  - example-pa
+  - example-sa
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: ten references and six snippet occurrences'
+  outcome: concern
+  target_ids:
+  - METPO:1004000
+  summary: All ten identities resolve. Foundational publication characterization is
+    wrong or too broad. Six short snippet occurrences remain inconclusive after the
+    completed native check. Other graph references are verified for identity/context
+    only, including the valid unindexed article and chapter.
+  evidence_ids:
+  - bibliography
+  - definition-source
+  - editorial
+  - ijms
+  - tcsw
+  - bacteria
+  - antibiotics
+  - chapter
+  - hgt
+  - check-pathogenic_to_host-snippets-network
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all fourteen nodes and twelve edges'
+  outcome: concern
+  target_ids:
+  - METPO:1004000
+  summary: All nodes/edges were inspected for conceptual type and source framing.
+    Seven external relation uses conflict with endpoint meanings; node10 describes
+    a property despite process typing. The provisional manifestation relation also
+    has a narrower subject meaning. Detailed biological routes remain unverified.
+  evidence_ids:
+  - record
+  - go
+  - relations
+  - ledger
+  - shape
+  - definition-source
+  - editorial
+  - ijms
+  - tcsw
+  - bacteria
+  - antibiotics
+  - chapter
+  - hgt
+  - policy
+  details: 'Zero-based ledger: node0 is the trait; nodes1/2 are reviewed generic material
+    aggregates; nodes3/4/6/7/8/11/13 denote processes, with two matching GO process
+    IDs. Node5 denotes chemical substances. Nodes9/12 denote physical structures despite
+    their localization enum. Node10 explicitly describes reduced susceptibility, a
+    property. Edge0 has compatible actor/process types but problematic citation scope.
+    Edge1 uses an allowed local ungrounded relation and cites the wrong publication
+    type. Edges2/6/8/10 use process subjects under enables. Edge3 uses the local microorganism-state
+    manifestation relation for host damage. Edges4/5 use substance subjects under
+    process-to-process positive regulation. Edges7/9 have material-compatible structure
+    subjects and are not counted as formal domain errors. Edge11 uses a process subject
+    and protein object where contributes-to inherits continuant-to-process semantics.
+    Formal compatibility does not establish mechanistic support; no alternative biological
+    route, target or procedure is supplied.'
+- assessment_id: optional
+  area: completeness
+  topic: 'Native checklist: discussion and datasets'
+  outcome: supported
+  target_ids:
+  - METPO:1004000
+  summary: No discussion placeholder or dataset assertion requires resolution. These
+    optional slots are not required for the ecological classifier.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: history and REVIEWED basis'
+  outcome: concern
+  target_ids:
+  - METPO:1004000
+  summary: Nine assisted events and one script event document provenance, but no explicit
+    human scientific acceptance is identified in the bounded local inspection.
+  evidence_ids:
+  - record
+  - search
+  - policy
+  - check-validate-history
+findings:
+- finding_id: foundational-citation-characterization
+  issue_key: pathogenic-to-host-foundational-citation-characterization
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Foundational citations are mischaracterized
+  description: The purported secretion-systems review resolves to In this issue, a
+    one-page editorial. The definition DOI resolves to a specific Ag43 E. coli review,
+    not the broad source described in the evidence notes. The inspected publication
+    identities and text do not establish the attached general assertions. This does
+    not deny the class identity or claim that inaccessible full text was exhaustively
+    searched.
+  target_ids:
+  - METPO:1004000
+  field_paths:
+  - definition_source
+  - evidence
+  - causal_graphs[0].edges[0].evidence
+  - causal_graphs[0].edges[1].evidence
+  - causal_graphs[0].edges[2].evidence
+  - causal_graphs[0].edges[3].evidence
+  evidence_ids:
+  - record
+  - definition-source
+  - editorial
+  - bibliography
+  - check-pathogenic_to_host-snippets-network
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: external-endpoints-and-property-type
+  issue_key: pathogenic-to-host-external-endpoints-and-property-type
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Seven relation uses and one node type conflict with their stated meanings
+  description: Edges2/6/8/10 use processes as enables subjects. Edges4/5 use chemical
+    substances with RO process-to-process positive regulation. Edge11 uses process-to-protein
+    endpoints with contributes-to, which inherits continuant-to-process constraints
+    and executor semantics. Node10 describes a susceptibility property while typed
+    BIOLOGICAL_PROCESS. Physical structures on edges7/9 are not automatically invalid
+    material subjects. This is semantic assessment, not a reported YAML or reasoner
+    failure.
+  target_ids:
+  - METPO:1004000
+  field_paths:
+  - causal_graphs[0].edges[2].predicate_id
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  - causal_graphs[0].edges[6].predicate_id
+  - causal_graphs[0].edges[8].predicate_id
+  - causal_graphs[0].edges[10].predicate_id
+  - causal_graphs[0].edges[11].predicate_id
+  - causal_graphs[0].nodes[10].node_type
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping, subject to separately scoped future curation
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: imported-field-path-synonyms
+  issue_key: pathogenic-to-host-imported-field-path-synonyms
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Imported source-field strings are presented as related names
+  description: General.keywords and Safety information.risk assessment are upstream
+    related-synonym annotations faithfully copied by the seeder. They describe metadata
+    fields rather than biological alternative names. The local representation should
+    distinguish source lookup metadata from semantic synonyms, with any policy change
+    reviewed at the upstream/import owner. This is not a missing-source or corrupted-import
+    finding.
+  target_ids:
+  - METPO:1004000
+  field_paths:
+  - synonyms
+  evidence_ids:
+  - record
+  - identity
+  - aliases
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained import of upstream METPO synonym annotations
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: provisional-manifestation-scope
+  issue_key: pathogenic-to-host-provisional-manifestation-scope
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: A local manifestation relation is used outside its subject meaning
+  description: The v2 proposal describes a physiological or molecular state of a microorganism
+    manifesting its phenotype. Edge3 instead uses damage in the host. Its wildcard
+    mapping allows the shape but does not establish this semantic extension. METPO:2007400
+    remains a proposal in the captured ontology context.
+  target_ids:
+  - METPO:1004000
+  field_paths:
+  - causal_graphs[0].edges[3].predicate_id
+  - causal_graphs[0].nodes[4]
+  evidence_ids:
+  - record
+  - relations
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping, subject to separately scoped future curation
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: pathogenic-to-host-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Inspected REVIEWED provenance lacks a human-acceptance link
+  description: The scripted import and nine AI-assisted events do not identify human
+    scientific acceptance in the inspected target-specific local provenance. Private
+    or remote approval remains unknown.
+  target_ids:
+  - METPO:1004000
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - search
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-citations
+  description: Reconcile publication identity, source characterization and evidence
+    placement during separately authorized curation.
+  finding_ids:
+  - foundational-citation-characterization
+  target_ids:
+  - METPO:1004000
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Confirm the exact cited publication and the narrow claim it supports.
+  - Keep snippet-access limitations explicit; a generic two-word phrase does not substantiate
+    a detailed assertion.
+  - Limit this follow-up to documentary fidelity and the ecological definition; no
+    mechanism reconstruction is proposed.
+- action_id: reconcile-meaning
+  description: Reconcile existing node concepts with selected ontology and proposal
+    meanings.
+  finding_ids:
+  - external-endpoints-and-property-type
+  - provisional-manifestation-scope
+  target_ids:
+  - METPO:1004000
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping, subject to separately scoped future curation
+  acceptance_checks:
+  - Distinguish process, property, substance, physical actor and host-versus-microorganism
+    state.
+  - Do not invent biological intermediates or retype entities solely to fit preferred
+    predicate IDs.
+  - Any shared mapping change requires separate scope review, guarded writes, appended
+    history and applicable strict/graph/qc checks.
+- action_id: clarify-import-metadata
+  description: Review how upstream source-field annotations are represented by the
+    maintained importer.
+  finding_ids:
+  - imported-field-path-synonyms
+  target_ids:
+  - METPO:1004000
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained import of upstream METPO synonym annotations
+  acceptance_checks:
+  - Preserve the fact that the import matches upstream annotations and distinguish
+    lookup metadata from biological names.
+  - Any importer policy change requires separately scoped impact review; this observation
+    does not authorize upstream mutation or bulk deletion.
+- action_id: document-status
+  description: Locate and document human scientific acceptance or retain the question
+    as unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - METPO:1004000
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/pathogenic_to_host.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Scripted import, AI history and successful validation do not identify a human
+    approver.
+  - Any native-status change requires separate curation authorization.
+limitations:
+- Whole-record documentary/conceptual inspection is complete; detailed virulence,
+  immune-evasion, antimicrobial-response and host-exploitation mechanisms are not
+  independently certified, reconstructed or improved.
+- Source assessment used titles, abstracts, bibliographic metadata and the identified
+  earlier publisher preview. Complete subscription full text was not exhaustively
+  searched.
+- Native snippet verification initially failed due network lookup, then completed
+  with four NOT_IN_ABSTRACT and two UNRESOLVED occurrences. None is a verified full-text
+  quotation.
+- Detailed support and the embedded numerical assertion remain unverified, not declared
+  false. No source-specific biological branch is transferred to either species example.
+- The unindexed journal article and book chapter resolve; absence from Europe PMC
+  is not evidence of invalidity. Original reused receipt timestamps and unsuccessful
+  accesses are retained.
+- Two reviewed generic aggregates do not require token accessions. Expression evidence
+  is not used to infer host pathogenicity.
+- The local manifestation predicate is provisional, and common corpus diagnostics
+  retain original scope, failures and adapter skips.
+- No scientific record, importer, mapping, native status or generated product is changed.
+notes:
+- Native capture preceded judgment at the fresh batch003 base.
+- Independent source/ontology inspections informed the manually authored review; provider
+  text was used only as provenance.
+tags:
+- record-review
+- pathogenic-to-host
+- ecology
+- needs-curation
+```
