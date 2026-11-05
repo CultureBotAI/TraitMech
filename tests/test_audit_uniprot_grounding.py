@@ -16,6 +16,8 @@ from audit_uniprot_grounding import (  # noqa: E402
     fetch,
     iter_nodes,
     iter_uses,
+    load_report_rows,
+    main,
     write_report,
 )
 
@@ -321,5 +323,194 @@ def test_fetch_does_not_retry_http_404_or_400_and_retries_urlerror(monkeypatch):
     assert len(attempts_net) == 3
     assert res_net["status"] == "error"
     assert "temporary DNS failure" in res_net["uniprot_name"]
+
+
+def test_merge_existing_reuses_unchanged_rows_and_audits_only_new_or_modified_in_corpus_order(
+    tmp_path,
+):
+    category = tmp_path / "physiology"
+    category.mkdir()
+    rec_a = category / "a_record.yaml"
+    rec_c = category / "c_record.yaml"
+    rec_a.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g_a\n"
+        "  nodes:\n"
+        "  - node_id: p_a\n"
+        "    label: Protein A\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P0A6Y8\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 180\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+    rec_c.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g_c\n"
+        "  nodes:\n"
+        "  - node_id: p_c\n"
+        "    label: Protein C\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P0A7B8\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 150\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+
+    responses = {
+        "P0A6Y8": _resolved(primary_accession="P0A6Y8", entry_version=180),
+        "P0A7B8": _resolved(primary_accession="P0A7B8", entry_version=150),
+        "P13029": _resolved(primary_accession="P13029", entry_version=195),
+    }
+    initial_uses = iter_uses(iter_nodes(tmp_path))
+    initial_rows = audit_uses(
+        initial_uses, delay=0, resolver=lambda acc, _delay: responses[acc]
+    )
+    report = tmp_path / "uniprot_grounding_audit.tsv"
+    write_report(initial_rows, report)
+    assert check_inventory(tmp_path, report) == []
+
+    # Add a middle record b_record.yaml with P13029 and modify c_record.yaml entry_version 150 -> 151
+    rec_b = category / "b_record.yaml"
+    rec_b.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g_b\n"
+        "  nodes:\n"
+        "  - node_id: p_b\n"
+        "    label: Protein B\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P13029\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 195\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+    rec_c.write_text(
+        rec_c.read_text(encoding="utf-8").replace("entry_version: 150", "entry_version: 151"),
+        encoding="utf-8",
+    )
+    responses["P0A7B8"] = _resolved(primary_accession="P0A7B8", entry_version=151)
+
+    fetched: list[str] = []
+
+    def spy_resolver(acc, _delay):
+        fetched.append(acc)
+        return responses[acc]
+
+    existing = load_report_rows(report)
+    merged_uses = iter_uses(iter_nodes(tmp_path))
+    merged_rows = audit_uses(
+        merged_uses, delay=0, resolver=spy_resolver, existing_rows=existing
+    )
+    write_report(merged_rows, report)
+
+    # P0A6Y8 in a_record.yaml was unchanged and clean -> not re-fetched!
+    assert fetched == ["P0A7B8", "P13029"]
+    assert [r["accession"] for r in merged_rows] == ["P0A6Y8", "P13029", "P0A7B8"]
+    assert [r["graph_id"] for r in merged_rows] == ["g_a", "g_b", "g_c"]
+    assert check_inventory(tmp_path, report) == []
+
+
+def test_accession_filter_and_cli_merge_existing(monkeypatch, tmp_path):
+    category = tmp_path / "physiology"
+    category.mkdir()
+    rec_a = category / "a_record.yaml"
+    rec_b = category / "b_record.yaml"
+    rec_a.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g_a\n"
+        "  nodes:\n"
+        "  - node_id: p_a\n"
+        "    label: Protein A\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P0A6Y8\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 180\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+    rec_b.write_text(
+        "causal_graphs:\n"
+        "- graph_id: g_b\n"
+        "  nodes:\n"
+        "  - node_id: p_b\n"
+        "    label: Protein B\n"
+        "    node_type: GENE_OR_PROTEIN\n"
+        "    protein_examples:\n"
+        "    - uniprot_id: UniProtKB:P13029\n"
+        "      taxon_id: NCBITaxon:562\n"
+        "      taxon_label: Escherichia coli\n"
+        "      entry_status: REVIEWED\n"
+        "      entry_version: 195\n"
+        "      sequence_version: 1\n",
+        encoding="utf-8",
+    )
+
+    responses = {
+        "P0A6Y8": _resolved(primary_accession="P0A6Y8", entry_version=180),
+        "P13029": _resolved(primary_accession="P13029", entry_version=195),
+    }
+    fetched: list[str] = []
+
+    def fake_fetch(acc, delay=0.1, **kwargs):
+        fetched.append(acc)
+        return responses[acc]
+
+    monkeypatch.setattr("audit_uniprot_grounding.fetch", fake_fetch)
+    report = tmp_path / "uniprot_grounding_audit.tsv"
+
+    # Initial full run populates report
+    uses = iter_uses(iter_nodes(tmp_path))
+    write_report(audit_uses(uses, delay=0, resolver=fake_fetch), report)
+    assert fetched == ["P0A6Y8", "P13029"]
+    fetched.clear()
+
+    # Running CLI with --merge-existing when nothing changed makes 0 network calls
+    rc = main(["--traits-dir", str(tmp_path), "--out", str(report), "--merge-existing", "--delay", "0"])
+    assert rc == 0
+    assert fetched == []
+    assert check_inventory(tmp_path, report) == []
+
+    # Running CLI with --accession UniProtKB:P13029 forces live refresh only for P13029
+    rc2 = main(
+        [
+            "--traits-dir",
+            str(tmp_path),
+            "--out",
+            str(report),
+            "--accession",
+            "UniProtKB:P13029",
+            "--delay",
+            "0",
+        ]
+    )
+    assert rc2 == 0
+    assert fetched == ["P13029"]
+    assert check_inventory(tmp_path, report) == []
+
+    # Dirty row in existing report is never reused by --merge-existing
+    dirty_rows = load_report_rows(report)
+    dirty_rows[0]["finding"] = "UNIPROT_ERROR"
+    write_report(dirty_rows, report)
+    fetched.clear()
+    rc3 = main(["--traits-dir", str(tmp_path), "--out", str(report), "--merge-existing", "--delay", "0"])
+    assert rc3 == 0
+    assert fetched == ["P0A6Y8"]
+    assert check_inventory(tmp_path, report) == []
+
 
 

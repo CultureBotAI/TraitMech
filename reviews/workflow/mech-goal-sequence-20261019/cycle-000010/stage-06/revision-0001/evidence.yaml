@@ -1,0 +1,56 @@
+schema_version: '1.0.0'
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 10
+stage: 6
+revision: 1
+source_revision: 72c9a0b83000a38f3458f6bf22460799374d7ebc
+scope_frozen_at: '2026-11-05T02:48:11Z'
+outcome: completed
+summary: >
+  Froze INFRA_TASKS.md at the supervisor cutoff (2026-11-05T02:48:11Z,
+  sha256 b2e3be6195140877390bf27ec7ca35b8f10090493d1fe1b85c97aec221324439),
+  reconciled the sole pending infrastructure task in the frozen scope
+  (traitmech-infra-0013 linked to GitHub issue #1988), added incremental
+  --merge-existing and --accession CLI modes plus load_report_rows(),
+  _is_reusable_existing_row(), and _normalize_accessions() to
+  scripts/audit_uniprot_grounding.py so unchanged clean rows in
+  reports/uniprot_grounding_audit.tsv are preserved offline while newly added,
+  modified, dirty, or --accession-selected rows are live-audited and merged in
+  iter_uses() corpus order, added unit tests in
+  tests/test_audit_uniprot_grounding.py, validated all repository QC and
+  workflow gates, and marked traitmech-infra-0013 as resolved in INFRA_TASKS.md
+  with 0 deferred or blocked tasks remaining.
+artifacts:
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/infra_snapshot.md
+    kind: infra_snapshot
+    sha256: b2e3be6195140877390bf27ec7ca35b8f10090493d1fe1b85c97aec221324439
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/implementation_plan.md
+    kind: implementation_plan
+    sha256: 13265803431210335fc179634e8b8aa445a7005e0f2dfaed1357c70b0ef87d87
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/validation.md
+    kind: validation
+    sha256: 12e4839056b951a4145105552d7690a7204ed456dce3ab0dfb013e360dcd5cf8
+  - path: reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/c10s6_coverage_full.json
+    kind: supporting
+    sha256: 40c0b4b6dd5d0c91d19820483e1d8cbbcf33e508be8856e3ae9d95fa07346bb7
+findings: []
+groups: []
+infra_tasks:
+  - task_id: traitmech-infra-0013
+    summary: Add an incremental --accession / --merge-existing mode to scripts/audit_uniprot_grounding.py so newly curated protein_examples can be live-audited and merged into reports/uniprot_grounding_audit.tsv in corpus order without re-fetching unchanged rows
+    status: resolved
+    issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+    resolution_evidence:
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/implementation_plan.md
+      - reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-06/revision-0001/validation.md
+    disposition: >
+      Resolved in Cycle 10 Stage 6 (issue #1988); added --merge-existing and
+      --accession CLI modes, load_report_rows(), _is_reusable_existing_row(),
+      and _normalize_accessions() in scripts/audit_uniprot_grounding.py so
+      unchanged clean rows in reports/uniprot_grounding_audit.tsv are preserved
+      offline while newly added, modified, dirty, or --accession-selected rows
+      are live-audited and merged in iter_uses() corpus order, covered by unit
+      tests in tests/test_audit_uniprot_grounding.py.
+carry_forward_ids: []
