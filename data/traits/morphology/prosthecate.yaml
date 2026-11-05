@@ -18,6 +18,11 @@ synonyms:
   source: DOI:10.1128/MMBR.00040-09
 evidence:
 - reference: DOI:10.1111/j.1365-2958.2007.05633.x
+  snippet: One remarkable example of bacterial morphogenesis is the elaboration of
+    long, tubular extensions of the cell envelope of certain aquatic bacteria. These
+    appendages (also called prosthecae or stalks) possess features that make them
+    particularly amenable models for experiments designed to uncover general principles
+    of cell morphogenesis and of cell shape function.
   notes: Wagner & Brun describe the Caulobacter stalk (prostheca) as a cell-envelope
     extension and a specialized form of cell elongation aiding nutrient uptake.
 - reference: DOI:10.1128/MMBR.00040-09
@@ -230,4 +235,12 @@ curation_history:
     the tranche: set graph scope prosthecate_stalk_nutrient_uptake=NONMECHANISTIC
     with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (mreb, bactofilins, stpabcd_complex).'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1111/j.1365-2958.2007.05633.x
+    (Wagner & Brun 2007 Europe PMC abstract, ACT-C10S4-DEF-SRC-010) to record-level
+    evidence[0] to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-010
+    in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

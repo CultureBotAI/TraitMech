@@ -15,6 +15,10 @@ synonyms:
   source: DOI:10.1038/nrmicro2405
 evidence:
 - reference: DOI:10.1038/nrmicro2405
+  snippet: Here, I review the requirements that define swarming motility in diverse
+    bacterial model systems, including an increase in the number of flagella per cell,
+    the secretion of a surfactant to reduce surface tension and allow spreading, and
+    movement in multicellular groups rather than as individuals.
   notes: Kearns, "A field guide to bacterial swarming motility", defines swarming
     via increased flagella per cell, surfactant secretion, and movement in multicellular
     groups.
@@ -170,4 +174,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope swarming_hyperflagellation_surfactant=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro2405 (Kearns 2010
+    Europe PMC abstract, ACT-C10S4-DEF-SRC-013) to record-level evidence[0] to match
+    definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-013 in group
+    G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

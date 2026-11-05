@@ -20,6 +20,9 @@ xrefs:
 - GO:0042603
 evidence:
 - reference: DOI:10.1146/annurev.micro.50.1.285
+  snippet: They can form an amorphous layer of extracellular polysaccharide (EPS)
+    surrounding the cell that may be further organized into a distinct structure termed
+    a capsule.
   notes: Roberts, "The biochemistry and genetics of capsular polysaccharide production
     in bacteria", treats the capsule as an organized external polysaccharide layer.
 - reference: DOI:10.1146/annurev.biochem.75.103004.142545
@@ -278,4 +281,12 @@ curation_history:
   changes: 'Ontology exact-match review (2026-08-25): approved exact xref(s): GO:0042603.
     Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked
     direct data, and OLS4 spot-checked release deltas and disputed hits.'
+  llm_assisted: true
+- timestamp: '2026-11-04T23:20:00Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1146/annurev.micro.50.1.285
+    (Roberts 1996 Europe PMC abstract, ACT-C10S4-DEF-SRC-001) to record-level evidence[0]
+    to match definition_source (Cycle 10 Stage 5 remediation of F-C10S4-DEF-SRC-001
+    in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

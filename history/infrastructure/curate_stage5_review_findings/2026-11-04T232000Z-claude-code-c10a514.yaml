@@ -1,0 +1,45 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+  slug: curate_stage5_review_findings
+session:
+  id: 2026-11-04T232000Z-claude-code-c10a514
+  timestamp: '2026-11-04T23:20:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 14 actionable Cycle 10 Stage 4 open findings in group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: 'Executed Stage 5 (resolve_review_findings) of run mech-goal-sequence-20261019,
+    cycle 10 consuming Cycle 10 Stage 4 review evidence (reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/evidence.yaml,
+    sha256 38656ba7af735f8ed4c20bc334c2295302b3ed88de4c6e5fde22a86fea30f2f1). Grouped all
+    19 carried-forward findings into 6 cause-and-ownership groups, deduplicated against all
+    live GitHub issues, and reused real GitHub issues (#2002 for resolved group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS;
+    #1982, #1983, #1984, #1985, and #364 for the 5 deferred source-limited/upstream-blocked
+    cohort groups). Remediated all 14 open findings (F-C10S4-DEF-SRC-001 through F-C10S4-DEF-SRC-014)
+    via guarded writer scripts/curate_stage5_review_findings.py across capsule.yaml,
+    carboxysome.yaml, gas_vesicle.yaml, heterocyst.yaml, intracellular_inclusion.yaml,
+    magnetosome.yaml, mycelial_growth.yaml, polyhydroxyalkanoate_granule.yaml,
+    polyphosphate_granule.yaml, prosthecate.yaml, s_layer.yaml, sulfur_globule.yaml,
+    swarming_motility.yaml, and twitching_motility.yaml, and removed the 14 resolved
+    evidence[0] MISSING_SNIPPET entries from conf/evidence_snippet_baseline.tsv. Persisted
+    fresh structured review bundle reviews/structured/20261104T232500Z-cycle10-stage5-remediated-records-review/
+    confirming 0 open findings and verdict pass across all 14 remediated records, regenerated
+    pages/, and preserved all immutable Stage 4 review artifacts untouched.'
