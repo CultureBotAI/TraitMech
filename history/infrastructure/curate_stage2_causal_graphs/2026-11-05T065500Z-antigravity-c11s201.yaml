@@ -1,0 +1,41 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage2_causal_graphs.py
+  slug: curate_stage2_causal_graphs
+session:
+  id: 2026-11-05T065500Z-antigravity-c11s201
+  timestamp: '2026-11-05T06:55:00Z'
+  actors:
+  - type: ai_agent
+    name: claude-code
+    model: claude-opus-4-6
+    agent_tool: antigravity
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/2059
+  prs:
+  - https://github.com/CultureBotAI/TraitMech/pull/2073
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - causal_graphs
+  - discussions
+  - curation_history
+  summary: Curate Cycle 11 Stage 2 causal_graphs for 4 Cohort N traits (acetone_butanol_ethanol_fermentation,
+    citrate_fermentation, selenate_respiration, holdfast)
+  details: Audited all 1,129 eligible TraitRecord YAMLs for Cycle 11 Stage 2 (causal_graphs).
+    Verified 764 existing eligible CLASS records with causal_graphs have 0 new structural
+    errors, 0 new predicate-domain errors, and 0 protein-taxon gaps (167 MECHANISTIC,
+    597 NONMECHANISTIC; 168 MECHANISTIC graphs across the corpus with 1,726/1,726
+    100.0% wired nodes attached). Extended scripts/curate_stage2_causal_graphs.py
+    with Cohort N (4 connected NONMECHANISTIC causal_graphs anchored on distinct verbatim
+    record evidence snippets + OPEN CURATION_TODO <slug>-protein-example-gap discussions
+    for acetone_butanol_ethanol_fermentation, citrate_fermentation, selenate_respiration,
+    and holdfast, resolving each record's <slug>-causal-graph-source-gap). After this
+    batch, 768/1,129 eligible records carry connected schema-valid causal_graphs
+    (167 MECHANISTIC, 601 NONMECHANISTIC), 124 are non-mechanistic vocabulary/property/observation/upper
+    records, and 100% (237/237) of active CLASS records without causal_graphs carry
+    an explicit OPEN KNOWLEDGE_GAP (195) or CURATION_TODO (42) discussion.

@@ -9011,13 +9011,13 @@ window.searchData = [
   "discussion_id": "acetone-butanol-ethanol-fermentation-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for the acidogenic-to-solventogenic pathway enzymes (e.g. CoA-transferase CtfAB, acetoacetate decarboxylase Adc, and aldehyde/alcohol dehydrogenase AdhE) and strain-matched UniProtKB protein accessions before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "acetone-butanol-ethanol fermentation",
   "source_id": "traitmech:000180",
   "source_file": "acetone_butanol_ethanol_fermentation.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#acetone_butanol_ethanol_fermentation_pathway_sketch"
   ],
   "rationale": "The current record carries one overview snippet on Clostridium acetobutylicum acid reassimilation (DOI:10.1073/pnas.1423143112) and one historical industrial fermentation snippet (DOI:10.1002/bit.22003), which cannot ground a multi-edge enzymatic mechanism graph without inventing unsupported edges.",
   "num_experiments": 0,
@@ -9027,6 +9027,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "acetone-butanol-ethanol-fermentation-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Clostridium acetobutylicum ATCC 824 acetoacetate decarboxylase Adc (UniProtKB:P23670), CoA-transferase CtfAB (UniProtKB:P33752 / UniProtKB:P23673), and aldehyde-alcohol dehydrogenase AdhE1 (UniProtKB:P33744) so acetone_butanol_ethanol_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "acetone-butanol-ethanol fermentation",
+  "source_id": "traitmech:000180",
+  "source_file": "acetone_butanol_ethanol_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs#acetone_butanol_ethanol_fermentation_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1073/pnas.1423143112, DOI:10.1002/bit.22003, DOI:10.1186/s13068-016-0605-x) establishes biphasic acidogenic-to-solventogenic fermentation producing acetone, butanol, and ethanol in Clostridium acetobutylicum ATCC 824 (NCBITaxon:272562), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1073/pnas.1423143112"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/acetone_butanol_ethanol_fermentation.html#acetone-butanol-ethanol-fermentation-protein-example-gap"
  },
  {
   "discussion_id": "anaerobic-ammonium-oxidation-xref-gap",
@@ -9357,13 +9378,13 @@ window.searchData = [
   "discussion_id": "citrate-fermentation-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for citrate uptake (CitH/CitS), citrate lyase (CitDEF), and membrane-bound oxaloacetate decarboxylase Na+ pump (OadGAB) before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "citrate fermentation",
   "source_id": "traitmech:000182",
   "source_file": "citrate_fermentation.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#citrate_fermentation_pathway_sketch"
   ],
   "rationale": "The current record carries two growth-and-prevalence snippets in Klebsiella pneumoniae (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) without enzymatic step or intermediate quotes.",
   "num_experiments": 0,
@@ -9373,6 +9394,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "citrate-fermentation-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Klebsiella pneumoniae citrate lyase CitDEF (UniProtKB:P45413 / UniProtKB:P45414 / UniProtKB:P45415) and Na+-translocating oxaloacetate decarboxylase OadGAB (UniProtKB:P13187) so citrate_fermentation_pathway_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "citrate fermentation",
+  "source_id": "traitmech:000182",
+  "source_file": "citrate_fermentation.yaml",
+  "attaches_to": [
+   "causal_graphs#citrate_fermentation_pathway_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/JB.183.18.5248-5256.2001, DOI:10.1186/1471-2180-9-168) establishes anaerobic citrate fermentation via citrate lyase and Na+-translocating oxaloacetate decarboxylase in Klebsiella pneumoniae (NCBITaxon:573), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/JB.183.18.5248-5256.2001"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/citrate_fermentation.html#citrate-fermentation-protein-example-gap"
  },
  {
   "discussion_id": "complete-ammonia-oxidation-xref-gap",
@@ -10024,13 +10066,13 @@ window.searchData = [
   "discussion_id": "selenate-respiration-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for periplasmic respiratory selenate reductase (SerABC or SrdBCA) and selenate-to-selenite reduction stoichiometry before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "selenate respiration",
   "source_id": "traitmech:000202",
   "source_file": "selenate_respiration.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#selenate_respiration_reduction_sketch"
   ],
   "rationale": "The current record carries strain-isolation and terminal-electron-acceptor snippets (DOI:10.1128/aem.60.8.3011-3019.1994, DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011) without enzymatic reductase or selenite-product quotes.",
   "num_experiments": 0,
@@ -10040,6 +10082,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "selenate-respiration-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for periplasmic selenate reductase SerABC in Sedimenticola selenatireducens DSM 17993 (NCBITaxon:1111735) or Thauera selenatis so selenate_respiration_reduction_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "selenate respiration",
+  "source_id": "traitmech:000202",
+  "source_file": "selenate_respiration.yaml",
+  "attaches_to": [
+   "causal_graphs#selenate_respiration_reduction_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/AEM.02737-06, DOI:10.1016/j.syapm.2005.12.011, DOI:10.1111/j.1574-6976.1999.tb00414.x) establishes anaerobic respiratory reduction of selenate as a terminal electron acceptor in Sedimenticola selenatireducens AK4OH1T (DSM 17993, NCBITaxon:1111735), but strain-matched UniProtKB accessions on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1016/j.syapm.2005.12.011"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/metabolism/selenate_respiration.html#selenate-respiration-protein-example-gap"
  },
  {
   "discussion_id": "sulfur-respiration-causal-graph-source-gap",
@@ -11120,13 +11183,13 @@ window.searchData = [
   "discussion_id": "holdfast-causal-graph-source-gap",
   "prompt": "Add primary literature evidence for holdfast polysaccharide biosynthesis/export proteins (HfsDABCHG) and outer-membrane anchoring proteins (HfaABD) before constructing causal_graphs.",
   "kind": "KNOWLEDGE_GAP",
-  "status": "OPEN",
+  "status": "RESOLVED",
   "is_gap": "Knowledge gap",
   "source_name": "holdfast",
   "source_id": "traitmech:000184",
   "source_file": "holdfast.yaml",
   "attaches_to": [
-   "causal_graphs"
+   "causal_graphs#holdfast_polar_adhesion_sketch"
   ],
   "rationale": "The current record carries polar adhesin function and monosaccharide-composition snippets in Caulobacterales (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22) without biosynthetic or anchoring protein quotes.",
   "num_experiments": 0,
@@ -11136,6 +11199,27 @@ window.searchData = [
   ],
   "posed_by": "claude",
   "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-causal-graph-source-gap"
+ },
+ {
+  "discussion_id": "holdfast-protein-example-gap",
+  "prompt": "Add strain-matched UniProtKB protein_examples for Caulobacter vibrioides holdfast synthesis and anchor proteins HfsDAB (UniProtKB:Q9A5V2) and HfaABD so holdfast_polar_adhesion_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.",
+  "kind": "CURATION_TODO",
+  "status": "OPEN",
+  "is_gap": "Other discussion",
+  "source_name": "holdfast",
+  "source_id": "traitmech:000184",
+  "source_file": "holdfast.yaml",
+  "attaches_to": [
+   "causal_graphs#holdfast_polar_adhesion_sketch"
+  ],
+  "rationale": "The record's primary literature (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22) establishes synthesis of the polar polysaccharide holdfast adhesin mediating permanent surface attachment in Caulobacter vibrioides (NCBITaxon:155892), but strain-matched UniProtKB accessions on GENE_OR_PROTEIN nodes must be curated before marking the graph MECHANISTIC.",
+  "num_experiments": 0,
+  "num_evidence": 1,
+  "evidence_refs": [
+   "DOI:10.1128/jb.00276-19"
+  ],
+  "posed_by": "claude",
+  "page_url": "../../pages/traits/morphology/holdfast.html#holdfast-protein-example-gap"
  },
  {
   "discussion_id": "hormogonium-formation-scope-and-hierarchy",
@@ -18338,7 +18422,7 @@ window.searchData = [
  }
 ];
 window.searchMetrics = {
- "total_discussions": 921,
+ "total_discussions": 925,
  "total_knowledge_gaps": 580,
  "total_source_entries": 640,
  "kinds": [
