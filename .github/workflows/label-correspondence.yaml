@@ -60,8 +60,10 @@ jobs:
   label-correspondence:
     # Pinned to a claw commit, not a branch: a moving ref would change this
     # gate with no commit in this repository to show for it.
-    # Keep this at the same immutable CLAW revision as scripts/.vendored_canon_ref.
-    uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@c8b8f89ecf29574d7e24f6c65cfd925aefbdd007
+    # Keep this at the same immutable CLAW revision as scripts/.vendored_canon_ref:
+    # tests/test_label_correspondence_pin.py fails when they differ, and claw's
+    # `kg-microbe-governance pin-coupling` names this file on a re-pin (#2067).
+    uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@76c1ebeea3fc7f80bf1abe044688f298f390cfac
     with:
       python-version: "3.13"
       # No prepare-recipe: the mappings this gate reads are committed, so
