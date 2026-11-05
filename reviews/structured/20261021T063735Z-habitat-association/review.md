@@ -1,0 +1,1213 @@
+# Scientific and source review of habitat association (traitmech:000047)
+
+- Review: 20261021T063735Z-habitat-association
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-20T07:31:48Z
+- Finished UTC: 2026-10-21T06:37:35Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The broad ecological identity, phenotype parent and marine example are supported. All ten nodes and eight edges were assessed. Two major findings concern process-regulation predicates applied to environmental conditions and groundwater-specific inferred associations expressed as general causal effects. Three minor findings concern a classificatory relation expressed as causation, gene-inventory evidence described as protein enrichment, and the lack of a human-acceptance link in inspected target-specific provenance. The review retains the source studies’ context and measurement limits, without inventing a universal mechanism for this NONMECHANISTIC class.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Sixth target in batch002, selected in lexicographic path order from the validated inventory union. One entire previously uncovered TraitRecord.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f25e2af0b38a8303b13f627a9a5c33b36af4b3d2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000047 | data/traits/ecology/habitat_association.yaml | maintained | habitat association |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000047 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000047 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000047 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | traitmech:000047 | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| Initial full-product validation | failed | False | traitmech:000047 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000047 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000047 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | traitmech:000047 | The selected record validates. |
+| Focused strict validation | passed | True | traitmech:000047 | One file scanned; zero strict errors. |
+| Focused source snippet verification | passed | True | traitmech:000047 | No snippets are present: zero occurrences checked over zero references. This passing command does not verify the bibliography or evidence notes; those were inspected separately. |
+| Expression-module applicability | not_applicable | False | traitmech:000047 | The public catalogue snapshot has no Pelagibacter dataset. The osmolyte node is an explicitly broad, unassigned aggregate; a module from an unrelated organism would not verify the lake metagenome claim. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identifier, label, synonym, polarity and kind
+
+identity: supported. Targets: traitmech:000047.
+
+One broad positive ecological class is identified. The related niche alias is not asserted to be exact equivalence to an environmental-system class. The fallback and proposed METPO home are consistent.
+
+### Native checklist: definition and source
+
+evidence: supported. Targets: traitmech:000047.
+
+The ecological classification and habitat-related biogeographic structure are supported. Examples in the definition are illustrative; the record does not require every organism to occupy only one habitat.
+
+### Native checklist: strictly broader phenotype parent
+
+consistency: supported. Targets: traitmech:000047.
+
+METPO phenotype is active and broader. The actual w3id namespace was checked after correcting an initial OBO-style lookup; the failed initial lookup was never treated as term absence.
+
+### Native checklist: category and declared graph scope
+
+representation: supported. Targets: traitmech:000047.
+
+ECOLOGY/CLASS and NONMECHANISTIC fit a broad habitat classification. Generic contextual protein information does not require a token UniProt example or an invented universal causal chain.
+
+### Native checklist: canonical strain identity and source scope
+
+evidence: supported. Targets: traitmech:000047.
+
+The taxonomy identifier and genome paper support HTCC1062 as a marine water-column example. The original isolation paper separately corroborates Oregon provenance. No genome-wide biosynthetic interpretation is imported into this habitat claim.
+
+### Native checklist: all five references and absent quotation slots
+
+evidence: concern. Targets: traitmech:000047.
+
+All references resolve and substantive source text was inspected at the stated level. No record quotations were available for the automated verifier. Context and evidence type must remain explicit for the groundwater and lake branches.
+
+### Native checklist: all ten nodes and eight edges
+
+graph: concern. Targets: traitmech:000047.
+
+Node identities and endpoints are coherent, but three grounded process-regulation edges misuse environmental conditions as processes and overstate source-scoped inferred effects. Other contextual edges need narrower explanatory wording rather than a new mechanism.
+
+Zero-based ledger: nodes0–3 represent the trait, habitat and community qualities; node1 has appropriate ENVO grounding. Nodes4 and8 describe environmental conditions. Nodes5–7 describe ecological assembly processes, but node6 must not turn a model residual into a pure direct measurement. Node9 is a permitted generic GENE_OR_PROTEIN aggregate. Edge0 describes classification assignment using a causal relation; edge1 appropriately states association, with soil-scoped support; edge2 has broad environmental structuring support from Martiny. Edges3–5 use process-regulation IDs with a condition subject and should retain groundwater scope, relative inferred contributions and limitations. Edge6 has lake-specific salinity/community support; it does not establish salinity as a primary regulator of all aquatic communities. Edge7 has metagenomic gene-content support, not measured protein enrichment. The local ungrounded predicates are not themselves invalid schema values.
+
+### Native checklist: discussions and datasets
+
+completeness: supported. Targets: traitmech:000047.
+
+The target contains no discussion placeholders or dataset claims. Those optional slots need not be filled to review this broad class. Underlying study data are source context, not an unasserted record accession.
+
+### Native checklist: mapping status and history
+
+provenance: concern. Targets: traitmech:000047.
+
+The AI-assisted history and strict validation are explicit, but the inspected target-specific provenance lacks a human-acceptance link required for REVIEWED. A validated review bundle does not supply that approval.
+
+## Findings
+
+### condition-process-grounding: Environmental conditions are grounded as process-to-process regulators
+
+major / open / confirmed; issue key: habitat-association-condition-process-grounding.
+
+Edges3–5 use RO:0002213 or RO:0002212 with environmental_stress, described as pH, salinity or contaminant load. These relations inherit an explicit process domain and range and describe regulation of process execution. The condition node is not an identified executing process. This is an external semantic mismatch, not a claim that local YAML validation or a reasoner failed.
+
+### groundwater-inference-scope: General causal wording loses groundwater inference and applicability limits
+
+major / open / confirmed; issue key: habitat-association-groundwater-inference-scope.
+
+Edges3–5 assert broad increases/decreases in assembly processes. The evidence notes correctly name the groundwater study and correlations, but the graph descriptions and grounded causal relations do not retain those limits. The study estimates relative contributions, finds a heterogeneous-selection trend rather than a significant homogeneous-selection trend, and treats drift as a residual composite. Its negative dispersal-limitation result opposes its general prediction and depends on local transport context. The conclusion explicitly reserves applicability to other ecosystems and stress regimes for further investigation.
+
+### classification-causal-wording: A classification assignment is expressed as occurrence causation
+
+minor / open / confirmed; issue key: habitat-association-classification-causal-wording.
+
+Edge0 says the primary habitat sets the classification while using biolink:causes. Its broad endpoint types are permitted, but the classificatory description is not the occurrence/generation relation defined by that predicate. The Martiny ecological context does not resolve that distinction.
+
+### lake-encoded-capacity-wording: The lake branch needs measured-quantity and context precision
+
+minor / open / confirmed; issue key: habitat-association-lake-encoded-capacity-wording.
+
+Edges6–7 describe aquatic regulation and protein-system enrichment more broadly than the Tibetan-lake metagenome evidence. The existing note correctly refers to genes, which limits the defect: the record should consistently describe encoded capacity rather than imply measured protein enrichment, preserve lake context and avoid implying every osmolyte family changes in the same direction.
+
+### reviewed-signoff-not-documented: The inspected REVIEWED provenance lacks a human-acceptance link
+
+minor / open / confirmed; issue key: habitat-association-reviewed-signoff-not-documented.
+
+Seven AI-assisted events document curation and promotion to REVIEWED, but the inspected target-specific local provenance does not identify the human acceptance required by the checklist. This is a bounded documentary gap and does not prove that private or remote approval never occurred.
+
+## Recommended Actions And Acceptance Checks
+
+### align-grounding
+
+Reconcile the external relation meanings with the existing condition and process concepts.
+
+- Inspect inherited definitions and domain/range, including the shared mapping rows that produced the assignments.
+- Do not invent an executing process or relabel a condition solely to preserve a preferred predicate.
+- Any later authorized curation uses guarded writes, appended history, focused validation and applicable graph/product/qc gates.
+
+### retain-study-boundaries
+
+Represent the groundwater results with their measured/inferred quantity, study context and caveats.
+
+- Preserve the distinction between association and causal regulation, heterogeneous and homogeneous selection, and inferred residual drift versus directly measured demography.
+- Keep the observed dispersal-limitation result scoped to the study and acknowledge its contrast with the theoretical prediction.
+- Recheck every revised statement against the cited Results and Discussion; no new mechanistic steps are required.
+
+### clarify-contextual-language
+
+Align the classificatory and lake-branch prose with what the sources actually describe.
+
+- Distinguish assignment to a habitat class from biological occurrence causation.
+- Keep metagenomic encoded capacity distinct from protein abundance, and retain Tibetan-lake context and family-specific exceptions.
+- Preserve the NONMECHANISTIC scope and explicit aggregate status.
+
+### document-status-basis
+
+Locate and document human acceptance or leave the status question explicitly unresolved.
+
+- Automated validation, AI self-review and provider prose do not identify a human approver.
+- Any status/history correction requires separately authorized curation; no existing immutable history is rewritten.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json | context_only | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-habitat_association-validate | /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-validate.log; Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:52Z; metadata habitat_association-validate.json | context_only | The selected record validates. |
+| check-habitat_association-strict | /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-strict.log; Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:53Z; metadata habitat_association-strict.json | context_only | One file scanned; zero strict errors. |
+| check-habitat_association-snippets | /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-snippets.log; Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:49Z; metadata habitat_association-snippets.json | context_only | No snippets are present: zero occurrences checked over zero references. This passing command does not verify the bibliography or evidence notes; those were inspected separately. |
+| record | data/traits/ecology/habitat_association.yaml; Complete record including all nodes, edges, example and seven curation events | partial | The record defines a habitat classification. Its declared NONMECHANISTIC scope permits contextual ecological relations and an explicitly label-only protein aggregate. |
+| identity | data/raw/metpo.owl; Complete captured literal search, including obsolete forms; exact w3id parent entity; v5 proposal row METPO:1007646 | supports | No exact normalized habitat association or niche association match was found in the complete captured METPO snapshot. The local fallback and upstream proposal agree. Parent METPO:1000059 is active phenotype and is broader than this ecological classification. |
+| habitat-grounding | ENVO:01000739; Exact identifier, definition, label and subclass statements | supports | The active habitat term denotes an environmental system supporting an ecological population. This is a suitable grounding for the habitat node, distinct from the organism’s habitat-association trait. |
+| bibliography | https://www.ebi.ac.uk/europepmc/webservices/rest/search; Five exact DOI/PMID queries with individual request receipts | supports | All five cited references resolve to the expected publications. Metadata resolution alone does not prove each edge. The source ledger distinguishes abstracts, full XML and subsequent author manuscripts. |
+| martiny | https://doi.org/10.1038/nrmicro1341; Indexed abstract, PMID16415926 | supports | The review supports biogeographic patterning of free-living microbes and an environmental contribution to spatial variation. It supports the ecological definition and community-structure context, without establishing that a classification assignment is a biological causal event. |
+| fierer | https://www.fiererlab.org/s/Fierer_Nat_Rev_Micro_2017.pdf; Author PDF page1, Structure of the soil microbiome; page2 Figure1 | supports | Different soil environments and microenvironments contain distinct microbial communities. The source supports a soil example of environment-specific membership, not a mandatory single discrete habitat for every organism. |
+| groundwater | https://www.osti.gov/servlets/purl/2281000; Author manuscript pages5–6 lines146–161, page8 lines234–256, and pages11–12 lines322–364 | partial | The Oak Ridge groundwater study estimates relative assembly-process contributions from community data. Heterogeneous selection increases while homogeneous selection has no significant trend. The inferred residual drift fraction can include other weak processes. The observed negative dispersal-limitation relationship opposes the general prediction and is interpreted through local transport context. The conclusion explicitly requires testing other ecosystems and stress conditions. |
+| lakes | https://pmc.ncbi.nlm.nih.gov/articles/PMC11662823/; Results Sec4 second paragraph; Sec6 osmolyte paragraph; Discussion second paragraph | partial | The Tibetan lake metagenome study supports salinity-associated differences in taxonomic composition and encoded metabolic capacity. Many osmolyte transport/synthesis genes are more represented in saline lakes, with family-specific exceptions. It does not measure increased protein abundance. Within-lake spatial and temporal variation is explicitly outside the analysis. |
+| example | https://zjubiolab.zju.edu.cn/shiji/userfiles/lab-paper/000321-20110310235305.pdf; Science309 page1242, first body paragraph; browser-inspected primary-paper copy | partial | The paper names strain HTCC1062 and describes the marine, unattached water-column context. That supports the example’s core habitat claim. The exact Oregon isolation detail was not confirmed in this inspected main-text passage; the uninspected supplement is not assumed to lack it. Browser access succeeded while direct download failed502; no failed-response hash is claimed as an article hash. |
+| isolation | https://doi.org/10.1038/nature00917; University-hosted primary PDF: Nature418 pages630–632, source-water locality and strain identification | supports | The original isolation paper separately corroborates Oregon coastal source water and HTCC1062 among the isolates. This supports the precise locality without claiming it was checked in the genome paper’s supplement. Browser retrieval began at the recorded time; the source is https://www.its.caltech.edu/~bi1/Bi1__Micro-_to_Macro-Biology/Additional_Readings_files/Cultivation%20of%20the%20ubiquitous%20SAR11%20marine%20bacterioplankton%20clade.pdf. |
+| taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335992; Exact taxonomy response | supports | NCBITaxon:335992 resolves to Candidatus Pelagibacter ubique HTCC1062, matching the strain-level example. |
+| relations | Cached authoritative RO database and Biolink model; RO:0002212 and RO:0002213 with recursive superproperties; Biolink causes and inherited relation slots | partial | Both RO predicates inherit process-to-process regulation through RO:0002211. Biolink causes instead has broad named-thing endpoints, but expresses occurrence/generation causation. Therefore the RO issue concerns endpoint meaning and inherited semantics, while edge0 is a classificatory wording issue, not a formal material/process typing error. |
+| owners | mappings/predicate_grounding.tsv; scripts/backfill_canonical_examples_444.py; Mapping rows61 and65; habitat_association example entry; target curation_history | partial | The target history traces the three RO assignments to the shared predicate table, whose broad mapping rows lack endpoint restrictions. The canonical-example writer preserves the current strain and note. Any future correction belongs in maintained inputs, with guarded writes and new history; this review changes neither. |
+| model | .claude/skills/curate-yaml-record/references/review-checklist.md; Evidence standard, causal graph and status/audit rows; schema node meanings and grounding policy | partial | Association does not establish causation. ENVIRONMENTAL_FACTOR denotes an exposure or condition. Broad NONMECHANISTIC records may retain reviewed label-only protein aggregates without token examples. REVIEWED requires human sign-off. |
+| graph-shape | Local read-only graph analysis; All ten nodes and eight edges | supports | All graph endpoints resolve. Missing universal mechanisms and disconnected contextual components are not automatically defects under the declared NONMECHANISTIC scope. |
+| expression-catalogue | https://imodulondb.org/api/datasets; Previously inspected public catalogue snapshot | context_only | The catalogue has no Pelagibacter entry. This is a bounded applicability check, not negative biological evidence. |
+| search | Local target provenance and identity/owner searches; Ignored-inclusive repository search and target-named source/history inspection | partial | The target documents seven AI-assisted events, including promotion to REVIEWED. No human-acceptance link is identified in the inspected target-specific record or research text. Broad search hits about other reviewed records are not counted as target acceptance. Private and remote approvals were not exhaustively searched. |
+
+## Limits And Additional Notes
+
+- Martiny was inspected through its indexed abstract; the review does not claim complete full-paper verification.
+- The genome main text supports the strain and marine habitat; the exact Oregon locality is separately corroborated by the original isolation paper. The genome supplement was not inspected. The genome browser-access timestamp records the end of the observed retrieval window06:34:33–06:35:14UTC, not a fabricated exact request time.
+- Direct genome-PDF download failed502; successful browser source inspection is recorded separately without presenting a failed response as an article snapshot.
+- The focused snippet verifier selected zero snippets. Its exit0 is not scientific verification of the five cited references.
+- Groundwater and lake measurements are ecological study context, not organism-wide universal mechanisms or direct protein-expression evidence.
+- Inherited ontology constraints were inspected semantically; no formal OWL inconsistency or local validation failure is asserted.
+- Earlier full-corpus checks are retained at the same unchanged scientific source base, including their baselines, superseded failures and product-adapter skips.
+- No human scientific sign-off or status promotion is supplied by this review.
+- Native input capture preceded assessment. All28 captured input hashes were rechecked unchanged on continuation.
+- Independent read-only source and ontology checks informed the final manual assessment. Subagent prose is not treated as primary evidence; source URLs, inspected locators and receipts are recorded.
+- Only the new immutable review bundle is written. Scientific records and their maintained writers, mappings, proposals and history are unchanged.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T063735Z-habitat-association
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of habitat association (traitmech:000047)
+started_at: '2026-10-20T07:31:48Z'
+finished_at: '2026-10-21T06:37:35Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The broad ecological identity, phenotype parent and marine example are supported.
+  All ten nodes and eight edges were assessed. Two major findings concern process-regulation
+  predicates applied to environmental conditions and groundwater-specific inferred
+  associations expressed as general causal effects. Three minor findings concern a
+  classificatory relation expressed as causation, gene-inventory evidence described
+  as protein enrichment, and the lack of a human-acceptance link in inspected target-specific
+  provenance. The review retains the source studies’ context and measurement limits,
+  without inventing a universal mechanism for this NONMECHANISTIC class.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/habitat_association.yaml
+    sha256: 623d18cf295c01782024055b4dca534217f52d3ef18d46f086af27fe504bbd2a
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000047
+  path: data/traits/ecology/habitat_association.yaml
+  label: habitat association
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/backfill_canonical_examples_444.py
+    role: Maintained canonical-example backfill entry
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained reusable node grounding
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Sixth target in batch002, selected in lexicographic path order from the
+    validated inventory union. One entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000047
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000047
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000047
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: habitat_association-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just validate data/traits/ecology/habitat_association.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-habitat_association-validate
+- check_id: habitat_association-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just validate-strict data/traits/ecology/habitat_association.yaml --out
+    /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-habitat_association-strict
+- check_id: habitat_association-snippets
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000047
+  command: just verify-snippets --record data/traits/ecology/habitat_association.yaml
+    --out /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'No snippets are present: zero occurrences checked over zero references.
+    This passing command does not verify the bibliography or evidence notes; those
+    were inspected separately.'
+  evidence_ids:
+  - check-habitat_association-snippets
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000047
+  summary: The public catalogue snapshot has no Pelagibacter dataset. The osmolyte
+    node is an explicitly broad, unassigned aggregate; a module from an unrelated
+    organism would not verify the lake metagenome claim.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-habitat_association-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-validate.log
+  locator: Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:52Z; metadata habitat_association-validate.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: ce1df5164a7c945967874555841d52e90bad2297ce0c83f354ef5c12e541fb1d
+- evidence_id: check-habitat_association-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-strict.log
+  locator: Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:53Z; metadata habitat_association-strict.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 7cf979c2e59497260c5436a151c346b02d3c5f7bde662b8edc9d0a549f8a7239
+- evidence_id: check-habitat_association-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/habitat_association-snippets.log
+  locator: Executed 2026-10-20T07:32:49Z through 2026-10-20T07:32:49Z; metadata habitat_association-snippets.json
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: context_only
+  summary: 'No snippets are present: zero occurrences checked over zero references.
+    This passing command does not verify the bibliography or evidence notes; those
+    were inspected separately.'
+  snapshot_sha256: fbcca2638f237f74bbb7f5134bc0506a6eb04051a1a94987404e3b744c473b57
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/habitat_association.yaml
+  locator: Complete record including all nodes, edges, example and seven curation
+    events
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: partial
+  summary: The record defines a habitat classification. Its declared NONMECHANISTIC
+    scope permits contextual ecological relations and an explicitly label-only protein
+    aggregate.
+  snapshot_sha256: 623d18cf295c01782024055b4dca534217f52d3ef18d46f086af27fe504bbd2a
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: Complete captured literal search, including obsolete forms; exact w3id
+    parent entity; v5 proposal row METPO:1007646
+  accessed_at: '2026-10-20T07:33:36Z'
+  support: supports
+  summary: No exact normalized habitat association or niche association match was
+    found in the complete captured METPO snapshot. The local fallback and upstream
+    proposal agree. Parent METPO:1000059 is active phenotype and is broader than this
+    ecological classification.
+  snapshot_sha256: c05f07ed7ae778f69583529e12795b47e92e988b03970915991c3f45f3bebd23
+- evidence_id: habitat-grounding
+  kind: authority
+  reference: ENVO:01000739
+  locator: Exact identifier, definition, label and subclass statements
+  accessed_at: '2026-10-20T07:33:13Z'
+  support: supports
+  summary: The active habitat term denotes an environmental system supporting an ecological
+    population. This is a suitable grounding for the habitat node, distinct from the
+    organism’s habitat-association trait.
+  snapshot_sha256: dbcd4d54e96aaad839a33f309e82934bc635087bf202e7b814dd47e57a1c4cd3
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: Five exact DOI/PMID queries with individual request receipts
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: supports
+  summary: All five cited references resolve to the expected publications. Metadata
+    resolution alone does not prove each edge. The source ledger distinguishes abstracts,
+    full XML and subsequent author manuscripts.
+  snapshot_sha256: 51b8b9d270ae4edf0f3c89980b4644bf6037ba5671ea2a6dcd6e2c2059e9dafa
+- evidence_id: martiny
+  kind: primary_source
+  reference: https://doi.org/10.1038/nrmicro1341
+  locator: Indexed abstract, PMID16415926
+  accessed_at: '2026-10-20T07:32:51Z'
+  support: supports
+  summary: The review supports biogeographic patterning of free-living microbes and
+    an environmental contribution to spatial variation. It supports the ecological
+    definition and community-structure context, without establishing that a classification
+    assignment is a biological causal event.
+  snapshot_sha256: 3333359504e29c0fc00f334880d127abf87ecae70ce9f559d055e85285088cf6
+- evidence_id: fierer
+  kind: primary_source
+  reference: https://www.fiererlab.org/s/Fierer_Nat_Rev_Micro_2017.pdf
+  locator: Author PDF page1, Structure of the soil microbiome; page2 Figure1
+  accessed_at: '2026-10-21T06:34:33Z'
+  support: supports
+  summary: Different soil environments and microenvironments contain distinct microbial
+    communities. The source supports a soil example of environment-specific membership,
+    not a mandatory single discrete habitat for every organism.
+  snapshot_sha256: eb3930ba598e301f098d61bab6f5f4a0047c8b1c55726618cce1494621ac31d4
+- evidence_id: groundwater
+  kind: primary_source
+  reference: https://www.osti.gov/servlets/purl/2281000
+  locator: Author manuscript pages5–6 lines146–161, page8 lines234–256, and pages11–12
+    lines322–364
+  accessed_at: '2026-10-20T07:34:58Z'
+  support: partial
+  summary: The Oak Ridge groundwater study estimates relative assembly-process contributions
+    from community data. Heterogeneous selection increases while homogeneous selection
+    has no significant trend. The inferred residual drift fraction can include other
+    weak processes. The observed negative dispersal-limitation relationship opposes
+    the general prediction and is interpreted through local transport context. The
+    conclusion explicitly requires testing other ecosystems and stress conditions.
+  snapshot_sha256: ecf78891a4e72ad99c4fd80d56dd56480aa951feb6271e0a0de88159f6eae88b
+- evidence_id: lakes
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11662823/
+  locator: Results Sec4 second paragraph; Sec6 osmolyte paragraph; Discussion second
+    paragraph
+  accessed_at: '2026-10-20T07:32:52Z'
+  support: partial
+  summary: The Tibetan lake metagenome study supports salinity-associated differences
+    in taxonomic composition and encoded metabolic capacity. Many osmolyte transport/synthesis
+    genes are more represented in saline lakes, with family-specific exceptions. It
+    does not measure increased protein abundance. Within-lake spatial and temporal
+    variation is explicitly outside the analysis.
+  snapshot_sha256: 24e5553763be03d0e06ab544ee650d2ed8ce13dd758f69f0ef0873e9cc95ba1d
+- evidence_id: example
+  kind: primary_source
+  reference: https://zjubiolab.zju.edu.cn/shiji/userfiles/lab-paper/000321-20110310235305.pdf
+  locator: Science309 page1242, first body paragraph; browser-inspected primary-paper
+    copy
+  accessed_at: '2026-10-21T06:35:14Z'
+  support: partial
+  summary: The paper names strain HTCC1062 and describes the marine, unattached water-column
+    context. That supports the example’s core habitat claim. The exact Oregon isolation
+    detail was not confirmed in this inspected main-text passage; the uninspected
+    supplement is not assumed to lack it. Browser access succeeded while direct download
+    failed502; no failed-response hash is claimed as an article hash.
+- evidence_id: isolation
+  kind: primary_source
+  reference: https://doi.org/10.1038/nature00917
+  locator: 'University-hosted primary PDF: Nature418 pages630–632, source-water locality
+    and strain identification'
+  accessed_at: '2026-10-21T06:35:44Z'
+  support: supports
+  summary: The original isolation paper separately corroborates Oregon coastal source
+    water and HTCC1062 among the isolates. This supports the precise locality without
+    claiming it was checked in the genome paper’s supplement. Browser retrieval began
+    at the recorded time; the source is https://www.its.caltech.edu/~bi1/Bi1__Micro-_to_Macro-Biology/Additional_Readings_files/Cultivation%20of%20the%20ubiquitous%20SAR11%20marine%20bacterioplankton%20clade.pdf.
+- evidence_id: taxon
+  kind: authority
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335992
+  locator: Exact taxonomy response
+  accessed_at: '2026-10-20T07:34:58Z'
+  support: supports
+  summary: NCBITaxon:335992 resolves to Candidatus Pelagibacter ubique HTCC1062, matching
+    the strain-level example.
+  snapshot_sha256: f9b6832625193d78c32e112d254e4e2389c4fab30f8aae38a4c57d96424d4491
+- evidence_id: relations
+  kind: authority
+  reference: Cached authoritative RO database and Biolink model
+  locator: RO:0002212 and RO:0002213 with recursive superproperties; Biolink causes
+    and inherited relation slots
+  accessed_at: '2026-10-21T06:34:59Z'
+  support: partial
+  summary: Both RO predicates inherit process-to-process regulation through RO:0002211.
+    Biolink causes instead has broad named-thing endpoints, but expresses occurrence/generation
+    causation. Therefore the RO issue concerns endpoint meaning and inherited semantics,
+    while edge0 is a classificatory wording issue, not a formal material/process typing
+    error.
+  snapshot_sha256: a936f433ca2d2d695cfe280e6142815ab85938289489a44b44a46a9048e347e9
+- evidence_id: owners
+  kind: record_content
+  reference: mappings/predicate_grounding.tsv; scripts/backfill_canonical_examples_444.py
+  locator: Mapping rows61 and65; habitat_association example entry; target curation_history
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: partial
+  summary: The target history traces the three RO assignments to the shared predicate
+    table, whose broad mapping rows lack endpoint restrictions. The canonical-example
+    writer preserves the current strain and note. Any future correction belongs in
+    maintained inputs, with guarded writes and new history; this review changes neither.
+- evidence_id: model
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Evidence standard, causal graph and status/audit rows; schema node meanings
+    and grounding policy
+  accessed_at: '2026-10-21T06:37:35Z'
+  support: partial
+  summary: Association does not establish causation. ENVIRONMENTAL_FACTOR denotes
+    an exposure or condition. Broad NONMECHANISTIC records may retain reviewed label-only
+    protein aggregates without token examples. REVIEWED requires human sign-off.
+- evidence_id: graph-shape
+  kind: validation
+  reference: Local read-only graph analysis
+  locator: All ten nodes and eight edges
+  accessed_at: '2026-10-20T07:35:17Z'
+  support: supports
+  summary: All graph endpoints resolve. Missing universal mechanisms and disconnected
+    contextual components are not automatically defects under the declared NONMECHANISTIC
+    scope.
+  snapshot_sha256: 258e591b7ebd59f00c7374b361b504b1ad2347d8f6bf6c688484d0dafd34ece7
+- evidence_id: expression-catalogue
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Previously inspected public catalogue snapshot
+  accessed_at: '2026-10-20T07:11:59Z'
+  support: context_only
+  summary: The catalogue has no Pelagibacter entry. This is a bounded applicability
+    check, not negative biological evidence.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: search
+  kind: search
+  reference: Local target provenance and identity/owner searches
+  locator: Ignored-inclusive repository search and target-named source/history inspection
+  accessed_at: '2026-10-21T06:34:42Z'
+  support: partial
+  summary: The target documents seven AI-assisted events, including promotion to REVIEWED.
+    No human-acceptance link is identified in the inspected target-specific record
+    or research text. Broad search hits about other reviewed records are not counted
+    as target acceptance. Private and remote approvals were not exhaustively searched.
+  snapshot_sha256: 0ea3c11e27b2f5d7f949753a4ae36c7de8d14faec44c0938a10037c73a036798
+  search_scope: rg --no-ignore --hidden over data/traits, scripts, history, mappings,
+    proposals, conf and DO_NOT_WORK.md for identifier/label/slug; additional ignored-inclusive
+    history/reviews/research target-reference search with acceptance keywords. The
+    finding is confined to target-specific provenance, not all matching files or external
+    approvals. The target is not the excluded spore_germination record.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, synonym, polarity and kind'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: One broad positive ecological class is identified. The related niche alias
+    is not asserted to be exact equivalence to an environmental-system class. The
+    fallback and proposed METPO home are consistent.
+  evidence_ids:
+  - record
+  - identity
+  - habitat-grounding
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and source'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: The ecological classification and habitat-related biogeographic structure
+    are supported. Examples in the definition are illustrative; the record does not
+    require every organism to occupy only one habitat.
+  evidence_ids:
+  - record
+  - martiny
+  - fierer
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader phenotype parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: METPO phenotype is active and broader. The actual w3id namespace was checked
+    after correcting an initial OBO-style lookup; the failed initial lookup was never
+    treated as term absence.
+  evidence_ids:
+  - record
+  - identity
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: category and declared graph scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: ECOLOGY/CLASS and NONMECHANISTIC fit a broad habitat classification. Generic
+    contextual protein information does not require a token UniProt example or an
+    invented universal causal chain.
+  evidence_ids:
+  - record
+  - model
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: canonical strain identity and source scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: The taxonomy identifier and genome paper support HTCC1062 as a marine water-column
+    example. The original isolation paper separately corroborates Oregon provenance.
+    No genome-wide biosynthetic interpretation is imported into this habitat claim.
+  evidence_ids:
+  - record
+  - example
+  - taxon
+  - isolation
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: all five references and absent quotation slots'
+  outcome: concern
+  target_ids:
+  - traitmech:000047
+  summary: All references resolve and substantive source text was inspected at the
+    stated level. No record quotations were available for the automated verifier.
+    Context and evidence type must remain explicit for the groundwater and lake branches.
+  evidence_ids:
+  - bibliography
+  - martiny
+  - fierer
+  - groundwater
+  - lakes
+  - example
+  - check-habitat_association-snippets
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all ten nodes and eight edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000047
+  summary: Node identities and endpoints are coherent, but three grounded process-regulation
+    edges misuse environmental conditions as processes and overstate source-scoped
+    inferred effects. Other contextual edges need narrower explanatory wording rather
+    than a new mechanism.
+  evidence_ids:
+  - record
+  - relations
+  - groundwater
+  - lakes
+  - martiny
+  - fierer
+  - habitat-grounding
+  - graph-shape
+  - model
+  details: 'Zero-based ledger: nodes0–3 represent the trait, habitat and community
+    qualities; node1 has appropriate ENVO grounding. Nodes4 and8 describe environmental
+    conditions. Nodes5–7 describe ecological assembly processes, but node6 must not
+    turn a model residual into a pure direct measurement. Node9 is a permitted generic
+    GENE_OR_PROTEIN aggregate. Edge0 describes classification assignment using a causal
+    relation; edge1 appropriately states association, with soil-scoped support; edge2
+    has broad environmental structuring support from Martiny. Edges3–5 use process-regulation
+    IDs with a condition subject and should retain groundwater scope, relative inferred
+    contributions and limitations. Edge6 has lake-specific salinity/community support;
+    it does not establish salinity as a primary regulator of all aquatic communities.
+    Edge7 has metagenomic gene-content support, not measured protein enrichment. The
+    local ungrounded predicates are not themselves invalid schema values.'
+- assessment_id: discussion
+  area: completeness
+  topic: 'Native checklist: discussions and datasets'
+  outcome: supported
+  target_ids:
+  - traitmech:000047
+  summary: The target contains no discussion placeholders or dataset claims. Those
+    optional slots need not be filled to review this broad class. Underlying study
+    data are source context, not an unasserted record accession.
+  evidence_ids:
+  - record
+  - model
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: mapping status and history'
+  outcome: concern
+  target_ids:
+  - traitmech:000047
+  summary: The AI-assisted history and strict validation are explicit, but the inspected
+    target-specific provenance lacks a human-acceptance link required for REVIEWED.
+    A validated review bundle does not supply that approval.
+  evidence_ids:
+  - record
+  - owners
+  - search
+  - model
+  - check-validate-history
+findings:
+- finding_id: condition-process-grounding
+  issue_key: habitat-association-condition-process-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Environmental conditions are grounded as process-to-process regulators
+  description: Edges3–5 use RO:0002213 or RO:0002212 with environmental_stress, described
+    as pH, salinity or contaminant load. These relations inherit an explicit process
+    domain and range and describe regulation of process execution. The condition node
+    is not an identified executing process. This is an external semantic mismatch,
+    not a claim that local YAML validation or a reasoner failed.
+  target_ids:
+  - traitmech:000047
+  field_paths:
+  - causal_graphs[0].nodes[4]
+  - causal_graphs[0].edges[3].predicate_id
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  evidence_ids:
+  - record
+  - relations
+  - model
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; later changes require a separately scoped mapping
+      audit
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: groundwater-inference-scope
+  issue_key: habitat-association-groundwater-inference-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: General causal wording loses groundwater inference and applicability limits
+  description: Edges3–5 assert broad increases/decreases in assembly processes. The
+    evidence notes correctly name the groundwater study and correlations, but the
+    graph descriptions and grounded causal relations do not retain those limits. The
+    study estimates relative contributions, finds a heterogeneous-selection trend
+    rather than a significant homogeneous-selection trend, and treats drift as a residual
+    composite. Its negative dispersal-limitation result opposes its general prediction
+    and depends on local transport context. The conclusion explicitly reserves applicability
+    to other ecosystems and stress regimes for further investigation.
+  target_ids:
+  - traitmech:000047
+  field_paths:
+  - causal_graphs[0].nodes[6]
+  - causal_graphs[0].edges[3]
+  - causal_graphs[0].edges[4]
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - record
+  - groundwater
+  - model
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: classification-causal-wording
+  issue_key: habitat-association-classification-causal-wording
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: A classification assignment is expressed as occurrence causation
+  description: Edge0 says the primary habitat sets the classification while using
+    biolink:causes. Its broad endpoint types are permitted, but the classificatory
+    description is not the occurrence/generation relation defined by that predicate.
+    The Martiny ecological context does not resolve that distinction.
+  target_ids:
+  - traitmech:000047
+  field_paths:
+  - causal_graphs[0].edges[0]
+  evidence_ids:
+  - record
+  - relations
+  - martiny
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: lake-encoded-capacity-wording
+  issue_key: habitat-association-lake-encoded-capacity-wording
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The lake branch needs measured-quantity and context precision
+  description: 'Edges6–7 describe aquatic regulation and protein-system enrichment
+    more broadly than the Tibetan-lake metagenome evidence. The existing note correctly
+    refers to genes, which limits the defect: the record should consistently describe
+    encoded capacity rather than imply measured protein enrichment, preserve lake
+    context and avoid implying every osmolyte family changes in the same direction.'
+  target_ids:
+  - traitmech:000047
+  field_paths:
+  - causal_graphs[0].edges[6].description
+  - causal_graphs[0].edges[7].description
+  - causal_graphs[0].nodes[9]
+  evidence_ids:
+  - record
+  - lakes
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: habitat-association-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The inspected REVIEWED provenance lacks a human-acceptance link
+  description: Seven AI-assisted events document curation and promotion to REVIEWED,
+    but the inspected target-specific local provenance does not identify the human
+    acceptance required by the checklist. This is a bounded documentary gap and does
+    not prove that private or remote approval never occurred.
+  target_ids:
+  - traitmech:000047
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - owners
+  - model
+  - search
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: align-grounding
+  description: Reconcile the external relation meanings with the existing condition
+    and process concepts.
+  finding_ids:
+  - condition-process-grounding
+  target_ids:
+  - traitmech:000047
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; later changes require a separately scoped mapping
+      audit
+  acceptance_checks:
+  - Inspect inherited definitions and domain/range, including the shared mapping rows
+    that produced the assignments.
+  - Do not invent an executing process or relabel a condition solely to preserve a
+    preferred predicate.
+  - Any later authorized curation uses guarded writes, appended history, focused validation
+    and applicable graph/product/qc gates.
+- action_id: retain-study-boundaries
+  description: Represent the groundwater results with their measured/inferred quantity,
+    study context and caveats.
+  finding_ids:
+  - groundwater-inference-scope
+  target_ids:
+  - traitmech:000047
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the distinction between association and causal regulation, heterogeneous
+    and homogeneous selection, and inferred residual drift versus directly measured
+    demography.
+  - Keep the observed dispersal-limitation result scoped to the study and acknowledge
+    its contrast with the theoretical prediction.
+  - Recheck every revised statement against the cited Results and Discussion; no new
+    mechanistic steps are required.
+- action_id: clarify-contextual-language
+  description: Align the classificatory and lake-branch prose with what the sources
+    actually describe.
+  finding_ids:
+  - classification-causal-wording
+  - lake-encoded-capacity-wording
+  target_ids:
+  - traitmech:000047
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish assignment to a habitat class from biological occurrence causation.
+  - Keep metagenomic encoded capacity distinct from protein abundance, and retain
+    Tibetan-lake context and family-specific exceptions.
+  - Preserve the NONMECHANISTIC scope and explicit aggregate status.
+- action_id: document-status-basis
+  description: Locate and document human acceptance or leave the status question explicitly
+    unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000047
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/habitat_association.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Automated validation, AI self-review and provider prose do not identify a human
+    approver.
+  - Any status/history correction requires separately authorized curation; no existing
+    immutable history is rewritten.
+limitations:
+- Martiny was inspected through its indexed abstract; the review does not claim complete
+  full-paper verification.
+- The genome main text supports the strain and marine habitat; the exact Oregon locality
+  is separately corroborated by the original isolation paper. The genome supplement
+  was not inspected. The genome browser-access timestamp records the end of the observed
+  retrieval window06:34:33–06:35:14UTC, not a fabricated exact request time.
+- Direct genome-PDF download failed502; successful browser source inspection is recorded
+  separately without presenting a failed response as an article snapshot.
+- The focused snippet verifier selected zero snippets. Its exit0 is not scientific
+  verification of the five cited references.
+- Groundwater and lake measurements are ecological study context, not organism-wide
+  universal mechanisms or direct protein-expression evidence.
+- Inherited ontology constraints were inspected semantically; no formal OWL inconsistency
+  or local validation failure is asserted.
+- Earlier full-corpus checks are retained at the same unchanged scientific source
+  base, including their baselines, superseded failures and product-adapter skips.
+- No human scientific sign-off or status promotion is supplied by this review.
+notes:
+- Native input capture preceded assessment. All28 captured input hashes were rechecked
+  unchanged on continuation.
+- Independent read-only source and ontology checks informed the final manual assessment.
+  Subagent prose is not treated as primary evidence; source URLs, inspected locators
+  and receipts are recorded.
+- Only the new immutable review bundle is written. Scientific records and their maintained
+  writers, mappings, proposals and history are unchanged.
+tags:
+- record-review
+- habitat-association
+- ecology
+- needs-curation
+```
