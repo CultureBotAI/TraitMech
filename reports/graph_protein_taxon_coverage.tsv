@@ -522,7 +522,7 @@ data/traits/genomics/zorya_system.yaml	traitmech:000217	Zorya system	zorya_zorab
 data/traits/genomics/zorya_type_i_system.yaml	traitmech:000554	Zorya type I system	zorya_type_i_locus_subtype_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/genomics/zorya_type_ii_system.yaml	traitmech:000552	Zorya type II system	zorya_type_ii_locus_subtype_defense	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/metabolism/acetogenesis.yaml	METPO:1000845	Acetogenesis	acetogenesis_wood_ljungdahl	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
-data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml	traitmech:000180	acetone-butanol-ethanol fermentation	acetone_butanol_ethanol_fermentation_pathway_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml	traitmech:000180	acetone-butanol-ethanol fermentation	acetone_butanol_ethanol_fermentation_pathway_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/aerobic_respiration.yaml	METPO:1000801	Aerobic respiration	aerobic_respiration_terminal_oxidase	MECHANISTIC	2	2	0	2	2	1	1	PASS	0	0	-
 data/traits/metabolism/anaerobic_oxidation_of_methane.yaml	traitmech:000033	anaerobic oxidation of methane	aom_anme_sulfate_consortium	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/anaerobic_respiration.yaml	METPO:1000802	Anaerobic respiration	anaerobic_respiration_denitrification	MECHANISTIC	3	2	1	3	3	1	1	PASS	0	0	-
@@ -537,7 +537,7 @@ data/traits/metabolism/carbon_fixation.yaml	traitmech:000019	carbon fixation	car
 data/traits/metabolism/cellulolysis.yaml	traitmech:000111	cellulolysis	cellulolysis_cellulase_systems	MECHANISTIC	8	6	2	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/chitinolysis.yaml	traitmech:000112	chitinolysis	chitinolysis_chitinase	MECHANISTIC	4	2	2	1	1	2	2	PASS	0	0	-
 data/traits/metabolism/chlorate_respiration.yaml	traitmech:000198	chlorate respiration	chlorate_respiration_pathway_sketch	MECHANISTIC	1	1	0	1	1	2	2	PASS	0	0	-
-data/traits/metabolism/citrate_fermentation.yaml	traitmech:000182	citrate fermentation	citrate_fermentation_pathway_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/metabolism/citrate_fermentation.yaml	traitmech:000182	citrate fermentation	citrate_fermentation_pathway_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/complete_ammonia_oxidation.yaml	traitmech:000187	complete ammonia oxidation	complete_ammonia_oxidation_comammox_sketch	MECHANISTIC	1	1	0	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/denitrification.yaml	traitmech:000104	denitrification	denitrification_stepwise_nitrate_to_n2	MECHANISTIC	4	3	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml	traitmech:000025	dicarboxylate/4-hydroxybutyrate cycle	dc_four_hb_anaerobic_archaeal_co2_fixation	MECHANISTIC	3	2	1	2	2	1	1	PASS	0	0	-
@@ -576,7 +576,7 @@ data/traits/metabolism/proteolysis.yaml	traitmech:000116	proteolysis	proteolysis
 data/traits/metabolism/proteorhodopsin_phototrophy.yaml	traitmech:000036	proteorhodopsin phototrophy	proteorhodopsin_light_driven_proton_pump	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/metabolism/reductive_tca_cycle.yaml	traitmech:000021	reductive tricarboxylic acid cycle	rtca_reverse_tricarboxylic_acid_co2_fixation	MECHANISTIC	4	1	3	2	2	2	2	PASS	0	0	-
 data/traits/metabolism/respiration.yaml	METPO:1000800	respiration	respiration_electron_acceptor_energy_conservation	MECHANISTIC	2	2	0	3	3	1	1	PASS	0	0	-
-data/traits/metabolism/selenate_respiration.yaml	traitmech:000202	selenate respiration	selenate_respiration_reduction_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/metabolism/selenate_respiration.yaml	traitmech:000202	selenate respiration	selenate_respiration_reduction_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/metabolism/starch_degradation.yaml	traitmech:000115	starch degradation	starch_degradation_amylase	MECHANISTIC	2	1	1	1	1	1	1	PASS	0	0	-
 data/traits/metabolism/substrate_level_phosphorylation.yaml	METPO:1000804	Substrate-level phosphorylation	substrate_level_phosphorylation_direct_atp	MECHANISTIC	2	2	0	3	3	1	1	PASS	0	0	-
 data/traits/metabolism/sulfur_oxidation.yaml	traitmech:000106	sulfur oxidation	sulfur_oxidation_sox	MECHANISTIC	5	2	3	2	2	1	1	PASS	0	0	-
@@ -632,7 +632,7 @@ data/traits/morphology/gram_variable.yaml	METPO:1000700	gram variable	gram_varia
 data/traits/morphology/green_pigmented.yaml	METPO:1003025	green pigmented	green_pigmented_pyocyanin_phenazine	NONMECHANISTIC	2	0	2	2	2	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/helical_shaped.yaml	METPO:1000676	helical shaped	helical_shaped_pg_relaxation	NONMECHANISTIC	2	0	2	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/heterocyst.yaml	traitmech:000073	heterocyst	heterocyst_microoxic_nitrogen_fixation	MECHANISTIC	3	0	3	1	1	1	1	PASS	0	0	-
-data/traits/morphology/holdfast.yaml	traitmech:000184	holdfast	holdfast_polar_adhesion_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
+data/traits/morphology/holdfast.yaml	traitmech:000184	holdfast	holdfast_polar_adhesion_sketch	MECHANISTIC	1	1	0	2	2	1	1	PASS	0	0	-
 data/traits/morphology/intracellular_inclusion.yaml	traitmech:000066	intracellular inclusion	inclusion_compartmentalization	NONMECHANISTIC	3	1	2	3	3	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/irregular_shaped.yaml	METPO:1000691	irregular shaped	irregular_shaped_loss_of_patterning	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-
 data/traits/morphology/lateral_flagellation.yaml	METPO:1005036	lateral flagellation	lateral_flagellation_swarming_sketch	NONMECHANISTIC	0	0	0	1	1	0	0	NONMECHANISTIC	0	0	-

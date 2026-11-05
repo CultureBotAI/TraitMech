@@ -29,12 +29,36 @@ evidence:
     which is required for permanent attachment to surfaces.
   notes: Chepkwony et al. support holdfast as a specialized polar Caulobacterales
     adhesin required for permanent attachment.
+- reference: DOI:10.1128/jb.181.4.1118-1125.1999
+  snippet: Attachment to surfaces by the prosthecate bacterium Caulobacter crescentus
+    is mediated by an adhesive organelle, the holdfast, found at the tip of the stalk.
+    Indirect evidence suggested that the holdfast first appears at the swarmer pole
+    of the predivisional cell. We used fluorescently labeled lectin and transmission
+    electron microscopy to detect the holdfast in different cell types. While the
+    holdfast was readily detectable in stalked cells and at the stalked poles of predivisional
+    cells, we were unable to detect the holdfast in swarmer cells or at the flagellated
+    poles of predivisional cells. This suggests that exposure of the holdfast to the
+    outside of the cell occurs during the differentiation of swarmer to stalked cells.
+    To investigate the timing of holdfast synthesis and exposure to the outside of
+    the cell, we have examined the regulation of a holdfast attachment gene, hfaA.
+    The hfaA gene is part of a cluster of four genes (hfaABDC), identified in strain
+    CB2A and involved in attachment of the holdfast to the polar region of the cell.
+    We have identified the hfaA gene in the synchronizable C. crescentus strain CB15.
+  notes: Janakiraman and Brun identified and characterized the Caulobacter vibrioides
+    (C. crescentus) strain CB15 holdfast attachment gene hfaA (UniProtKB:P27342) required
+    for anchoring the polar holdfast adhesin to the stalk tip.
 canonical_examples:
 - taxon_id: NCBITaxon:155892
   taxon_label: Caulobacter vibrioides
   note: Model freshwater Caulobacter species, long called Caulobacter crescentus,
     that produces a polar holdfast.
   reference: DOI:10.1128/jb.00276-19
+- taxon_id: NCBITaxon:190650
+  taxon_label: Caulobacter vibrioides CB15
+  note: Janakiraman and Brun identified and characterized the holdfast attachment
+    gene hfaA (UniProtKB:P27342) within the hfaABDC cluster anchoring the polar holdfast
+    adhesin at the stalk tip in Caulobacter vibrioides (C. crescentus) strain CB15.
+  reference: DOI:10.1128/jb.181.4.1118-1125.1999
 discussions:
 - discussion_id: holdfast-exact-xref-gap
   prompt: Resolve exact external ontology xrefs for the bacterial holdfast morphology
@@ -78,7 +102,7 @@ discussions:
     holdfast synthesis and anchor proteins HfsDAB (UniProtKB:Q9A5V2) and HfaABD so
     holdfast_polar_adhesion_sketch can be promoted from NONMECHANISTIC to MECHANISTIC.
   kind: CURATION_TODO
-  status: OPEN
+  status: RESOLVED
   attaches_to:
   - causal_graphs#holdfast_polar_adhesion_sketch
   rationale: The record's primary literature (DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22)
@@ -97,6 +121,12 @@ discussions:
     explanation: Existing record-level evidence supports the connected NONMECHANISTIC
       pathway/function graph but does not provide strain-matched UniProtKB protein
       accessions for protein_examples.
+  resolved_date: '2026-11-05'
+  resolution_note: Added canonical_examples entry Caulobacter vibrioides CB15 (NCBITaxon:190650;
+    DOI:10.1128/jb.181.4.1118-1125.1999) and promoted holdfast_polar_adhesion_sketch
+    to MECHANISTIC by adding InterPro:IPR049851-grounded GENE_OR_PROTEIN node holdfast_attachment_protein_hfaa
+    (operon hfaABDC) with reviewed Caulobacter vibrioides strain CB15 (NCBITaxon:190650;
+    UP000001816) protein_examples UniProtKB:P27342 (HfaA) backed by DOI:10.1128/jb.181.4.1118-1125.1999.
 curation_history:
 - timestamp: '2026-09-14T06:26:17Z'
   curator: codex
@@ -118,16 +148,26 @@ curation_history:
     and OPEN CURATION_TODO discussion (holdfast-protein-example-gap) anchored on existing
     verbatim record evidence snippets.
   llm_assisted: true
+- timestamp: '2026-11-05T08:45:00Z'
+  curator: claude
+  action: CURATE_PROTEIN_TAXON_EXAMPLE
+  changes: Added Caulobacter vibrioides CB15 (NCBITaxon:190650; DOI:10.1128/jb.181.4.1118-1125.1999)
+    canonical example; promoted holdfast_polar_adhesion_sketch to MECHANISTIC; added
+    InterPro:IPR049851-grounded GENE_OR_PROTEIN node holdfast_attachment_protein_hfaa
+    with reviewed Caulobacter vibrioides strain CB15 (NCBITaxon:190650; UP000001816)
+    protein_examples UniProtKB:P27342 (HfaA) backed by DOI:10.1128/jb.181.4.1118-1125.1999;
+    resolved holdfast-protein-example-gap.
+  llm_assisted: true
 causal_graphs:
 - graph_id: holdfast_polar_adhesion_sketch
   title: Polar holdfast adhesin synthesis and permanent surface attachment
   description: Evidence-backed morphological mechanism sketch linking polar adhesin
     synthesis at the cell pole and biofilm surface attachment to the holdfast phenotype.
-  scope_status: NONMECHANISTIC
-  scope_notes: Localization-and-process sketch backed by DOI:10.1128/jb.00276-19 and
-    DOI:10.1128/jb.00273-22; strain-matched UniProtKB protein examples for Caulobacter
-    vibrioides holdfast synthesis and anchor proteins HfsDAB (UniProtKB:Q9A5V2) and
-    HfaABD remain to be curated.
+  scope_status: MECHANISTIC
+  scope_notes: Mechanistic graph backed by DOI:10.1128/jb.00276-19, DOI:10.1128/jb.00273-22,
+    and DOI:10.1128/jb.181.4.1118-1125.1999; exemplified on holdfast_attachment_protein_hfaa
+    with Caulobacter vibrioides strain CB15 (NCBITaxon:190650; UP000001816) holdfast
+    attachment protein A HfaA (UniProtKB:P27342).
   nodes:
   - node_id: holdfast_trait
     label: holdfast
@@ -147,6 +187,50 @@ causal_graphs:
     grounding: GO:0060187
     description: Bacterial cell pole where the polysaccharide-based holdfast adhesin
       is secreted and anchored.
+  - node_id: holdfast_attachment_protein_hfaa
+    label: holdfast attachment protein HfaA
+    node_type: GENE_OR_PROTEIN
+    grounding: InterPro:IPR049851
+    gene_symbols:
+    - hfaA
+    operon: hfaABDC
+    description: Holdfast attachment protein HfaA (InterPro:IPR049851) of the HfaABD
+      outer-membrane anchor complex that tethers the secreted holdfast polysaccharide
+      adhesin to the polar stalk tip.
+    protein_examples:
+    - uniprot_id: UniProtKB:P27342
+      protein_label: Holdfast attachment protein A
+      gene_symbol: hfaA
+      taxon_id: NCBITaxon:190650
+      taxon_label: Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+      entry_status: REVIEWED
+      proteome_id: UP000001816
+      retrieved_on: '2026-11-05'
+      entry_version: 105
+      sequence_version: 3
+      role: Holdfast attachment protein HfaA that anchors the secreted holdfast polysaccharide
+        adhesin to the polar stalk tip in Caulobacter vibrioides strain CB15.
+      evidence:
+      - reference: DOI:10.1128/jb.181.4.1118-1125.1999
+        snippet: Attachment to surfaces by the prosthecate bacterium Caulobacter crescentus
+          is mediated by an adhesive organelle, the holdfast, found at the tip of
+          the stalk. Indirect evidence suggested that the holdfast first appears at
+          the swarmer pole of the predivisional cell. We used fluorescently labeled
+          lectin and transmission electron microscopy to detect the holdfast in different
+          cell types. While the holdfast was readily detectable in stalked cells and
+          at the stalked poles of predivisional cells, we were unable to detect the
+          holdfast in swarmer cells or at the flagellated poles of predivisional cells.
+          This suggests that exposure of the holdfast to the outside of the cell occurs
+          during the differentiation of swarmer to stalked cells. To investigate the
+          timing of holdfast synthesis and exposure to the outside of the cell, we
+          have examined the regulation of a holdfast attachment gene, hfaA. The hfaA
+          gene is part of a cluster of four genes (hfaABDC), identified in strain
+          CB2A and involved in attachment of the holdfast to the polar region of the
+          cell. We have identified the hfaA gene in the synchronizable C. crescentus
+          strain CB15.
+        notes: Janakiraman and Brun identified and characterized Caulobacter vibrioides
+          strain CB15 hfaA (UniProtKB:P27342) within the hfaABDC holdfast attachment
+          cluster.
   edges:
   - subject: holdfast_biofilm_formation
     predicate: occurs in
@@ -174,3 +258,30 @@ causal_graphs:
         holdfast, which is required for permanent attachment to surfaces.
       notes: Chepkwony et al. state that Caulobacterales produce a specialized polar
         adhesin, the holdfast, that is required for permanent attachment to surfaces.
+  - subject: holdfast_attachment_protein_hfaa
+    predicate: is causal agent in
+    predicate_id: RO:0002608
+    object: holdfast_biofilm_formation
+    description: Holdfast attachment protein HfaA is a causal agent in anchoring the
+      polar holdfast adhesin that mediates permanent surface attachment and biofilm
+      formation.
+    evidence:
+    - reference: DOI:10.1128/jb.181.4.1118-1125.1999
+      snippet: Attachment to surfaces by the prosthecate bacterium Caulobacter crescentus
+        is mediated by an adhesive organelle, the holdfast, found at the tip of the
+        stalk. Indirect evidence suggested that the holdfast first appears at the
+        swarmer pole of the predivisional cell. We used fluorescently labeled lectin
+        and transmission electron microscopy to detect the holdfast in different cell
+        types. While the holdfast was readily detectable in stalked cells and at the
+        stalked poles of predivisional cells, we were unable to detect the holdfast
+        in swarmer cells or at the flagellated poles of predivisional cells. This
+        suggests that exposure of the holdfast to the outside of the cell occurs during
+        the differentiation of swarmer to stalked cells. To investigate the timing
+        of holdfast synthesis and exposure to the outside of the cell, we have examined
+        the regulation of a holdfast attachment gene, hfaA. The hfaA gene is part
+        of a cluster of four genes (hfaABDC), identified in strain CB2A and involved
+        in attachment of the holdfast to the polar region of the cell. We have identified
+        the hfaA gene in the synchronizable C. crescentus strain CB15.
+      notes: Janakiraman and Brun show that hfaA (part of the hfaABDC cluster) is
+        involved in attachment of the adhesive holdfast organelle to the polar region
+        of Caulobacter crescentus cells for surface attachment.

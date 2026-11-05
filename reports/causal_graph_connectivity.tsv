@@ -15,6 +15,7 @@ data/traits/genomics/disarm_system.yaml	disarm_dna_sensing_antiphage_defense	7	1
 data/traits/genomics/panoptes_system.yaml	panoptes_decoy_cyclic_nucleotide_defense	11	1	11	11
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense	9	1	9	9
 data/traits/metabolism/acetogenesis.yaml	acetogenesis_wood_ljungdahl	15	1	15	15
+data/traits/metabolism/acetone_butanol_ethanol_fermentation.yaml	acetone_butanol_ethanol_fermentation_pathway_sketch	4	1	4	4
 data/traits/metabolism/aerobic_respiration.yaml	aerobic_respiration_terminal_oxidase	8	1	8	8
 data/traits/metabolism/anaerobic_oxidation_of_methane.yaml	aom_anme_sulfate_consortium	8	1	8	8
 data/traits/metabolism/anaerobic_respiration.yaml	anaerobic_respiration_denitrification	14	1	14	14
@@ -29,6 +30,7 @@ data/traits/metabolism/carbon_fixation.yaml	carbon_fixation_co2_assimilation	15	
 data/traits/metabolism/cellulolysis.yaml	cellulolysis_cellulase_systems	13	1	13	13
 data/traits/metabolism/chitinolysis.yaml	chitinolysis_chitinase	9	1	9	9
 data/traits/metabolism/chlorate_respiration.yaml	chlorate_respiration_pathway_sketch	5	1	5	5
+data/traits/metabolism/citrate_fermentation.yaml	citrate_fermentation_pathway_sketch	4	1	4	4
 data/traits/metabolism/complete_ammonia_oxidation.yaml	complete_ammonia_oxidation_comammox_sketch	4	1	4	4
 data/traits/metabolism/denitrification.yaml	denitrification_stepwise_nitrate_to_n2	15	1	15	15
 data/traits/metabolism/dicarboxylate_four_hydroxybutyrate_cycle.yaml	dc_four_hb_anaerobic_archaeal_co2_fixation	14	1	14	14
@@ -65,6 +67,7 @@ data/traits/metabolism/proteolysis.yaml	proteolysis_extracellular_protease	8	1	8
 data/traits/metabolism/proteorhodopsin_phototrophy.yaml	proteorhodopsin_light_driven_proton_pump	8	1	8	8
 data/traits/metabolism/reductive_tca_cycle.yaml	rtca_reverse_tricarboxylic_acid_co2_fixation	8	1	8	8
 data/traits/metabolism/respiration.yaml	respiration_electron_acceptor_energy_conservation	13	1	13	13
+data/traits/metabolism/selenate_respiration.yaml	selenate_respiration_reduction_sketch	4	1	4	4
 data/traits/metabolism/starch_degradation.yaml	starch_degradation_amylase	6	1	6	6
 data/traits/metabolism/substrate_level_phosphorylation.yaml	substrate_level_phosphorylation_direct_atp	13	1	13	13
 data/traits/metabolism/sulfur_oxidation.yaml	sulfur_oxidation_sox	13	1	13	13
@@ -84,6 +87,7 @@ data/traits/morphology/flagellated.yaml	flagellated_flagellar_motor	13	1	13	13
 data/traits/morphology/gas_vesicle.yaml	gas_vesicle_buoyancy	13	1	13	13
 data/traits/morphology/gliding.yaml	gliding_surface_motility	10	1	10	10
 data/traits/morphology/heterocyst.yaml	heterocyst_microoxic_nitrogen_fixation	12	1	12	12
+data/traits/morphology/holdfast.yaml	holdfast_polar_adhesion_sketch	4	1	4	4
 data/traits/morphology/magnetosome.yaml	magnetosome_magnetotaxis	14	1	14	14
 data/traits/morphology/motile.yaml	motile_energy_dependent_locomotion	20	1	20	20
 data/traits/morphology/oval_shaped.yaml	oval_shaped_ovococcal_pg_synthesis	10	1	10	10
