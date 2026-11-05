@@ -96,8 +96,9 @@ tasks:
     disposition: "Resolved in Cycle 9 Stage 6 (issue #2002, follow-up to #1981); added _norm_ref() in scripts/audit_evidence_snippets.py to canonicalize DOI CURIEs to DOI:<lowercase> across quoted, corpus_quoted_refs_16, refs_by_record_id, refs_by_parent_id, record_refs, record_any_refs, def_source, _load_defense_finder_ref_aliases(), _record_wiki_doi_aliases(), and _record_repeats_def_source(), covered by unit tests in tests/test_audit_uniprot_grounding.py and tests/test_audit_evidence_snippets.py."
   - task_id: traitmech-infra-0013
     summary: Add an incremental --accession / --merge-existing mode to scripts/audit_uniprot_grounding.py so newly curated protein_examples can be live-audited and merged into reports/uniprot_grounding_audit.tsv in corpus order without re-fetching unchanged rows
-    status: open
+    status: resolved
     issue_url: https://github.com/CultureBotAI/TraitMech/issues/1988
+    disposition: "Resolved in Cycle 10 Stage 6 (issue #1988); added --merge-existing and --accession CLI modes, load_report_rows(), _is_reusable_existing_row(), and _normalize_accessions() in scripts/audit_uniprot_grounding.py so unchanged clean rows in reports/uniprot_grounding_audit.tsv are preserved offline while newly added, modified, dirty, or --accession-selected rows are live-audited and merged in iter_uses() corpus order, covered by unit tests in tests/test_audit_uniprot_grounding.py."
 ```
 <!-- mech-infra-tasks:end -->
 
@@ -238,12 +239,13 @@ tasks:
 ### `traitmech-infra-0013` — Add an incremental `--accession` / `--merge-existing` mode to `scripts/audit_uniprot_grounding.py`
 - **Origin**: `mech-goal-sequence-20261019`, Cycle 10, Stage 3 (`protein_examples`)
 - **Issue**: https://github.com/CultureBotAI/TraitMech/issues/1988
-- **Status**: `open`
+- **Status**: `resolved`
 - **Observation**: In `scripts/audit_uniprot_grounding.py`, `main()` always queries `rest.uniprot.org` for all `iter_uses(iter_nodes(args.traits))` rows (currently 206 uses across 171 unique accessions) and rewrites `reports/uniprot_grounding_audit.tsv` from scratch. When curating a small cohort of new `protein_examples` (such as the 5 new Cohort M entries in Cycle 10 Stage 3) after an upstream UniProt release bump, there is no CLI flag (`--accession` or `--only-new` / `--merge-existing`) to live-audit only newly added or modified `(file, graph_id, node_id, accession)` rows against `rest.uniprot.org` and merge them into `reports/uniprot_grounding_audit.tsv` in `iter_uses()` corpus order without re-fetching all unchanged rows.
 - **Desired outcome**: In Cycle 10 Stage 6, add an optional `--merge-existing` (and/or `--accession`) mode to `scripts/audit_uniprot_grounding.py` that preserves existing matching `(file, graph_id, node_id, accession, declared_entry_version, declared_sequence_version)` rows from `reports/uniprot_grounding_audit.tsv` while live-auditing any newly added, modified, or explicitly requested accessions against `rest.uniprot.org` and emitting the merged TSV in `iter_uses()` order, with unit tests in `tests/test_audit_uniprot_grounding.py`.
 - **Evidence paths**: `scripts/audit_uniprot_grounding.py`, `tests/test_audit_uniprot_grounding.py`, `reports/uniprot_grounding_audit.tsv`, `scripts/curate_stage3_protein_examples.py`
 - **Priority**: Medium
 - **Dependencies**: None
+- **Disposition**: Resolved in Cycle 10 Stage 6 (issue #1988) by adding `--merge-existing` and `--accession` CLI modes, `load_report_rows()`, `_is_reusable_existing_row()`, and `_normalize_accessions()` to `scripts/audit_uniprot_grounding.py`, extending `audit_uses()` to preserve clean, unchanged rows from `reports/uniprot_grounding_audit.tsv` (while recomputing `reused_in_n_files`) and live-audit only newly added, modified, dirty, or `--accession`-selected accessions in `iter_uses()` corpus order, verified by unit tests in `tests/test_audit_uniprot_grounding.py` and full-corpus `--check-inventory` / `--merge-existing` (`206 uses match reports/uniprot_grounding_audit.tsv`).
 
 
 

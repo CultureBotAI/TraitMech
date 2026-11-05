@@ -313,25 +313,136 @@ def result_row(use: dict[str, Any], resolved: dict[str, Any], reuse: int) -> dic
     }
 
 
+def _normalize_accessions(accessions: Iterable[str] | None) -> set[str]:
+    """Normalize repeatable/comma-separated accession filters (with or without UniProtKB:)."""
+    if not accessions:
+        return set()
+    normalized: set[str] = set()
+    for raw in accessions:
+        for token in str(raw).split(","):
+            cleaned = token.strip().removeprefix("UniProtKB:").strip()
+            if cleaned:
+                normalized.add(cleaned)
+    return normalized
+
+
+def _is_reusable_existing_row(use: dict[str, Any], row: dict[str, str]) -> bool:
+    """Return True if an existing report row is clean and matches ``use`` offline."""
+    expected_declared = declared_inventory_row(use)
+    actual_declared = {k: str(row.get(k, "") or "") for k in INVENTORY_FIELDS}
+    if expected_declared != actual_declared:
+        return False
+    if str(row.get("finding", "") or ""):
+        return False
+    acc = expected_declared["accession"]
+    if str(row.get("primary_accession_match", "") or "") != "YES" or acc != str(
+        row.get("primary_accession", "") or ""
+    ):
+        return False
+    if str(row.get("taxon_match", "") or "") != "YES" or str(
+        row.get("declared_taxon_id", "") or ""
+    ) != str(row.get("uniprot_taxon_id", "") or ""):
+        return False
+    if str(row.get("entry_status_match", "") or "") != "YES" or str(
+        row.get("declared_entry_status", "") or ""
+    ) != str(row.get("status", "") or "").upper():
+        return False
+    if str(row.get("entry_version_match", "") or "") != "YES" or str(
+        row.get("declared_entry_version", "") or ""
+    ) != str(row.get("entry_version", "") or ""):
+        return False
+    seq_match = str(row.get("sequence_version_match", "") or "")
+    if seq_match not in ("YES", "N/A") or (
+        seq_match == "YES"
+        and str(row.get("declared_sequence_version", "") or "")
+        != str(row.get("sequence_version", "") or "")
+    ):
+        return False
+    if _contains(use["example"].get("proteome_id"), row.get("proteome_ids", "")) == "NO":
+        return False
+    return True
+
+
+def load_report_rows(report_path: Path = REPORT) -> list[dict[str, str]]:
+    """Read existing TSV rows from ``report_path`` and verify its header."""
+    if not report_path.exists():
+        return []
+    with report_path.open(encoding="utf-8", newline="") as handle:
+        reader = csv.DictReader(handle, delimiter="\t")
+        if list(reader.fieldnames or []) != FIELDS:
+            raise ValueError(f"header mismatch in {report_path}: got {reader.fieldnames}")
+        return [
+            {field: str(row.get(field, "") or "") for field in FIELDS}
+            for row in reader
+        ]
+
+
 def audit_uses(
     uses: list[dict[str, Any]],
     *,
     delay: float = 0.1,
-    resolver=fetch,
+    resolver=None,
+    existing_rows: Iterable[dict[str, Any]] | None = None,
+    accessions: Iterable[str] | None = None,
 ) -> list[dict[str, Any]]:
-    """Resolve unique accessions and return one comparison row per use."""
-    accessions = sorted({use["accession"] for use in uses})
-    resolved = {accession: resolver(accession, delay) for accession in accessions}
+    """Resolve unique accessions and return one comparison row per use.
+
+    When ``existing_rows`` is provided (incremental merge mode), unchanged clean
+    rows whose declared metadata matches the corpus and whose accession is not in
+    ``accessions`` are preserved without calling ``resolver``, while newly added,
+    modified, dirty, or explicitly requested ``accessions`` are live-audited and
+    emitted in ``uses`` corpus order. When ``existing_rows`` is ``None`` and
+    ``accessions`` is provided, only uses matching ``accessions`` are audited.
+    """
+    if resolver is None:
+        resolver = fetch
+    forced_accessions = _normalize_accessions(accessions)
+    if existing_rows is None and forced_accessions:
+        uses = [use for use in uses if use["accession"] in forced_accessions]
+
     files_per_accession: dict[str, set[str]] = defaultdict(set)
     for use in uses:
         files_per_accession[use["accession"]].add(use["path"].as_posix())
+
+    reused_by_index: dict[int, dict[str, Any]] = {}
+    if existing_rows is not None:
+        pool: dict[tuple[str, str, str, str, str], list[dict[str, str]]] = defaultdict(list)
+        for raw_row in existing_rows:
+            norm_row = {field: str(raw_row.get(field, "") or "") for field in FIELDS}
+            key = _inventory_key({k: norm_row[k] for k in INVENTORY_FIELDS})
+            pool[key].append(norm_row)
+
+        for idx, use in enumerate(uses):
+            if use["accession"] in forced_accessions:
+                continue
+            key = _inventory_key(declared_inventory_row(use))
+            candidates = pool.get(key) or []
+            for cand_idx, cand in enumerate(candidates):
+                if _is_reusable_existing_row(use, cand):
+                    candidates.pop(cand_idx)
+                    reused_by_index[idx] = {
+                        **cand,
+                        "reused_in_n_files": len(files_per_accession[use["accession"]]),
+                    }
+                    break
+
+    to_fetch = sorted(
+        {
+            use["accession"]
+            for idx, use in enumerate(uses)
+            if idx not in reused_by_index
+        }
+    )
+    resolved = {accession: resolver(accession, delay) for accession in to_fetch}
     return [
-        result_row(
+        reused_by_index[idx]
+        if idx in reused_by_index
+        else result_row(
             use,
             resolved[use["accession"]],
             len(files_per_accession[use["accession"]]),
         )
-        for use in uses
+        for idx, use in enumerate(uses)
     ]
 
 
@@ -507,6 +618,26 @@ def main(argv: list[str] | None = None) -> int:
             "UniProtKB uses and has zero unresolved findings"
         ),
     )
+    parser.add_argument(
+        "--merge-existing",
+        action="store_true",
+        help=(
+            "preserve unchanged clean rows from --out and live-audit only "
+            "newly added, modified, dirty, or --accession-selected uses"
+        ),
+    )
+    parser.add_argument(
+        "--accession",
+        dest="accessions",
+        action="append",
+        default=[],
+        metavar="ACC",
+        help=(
+            "accession (or comma-separated accessions, with or without "
+            "UniProtKB: prefix) to live-audit; implies --merge-existing when "
+            "--out already exists"
+        ),
+    )
     args = parser.parse_args(argv)
 
     if args.check_inventory:
@@ -521,7 +652,15 @@ def main(argv: list[str] | None = None) -> int:
 
     nodes = list(iter_nodes(args.traits_dir))
     uses = iter_uses(nodes)
-    rows = audit_uses(uses, delay=args.delay)
+    existing_rows: list[dict[str, str]] | None = None
+    if args.merge_existing or (args.accessions and args.out.exists()):
+        existing_rows = load_report_rows(args.out)
+    rows = audit_uses(
+        uses,
+        delay=args.delay,
+        existing_rows=existing_rows,
+        accessions=args.accessions or None,
+    )
     write_report(rows, args.out)
 
     gene_nodes = [item for item in nodes if item[2].get("node_type") == "GENE_OR_PROTEIN"]
