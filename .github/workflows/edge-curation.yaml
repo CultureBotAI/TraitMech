@@ -41,4 +41,4 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/src:${{ github.workspace }}/claw-contract/src
           TRAIT_REQUIRE_EDGE_CONTRACT: "1"
-        run: uv run --frozen pytest tests/test_edge_curation.py -q
+        run: uv run --frozen pytest tests/test_edge_curation.py tests/test_edge_evidence.py -q

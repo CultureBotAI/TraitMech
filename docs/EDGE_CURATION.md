@@ -39,3 +39,9 @@ the manifest. An interrupted run may leave an unpublished directory; it never
 overwrites an earlier export. Generated exports belong under ignored `workspace/`.
 The manifest states whether all native example records were selected; that is
 native-source coverage, not KG-Microbe scientific approval or edge coverage.
+
+The [native evidence inventory](EDGE_EVIDENCE_INVENTORY_20261107.md) records the
+pinned observation and review surfaces, preserved qualifiers and remaining
+requirements for an exact organism/strain observation adapter. It advances
+[issue #2083](https://github.com/CultureBotAI/TraitMech/issues/2083) without changing
+the current unassessed export.
