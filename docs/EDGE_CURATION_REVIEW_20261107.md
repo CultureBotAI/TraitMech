@@ -47,3 +47,14 @@ the manifest SHA256 is
 `9e1abe71ca1c09bc8f0fbdca60eec2060c0b4fb6f832df3ca7ef863a7421cb4b`.
 Both were independently rehashed after the publisher returned. Runtime outputs
 are retained under `workspace/edge-curation-20261107/trait-canary-v3/`.
+
+The complete native export subsequently scanned all 1,130 records at the same
+source commit and persisted 784 assertions (13,106,061 bytes), all unassessed.
+It created zero scientific reviews and approved zero KG occurrences. The final
+JSONL SHA256 is
+`4328328381dcc3c44f9b9b49a34edd275d28b5ee43971d4c6f4a36bddee01175`;
+the final manifest SHA256 is
+`7a1e5b5d9ff30e3b1db947c7facea76f43d967b48594ea72c7777e8fba1e545a`.
+The same publisher and environment ran both final jobs; both final files were
+independently rehashed and the JSONL line count was checked after publication.
+The full artifact is under `workspace/edge-curation-20261107/trait-full-v3/`.
