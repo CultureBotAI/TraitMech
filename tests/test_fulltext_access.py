@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import importlib
 import sqlite3
 import sys
 from contextlib import closing
@@ -14,7 +15,7 @@ SCRIPTS_DIR = REPO_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-import fulltext_access
+fulltext_access = importlib.import_module("fulltext_access")
 
 
 def test_no_email_disclosure_in_fulltext_access() -> None:
