@@ -18,7 +18,7 @@ from collections import Counter
 from pathlib import Path
 
 REPOSITORY = "CultureBotAI/TraitMech"
-CLAW_COMMIT = "1b5391d083ba85ac94e5279c3cba25ac4fde243c"
+CLAW_COMMIT = "6141da81dc521d776e1ebcff1c4e63824313a9a1"
 SCHEMA = "src/traitmech/schema/traitmech.yaml"
 MAX_INPUT_BYTES = 16 * 1024 * 1024
 NORMALIZATION = {
