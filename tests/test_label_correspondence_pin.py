@@ -9,7 +9,10 @@ file, so the re-pin commit knows to change both.
 The workflow is parsed as YAML, not matched line by line, so quoting a call or
 commenting it neither hides a stale ref nor breaks the check (#2077). GitHub
 resolves a call's owner and repository case-insensitively, so they are compared
-that way; the path and ref are compared exactly (#2078).
+that way; the path and ref are compared exactly (#2078). Whether a call names
+claw is decided from its owner and repository tokens alone, so a root-level
+action reference (`CultureBotAI/culturebotai-claw@<ref>`, no path) is checked
+like any other (#2086).
 """
 
 from __future__ import annotations
@@ -34,6 +37,15 @@ def _canonical(uses: str) -> str:
     return f"{owner.lower()}/{repository.lower()}/{rest}"
 
 
+def _names_claw(uses: str) -> bool:
+    """Whether the call's owner and repository are claw's, whatever path or ref follows (or none)."""
+    parts = uses.split("/", 2)
+    if len(parts) < 2:
+        return False
+    owner, repository = parts[0], parts[1].partition("@")[0]
+    return (owner.lower(), repository.lower()) == ("culturebotai", "culturebotai-claw")
+
+
 def claw_calls(workflow_text: str) -> list[str]:
     """Every job- or step-level `uses` naming culturebotai-claw, as written."""
     document = yaml.safe_load(workflow_text)
@@ -43,7 +55,7 @@ def claw_calls(workflow_text: str) -> list[str]:
             continue
         for uses in [job.get("uses")] + [step.get("uses") for step in job.get("steps") or []
                                          if isinstance(step, dict)]:
-            if isinstance(uses, str) and _canonical(uses).startswith(_canonical(CLAW)):
+            if isinstance(uses, str) and _names_claw(uses):
                 calls.append(uses)
     return calls
 
@@ -90,6 +102,9 @@ jobs:
     # Another claw file called at a stale ref, in a step, is a coupling too.
     (GOOD + f"  other:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: {CLAW}.github/actions/x@{OLD}\n",
      [f"{CLAW}.github/actions/x@{OLD} is not at the pin {PIN}"]),
+    # A root-level action reference has no path; it names claw all the same (#2086).
+    (GOOD + f"  other:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: CultureBotAI/culturebotai-claw@{OLD}\n",
+     [f"CultureBotAI/culturebotai-claw@{OLD} is not at the pin {PIN}"]),
     ("jobs: {}\n", [f"expected one call to {REUSABLE}, found 0"]),
 ])
 def test_every_claw_call_is_found_however_it_is_written(text: str, expected: list[str]) -> None:
