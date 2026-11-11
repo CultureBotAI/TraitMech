@@ -1,0 +1,828 @@
+schema_version: 1.0.0
+review_id: 20261020T034650Z-biosafety-level-5
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of biosafety level 5 (METPO:1001106)
+started_at: '2026-10-20T03:43:03Z'
+finished_at: '2026-10-20T03:46:50Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The generic proposed class matches local METPO, and Cohen2002 supports the
+  carefully limited historical name-use claim. One major finding concerns unsupported
+  definition/graph evidence; two minor findings concern the unresolved SAE DOI and
+  classification-node semantics. All three nodes and both edges were assessed. Omitting
+  real-organism examples is appropriate within the inspected evidence.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/biosafety_level.yaml
+    sha256: 11d1e21fa511aedf4e453875ed0c2508b35e82d0e24399e9aa4aa5547c5aa39a
+    role: context
+  - path: data/traits/ecology/biosafety_level_5.yaml
+    sha256: f8db13d6c7fb599669e552716227497ddee211173daac5a36a3aab7d58d0d464
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: f795a191e17978454a8bb80da91ed6873a9405a240e6e5758837dd9bdc3b5c07
+    role: context
+  - path: history/infrastructure/canonical-examples-final-queue/2026-08-31T045434Z-codex-444.yaml
+    sha256: bb7d8b40b0eb235d4c79b495bb183701fbc89c8e9ec99d2fb5f8614564bbb0ba
+    role: context
+  - path: history/infrastructure/curate-knowledge-gaps/2026-08-17T214933Z-claude-code-9c4af0.yaml
+    sha256: a58b53be777e58ac29eb1c1571feb2593633c83d158aff4b6c96b8a1b9214c0f
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-06T171300Z-codex-83f3bc.yaml
+    sha256: c486d1661e1b98c9c14fadd501beb0a543c081e7977e29ecf0ad230b0aeb9548
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-06T202900Z-codex-eaa821.yaml
+    sha256: 561f6a1a65832ced1119712576cccf5d9e0419e86f8bd4ddb8ef7fa34eb2a91d
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T072600Z-codex-694abc.yaml
+    sha256: ec559db93a0f282ea59f95dd43806a51bb322aadd80797ea0e5fc7208fb3082d
+    role: context
+  - path: history/infrastructure/protein-taxon-event-backfill/2026-08-26T032525Z-claude-936bf3.yaml
+    sha256: e32f537bb5192c12e9dae5f37ca07f71221402373551506429ce30445137fbab
+    role: context
+  - path: history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml
+    sha256: dbd304ce7c2dfaf1525a12c1d5b4bf04a1ec66f00b92e4917d642c5fba6370fd
+    role: context
+  - path: history/records/biosafety_level_5/2026-09-04T100000Z-codex-183.yaml
+    sha256: 3ffce2ae7dfa6c4ad3d437398e59c61df501c1b305b4f65c8fab1d610bc75270
+    role: context
+  - path: history/records/biosafety_level_5/2026-09-06T133000Z-codex-9a8cfc.yaml
+    sha256: 83093967f76d656cdc91c8f381559e4657d63db14563c98c126e81236231cb34
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/repair_pr664_adversarial_review.py
+    sha256: 5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96
+    role: context
+  - path: scripts/review_biosafety_level_5_graph_183.py
+    sha256: 2ebd8aca5461c378097c6986fc53120a8d261e90d898aefd65166f76f038e0d1
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1001106
+  path: data/traits/ecology/biosafety_level_5.yaml
+  label: biosafety level 5
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained TraitRecord; use guarded curation and history for any authorized
+      correction
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Ninth previously uncovered record in lexicographic path order; exactly
+    one complete record, with parent, ontology, writer and historical context.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1001106
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1001106
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1001106
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: biosafety-level-5-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just validate data/traits/ecology/biosafety_level_5.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates.
+  evidence_ids:
+  - check-biosafety-level-5-validate
+- check_id: biosafety-level-5-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just validate-strict data/traits/ecology/biosafety_level_5.yaml --out /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-5-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero error rows.
+  evidence_ids:
+  - check-biosafety-level-5-strict
+- check_id: biosafety-level-5-snippets-network
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001106
+  command: just verify-snippets --record data/traits/ecology/biosafety_level_5.yaml
+    --out /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-5-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Four snippets over two references: three NOT_IN_ABSTRACT and one UNRESOLVED.
+    Neither is positive source verification; direct paper inspection and identifier
+    checks follow below.'
+  evidence_ids:
+  - check-biosafety-level-5-snippets-network
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1001106
+  summary: Hypothetical administrative classification asserts no expression dataset
+    or gene/protein instance.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-biosafety-level-5-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-5-validate.log
+  locator: Executed 2026-10-20T03:43:29Z through 2026-10-20T03:43:30Z; metadata biosafety-level-5-validate.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: Selected record validates.
+  snapshot_sha256: f40e6708e571a082e9d8a31e957863eb64d85ca869dc2274ff43b0387b5404c5
+- evidence_id: check-biosafety-level-5-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-5-strict.log
+  locator: Executed 2026-10-20T03:43:30Z through 2026-10-20T03:43:31Z; metadata biosafety-level-5-strict.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: One file scanned; zero error rows.
+  snapshot_sha256: cbc8d2573148a6a79231fcc4fa1a352160bf844ab9953d3490d793a4c6fbc428
+- evidence_id: check-biosafety-level-5-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-5-snippets-network.log
+  locator: Executed 2026-10-20T03:43:30Z through 2026-10-20T03:43:34Z; metadata biosafety-level-5-snippets-network.json
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: 'Four snippets over two references: three NOT_IN_ABSTRACT and one UNRESOLVED.
+    Neither is positive source verification; direct paper inspection and identifier
+    checks follow below.'
+  snapshot_sha256: d495cffdba844048846619a8043d421d6e07da07c80b569dca84a4a660e37878
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/biosafety_level_5.yaml
+  locator: Entire record; three nodes, two edges and all curation history
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: partial
+  summary: The proposal is explicitly hypothetical and nonmechanistic. Historical
+    naming support is correctly separated from graph evidence.
+  snapshot_sha256: f8db13d6c7fb599669e552716227497ddee211173daac5a36a3aab7d58d0d464
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: METPO:1001106, direct parent1001101 and related synonym5
+  accessed_at: '2026-10-20T03:44:34Z'
+  support: supports
+  summary: Identifier, label, full definition and parent agree with the captured ontology.
+    Ignored-inclusive corpus search resolves one target, and no direct exclusion-file
+    match was found. All edge endpoints resolve.
+  snapshot_sha256: 061a6be8f39bd90687192459d896186cf3a9497921baaf5e1935c98d685a0805
+- evidence_id: model
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: CausalNodeTypeEnum and native classification guidance
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: partial
+  summary: The hypothetical class and NONMECHANISTIC scope are permitted. Hazard properties
+    are not themselves biological processes; a classification framework is not an
+    intrinsic microbial phenotype.
+- evidence_id: owners
+  kind: record_content
+  reference: scripts/review_biosafety_level_5_graph_183.py
+  locator: BEFORE/AFTER_GRAPH, record-evidence constants and transform; repair_pr664_adversarial_review.py;
+    backfill_canonical_examples_444.py DEFERRED; captured record/repository histories
+  accessed_at: '2026-10-20T03:46:50Z'
+  support: context_only
+  summary: Maintained guarded migration constants reproduce current graph evidence
+    and reject drift. Repair code maintains corresponding provenance. Earlier repository
+    events describe intermediate versions; later events and the current record describe
+    the generic graph. Human scientific sign-off is not independently established.
+- evidence_id: bmbl
+  kind: authority
+  reference: https://www.cdc.gov/covid/media/pdfs/2024/07/SF__19_308133-A_BMBL6_00-BOOK-WEB-final-3.pdf
+  locator: Foreword printed p iii; Section II printed p11; Section III Biosafety Levels
+    printed p27 (PDF page index54)
+  accessed_at: '2026-10-19T23:34:20Z'
+  support: supports
+  summary: Official PDF text. Four BSLs describe combinations of facilities, equipment,
+    practices and PPE selected through facility-specific risk assessment; risk groups
+    correlate but are not equivalent. BMBL is advisory rather than itself regulatory.
+    Contextual laboratory containment classification, not an intrinsic microbial trait
+    determined only by hazard. Does not establish absence of fifth-level proposals
+    or levels in every national framework.
+- evidence_id: who
+  kind: authority
+  reference: https://www.who.int/publications/i/item/9789240011311
+  locator: Overview and Composition of the manual
+  accessed_at: '2026-10-19T23:35:15Z'
+  support: supports
+  summary: Official WHO overview says risk assessment permits controls appropriate
+    to particular activities/circumstances and should precede activities. PDF on iris.who.int
+    was inaccessible in this check. Risk-based contextual containment; does not establish
+    intrinsic hazard-to-level equivalence.
+- evidence_id: ag43
+  kind: primary_source
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938
+  locator: Title, citation and abstract
+  accessed_at: '2026-10-19T23:34:48Z'
+  support: refutes
+  summary: van der Woude and Henderson, Regulation and Function of Ag43 (Flu), Annual
+    Review of Microbiology 62:153–169 (2008), Review. Abstract concerns one E. coli
+    surface protein; full text not accessible. Citation identity mismatch with claimed
+    general virulence-factor review and inadequate inspected support for biosafety
+    definition, tiers or mandates.
+- evidence_id: cohen
+  kind: primary_source
+  reference: https://spacearchitect.org/pubs/SAE-2002-01-2469.pdf
+  locator: SAE paper2002-01-2469 cover and opening discussion of draft PPL-alpha
+  accessed_at: '2026-10-20T03:44:35Z'
+  support: supports
+  summary: Marc M. Cohen, Mission Architecture Considerations for Mars Returned Sample
+    Handling Facilities, ICES2002. The paper confirms former informal BSL5 naming
+    in a draft planetary-protection proposal. This supports the record-level naming
+    claim, not a generic biological hazard threshold or an adopted fifth level. The
+    snippet preserves the source words with punctuation normalized.
+  snapshot_sha256: dffaf9f2efefe15dd3085c3a6ca035b750707106c82c69a9b70ec2d01d90c82c
+- evidence_id: doi-access
+  kind: database
+  reference: https://doi.org/10.4271/2002-01-2469
+  locator: DOI resolver; Crossref exact-work lookup; DataCite exact-DOI lookup
+  accessed_at: '2026-10-20T03:45:16Z'
+  support: partial
+  summary: The resolver and both metadata lookups returned HTTP404. The paper itself
+    is accessible at the author-hosted primary URL and carries the SAE paper number.
+    A plausible DOI-shaped construction is not a verified registration; no alternative
+    DOI is inferred.
+  snapshot_sha256: 8d95ef09f682d7db757a8228753a21ab9c00bb20d967a0f69bd3aec1fadc8743
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identity, polarity and synonym'
+  outcome: supported
+  target_ids:
+  - METPO:1001106
+  summary: One proposed BSL5 class matches local METPO. The numeric label is explicitly
+    related, and the record does not claim an established operational level.
+  evidence_ids:
+  - record
+  - identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and narrow evidence'
+  outcome: concern
+  target_ids:
+  - METPO:1001106
+  summary: Definition matches local ontology, but its nearest citation does not establish
+    the generic proposal. The independently verified historical name use is narrower
+    and is correctly not substituted as whole-class proof.
+  evidence_ids:
+  - identity
+  - ag43
+  - cohen
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: parent and relation direction'
+  outcome: supported
+  target_ids:
+  - METPO:1001106
+  summary: Local proposed class has the recorded broader parent and correct subclass
+    direction. This is ontology structure, not evidence that an authority has adopted
+    a fifth level.
+  evidence_ids:
+  - identity
+  - bmbl
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: model and hypothetical scope'
+  outcome: concern
+  target_ids:
+  - METPO:1001106
+  summary: NONMECHANISTIC and explicit proposal wording are appropriate. The hazard
+    node and parent description still conflate properties, classification context
+    and biological process.
+  evidence_ids:
+  - record
+  - model
+- assessment_id: examples
+  area: completeness
+  topic: 'Native checklist: canonical-example disposition'
+  outcome: supported
+  target_ids:
+  - METPO:1001106
+  summary: No real organism is assigned to this hypothetical class. That conservative
+    omission is appropriate within the inspected sources; it does not prove that no
+    institution has ever used the label.
+  evidence_ids:
+  - record
+  - cohen
+  - bmbl
+  - owners
+  dimensions:
+  - name: concept_status
+    value: Proposed/hypothetical generic class; historical PPL-alpha naming is narrower
+    definition: Ontology proposal status versus documentary name use, not a recognized
+      handling requirement.
+    evidence_ids:
+    - record
+    - identity
+    - cohen
+  - name: example_scope
+    value: No qualifying organism assignment in inspected sources
+    definition: Bounded evidence disposition, not an exhaustive worldwide absence
+      claim.
+    evidence_ids:
+    - cohen
+    - bmbl
+    - owners
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: source identities and reference integrity'
+  outcome: concern
+  target_ids:
+  - METPO:1001106
+  summary: Ag43 identity/abstract and Cohen’s primary PDF were inspected. The SAE
+    paper number is verified, but its asserted DOI did not resolve. Historical name-use
+    support is otherwise appropriately placed.
+  evidence_ids:
+  - ag43
+  - cohen
+  - doi-access
+  - check-biosafety-level-5-snippets-network
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all three nodes and two edges'
+  outcome: concern
+  target_ids:
+  - METPO:1001106
+  summary: Edge0 motivates is an administrative hypothesis whose broad hazard rationale
+    is not supported by the cited protein review. Edge1 correctly expresses the local
+    proposed hierarchy, but its attached citation is also misplaced. No missing protein
+    mechanism or experiment is required.
+  evidence_ids:
+  - record
+  - identity
+  - model
+  - ag43
+- assessment_id: discussion
+  area: completeness
+  topic: 'Native checklist: discussions and datasets'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1001106
+  summary: The complete target contains no discussion or dataset assertion; optional
+    fields need not be invented.
+  evidence_ids:
+  - record
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: status, history and checks'
+  outcome: unknown
+  target_ids:
+  - METPO:1001106
+  summary: Focused checks pass within scope. Prior AI review/repair events are explicitly
+    documented but do not substitute for independent source support or establish human
+    sign-off for REVIEWED.
+  evidence_ids:
+  - record
+  - owners
+  - check-biosafety-level-5-validate
+  - check-biosafety-level-5-strict
+  - check-validate-history
+findings:
+- finding_id: unsupported-general-proposal
+  issue_key: biosafety-level-5-unsupported-general-proposal
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ag43 evidence does not substantiate the generic proposal or graph
+  description: The protein review is presented as support for a generalized hazard
+    rationale beyond BSL4 and for the proposed hierarchy. Its verified identity and
+    inspected abstract do not establish those claims. Local ontology membership and
+    historical name use do not fill this nearest-evidence gap.
+  target_ids:
+  - METPO:1001106
+  field_paths:
+  - definition_source
+  - evidence[0]
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[0]
+  - causal_graphs[0].edges[1].evidence
+  evidence_ids:
+  - record
+  - ag43
+  - identity
+  - cohen
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Related replay and provenance constants
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: unresolved-sae-doi
+  issue_key: biosafety-level-5-unresolved-sae-doi
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: SAE paper is accessible but its asserted DOI is unresolved
+  description: The DOI resolver, Crossref and DataCite returned404 for the asserted
+    identifier. The primary PDF confirms the title, author and paper number, so the
+    historical claim remains assessable. Use a verified reference surface rather than
+    treating the paper number as sufficient DOI proof.
+  target_ids:
+  - METPO:1001106
+  field_paths:
+  - evidence[1].reference
+  evidence_ids:
+  - cohen
+  - doi-access
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Related replay and provenance constants
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Minor because the noncritical historical naming claim has
+    an accessible identified primary source; this is a reproducibility defect in its
+    identifier, not a loss of record identity.
+- finding_id: classification-node-types
+  issue_key: biosafety-level-5-classification-node-types
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Hypothetical hazard is represented as a biological process
+  description: enhanced_pathogen_hazard describes a hypothetical property assessment,
+    not a process. The parent node also describes agent hazard without the contextual
+    containment distinction.
+  target_ids:
+  - METPO:1001106
+  field_paths:
+  - causal_graphs[0].nodes[2].node_type
+  - causal_graphs[0].nodes[1].description
+  evidence_ids:
+  - record
+  - model
+  - bmbl
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reassess-proposal-evidence
+  description: Retain only source-supported conceptual claims and explicitly preserve
+    the boundary between generic ontology proposal and historical naming.
+  finding_ids:
+  - unsupported-general-proposal
+  target_ids:
+  - METPO:1001106
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Related replay and provenance constants
+  acceptance_checks:
+  - Remove or replace unsupported attribution; do not broaden a narrow source to justify
+    the whole class.
+  - Reconcile guarded migration constants and record without replaying a historical
+    transformation blindly.
+  - Run focused validate, strict, verify-snippets and applicable qc after authorized
+    curation.
+- action_id: repair-sae-reference
+  description: Verify the registration independently or retain the inspected primary-source
+    URL with full bibliographic context.
+  finding_ids:
+  - unresolved-sae-doi
+  target_ids:
+  - METPO:1001106
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Related replay and provenance constants
+  acceptance_checks:
+  - Do not guess a replacement DOI.
+  - Check final reference resolution and nearest claim; run strict and snippet checks
+    after authorized edits.
+- action_id: clarify-node-entities
+  description: Represent the intended classification and hazard entities accurately
+    or document the specific schema limitation.
+  finding_ids:
+  - classification-node-types
+  target_ids:
+  - METPO:1001106
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_5.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_biosafety_level_5_graph_183.py
+    role: Guarded graph and evidence migration constants
+  acceptance_checks:
+  - Preserve hypothetical NONMECHANISTIC scope; invent no biological mechanism or
+    operational design.
+  - Run strict and applicable graph checks after authorized correction.
+limitations:
+- Ag43 full text was unavailable; no exhaustive full-paper absence claim is made.
+- DOI nonresolution is a bounded observation at the recorded time, not proof that
+  the paper never had an identifier. The author-hosted primary PDF establishes the
+  narrower historical claim.
+- BMBL6 and WHO overview checks retain actual earlier timestamps. Their inspected
+  scope does not establish universal absence of alternative labels or proposals.
+- No facility design, operating threshold, pathogen mechanism or biological experiment
+  is assessed or recommended.
+- Human sign-off remains unresolved, and earlier corpus adapter skips and superseded
+  diagnostic failures remain explicit.
+notes:
+- Only this new immutable review is saved. No record, migration, history or generated
+  page is edited.
+- Existing repair history was read as historical provenance, not as independent scientific
+  evidence or an instruction to alter a prior review.
+tags:
+- record-review
+- biosafety-level-5
+- ecology
+- needs-curation

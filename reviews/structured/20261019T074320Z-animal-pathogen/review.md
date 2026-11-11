@@ -1,0 +1,1301 @@
+# Scientific review of animal pathogen (METPO:1004002)
+
+- Review: 20261019T074320Z-animal-pathogen
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-19T07:34:29Z
+- Finished UTC: 2026-10-19T07:43:20Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Single-record scientific review confirms METPO identity, the broader parent and two animal-pathogen examples. Three major findings concern an unrelated citation, unsupported extension of Ag43 evidence and incompatible proposed-predicate subject semantics. Two minor findings concern quotation provenance and an internally inconsistent discussion inference. All 15 edges were assessed at the available source-text level; source-access and scope limitations remain explicit. No trait record was modified.
+
+## Scope And Provenance
+
+One complete maintained TraitRecord; local native checklist applied field by field. Parent record and ontology/mapping/proposal/research inputs provide context only.
+
+Selection: First unreviewed target in lexicographic data/traits/**/*.yaml path order. Root validated scripts/record_review.py list after native base recovery: 1130 corpus files, 92 valid bundles covering 57 unique records, and 1073 unreviewed records. This bundle assesses only the selected target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f25e2af0b38a8303b13f627a9a5c33b36af4b3d2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1004002 | data/traits/ecology/animal_pathogen.yaml | maintained | animal pathogen |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Focused LinkML validation | passed | True | METPO:1004002 | No issues found for the selected TraitRecord. |
+| Focused strict closed-schema validation | passed | True | METPO:1004002 | One file scanned, zero files with errors and zero error rows. |
+| Focused source snippet verification | passed | True | METPO:1004002 | Six snippets across two references: four NOT_IN_ABSTRACT and two UNRESOLVED. Exit zero reports completion of the diagnostic, not source support. |
+| Full-corpus structural graph audit | passed | True | METPO:1004002 | 74 baselined findings, zero new/blocking findings; 130 graphs in connectivity report. NONMECHANISTIC animal_pathogen is not represented in the connectivity TSV. |
+| Full-corpus evidence snippet audit | passed | True | METPO:1004002 | 2419 baselined findings and zero new/blocking findings. Target rows include 11 missing snippets and one reused-snippet finding. |
+| Full-corpus pathway context link validation | passed | True | METPO:1004002 | 19 links checked at PathwayMech aa305727458c44ab05614901334540e2c87a9f3a. |
+| Full-corpus repository history link validation | passed | True | METPO:1004002 | 1276 records checked, zero invalid history links. |
+| Initial product identifier-label validation | failed | False | METPO:1004002 | Failed with exit 2: 36 PATO/RO adapter errors during ontology download, with 123 pairs skipped for no adapter. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1004002 | Failed with exit 2: PATO/RO acquisition still unavailable in isolated cache; 36 adapter errors and 123 skipped pairs. Superseded by network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1004002 | Passed: 361 canonical matches, two synonym matches, one exception and 123 SKIPPED_NO_ADAPTER entries. |
+| Structured expression-module applicability | not_applicable | False | METPO:1004002 | The record supplies no strain-specific expression dataset or locus-level observation to cross-check. Its generic protein classes and ecological classification are not established by iModulon membership. No expression-module evidence was inferred from the canonical species examples. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identity, polarity, label and term kind
+
+identity: supported. Targets: METPO:1004002.
+
+METPO:1004002 identifies the animal-host pathogenicity classification, with the exact captured upstream label, definition and parent. Although the definition uses organism-relative wording, the parent denotes a host-pathogenicity phenotype; it does not identify a particular organism or protein.
+
+### Native checklist: definition
+
+evidence: concern. Targets: METPO:1004002.
+
+Definition is concise and agrees with METPO, but the attached Ag43 paper has narrower taxonomic and molecular scope. Inspected source text does not establish the broad definition; ontology concordance is distinct from literature support.
+
+### Native checklist: hierarchy and relationship semantics
+
+scope: supported. Targets: METPO:1004002.
+
+The parent pathogenic to host is strictly broader than animal pathogen. The subclass relationship agrees with the pinned ontology. Parent record is contextual evidence only and is not a second reviewed target.
+
+### Native checklist: category and model
+
+representation: supported. Targets: METPO:1004002.
+
+ECOLOGY and CLASS are consistent with a host-relationship phenotype classification. No numerical bin, relation-carrier domain/range or quantitative threshold is claimed. The graph explicitly declares NONMECHANISTIC scope.
+
+### Native checklist: canonical examples
+
+evidence: supported. Targets: METPO:1004002.
+
+Both species labels independently match their NCBITaxon identifiers. The cited PubMed abstracts support animal-pathogen examples; these do not imply uniform host range or all pathways across strains.
+
+### Native checklist: nearest-claim support and quotation provenance
+
+evidence: concern. Targets: METPO:1004002.
+
+A resolved but unrelated Nature DOI is misidentified as a secretion-systems review, and the Ag43 reference is generalized beyond inspected scope. Eleven of fifteen edges omit snippets; the other four use two-word phrases, including repeated text. The four later graph references provide bounded contextual support, with host/species scope and abstract-only limitations retained.
+
+### Native checklist: graph scope, node/predicate semantics and edge evidence
+
+graph: concern. Targets: METPO:1004002.
+
+The graph has 17 nodes and 15 edges, each carrying a reference. NONMECHANISTIC scope avoids treating this ecological class as a single conserved mechanism, but does not validate unsupported causal assertions. The proposed manifests as predicate does not match host-pathology subject semantics. The T4SS complex grounding matches GO; five heterogeneous protein classes are explicitly label-only. Released/cached identifiers and locally proposed vocabulary are distinguished.
+
+Edge-level support: edges 0, 2 and 3 exceed inspected Ag43 scope; edge 1 cites an unrelated article; edges 4-7 have host-specific review support as context; edge 8 has generic introduction support; edge 9 has only indirect immune-evasion support from the inspected species-specific source; edge 10 has transfer-context support and edge 11 partial host-interaction context rather than direct proof of colonization sufficiency; edges 12-13 have scoped review support and edge 14 broad nutrient-context support. Manual endpoint inspection finds all nodes used, with two undirected components: the low-iron/environment and biosynthesis pair is disconnected from the trait-containing component. This is a representation limitation, not a request to invent a mechanistic connection. Full-corpus graph connectivity results do not provide a focused target result.
+
+### Native checklist: discussions and datasets
+
+consistency: concern. Targets: METPO:1004002.
+
+The open discussion addresses the recorded graph and explicitly distinguishes retained off-topic scan provenance from evidence. Its therapeutic implication does not follow from its own stated redundancy interpretation. Optional datasets are not required for this class, and their absence is not a defect.
+
+The four PMIDs in scan-provenance notes are explicitly disclaimed as scientific support by the record. They were inspected as retained historical strings, not independently reassessed or used to support the active question. The discussion anchor names an existing node. No dataset is asserted.
+
+### Native checklist: mapping status, curation events and repository audit
+
+provenance: unknown. Targets: METPO:1004002.
+
+Record is marked REVIEWED and includes explicit LLM-assisted curation history. Schema/strict checks pass and corpus history links validate. This scientific review does not establish independent historical human sign-off, promote status, or append curation history. Product validation passed on retry with adapter skips preserved.
+
+## Findings
+
+### wrong-secretion-citation: Secretion-system citation resolves to an unrelated issue introduction
+
+major / open / confirmed; issue key: animal-pathogen-nrmicro1592-source-mismatch.
+
+The exact Nature DOI is a biofilm-landscape issue introduction. It is not the secretion-systems review claimed in the record and provides no inspected support for top-level evidence[1] or the cited immune-evasion-to-colonization edge. The DOI resolves successfully; the defect is claim/source mismatch.
+
+### ag43-scope: Ag43-specific review does not establish broad class-level claims
+
+major / open / confirmed; issue key: animal-pathogen-ag43-definition-and-edge-scope.
+
+The definition and three graph edges rely on an E. coli Ag43 review described as general virulence-factor evidence. The inspected complete abstract does not establish the metazoan-wide definition, generic tissue-colonization enabling claim, unrestricted colonization-causes-disease claim or trait endpoint. This is a confirmed mismatch between inspected evidence scope and declared support; full-text access remains limited, so no exhaustive absence claim is made.
+
+### manifest-subject: Proposed manifests-as predicate has incompatible subject semantics
+
+major / open / confirmed; issue key: animal-pathogen-manifests-as-subject-scope.
+
+The local METPO:2007400 proposal describes a microorganism physiological or molecular state as subject, while the edge subject animal_disease denotes pathology in an animal host and is typed as a biological process. Label correspondence alone does not justify this grounding. The target endpoint relation and its grounding need conceptual review, with no replacement inferred here.
+
+### quote-provenance: Edge quotations are absent or too generic to expose precise support
+
+minor / open / confirmed; issue key: animal-pathogen-edge-snippet-provenance.
+
+Eleven of fifteen edge evidence entries lack a snippet. The other four carry only two-word phrases, with virulence factors repeated on three edges. These do not provide precise quotation provenance for the distinct assertions. Diagnostic abstract nonmatches alone are inconclusive and are not treated as proof of fabricated text.
+
+### discussion-inference: Therapeutic implication conflicts with the discussion's redundancy premise
+
+minor / open / confirmed; issue key: animal-pathogen-discussion-redundancy-inference.
+
+The rationale treats either route being sufficient as evidence for single-target therapeutic viability. Its own would_support instead describes persistence when either route remains. That inference does not follow from the stated premise. Clarify the prose implication only; this review neither evaluates efficacy nor proposes interventions.
+
+## Recommended Actions And Acceptance Checks
+
+### replace-wrong-citation
+
+Remove or replace the two wrong-source attributions with independently inspected evidence for their exact retained claims.
+
+- Verify replacement reference identity and inspect actual source text at the narrowest claim scope.
+- Run just verify-snippets --record data/traits/ecology/animal_pathogen.yaml; interpret abstract-only results within documented limits.
+- Run just validate and just validate-strict for the target after any authorized correction.
+
+### bound-ag43-claims
+
+Reassess the definition source and three Ag43-supported edges; retain only claims supported at their declared taxonomic and causal scope.
+
+- Inspect source text supporting the exact definition separately from each retained edge.
+- Document qualification or removal of unsupported scope without adding an inferred mechanism.
+- Any authorized record change must use write_validated_trait, record_curation_event, repository history, affected derived-product recipes and native just qc gates.
+
+### review-manifest-semantics
+
+Review the endpoint relation and predicate grounding against the subject and object semantics; do not substitute a merely similar identifier.
+
+- Show exact definition/domain-compatible support for any retained predicate grounding.
+- Distinguish locally proposed METPO vocabulary from released upstream terms.
+- Run applicable native grounding/product and strict record checks after authorized correction.
+
+### improve-quote-provenance
+
+For retained evidence, add short contiguous source quotations where available and explain each claim's support in notes.
+
+- Every retained quote is checked against the inspected authoritative source text, not a provider report or summary.
+- Run just verify-snippets --record data/traits/ecology/animal_pathogen.yaml and just audit-snippets; preserve source-access limitations.
+- Quotes and notes expose support for their specific claims, with no automatic conversion of missing snippets into invented text.
+
+### clarify-discussion
+
+Clarify the rationale so its implication follows from the discussion's stated redundancy premise, preserving the unresolved scientific question.
+
+- Read rationale and stated interpretation together and confirm that the logical implication is consistent.
+- No protocol, intervention recommendation, efficacy claim or mechanistic expansion is introduced.
+- Run focused strict validation after any separately authorized wording change.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| record | data/traits/ecology/animal_pathogen.yaml; Entire TraitRecord, including all 17 nodes, 15 edges and discussion kgscan-30bcdf4a32b0 | context_only | Entire target read. Broad animal-host pathogenicity class, two canonical taxon examples, one NONMECHANISTIC graph, explicit curation history and one open discussion. No trait content changed. |
+| metpo-identity | data/raw/metpo.owl; owl:Class https://w3id.org/metpo/1004002 and owl:Class https://w3id.org/metpo/1004000 | supports | Pinned METPO snapshot has exact animal pathogen label and definition and a subclass link to pathogenic to host (1004000). Parent concept is broader than the animal-host restriction. |
+| parent | data/traits/ecology/pathogenic_to_host.yaml; identifier, label, definition, term_kind and parent_traits | supports | Maintained parent denotes host pathogenicity without the child's animal-host restriction. Its scientific evidence was not reviewed as a second target. |
+| ag43-source | https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938; Publisher citation and complete abstract; title/citation lines 58-69, abstract lines 98-102 | partial | DOI identifies van der Woude and Henderson (2008), Regulation and Function of Ag43 (Flu), Annual Review of Microbiology 62:153-169. Retrieved abstract is about Ag43 in E. coli, including pathogenic and commensal isolates, allelic variation and expression. It does not establish the broad animal-pathogen definition or general animal-tissue-to-disease chain. Full text was unavailable; this is a bounded support assessment rather than a claim of exhaustive full-text absence. This is a review article, not a newly inspected primary experiment. |
+| nature-editorial | https://www.nature.com/articles/nrmicro1592; Publisher article type, title, preview paragraphs and DOI citation; lines 26-43 and 77-86 | refutes | The exact DOI identifies In this issue, Nature Reviews Microbiology 5, 1 (2007), a preview about biofilm landscapes and landscape ecology. This contradicts the record's attribution of a secretion-systems review to that DOI. The publisher preview supplies no support for the two claims citing it. Subscription PDF was not acquired. |
+| salmonella-paper | https://pubmed.ncbi.nlm.nih.gov/31190705/; PMID/title/DOI metadata and entire Abstract, lines 179-195 and 245-252 | supports | Jajere (2019), Veterinary World, DOI 10.14202/vetworld.2019.504-521. PubMed abstract supports S. enterica as an animal/zoonotic pathogen example and describes variable serovar host ranges; it does not imply all isolates share all graph pathways. This is a review article, not a newly inspected primary experiment. |
+| pasteurella-paper | https://pubmed.ncbi.nlm.nih.gov/31484691/; PMID/title/DOI metadata and entire Abstract, lines 179-194 and 245-250 | supports | Peng et al. (2019), Pasteurella multocida: Genotypes and Genomics, DOI 10.1128/MMBR.00014-19. Abstract supports P. multocida as an animal pathogen example, including domestic/wild animals and human hosts. It also retains uncertainty about host specificity and molecular pathogenesis. This is a review article, not a newly inspected primary experiment. |
+| salmonella-taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&amp;id=28901&amp;lvl=&amp;mode=node; Current name and Taxonomy ID, lines 19-24 | supports | NCBI Taxonomy explicitly matches 28901 to Salmonella enterica. This verifies taxon identity independently of pathogenicity evidence. |
+| pasteurella-taxon | https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&amp;id=747&amp;lvl=&amp;mode=node; Current name, Taxonomy ID and rank, lines 18-31 | supports | NCBI Taxonomy explicitly matches 747 to Pasteurella multocida, rank species. This verifies identity, not pathogenicity. |
+| predicate-proposal | proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv; Row METPO:2007400, line 3; compare mappings/predicate_grounding.tsv line 32 and target causal_graphs[0].nodes[4] | refutes | Local proposal defines manifests as with a physiological or molecular state of a microorganism as subject. The graph uses animal_disease, described as pathology in an animal host and typed BIOLOGICAL_PROCESS. Matching predicate labels therefore do not establish the proposed predicate's semantic applicability. Mapping explicitly calls the identifier proposed upstream; this is not evidence of upstream release. |
+| discussion-content | data/traits/ecology/animal_pathogen.yaml; discussions[0].rationale and discussions[0].proposed_experiments[0].would_support | refutes | The rationale infers single-target therapeutic viability from either route being sufficient. The same discussion's would_support describes persistence when either route remains and loss only when both are absent. Those stated premises do not support the therapeutic inference. This is an internal logical observation, not a proposed biological intervention. |
+| host-specificity-review | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11308195/fullTextXML; DOI:10.1093/femsre/fuae019; Colonization and dissemination opening, Humoral immune evasion, Figure 5A | supports | Root inspected full-text review passages supporting the existing adhesion/colonization and humoral-evasion contextual edges 4-7. The review emphasizes host specificity; this supports contextual relationships, not universality across animal pathogens. This is a review article, not a newly inspected primary experiment. |
+| t3ss-source | https://journals.asm.org/doi/10.1128/spectrum.02224-23; Publisher abstract and Introduction generic delivery paragraph | partial | Inspected publisher abstract and introduction. The generic delivery assertion in edge 8 is present in introductory context. The experimental evidence has a particular clinical species/strain scope; the inspected passages provide only indirect support for edge 9, rather than demonstrating a general immune-evasion relationship. No experimental procedure is reproduced. |
+| t4ss-review | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41579-023-00974-3&amp;resultType=core&amp;format=json; PMID:37814112; complete abstract for DOI:10.1038/s41579-023-00974-3 | partial | Root verified DOI/PMID identity and inspected the complete abstract. It supports substrate transfer and host-interaction context for edge 10 and partial context for edge 11; it does not establish universal animal-tissue-colonization sufficiency. Full-text XML retrieval returned HTTP 500. This is a review article, not a newly inspected primary experiment. |
+| iron-review | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11446287/fullTextXML; DOI:10.1039/d4cb00175c; PMID:39372678; Metal binding small molecules, paragraph beginning Native siderophore production | partial | Root verified reference identity and inspected full-text passage supporting existing generic regulation and uptake edges 12-13 in its cited bacterial context. It supports broad host nutrient relevance for edge 14, with coverage focused on two Gram-negative species, rather than universal animal-pathogen mechanism. This is a review article, not a newly inspected primary experiment. |
+| check-animal-validate | /private/tmp/traitmech-record-sweep.FU79Gr/animal-validate.log; Command metadata animal-validate.json; executed 2026-10-19T07:35:11Z through 2026-10-19T07:35:13Z | context_only | No issues found for the selected TraitRecord. |
+| check-animal-strict | /private/tmp/traitmech-record-sweep.FU79Gr/animal-strict.log; Command metadata animal-strict.json; executed 2026-10-19T07:35:11Z through 2026-10-19T07:35:13Z | context_only | One file scanned, zero files with errors and zero error rows. |
+| check-animal-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/animal-snippets.log; Command metadata animal-snippets.json; executed 2026-10-19T07:35:15Z through 2026-10-19T07:35:18Z | context_only | Six snippets across two references: four NOT_IN_ABSTRACT and two UNRESOLVED. Exit zero reports completion of the diagnostic, not source support. |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Command metadata audit-graphs.json; executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z | context_only | 74 baselined findings, zero new/blocking findings; 130 graphs in connectivity report. NONMECHANISTIC animal_pathogen is not represented in the connectivity TSV. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Command metadata audit-snippets.json; executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z | context_only | 2419 baselined findings and zero new/blocking findings. Target rows include 11 missing snippets and one reused-snippet finding. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Command metadata check-pathway-links.json; executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z | context_only | 19 links checked at PathwayMech aa305727458c44ab05614901334540e2c87a9f3a. |
+| check-validate-history | /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log; Command metadata validate-history.json; executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z | context_only | 1276 records checked, zero invalid history links. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Command metadata validate-products.json; executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z | context_only | Failed with exit 2: 36 PATO/RO adapter errors during ontology download, with 123 pairs skipped for no adapter. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Command metadata validate-products-retry-local.json; executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z | context_only | Failed with exit 2: PATO/RO acquisition still unavailable in isolated cache; 36 adapter errors and 123 skipped pairs. Superseded by network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Command metadata validate-products-retry-network.json; executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z | context_only | Passed: 361 canonical matches, two synonym matches, one exception and 123 SKIPPED_NO_ADAPTER entries. |
+| go-t4ss-grounding | https://purl.obolibrary.org/obo/GO_0043684; GO:0043684 rdfs:label and IAO:0000115 rows in the session-local GO SemSQL cache | supports | Inspected cached GO label type IV secretion system complex and definition describing a protein complex transferring DNA or proteins outside the bacterium or into host cells. This matches the complex-level node; it does not imply all T4SSs are pathogenic. The live QuickGO endpoint was inaccessible; label/definition verification uses the existing ontology cache. |
+| predicate-groundings | mappings/predicate_grounding.tsv; enables, causes and manifests as rows; RO:0002327 label/definition in session RO SemSQL cache; biolink-model.yaml causes slot | partial | RO:0002327 resolves to enables; the cached definition relates an entity capable of a process to executing that process. The Biolink source exposes causes. The local mapping explicitly identifies METPO:2007400 as proposed vocabulary, and an ignored-file-inclusive exact-class scan of data/raw/metpo.owl has no class or property with that IRI. Identifier-label resolution alone does not validate the graph assertions or their subject semantics. |
+| validated-inventory | scripts/record_review.py list; Successful initial inventory after just fetch-record-review-bases --apply; exact target paths compared with pathlib rglob over data/traits/**/*.yaml | context_only | The validated inventory contains 92 bundles targeting 57 distinct extant corpus records. The ignore-independent corpus enumeration contains 1130 files, leaving 1073 unreviewed. animal_pathogen.yaml is first in path order. Existing bundles were inspected by the maintained helper, including hidden/ignored review directories. |
+
+## Limits And Additional Notes
+
+- Annual Reviews full text and Nature subscription PDF were not inspected. Conclusions for these citations use verified publisher metadata and inspected abstract/preview text.
+- Canonical-example support was inspected at PubMed abstract level. PMC full-text retrieval encountered reCAPTCHA; species examples do not establish universal isolate/host/pathway claims.
+- T4SS review assessment is abstract-bounded after a fullTextXML HTTP 500 response. T3SS source scope is one clinical species/strain; iron-source scope focuses on two Gram-negative species. These contexts do not prove universal causal sufficiency.
+- validate-products passed only after isolated-cache network acquisition; 123 SKIPPED_NO_ADAPTER pairs remain outside that deterministic check.
+- Full-corpus graph, history and pathway checks are retained as corpus diagnostics. They neither certify target scientific truth nor replace claim-level review.
+- Historical human sign-off for mapping_status REVIEWED has not been independently established; no absence finding or status change is made.
+- The recorded NONMECHANISTIC graph contains a disconnected two-node contextual component; no missing biological connection is inferred.
+- The four explicitly disclaimed historical scan PMIDs in discussion notes were not treated as support and their underlying articles were not reassessed. No missing-source or retraction finding is made about them.
+- GO:0043684 was verified in a cached GO snapshot after live QuickGO access failed; cache freshness was not established. METPO identity is verified against the repository-pinned release, and METPO:2007400 is only a local proposal in the inspected inputs.
+- This bounded review assesses all record sections and each graph assertion; it is not an exhaustive search of every organism or primary experiment cited by the review articles.
+- This is a review observation, not authorization for record edits, paid research, communication, status promotion or curation-history mutation.
+- Optional missing synonyms, datasets, protein examples and other optional slots are not treated as defects solely because they are unpopulated.
+- All proposed corrective actions name the maintained TraitRecord as owner. Generated pages and provider reports are not scientific correction owners.
+- Corpus preparatory commands preceded the target capture. Exact executed commands, timestamps, exit codes and isolated-cache retry outcomes are preserved in evidence summaries and root temporary logs.
+- The source-capture expansion added the discovered predicate proposal and native rubric inputs after verifying that all original captured hashes remained identical. Final save rechecks the captured input bytes.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261019T074320Z-animal-pathogen
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific review of animal pathogen (METPO:1004002)
+started_at: '2026-10-19T07:34:29Z'
+finished_at: '2026-10-19T07:43:20Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+native_verdict: Source-backed identity and examples; definition, edge evidence and
+  predicate semantics require curation.
+scientific_review: true
+summary: Single-record scientific review confirms METPO identity, the broader parent
+  and two animal-pathogen examples. Three major findings concern an unrelated citation,
+  unsupported extension of Ag43 evidence and incompatible proposed-predicate subject
+  semantics. Two minor findings concern quotation provenance and an internally inconsistent
+  discussion inference. All 15 edges were assessed at the available source-text level;
+  source-access and scope limitations remain explicit. No trait record was modified.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/animal_pathogen.yaml
+    sha256: 7399724615acb04a48033bc6834025456a494b05ff26b3a1803b28619feb9cd4
+    role: target
+  - path: data/traits/ecology/pathogenic_to_host.yaml
+    sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: research/traits/ecology/animal_pathogen-deep-research-falcon.md
+    sha256: fafcaa4b0e0df39997876ace93df196db8b9a5ead69d923d377ad827f299b340
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+scope:
+  description: One complete maintained TraitRecord; local native checklist applied
+    field by field. Parent record and ontology/mapping/proposal/research inputs provide
+    context only.
+  selection: 'First unreviewed target in lexicographic data/traits/**/*.yaml path
+    order. Root validated scripts/record_review.py list after native base recovery:
+    1130 corpus files, 92 valid bundles covering 57 unique records, and 1073 unreviewed
+    records. This bundle assesses only the selected target.'
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1004002
+  exclusions:
+  - target: data/traits/physiology/spore_germination.yaml
+    reason: Outside this one-record scope and protected against agentic curation by
+      DO_NOT_WORK.md.
+targets:
+- target_id: METPO:1004002
+  path: data/traits/ecology/animal_pathogen.yaml
+  label: animal pathogen
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+checks:
+- check_id: animal-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  summary: No issues found for the selected TraitRecord.
+  target_ids:
+  - METPO:1004002
+  command: just validate data/traits/ecology/animal_pathogen.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-animal-validate
+  scope_note: Focused shape check; it does not establish scientific support.
+- check_id: animal-strict
+  name: Focused strict closed-schema validation
+  status: passed
+  required: true
+  summary: One file scanned, zero files with errors and zero error rows.
+  target_ids:
+  - METPO:1004002
+  command: just validate-strict data/traits/ecology/animal_pathogen.yaml --out /private/tmp/traitmech-record-sweep.FU79Gr/animal-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-animal-strict
+  scope_note: Focused maintained validator; no extra target records assessed.
+- check_id: animal-snippets
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  summary: 'Six snippets across two references: four NOT_IN_ABSTRACT and two UNRESOLVED.
+    Exit zero reports completion of the diagnostic, not source support.'
+  target_ids:
+  - METPO:1004002
+  command: just verify-snippets --record data/traits/ecology/animal_pathogen.yaml
+    --out /private/tmp/traitmech-record-sweep.FU79Gr/animal-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-animal-snippets
+  scope_note: NOT_IN_ABSTRACT is inconclusive for full-text quotations. Publisher
+    inspection independently resolves nrmicro1592 and shows a wrong-source attribution.
+- check_id: audit-graphs
+  name: Full-corpus structural graph audit
+  status: passed
+  required: true
+  summary: 74 baselined findings, zero new/blocking findings; 130 graphs in connectivity
+    report. NONMECHANISTIC animal_pathogen is not represented in the connectivity
+    TSV.
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache just
+    audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Full-corpus-only command. Corpus connectivity output is not a focused
+    check of this target's graph or its scientific evidence.
+- check_id: audit-snippets
+  name: Full-corpus evidence snippet audit
+  status: passed
+  required: true
+  summary: 2419 baselined findings and zero new/blocking findings. Target rows include
+    11 missing snippets and one reused-snippet finding.
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache just
+    audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Full-corpus-only ratchet. Zero exit does not mean the target has no
+    existing evidence problems.
+- check_id: check-pathway-links
+  name: Full-corpus pathway context link validation
+  status: passed
+  required: true
+  summary: 19 links checked at PathwayMech aa305727458c44ab05614901334540e2c87a9f3a.
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache just
+    check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Target contains no pathway context link; corpus-level result is not
+    evidence for graph pathways.
+- check_id: validate-history
+  name: Full-corpus repository history link validation
+  status: passed
+  required: true
+  summary: 1276 records checked, zero invalid history links.
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache just
+    validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-history
+  scope_note: Link integrity does not prove human scientific sign-off or review every
+    historical event.
+- check_id: validate-products
+  name: Initial product identifier-label validation
+  status: failed
+  required: false
+  summary: 'Failed with exit 2: 36 PATO/RO adapter errors during ontology download,
+    with 123 pairs skipped for no adapter. Superseded by successful network retry.'
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache just
+    validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products
+  scope_note: Historical unsuccessful attempt retained honestly; the required product
+    gate is represented by validate-products-retry-network.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  summary: 'Failed with exit 2: PATO/RO acquisition still unavailable in isolated
+    cache; 36 adapter errors and 123 skipped pairs. Superseded by network retry.'
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache PYSTOW_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow
+    OAKLIB_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib SQLITE_TMPDIR=/private/tmp/traitmech-record-sweep.FU79Gr/sqlite-tmp
+    just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Unsuccessful intermediate attempt; did not change scientific records.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception and
+    123 SKIPPED_NO_ADAPTER entries.'
+  target_ids:
+  - METPO:1004002
+  command: env UV_CACHE_DIR=/private/tmp/traitmech-record-sweep.FU79Gr/uv-cache PYSTOW_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow
+    OAKLIB_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib SQLITE_TMPDIR=/private/tmp/traitmech-record-sweep.FU79Gr/sqlite-tmp
+    just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Full configured product surface, not every identifier in the target.
+    Adapter-skipped pairs remain outside the deterministic assurance.
+- check_id: structured-expression-context
+  name: Structured expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1004002
+  summary: The record supplies no strain-specific expression dataset or locus-level
+    observation to cross-check. Its generic protein classes and ecological classification
+    are not established by iModulon membership. No expression-module evidence was
+    inferred from the canonical species examples.
+evidence:
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/animal_pathogen.yaml
+  locator: Entire TraitRecord, including all 17 nodes, 15 edges and discussion kgscan-30bcdf4a32b0
+  accessed_at: '2026-10-19T07:34:51Z'
+  support: context_only
+  summary: Entire target read. Broad animal-host pathogenicity class, two canonical
+    taxon examples, one NONMECHANISTIC graph, explicit curation history and one open
+    discussion. No trait content changed.
+  snapshot_sha256: 7399724615acb04a48033bc6834025456a494b05ff26b3a1803b28619feb9cd4
+- evidence_id: metpo-identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: owl:Class https://w3id.org/metpo/1004002 and owl:Class https://w3id.org/metpo/1004000
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: supports
+  summary: Pinned METPO snapshot has exact animal pathogen label and definition and
+    a subclass link to pathogenic to host (1004000). Parent concept is broader than
+    the animal-host restriction.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/ecology/pathogenic_to_host.yaml
+  locator: identifier, label, definition, term_kind and parent_traits
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: supports
+  summary: Maintained parent denotes host pathogenicity without the child's animal-host
+    restriction. Its scientific evidence was not reviewed as a second target.
+  snapshot_sha256: 6086ef781d3871684a8a21c77330be972673657b83b5fa0d4ba9c52e376ca451
+- evidence_id: ag43-source
+  kind: primary_source
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938
+  locator: Publisher citation and complete abstract; title/citation lines 58-69, abstract
+    lines 98-102
+  accessed_at: '2026-10-19T07:35:03Z'
+  support: partial
+  summary: DOI identifies van der Woude and Henderson (2008), Regulation and Function
+    of Ag43 (Flu), Annual Review of Microbiology 62:153-169. Retrieved abstract is
+    about Ag43 in E. coli, including pathogenic and commensal isolates, allelic variation
+    and expression. It does not establish the broad animal-pathogen definition or
+    general animal-tissue-to-disease chain. Full text was unavailable; this is a bounded
+    support assessment rather than a claim of exhaustive full-text absence. This is
+    a review article, not a newly inspected primary experiment.
+  quote: specific pathogenic and commensal isolates
+- evidence_id: nature-editorial
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro1592
+  locator: Publisher article type, title, preview paragraphs and DOI citation; lines
+    26-43 and 77-86
+  accessed_at: '2026-10-19T07:35:03Z'
+  support: refutes
+  summary: The exact DOI identifies In this issue, Nature Reviews Microbiology 5,
+    1 (2007), a preview about biofilm landscapes and landscape ecology. This contradicts
+    the record's attribution of a secretion-systems review to that DOI. The publisher
+    preview supplies no support for the two claims citing it. Subscription PDF was
+    not acquired.
+  quote: Biofilms are complex microbial landscapes
+- evidence_id: salmonella-paper
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/31190705/
+  locator: PMID/title/DOI metadata and entire Abstract, lines 179-195 and 245-252
+  accessed_at: '2026-10-19T07:34:51Z'
+  support: supports
+  summary: Jajere (2019), Veterinary World, DOI 10.14202/vetworld.2019.504-521. PubMed
+    abstract supports S. enterica as an animal/zoonotic pathogen example and describes
+    variable serovar host ranges; it does not imply all isolates share all graph pathways.
+    This is a review article, not a newly inspected primary experiment.
+  quote: responsible for zoonotic infections in humans and animal species including
+    birds
+- evidence_id: pasteurella-paper
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/31484691/
+  locator: PMID/title/DOI metadata and entire Abstract, lines 179-194 and 245-250
+  accessed_at: '2026-10-19T07:34:51Z'
+  support: supports
+  summary: 'Peng et al. (2019), Pasteurella multocida: Genotypes and Genomics, DOI
+    10.1128/MMBR.00014-19. Abstract supports P. multocida as an animal pathogen example,
+    including domestic/wild animals and human hosts. It also retains uncertainty about
+    host specificity and molecular pathogenesis. This is a review article, not a newly
+    inspected primary experiment.'
+  quote: capable of causing infections in a wide range of domestic and wild animals
+- evidence_id: salmonella-taxon
+  kind: database
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=28901&lvl=&mode=node
+  locator: Current name and Taxonomy ID, lines 19-24
+  accessed_at: '2026-10-19T07:35:03Z'
+  support: supports
+  summary: NCBI Taxonomy explicitly matches 28901 to Salmonella enterica. This verifies
+    taxon identity independently of pathogenicity evidence.
+- evidence_id: pasteurella-taxon
+  kind: database
+  reference: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=747&lvl=&mode=node
+  locator: Current name, Taxonomy ID and rank, lines 18-31
+  accessed_at: '2026-10-19T07:35:17Z'
+  support: supports
+  summary: NCBI Taxonomy explicitly matches 747 to Pasteurella multocida, rank species.
+    This verifies identity, not pathogenicity.
+- evidence_id: predicate-proposal
+  kind: authority
+  reference: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+  locator: Row METPO:2007400, line 3; compare mappings/predicate_grounding.tsv line
+    32 and target causal_graphs[0].nodes[4]
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: refutes
+  summary: Local proposal defines manifests as with a physiological or molecular state
+    of a microorganism as subject. The graph uses animal_disease, described as pathology
+    in an animal host and typed BIOLOGICAL_PROCESS. Matching predicate labels therefore
+    do not establish the proposed predicate's semantic applicability. Mapping explicitly
+    calls the identifier proposed upstream; this is not evidence of upstream release.
+  snapshot_sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+- evidence_id: discussion-content
+  kind: record_content
+  reference: data/traits/ecology/animal_pathogen.yaml
+  locator: discussions[0].rationale and discussions[0].proposed_experiments[0].would_support
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: refutes
+  summary: The rationale infers single-target therapeutic viability from either route
+    being sufficient. The same discussion's would_support describes persistence when
+    either route remains and loss only when both are absent. Those stated premises
+    do not support the therapeutic inference. This is an internal logical observation,
+    not a proposed biological intervention.
+- evidence_id: host-specificity-review
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11308195/fullTextXML
+  locator: DOI:10.1093/femsre/fuae019; Colonization and dissemination opening, Humoral
+    immune evasion, Figure 5A
+  accessed_at: '2026-10-19T07:37:32Z'
+  support: supports
+  summary: Root inspected full-text review passages supporting the existing adhesion/colonization
+    and humoral-evasion contextual edges 4-7. The review emphasizes host specificity;
+    this supports contextual relationships, not universality across animal pathogens.
+    This is a review article, not a newly inspected primary experiment.
+  snapshot_sha256: c258ca26bde490804ae980e8aaa4d3fe9944732a361602fb2c10e1c1ac927644
+- evidence_id: t3ss-source
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/spectrum.02224-23
+  locator: Publisher abstract and Introduction generic delivery paragraph
+  accessed_at: '2026-10-19T07:37:32Z'
+  support: partial
+  summary: Inspected publisher abstract and introduction. The generic delivery assertion
+    in edge 8 is present in introductory context. The experimental evidence has a
+    particular clinical species/strain scope; the inspected passages provide only
+    indirect support for edge 9, rather than demonstrating a general immune-evasion
+    relationship. No experimental procedure is reproduced.
+- evidence_id: t4ss-review
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41579-023-00974-3&resultType=core&format=json
+  locator: PMID:37814112; complete abstract for DOI:10.1038/s41579-023-00974-3
+  accessed_at: '2026-10-19T07:37:32Z'
+  support: partial
+  summary: Root verified DOI/PMID identity and inspected the complete abstract. It
+    supports substrate transfer and host-interaction context for edge 10 and partial
+    context for edge 11; it does not establish universal animal-tissue-colonization
+    sufficiency. Full-text XML retrieval returned HTTP 500. This is a review article,
+    not a newly inspected primary experiment.
+- evidence_id: iron-review
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11446287/fullTextXML
+  locator: DOI:10.1039/d4cb00175c; PMID:39372678; Metal binding small molecules, paragraph
+    beginning Native siderophore production
+  accessed_at: '2026-10-19T07:37:32Z'
+  support: partial
+  summary: Root verified reference identity and inspected full-text passage supporting
+    existing generic regulation and uptake edges 12-13 in its cited bacterial context.
+    It supports broad host nutrient relevance for edge 14, with coverage focused on
+    two Gram-negative species, rather than universal animal-pathogen mechanism. This
+    is a review article, not a newly inspected primary experiment.
+  snapshot_sha256: 1c6c2df5b2ef2c49b5a7fe98f5465f3d1cf62993901b58f8585537929d7090f5
+- evidence_id: check-animal-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/animal-validate.log
+  locator: Command metadata animal-validate.json; executed 2026-10-19T07:35:11Z through
+    2026-10-19T07:35:13Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: No issues found for the selected TraitRecord.
+  snapshot_sha256: 9ca40c59ecc0c8dfa52b0e1eb63ffda4d9e73485fe36ea8000a11025a5871abb
+- evidence_id: check-animal-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/animal-strict.log
+  locator: Command metadata animal-strict.json; executed 2026-10-19T07:35:11Z through
+    2026-10-19T07:35:13Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: One file scanned, zero files with errors and zero error rows.
+  snapshot_sha256: ff03d91ac6bee9a7efba6e93223be153b117af58829ffb997bfd026e4b180432
+- evidence_id: check-animal-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/animal-snippets.log
+  locator: Command metadata animal-snippets.json; executed 2026-10-19T07:35:15Z through
+    2026-10-19T07:35:18Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 'Six snippets across two references: four NOT_IN_ABSTRACT and two UNRESOLVED.
+    Exit zero reports completion of the diagnostic, not source support.'
+  snapshot_sha256: d3407a65ed72e0bcbd5d2bf61866111cf792189f213a3ca3f17d47c33626f188
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Command metadata audit-graphs.json; executed 2026-10-19T07:33:16Z through
+    2026-10-19T07:33:29Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; 130 graphs in connectivity
+    report. NONMECHANISTIC animal_pathogen is not represented in the connectivity
+    TSV.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Command metadata audit-snippets.json; executed 2026-10-19T07:33:16Z through
+    2026-10-19T07:33:33Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 2419 baselined findings and zero new/blocking findings. Target rows include
+    11 missing snippets and one reused-snippet finding.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Command metadata check-pathway-links.json; executed 2026-10-19T07:33:16Z
+    through 2026-10-19T07:33:28Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 19 links checked at PathwayMech aa305727458c44ab05614901334540e2c87a9f3a.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Command metadata validate-history.json; executed 2026-10-19T07:33:16Z through
+    2026-10-19T07:33:24Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 1276 records checked, zero invalid history links.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Command metadata validate-products.json; executed 2026-10-19T07:33:16Z
+    through 2026-10-19T07:34:01Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 'Failed with exit 2: 36 PATO/RO adapter errors during ontology download,
+    with 123 pairs skipped for no adapter. Superseded by successful network retry.'
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Command metadata validate-products-retry-local.json; executed 2026-10-19T07:34:53Z
+    through 2026-10-19T07:35:24Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 'Failed with exit 2: PATO/RO acquisition still unavailable in isolated
+    cache; 36 adapter errors and 123 skipped pairs. Superseded by network retry.'
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Command metadata validate-products-retry-network.json; executed 2026-10-19T07:35:34Z
+    through 2026-10-19T07:36:03Z
+  accessed_at: '2026-10-19T07:41:42Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception and
+    123 SKIPPED_NO_ADAPTER entries.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: go-t4ss-grounding
+  kind: database
+  reference: https://purl.obolibrary.org/obo/GO_0043684
+  locator: GO:0043684 rdfs:label and IAO:0000115 rows in the session-local GO SemSQL
+    cache
+  accessed_at: '2026-10-19T07:43:20Z'
+  support: supports
+  summary: Inspected cached GO label type IV secretion system complex and definition
+    describing a protein complex transferring DNA or proteins outside the bacterium
+    or into host cells. This matches the complex-level node; it does not imply all
+    T4SSs are pathogenic. The live QuickGO endpoint was inaccessible; label/definition
+    verification uses the existing ontology cache.
+- evidence_id: predicate-groundings
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: enables, causes and manifests as rows; RO:0002327 label/definition in session
+    RO SemSQL cache; biolink-model.yaml causes slot
+  accessed_at: '2026-10-19T07:43:20Z'
+  support: partial
+  summary: RO:0002327 resolves to enables; the cached definition relates an entity
+    capable of a process to executing that process. The Biolink source exposes causes.
+    The local mapping explicitly identifies METPO:2007400 as proposed vocabulary,
+    and an ignored-file-inclusive exact-class scan of data/raw/metpo.owl has no class
+    or property with that IRI. Identifier-label resolution alone does not validate
+    the graph assertions or their subject semantics.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: validated-inventory
+  kind: validation
+  reference: scripts/record_review.py list
+  locator: Successful initial inventory after just fetch-record-review-bases --apply;
+    exact target paths compared with pathlib rglob over data/traits/**/*.yaml
+  accessed_at: '2026-10-19T07:43:20Z'
+  support: context_only
+  summary: The validated inventory contains 92 bundles targeting 57 distinct extant
+    corpus records. The ignore-independent corpus enumeration contains 1130 files,
+    leaving 1073 unreviewed. animal_pathogen.yaml is first in path order. Existing
+    bundles were inspected by the maintained helper, including hidden/ignored review
+    directories.
+  snapshot_sha256: fadb1ec2ead113e4135b40abfd51d9496b06e03cd33d6679cf26fd990488dc64
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identity, polarity, label and term kind'
+  outcome: supported
+  summary: METPO:1004002 identifies the animal-host pathogenicity classification,
+    with the exact captured upstream label, definition and parent. Although the definition
+    uses organism-relative wording, the parent denotes a host-pathogenicity phenotype;
+    it does not identify a particular organism or protein.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - metpo-identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition'
+  outcome: concern
+  summary: Definition is concise and agrees with METPO, but the attached Ag43 paper
+    has narrower taxonomic and molecular scope. Inspected source text does not establish
+    the broad definition; ontology concordance is distinct from literature support.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - metpo-identity
+  - ag43-source
+- assessment_id: hierarchy
+  area: scope
+  topic: 'Native checklist: hierarchy and relationship semantics'
+  outcome: supported
+  summary: The parent pathogenic to host is strictly broader than animal pathogen.
+    The subclass relationship agrees with the pinned ontology. Parent record is contextual
+    evidence only and is not a second reviewed target.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - metpo-identity
+  - parent
+- assessment_id: category-model
+  area: representation
+  topic: 'Native checklist: category and model'
+  outcome: supported
+  summary: ECOLOGY and CLASS are consistent with a host-relationship phenotype classification.
+    No numerical bin, relation-carrier domain/range or quantitative threshold is claimed.
+    The graph explicitly declares NONMECHANISTIC scope.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: canonical examples'
+  outcome: supported
+  summary: Both species labels independently match their NCBITaxon identifiers. The
+    cited PubMed abstracts support animal-pathogen examples; these do not imply uniform
+    host range or all pathways across strains.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - salmonella-paper
+  - salmonella-taxon
+  - pasteurella-paper
+  - pasteurella-taxon
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: nearest-claim support and quotation provenance'
+  outcome: concern
+  summary: A resolved but unrelated Nature DOI is misidentified as a secretion-systems
+    review, and the Ag43 reference is generalized beyond inspected scope. Eleven of
+    fifteen edges omit snippets; the other four use two-word phrases, including repeated
+    text. The four later graph references provide bounded contextual support, with
+    host/species scope and abstract-only limitations retained.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - ag43-source
+  - nature-editorial
+  - check-animal-snippets
+  - check-audit-snippets
+  - host-specificity-review
+  - t3ss-source
+  - t4ss-review
+  - iron-review
+- assessment_id: causal-graph
+  area: graph
+  topic: 'Native checklist: graph scope, node/predicate semantics and edge evidence'
+  outcome: concern
+  summary: The graph has 17 nodes and 15 edges, each carrying a reference. NONMECHANISTIC
+    scope avoids treating this ecological class as a single conserved mechanism, but
+    does not validate unsupported causal assertions. The proposed manifests as predicate
+    does not match host-pathology subject semantics. The T4SS complex grounding matches
+    GO; five heterogeneous protein classes are explicitly label-only. Released/cached
+    identifiers and locally proposed vocabulary are distinguished.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - predicate-proposal
+  - ag43-source
+  - nature-editorial
+  - check-audit-graphs
+  - host-specificity-review
+  - t3ss-source
+  - t4ss-review
+  - iron-review
+  - go-t4ss-grounding
+  - predicate-groundings
+  details: 'Edge-level support: edges 0, 2 and 3 exceed inspected Ag43 scope; edge
+    1 cites an unrelated article; edges 4-7 have host-specific review support as context;
+    edge 8 has generic introduction support; edge 9 has only indirect immune-evasion
+    support from the inspected species-specific source; edge 10 has transfer-context
+    support and edge 11 partial host-interaction context rather than direct proof
+    of colonization sufficiency; edges 12-13 have scoped review support and edge 14
+    broad nutrient-context support. Manual endpoint inspection finds all nodes used,
+    with two undirected components: the low-iron/environment and biosynthesis pair
+    is disconnected from the trait-containing component. This is a representation
+    limitation, not a request to invent a mechanistic connection. Full-corpus graph
+    connectivity results do not provide a focused target result.'
+  dimensions:
+  - name: graph_scope
+    value: NONMECHANISTIC
+    definition: Declared contextual classification scope; it does not waive claim-level
+      evidence review.
+    evidence_ids:
+    - record
+  - name: source_evidence_tier
+    value: Review context plus one species-specific primary study
+    definition: Source types actually inspected; background review statements are
+      not universal experimental demonstration.
+    evidence_ids:
+    - host-specificity-review
+    - t3ss-source
+    - t4ss-review
+    - iron-review
+- assessment_id: discussions-datasets
+  area: consistency
+  topic: 'Native checklist: discussions and datasets'
+  outcome: concern
+  summary: The open discussion addresses the recorded graph and explicitly distinguishes
+    retained off-topic scan provenance from evidence. Its therapeutic implication
+    does not follow from its own stated redundancy interpretation. Optional datasets
+    are not required for this class, and their absence is not a defect.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - discussion-content
+  details: The four PMIDs in scan-provenance notes are explicitly disclaimed as scientific
+    support by the record. They were inspected as retained historical strings, not
+    independently reassessed or used to support the active question. The discussion
+    anchor names an existing node. No dataset is asserted.
+- assessment_id: status-audit
+  area: provenance
+  topic: 'Native checklist: mapping status, curation events and repository audit'
+  outcome: unknown
+  summary: Record is marked REVIEWED and includes explicit LLM-assisted curation history.
+    Schema/strict checks pass and corpus history links validate. This scientific review
+    does not establish independent historical human sign-off, promote status, or append
+    curation history. Product validation passed on retry with adapter skips preserved.
+  target_ids:
+  - METPO:1004002
+  evidence_ids:
+  - record
+  - check-animal-validate
+  - check-animal-strict
+  - check-validate-history
+  - check-validate-products-retry-network
+findings:
+- finding_id: wrong-secretion-citation
+  issue_key: animal-pathogen-nrmicro1592-source-mismatch
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Secretion-system citation resolves to an unrelated issue introduction
+  description: The exact Nature DOI is a biofilm-landscape issue introduction. It
+    is not the secretion-systems review claimed in the record and provides no inspected
+    support for top-level evidence[1] or the cited immune-evasion-to-colonization
+    edge. The DOI resolves successfully; the defect is claim/source mismatch.
+  target_ids:
+  - METPO:1004002
+  field_paths:
+  - evidence[1]
+  - causal_graphs[0].edges[1].evidence[0]
+  evidence_ids:
+  - nature-editorial
+  - record
+  rule_id: 'review-yaml-record: Evidence Rules; review-checklist: Evidence'
+  native_severity: major
+  normalization_reason: Material source or semantic support failure; record concept
+    identity itself remains correct.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Maintained TraitRecord is the correction owner; no record or generated-product
+    changes are authorized by this review.
+- finding_id: ag43-scope
+  issue_key: animal-pathogen-ag43-definition-and-edge-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ag43-specific review does not establish broad class-level claims
+  description: The definition and three graph edges rely on an E. coli Ag43 review
+    described as general virulence-factor evidence. The inspected complete abstract
+    does not establish the metazoan-wide definition, generic tissue-colonization enabling
+    claim, unrestricted colonization-causes-disease claim or trait endpoint. This
+    is a confirmed mismatch between inspected evidence scope and declared support;
+    full-text access remains limited, so no exhaustive absence claim is made.
+  target_ids:
+  - METPO:1004002
+  field_paths:
+  - definition_source
+  - evidence[0]
+  - causal_graphs[0].edges[0].evidence[0]
+  - causal_graphs[0].edges[2]
+  - causal_graphs[0].edges[3].evidence[0]
+  evidence_ids:
+  - ag43-source
+  - record
+  rule_id: 'review-yaml-record: Preserve scope; review-checklist: Definition and Evidence'
+  native_severity: major
+  normalization_reason: Material source or semantic support failure; record concept
+    identity itself remains correct.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Maintained TraitRecord is the correction owner; no record or generated-product
+    changes are authorized by this review.
+- finding_id: manifest-subject
+  issue_key: animal-pathogen-manifests-as-subject-scope
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Proposed manifests-as predicate has incompatible subject semantics
+  description: The local METPO:2007400 proposal describes a microorganism physiological
+    or molecular state as subject, while the edge subject animal_disease denotes pathology
+    in an animal host and is typed as a biological process. Label correspondence alone
+    does not justify this grounding. The target endpoint relation and its grounding
+    need conceptual review, with no replacement inferred here.
+  target_ids:
+  - METPO:1004002
+  field_paths:
+  - causal_graphs[0].edges[3].predicate_id
+  - causal_graphs[0].edges[3].subject
+  - causal_graphs[0].nodes[4]
+  evidence_ids:
+  - predicate-proposal
+  - record
+  rule_id: 'review-checklist: Causal graph; GROUNDING_POLICY: match identifier semantics'
+  native_severity: major
+  normalization_reason: Material source or semantic support failure; record concept
+    identity itself remains correct.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Maintained TraitRecord is the correction owner; no record or generated-product
+    changes are authorized by this review.
+- finding_id: quote-provenance
+  issue_key: animal-pathogen-edge-snippet-provenance
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Edge quotations are absent or too generic to expose precise support
+  description: Eleven of fifteen edge evidence entries lack a snippet. The other four
+    carry only two-word phrases, with virulence factors repeated on three edges. These
+    do not provide precise quotation provenance for the distinct assertions. Diagnostic
+    abstract nonmatches alone are inconclusive and are not treated as proof of fabricated
+    text.
+  target_ids:
+  - METPO:1004002
+  field_paths:
+  - causal_graphs[0].edges[0].evidence[0].snippet
+  - causal_graphs[0].edges[1].evidence[0].snippet
+  - causal_graphs[0].edges[2].evidence[0].snippet
+  - causal_graphs[0].edges[3].evidence[0].snippet
+  - causal_graphs[0].edges[4].evidence[0].snippet
+  - causal_graphs[0].edges[5].evidence[0].snippet
+  - causal_graphs[0].edges[6].evidence[0].snippet
+  - causal_graphs[0].edges[7].evidence[0].snippet
+  - causal_graphs[0].edges[8].evidence[0].snippet
+  - causal_graphs[0].edges[9].evidence[0].snippet
+  - causal_graphs[0].edges[10].evidence[0].snippet
+  - causal_graphs[0].edges[11].evidence[0].snippet
+  - causal_graphs[0].edges[12].evidence[0].snippet
+  - causal_graphs[0].edges[13].evidence[0].snippet
+  - causal_graphs[0].edges[14].evidence[0].snippet
+  - evidence[0].snippet
+  - evidence[1].snippet
+  evidence_ids:
+  - record
+  - check-audit-snippets
+  - check-animal-snippets
+  rule_id: 'CURATION_PLAYBOOK: Evidence on edges; review-checklist: Evidence standard'
+  native_severity: minor
+  normalization_reason: Bounded wording or provenance weakness; independent scientific-support
+    findings carry the major severity.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Maintained TraitRecord is the correction owner; no record or generated-product
+    changes are authorized by this review.
+- finding_id: discussion-inference
+  issue_key: animal-pathogen-discussion-redundancy-inference
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Therapeutic implication conflicts with the discussion's redundancy premise
+  description: The rationale treats either route being sufficient as evidence for
+    single-target therapeutic viability. Its own would_support instead describes persistence
+    when either route remains. That inference does not follow from the stated premise.
+    Clarify the prose implication only; this review neither evaluates efficacy nor
+    proposes interventions.
+  target_ids:
+  - METPO:1004002
+  field_paths:
+  - discussions[0].rationale
+  - discussions[0].proposed_experiments[0].would_support
+  evidence_ids:
+  - discussion-content
+  rule_id: 'review-checklist: Discussions/datasets relevance and internal consistency'
+  native_severity: minor
+  normalization_reason: Bounded wording or provenance weakness; independent scientific-support
+    findings carry the major severity.
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Maintained TraitRecord is the correction owner; no record or generated-product
+    changes are authorized by this review.
+actions:
+- action_id: replace-wrong-citation
+  description: Remove or replace the two wrong-source attributions with independently
+    inspected evidence for their exact retained claims.
+  finding_ids:
+  - wrong-secretion-citation
+  target_ids:
+  - METPO:1004002
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Proposed separately authorized curation through guarded writer and
+    native history gates; this review performs no curation.
+  acceptance_checks:
+  - Verify replacement reference identity and inspect actual source text at the narrowest
+    claim scope.
+  - Run just verify-snippets --record data/traits/ecology/animal_pathogen.yaml; interpret
+    abstract-only results within documented limits.
+  - Run just validate and just validate-strict for the target after any authorized
+    correction.
+- action_id: bound-ag43-claims
+  description: Reassess the definition source and three Ag43-supported edges; retain
+    only claims supported at their declared taxonomic and causal scope.
+  finding_ids:
+  - ag43-scope
+  target_ids:
+  - METPO:1004002
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Proposed separately authorized curation through guarded writer and
+    native history gates; this review performs no curation.
+  acceptance_checks:
+  - Inspect source text supporting the exact definition separately from each retained
+    edge.
+  - Document qualification or removal of unsupported scope without adding an inferred
+    mechanism.
+  - Any authorized record change must use write_validated_trait, record_curation_event,
+    repository history, affected derived-product recipes and native just qc gates.
+- action_id: review-manifest-semantics
+  description: Review the endpoint relation and predicate grounding against the subject
+    and object semantics; do not substitute a merely similar identifier.
+  finding_ids:
+  - manifest-subject
+  target_ids:
+  - METPO:1004002
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Proposed separately authorized curation through guarded writer and
+    native history gates; this review performs no curation.
+  acceptance_checks:
+  - Show exact definition/domain-compatible support for any retained predicate grounding.
+  - Distinguish locally proposed METPO vocabulary from released upstream terms.
+  - Run applicable native grounding/product and strict record checks after authorized
+    correction.
+- action_id: improve-quote-provenance
+  description: For retained evidence, add short contiguous source quotations where
+    available and explain each claim's support in notes.
+  finding_ids:
+  - quote-provenance
+  target_ids:
+  - METPO:1004002
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Proposed separately authorized curation through guarded writer and
+    native history gates; this review performs no curation.
+  acceptance_checks:
+  - Every retained quote is checked against the inspected authoritative source text,
+    not a provider report or summary.
+  - Run just verify-snippets --record data/traits/ecology/animal_pathogen.yaml and
+    just audit-snippets; preserve source-access limitations.
+  - Quotes and notes expose support for their specific claims, with no automatic conversion
+    of missing snippets into invented text.
+  depends_on:
+  - replace-wrong-citation
+  - bound-ag43-claims
+- action_id: clarify-discussion
+  description: Clarify the rationale so its implication follows from the discussion's
+    stated redundancy premise, preserving the unresolved scientific question.
+  finding_ids:
+  - discussion-inference
+  target_ids:
+  - METPO:1004002
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/animal_pathogen.yaml
+    role: guarded curated TraitRecord; subsequent changes require provenance and writer
+      validation
+  ownership_note: Proposed separately authorized curation through guarded writer and
+    native history gates; this review performs no curation.
+  acceptance_checks:
+  - Read rationale and stated interpretation together and confirm that the logical
+    implication is consistent.
+  - No protocol, intervention recommendation, efficacy claim or mechanistic expansion
+    is introduced.
+  - Run focused strict validation after any separately authorized wording change.
+limitations:
+- Annual Reviews full text and Nature subscription PDF were not inspected. Conclusions
+  for these citations use verified publisher metadata and inspected abstract/preview
+  text.
+- Canonical-example support was inspected at PubMed abstract level. PMC full-text
+  retrieval encountered reCAPTCHA; species examples do not establish universal isolate/host/pathway
+  claims.
+- T4SS review assessment is abstract-bounded after a fullTextXML HTTP 500 response.
+  T3SS source scope is one clinical species/strain; iron-source scope focuses on two
+  Gram-negative species. These contexts do not prove universal causal sufficiency.
+- validate-products passed only after isolated-cache network acquisition; 123 SKIPPED_NO_ADAPTER
+  pairs remain outside that deterministic check.
+- Full-corpus graph, history and pathway checks are retained as corpus diagnostics.
+  They neither certify target scientific truth nor replace claim-level review.
+- Historical human sign-off for mapping_status REVIEWED has not been independently
+  established; no absence finding or status change is made.
+- The recorded NONMECHANISTIC graph contains a disconnected two-node contextual component;
+  no missing biological connection is inferred.
+- The four explicitly disclaimed historical scan PMIDs in discussion notes were not
+  treated as support and their underlying articles were not reassessed. No missing-source
+  or retraction finding is made about them.
+- GO:0043684 was verified in a cached GO snapshot after live QuickGO access failed;
+  cache freshness was not established. METPO identity is verified against the repository-pinned
+  release, and METPO:2007400 is only a local proposal in the inspected inputs.
+- This bounded review assesses all record sections and each graph assertion; it is
+  not an exhaustive search of every organism or primary experiment cited by the review
+  articles.
+notes:
+- This is a review observation, not authorization for record edits, paid research,
+  communication, status promotion or curation-history mutation.
+- Optional missing synonyms, datasets, protein examples and other optional slots are
+  not treated as defects solely because they are unpopulated.
+- All proposed corrective actions name the maintained TraitRecord as owner. Generated
+  pages and provider reports are not scientific correction owners.
+- Corpus preparatory commands preceded the target capture. Exact executed commands,
+  timestamps, exit codes and isolated-cache retry outcomes are preserved in evidence
+  summaries and root temporary logs.
+- The source-capture expansion added the discovered predicate proposal and native
+  rubric inputs after verifying that all original captured hashes remained identical.
+  Final save rechecks the captured input bytes.
+tags:
+- record-review
+- animal-pathogen
+- ecology
+- needs-curation
+```

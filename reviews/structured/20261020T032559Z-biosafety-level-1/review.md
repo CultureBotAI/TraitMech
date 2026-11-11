@@ -1,0 +1,1241 @@
+# Scientific and source review of biosafety level 1 (METPO:1001102)
+
+- Review: 20261020T032559Z-biosafety-level-1
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-19T23:37:31Z
+- Finished UTC: 2026-10-20T03:25:59Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The record has consistent local METPO identity and hierarchy but needs curation. Three major findings concern misplaced classification evidence, intrinsic-hazard/practices-only framing, and example citation support. Three minor findings concern node semantics, extension of E. coli background evidence and quotation provenance. All 10 nodes and 9 edges were assessed; explicit classification evidence was located without changing the record.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Fifth previously uncovered record in lexicographic path order, after the biosafety-level parent. Initial corpus denominator was 1130; this bundle assesses only the selected target.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f25e2af0b38a8303b13f627a9a5c33b36af4b3d2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1001102 | data/traits/ecology/biosafety_level_1.yaml | maintained | biosafety level 1 |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1001102 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1001102 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1001102 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1001102 | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| Initial full-product validation | failed | False | METPO:1001102 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1001102 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1001102 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | METPO:1001102 | Selected record validates; shape does not establish correct source support. |
+| Focused strict closed-schema validation | passed | True | METPO:1001102 | One file scanned; zero error rows. |
+| Focused source snippet verification | passed | True | METPO:1001102 | Three repetitions over one reference returned NOT_IN_ABSTRACT. This is inconclusive for full-text quotation presence and does not validate the classification claim. |
+| Structured expression applicability | not_applicable | False | METPO:1001102 | A generic virulence-traits class supplies no strain-specific locus or expression dataset. Expression-module membership cannot establish a biosafety classification; no gene-level inference is made. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identifier, label, synonym and polarity
+
+identity: supported. Targets: METPO:1001102.
+
+Identifier, label and CLASS denote the BSL1 classification in the captured ontology. Numerical synonym is RELATED, avoiding equivalence to an unqualified number. No identifier ambiguity was found in the ignored-inclusive corpus search.
+
+### Native checklist: definition and authority scope
+
+evidence: concern. Targets: METPO:1001102.
+
+Minimal-hazard classification has authoritative support, but its definition source is an Ag43 review and only-standard-practices wording excludes the wider contextual containment framing in BMBL and the cited thesis.
+
+### Native checklist: broader parent and internal references
+
+consistency: supported. Targets: METPO:1001102.
+
+The broader biosafety-level parent and subclass edge are coherent in the local hierarchy; authoritative classifications recognize BSL1. The attached Ag43 citation still fails nearest-claim support.
+
+### Native checklist: classification versus biological representation
+
+representation: concern. Targets: METPO:1001102.
+
+NONMECHANISTIC scope correctly recognizes a contextual classification. Administrative practices, selection, low hazard and heterogeneous virulence attributes are nevertheless forced into biological-process/protein types that do not match their descriptions.
+
+### Native checklist: taxon and contextual example support
+
+evidence: concern. Targets: METPO:1001102.
+
+The example labels and taxon IDs resolve, and K-12 is explicitly narrower than species E. coli. The nearest papers provide industrial-safety and RG1 evidence, respectively, rather than direct BSL1 classification. BMBL explicitly names B. subtilis and the LANL slide deck names E. coli K-12, so relevant direct documentary support is available for curation.
+
+### Native checklist: source types, exact support and provenance
+
+evidence: concern. Targets: METPO:1001102.
+
+All cited DOI/PMID identities were resolved. The sources include reviews, a species profile, primary research, course slides and a doctoral thesis. Source categories are distinct. Three repeated generic snippets do not expose classification support; seven other edge entries lack snippets.
+
+### Native checklist: all node/edge claims and grounding
+
+graph: concern. Targets: METPO:1001102.
+
+All 10 nodes and 9 edges were assessed. Hierarchy references resolve, but low hazard is not itself a biological process realizing an administrative class through confers. The disconnected virulence background component is not a connectivity defect for NONMECHANISTIC scope. Protein examples are not required for this classification.
+
+Zero-based edge ledger: 0 low-virulence-to-classification inference lacks appropriate evidence and context; 1 subclass statement is supported by ontology/authority but not its Ag43 citation; 2 historical review supports bounded low-risk classification description; 3 LANL slides support defined-strain scope, not a low-virulence sufficiency rule; 4 thesis chart supports basic-practice context but includes more than practices alone; 5 primary study introduction supports the generic practice-category relation while its study setting is BSL2; 6 slides list assessment considerations rather than a complete deterministic formula; 7 administrative selection context is supported; 8 E. coli review supports a bounded pathotype-background assertion, not unrestricted organism scope or the added BSL1 converse. RO enables identity is compatible only with an actual material actor/process relation; the mixed virulence-traits node needs semantic review.
+
+### Native checklist: discussions and datasets
+
+completeness: supported. Targets: METPO:1001102.
+
+Neither a discussion nor a dataset is asserted; these optional fields are not required for the classification. No new research proposal, protocol or causal mechanism is needed to correct the identified documentary defects.
+
+### Native checklist: history and native checks
+
+provenance: unknown. Targets: METPO:1001102.
+
+Focused schema and strict checks pass and corpus history integrity passes. Agent assistance is disclosed. The inherited created_by field and historical AI curation do not independently establish human sign-off for REVIEWED.
+
+## Findings
+
+### classification-source: Ag43 review is used as classification authority
+
+major / open / confirmed; issue key: biosafety-level-1-classification-source.
+
+The source concerns an E. coli surface protein. Its inspected title/abstract does not establish the BSL1 definition, low-virulence sufficiency or subclass assertion, despite repeated generic virulence-factor quotations.
+
+### intrinsic-hazard-framing: Intrinsic low virulence and practices-only wording overstate BSL1 criteria
+
+major / open / confirmed; issue key: biosafety-level-1-intrinsic-hazard-framing.
+
+The graph treats absent/low virulence as yielding BSL1, while the definition and trait-node description restrict the category to standard practices only. The inspected authorities describe contextual classification of defined work and multiple categories of controls; neither one hazard feature nor practices alone is a sufficient classification rule.
+
+### example-evidence: Attached example papers do not directly establish the claimed BSL1 designations
+
+major / open / confirmed; issue key: biosafety-level-1-example-evidence.
+
+The B. subtilis profile supports industrial safe-host use, while the E. coli genomic paper states RG1 for laboratory lineages. Direct classification evidence was found in BMBL and LANL slides, but is not the evidence attached to these examples. A broad non-pathogen note also exceeds industrial-use context.
+
+### node-semantics: Node descriptions mix properties, practices and heterogeneous genetic/protein attributes
+
+minor / open / confirmed; issue key: biosafety-level-1-node-semantics.
+
+Low hazard is an attribute, and laboratory practices/level selection are human or administrative activities rather than the biological processes declared. The virulence-traits node mixes genetic and protein determinants without denoting one protein entity/family; label-only disposition does not fix that semantic mismatch.
+
+### pathotype-scope: E. coli background is broadened and extended to a BSL1 converse
+
+minor / open / confirmed; issue key: biosafety-level-1-pathotype-scope.
+
+The pathotype review supports its statement in E. coli strain context. The retained edge generalizes to organisms and adds an absence-compatible-with-BSL1 implication without classification support. This background component is not required to establish the administrative category.
+
+### snippet-provenance: Reused generic snippets and missing locators obscure support
+
+minor / open / confirmed; issue key: biosafety-level-1-snippet-provenance.
+
+Three instances reuse the same two-word phrase; seven other edge evidence entries lack snippets. Their provenance does not distinguish classification authority, derivative summaries and biological background. Diagnostic abstract nonmatches alone do not prove fabricated text.
+
+## Recommended Actions And Acceptance Checks
+
+### replace-classification-support
+
+Reconcile the retained definition and classification assertions with inspected authoritative sources at their exact contextual scope.
+
+- Verify exact source identity and class/definition support separately from biological background.
+- Use source-checked quotations or precise authority/edition locators; do not mechanically substitute a DOI.
+- After authorized curation run focused validate, validate-strict, verify-snippets and applicable qc.
+
+### clarify-contextual-classification
+
+Clarify contextual containment classification and remove unsupported sufficiency/exclusivity implications without adding operational instructions.
+
+- Keep agent characteristics, work context and administrative assignment distinct; preserve authority/edition.
+- Record any disagreement with inherited METPO text instead of rewriting raw-source provenance.
+- Use guarded curation/history and applicable strict, graph and qc gates after authorized correction.
+
+### attach-direct-example-support
+
+Reassess example notes and attach direct documentary classification support with appropriate lineage/context qualifiers.
+
+- Retain taxon identity and the K-12 restriction; do not infer a species-wide containment assignment.
+- Distinguish RG1 from BSL1 and safe industrial use from universal nonpathogenicity.
+- Verify the precise authority passage before any change and run focused strict/reference checks.
+
+### review-node-model
+
+Review intended entities against native enum definitions and grounding policy; retain classification context or document the exact schema gap.
+
+- Do not invent a mechanism or choose a merely similar ontology term.
+- Separate broad functional/genetic context from actual protein entities before retaining a protein node.
+- Run focused strict validation and applicable graph/grounding checks after authorized edits.
+
+### bound-pathotype-context
+
+Restrict or remove the background claim and its classification inference according to the actual source scope.
+
+- Source supports exactly the retained taxonomic and logical statement.
+- No new biological mechanism, intervention or handling recommendation is added.
+- Run focused strict and graph checks after authorized change.
+
+### improve-source-locators
+
+For retained claims provide short exact quotations or precise source sections, preserving source category and scope.
+
+- Inspect actual source text and place interpretation in notes.
+- Correct scientific support first; do not invent snippets solely to fill a field.
+- Run focused verify-snippets and audit-snippets; retain source-access limitations.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json | context_only | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-biosafety-level-1-validate | /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-validate.log; Executed 2026-10-19T23:38:20Z through 2026-10-19T23:38:21Z; metadata biosafety-level-1-validate.json | context_only | Selected record validates; shape does not establish correct source support. |
+| check-biosafety-level-1-strict | /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-strict.log; Executed 2026-10-19T23:38:20Z through 2026-10-19T23:38:22Z; metadata biosafety-level-1-strict.json | context_only | One file scanned; zero error rows. |
+| check-biosafety-level-1-snippets-network | /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-snippets-network.log; Executed 2026-10-19T23:38:23Z through 2026-10-19T23:38:24Z; metadata biosafety-level-1-snippets-network.json | context_only | Three repetitions over one reference returned NOT_IN_ABSTRACT. This is inconclusive for full-text quotation presence and does not validate the classification claim. |
+| record | data/traits/ecology/biosafety_level_1.yaml; Entire target including history, 10 nodes, 9 edges and two examples | partial | The local classification identity is clear; source scope and administrative versus biological representation require curation. No discussion or dataset is asserted. |
+| local-identity | data/raw/metpo.owl; METPO:1001102 label/definition/synonym/parent and maintained biosafety_level parent | supports | Target, numerical RELATED_SYNONYM and parent METPO:1001101 match the captured ontology. Ignored-inclusive corpus searches uniquely resolve the target; graph endpoints resolve. Inherited creator metadata is attribution, not proof of later human sign-off. |
+| local-policy | src/traitmech/schema/traitmech.yaml; CausalNodeTypeEnum, protein grounding policy, mappings/predicate_grounding.tsv and v8 METPO:2007700 proposal | partial | The schema separates biological processes, protein entities and experimental factors. The confers placeholder describes realization of a biological trait, not automatically an administrative level assignment. REVIEWED_LABEL_ONLY preserves a prior decision but cannot make mixed genetic/functional attributes one protein family. |
+| local-history | history/infrastructure/protein-taxon-event-backfill/2026-08-26T032525Z-claude-936bf3.yaml; Captured bulk history and per-record seed/curation events; seeder and migration writer | partial | Bulk history explains the backfilled NONMECHANISTIC/label-only disposition. Seeder skips existing records unless forced and uses guarded writing. The historical predicate-migration script uses raw-line edits and must not be described as a guarded curation path. Human scientific sign-off was not established from this bounded history. |
+| ag43 | https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938; Publisher title, bibliographic metadata and abstract; reused from parent source review; full text not obtained. | partial | Review. Ag43-specific review, not a general biosafety classification reference. Inspected material does not support BSL1 definition, absent/low virulence as basis of BSL1, or BSL1 subclass membership. |
+| subtilis-profile | https://eprints.ncl.ac.uk/267318; All 3 pages of published version read. Page427 discusses B. subtilis as a safe host in industrial contexts. | partial | Microbe Profile; bibliographic index labels Review. Supports general industrial safety and model organism context; no explicit biosafety-level classification appears in the inspected complete article. Thus it does not directly substantiate the BSL1 example note. BMBL6 p28 independently explicitly names B. subtilis as a BSL1-criteria example. |
+| ecoli-rg | https://link.springer.com/article/10.1186/1471-2164-12-9; Reused full publisher rendered text from parent; Background first paragraph and targeted BSL/biosafety search. | partial | Primary genomic research article. Background classifies E. coli K12, B, C and W and their derivatives in Risk Group1. It does not directly make a BSL1 assignment. BMBL explicitly distinguishes agent risk group from biosafety level. LANL Siegel slide29 independently explicitly lists E. coli K12 as a BSL1 example. |
+| osti-training | https://www.osti.gov/biblio/1887109; Public source PDF downloaded; text extracted and relevant full slides inspected. Slide27/PDF30 lists four categories of BSL elements; slide29/PDF32 states BSL1 scope and includes E. coli K12 example; slide40/PDF43 lists risk assessment factors; slide64/PDF67 describes LANL IBC assessment of proposed level. | partial | LANL training slide deck; OSTI product type Technical Report. Supports scoped BSL1 applicability and risk-assessment process at documentary level. It does not establish absence or low expression of virulence factors as a sufficient BSL1 condition. The list of factors is explicitly factors of interest; the record turns it into a deterministic list and omits other listed considerations. Institutional level selection is an administrative judgment. |
+| thesis | https://locus.ufv.br/items/515a59a0-c821-458f-91b6-b7db9901bdc0/full; Official institutional metadata inspected; full thesis downloaded from Brazilian agriculture ministry repository. Chart01 printed p29/PDF31 inspected. Chart explicitly names CDC/NIH as source. | partial | Doctoral thesis, Applied Biochemistry, Universidade Federal de Vicosa, 398f. Chart01 directly supports basic containment relying on standard practices as a summary. This is derivative BMBL description in a thesis mainly about Brazilian high-containment laboratory governance. The same paragraph also includes facility requirements, so it does not support an exclusive practices-only definition. |
+| practice-study | https://www.frontiersin.org/articles/10.3389/fpubh.2022.965853/full; Publisher full article inspected for type, setting, and generic practice-category statement; no protocol recommendations extracted. | supports | Original research. Abstract/Introduction explicitly place hand washing within good microbiological practices. This supports the generic category edge. Original study setting was two BSL2 veterinary reference laboratories, so it is not BSL1-specific evidence. |
+| pathotype-review | https://www.mdpi.com/2076-2607/11/2/344; Publisher full rendered article; title/type/abstract and section1.1 inspected. Repeat access later returned429, but initial body inspection succeeded. | partial | Open Access Review. Section1.1 supplies the cited statement at E. coli strain/pathotype scope. It is not BSL1 classification evidence and does not establish the converse that absent traits imply BSL1. Record broadens an E. coli-context sentence to any organism and adds classification inference. |
+| bmbl | https://www.cdc.gov/covid/media/pdfs/2024/07/SF__19_308133-A_BMBL6_00-BOOK-WEB-final-3.pdf; Reused parent source and re-read printed pp27-28 and32 (PDF54-55 and59). | supports | Official CDC/NIH advisory biosafety manual. BSLs describe combinations of controls selected for work by contextual risk assessment; RG and BSL explicitly differ. BSL1 description includes defined characterized agents not consistently causing disease in immunocompetent/healthy adult humans, minimum potential hazard, and standard-practice/equipment/facility context. B. subtilis is an explicit example on p28. |
+| laboratories | https://mdpi-res.com/d_attachment/laboratories/laboratories-01-00013/article_deploy/laboratories-01-00013.pdf; DOI:10.3390/laboratories1030013; Table 1, 2020 BMBL6 row, pages 162-163 | supports | Historical review explicitly summarizes BSL1 as a category for low-risk agents unlikely to cause disease in healthy adults. This supports the contextual classification wording, not an inference that one absent virulence feature is sufficient. Full publisher PDF resolved the earlier HTML failure. |
+| taxonomy | https://rest.uniprot.org/taxonomy/1423; Live taxon 1423 name/rank; parent review NCBI taxon 562 check | supports | Taxon 1423 is Bacillus subtilis, species. Taxon 562 resolves to E. coli; the target note narrows the latter to K-12. Taxonomy identity is separate from classification support. |
+
+## Limits And Additional Notes
+
+- Ag43 full text was unavailable; identity and complete abstract were inspected. No exhaustive full-text absence claim is made.
+- OSTI DOI/browser failures and a DataCite 404 were resolved by official OSTI metadata and full public PDF; they are not final unavailability or negative source evidence.
+- The thesis chart and training slides supply documentary support; neither is new biological experimental proof. The hand-washing study is used only for its generic practice-category statement, without procedural content.
+- Published source text was inspected at the relevant documentary scope; no figure images, supplementary experiments or biological mechanisms were reanalyzed.
+- Human sign-off for historical REVIEWED status was not independently established. The selected ontology release is the captured repository snapshot.
+- Corpus validators are reused at unchanged source bytes, with product-adapter skips preserved. No current legal or all-jurisdiction containment determination is provided.
+- No scientific record, history, source writer or generated page changed. This bundle records a review, not a handling assignment.
+- All optional omissions were assessed in context; NONMECHANISTIC scope does not require protein exemplars or an invented connected mechanism.
+- Only the new immutable review pair is saved; future curation and any outbound communication require their own authorization.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T032559Z-biosafety-level-1
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of biosafety level 1 (METPO:1001102)
+started_at: '2026-10-19T23:37:31Z'
+finished_at: '2026-10-20T03:25:59Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The record has consistent local METPO identity and hierarchy but needs curation.
+  Three major findings concern misplaced classification evidence, intrinsic-hazard/practices-only
+  framing, and example citation support. Three minor findings concern node semantics,
+  extension of E. coli background evidence and quotation provenance. All 10 nodes
+  and 9 edges were assessed; explicit classification evidence was located without
+  changing the record.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/biosafety_level.yaml
+    sha256: 11d1e21fa511aedf4e453875ed0c2508b35e82d0e24399e9aa4aa5547c5aa39a
+    role: context
+  - path: data/traits/ecology/biosafety_level_1.yaml
+    sha256: 09a7b97fefc0d6258cedac392707458e254c1b88881352b90dcc443f2a347a9c
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: history/infrastructure/protein-taxon-event-backfill/2026-08-26T032525Z-claude-936bf3.yaml
+    sha256: e32f537bb5192c12e9dae5f37ca07f71221402373551506429ce30445137fbab
+    role: context
+  - path: history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml
+    sha256: dbd304ce7c2dfaf1525a12c1d5b4bf04a1ec66f00b92e4917d642c5fba6370fd
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1001102
+  path: data/traits/ecology/biosafety_level_1.yaml
+  label: biosafety level 1
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: maintained curated TraitRecord; use guarded writer for any authorized correction
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Fifth previously uncovered record in lexicographic path order, after
+    the biosafety-level parent. Initial corpus denominator was 1130; this bundle assesses
+    only the selected target.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1001102
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1001102
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1001102
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: biosafety-level-1-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just validate data/traits/ecology/biosafety_level_1.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates; shape does not establish correct source support.
+  evidence_ids:
+  - check-biosafety-level-1-validate
+- check_id: biosafety-level-1-strict
+  name: Focused strict closed-schema validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just validate-strict data/traits/ecology/biosafety_level_1.yaml --out /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero error rows.
+  evidence_ids:
+  - check-biosafety-level-1-strict
+- check_id: biosafety-level-1-snippets-network
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1001102
+  command: just verify-snippets --record data/traits/ecology/biosafety_level_1.yaml
+    --out /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Three repetitions over one reference returned NOT_IN_ABSTRACT. This is
+    inconclusive for full-text quotation presence and does not validate the classification
+    claim.
+  evidence_ids:
+  - check-biosafety-level-1-snippets-network
+- check_id: structured-expression-context
+  name: Structured expression applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1001102
+  summary: A generic virulence-traits class supplies no strain-specific locus or expression
+    dataset. Expression-module membership cannot establish a biosafety classification;
+    no gene-level inference is made.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-biosafety-level-1-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-validate.log
+  locator: Executed 2026-10-19T23:38:20Z through 2026-10-19T23:38:21Z; metadata biosafety-level-1-validate.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: Selected record validates; shape does not establish correct source support.
+  snapshot_sha256: 28e79c5ef7ac4a89dbe51e68e39bab41bd6071abe9a743d6e41235b931b47a31
+- evidence_id: check-biosafety-level-1-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-strict.log
+  locator: Executed 2026-10-19T23:38:20Z through 2026-10-19T23:38:22Z; metadata biosafety-level-1-strict.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: One file scanned; zero error rows.
+  snapshot_sha256: e1105ffa6c376938033fb801df566bab13d822067ccd0abcca2b09a1d0945645
+- evidence_id: check-biosafety-level-1-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/biosafety-level-1-snippets-network.log
+  locator: Executed 2026-10-19T23:38:23Z through 2026-10-19T23:38:24Z; metadata biosafety-level-1-snippets-network.json
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: context_only
+  summary: Three repetitions over one reference returned NOT_IN_ABSTRACT. This is
+    inconclusive for full-text quotation presence and does not validate the classification
+    claim.
+  snapshot_sha256: a316c2f55e070fb7c33a6dd04d26e05e141d2bada5187221b584084b1c469192
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/biosafety_level_1.yaml
+  locator: Entire target including history, 10 nodes, 9 edges and two examples
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: partial
+  summary: The local classification identity is clear; source scope and administrative
+    versus biological representation require curation. No discussion or dataset is
+    asserted.
+  snapshot_sha256: 09a7b97fefc0d6258cedac392707458e254c1b88881352b90dcc443f2a347a9c
+- evidence_id: local-identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: METPO:1001102 label/definition/synonym/parent and maintained biosafety_level
+    parent
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: supports
+  summary: Target, numerical RELATED_SYNONYM and parent METPO:1001101 match the captured
+    ontology. Ignored-inclusive corpus searches uniquely resolve the target; graph
+    endpoints resolve. Inherited creator metadata is attribution, not proof of later
+    human sign-off.
+- evidence_id: local-policy
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: CausalNodeTypeEnum, protein grounding policy, mappings/predicate_grounding.tsv
+    and v8 METPO:2007700 proposal
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: partial
+  summary: The schema separates biological processes, protein entities and experimental
+    factors. The confers placeholder describes realization of a biological trait,
+    not automatically an administrative level assignment. REVIEWED_LABEL_ONLY preserves
+    a prior decision but cannot make mixed genetic/functional attributes one protein
+    family.
+- evidence_id: local-history
+  kind: record_content
+  reference: history/infrastructure/protein-taxon-event-backfill/2026-08-26T032525Z-claude-936bf3.yaml
+  locator: Captured bulk history and per-record seed/curation events; seeder and migration
+    writer
+  accessed_at: '2026-10-20T03:25:59Z'
+  support: partial
+  summary: Bulk history explains the backfilled NONMECHANISTIC/label-only disposition.
+    Seeder skips existing records unless forced and uses guarded writing. The historical
+    predicate-migration script uses raw-line edits and must not be described as a
+    guarded curation path. Human scientific sign-off was not established from this
+    bounded history.
+- evidence_id: ag43
+  kind: primary_source
+  reference: https://www.annualreviews.org/content/journals/10.1146/annurev.micro.62.081307.162938
+  locator: Publisher title, bibliographic metadata and abstract; reused from parent
+    source review; full text not obtained.
+  accessed_at: '2026-10-19T23:34:48Z'
+  support: partial
+  summary: Review. Ag43-specific review, not a general biosafety classification reference.
+    Inspected material does not support BSL1 definition, absent/low virulence as basis
+    of BSL1, or BSL1 subclass membership.
+- evidence_id: subtilis-profile
+  kind: primary_source
+  reference: https://eprints.ncl.ac.uk/267318
+  locator: All 3 pages of published version read. Page427 discusses B. subtilis as
+    a safe host in industrial contexts.
+  accessed_at: '2026-10-19T23:40:07Z'
+  support: partial
+  summary: Microbe Profile; bibliographic index labels Review. Supports general industrial
+    safety and model organism context; no explicit biosafety-level classification
+    appears in the inspected complete article. Thus it does not directly substantiate
+    the BSL1 example note. BMBL6 p28 independently explicitly names B. subtilis as
+    a BSL1-criteria example.
+- evidence_id: ecoli-rg
+  kind: primary_source
+  reference: https://link.springer.com/article/10.1186/1471-2164-12-9
+  locator: Reused full publisher rendered text from parent; Background first paragraph
+    and targeted BSL/biosafety search.
+  accessed_at: '2026-10-19T23:35:15Z'
+  support: partial
+  summary: Primary genomic research article. Background classifies E. coli K12, B,
+    C and W and their derivatives in Risk Group1. It does not directly make a BSL1
+    assignment. BMBL explicitly distinguishes agent risk group from biosafety level.
+    LANL Siegel slide29 independently explicitly lists E. coli K12 as a BSL1 example.
+- evidence_id: osti-training
+  kind: primary_source
+  reference: https://www.osti.gov/biblio/1887109
+  locator: Public source PDF downloaded; text extracted and relevant full slides inspected.
+    Slide27/PDF30 lists four categories of BSL elements; slide29/PDF32 states BSL1
+    scope and includes E. coli K12 example; slide40/PDF43 lists risk assessment factors;
+    slide64/PDF67 describes LANL IBC assessment of proposed level.
+  accessed_at: '2026-10-19T23:40:45.658015Z'
+  support: partial
+  summary: LANL training slide deck; OSTI product type Technical Report. Supports
+    scoped BSL1 applicability and risk-assessment process at documentary level. It
+    does not establish absence or low expression of virulence factors as a sufficient
+    BSL1 condition. The list of factors is explicitly factors of interest; the record
+    turns it into a deterministic list and omits other listed considerations. Institutional
+    level selection is an administrative judgment.
+  snapshot_sha256: 2a34e044fe31cacac9d814b5011a17939882c4ed29bb0b9b941596ef434fd8ca
+- evidence_id: thesis
+  kind: primary_source
+  reference: https://locus.ufv.br/items/515a59a0-c821-458f-91b6-b7db9901bdc0/full
+  locator: Official institutional metadata inspected; full thesis downloaded from
+    Brazilian agriculture ministry repository. Chart01 printed p29/PDF31 inspected.
+    Chart explicitly names CDC/NIH as source.
+  accessed_at: '2026-10-19T23:41:00.039431Z'
+  support: partial
+  summary: Doctoral thesis, Applied Biochemistry, Universidade Federal de Vicosa,
+    398f. Chart01 directly supports basic containment relying on standard practices
+    as a summary. This is derivative BMBL description in a thesis mainly about Brazilian
+    high-containment laboratory governance. The same paragraph also includes facility
+    requirements, so it does not support an exclusive practices-only definition.
+  snapshot_sha256: a1dd372308b7cc18820c62ec1193994bccfcc28972b5845c335cfd22b302a231
+- evidence_id: practice-study
+  kind: primary_source
+  reference: https://www.frontiersin.org/articles/10.3389/fpubh.2022.965853/full
+  locator: Publisher full article inspected for type, setting, and generic practice-category
+    statement; no protocol recommendations extracted.
+  accessed_at: '2026-10-19T23:39:57Z'
+  support: supports
+  summary: Original research. Abstract/Introduction explicitly place hand washing
+    within good microbiological practices. This supports the generic category edge.
+    Original study setting was two BSL2 veterinary reference laboratories, so it is
+    not BSL1-specific evidence.
+- evidence_id: pathotype-review
+  kind: primary_source
+  reference: https://www.mdpi.com/2076-2607/11/2/344
+  locator: Publisher full rendered article; title/type/abstract and section1.1 inspected.
+    Repeat access later returned429, but initial body inspection succeeded.
+  accessed_at: '2026-10-19T23:39:03Z'
+  support: partial
+  summary: Open Access Review. Section1.1 supplies the cited statement at E. coli
+    strain/pathotype scope. It is not BSL1 classification evidence and does not establish
+    the converse that absent traits imply BSL1. Record broadens an E. coli-context
+    sentence to any organism and adds classification inference.
+- evidence_id: bmbl
+  kind: authority
+  reference: https://www.cdc.gov/covid/media/pdfs/2024/07/SF__19_308133-A_BMBL6_00-BOOK-WEB-final-3.pdf
+  locator: Reused parent source and re-read printed pp27-28 and32 (PDF54-55 and59).
+  accessed_at: '2026-10-19T23:41:03Z'
+  support: supports
+  summary: Official CDC/NIH advisory biosafety manual. BSLs describe combinations
+    of controls selected for work by contextual risk assessment; RG and BSL explicitly
+    differ. BSL1 description includes defined characterized agents not consistently
+    causing disease in immunocompetent/healthy adult humans, minimum potential hazard,
+    and standard-practice/equipment/facility context. B. subtilis is an explicit example
+    on p28.
+- evidence_id: laboratories
+  kind: primary_source
+  reference: https://mdpi-res.com/d_attachment/laboratories/laboratories-01-00013/article_deploy/laboratories-01-00013.pdf
+  locator: DOI:10.3390/laboratories1030013; Table 1, 2020 BMBL6 row, pages 162-163
+  accessed_at: '2026-10-19T23:42:57Z'
+  support: supports
+  summary: Historical review explicitly summarizes BSL1 as a category for low-risk
+    agents unlikely to cause disease in healthy adults. This supports the contextual
+    classification wording, not an inference that one absent virulence feature is
+    sufficient. Full publisher PDF resolved the earlier HTML failure.
+  snapshot_sha256: dc2977060bd3599adb9347d059d8cca2857579bfb1d0e88c696fac9884072523
+- evidence_id: taxonomy
+  kind: database
+  reference: https://rest.uniprot.org/taxonomy/1423
+  locator: Live taxon 1423 name/rank; parent review NCBI taxon 562 check
+  accessed_at: '2026-10-19T23:42:46Z'
+  support: supports
+  summary: Taxon 1423 is Bacillus subtilis, species. Taxon 562 resolves to E. coli;
+    the target note narrows the latter to K-12. Taxonomy identity is separate from
+    classification support.
+  snapshot_sha256: fe370b94f1ed89c853e6b8f1584e037dc8a7ba4892fddcb3df9190164eaacecc
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, synonym and polarity'
+  outcome: supported
+  target_ids:
+  - METPO:1001102
+  summary: Identifier, label and CLASS denote the BSL1 classification in the captured
+    ontology. Numerical synonym is RELATED, avoiding equivalence to an unqualified
+    number. No identifier ambiguity was found in the ignored-inclusive corpus search.
+  evidence_ids:
+  - record
+  - local-identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and authority scope'
+  outcome: concern
+  target_ids:
+  - METPO:1001102
+  summary: Minimal-hazard classification has authoritative support, but its definition
+    source is an Ag43 review and only-standard-practices wording excludes the wider
+    contextual containment framing in BMBL and the cited thesis.
+  evidence_ids:
+  - ag43
+  - bmbl
+  - thesis
+  - record
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: broader parent and internal references'
+  outcome: supported
+  target_ids:
+  - METPO:1001102
+  summary: The broader biosafety-level parent and subclass edge are coherent in the
+    local hierarchy; authoritative classifications recognize BSL1. The attached Ag43
+    citation still fails nearest-claim support.
+  evidence_ids:
+  - local-identity
+  - bmbl
+  - ag43
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: classification versus biological representation'
+  outcome: concern
+  target_ids:
+  - METPO:1001102
+  summary: NONMECHANISTIC scope correctly recognizes a contextual classification.
+    Administrative practices, selection, low hazard and heterogeneous virulence attributes
+    are nevertheless forced into biological-process/protein types that do not match
+    their descriptions.
+  evidence_ids:
+  - record
+  - local-policy
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: taxon and contextual example support'
+  outcome: concern
+  target_ids:
+  - METPO:1001102
+  summary: The example labels and taxon IDs resolve, and K-12 is explicitly narrower
+    than species E. coli. The nearest papers provide industrial-safety and RG1 evidence,
+    respectively, rather than direct BSL1 classification. BMBL explicitly names B.
+    subtilis and the LANL slide deck names E. coli K-12, so relevant direct documentary
+    support is available for curation.
+  evidence_ids:
+  - subtilis-profile
+  - ecoli-rg
+  - bmbl
+  - osti-training
+  - taxonomy
+  dimensions:
+  - name: authority_edition
+    value: CDC/NIH BMBL6 (2020); LANL Course31701, LA-UR-22-29355 (2022)
+    definition: Inspected classification contexts, not a current universal handling
+      assignment.
+    evidence_ids:
+    - bmbl
+    - osti-training
+  - name: taxon_scope
+    value: B. subtilis species1423; E. coli species562 with K-12 qualifier
+    definition: Taxon identity and note scope are retained independently of whether
+      the attached citation proves a BSL designation.
+    evidence_ids:
+    - taxonomy
+    - record
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: source types, exact support and provenance'
+  outcome: concern
+  target_ids:
+  - METPO:1001102
+  summary: All cited DOI/PMID identities were resolved. The sources include reviews,
+    a species profile, primary research, course slides and a doctoral thesis. Source
+    categories are distinct. Three repeated generic snippets do not expose classification
+    support; seven other edge entries lack snippets.
+  evidence_ids:
+  - ag43
+  - subtilis-profile
+  - ecoli-rg
+  - osti-training
+  - thesis
+  - practice-study
+  - pathotype-review
+  - laboratories
+  - record
+  - check-biosafety-level-1-snippets-network
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all node/edge claims and grounding'
+  outcome: concern
+  target_ids:
+  - METPO:1001102
+  summary: All 10 nodes and 9 edges were assessed. Hierarchy references resolve, but
+    low hazard is not itself a biological process realizing an administrative class
+    through confers. The disconnected virulence background component is not a connectivity
+    defect for NONMECHANISTIC scope. Protein examples are not required for this classification.
+  evidence_ids:
+  - record
+  - local-policy
+  - bmbl
+  - osti-training
+  - thesis
+  - practice-study
+  - pathotype-review
+  - laboratories
+  details: 'Zero-based edge ledger: 0 low-virulence-to-classification inference lacks
+    appropriate evidence and context; 1 subclass statement is supported by ontology/authority
+    but not its Ag43 citation; 2 historical review supports bounded low-risk classification
+    description; 3 LANL slides support defined-strain scope, not a low-virulence sufficiency
+    rule; 4 thesis chart supports basic-practice context but includes more than practices
+    alone; 5 primary study introduction supports the generic practice-category relation
+    while its study setting is BSL2; 6 slides list assessment considerations rather
+    than a complete deterministic formula; 7 administrative selection context is supported;
+    8 E. coli review supports a bounded pathotype-background assertion, not unrestricted
+    organism scope or the added BSL1 converse. RO enables identity is compatible only
+    with an actual material actor/process relation; the mixed virulence-traits node
+    needs semantic review.'
+- assessment_id: discussions
+  area: completeness
+  topic: 'Native checklist: discussions and datasets'
+  outcome: supported
+  target_ids:
+  - METPO:1001102
+  summary: Neither a discussion nor a dataset is asserted; these optional fields are
+    not required for the classification. No new research proposal, protocol or causal
+    mechanism is needed to correct the identified documentary defects.
+  evidence_ids:
+  - record
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: history and native checks'
+  outcome: unknown
+  target_ids:
+  - METPO:1001102
+  summary: Focused schema and strict checks pass and corpus history integrity passes.
+    Agent assistance is disclosed. The inherited created_by field and historical AI
+    curation do not independently establish human sign-off for REVIEWED.
+  evidence_ids:
+  - record
+  - local-history
+  - check-biosafety-level-1-validate
+  - check-biosafety-level-1-strict
+  - check-validate-history
+findings:
+- finding_id: classification-source
+  issue_key: biosafety-level-1-classification-source
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Ag43 review is used as classification authority
+  description: The source concerns an E. coli surface protein. Its inspected title/abstract
+    does not establish the BSL1 definition, low-virulence sufficiency or subclass
+    assertion, despite repeated generic virulence-factor quotations.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - definition_source
+  - evidence[0]
+  - causal_graphs[0].edges[0].evidence
+  - causal_graphs[0].edges[1].evidence
+  evidence_ids:
+  - ag43
+  - bmbl
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: intrinsic-hazard-framing
+  issue_key: biosafety-level-1-intrinsic-hazard-framing
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Intrinsic low virulence and practices-only wording overstate BSL1 criteria
+  description: The graph treats absent/low virulence as yielding BSL1, while the definition
+    and trait-node description restrict the category to standard practices only. The
+    inspected authorities describe contextual classification of defined work and multiple
+    categories of controls; neither one hazard feature nor practices alone is a sufficient
+    classification rule.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - definition
+  - causal_graphs[0].description
+  - causal_graphs[0].nodes[0].description
+  - causal_graphs[0].nodes[2]
+  - causal_graphs[0].edges[0]
+  evidence_ids:
+  - bmbl
+  - osti-training
+  - thesis
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Original upstream identity/definition owner; preserve inherited provenance
+      and do not rerun with force as a review action
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: example-evidence
+  issue_key: biosafety-level-1-example-evidence
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Attached example papers do not directly establish the claimed BSL1 designations
+  description: The B. subtilis profile supports industrial safe-host use, while the
+    E. coli genomic paper states RG1 for laboratory lineages. Direct classification
+    evidence was found in BMBL and LANL slides, but is not the evidence attached to
+    these examples. A broad non-pathogen note also exceeds industrial-use context.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - canonical_examples[0]
+  - canonical_examples[1]
+  evidence_ids:
+  - subtilis-profile
+  - ecoli-rg
+  - bmbl
+  - osti-training
+  - taxonomy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: node-semantics
+  issue_key: biosafety-level-1-node-semantics
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Node descriptions mix properties, practices and heterogeneous genetic/protein
+    attributes
+  description: Low hazard is an attribute, and laboratory practices/level selection
+    are human or administrative activities rather than the biological processes declared.
+    The virulence-traits node mixes genetic and protein determinants without denoting
+    one protein entity/family; label-only disposition does not fix that semantic mismatch.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - causal_graphs[0].nodes[2].node_type
+  - causal_graphs[0].nodes[4].node_type
+  - causal_graphs[0].nodes[5].node_type
+  - causal_graphs[0].nodes[7].node_type
+  - causal_graphs[0].nodes[8]
+  evidence_ids:
+  - record
+  - local-policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: pathotype-scope
+  issue_key: biosafety-level-1-pathotype-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: E. coli background is broadened and extended to a BSL1 converse
+  description: The pathotype review supports its statement in E. coli strain context.
+    The retained edge generalizes to organisms and adds an absence-compatible-with-BSL1
+    implication without classification support. This background component is not required
+    to establish the administrative category.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - causal_graphs[0].edges[8].description
+  - causal_graphs[0].edges[8].evidence
+  evidence_ids:
+  - pathotype-review
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: snippet-provenance
+  issue_key: biosafety-level-1-snippet-provenance
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reused generic snippets and missing locators obscure support
+  description: Three instances reuse the same two-word phrase; seven other edge evidence
+    entries lack snippets. Their provenance does not distinguish classification authority,
+    derivative summaries and biological background. Diagnostic abstract nonmatches
+    alone do not prove fabricated text.
+  target_ids:
+  - METPO:1001102
+  field_paths:
+  - evidence[0].snippet
+  - causal_graphs[0].edges
+  evidence_ids:
+  - record
+  - check-biosafety-level-1-snippets-network
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: replace-classification-support
+  description: Reconcile the retained definition and classification assertions with
+    inspected authoritative sources at their exact contextual scope.
+  finding_ids:
+  - classification-source
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Verify exact source identity and class/definition support separately from biological
+    background.
+  - Use source-checked quotations or precise authority/edition locators; do not mechanically
+    substitute a DOI.
+  - After authorized curation run focused validate, validate-strict, verify-snippets
+    and applicable qc.
+- action_id: clarify-contextual-classification
+  description: Clarify contextual containment classification and remove unsupported
+    sufficiency/exclusivity implications without adding operational instructions.
+  finding_ids:
+  - intrinsic-hazard-framing
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Original upstream identity/definition owner; preserve inherited provenance
+      and do not rerun with force as a review action
+  acceptance_checks:
+  - Keep agent characteristics, work context and administrative assignment distinct;
+    preserve authority/edition.
+  - Record any disagreement with inherited METPO text instead of rewriting raw-source
+    provenance.
+  - Use guarded curation/history and applicable strict, graph and qc gates after authorized
+    correction.
+- action_id: attach-direct-example-support
+  description: Reassess example notes and attach direct documentary classification
+    support with appropriate lineage/context qualifiers.
+  finding_ids:
+  - example-evidence
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain taxon identity and the K-12 restriction; do not infer a species-wide containment
+    assignment.
+  - Distinguish RG1 from BSL1 and safe industrial use from universal nonpathogenicity.
+  - Verify the precise authority passage before any change and run focused strict/reference
+    checks.
+- action_id: review-node-model
+  description: Review intended entities against native enum definitions and grounding
+    policy; retain classification context or document the exact schema gap.
+  finding_ids:
+  - node-semantics
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Do not invent a mechanism or choose a merely similar ontology term.
+  - Separate broad functional/genetic context from actual protein entities before
+    retaining a protein node.
+  - Run focused strict validation and applicable graph/grounding checks after authorized
+    edits.
+- action_id: bound-pathotype-context
+  description: Restrict or remove the background claim and its classification inference
+    according to the actual source scope.
+  finding_ids:
+  - pathotype-scope
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Source supports exactly the retained taxonomic and logical statement.
+  - No new biological mechanism, intervention or handling recommendation is added.
+  - Run focused strict and graph checks after authorized change.
+- action_id: improve-source-locators
+  description: For retained claims provide short exact quotations or precise source
+    sections, preserving source category and scope.
+  finding_ids:
+  - snippet-provenance
+  target_ids:
+  - METPO:1001102
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/biosafety_level_1.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Inspect actual source text and place interpretation in notes.
+  - Correct scientific support first; do not invent snippets solely to fill a field.
+  - Run focused verify-snippets and audit-snippets; retain source-access limitations.
+limitations:
+- Ag43 full text was unavailable; identity and complete abstract were inspected. No
+  exhaustive full-text absence claim is made.
+- OSTI DOI/browser failures and a DataCite 404 were resolved by official OSTI metadata
+  and full public PDF; they are not final unavailability or negative source evidence.
+- The thesis chart and training slides supply documentary support; neither is new
+  biological experimental proof. The hand-washing study is used only for its generic
+  practice-category statement, without procedural content.
+- Published source text was inspected at the relevant documentary scope; no figure
+  images, supplementary experiments or biological mechanisms were reanalyzed.
+- Human sign-off for historical REVIEWED status was not independently established.
+  The selected ontology release is the captured repository snapshot.
+- Corpus validators are reused at unchanged source bytes, with product-adapter skips
+  preserved. No current legal or all-jurisdiction containment determination is provided.
+notes:
+- No scientific record, history, source writer or generated page changed. This bundle
+  records a review, not a handling assignment.
+- All optional omissions were assessed in context; NONMECHANISTIC scope does not require
+  protein exemplars or an invented connected mechanism.
+- Only the new immutable review pair is saved; future curation and any outbound communication
+  require their own authorization.
+tags:
+- record-review
+- biosafety-level-1
+- ecology
+- needs-curation
+```
