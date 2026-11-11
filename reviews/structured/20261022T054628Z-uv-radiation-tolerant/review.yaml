@@ -1,0 +1,2024 @@
+schema_version: 1.0.0
+review_id: 20261022T054628Z-uv-radiation-tolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of UV radiation tolerant
+started_at: '2026-10-22T05:36:12.185717Z'
+finished_at: '2026-10-22T05:46:28Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Separate source and grounding audits plus root selected primary
+    reading and final adjudication supply scientific judgments. Serializer preparation
+    does not claim another whole-paper scientific review.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Whole-record review identifies two minor issues: quantitative comparator
+  precision and bounded human-acceptance traceability. Local identity, canonical classification,
+  two supplied snippets and formal graph representation are supported with explicit
+  limits. Detailed mechanism efficacy remains unassessed.'
+source:
+  git_revision: 508ee3089c93a36413969cd1ede7f9528a1940a4
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/radiotolerant.yaml
+    sha256: f3bae2896b2801fcaaacdf9c6783ef0df7b96d441e8858b5e1fa0b10e3713bf6
+    role: context
+  - path: data/traits/environment/uv_radiation_tolerant.yaml
+    sha256: e797a774782d68d5e3e68f2abbda80b148209fbd1061df80c15e07a956e592e3
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/audit_unapplied_groundings/2026-08-20T073138Z-claude-code-03fa56.yaml
+    sha256: a0e7b64647148804aabc92d9fa3d28b08d097dec3549ffcbdaa822bd844f531e
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T014114Z-claude-code-5d4383.yaml
+    sha256: 8fecb441b9374b0a0f69f131afce56f86ff69c212c52f45967c2e05ccb8ee98a
+    role: context
+  - path: history/infrastructure/ground-nodes-duplicate-guard/2026-08-08T043349Z-claude-code-d0a8f5.yaml
+    sha256: 3d9c5f55f293164c6ba6bfafef77728fc01d9d536e0a0b09dd97b8ce22873a5a
+    role: context
+  - path: history/infrastructure/predicate-gate-audit/2026-08-16T074719Z-claude-code-84d88d.yaml
+    sha256: d1ba848e155dbd3a65905f07af5539d3d22b8873b638cc6adb48b1a0e23c0a3d
+    role: context
+  - path: history/infrastructure/protein-vs-activity/2026-08-15T202806Z-claude-code-ddcd62.yaml
+    sha256: 58f55f2617869c39eb6412455c0d838b350433ff0ad979c848be1df9bcb3fd4f
+    role: context
+  - path: history/mappings/name-match-groundings/2026-08-17T042357Z-claude-code-2a9f93.yaml
+    sha256: c3f93d5c8c0da5c538af391bfdbad3a8bcbe238a26a8727764c3f0ddc3422ad8
+    role: context
+  - path: history/records/catalase_activity/2026-10-05T175622Z-codex-6ba7c0.yaml
+    sha256: 31b93b83a34985b2b653f8fe1308f0517d7d1b3a17c68783409ddb44ba1cdc6f
+    role: context
+  - path: history/records/catalase_negative/2026-09-11T101404Z-codex-accab4.yaml
+    sha256: c17d1991108d639b9e47036c014955a2a7b04b24112e600ccef28198d219809a
+    role: context
+  - path: history/records/catalase_negative/2026-09-11T140321Z-codex-ab44d4.yaml
+    sha256: 0f24b6c5fcaa59df1a22102921d7f72a0e9ff8020fe015e7cd9859f1e95e87be
+    role: context
+  - path: history/records/catalase_test/2026-09-11T140320Z-codex-2fc598.yaml
+    sha256: 6b1c1ce6d7665cfd70707ed2ef4fe65575efe71c7dd00f892df6613665a6fd7b
+    role: context
+  - path: history/records/dissimilatory_iron_reduction/2026-08-05T000000Z-claude-code-183a01.yaml
+    sha256: 26fb62c4c238a4721c12014b4ec98fca23f192991de06abfac93c18487b8b8a8
+    role: context
+  - path: justfile
+    sha256: 96c01dd8457ab2b91a6f90cb199eb99a32c649c9fba1ef0658ab407cfb009496
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/uv_radiation_tolerant-deep-research-falcon.md
+    sha256: 93fd6352edb450b5c2d7260257e28e4c9cb562eb0eacd027f6996e133b7d3214
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_ds_17_system_trait.py
+    sha256: 4f84b9f228dd7aa6ef8cd5cb01a7dc818bf2ed6ea4a7b59a9a2fae4489eaec00
+    role: context
+  - path: scripts/add_eukaryotic_flagellar_autotomy_trait.py
+    sha256: 9fdb337d58a05bc540b59f3a2b3a70df9a857f58dfe8b879155d35b189da58ae
+    role: context
+  - path: scripts/add_eukaryotic_flagellar_axoneme_internalization_trait.py
+    sha256: d88115bc3e0083657fde66af2ef3015740fcfe7426ee39327324e6824615198e
+    role: context
+  - path: scripts/add_eukaryotic_flagellar_resorption_trait.py
+    sha256: e38fe2b7d91dd7a4d7e2e190b51cb3317094a8c69b2534ed098fb8417b2ae4ba
+    role: context
+  - path: scripts/add_expansion_driven_sliding_motility_trait.py
+    sha256: 21ad376fd2d3ea01e8a9ea2356a4ea5f1a9954c35a5547d140cdd5481d4d8984
+    role: context
+  - path: scripts/add_gamma_glutamyltransferase_activity_trait.py
+    sha256: 27df355eb5708922d02de03327caa12cbf5fd6d6d43a72cc5c1aab41bc341f91
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/document_evidence_reference_churn.py
+    sha256: 84f8638faa59e3909cdde0ccf2efbdf98521c8c423367fa78c139726ea545669
+    role: context
+  - path: scripts/enrich_catalase_negative_trait.py
+    sha256: 0d37b8473dbc95bd942697e403ae67491850765b2a92987ca46ea42eb1941929
+    role: context
+  - path: scripts/enrich_catalase_test_trait.py
+    sha256: 3f419b1688b1f22b4de29fc2001cd5070e9dcf44e5a59955b4aaff9709d44acf
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_oxidative_stress_response_graph_183.py
+    sha256: 1b4f7e4494b777859a4f209ec765864b644f5df5a3e93f016679f4d3d490d417
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000009
+  path: data/traits/environment/uv_radiation_tolerant.yaml
+  label: UV radiation tolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/uv_radiation_tolerant.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Eighth record in the actual B15 queue; current 252-line target and 80
+    captured inputs. Local review is independent of remote publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000009
+checks:
+- check_id: new-base-qc
+  name: Reused B14 corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are corpus diagnostics, not scientific validation
+    of this target.'
+  evidence_ids:
+  - check-new-base-qc
+  - common-reuse-qualification
+  - original-b14-common-completion
+  scope_note: Reused original B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4,
+    qualified for unchanged B15 inputs. Exact original times/commands/logs retained;
+    QC children share the aggregate interval, without invented child times. Current
+    B15 source maps/input bytes and five databases rechecked. No fresh B15 execution
+    or B14 final QC/commit claimed.
+- check_id: new-base-history
+  name: Reused B14 history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1279 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  evidence_ids:
+  - check-new-base-history
+  - common-reuse-qualification
+  - original-b14-common-completion
+  scope_note: Reused original B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4,
+    qualified for unchanged B15 inputs. Exact original times/commands/logs retained;
+    QC children share the aggregate interval, without invented child times. Current
+    B15 source maps/input bytes and five databases rechecked. No fresh B15 execution
+    or B14 final QC/commit claimed.
+- check_id: new-base-products
+  name: Reused B14 mapping identifier/label validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: env PYSTOW_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow OAKLIB_HOME=/private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib
+    SQLITE_TMPDIR=/private/tmp/traitmech-record-sweep.FU79Gr/sqlite-tmp just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is the two grounding mappings, not every target identifier
+    or scientific claim.
+  evidence_ids:
+  - check-new-base-products
+  - common-reuse-qualification
+  - original-b14-common-completion
+  scope_note: Reused original B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4,
+    qualified for unchanged B15 inputs. Exact original times/commands/logs retained;
+    QC children share the aggregate interval, without invented child times. Current
+    B15 source maps/input bytes and five databases rechecked. No fresh B15 execution
+    or B14 final QC/commit claimed.
+- check_id: new-base-stage2-tests
+  name: Reused B14 focused Stage2 writer tests
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000009
+  command: uv run pytest tests/test_curate_stage2_causal_graphs.py -q
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Five tests passed in the explicitly selected Stage2 test file. This is
+    not a full just test run or biological validation.
+  evidence_ids:
+  - check-new-base-stage2-tests
+  - common-reuse-qualification
+  - original-b14-common-completion
+  scope_note: Reused original B14 execution at base 508ee3089c93a36413969cd1ede7f9528a1940a4,
+    qualified for unchanged B15 inputs. Exact original times/commands/logs retained;
+    QC children share the aggregate interval, without invented child times. Current
+    B15 source maps/input bytes and five databases rechecked. No fresh B15 execution
+    or B14 final QC/commit claimed.
+- check_id: uv-radiation-tolerant-target-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: just validate data/traits/environment/uv_radiation_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Native validation passed; scientific interpretation is assessed separately.
+  evidence_ids:
+  - check-uv-radiation-tolerant-target-validate
+- check_id: uv-radiation-tolerant-target-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: just validate-strict data/traits/environment/uv_radiation_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The actual validate-strict command passed.
+  evidence_ids:
+  - check-uv-radiation-tolerant-target-strict
+- check_id: uv-radiation-tolerant-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: just verify-snippets --record data/traits/environment/uv_radiation_tolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Native command succeeded for two snippets: one VERIFIED and one NOT_IN_ABSTRACT,
+    the latter inconclusive. Manual source matching separately records whitespace-only
+    and gamma-symbol normalization.'
+  evidence_ids:
+  - check-uv-radiation-tolerant-snippets-network
+- check_id: native-inspect
+  name: One-target native review capture
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000009
+  command: uv run python scripts/record_review.py inspect --targets /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant.targets.json
+    --input .claude/skills/curate-yaml-record/references/review-checklist.md --input
+    .claude/skills/manage-identifiers/SKILL.md --input .claude/skills/review-yaml-record/SKILL.md
+    --input CLAUDE.md --input DO_NOT_WORK.md --input conf/evidence_snippet_baseline.tsv
+    --input conf/record_review.yaml --input data/raw/biolink-model.yaml --input data/raw/metpo.owl
+    --input data/traits/environment/radiotolerant.yaml --input docs/CURATION_PLAYBOOK.md
+    --input docs/GROUNDING_POLICY.md --input docs/PATHWAY_LINKS.md --input docs/record-review-profile.md
+    --input docs/record-reviews.md --input history/infrastructure/audit_unapplied_groundings/2026-08-20T073138Z-claude-code-03fa56.yaml
+    --input history/infrastructure/disposition-typing-burndown/2026-08-08T014114Z-claude-code-5d4383.yaml
+    --input history/infrastructure/ground-nodes-duplicate-guard/2026-08-08T043349Z-claude-code-d0a8f5.yaml
+    --input history/infrastructure/predicate-gate-audit/2026-08-16T074719Z-claude-code-84d88d.yaml
+    --input history/infrastructure/protein-vs-activity/2026-08-15T202806Z-claude-code-ddcd62.yaml
+    --input history/mappings/name-match-groundings/2026-08-17T042357Z-claude-code-2a9f93.yaml
+    --input history/records/catalase_activity/2026-10-05T175622Z-codex-6ba7c0.yaml
+    --input history/records/catalase_negative/2026-09-11T101404Z-codex-accab4.yaml
+    --input history/records/catalase_negative/2026-09-11T140321Z-codex-ab44d4.yaml
+    --input history/records/catalase_test/2026-09-11T140320Z-codex-2fc598.yaml --input
+    history/records/dissimilatory_iron_reduction/2026-08-05T000000Z-claude-code-183a01.yaml
+    --input justfile --input mappings/node_grounding.tsv --input mappings/predicate_grounding.tsv
+    --input mappings/trait_exact_match_review.tsv --input mappings/uniprot_regrounding_candidates.tsv
+    --input proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv --input
+    proposals/metpo_traitmech_v2/proposal.md --input proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    --input proposals/metpo_traitmech_v5/proposal.md --input proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    --input proposals/metpo_traitmech_v8/proposal.md --input reports/metpo_2026_06_12_active_review.tsv
+    --input reports/metpo_2026_06_12_release_delta.tsv --input reports/ontology_snapshot_manifest.tsv
+    --input research/traits/environment/uv_radiation_tolerant-deep-research-falcon.md
+    --input schema/record_review.yaml --input scripts/add_ds_17_system_trait.py --input
+    scripts/add_eukaryotic_flagellar_autotomy_trait.py --input scripts/add_eukaryotic_flagellar_axoneme_internalization_trait.py
+    --input scripts/add_eukaryotic_flagellar_resorption_trait.py --input scripts/add_expansion_driven_sliding_motility_trait.py
+    --input scripts/add_gamma_glutamyltransferase_activity_trait.py --input scripts/audit_causal_graphs.py
+    --input scripts/audit_graph_protein_taxa.py --input scripts/audit_predicate_domains.py
+    --input scripts/audit_unapplied_groundings.py --input scripts/audit_uniprot_grounding.py
+    --input scripts/backfill_canonical_examples_444.py --input scripts/document_evidence_reference_churn.py
+    --input scripts/enrich_catalase_negative_trait.py --input scripts/enrich_catalase_test_trait.py
+    --input scripts/finalize_metpo_2026_06_12_review.py --input scripts/ground_causal_nodes.py
+    --input scripts/ground_causal_predicates.py --input scripts/migrate_disposition_typing.py
+    --input scripts/migrate_enables_range_edges.py --input scripts/migrate_enables_trait_edges.py
+    --input scripts/migrate_metpo_2026_06_12.py --input scripts/migrate_microbe_domain_edges.py
+    --input scripts/migrate_name_match_groundings.py --input scripts/migrate_node_type_consistency.py
+    --input scripts/migrate_pathway_vs_process.py --input scripts/migrate_process_quality_consistency.py
+    --input scripts/migrate_protein_vs_activity.py --input scripts/migrate_remaining_microbe_domain_edges.py
+    --input scripts/migrate_uniprot_instance_groundings.py --input scripts/record_review.py
+    --input scripts/review_oxidative_stress_response_graph_183.py --input scripts/seed_from_metpo.py
+    --input scripts/verify_metpo_proposal.py --input src/traitmech/schema/mech_shared.yaml
+    --input src/traitmech/schema/traitmech.yaml --input src/traitmech/validation/write_validated.py
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One current target, 80 captured inputs, exact current base and successful
+    native inspect.
+  evidence_ids:
+  - capture
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000009
+  summary: Two protein classes, one reviewed label-only node and zero instances; catalase
+    molecular-function shorthand is allowed by the maintained duplicate-aware rule.
+    No token accession required.
+  evidence_ids:
+  - record
+  - policy
+  - expression
+- check_id: expression-adapter-availability
+  name: Structured source-organism expression query availability
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000009
+  summary: Bounded maintained-runner discovery found no applicable adapter; retained
+    catalog identity scope supplies no expression or efficacy result.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - catalog-original
+  - source-reading
+evidence:
+- evidence_id: common-reuse-qualification
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/common-diagnostic-reuse-qualification.json
+  locator: Current B15 source maps, maintained inputs and five cache databases qualified
+    against identified B14 diagnostics
+  accessed_at: '2026-10-22T00:22:12.767304Z'
+  support: context_only
+  summary: Reuse qualification only; original B14 times retained, no B15 diagnostic
+    execution or B14 finalization asserted.
+  snapshot_sha256: 669d35950e6eb98d05d2d33ee1312b10981840ba66f9ddd5031e3b7cdf8d49dc
+- evidence_id: original-b14-common-completion
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json
+  locator: Original B14 products completion and diagnostic evidence
+  accessed_at: '2026-10-21T23:30:28.240498Z'
+  support: context_only
+  summary: Original four B14 diagnostics, historical attempts and original cache provenance;
+    B14-to-B13 comparison remains false.
+  snapshot_sha256: 2898fb8bd1af98aeea3a60a152fac664f547bc081632ba69aeeefe93678b6a84
+- evidence_id: check-new-base-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-qc.log
+  locator: Executed 2026-10-21T23:25:15.125723+00:00 through 2026-10-21T23:26:53.864156+00:00;
+    metadata new-base-qc.json
+  accessed_at: '2026-10-21T23:26:53.864156Z'
+  support: context_only
+  summary: 'Actual just qc passed: strict validation of 1130 records with 0 errors;
+    graph audit: 74 baselined, 0 new and 0 blocking findings; 135 connected graphs
+    and 1588 wired nodes; protein coverage: 729 graphs (134 pass, 594 NONMECHANISTIC,
+    0 gaps, 1 protected); snippet audit: 2419 baselined, 0 new and 0 blocking findings;
+    19 PathwayMech links. These are corpus diagnostics, not scientific validation
+    of this target.'
+  snapshot_sha256: 586016aa869497e51bc3e5bb431e4e7658cf5b489dc0577b4475cf9cd22c7947
+- evidence_id: check-new-base-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-history.log
+  locator: Executed 2026-10-21T23:25:15.125609+00:00 through 2026-10-21T23:25:19.527774+00:00;
+    metadata new-base-history.json
+  accessed_at: '2026-10-21T23:25:19.527774Z'
+  support: context_only
+  summary: 1278 HistoryRecord YAMLs validated, 0 invalid; current history snapshot
+    contains 1279 files. Integrity does not establish scientific correctness or human
+    acceptance.
+  snapshot_sha256: 82546ec27fb7d9543d08183e9d0086bd9ca32bbd45ecb2d87ef3f5b990af81c3
+- evidence_id: check-new-base-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-products.log
+  locator: Executed 2026-10-21T23:29:02.243310+00:00 through 2026-10-21T23:29:27.250859+00:00;
+    metadata new-base-products.json
+  accessed_at: '2026-10-21T23:29:27.250859Z'
+  support: context_only
+  summary: 361 canonical matches, 2 exact-synonym matches, 1 exception and 123 SKIPPED_NO_ADAPTER
+    pairs. Configured scope is the two grounding mappings, not every target identifier
+    or scientific claim.
+  snapshot_sha256: 060fcb191c9b0fceb7dd8ebf172d1055f794292211401b30fa4e7f4ffa819141
+- evidence_id: check-new-base-stage2-tests
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-stage2-tests.log
+  locator: Executed 2026-10-21T23:25:19.981459+00:00 through 2026-10-21T23:25:21.660071+00:00;
+    metadata new-base-stage2-tests.json
+  accessed_at: '2026-10-21T23:25:21.660071Z'
+  support: context_only
+  summary: Five tests passed in the explicitly selected Stage2 test file. This is
+    not a full just test run or biological validation.
+  snapshot_sha256: 547282404c58d0e8a8e243f434252a5fc215fc1abb8c974b39e7ccdfe759398d
+- evidence_id: historical-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Historical original execution 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Historical products exit 2; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: historical-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Historical original execution 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Historical products exit 2; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: historical-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Historical original execution 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: Historical products exit 0; preserved provenance only, superseded for B14
+    by its actual fresh products run.
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-uv-radiation-tolerant-target-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-target-validate.log
+  locator: Executed 2026-10-22T05:36:42.022346+00:00 through 2026-10-22T05:36:42.749807+00:00;
+    metadata uv-radiation-tolerant-target-validate.json
+  accessed_at: '2026-10-22T05:36:42.749807Z'
+  support: context_only
+  summary: Native validation passed; scientific interpretation is assessed separately.
+  snapshot_sha256: 7cafc3c4ba170a6a47fbbb6394cee74157b3b288a4a1eee79396f7635a65c26c
+- evidence_id: check-uv-radiation-tolerant-target-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-target-strict.log
+  locator: Executed 2026-10-22T05:36:42.022350+00:00 through 2026-10-22T05:36:43.264861+00:00;
+    metadata uv-radiation-tolerant-target-strict.json
+  accessed_at: '2026-10-22T05:36:43.264861Z'
+  support: context_only
+  summary: The actual validate-strict command passed.
+  snapshot_sha256: d1f50775210dcd03fdd8a34529c7007651708971296a1700b2892a35d6298422
+- evidence_id: check-uv-radiation-tolerant-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-snippets-network.log
+  locator: Executed 2026-10-22T05:36:44.642700+00:00 through 2026-10-22T05:36:48.192310+00:00;
+    metadata uv-radiation-tolerant-snippets-network.json
+  accessed_at: '2026-10-22T05:36:48.192310Z'
+  support: context_only
+  summary: 'Native command succeeded for two snippets: one VERIFIED and one NOT_IN_ABSTRACT,
+    the latter inconclusive. Manual source matching separately records whitespace-only
+    and gamma-symbol normalization.'
+  snapshot_sha256: b3cb69c25faf86efd13d1c2471aafe724bb75b862a2cb3ec25f45c0b89ff02b2
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant.inspect.json
+  locator: Actual successful native inspect with 80 captured inputs
+  accessed_at: '2026-10-22T05:36:12.853206Z'
+  support: context_only
+  summary: All current captured source hashes and exact target are bound before serialization.
+  snapshot_sha256: a077bbc534f9a50c19cea9252385620cec647b2e4c877ffc06480d291d4050b4
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/uv_radiation_tolerant.yaml
+  locator: Whole current record
+  accessed_at: '2026-10-22T05:36:12.853206Z'
+  support: supports
+  summary: Ten nodes, nine edges, eleven AI-assisted embedded events, two canonical
+    examples, two protein classes, one reviewed label-only node and zero instances.
+  snapshot_sha256: e797a774782d68d5e3e68f2abbda80b148209fbd1061df80c15e07a956e592e3
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/batch015-local-initialization-receipt.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T03:50:31.750633Z'
+  support: context_only
+  summary: Actual local initialization and eighth queue target; publication remains
+    separate.
+  snapshot_sha256: b5fc6d47e2719f9da11bad0719b933f4af76d4ccc30226c15a2a7c51c07e2283
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:41:46.397904Z'
+  support: supports
+  summary: Duplicate-aware protein family/function grounding, reviewed label-only
+    aggregates and optional instances.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:41:46.397904Z'
+  support: supports
+  summary: Source attribution and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-22T05:41:46.397904Z'
+  support: supports
+  summary: Current material, process, chemical, environmental and NONMECHANISTIC facets.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/identity-assessment.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397453Z'
+  support: context_only
+  summary: Maintained local UV identity and parent, related synonym and broader active
+    METPO overlap without exact migration.
+  snapshot_sha256: 5b2097894420627ff2861a71351e287e0551f9fba04fee2f893b5b549976cb55
+- evidence_id: nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/node-edge-grounding-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397335Z'
+  support: context_only
+  summary: All ten referents and nine formal relation dispositions with complete raw
+    payloads; no confirmed formal defect.
+  snapshot_sha256: faef1f07b4079f3cb4ee512168c6efd79e8b85f9d7ec54873a887e3e00d871ad
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/ownership-assessment.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397175Z'
+  support: context_only
+  summary: Both findings are record-only; bounded searches demonstrate no exact faulty
+    comparator-note producer.
+  snapshot_sha256: 696a3118e640a909982d4b6106d61e1eddbe008b4d37c4e1136eca0929f613a2
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/owner-primary-reading.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.394823Z'
+  support: context_only
+  summary: Selected maintained grounder, migration, schema and policy windows; no
+    writer execution.
+  snapshot_sha256: 535020ed2642e0f98c7edd6e4bbbdbddaab6d70d8f0f97dbfacd8422e2c9d5a9
+- evidence_id: owner-selectors
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/owner-selector-projections.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397039Z'
+  support: context_only
+  summary: Static filename-selector projections only, not whole unrelated-writer audits.
+  snapshot_sha256: d03197c02a4522b4dc3aa609aa599c6705553f0686bda075ca74ad67019c908e
+- evidence_id: mapping-rows
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/mapping-rows.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:40:09.155094Z'
+  support: context_only
+  summary: Current mapping rows are contextual; annotations do not import RO constraints
+    into Biolink causes.
+  snapshot_sha256: 2b9b09228a348940581c762543361d4322b41753274836f307d17d66562797fe
+- evidence_id: additional-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/additional-local-authority.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:40:09.382325Z'
+  support: context_only
+  summary: Complete selected broader METPO radiation class and Biolink causes ancestry.
+  snapshot_sha256: a071e3fca573dc6d6470a985bb207352b99fe7f70dcf4fc454284ec0a30fa954
+- evidence_id: raw-id-check
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/raw-identifier-check.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:08.138911Z'
+  support: context_only
+  summary: Exact current raw upstream identifier checks with their actual queried_at
+    clock; reserved local proposals are not minted active identifiers.
+  snapshot_sha256: f1388300b2658f3fd66a1698ad5a2e787c25c116b0fd125ce3ba885e8ad70122
+- evidence_id: histories
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/history-reading-provenance.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.517096Z'
+  support: context_only
+  summary: All eleven captured contextual histories freshly read whole with AI actors;
+    no prior whole-history reuse.
+  snapshot_sha256: 6514f8ae3deee5615c83d93562fe33f6f28b07c1f15a93a52a222aa36d9fe516
+- evidence_id: human-search
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/search-and-provenance.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.507164Z'
+  support: context_only
+  summary: 'Ignored- and hidden-inclusive search: 164 matching paths, 67 matching
+    arrays and 99 all-local arrays, zero exact target.'
+  snapshot_sha256: 0aa73f2f2e83ff85d7b872e4a7a8d5e1bb3e11be5e4522e63fd987c1c424ffa9
+- evidence_id: discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/owner-discovery-scope.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397256Z'
+  support: context_only
+  summary: Bounded exact-note and all-node discovery; no global producer-absence assertion.
+  snapshot_sha256: 2b2f737b9abca9f41d386e479f31b69c50e91c748292517d03388afd133bc3e2
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/expression-and-readiness.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397765Z'
+  support: context_only
+  summary: One NONMECHANISTIC component and optional protein instances; bounded catalog
+    identities supply no module or efficacy evidence.
+  snapshot_sha256: d32bf557f143bb3abb069433aacd9da470cb799941d09781136d7e49ebf99f00
+- evidence_id: expression-discovery
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/adapter-discovery.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:40:37.696795Z'
+  support: context_only
+  summary: Bounded current maintained-runner discovery found no applicable adapter;
+    no expression query executed.
+  snapshot_sha256: 2c53dadc46a1f0abdc7f2186e9c95754fab78aadb5b03fbac452ae4e37d812ed
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/catalog-reuse.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:40:37.698439Z'
+  support: context_only
+  summary: Original catalog acquisition remains distinct from current copying and
+    selected-name reading.
+  snapshot_sha256: ba1807ec9bbe5bc1cb8c355a22cca9eaefb2043dd65eb0561f86ba373fa7e4fe
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/reading-scope-receipt.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.398023Z'
+  support: context_only
+  summary: Current whole target/eleven histories, selected owner scopes and authority
+    reading.
+  snapshot_sha256: 6b1169019fa242c34a4dc927241db5a72ca48dfa8cbab24970a0f68bcbf28f9b
+- evidence_id: ground-assessment
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/grounding-assessment.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:41:46.397904Z'
+  support: context_only
+  summary: No confirmed formal defect; bounded human provenance minor only within
+    this grounding subaudit.
+  snapshot_sha256: 62475c438fdf3620deccce5dd6e2e9a7e9e7adead4b2865513b9edc9aaea72aa
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/evidence-manifest.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:42:13.430992Z'
+  support: context_only
+  summary: All 30 immutable ground artifacts verified.
+  snapshot_sha256: 9cb70e97b573c9a1323871ced78d7a87d1d17da1456fb988366cae4b2f4671a4
+- evidence_id: ontology-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-root/selected-ontology-primary.json
+  locator: Exact selected response; query 2026-10-22T05:36:55.061189+00:00 through
+    2026-10-22T05:36:55.066156+00:00
+  accessed_at: '2026-10-22T05:36:55.066156Z'
+  support: supports
+  summary: Current selected GO/ENVO/CHEBI, raw METPO and local proposal authority.
+    Query clocks differ from copy/read clocks. Ground auditor did not repeat queries
+    or database hashing; serializer common guard separately verifies qualified inputs.
+  snapshot_sha256: bdaea72b3e74fddcb0614672f69404c661334c37bbc6ebbdfb7e939b8b8263c8
+- evidence_id: authority-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-root/selected-authority-primary.json
+  locator: Exact selected response; query 2026-10-22T05:36:55.066514+00:00 through
+    2026-10-22T05:36:55.086662+00:00
+  accessed_at: '2026-10-22T05:36:55.086662Z'
+  support: supports
+  summary: Current selected GO/ENVO/CHEBI, raw METPO and local proposal authority.
+    Query clocks differ from copy/read clocks. Ground auditor did not repeat queries
+    or database hashing; serializer common guard separately verifies qualified inputs.
+  snapshot_sha256: 94b437016fd0a7285615d12e4faf5346829d5541458f275f0072bce11dac29cf
+- evidence_id: authority-provenance
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/primary-reuse-provenance.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:40:37.597065Z'
+  support: context_only
+  summary: Exact current root query clocks and ground-auditor copies, with separate
+    reading completion.
+  snapshot_sha256: 04d5053b5d87cda746b314ea691e3f18dc46992fe6b345f08be7fd0550d402c4
+- evidence_id: catalog-original
+  kind: authority
+  reference: https://imodulondb.org/api/datasets
+  locator: Original retained 20-organism/28-dataset catalog
+  accessed_at: '2026-10-21T07:36:12.858149Z'
+  support: context_only
+  summary: No adopted organism entry under bounded catalog-name scope; no applicable
+    adapter, expression query, module or efficacy result.
+  snapshot_sha256: 155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693
+- evidence_id: genes-metadata
+  kind: primary_source
+  reference: DOI:10.3390/genes14091803
+  locator: Original indexed identity and selected abstract classification
+  accessed_at: '2026-10-21T11:30:05.915966Z'
+  support: supports
+  summary: Identity and existing quotation context only; detailed repair, survival
+    and intervention efficacy remain unassessed.
+  snapshot_sha256: f36f1906f8312ae15ae676b6110a39592678f66d826ea38d997c5b9fb4a7d624
+- evidence_id: csh-metadata
+  kind: primary_source
+  reference: DOI:10.1101/cshperspect.a012765
+  locator: Original indexed identity and selected abstract classification
+  accessed_at: '2026-10-21T11:30:06.026298Z'
+  support: supports
+  summary: Existing classification and supplied quotation context only, not detailed
+    mechanism support.
+  snapshot_sha256: 7b91df06fc970dfcb21725385f0748995b86f87e863864fbf9199ac3db8400ae
+- evidence_id: genes-body
+  kind: primary_source
+  reference: DOI:10.3390/genes14091803
+  locator: 'Selected body paragraph 11: existing R1 comparator and D10 parenthetical'
+  accessed_at: '2026-10-21T09:37:43.175723Z'
+  support: supports
+  summary: The existing lower-bound comparator and population-reduction metric are
+    distinct from universal survival or a new exposure protocol. No detailed repair-efficacy
+    inference.
+  snapshot_sha256: 2564113369503820a669b56961713e37baa11fe6096dd4cf10c7945c2704f48e
+- evidence_id: canonical-metadata
+  kind: primary_source
+  reference: PMID:11238985
+  locator: Original indexed canonical classification
+  accessed_at: '2026-10-21T22:17:56.236246Z'
+  support: supports
+  summary: Bounded Deinococcus radiodurans UV-resistance classification; no quantitative
+    or mechanism transfer.
+  snapshot_sha256: 8505f5dbde0588fc17fb24b5249659898fd8e22da7622f4b193f980e9428429b
+- evidence_id: csh-body
+  kind: primary_source
+  reference: DOI:10.1101/cshperspect.a012765
+  locator: Source-auditor supplied-fragment occurrence check in retained HTML
+  accessed_at: '2026-10-21T22:17:56.090248Z'
+  support: supports
+  summary: Whitespace-only literal matching; root adopted indexed abstract classification,
+    not a new whole-body review.
+  snapshot_sha256: 3155010bd972b41bd225dc422404dfbd9559aa585407919494470ab39915b9d5
+- evidence_id: canonical-body
+  kind: primary_source
+  reference: PMID:11238985
+  locator: Source-auditor selected canonical classification in retained HTML
+  accessed_at: '2026-10-21T22:19:23.140910Z'
+  support: supports
+  summary: Existing classification only; complete retained bytes do not imply full-body
+    reading or detailed efficacy judgment.
+  snapshot_sha256: b836d2ed2e6a290d2b03d759f6e1ef53cd6d995687a7c3b9827aed299997197a
+- evidence_id: chroo-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A23239185+AND+SRC%3AMED&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:37:01.057130+00:00 through 2026-10-22T05:37:02.397301+00:00
+  accessed_at: '2026-10-22T05:37:02.397301Z'
+  support: supports
+  summary: Current indexed identity and bounded UV-tolerance classification of one
+    endolithic Chroococcidiopsis strain. Genus-level identity is not universal genus-wide
+    phenotype evidence.
+  snapshot_sha256: 1a8e3c55c56a7a6eaa775b222a8fee6b5a4ac9c93742c92cdedc0c8c341eda14
+- evidence_id: chroo-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/chroo-metadata-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:02.397301Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: 3c5f94742baa1dcb5fb9c37ad847ecb931799b9cc4c3218aabb17c09ab88ae77
+- evidence_id: life-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Flife14070822&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:37:01.057454+00:00 through 2026-10-22T05:37:01.770751+00:00
+  accessed_at: '2026-10-22T05:37:01.770751Z'
+  support: context_only
+  summary: Current identity and human-skin photoproduct context only; no universal
+    microbial phenotype or detailed efficacy transfer.
+  snapshot_sha256: f1214b7c8a5cbb8f4c6cf5ad35fb1c3eee1f82061c23552ace36542f5e2b873a
+- evidence_id: life-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/life-metadata-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:01.770751Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: c50ce15953698329901452c2b57f55ba2f628500032527c75a9faa635f1dd99f
+- evidence_id: ijms-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Fijms241512381&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:37:01.057602+00:00 through 2026-10-22T05:37:01.699054+00:00
+  accessed_at: '2026-10-22T05:37:01.699054Z'
+  support: context_only
+  summary: Current identity and selected existing physical absorption context only;
+    detailed photolyase and antioxidant efficacy unassessed.
+  snapshot_sha256: 1318567685b3194169876e5d29a1eadbdc458eb78ec7ca47802e98328310bbe3
+- evidence_id: ijms-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/ijms-metadata-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:01.699054Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: 4d265a91160ae9519bbf10dc7fc5f212fc1d6f00a78944e135a62952c66ab6c6
+- evidence_id: microorganisms-metadata
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Fmicroorganisms13040756&format=json&resultType=core
+  locator: Actual request 2026-10-22T05:37:01.057804+00:00 through 2026-10-22T05:37:01.759842+00:00
+  accessed_at: '2026-10-22T05:37:01.759842Z'
+  support: context_only
+  summary: Current identity and notice observation only; detailed catalase, antioxidant,
+    survival and intervention claims remain unassessed.
+  snapshot_sha256: 50af5a3688bb2331c42fc5f623b2b6d9aa2661f818cda3089ed89d1d8d8a79b9
+- evidence_id: microorganisms-metadata-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/microorganisms-metadata-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:01.759842Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: 51580433d881456e156dc0be34e98459124fc25a3d9f9e4e4f9ea4bbde99253d
+- evidence_id: life-body
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11277730/fullTextXML
+  locator: Actual request 2026-10-22T05:37:45.306913+00:00 through 2026-10-22T05:37:46.807770+00:00
+  accessed_at: '2026-10-22T05:37:46.807770Z'
+  support: context_only
+  summary: Selected paragraph 10 first two sentences for generic human-skin UV photoproduct
+    context; no whole-body or universal microbial phenotype inference.
+  snapshot_sha256: 539f5a90f16cbf2be68de79b8fd035a95da8143cbc170e2d2d1396579946c8df
+- evidence_id: life-body-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/life-body-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:46.807770Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: 4ff5586382fa1d9186d001556f59df00c2dc7a012aa83dc505732b1b7f3ee87c
+- evidence_id: ijms-body
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10419127/fullTextXML
+  locator: Actual request 2026-10-22T05:37:45.307403+00:00 through 2026-10-22T05:37:48.282733+00:00
+  accessed_at: '2026-10-22T05:37:48.282733Z'
+  support: context_only
+  summary: Selected paragraph 20 sentences 6/11 for existing physical absorption and
+    heat context only; no detailed repair, antioxidant or intervention-efficacy assessment.
+  snapshot_sha256: a9b5d01b0f141be23771b58aff4a9b0224eac0a5103f0b2a7fc53cab4fed27db
+- evidence_id: ijms-body-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/ijms-body-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:37:48.282733Z'
+  support: context_only
+  summary: Exact current direct-success access receipt and response hash; four metadata
+    and two body requests, no source retry invented.
+  snapshot_sha256: 4b559196a9be94bd3f11e094da0be04cbb4e68358b5de633e9195417b04fd427
+- evidence_id: taxonomy
+  kind: authority
+  reference: NCBITaxon:1299; NCBITaxon:54298
+  locator: Fresh successful official two-taxon retry
+  accessed_at: '2026-10-22T05:39:51.338678Z'
+  support: supports
+  summary: Deinococcus radiodurans species and Chroococcidiopsis genus identities
+    only. Source-strain classification is separate from universal genus-level phenotype.
+  snapshot_sha256: faa8ef8c3c930482e952eda1bf219a40ae9aa0cdfcc6d23e9213c770b4262b45
+- evidence_id: taxonomy-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/taxonomy-retry-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:51.338678Z'
+  support: context_only
+  summary: Actual successful retry interval after a separate initial DNS failure.
+  snapshot_sha256: e2340d532256b7db65bd690582fd628d70a03cba2851f8911168ae0506207a84
+- evidence_id: taxonomy-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/taxonomy-identity.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:51.339313Z'
+  support: context_only
+  summary: Official species and genus identity; successful and failed accesses remain
+    separate.
+  snapshot_sha256: 0d2d1ddd09f62311fe873196a82e8637bdc78de66882774bcd11b92d0d795421
+- evidence_id: taxonomy-initial-failure
+  kind: validation
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1299,54298&retmode=xml
+  locator: Initial DNS error bytes, not taxonomy XML
+  accessed_at: '2026-10-22T05:39:40.860178Z'
+  support: context_only
+  summary: Failed access is retained separately from the successful retry and native
+    checks.
+  snapshot_sha256: 35281279d8e2164cee8666d6f8aad891326911e887ab1b2ab778c8ac6d09dc6c
+- evidence_id: taxonomy-initial-failure-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-grounding-agent/taxonomy-access.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:40.860178Z'
+  support: context_only
+  summary: Exact initial taxonomy failure interval and response hash.
+  snapshot_sha256: 560efb508b58755710e34ed4824520849373289ae9de703b37d5b45953405d06
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-assessment.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Seven works, one bounded comparator minor and detailed efficacy unknown
+    or unassessed.
+  snapshot_sha256: 38602a5ae646328d9f5d57ac208343b0e2825ebfcf926a074985d531f2c7908f
+- evidence_id: source-identities
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: All seven assigned identities; six retained snapshots and six direct current
+    requests keep distinct clocks.
+  snapshot_sha256: 86a236f5dd10acafc59560cc37e1efa5fc8c0476ad86817d27eb6fca1960131a
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-status-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Actual historical/current notice observations, not an exhaustive status-absence
+    guarantee.
+  snapshot_sha256: 5105d0fa5e42868f0788f9162b5215da7cac53052cced993183b226016f01c4d
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-placement-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: All fifteen external placements; raw definition string and other containing
+    mappings retain their actual shapes. Eleven grounding fields are separately covered.
+  snapshot_sha256: 787c7179642155dcbe90acad25ddd96a715700cc70d532b47cabcb9cbf580101
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/snippet-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: 'Both supplied snippets occur: one whitespace-only match and one explicitly
+    recorded gamma-symbol normalization.'
+  snapshot_sha256: 95adc7872c11bc668b14d023c61b5ec03b2a3fe714513958a5fbfcb333c58a34
+- evidence_id: metric-attribution
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/metric-attribution-reading.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Exact two-note comparator omission, source-strain attribution and population-reduction
+    metric scope; no protocol or enhancement advice.
+  snapshot_sha256: b7bb929957e997096f788890c7a310b9276e7ed3ef66f521543a627c7cc3c8ed
+- evidence_id: notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-note-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Thirteen notes including both canonical notes; bounded attribution and
+    detailed efficacy scopes retained.
+  snapshot_sha256: fe56c2abb9eecdb7708669851a34f025120a8faad2db9c0a896a71c2b5646f45
+- evidence_id: source-nodes-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/node-edge-source-ledger.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: All ten nodes and nine edges with complete raw payloads and bounded source
+    dispositions.
+  snapshot_sha256: 3658dc9438f67c10009b4359bf69e5c5a4ebe7bfb5bd41757d5ac25a1e41e4ec
+- evidence_id: canonical
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/canonical-assessment.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Two bounded canonical classifications, retaining species/genus/strain distinctions
+    without quantitative or mechanism transfer.
+  snapshot_sha256: 84daa5a3720f829dc2a465c6d0f2d5c6980125ac4bcb2ed3dd23365447c7540d
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/primary-reading-scope.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Selected generic/classification/literal locators only; no whole-paper or
+    detailed efficacy review.
+  snapshot_sha256: 3478540b098df0bd024f5c75022b0932aa1333aae5625b9670cb1e7e26e9f3fa
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-access-limits.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Six retained snapshots and six successful current metadata/body requests;
+    full retained bytes are not full reading.
+  snapshot_sha256: d8326da97a60fed33bedf1dfb25f0691d424d96494c8b5d4ab35afb08b2e03ad
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/source-reuse-receipt.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:36:49.126880Z'
+  support: context_only
+  summary: All six exact copies retain original-access objects, string prior-receipt
+    paths and separate prior receipt hashes.
+  snapshot_sha256: 8658f6d7559ca71be21f9c44d53646949099c641e51421a41b258b09ff3f6365
+- evidence_id: source-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/native-context.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.394883Z'
+  support: context_only
+  summary: Native one VERIFIED/one NOT_IN_ABSTRACT is distinct from manual primary
+    occurrence with stated typography normalization.
+  snapshot_sha256: 4fde464c41f5e2fcdc88654ad494b484c79d73bb1de9cc328d09aa3c3a4996ae
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-agent/evidence-manifest.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:39:38.437777Z'
+  support: context_only
+  summary: All 32 frozen source artifacts verified.
+  snapshot_sha256: 04c9855865f8b297d2750bc4b66c1f0b16467f3ec082e54b46a4c01e2a4bf66a
+- evidence_id: root-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-source-root/selected-primary-reading.json
+  locator: Frozen current audit or retained receipt; original reading scope controls
+    interpretation
+  accessed_at: '2026-10-22T05:44:13.280981Z'
+  support: context_only
+  summary: Root selected primary, authority, history and owner scopes; incidental
+    content not adopted.
+  snapshot_sha256: 937715232066ea03347f44771523b830c3b1631ef6845978f9c4cb70efcfd157
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-015.67f2ce7a/uv-radiation-tolerant-root-adjudication.json
+  locator: Final root adjudication with embedded current verification qualifications
+  accessed_at: '2026-10-22T05:44:13.282303Z'
+  support: supports
+  summary: Exact zero major and two minor findings/actions, with current owner/field
+    scopes, control this combined review.
+  snapshot_sha256: bde2b60e28e7e6116acf01ce5b71151d8c8e7d582323b4a8a613b08b1a357f61
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: maintained local UV child and broader overlap'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: Maintained traitmech:000009 is a narrower UV-tolerance child of traitmech:000007.
+    Proposed METPO:1007608/1007606 and local predicates 2007406/2007700 remain absent
+    from captured upstream raw OWL. Active METPO:1007072 covers ionizing or UV radiation
+    and is broader overlap, not an exact UV replacement. The related synonym does
+    not imply exact equivalence.
+  evidence_ids:
+  - identity
+  - raw-id-check
+  - additional-authority
+  - authority-primary
+  - record
+- assessment_id: definition
+  area: quantity
+  topic: 'Native checklist: source comparator and population metric scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000009
+  summary: Two notes omit the existing source lower-bound comparator. Preserve the
+    R1 strain attribution and D10 population-reduction meaning rather than a universal
+    tolerance threshold or all-cell survival guarantee. Definition mechanism language
+    remains unassessed; no new exposure protocol or resistance-enhancement recommendation
+    is introduced.
+  evidence_ids:
+  - metric-attribution
+  - genes-body
+  - notes
+  - sources
+  - root-reading
+  - adjudication
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: two bounded species/genus examples'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: Official taxonomy confirms Deinococcus radiodurans species and Chroococcidiopsis
+    genus. Their assigned sources support bounded UV-tolerance classification; the
+    latter study concerns one endolithic strain, not every member of the genus. No
+    quantitative or detailed mechanism transfer is inferred. Taxonomy failure/retry
+    is separate from phenotype source support.
+  evidence_ids:
+  - canonical
+  - canonical-metadata
+  - canonical-body
+  - chroo-metadata
+  - taxonomy
+  - taxonomy-reading
+  - root-reading
+  - adjudication
+- assessment_id: source-support
+  area: evidence
+  topic: 'Native checklist: seven works and fifteen placements'
+  outcome: unknown
+  target_ids:
+  - traitmech:000009
+  summary: All seven identities resolve and selected classification, existing quotations
+    and generic physical context are supported. The two comparator notes warrant precision,
+    while detailed repair, antioxidant, defense, survival, fitness and intervention
+    efficacy remain unassessed. Human-skin photoproduct context is not universal microbial
+    phenotype proof, and limited passages do not establish whole-paper absence.
+  evidence_ids:
+  - sources
+  - source-identities
+  - source-status
+  - placements
+  - notes
+  - source-reading
+  - source-access
+  - life-body
+  - ijms-body
+  - adjudication
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: two source occurrences with explicit typography'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: CSH matching is whitespace-only literal. Genes occurrence requires the
+    explicitly recorded gamma/Greek-gamma typographic normalization. Native one VERIFIED
+    and one NOT_IN_ABSTRACT remain distinct, with abstract absence inconclusive. The
+    supplied snippet already preserves the comparator omitted from two notes; no separate
+    false-quotation finding is introduced.
+  evidence_ids:
+  - snippets
+  - source-native
+  - genes-body
+  - csh-body
+  - metric-attribution
+  - adjudication
+- assessment_id: nodes
+  area: representation
+  topic: 'Native checklist: all ten current referents'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: All ten declared node facets have no confirmed defect. Environmental UV
+    exposure is processual; GO:0006289 is biological_process and GO:0004096 molecular_function.
+    Catalase protein shorthand is allowed by maintained policy; chemical groundings
+    fit their named classes. CPD photolyase is reviewed label-only with no forced
+    accession. These formal judgments do not establish biological efficacy.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - schema
+  - ontology-primary
+  - authority-primary
+  - policy
+  - adjudication
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].nodes[0]\",\n      \"raw\": {\n        \"node_id\": \"uv_tolerant_trait\"\
+    ,\n        \"label\": \"UV radiation tolerant\",\n        \"node_type\": \"TRAIT\"\
+    ,\n        \"grounding\": \"traitmech:000009\",\n        \"description\": \"Survival\
+    \ of high doses of UV radiation.\"\n      },\n      \"outcome\": \"PASS\",\n \
+    \     \"assessment\": \"Local fallback TRAIT agrees with current identifier and\
+    \ narrower UV scope; active general radiation-tolerance overlap is qualified,\
+    \ not exact identity.\"\n    },\n    {\n      \"index\": 1,\n      \"field\":\
+    \ \"causal_graphs[0].nodes[1]\",\n      \"raw\": {\n        \"node_id\": \"uv_radiation\"\
+    ,\n        \"label\": \"ultraviolet radiation\",\n        \"node_type\": \"ENVIRONMENTAL_FACTOR\"\
+    ,\n        \"description\": \"Solar / UV-C exposure inducing pyrimidine dimers\
+    \ and 6-4 photoproducts.\",\n        \"grounding\": \"ENVO:21001216\"\n      },\n\
+    \      \"outcome\": \"PASS\",\n      \"assessment\": \"ENVO ultraviolet radiation\
+    \ is a radiation process. Environmental exposure is a permitted node facet; processual\
+    \ exposure does not conflict with ENVIRONMENTAL_FACTOR.\"\n    },\n    {\n   \
+    \   \"index\": 2,\n      \"field\": \"causal_graphs[0].nodes[2]\",\n      \"raw\"\
+    : {\n        \"node_id\": \"nucleotide_excision_repair\",\n        \"label\":\
+    \ \"nucleotide-excision repair\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"grounding\": \"GO:0006289\",\n        \"description\": \"Removal\
+    \ and replacement of UV-damaged DNA segments.\"\n      },\n      \"outcome\":\
+    \ \"PASS\",\n      \"assessment\": \"GO:0006289 is a biological process and matches\
+    \ the repair-process referent. Detailed repair efficacy is UNASSESSED_SCOPE.\"\
+    \n    },\n    {\n      \"index\": 3,\n      \"field\": \"causal_graphs[0].nodes[3]\"\
+    ,\n      \"raw\": {\n        \"node_id\": \"photoreactivation\",\n        \"label\"\
+    : \"photoreactivation\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\",\n   \
+    \     \"description\": \"Photolyase-mediated reversal of pyrimidine dimers.\"\n\
+    \      },\n      \"outcome\": \"PASS\",\n      \"assessment\": \"Photoreactivation\
+    \ is described as a process; absent optional CURIE is not a demonstrated identity\
+    \ defect. Detailed efficacy unassessed.\"\n    },\n    {\n      \"index\": 4,\n\
+    \      \"field\": \"causal_graphs[0].nodes[4]\",\n      \"raw\": {\n        \"\
+    node_id\": \"cyclobutane_pyrimidine_dimer\",\n        \"label\": \"cyclobutane\
+    \ pyrimidine dimer\",\n        \"node_type\": \"CHEMICAL\",\n        \"description\"\
+    : \"Major UV-induced DNA photoproduct (CPD) joining adjacent pyrimidines.\"\n\
+    \      },\n      \"outcome\": \"PASS\",\n      \"assessment\": \"Photoproduct\
+    \ is a chemical referent; no missing-ID finding inferred.\"\n    },\n    {\n \
+    \     \"index\": 5,\n      \"field\": \"causal_graphs[0].nodes[5]\",\n      \"\
+    raw\": {\n        \"node_id\": \"pyrimidine_6_4_photoproduct\",\n        \"label\"\
+    : \"pyrimidine (6-4) pyrimidone photoproduct\",\n        \"node_type\": \"CHEMICAL\"\
+    ,\n        \"description\": \"Second principal UV-induced DNA lesion (6-4PP).\"\
+    \n      },\n      \"outcome\": \"PASS\",\n      \"assessment\": \"Photoproduct\
+    \ is a chemical referent; no missing-ID finding inferred.\"\n    },\n    {\n \
+    \     \"index\": 6,\n      \"field\": \"causal_graphs[0].nodes[6]\",\n      \"\
+    raw\": {\n        \"node_id\": \"cpd_photolyase\",\n        \"grounding_status\"\
+    : \"REVIEWED_LABEL_ONLY\",\n        \"grounding_notes\": \"Reviewed protein family,\
+    \ complex, or aggregate; no single semantic family identifier exactly captures\
+    \ this node's represented scope.\",\n        \"label\": \"CPD photolyase\",\n\
+    \        \"node_type\": \"GENE_OR_PROTEIN\",\n        \"description\": \"Light-driven\
+    \ enzyme that directly reverses cyclobutane pyrimidine dimers.\"\n      },\n \
+    \     \"outcome\": \"PASS\",\n      \"assessment\": \"Protein class has explicit\
+    \ REVIEWED_LABEL_ONLY disposition; no token accession or mandatory example inferred\
+    \ for NONMECHANISTIC scope.\"\n    },\n    {\n      \"index\": 7,\n      \"field\"\
+    : \"causal_graphs[0].nodes[7]\",\n      \"raw\": {\n        \"node_id\": \"catalase\"\
+    ,\n        \"label\": \"catalase\",\n        \"node_type\": \"GENE_OR_PROTEIN\"\
+    ,\n        \"description\": \"Antioxidant enzyme detoxifying reactive oxygen species\
+    \ generated by UV.\",\n        \"grounding\": \"GO:0004096\"\n      },\n     \
+    \ \"outcome\": \"PASS\",\n      \"assessment\": \"GO:0004096 is molecular_function;\
+    \ current catalase material-protein shorthand is allowed by maintained policy/duplicate\
+    \ guard with no separate duplicate activity node. Substrate and defense efficacy\
+    \ are unassessed.\"\n    },\n    {\n      \"index\": 8,\n      \"field\": \"causal_graphs[0].nodes[8]\"\
+    ,\n      \"raw\": {\n        \"node_id\": \"reactive_oxygen_species\",\n     \
+    \   \"label\": \"reactive oxygen species\",\n        \"node_type\": \"CHEMICAL\"\
+    ,\n        \"description\": \"ROS produced under UV exposure causing oxidative\
+    \ damage.\",\n        \"grounding\": \"CHEBI:26523\"\n      },\n      \"outcome\"\
+    : \"PASS\",\n      \"assessment\": \"CHEBI:26523 denotes reactive oxygen molecular/ionic\
+    \ species; broad chemical identity fits. No detailed detoxification claim assessed.\"\
+    \n    },\n    {\n      \"index\": 9,\n      \"field\": \"causal_graphs[0].nodes[9]\"\
+    ,\n      \"raw\": {\n        \"node_id\": \"mycosporine_like_amino_acids\",\n\
+    \        \"label\": \"mycosporine-like amino acids\",\n        \"node_type\":\
+    \ \"CHEMICAL\",\n        \"description\": \"UV-screening metabolites that absorb\
+    \ UV-A/UV-B and dissipate it as heat.\",\n        \"grounding\": \"CHEBI:35738\"\
+    \n      },\n      \"outcome\": \"PASS\",\n      \"assessment\": \"CHEBI:35738\
+    \ identity is mycosporine-like amino acid; class/plural wording fits CHEMICAL.\
+    \ No protective efficacy assessment.\"\n    }\n  ],\n  \"source\": [\n    {\n\
+    \      \"index\": 0,\n      \"field\": \"causal_graphs[0].nodes[0]\",\n      \"\
+    node\": {\n        \"node_id\": \"uv_tolerant_trait\",\n        \"label\": \"\
+    UV radiation tolerant\",\n        \"node_type\": \"TRAIT\",\n        \"grounding\"\
+    : \"traitmech:000009\",\n        \"description\": \"Survival of high doses of\
+    \ UV radiation.\"\n      },\n      \"outcome\": \"supported_context\",\n     \
+    \ \"scope\": \"Generic UV-tolerance trait classification positive; source-specific\
+    \ D10 does not define a universal threshold.\"\n    },\n    {\n      \"index\"\
+    : 1,\n      \"field\": \"causal_graphs[0].nodes[1]\",\n      \"node\": {\n   \
+    \     \"node_id\": \"uv_radiation\",\n        \"label\": \"ultraviolet radiation\"\
+    ,\n        \"node_type\": \"ENVIRONMENTAL_FACTOR\",\n        \"description\":\
+    \ \"Solar / UV-C exposure inducing pyrimidine dimers and 6-4 photoproducts.\"\
+    ,\n        \"grounding\": \"ENVO:21001216\"\n      },\n      \"outcome\": \"supported_context\"\
+    ,\n      \"scope\": \"Generic UV environmental challenge and photoproduct context\
+    \ positive.\"\n    },\n    {\n      \"index\": 2,\n      \"field\": \"causal_graphs[0].nodes[2]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"nucleotide_excision_repair\",\n \
+    \       \"label\": \"nucleotide-excision repair\",\n        \"node_type\": \"\
+    BIOLOGICAL_PROCESS\",\n        \"grounding\": \"GO:0006289\",\n        \"description\"\
+    : \"Removal and replacement of UV-damaged DNA segments.\"\n      },\n      \"\
+    outcome\": \"unassessed_scope\",\n      \"scope\": \"Named repair process identity/formal\
+    \ review separate; detailed efficacy unassessed.\"\n    },\n    {\n      \"index\"\
+    : 3,\n      \"field\": \"causal_graphs[0].nodes[3]\",\n      \"node\": {\n   \
+    \     \"node_id\": \"photoreactivation\",\n        \"label\": \"photoreactivation\"\
+    ,\n        \"node_type\": \"BIOLOGICAL_PROCESS\",\n        \"description\": \"\
+    Photolyase-mediated reversal of pyrimidine dimers.\"\n      },\n      \"outcome\"\
+    : \"unassessed_scope\",\n      \"scope\": \"Named repair process identity/formal\
+    \ review separate; detailed efficacy unassessed.\"\n    },\n    {\n      \"index\"\
+    : 4,\n      \"field\": \"causal_graphs[0].nodes[4]\",\n      \"node\": {\n   \
+    \     \"node_id\": \"cyclobutane_pyrimidine_dimer\",\n        \"label\": \"cyclobutane\
+    \ pyrimidine dimer\",\n        \"node_type\": \"CHEMICAL\",\n        \"description\"\
+    : \"Major UV-induced DNA photoproduct (CPD) joining adjacent pyrimidines.\"\n\
+    \      },\n      \"outcome\": \"supported_context\",\n      \"scope\": \"Generic\
+    \ chemical photoproduct identity/context positive; exact prevalence qualifier\
+    \ unassessed.\"\n    },\n    {\n      \"index\": 5,\n      \"field\": \"causal_graphs[0].nodes[5]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"pyrimidine_6_4_photoproduct\",\n\
+    \        \"label\": \"pyrimidine (6-4) pyrimidone photoproduct\",\n        \"\
+    node_type\": \"CHEMICAL\",\n        \"description\": \"Second principal UV-induced\
+    \ DNA lesion (6-4PP).\"\n      },\n      \"outcome\": \"supported_context\",\n\
+    \      \"scope\": \"Generic chemical photoproduct identity/context positive.\"\
+    \n    },\n    {\n      \"index\": 6,\n      \"field\": \"causal_graphs[0].nodes[6]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"cpd_photolyase\",\n        \"grounding_status\"\
+    : \"REVIEWED_LABEL_ONLY\",\n        \"grounding_notes\": \"Reviewed protein family,\
+    \ complex, or aggregate; no single semantic family identifier exactly captures\
+    \ this node's represented scope.\",\n        \"label\": \"CPD photolyase\",\n\
+    \        \"node_type\": \"GENE_OR_PROTEIN\",\n        \"description\": \"Light-driven\
+    \ enzyme that directly reverses cyclobutane pyrimidine dimers.\"\n      },\n \
+    \     \"outcome\": \"unassessed_scope\",\n      \"scope\": \"Photolyase family\
+    \ name retained; detailed repair efficacy unassessed.\"\n    },\n    {\n     \
+    \ \"index\": 7,\n      \"field\": \"causal_graphs[0].nodes[7]\",\n      \"node\"\
+    : {\n        \"node_id\": \"catalase\",\n        \"label\": \"catalase\",\n  \
+    \      \"node_type\": \"GENE_OR_PROTEIN\",\n        \"description\": \"Antioxidant\
+    \ enzyme detoxifying reactive oxygen species generated by UV.\",\n        \"grounding\"\
+    : \"GO:0004096\"\n      },\n      \"outcome\": \"unassessed_scope\",\n      \"\
+    scope\": \"Catalase name/formal identity separate; detailed UV/ROS defense efficacy\
+    \ unassessed.\"\n    },\n    {\n      \"index\": 8,\n      \"field\": \"causal_graphs[0].nodes[8]\"\
+    ,\n      \"node\": {\n        \"node_id\": \"reactive_oxygen_species\",\n    \
+    \    \"label\": \"reactive oxygen species\",\n        \"node_type\": \"CHEMICAL\"\
+    ,\n        \"description\": \"ROS produced under UV exposure causing oxidative\
+    \ damage.\",\n        \"grounding\": \"CHEBI:26523\"\n      },\n      \"outcome\"\
+    : \"partial\",\n      \"scope\": \"Chemical ROS context is generic; detailed UV-defense\
+    \ efficacy and causal molecular attribution unassessed.\"\n    },\n    {\n   \
+    \   \"index\": 9,\n      \"field\": \"causal_graphs[0].nodes[9]\",\n      \"node\"\
+    : {\n        \"node_id\": \"mycosporine_like_amino_acids\",\n        \"label\"\
+    : \"mycosporine-like amino acids\",\n        \"node_type\": \"CHEMICAL\",\n  \
+    \      \"description\": \"UV-screening metabolites that absorb UV-A/UV-B and dissipate\
+    \ it as heat.\",\n        \"grounding\": \"CHEBI:35738\"\n      },\n      \"outcome\"\
+    : \"supported_with_limits\",\n      \"scope\": \"Existing absorption/heat-dissipation\
+    \ physical context supported; detailed defense efficacy unassessed.\"\n    }\n\
+    \  ]\n}"
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all nine current relations'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: No confirmed imported relation-role defect occurs. Local challenges/confers
+    have compatible broad endpoints. Biolink causes inherits named-thing endpoints;
+    mapping annotations do not import RO restrictions. Four lexical predicates lack
+    IDs without demonstrating a mandatory-grounding defect. Formal fit does not validate
+    repair, antioxidant or other detailed efficacy.
+  evidence_ids:
+  - nodes-edges
+  - source-nodes-edges
+  - ontology-primary
+  - authority-primary
+  - additional-authority
+  - mapping-rows
+  - adjudication
+  details: "{\n  \"grounding\": [\n    {\n      \"index\": 0,\n      \"field\": \"\
+    causal_graphs[0].edges[0]\",\n      \"raw\": {\n        \"subject\": \"uv_radiation\"\
+    ,\n        \"predicate\": \"challenges\",\n        \"object\": \"uv_tolerant_trait\"\
+    ,\n        \"description\": \"UV exposure is the environmental challenge the trait\
+    \ counters.\",\n        \"evidence\": [\n          {\n            \"reference\"\
+    : \"DOI:10.3390/genes14091803\",\n            \"notes\": \"Deinococcus radiodurans\
+    \ tolerates UV-C D10 doses of 700 J/m2.\"\n          }\n        ],\n        \"\
+    predicate_id\": \"METPO:2007406\"\n      },\n      \"outcome\": \"PASS\",\n  \
+    \    \"assessment\": \"Local v2 challenges has broad scaffold endpoints and an\
+    \ exposure-to-trait semantic definition. Current endpoints fit; quantitative source-note\
+    \ comparator is a separate source assessment.\"\n    },\n    {\n      \"index\"\
+    : 1,\n      \"field\": \"causal_graphs[0].edges[1]\",\n      \"raw\": {\n    \
+    \    \"subject\": \"nucleotide_excision_repair\",\n        \"predicate\": \"confers\"\
+    ,\n        \"object\": \"uv_tolerant_trait\",\n        \"description\": \"NER\
+    \ removes UV-induced cyclobutane pyrimidine dimers and 6-4 photoproducts.\",\n\
+    \        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/genes14091803\"\
+    ,\n            \"notes\": \"D. radiodurans tolerates lethal UV-C doses via excision-based\
+    \ repair of UV photoproducts.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"METPO:2007700\"\n      },\n      \"outcome\": \"PASS\",\n      \"assessment\"\
+    : \"Local v8 confers has broad causal subject and TRAIT object; current process-to-trait\
+    \ endpoints fit. Reserved proposal status is explicit.\"\n    },\n    {\n    \
+    \  \"index\": 2,\n      \"field\": \"causal_graphs[0].edges[2]\",\n      \"raw\"\
+    : {\n        \"subject\": \"photoreactivation\",\n        \"predicate\": \"confers\"\
+    ,\n        \"object\": \"uv_tolerant_trait\",\n        \"description\": \"Photolyase-mediated\
+    \ dimer reversal complements excision repair.\",\n        \"evidence\": [\n  \
+    \        {\n            \"reference\": \"DOI:10.1101/cshperspect.a012765\",\n\
+    \            \"notes\": \"D. radiodurans is the reference organism for extreme\
+    \ UV and ionizing radiation resistance.\"\n          }\n        ],\n        \"\
+    predicate_id\": \"METPO:2007700\"\n      },\n      \"outcome\": \"PASS\",\n  \
+    \    \"assessment\": \"Local v8 confers has broad causal subject and TRAIT object;\
+    \ current process-to-trait endpoints fit. Detailed repair efficacy unassessed.\"\
+    \n    },\n    {\n      \"index\": 3,\n      \"field\": \"causal_graphs[0].edges[3]\"\
+    ,\n      \"raw\": {\n        \"subject\": \"uv_radiation\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"cyclobutane_pyrimidine_dimer\",\n       \
+    \ \"description\": \"UV exposure produces cyclobutane pyrimidine dimers, the majority\
+    \ DNA lesion.\",\n        \"evidence\": [\n          {\n            \"reference\"\
+    : \"DOI:10.3390/life14070822\",\n            \"notes\": \"UV produces two primary\
+    \ pyrimidine photoproducts: CPDs (majority lesion) and 6-4PPs; central trait-defining\
+    \ lesion, general across taxa.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"biolink:causes\"\n      },\n      \"outcome\": \"PASS\",\n      \"assessment\"\
+    : \"Biolink causes ancestry supplies broad named-thing endpoints. Exposure/process\
+    \ and chemical-product referents fit; no imported RO endpoint constraint inferred\
+    \ from mappings.\"\n    },\n    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].edges[4]\"\
+    ,\n      \"raw\": {\n        \"subject\": \"uv_radiation\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"pyrimidine_6_4_photoproduct\",\n        \"\
+    description\": \"UV exposure produces pyrimidine (6-4) pyrimidone photoproducts.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/life14070822\"\
+    ,\n            \"notes\": \"Principal UV lesions include CPDs and pyrimidine (6-4)\
+    \ pyrimidone photoproducts; strong and general.\"\n          }\n        ],\n \
+    \       \"predicate_id\": \"biolink:causes\"\n      },\n      \"outcome\": \"\
+    PASS\",\n      \"assessment\": \"Biolink causes broad endpoints fit processual\
+    \ exposure and chemical product. No mechanistic efficacy adjudication.\"\n   \
+    \ },\n    {\n      \"index\": 5,\n      \"field\": \"causal_graphs[0].edges[5]\"\
+    ,\n      \"raw\": {\n        \"subject\": \"cpd_photolyase\",\n        \"predicate\"\
+    : \"repairs\",\n        \"object\": \"cyclobutane_pyrimidine_dimer\",\n      \
+    \  \"description\": \"CPD photolyase directly reverses cyclobutane pyrimidine\
+    \ dimers via light-driven electron transfer.\",\n        \"evidence\": [\n   \
+    \       {\n            \"reference\": \"DOI:10.3390/ijms241512381\",\n       \
+    \     \"notes\": \"Photolyases directly reverse UV photoproducts; CPD photolyase\
+    \ uses light-driven electron transfer to monomerize CPD dimers; canonical general\
+    \ edge.\"\n          }\n        ]\n      },\n      \"outcome\": \"QUALIFIED\"\
+    ,\n      \"assessment\": \"Lexical repairs has no imported predicate ID; no formal\
+    \ role rule invented. Material protein/chemical roles are legible; detailed repair\
+    \ efficacy UNASSESSED_SCOPE.\"\n    },\n    {\n      \"index\": 6,\n      \"field\"\
+    : \"causal_graphs[0].edges[6]\",\n      \"raw\": {\n        \"subject\": \"catalase\"\
+    ,\n        \"predicate\": \"detoxifies\",\n        \"object\": \"reactive_oxygen_species\"\
+    ,\n        \"description\": \"Catalase scavenges UV-induced reactive oxygen species,\
+    \ preventing oxidative damage.\",\n        \"evidence\": [\n          {\n    \
+    \        \"reference\": \"DOI:10.3390/microorganisms13040756\",\n            \"\
+    notes\": \"Genomic analyses implicate catalases in UV resistance; ROS-scavengers/catalases\
+    \ detoxify ROS and prevent oxidative damage; general antioxidant edge.\"\n   \
+    \       }\n        ]\n      },\n      \"outcome\": \"QUALIFIED\",\n      \"assessment\"\
+    : \"Lexical detoxifies has no imported predicate ID; broad chemical object is\
+    \ not adjudicated for enzyme specificity or defense efficacy.\"\n    },\n    {\n\
+    \      \"index\": 7,\n      \"field\": \"causal_graphs[0].edges[7]\",\n      \"\
+    raw\": {\n        \"subject\": \"mycosporine_like_amino_acids\",\n        \"predicate\"\
+    : \"absorbs\",\n        \"object\": \"uv_radiation\",\n        \"description\"\
+    : \"MAAs absorb UV-A/UV-B (~309-362 nm) and release it as harmless heat, screening\
+    \ UV.\",\n        \"evidence\": [\n          {\n            \"reference\": \"\
+    DOI:10.3390/ijms241512381\",\n            \"notes\": \"MAAs absorb ~309-362 nm\
+    \ with high extinction coefficients and release absorbed UV as harmless heat;\
+    \ strong, general for cyanobacteria/algae.\"\n          }\n        ]\n      },\n\
+    \      \"outcome\": \"QUALIFIED\",\n      \"assessment\": \"Lexical absorbs has\
+    \ no imported predicate ID; no automatic process/process constraint. Physical-context\
+    \ wording retained, no efficacy recommendation.\"\n    },\n    {\n      \"index\"\
+    : 8,\n      \"field\": \"causal_graphs[0].edges[8]\",\n      \"raw\": {\n    \
+    \    \"subject\": \"mycosporine_like_amino_acids\",\n        \"predicate\": \"\
+    quenches\",\n        \"object\": \"reactive_oxygen_species\",\n        \"description\"\
+    : \"MAAs act as antioxidants that quench UV-induced reactive oxygen species.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/ijms241512381\"\
+    ,\n            \"notes\": \"MAAs act as antioxidants/free-radical scavengers and\
+    \ quench ROS induced by PAR, UV-A, and UV-B; strong, mechanism/class-level.\"\n\
+    \          }\n        ]\n      },\n      \"outcome\": \"QUALIFIED\",\n      \"\
+    assessment\": \"Lexical quenches has no imported predicate ID; no imported role\
+    \ finding. Detailed protective efficacy UNASSESSED_SCOPE.\"\n    }\n  ],\n  \"\
+    source\": [\n    {\n      \"index\": 0,\n      \"field\": \"causal_graphs[0].edges[0]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"uv_radiation\",\n        \"predicate\"\
+    : \"challenges\",\n        \"object\": \"uv_tolerant_trait\",\n        \"description\"\
+    : \"UV exposure is the environmental challenge the trait counters.\",\n      \
+    \  \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/genes14091803\"\
+    ,\n            \"notes\": \"Deinococcus radiodurans tolerates UV-C D10 doses of\
+    \ 700 J/m2.\"\n          }\n        ],\n        \"predicate_id\": \"METPO:2007406\"\
+    \n      },\n      \"outcome\": \"concern\",\n      \"scope\": \"Environmental\
+    \ challenge is generic; quantitative note drops source comparator. No new exposure\
+    \ recommendation.\"\n    },\n    {\n      \"index\": 1,\n      \"field\": \"causal_graphs[0].edges[1]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"nucleotide_excision_repair\",\n \
+    \       \"predicate\": \"confers\",\n        \"object\": \"uv_tolerant_trait\"\
+    ,\n        \"description\": \"NER removes UV-induced cyclobutane pyrimidine dimers\
+    \ and 6-4 photoproducts.\",\n        \"evidence\": [\n          {\n          \
+    \  \"reference\": \"DOI:10.3390/genes14091803\",\n            \"notes\": \"D.\
+    \ radiodurans tolerates lethal UV-C doses via excision-based repair of UV photoproducts.\"\
+    \n          }\n        ],\n        \"predicate_id\": \"METPO:2007700\"\n     \
+    \ },\n      \"outcome\": \"unassessed_scope\",\n      \"scope\": \"Source identity\
+    \ positive; detailed NER/UV survival efficacy unassessed.\"\n    },\n    {\n \
+    \     \"index\": 2,\n      \"field\": \"causal_graphs[0].edges[2]\",\n      \"\
+    edge\": {\n        \"subject\": \"photoreactivation\",\n        \"predicate\"\
+    : \"confers\",\n        \"object\": \"uv_tolerant_trait\",\n        \"description\"\
+    : \"Photolyase-mediated dimer reversal complements excision repair.\",\n     \
+    \   \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1101/cshperspect.a012765\"\
+    ,\n            \"notes\": \"D. radiodurans is the reference organism for extreme\
+    \ UV and ionizing radiation resistance.\"\n          }\n        ],\n        \"\
+    predicate_id\": \"METPO:2007700\"\n      },\n      \"outcome\": \"unassessed_scope\"\
+    ,\n      \"scope\": \"Source identity and general classification positive; photoreactivation\
+    \ efficacy or exact taxon mechanism not established by opening phrase.\"\n   \
+    \ },\n    {\n      \"index\": 3,\n      \"field\": \"causal_graphs[0].edges[3]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"uv_radiation\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"cyclobutane_pyrimidine_dimer\",\n       \
+    \ \"description\": \"UV exposure produces cyclobutane pyrimidine dimers, the majority\
+    \ DNA lesion.\",\n        \"evidence\": [\n          {\n            \"reference\"\
+    : \"DOI:10.3390/life14070822\",\n            \"notes\": \"UV produces two primary\
+    \ pyrimidine photoproducts: CPDs (majority lesion) and 6-4PPs; central trait-defining\
+    \ lesion, general across taxa.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"biolink:causes\"\n      },\n      \"outcome\": \"partial\",\n      \"scope\"\
+    : \"Generic UV-induced pyrimidine photoproduct context supported in human-skin\
+    \ discussion. Exact CPD majority qualifier and universal taxon transfer not independently\
+    \ assessed.\"\n    },\n    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].edges[4]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"uv_radiation\",\n        \"predicate\"\
+    : \"causes\",\n        \"object\": \"pyrimidine_6_4_photoproduct\",\n        \"\
+    description\": \"UV exposure produces pyrimidine (6-4) pyrimidone photoproducts.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/life14070822\"\
+    ,\n            \"notes\": \"Principal UV lesions include CPDs and pyrimidine (6-4)\
+    \ pyrimidone photoproducts; strong and general.\"\n          }\n        ],\n \
+    \       \"predicate_id\": \"biolink:causes\"\n      },\n      \"outcome\": \"\
+    supported_context\",\n      \"scope\": \"Generic UV-associated 6-4 photoproduct\
+    \ context supported; no repair intervention efficacy.\"\n    },\n    {\n     \
+    \ \"index\": 5,\n      \"field\": \"causal_graphs[0].edges[5]\",\n      \"edge\"\
+    : {\n        \"subject\": \"cpd_photolyase\",\n        \"predicate\": \"repairs\"\
+    ,\n        \"object\": \"cyclobutane_pyrimidine_dimer\",\n        \"description\"\
+    : \"CPD photolyase directly reverses cyclobutane pyrimidine dimers via light-driven\
+    \ electron transfer.\",\n        \"evidence\": [\n          {\n            \"\
+    reference\": \"DOI:10.3390/ijms241512381\",\n            \"notes\": \"Photolyases\
+    \ directly reverse UV photoproducts; CPD photolyase uses light-driven electron\
+    \ transfer to monomerize CPD dimers; canonical general edge.\"\n          }\n\
+    \        ]\n      },\n      \"outcome\": \"unassessed_scope\",\n      \"scope\"\
+    : \"Assigned review identity positive; detailed photolyase repair/electron-transfer\
+    \ efficacy unassessed.\"\n    },\n    {\n      \"index\": 6,\n      \"field\"\
+    : \"causal_graphs[0].edges[6]\",\n      \"edge\": {\n        \"subject\": \"catalase\"\
+    ,\n        \"predicate\": \"detoxifies\",\n        \"object\": \"reactive_oxygen_species\"\
+    ,\n        \"description\": \"Catalase scavenges UV-induced reactive oxygen species,\
+    \ preventing oxidative damage.\",\n        \"evidence\": [\n          {\n    \
+    \        \"reference\": \"DOI:10.3390/microorganisms13040756\",\n            \"\
+    notes\": \"Genomic analyses implicate catalases in UV resistance; ROS-scavengers/catalases\
+    \ detoxify ROS and prevent oxidative damage; general antioxidant edge.\"\n   \
+    \       }\n        ]\n      },\n      \"outcome\": \"unassessed_scope\",\n   \
+    \   \"scope\": \"Assigned bacterial study identity positive; catalase-specific\
+    \ UV defense and efficacy unassessed.\"\n    },\n    {\n      \"index\": 7,\n\
+    \      \"field\": \"causal_graphs[0].edges[7]\",\n      \"edge\": {\n        \"\
+    subject\": \"mycosporine_like_amino_acids\",\n        \"predicate\": \"absorbs\"\
+    ,\n        \"object\": \"uv_radiation\",\n        \"description\": \"MAAs absorb\
+    \ UV-A/UV-B (~309-362 nm) and release it as harmless heat, screening UV.\",\n\
+    \        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.3390/ijms241512381\"\
+    ,\n            \"notes\": \"MAAs absorb ~309-362 nm with high extinction coefficients\
+    \ and release absorbed UV as harmless heat; strong, general for cyanobacteria/algae.\"\
+    \n          }\n        ]\n      },\n      \"outcome\": \"supported_with_limits\"\
+    ,\n      \"scope\": \"Existing absorption range and energy-as-heat statement occur\
+    \ in selected review passage; generic physical context only, not culture/defense\
+    \ efficacy.\"\n    },\n    {\n      \"index\": 8,\n      \"field\": \"causal_graphs[0].edges[8]\"\
+    ,\n      \"edge\": {\n        \"subject\": \"mycosporine_like_amino_acids\",\n\
+    \        \"predicate\": \"quenches\",\n        \"object\": \"reactive_oxygen_species\"\
+    ,\n        \"description\": \"MAAs act as antioxidants that quench UV-induced\
+    \ reactive oxygen species.\",\n        \"evidence\": [\n          {\n        \
+    \    \"reference\": \"DOI:10.3390/ijms241512381\",\n            \"notes\": \"\
+    MAAs act as antioxidants/free-radical scavengers and quench ROS induced by PAR,\
+    \ UV-A, and UV-B; strong, mechanism/class-level.\"\n          }\n        ]\n \
+    \     },\n      \"outcome\": \"unassessed_scope\",\n      \"scope\": \"Assigned\
+    \ review identity positive; detailed antioxidant/ROS defense efficacy unassessed.\"\
+    \n    }\n  ]\n}"
+- assessment_id: owners
+  area: ownership
+  topic: 'Native checklist: bounded note-producer discovery and record-only actions'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: Both exact findings are record-only. Ignored/hidden-inclusive note and
+    all-node searches plus selected grounder, migration and filename-selector windows
+    did not demonstrate an exact faulty comparator-note producer. This is bounded
+    discovery, not a global absence assertion; eighteen captured script leads are
+    not eighteen whole-script audits. No maintained writer was executed.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - owner-selectors
+  - discovery
+  - mapping-rows
+  - adjudication
+- assessment_id: provenance
+  area: provenance
+  topic: 'Native checklist: bounded human acceptance link'
+  outcome: concern
+  target_ids:
+  - traitmech:000009
+  summary: All eleven embedded events, including promotion to REVIEWED, are AI-assisted.
+    All eleven captured contextual histories were freshly read whole with AI actors.
+    Ignored- and hidden-inclusive search excluding .git/.venv internals found 164
+    matching paths and 67 matching review arrays; all 99 actual local target arrays
+    have no exact target review. Private or remote acceptance remains unknown.
+  evidence_ids:
+  - human-search
+  - histories
+  - discovery
+  - ground-reading
+  - root-reading
+  - record
+  - adjudication
+- assessment_id: expression
+  area: completeness
+  topic: 'Native checklist: bounded catalog and unavailable adapter'
+  outcome: unknown
+  target_ids:
+  - traitmech:000009
+  summary: The retained 20-organism/28-dataset catalog has no adopted organism entry
+    within the stated scope. No applicable adapter was found in bounded project/install/PATH
+    discovery, and no expression query ran. No module, strain, phenotype or efficacy
+    conclusion follows from catalog absence.
+  evidence_ids:
+  - expression
+  - expression-discovery
+  - catalog-original
+  - catalog-reuse
+  - source-reading
+  - adjudication
+- assessment_id: readiness
+  area: completeness
+  topic: 'Native checklist: NONMECHANISTIC context and optional instances'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: One component, ten nodes, nine edges, two protein classes, one reviewed
+    label-only node and zero instances are permissible current NONMECHANISTIC context.
+    No invented connector, accession or dataset is required. These positives do not
+    resolve comparator precision or human acceptance traceability.
+  evidence_ids:
+  - record
+  - nodes-edges
+  - expression
+  - histories
+  - policy
+- assessment_id: validation
+  area: schema
+  topic: 'Native checklist: current native checks and qualified B14 diagnostics'
+  outcome: supported
+  target_ids:
+  - traitmech:000009
+  summary: Current inspect, target validation, strict validation and snippet checks
+    are successful B15 executions. Four original B14 common diagnostics are qualified
+    for unchanged B15 inputs, not relabeled fresh B15 executions. Original intervals,
+    historical attempts, product skips and omitted full just test retain their scope.
+    These eight command checks do not establish scientific correctness or human acceptance.
+  evidence_ids:
+  - capture
+  - common-reuse-qualification
+  - original-b14-common-completion
+  - check-uv-radiation-tolerant-target-validate
+  - check-uv-radiation-tolerant-target-strict
+  - check-uv-radiation-tolerant-snippets-network
+  - source-native
+findings:
+- finding_id: quantitative-comparator-precision
+  issue_key: uv-radiation-tolerant-quantitative-comparator-precision
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Quantitative comparator precision
+  description: Both notes omit the source comparator exceeding, already retained in
+    the supplied snippet. The source statement concerns the R1 strain and a D10 population-reduction
+    metric; its parenthetical defines a 90% reduction. The notes should preserve the
+    comparator and attribution without implying all-cell survival or a universal UV-tolerance
+    threshold. No exact faulty note producer was demonstrated by the bounded scripts
+    search.
+  target_ids:
+  - traitmech:000009
+  field_paths:
+  - evidence[0].notes
+  - causal_graphs[0].edges[0].evidence[0].notes
+  evidence_ids:
+  - sources
+  - metric-attribution
+  - genes-body
+  - notes
+  - snippets
+  - owners
+  - root-reading
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/uv_radiation_tolerant.yaml
+    role: Current record assertions; separate authorized curation required
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: uv-radiation-tolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human acceptance link
+  description: REVIEWED lacks a linked human acceptance decision in the bounded current
+    evidence. All eleven embedded events, including promotion to REVIEWED, are AI-assisted.
+    All eleven captured contextual histories have AI actors. Ignored- and hidden-inclusive
+    discovery excluding .git/.venv internals found 164 matching paths and 67 matching
+    review arrays; all 99 actual local top-level target arrays contain no exact target
+    review. Private or remote acceptance remains unknown.
+  target_ids:
+  - traitmech:000009
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - human-search
+  - histories
+  - discovery
+  - ground-reading
+  - root-reading
+  - record
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/uv_radiation_tolerant.yaml
+    role: Current record assertions; separate authorized curation required
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: curate-quantitative-comparator-precision
+  description: Preserve source comparator, metric and strain attribution in the two
+    notes during separately authorized curation.
+  finding_ids:
+  - quantitative-comparator-precision
+  target_ids:
+  - traitmech:000009
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/uv_radiation_tolerant.yaml
+    role: Current record assertions; separate authorized curation required
+  acceptance_checks:
+  - Retain the source lower-bound comparator and existing D10 meaning consistently
+    with the supplied snippet.
+  - Keep source-strain attribution distinct from a universal trait threshold or all-cell
+    survival guarantee.
+  - Use guarded record/history curation and applicable validation; no new exposure
+    protocol or resistance-enhancement recommendation is prescribed.
+- action_id: curate-human-acceptance-link
+  description: Link attributable human acceptance for REVIEWED status or accurately
+    qualify the status in separately authorized curation.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000009
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/uv_radiation_tolerant.yaml
+    role: Current record assertions; separate authorized curation required
+  acceptance_checks:
+  - Provide actor identity, exact target scope and retrievable acceptance; AI histories
+    do not establish human signoff.
+  - Preserve bounded local-search scope and private/remote uncertainty.
+  - Use maintained guarded history and validation for any curation change.
+limitations:
+- No fresh B15 common diagnostic execution is asserted. Full just test was NOT_RUN;
+  only the five optional focused Stage2 tests are reused. Products retains 123 no-adapter
+  skips and covers two configured mappings. Common checks establish bounded software/data
+  integrity, not scientific support, current-target checks or prior-batch finalization.
+  Serializers must append to these helper notes and limitations.
+- Six source snapshots reused with flat original acquisition receipts; copies are
+  not new requests.
+- Four metadata and two body requests were current direct successes; no failed attempt
+  was inferred.
+- Original source-status metadata is historical for three reused works; returned notice
+  fields do not establish exhaustive publication-status absence.
+- Retained full bodies were read only at declared selected generic/literal locators;
+  no whole-paper absence claim.
+- Genus/strain/species and D10 metric scope are distinct; reported resistance is not
+  universal survival or a new exposure protocol.
+- Mechanism/defense/repair/antioxidant/regulatory efficacy remains UNASSESSED_SCOPE.
+- 'Ground-audit scope: Biological efficacy and intervention engineering UNASSESSED_SCOPE.'
+- 'Ground-audit scope: Fresh taxonomy identity is separate from phenotype evidence.'
+- 'Ground-audit scope: Broader active METPO radiation-tolerance overlap retained without
+  exact migration claim.'
+- 'Ground-audit scope: Ground auditor did not rerun native/common diagnostics or ontology
+  DB hashes.'
+- 'Ground-audit scope: Owner windows and discovery are bounded; no whole unrelated-writer
+  audit.'
+- All 80 captured inputs and 62 frozen audit artifacts were rehashed; all represented
+  raw placements, notes, snippets and both complete node/edge ledgers match the current
+  record.
+- Root read the whole 252-line target and inspect plan before native inspect; all
+  eleven captured contextual histories were freshly read whole.
+- Root read seven metadata identity/title/author/year/type/notice records, both canonical
+  indexed abstracts, and the first two Genes and CSH abstract sentences. Adopted scope
+  is classification, existing quotations and comparator attribution; incidental mechanism,
+  exposure and optimization details remain unassessed.
+- Root read actual Genes XML body paragraph11 for the existing R1 comparator and D10
+  parenthetical, Life paragraph10 first two sentences for human-skin UV photoproduct
+  context, and IJMS paragraph20 sentences6/11 for existing physical absorption/heat
+  context. No whole article review is claimed. CSH/canonical HTML occurrence was checked
+  by source auditor; root used their indexed abstract classification text.
+- Root read selected semantic ontology rows (full GO4096 and GO6289 statements), proposal
+  rows, exact raw-ID checks, complete supplied METPO1007072 element and Biolink causes
+  ancestry. Broad overlap is not exact UV identity.
+- Root read mapping rows, node/predicate grounder windows, enables migration selector
+  window, schema/policy/signoff windows and AST filename-selector projections. Other
+  auditor windows are not claimed freshly read by root. No writer execution.
+- Root read official successful taxonomy identity fields only and the retained catalog
+  organism keys. Original/copy/current source request clocks and taxonomy failure/retry
+  remain separate.
+- Six retained source copies preserve original acquisition and current copy/read clocks.
+  Six current metadata/body requests succeeded directly. Taxonomy DNS failure and
+  successful retry are separate; successful taxonomy establishes identity only.
+- All 15 external placements, 13 notes, two snippets, ten nodes and nine edges received
+  bounded judgments. Detailed repair, antioxidant, defense, survival, fitness and
+  intervention efficacy remains UNASSESSED_SCOPE; source identity or formal role fit
+  does not validate those claims.
+- Chroococcidiopsis is a genus and the cited study concerns one endolithic strain.
+  The bounded example is not universal genus-wide phenotype or mechanism evidence.
+- Observed indexed notice fields are not an exhaustive guarantee of no later notice.
+  Retained full-body bytes do not imply full-body reading.
+- Original B14 common diagnostics are qualified for unchanged B15 inputs, not fresh
+  B15 executions. Current inspect, target validation, strict validation and snippets
+  are fresh. Serializer guard separately rechecks common inputs and five database
+  pins. Full just test was not run; original optional Stage2 scope and product skips
+  remain.
+- Owner discovery is a bounded ignored/hidden-inclusive scripts search and selected
+  static windows, not proof that no producer exists anywhere. Captured eighteen script
+  leads are not eighteen whole-script audits.
+- Maintained traitmech:000009 is a narrower UV-tolerance child of traitmech:000007.
+  Proposed METPO1007608/1007606 and local predicates2007406/2007700 remain absent
+  from captured raw upstream OWL. Active METPO1007072 includes ionizing or UV radiation
+  and is broader overlap, not an exact UV replacement.
+- All ten node facets and nine formal edge roles have no confirmed defect. Environmental
+  UV exposure is processual; GO6289 is biological_process and GO4096 molecular_function.
+  Catalase protein shorthand is allowed by the maintained duplicate-aware rule. Chemical
+  groundings fit their named classes.
+- Local challenges and confers have compatible broad endpoint categories. Biolink
+  causes inherits named-thing endpoints; mapping annotations do not import RO role
+  constraints. Four lexical predicates lack IDs without demonstrating a mandatory-grounding
+  defect.
+- Official taxonomy confirms NCBITaxon1299 Deinococcus radiodurans species and NCBITaxon54298
+  Chroococcidiopsis genus. Their sources support bounded UV-tolerance classification;
+  no quantitative or mechanism transfer is inferred.
+- Both supplied snippets occur in the cited texts. Genes requires explicitly recorded
+  gamma/Greek-gamma typographic normalization; CSH is whitespace-only literal. Native
+  VERIFIED and NOT_IN_ABSTRACT are retained separately; abstract absence is inconclusive.
+- One NONMECHANISTIC component, two protein classes, one REVIEWED_LABEL_ONLY node
+  and zero protein instances require no invented connector or accession. The retained
+  20-organism/28-dataset catalog has no adopted organism entry; no applicable adapter
+  was found in bounded discovery and no expression query ran.
+- No scientific record, mapping, ontology, history, generated product or paid-provider
+  run changed. Local review and publication remain separate.
+notes:
+- Qualified reuse of four original B14 diagnostics is recorded in /private/tmp/traitmech-record-sweep-015.67f2ce7a/common-diagnostic-reuse-qualification.json.
+  Historical products failures/retry and original cache provenance remain in /private/tmp/traitmech-record-sweep-014.q8m4v2cs/new-base-diagnostic-independent-review-agent/fresh-products-completion.json.
+  B14 generated reports are retained output snapshots, not B15 source inputs or synthetic
+  B15 reports. B15-to-B14 byte equality does not change the historical false B14-to-B13
+  comparison; B14 final gates/commit and continuation pins remain separate.
+- 'Exact findings, actions, fields, severities and owners come only from root FINAL:
+  two minor issues, comparator precision and human acceptance traceability. No formal-role
+  major or additional source finding is inherited.'
+- Serializer preparation adopts frozen audits and root adjudication without another
+  whole-paper scientific review. Six retained source acquisition clocks, six current
+  source requests, taxonomy failure/retry and current query/read/copy clocks remain
+  distinct. Raw-ID derived evidence uses its queried_at clock. Ground-auditor non-repetition
+  is actor-specific; common guard separately rechecks qualified inputs and database
+  pins. Original B14 diagnostics are not fresh B15 executions.
+tags:
+- record-review
+- uv-radiation-tolerant
+- environment
+- needs-curation
