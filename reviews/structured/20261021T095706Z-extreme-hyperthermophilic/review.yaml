@@ -1,0 +1,1555 @@
+schema_version: 1.0.0
+review_id: 20261021T095706Z-extreme-hyperthermophilic
+kind: record
+repository: CultureBotAI/TraitMech
+title: Identity, source scope and relation review of extreme hyperthermophily
+started_at: '2026-10-21T09:44:00Z'
+finished_at: '2026-10-21T09:57:06Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The active identity, related synonyms, deliberate local hierarchy and Pyrolobus
+  example are supported. One major finding concerns edge8, which grounds material
+  proteins -> membrane state to process-only RO positive regulation. Two minor findings
+  concern omitted same-source physiological uncertainty on edge5 and a bounded missing
+  human-acceptance link. All eleven nodes, nine edges, eight references, thirteen
+  citation placements and eighteen history events were assessed. Five snippets are
+  exact; one remains unverified because the article body was inaccessible. Current
+  reverse-gyrase GO Molecular Function grounding is allowed, and historical optimum
+  wording is not refuted by a higher reported maximum.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/extreme_hyperthermophilic.yaml
+    sha256: 1ff49bc4ee848f90b6a7e2e1fe17b51fad9c7b952f6c6a7c2e3a433b3de0266c
+    role: target
+  - path: data/traits/environment/temperature_preference.yaml
+    sha256: 124373347177201d4a2ed44d2d69d1160636e6a99aacc87b4b0ee71e73f0234f
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/extreme_hyperthermophilic-deep-research-falcon.md
+    sha256: f2329ea4ed1800b1d27535955cf19c6f5bbadc0ad5894460840201fddab2a0af
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000721
+  path: data/traits/environment/extreme_hyperthermophilic.yaml
+  label: extreme hyperthermophilic
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained seeder for ontology-backed identity and hierarchy
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One entire maintained TraitRecord, fully read before the initial native
+    capture. Review includes all eleven nodes, nine edges, one canonical example,
+    eight record references, thirteen citation placements, six snippets and eighteen
+    history events. Parent, ontology, mapping, writer, release-retention and research
+    inputs are context rather than additional targets. No record or source-owner edits;
+    excluded spore germination remains untouched.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000721
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000721
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000721
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    005 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: extreme-hyperthermophilic-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just validate data/traits/environment/extreme_hyperthermophilic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed 09:44:25–26Z. Shape validity does not establish external relation
+    roles or scientific sufficiency.
+  evidence_ids:
+  - check-extreme-hyperthermophilic-validate
+- check_id: extreme-hyperthermophilic-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just validate-strict data/traits/environment/extreme_hyperthermophilic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed 09:44:25–27Z. The material-protein to state assignment under process-only
+    RO is assessed separately.
+  evidence_ids:
+  - check-extreme-hyperthermophilic-strict
+- check_id: extreme-hyperthermophilic-snippets
+  name: Focused abstract snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just verify-snippets --record data/traits/environment/extreme_hyperthermophilic.yaml
+    --out /private/tmp/traitmech-record-sweep-005.klfwsp1f/extreme-hyperthermophilic-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Passed 09:44:27–35Z with five VERIFIED and one NOT_IN_ABSTRACT occurrence.
+    Manual source inspection preserves five exact quotations and one unverified membrane
+    phrase; inaccessible body is not a failed quotation match.
+  evidence_ids:
+  - check-extreme-hyperthermophilic-snippets
+- check_id: batch004-qc
+  name: Reused native full-corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000721
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports reuse
+    on unchanged scientific/common-check inputs; original baselines, warnings and
+    scope remain. This was not freshly executed for this target.
+  evidence_ids:
+  - check-batch004-qc
+- check_id: live-uniprot
+  name: Live UniProt instance audit
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000721
+  summary: No current protein instance or UniProt accession is asserted. Historical
+    deleted grounding is not a current instance; NONMECHANISTIC aggregates need no
+    token accession.
+  evidence_ids:
+  - record
+  - grounding-ledger
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1000721
+  summary: Bounded discovery receipts reused with original times; official catalog
+    fallback inspected.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Canonical dataset applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000721
+  summary: No canonical Pyrolobus fumarii dataset in the inspected catalog; noncoverage
+    is not evidence against the trait.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-extreme-hyperthermophilic-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/extreme-hyperthermophilic-validate.log
+  locator: Executed 2026-10-21T09:44:25Z through 2026-10-21T09:44:26Z; metadata extreme-hyperthermophilic-validate.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: Passed 09:44:25–26Z. Shape validity does not establish external relation
+    roles or scientific sufficiency.
+  snapshot_sha256: ad89cedda2ffea9312251fd68d1591ffbb5852f23661ff8adba90e3508a84dcb
+- evidence_id: check-extreme-hyperthermophilic-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/extreme-hyperthermophilic-strict.log
+  locator: Executed 2026-10-21T09:44:25Z through 2026-10-21T09:44:27Z; metadata extreme-hyperthermophilic-strict.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: Passed 09:44:25–27Z. The material-protein to state assignment under process-only
+    RO is assessed separately.
+  snapshot_sha256: 29f644e415622efea82769b4e3768723a2862f06fbee8ff61d8e12606776dfc9
+- evidence_id: check-extreme-hyperthermophilic-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/extreme-hyperthermophilic-snippets.log
+  locator: Executed 2026-10-21T09:44:27Z through 2026-10-21T09:44:35Z; metadata extreme-hyperthermophilic-snippets.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: Passed 09:44:27–35Z with five VERIFIED and one NOT_IN_ABSTRACT occurrence.
+    Manual source inspection preserves five exact quotations and one unverified membrane
+    phrase; inaccessible body is not a failed quotation match.
+  snapshot_sha256: 7d773a3b2044c5bcd6ee60319faf8bcd530fb54cc01b10c05e18b89e1ae997fc
+- evidence_id: check-batch004-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/batch004-qc.log
+  locator: Executed 2026-10-21T09:19:10Z through 2026-10-21T09:21:17Z; metadata batch004-qc.json
+  accessed_at: '2026-10-21T09:57:06Z'
+  support: context_only
+  summary: B4 execution 09:19:10–09:21:17Z passed. B5 byte comparison supports reuse
+    on unchanged scientific/common-check inputs; original baselines, warnings and
+    scope remain. This was not freshly executed for this target.
+  snapshot_sha256: 41a3fbd2beadf60e039992274e868de70b6ade8cf4b5d6028d6df932e0cfb2e5
+- evidence_id: reuse
+  kind: validation
+  reference: B5 common-input byte comparison
+  locator: 1130 actual trait files, 1278 history files and 19 common inputs byte-equal
+    to B4; source base8eee04a8
+  accessed_at: '2026-10-21T09:22:28.661252Z'
+  support: supports
+  summary: This permits historical check reuse while retaining original execution
+    dates, failures, skipped adapters and scope. History validation counted1277 records
+    despite1278 files. B4 QC is separately dated; no later ontology-release certification
+    follows.
+  snapshot_sha256: ce111d70655cdee3528b3c85ca4a71468c47d96e84ff4b28c0932389aee61313
+- evidence_id: reuse-independent
+  kind: validation
+  reference: Independent B5 setup and reuse verification
+  locator: Ignored-inclusive trait/history comparison; original f25 diagnostics and
+    B3 history receipt chain
+  accessed_at: '2026-10-21T09:25:47.749251Z'
+  support: supports
+  summary: Independent comparison confirmed unchanged inputs, the seven workflow/history
+    additions between diagnostic base f25 and8eee, and correct original failure/skip
+    accounting. No scientific validators were rerun by this helper.
+  snapshot_sha256: 4279ad9f488f187dd2f118a9b6274a60e5f79019225d24b33ce8b25f4ea2ca9f
+- evidence_id: capture-initial
+  kind: validation
+  reference: Initial native selected-record capture
+  locator: Whole target read before55-input capture09:44:00–02Z
+  accessed_at: '2026-10-21T09:44:02Z'
+  support: supports
+  summary: Initial target, parent, schema, ontology snapshots, proposal, mapping and
+    writer input hashes were recorded before judgment. Provider research remains a
+    lead, not primary scientific proof.
+  snapshot_sha256: 22bc6a670fc7009f9d1c3cb443719faf05d1c7ed754c4be2050361a1948d3be0
+- evidence_id: capture
+  kind: validation
+  reference: Supplemental native selected-record capture
+  locator: 09:46:38.823889–09:46:41.987721Z;58 inputs; all original55 hashes unchanged
+  accessed_at: '2026-10-21T09:46:41.987721Z'
+  support: supports
+  summary: Added the METPO release-retention classifier and two release reports before
+    final hierarchy judgment. All58 captured input bytes were independently verified
+    unchanged at grounding completion.
+  snapshot_sha256: 9a1548c8cc70ffa738ea335c56224d0be5ecc03ebcb23ac3f84b2f940738cb0b
+- evidence_id: capture-hashes
+  kind: validation
+  reference: Independent final input-byte verification
+  locator: All58 current paths versus final native capture
+  accessed_at: '2026-10-21T09:52:46.018616Z'
+  support: supports
+  summary: Every captured input still matches; this is a byte attestation rather than
+    an ontology or scientific pass.
+  snapshot_sha256: 0dd09a0028eee37fea595e904a337440d3c5e6507d10ee14dc6c920d244fa65c
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/extreme_hyperthermophilic.yaml
+  locator: Whole identity, definition, related synonyms, parent, evidence, example,
+    graph and history
+  accessed_at: '2026-10-21T09:44:00Z'
+  support: partial
+  summary: Active environmental CLASS describing optimal growth above90°C; NONMECHANISTIC
+    contextual graph with three protein nodes, two explicitly reviewed-label-only
+    and one GO functional grounding. No protein instances are asserted. All18 events
+    are read:17 AI-assisted plus one automated seed.
+  snapshot_sha256: 1ff49bc4ee848f90b6a7e2e1fe17b51fad9c7b952f6c6a7c2e3a433b3de0266c
+- evidence_id: identity
+  kind: authority
+  reference: Pinned METPO snapshot and complete active/deprecated label-synonym scan
+  locator: METPO1000721; parent1000613; upstream intermediate1000617;1631 label elements
+    inspected
+  accessed_at: '2026-10-21T09:50:30.942020Z'
+  support: supports
+  summary: Active exact extreme hyperthermophilic label and both RELATED_SYNONYMs
+    match. The current upstream definition retains above90°C. Deprecated lexical matches
+    are preserved without inferring unsupported replaced-by links. Proposed predicates2007401
+    and2007700 are absent from this upstream snapshot and retain local proposal status.
+  snapshot_sha256: 2660a3c14c879e1c1695f450f5a3f82a1f1e8c21b9170264cc06a71286681085
+- evidence_id: retention
+  kind: authority
+  reference: Maintained METPO release-review decisions
+  locator: active_review.tsv138–139; release_delta.tsv1306–1307; finalize_metpo_2026_06_12_review.py60–73,133–152
+  accessed_at: '2026-10-21T09:52:46.018616Z'
+  support: supports
+  summary: The captured release classifier explicitly retains local definition and
+    parent1000613 rather than automatically adopting upstream immediate parent1000617.
+    The latter is itself a subclass of1000613. Both are strictly broader than this
+    trait, so the deliberate broader parent is not an identity or is-a error. Static
+    retention does not establish human scientific acceptance.
+  snapshot_sha256: cde36685793477b4f1ac9daa91676999620e2ad40ac2f8ded6092f2f51cdcf14
+- evidence_id: native-policy
+  kind: authority
+  reference: Native node types, grounding policy and local predicate proposals
+  locator: GROUNDING_POLICY§2; schema CausalNodeTypeEnum and optional predicate_id;
+    v2 selects-for and v8 confers rows
+  accessed_at: '2026-10-21T09:52:46.018616Z'
+  support: supports
+  summary: Taxon-agnostic enzymatic functions may ground protein actors to GO Molecular
+    Function. STATE differs from a process; local confers accepts process-to-trait
+    and selects-for condition-to-adapted-trait. Ungrounded free-text predicates and
+    reviewed label-only aggregate proteins are permitted; no mandatory token protein
+    or predicate identifier is invented.
+  snapshot_sha256: cde36685793477b4f1ac9daa91676999620e2ad40ac2f8ded6092f2f51cdcf14
+- evidence_id: live-identities
+  kind: database
+  reference: Official QuickGO, OLS PATO and NCBI Taxonomy responses
+  locator: GO0160097; PATO0001305; NCBITaxon54252; successful acquisitions09:50:46.281077–09:50:46.974059Z
+  accessed_at: '2026-10-21T09:52:45.987720Z'
+  support: supports
+  summary: GO0160097 is active reverse gyrase activity, molecular_function, with an
+    ATP-driven catalytic definition. It is allowed as the protein functional facet.
+    PATO1305 is active increased temperature, defined relatively with no numeric cutoff.
+    The explicit closeMatch mapping does not claim a >90°C PATO boundary. Taxon54252
+    is exactly Pyrolobus fumarii, species.
+  snapshot_sha256: b2c1b2684ea594e056357c24232e74e7fa8e8a2b3a8ca49b4f4f06c4322c4cc8
+- evidence_id: live-receipts
+  kind: database
+  reference: Official authority acquisition receipts and raw response hashes
+  locator: NCBI09:50:46.544929Z; GO09:50:46.974059Z; PATO09:50:46.963303Z
+  accessed_at: '2026-10-21T09:50:46.974059Z'
+  support: supports
+  summary: Successful responses retain URL, time, path and SHA256. Initial sandbox
+    DNS failures are separately retained and are not mistaken for identifier absence.
+    Identity verification alone does not establish an organism-wide mechanism or current
+    growth-temperature ranking.
+  snapshot_sha256: 69388e73c2975896d9e81f21b2bcb679e48b58ab6cc57b8b572a1c38aaebaf7f
+- evidence_id: ro
+  kind: authority
+  reference: RO0002213, RO0002211 and RO0002327 recursive authority statements
+  locator: Read-only cached RO SQLite at09:52:45.989262Z; DB SHA256849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+  accessed_at: '2026-10-21T09:52:45.989262Z'
+  support: supports
+  summary: Positive regulation inherits explicit BFO process domain and range through
+    regulates. Edge8 instead uses material enzymes and a maintained membrane STATE.
+    Enables inherits material/process roles and actor-execution meaning; edge2 protein
+    aggregate to energy-transduction process is role-compatible. No OWL reasoner was
+    run and no native schema failure is asserted.
+  snapshot_sha256: 36c65f367458e1b6c729764a020ad3b1e9145931232719b2691e8fbbadc2f96d
+- evidence_id: grounding-ledger
+  kind: validation
+  reference: Complete independent current-record grounding assessment
+  locator: Eleven nodes, nine edges; all endpoints resolve;58 input hashes match
+  accessed_at: '2026-10-21T09:52:46.018616Z'
+  support: partial
+  summary: One external relation-role mismatch is identified. Current GO functional
+    facet, PATO closeMatch, retained METPO hierarchy, label-only aggregates, optional
+    IDs and historical retracted groundings are explicitly distinguished from defects.
+  snapshot_sha256: d9a87083dad71f8f836102e59e470aa4b39000ce4ed0dd9cc378fd75074f3d8c
+- evidence_id: node-edges
+  kind: validation
+  reference: Complete node and edge ledger
+  locator: causal_graphs[0].nodes[0–10] and edges[0–8], zero-based
+  accessed_at: '2026-10-21T09:52:46.002130Z'
+  support: partial
+  summary: Each identity, native type and formal/free-text relation is assessed. Source
+    compatibility is kept separate from biological proof. The process reading of DNA-positive-supercoiling
+    is deliberate; a literal into-phrase on edge4 is not converted into an invented
+    external domain/range error.
+  snapshot_sha256: 5efcec7b3f67c7b4ccad3836a289ebb4188367ddd20ff806d9e42c675e19d78d
+- evidence_id: owners
+  kind: search
+  reference: Maintained mapping, writer, seeder and release-retention owners
+  locator: predicate_grounding.tsv65; ground_causal_predicates.py138–179; node_grounding.tsv56,68,312;
+    process-quality migration123–137
+  accessed_at: '2026-10-21T09:52:46.018616Z'
+  support: supports
+  summary: Wildcard increases maps to RO2213 and can restore the incompatible assignment
+    if only its ID is cleared. The writer skips populated IDs. Current reverse-gyrase
+    mapping is permissible GO MF; migration prose calling an activity a process does
+    not prove a BP namespace. PATO1637 and retired UniProt identifiers are historical
+    rather than current errors.
+  snapshot_sha256: 6a506f17615d5f303b7c47a59cba1bd34b6da38bbbafd1320e920743a614bc59
+  search_scope: Ignored-inclusive label/ID/slug search across the repository excluding
+    .git and .venv, plus bounded mappings/scripts/proposals owner search; commands
+    and full match lists retained.
+- evidence_id: provenance
+  kind: search
+  reference: Whole current history and ignored-inclusive local acceptance search
+  locator: 18 events:17 AI-assisted plus1 automated seed;175 matching files at09:50:33Z;
+    no target-specific history/review acceptance found
+  accessed_at: '2026-10-21T09:50:33.158003Z'
+  support: partial
+  summary: REVIEWED remains native status, but inspected local provenance does not
+    link a human scientific acceptance to this revision. Static release-retention
+    classification is not sign-off. Private and remote acceptance remain unknown.
+  snapshot_sha256: 793cb153855408154b2ef675092671c44936f0d8c3d437aec3c5bb1e95e16070
+  search_scope: rg --hidden --no-ignore using exact identifier, slug and extreme/extremely-hyperthermophilic
+    label variants; .git/** and .venv/** excluded. Matching repository histories and
+    review target lists inspected. No global or remote absence claim.
+- evidence_id: provenance-independent
+  kind: validation
+  reference: Independent expression/provenance agent target-list inspection
+  locator: Earlier bounded search09:45:25.165648–09:45:25.257165Z;135 matching files;67
+    matching review YAML target lists
+  accessed_at: '2026-10-21T09:45:43.373422Z'
+  support: supports
+  summary: No targeted review bundle or target-specific repository history emerged.
+    Counts from searches with different patterns and execution times should not be
+    equated; neither bounded search covered remote/private decisions. Both inspections
+    identify17 AI events plus one seed.
+  snapshot_sha256: 6268fd464aa8e525507ae93e04772a4fecd7ba9d5f4dc928d9ee8627562d5e79
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original catalog07:36:12.732638–07:36:12.858149Z;20 organisms/28 datasets;
+    hash-verified reuse09:45:25Z
+  accessed_at: '2026-10-21T09:45:30.808671Z'
+  support: context_only
+  summary: No Pyrolobus fumarii entry matches the sole canonical organism. No replacement
+    organism, gene/module query or negative functional inference was introduced. Optional
+    expression context is not applicable for this catalog.
+  snapshot_sha256: b529876d5c4fcfff6864f7f6e839100a749dc2c93e58f3ab9f0b7c3ee11d38bc
+- evidence_id: runner
+  kind: search
+  reference: Retained structured-source runner discovery
+  locator: B5 PATH/ignored-inclusive project discovery09:27:57.380287–09:27:57.542053Z;
+    external roots retain08:17:15 bounds; reused09:45:25Z
+  accessed_at: '2026-10-21T09:45:25.165462Z'
+  support: context_only
+  summary: Neither installed nor local project runner was found within the retained
+    scope. Official catalog fallback was inspected. This target reused verified discovery
+    receipts rather than claiming a fresh whole-filesystem search.
+  snapshot_sha256: 33c0a02326ecb5402034c8f547fbcad6687c00516e25ebcfa33af19445ca4b21
+  search_scope: Original PATH, ignored-inclusive B5 filenames/pyproject and retained
+    bounded external checkout searches. Earlier external search timestamps are preserved;
+    no exhaustive disk absence claim.
+- evidence_id: bibliography
+  kind: database
+  reference: Complete source identity, placement and quotation assessment
+  locator: 8 record publications;13 placements;6 snippets;9 edge claims;assessed09:50:11.948605Z
+  accessed_at: '2026-10-21T09:50:11.948605Z'
+  support: partial
+  summary: All eight identities resolve, including the thermal DOI via preserved successful
+    PMID metadata after a fresh DOI search returned zero. Three complete record article
+    bodies, one additional browser opening body and four abstract/preview-only record
+    sources were inspected to bounded relevant passages. A supplemental primary genome
+    article supplies historical example context. Five snippets are exact and one remains
+    unverified.
+  snapshot_sha256: 1e802920064dc2aaa3940944d733d9a56e03553fddc0f61f9df8fce49f2355b9
+- evidence_id: source-acquisitions
+  kind: database
+  reference: Original source response and reuse receipts
+  locator: Metadata09:44:37.042057–09:44:38.851515Z; successful body XML09:45:50.356369–09:45:56.001101Z;
+    copied09:47:45Z
+  accessed_at: '2026-10-21T09:47:45.693248Z'
+  support: supports
+  summary: URLs, status, response type, size and hashes distinguish successful article
+    XML from errors. Three complete record bodies are the gyrase review, archaeal
+    thermal review and cyclization article. proteins.xml HTTP500 and BioC HTTP200
+    no-result are error responses, not article bodies. Thermal PMID metadata keeps
+    its original09:29:00.590499–09:29:01.331044Z acquisition.
+  snapshot_sha256: 43482f30fd15775930a68e170bebab6e5799e9f7f73bab977e19a2bb19f77f90
+- evidence_id: browser-access
+  kind: primary_source
+  reference: Actual publisher/PMC browser access receipt
+  locator: Definition and membrane previews09:46:19–20Z; actual proteins opening body
+    conservatively bounded09:46:32–46Z; failed follow-ups retained
+  accessed_at: '2026-10-21T09:47:03Z'
+  support: partial
+  summary: Protein abstract/opening body was actually read, despite failed local full-text
+    downloads and later challenge pages. Browser body hashes are not fabricated; receipt
+    hash covers the access record only. Membrane full-text timeout and PDF403 leave
+    the exact short phrase and detailed GDGT wording unknown. NAR primary browser
+    challenge likewise supplies no body proof.
+  snapshot_sha256: 7de2cc76ef3ebe06ec7445849988c5cbbbb01af7452403e6a18fd3d511ddbdd6
+- evidence_id: source-definition
+  kind: primary_source
+  reference: https://doi.org/10.1007/s007920050010
+  locator: 'PMID9680332; Abstract sentence2; publisher preview lines40–44; placements:
+    definition_source; evidence0; canonical_examples0; edge0'
+  accessed_at: '2026-10-21T09:44:37.777855Z'
+  support: supports
+  summary: Actual indexed abstract and publisher preview explicitly report range90–113
+    °C and optimum106 °C. Both repeated snippets are exact in the indexed abstract.
+    This is an organism-characterization study, not an explicit general definition
+    of the >90 °C class or an evolutionary-selection experiment. It positively supports
+    the example and very-high-temperature habitat context. Pinned METPO supplies the
+    class threshold; generic selection wording remains contextual inference, not automatically
+    a second major error. Full subscription body was not inspected.
+  snapshot_sha256: 593110b4faffda01ede541beecb01372ca2bb0c1b3e0510c54111fa983908d68
+- evidence_id: source-proteins
+  kind: primary_source
+  reference: https://doi.org/10.1128/MMBR.65.1.1-43.2001
+  locator: 'PMID11238984; PMC99017; Abstract; actual PMC browser opening body lines66–81
+    and diversity discussion/table1 through178; placements: evidence1; edge2'
+  accessed_at: '2026-10-21T09:44:37.930510Z'
+  support: partial
+  summary: The enzyme review explicitly supports high-temperature activity and resistance
+    to irreversible inactivation; both snippet occurrences are exact. It describes
+    multiple ways of achieving thermostability, so broad protein context need not
+    imply one universal route. Continued high-temperature energy transduction is a
+    reasonable generic enzyme/bioenergetic linkage, also supported by the separately
+    cited thermal review. The top note extends to membrane stability, which was not
+    directly verified in this nearest source’s inspected opening passages. Local EPMC500
+    and BioC200 no-result responses are not full texts; actual browser opening text
+    was read, and later challenge finds do not erase that access or establish absence.
+  snapshot_sha256: 893813e68d275bb68f844fb69f2dd3fe229cb764edc918919fa49a746981894e
+- evidence_id: source-membrane
+  kind: primary_source
+  reference: https://doi.org/10.1146/annurev-micro-091313-103612
+  locator: 'PMID24819366; Complete indexed abstract and actual publisher abstract
+    lines99–102; placements: edge1'
+  accessed_at: '2026-10-21T09:44:37.722895Z'
+  support: unknown
+  summary: The inspected abstract concerns bacterial membrane-fluidity responses and
+    cold sensing. It supports temperature-linked membrane adaptation generally, but
+    the exact short snippet and specific GDGT/monolayer/primary-tunable wording remain
+    unverified because the body was unavailable. That limitation does not establish
+    absence from the article or invalidate the biology. Other sources already in the
+    record positively support archaeal lipid context. Publisher full-text click timed
+    out and PDF returned403; do not convert title/abstract focus into a categorical
+    citation error.
+  snapshot_sha256: 801da630644a181211f991a6f21c49b178e42a65f615c4eebd8196bc29244588
+- evidence_id: source-bioenergetics
+  kind: primary_source
+  reference: https://doi.org/10.1016/s0300-9629(97)00003-0
+  locator: 'PMID9406426; Complete indexed abstract, especially sentence2; placements:
+    edge3'
+  accessed_at: '2026-10-21T09:29:01.331044Z'
+  support: supports
+  summary: The abstract explicitly links adaptation to temperature with membrane composition,
+    protein stability and energy-transducing enzymes. The snippet is exact. This supplies
+    broad physiological support for the existing bioenergetic branch, without defining
+    the precise >90 °C class or asserting a single mandatory mechanism. The fresh
+    DOI query returned zero hits, but the preserved prior PMID response identifies
+    the DOI exactly; the source is not invalid. Original acquisition09:29:00.590499–09:29:01.331044Z/hash
+    preserved.
+  snapshot_sha256: 56f69a7ce2e69822ef753fec5c43716583184e45fc1a2c0cae98aa9bdb841265
+- evidence_id: source-gyrase-review
+  kind: primary_source
+  reference: https://doi.org/10.1264/jsme2.me23087
+  locator: 'PMID38839371; PMC11946384; sec1/body4,6–8; sec6/body30–31; placements:
+    edges4–5'
+  accessed_at: '2026-10-21T09:45:50.452514Z'
+  support: partial
+  summary: 'Body4 directly supports the enzymatic activity and reports the widely
+    accepted protective idea quoted in the record’s note. Body6 then explicitly debates
+    the physiological importance of positive supercoiling; body31 says that significance
+    remains unclear. Preserve both the positive conventional explanation and the same-source
+    qualification. Candidate minor certainty precision for edge5: the source does
+    not license treating its in-vivo role as settled, but neither does it show the
+    general physical effect false. No corrected mechanism or experiment is proposed.'
+  snapshot_sha256: 341f7792b825942ef02b465f443214dcbcc3843203ebb4fa11885f43bec422e2
+- evidence_id: source-gyrase-dna
+  kind: primary_source
+  reference: https://doi.org/10.1093/nar/gkh683
+  locator: 'PMID15247343; PMC484171; Complete indexed abstract, sentences3–5; NCBIidconv
+    confirmsPMC484171; placements: edge6'
+  accessed_at: '2026-10-21T09:44:38.484004Z'
+  support: supports
+  summary: The abstract directly reports an approximately eightfold reduction in the
+    rate of double-stranded DNA breakage at90 °C, independent of positive-supercoiling
+    activity. This supports the existing numerical claim and conceptual distinction.
+    The evidence is an experimental biochemical readout; the abstract proposes an
+    in-vivo model, so do not recast it as a direct demonstration across all extreme
+    hyperthermophiles. Body access failed (EPMC500, primary-browser challenge); detailed
+    method/organism scope remains unassessed. No new procedure or optimization is
+    supplied.
+  snapshot_sha256: c242f073030c260ec4e7daefa7675409a4b2c88f1b11b9ac5999e510a05eb3b8
+- evidence_id: source-archaea
+  kind: primary_source
+  reference: https://doi.org/10.1186/2046-0481-57-6-348
+  locator: 'PMID21851659; PMC3113819; Temperature and life/sec3/body3; placements:
+    edge7'
+  accessed_at: '2026-10-21T09:45:56.001101Z'
+  support: supports
+  summary: Actual body3 describes archaeal ether/tetraether and diether membranes
+    as likely a major contribution to tolerating membrane-destabilizing heat. This
+    positively supports the contextual branch while retaining likely/contributory
+    wording. It is a review-level explanation, not an isolated universal requirement
+    or proof that every tetraether-containing organism prefers>90 °C. Only the benign
+    thermal paragraph was assessed; unrelated pathogen applications were not examined
+    or expanded.
+  snapshot_sha256: 8805050c82246245eebd514fd24c2056f886f286807688ba58c3264ca75af7f3
+- evidence_id: source-cyclization
+  kind: primary_source
+  reference: https://doi.org/10.1007/s00792-023-01330-2
+  locator: 'PMID38280122; PMC10821996; Introduction/Sec1/body5; placements: edge8'
+  accessed_at: '2026-10-21T09:45:50.356369Z'
+  support: supports
+  summary: Despite its GGR title, the actual introduction explicitly identifies GrsA/GrsB
+    and states that cyclized GDGTs increase membrane packing and stability; temperature
+    and additional environmental variables are mentioned as regulators. This supports
+    the existing contextual claim. The passage is source-authored review/background
+    with cited earlier work, not this paper’s own new >90 °C causal assay. Preserve
+    that evidence tier; do not call the citation mismatched based on its title. The
+    separate material-to-state RO role problem belongs to ontology review, not a denial
+    of the biological statement.
+  snapshot_sha256: 41d09d3ae38c0ae173d6d6173fde29d0d5f7532dcdba9d61fc1134d3a57f6ddd
+- evidence_id: canonical-history
+  kind: primary_source
+  reference: https://doi.org/10.4056/sigs.2014648
+  locator: Supplemental primary genome articlePMC3156397; abstract,body0,body4; acquired09:47:19.405671–09:47:20.917072Z
+  accessed_at: '2026-10-21T09:47:20.917072Z'
+  support: supports
+  summary: The2011 abstract explicitly supports the historical106°C highest-optimum
+    statement and body distinguishes later maximum-growth reports from an optimum.
+    This corroborates the reported range and historical ranking, but is not an exhaustive2026
+    ranking search. A higher maximum alone does not refute the record’s optimum. This
+    is supplemental evidence, not a ninth citation originally in the record.
+  snapshot_sha256: 2f762c2580dc72b053637ade6628b0893f1139c2470e73d41fa2c71ef641bc07
+- evidence_id: quotation-ledger
+  kind: validation
+  reference: Manual six-placement snippet inspection
+  locator: evidence[0–1];edges[0–3].evidence[0];five exact abstract occurrences,one
+    unverified membrane phrase
+  accessed_at: '2026-10-21T09:50:11.948605Z'
+  support: partial
+  summary: Five snippets are literal in the inspected indexed abstracts. The membrane
+    phrase is NOT_IN_ABSTRACT and the body is unavailable; no nonliteral-quotation
+    finding is asserted from that absence. Exact numeric and biochemical source claims
+    retain their original scope.
+  snapshot_sha256: 41021bc7fb0f5a72330cc145b9a069ef307414b142e4622f68eb7ced285c3036
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, synonyms, polarity and term kind'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Active METPO1000721 denotes the intended positive temperature-preference
+    class. Related synonyms and term kind match; neither organism nor enzyme replaces
+    the trait identity. Obsolete lexical predecessors are not treated as asserted
+    replacement links.
+  evidence_ids:
+  - record
+  - identity
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: above90°C class boundary and definition-source scope'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Pinned METPO supplies the exact class boundary, retained local text preserves
+    it, and the organism paper directly supports the example’s high-temperature growth
+    range. The paper is not claimed to define every class boundary or to measure evolutionary
+    selection. This attribution distinction is retained without declaring the threshold
+    false.
+  evidence_ids:
+  - identity
+  - retention
+  - source-definition
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: strictly broader retained parent'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Local temperature-preference parent1000613 is strictly broader. Upstream
+    immediate parent1000617 is itself below1000613, and captured release decisions
+    explicitly retained the local hierarchy and wording. Mere upstream difference
+    is not a defect or an instruction to overwrite curated content.
+  evidence_ids:
+  - identity
+  - retention
+  - record
+- assessment_id: category-model
+  area: representation
+  topic: 'Native checklist: environmental classification and optional model fields'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: ENVIRONMENT, CLASS and NONMECHANISTIC contextual scope are coherent. The
+    record need not contain a token protein accession, every possible mechanism, optional
+    pathway links, discussions, datasets or priority/subset fields. Broad contextual
+    branches do not automatically claim a universal requirement.
+  evidence_ids:
+  - record
+  - native-policy
+  - grounding-ledger
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: canonical identity, growth facts and temporal ranking'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Current species identity is exactly Pyrolobus fumarii. The organism source
+    supports106°C optimum and90–113°C reported growth range. Supplemental2011 primary
+    text corroborates historical highest-optimum wording while distinguishing later
+    maximum-growth observations. This review does not certify an exhaustive current
+    ranking or invent an outdated-example error.
+  evidence_ids:
+  - live-identities
+  - source-definition
+  - canonical-history
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: all eleven node identities and kinds'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Current GO0160097 is Molecular Function and therefore a valid protein functional
+    facet under local policy. Relative high-temperature PATO closeMatch carries no
+    numeric cutoff. Remaining material, process and state nodes have defensible stated
+    meanings. Two label-only protein aggregates retain explicit rationale; no current
+    instance accession is asserted.
+  evidence_ids:
+  - live-identities
+  - identity
+  - native-policy
+  - node-edges
+  details: 'causal_graphs[0].nodes[0]: Active exact METPO:1000721 trait label and
+    related synonyms. Both current upstream and deliberately retained local definition
+    retain optimal growth above 90 C; no identity drift finding.
+
+    causal_graphs[0].nodes[1]: PATO:0001305 is active increased temperature, a relative
+    quality with high-temperature synonyms and no numeric threshold. Maintained mapping
+    row68 is expressly closeMatch; >90 C remains local context. No wrong-identity
+    or mandatory numeric-cutoff finding.
+
+    causal_graphs[0].nodes[2]: CHEMICAL names a tetraether lipid class. No specific
+    chemical CURIE or organism-instance equivalence asserted. Biological membrane
+    claims are separately source-reviewed.
+
+    causal_graphs[0].nodes[3]: Protein aggregate with REVIEWED_LABEL_ONLY rationale.
+    NONMECHANISTIC policy permits absence of a token protein accession.
+
+    causal_graphs[0].nodes[4]: Energy transduction is described as a process. No molecular
+    species or measured property is substituted for that event here.
+
+    causal_graphs[0].nodes[5]: Current GO:0160097 is active reverse gyrase activity,
+    molecular_function. Its ATP-driven catalytic definition matches the protein functional
+    facet allowed by GROUNDING_POLICY section2. No BP-versus-protein mismatch; no
+    replacement protein/family identifier is required.
+
+    causal_graphs[0].nodes[6]: Positive supercoiling can denote the introducing/changing
+    process; maintained process-quality migration expressly chose that reading. Historical
+    use of the ordinary word process is not proof that GO:0160097 has biological_process
+    namespace. Protective biological claim remains a source question.
+
+    causal_graphs[0].nodes[7]: Heat-induced melting/denaturation is an event/process
+    by the node description.
+
+    causal_graphs[0].nodes[8]: Damaged DNA names material chemical entity, distinct
+    from the damage process. No explicit accession or chemical CURIE to verify.
+
+    causal_graphs[0].nodes[9]: GrsA/GrsB enzyme aggregate is material protein scope
+    with REVIEWED_LABEL_ONLY rationale. No single accession is demanded by NONMECHANISTIC
+    scope.
+
+    causal_graphs[0].nodes[10]: Maintained membrane structural integrity is a molecular/cellular
+    state by description. The issue is its use as a process object on edge8, not a
+    mandatory retype of this node.'
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all nine relations and inherited endpoint meanings'
+  outcome: concern
+  target_ids:
+  - METPO:1000721
+  summary: Edge8 assigns process-to-process positive regulation to proteins and a
+    membrane state. Enables on edge2 and local proposal roles on edges0/3 fit their
+    represented endpoints. Other edges carry permitted free text, so no missing-ID
+    requirement or unasserted ontology constraint is invented. Formal role compatibility
+    does not independently prove biological causality.
+  evidence_ids:
+  - ro
+  - native-policy
+  - node-edges
+  - owners
+  details: 'causal_graphs[0].edges[0]: METPO:2007401 v2 environmental condition ->
+    adapted trait; prolonged selection pressure is stronger than a growth observation.
+    Endpoint roles fit. Source scope for selection remains for the source reviewer.
+
+    causal_graphs[0].edges[1]: No predicate_id asserted; native schema allows ungrounded
+    relation text. Chemical protective role toward a temperature condition has no
+    asserted external domain/range violation. Biological membrane sufficiency is source-specific.
+
+    causal_graphs[0].edges[2]: RO:0002327 material protein aggregate -> biological
+    process fits inherited material/process and actor/execution roles. Does not by
+    itself prove all proteins in the aggregate execute every bioenergetic process.
+
+    causal_graphs[0].edges[3]: METPO:2007700 v8 confers describes a subject presence/activity/state
+    enabling its bearer to exhibit a trait. Process -> TRAIT is an intentional supported
+    subject/object form.
+
+    causal_graphs[0].edges[4]: No external predicate ID. Literal predicate wording
+    introduces ... into takes the process node as object while the description explicitly
+    says into DNA. This is readable as an informal transition to the process; at most
+    bounded wording precision, not an external type error or mandatory ID gap. Do
+    not invent a corrected route.
+
+    causal_graphs[0].edges[5]: No external predicate ID; process -> process with decreases-risk
+    wording has no asserted ontology-domain/range defect. Strength and qualifications
+    of the protective claim are source-review questions.
+
+    causal_graphs[0].edges[6]: No external predicate ID; protein -> damaged DNA is
+    a coherent protective actor/material shape. Exact independent-of-supercoiling
+    and quantitative support require cited text, not ontology inference.
+
+    causal_graphs[0].edges[7]: No external predicate ID; chemical class -> membrane
+    state is not automatically invalid under native free-text relations. Scope of
+    the membrane statement remains source-specific.
+
+    causal_graphs[0].edges[8]: RO:0002213 positively regulates inherits BFO:0000015
+    process domain/range via RO:0002211. grs_cyclization_enzymes is explicitly material
+    proteins and membrane_integrity_high_temp explicitly a STATE. Literal increases
+    in a quality/state does not assert regulation of another process execution. Schema-level
+    validity is separate; no OWL reasoner run or formal consistency failure is claimed.'
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: eight references and thirteen nearest placements'
+  outcome: concern
+  target_ids:
+  - METPO:1000721
+  summary: All reference identities resolve. Existing high-temperature protein, bioenergetic,
+    archaeal-lipid and enzyme-activity context has positive support within actual
+    source surfaces. Edge5 omits same-source uncertainty about physiological significance.
+    The specific membrane-body claim remains unknown, and the top protein note’s membrane
+    extension was not directly verified in the inspected opening text; these access
+    limits are preserved without asserting false biology.
+  evidence_ids:
+  - bibliography
+  - source-definition
+  - source-proteins
+  - source-membrane
+  - source-bioenergetics
+  - source-gyrase-review
+  - source-gyrase-dna
+  - source-archaea
+  - source-cyclization
+- assessment_id: edge-evidence
+  area: graph
+  topic: 'Native checklist: complete nine-edge source ledger'
+  outcome: concern
+  target_ids:
+  - METPO:1000721
+  summary: Every edge has a bounded source assessment. Positive conventional supercoiling
+    explanation and explicit physiological debate are both retained. Numerical DNA-protection
+    support is an abstract biochemical readout, not a universal in-vivo proof. The
+    cyclization article explicitly contains the existing claim despite its GGR title;
+    its review/background evidence tier is preserved.
+  evidence_ids:
+  - bibliography
+  - node-edges
+  - source-gyrase-review
+  - source-gyrase-dna
+  - source-cyclization
+  details: 'edge0: SUPPORTED_GROWTH_CONTEXT_EVOLUTIONARY_INFERENCE; Definition abstract
+    sentence2; Growth above90 and source habitat support the ecological context; direct
+    selection measurement was not inspected. Generic classification context does not
+    automatically assert a universally sufficient trigger.
+
+    edge1: SPECIFIC_NEAREST_BODY_CLAIM_UNVERIFIED; Membrane abstract and publisher
+    preview; General membrane adaptation supported; GDGT-specific and primary-tunable
+    wording unknown in this unavailable body. Existing archaea/cyclization sources
+    provide separate positive context.
+
+    edge2: SUPPORTED_GENERIC_PROTEIN_CONTEXT; Proteins abstract and opening body;
+    separate thermal abstract; High-temperature enzyme activity/stability support
+    the general branch; do not infer a mandatory single protein family or require
+    token accession.
+
+    edge3: SUPPORTED; Thermal review abstract sentence2; High-temperature energy-transduction
+    adaptation is explicit; formal threshold class authority is separate.
+
+    edge4: SUPPORTED; Gyrase review sec1/body4; Existing activity statement directly
+    supported; identity/type of the node grounding is independently audited.
+
+    edge5: POSITIVE_EXPLANATION_WITH_SOURCE_QUALIFICATION; Gyrase review sec1/body4,6;
+    sec6/body31; The widely accepted idea is source-faithful, but the same review
+    highlights uncertainty about physiological significance. Candidate minor certainty
+    wording; not evidence of false physical effect.
+
+    edge6: SUPPORTED_ABSTRACT_NUMERIC_CLAIM; NAR abstract sentences3–5; Approximate8fold
+    reduction in breakage rate at90 °C and independence are explicit. Body/organism-specific
+    method scope not inspected; proposed in-vivo model stays an inference.
+
+    edge7: SUPPORTED_QUALIFIED_REVIEW_CONTEXT; Archaea review sec3/body3; Review says
+    likely major contributory factor. This is positive context, not all-taxon necessity.
+
+    edge8: SUPPORTED_BACKGROUND_FORMAL_RELATION_SEPARATE; Cyclization review Intro/Sec1/body5;
+    GrsA/B context and increased packing/stability explicitly supported. Title does
+    not make citation wrong; review evidence tier and separate RO endpoint issue retained.'
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: all six snippet occurrences'
+  outcome: unknown
+  target_ids:
+  - METPO:1000721
+  summary: Five exact snippets agree with manual indexed-abstract inspection and the
+    focused checker. The membrane phrase remains unverified because its body could
+    not be inspected; an abstract miss is not a demonstrated quotation error or universal
+    absence result.
+  evidence_ids:
+  - check-extreme-hyperthermophilic-snippets
+  - quotation-ledger
+  - source-membrane
+  - browser-access
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record coverage and scientific limits'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: All target fields, eleven nodes, nine edges, canonical example, eight references,
+    thirteen placements and eighteen history events were reviewed. Partial article
+    access is explicitly retained. No experimental procedures, new molecular targets
+    or biological optimization are proposed to make the record appear complete.
+  evidence_ids:
+  - record
+  - grounding-ledger
+  - bibliography
+  - capture
+- assessment_id: datasets
+  area: evidence
+  topic: 'Native checklist: optional structured expression applicability'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1000721
+  summary: The inspected catalog has no canonical Pyrolobus dataset. Original runner-discovery
+    times and official catalog fallback are retained. No organism substitution or
+    negative biological inference follows.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: ownership
+  area: ownership
+  topic: 'Native checklist: maintained scientific and recurring mapping owners'
+  outcome: concern
+  target_ids:
+  - METPO:1000721
+  summary: The current scientific record owns the assertion and its evidence wording.
+    Wildcard increases mapping can restore the RO mismatch, while the populated-ID
+    skip means an unchanged valid-shaped record will not be repaired by rerunning
+    the writer. Retention classifier/reports explain intended identity differences
+    and are not themselves scientific sign-off.
+  evidence_ids:
+  - owners
+  - retention
+  - native-policy
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: native REVIEWED status, history and local human-acceptance
+    linkage'
+  outcome: concern
+  target_ids:
+  - METPO:1000721
+  summary: Seventeen events disclose AI assistance and one automated seed is non-LLM.
+    Ignored-inclusive local searches and review target-list inspection do not identify
+    a human acceptance for this revision. This is a bounded link gap, not proof no
+    human reviewed it elsewhere. Schema checks and this review do not substitute for
+    human sign-off.
+  evidence_ids:
+  - provenance
+  - provenance-independent
+  - retention
+  - native-policy
+- assessment_id: checks
+  area: schema
+  topic: 'Native checklist: actual focused checks and justified historical diagnostics'
+  outcome: supported
+  target_ids:
+  - METPO:1000721
+  summary: Focused LinkML/strict checks passed; snippet check retained its inconclusive
+    occurrence. Historical corpus/product/history checks and B4 QC are reused only
+    under documented unchanged-input scope, retaining failed initial product attempts
+    and no-adapter skips. No native validator is represented as an external semantic
+    reasoner.
+  evidence_ids:
+  - check-extreme-hyperthermophilic-validate
+  - check-extreme-hyperthermophilic-strict
+  - check-extreme-hyperthermophilic-snippets
+  - check-batch004-qc
+  - reuse
+  - reuse-independent
+findings:
+- finding_id: protein-state-process-regulation
+  issue_key: extreme-hyperthermophilic-protein-state-process-regulation
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Process regulation is assigned between proteins and a membrane state
+  description: Edge8 uses RO:0002213 positively regulates for GrsA/GrsB cyclization
+    enzymes GENE_OR_PROTEIN -> membrane integrity STATE. The relation inherits explicit
+    process domain/range from RO:0002211 and concerns regulation of process execution.
+    These actual endpoint descriptions denote material proteins and a maintained state.
+    The cited cyclization background supports the biological statement, so the defect
+    is ontology representation rather than false biology. Wildcard increases mapping
+    row65 can restore the mismatch after an ID-only removal, and the writer skips
+    populated IDs. This is not a claimed OWL reasoner inconsistency or native-validation
+    failure.
+  target_ids:
+  - METPO:1000721
+  field_paths:
+  - causal_graphs[0].edges[8].predicate_id
+  - causal_graphs[0].nodes[9]
+  - causal_graphs[0].nodes[10]
+  evidence_ids:
+  - ro
+  - node-edges
+  - owners
+  - source-cyclization
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard increases row65 owner
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing-ID skip and declared endpoint-gate owner
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: supercoiling-physiological-certainty
+  issue_key: extreme-hyperthermophilic-supercoiling-physiological-certainty
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The protective explanation omits the cited review’s physiological qualification
+  description: Edge5 and its note retain the review’s widely accepted protective explanation
+    but present the resulting physiological role without its same-source qualification.
+    The full review sec1/body6 and sec6/body31 explicitly says the physiological significance
+    of positive supercoiling is debated or unclear, while sec1/body4 supplies the
+    positive conventional explanation. Preserve both. This is bounded certainty precision,
+    not evidence that the physical effect is false, nor a proposal for a replacement
+    mechanism or experiment.
+  target_ids:
+  - METPO:1000721
+  field_paths:
+  - causal_graphs[0].edges[5].description
+  - causal_graphs[0].edges[5].evidence[0].notes
+  evidence_ids:
+  - source-gyrase-review
+  - bibliography
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: extreme-hyperthermophilic-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human scientific acceptance is not linked in the inspected local record
+  description: The record is REVIEWED with seventeen AI-assisted events and one automated
+    seed. Bounded ignored-inclusive label/identifier/slug searches and matching review
+    target-list inspection found no explicit target-specific human acceptance link.
+    The release-retention classifier preserves local text but names no human scientific
+    acceptance actor or reviewed revision. The native status gate requires that link;
+    this documentary gap does not establish that no human reviewed the record privately
+    or remotely.
+  target_ids:
+  - METPO:1000721
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - provenance-independent
+  - retention
+  - native-policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-process-relation
+  description: In separately authorized curation, reconcile edge8’s relation grounding
+    with its actual endpoint meanings and the maintained wildcard mapping.
+  finding_ids:
+  - protein-state-process-regulation
+  target_ids:
+  - METPO:1000721
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The retained relation definition agrees with both endpoint roles; do not relabel
+    material proteins or a state as a process merely to preserve the current identifier.
+  - Address whether unchanged increases wording can reacquire the rejected mapping
+    after its ID is cleared. No replacement ontology ID is guessed by this review.
+  - Preserve the source-supported biological statement and explicit review/background
+    evidence tier; no new mechanism, experiment or optimization is required.
+  - Use guarded writes and append-only record/repository history, then focused LinkML
+    and strict validation, snippet verification, maintained term/graph/mapping checks,
+    applicable product/history checks and just qc. Regenerate affected outputs through
+    maintained commands after authorized edits.
+- action_id: preserve-source-qualification
+  description: Qualify edge5’s physiological certainty using the positive explanation
+    and explicit uncertainty already present in its cited review.
+  finding_ids:
+  - supercoiling-physiological-certainty
+  target_ids:
+  - METPO:1000721
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The note and description distinguish the conventional physical explanation from
+    the review’s debated physiological significance.
+  - Retain the positive source statement rather than asserting its negation; no replacement
+    route, protein, protocol or experiment is introduced.
+  - Source locations remain exact and interpretation stays outside verbatim snippet
+    fields; authorized changes pass native strict/source checks and append-only provenance
+    gates.
+- action_id: link-human-acceptance
+  description: Locate and link existing human scientific acceptance or obtain it through
+    the established process, preserving history and reassessing status where required.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000721
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/extreme_hyperthermophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the reviewed revision, responsible human and scientific
+    scope.
+  - AI disclosure, automated retention decisions, validator success and this review
+    do not substitute for acceptance. Preserve append-only history and native status
+    rules.
+limitations:
+- Three complete record article bodies, one actual browser opening body and four abstract/preview-only
+  record sources were inspected, plus a supplemental primary genome article. Relevant
+  passages were assessed; this is not an exhaustive methods, supplements or cited-reference
+  audit.
+- The membrane article body remains unavailable after finite publisher attempts. Its
+  short snippet and specific nearest GDGT/primary-tunable wording are unknown, not
+  disproven. The protein note’s membrane extension was not directly verified in the
+  opening passages; other record sources give positive separate membrane context.
+- The protein opening body was actually available through the browser. Failed EPMC500/BioC
+  no-result downloads and later challenge pages are retained without erasing that
+  access or claiming a full-body hash. Receipt hashes identify downloaded bytes/access
+  records, not unavailable article text.
+- The numerical DNA-protection statement is explicit in the indexed abstract. Unavailable
+  detailed body and organism/method scope are not reconstructed; the proposed in-vivo
+  model is not treated as experimentally established across all extreme hyperthermophiles.
+- The canonical106°C highest-optimum claim has historical primary corroboration. An
+  exhaustive current2026 ranking was not established, and higher maximum-growth observations
+  are not equivalent to a higher optimum. Optional dated attribution could clarify
+  temporal scope without asserting a false example.
+- The >90°C class boundary is supplied by pinned METPO. The organism source supports
+  its example and ecological context; it is not a general class-definition or evolutionary-selection
+  experiment. Generic NONMECHANISTIC context is not converted into an all-taxon necessity
+  assertion.
+- Current GO0160097 is Molecular Function; local policy permits the protein functional
+  facet. Historical migration prose calling its action a process is not a BP namespace
+  assertion. PATO increased-temperature closeMatch is relative and supplies no numerical
+  cutoff.
+- External RO semantics were inspected in cached authority bytes with their hash and
+  actual read time, not a fresh remote release. The relation finding is an intended-role
+  mismatch, not a reasoner output or a failure of native YAML validation.
+- Common diagnostics, B3 history validation and B4 QC retain their original execution
+  times, failed attempts, skipped adapters and unchanged-input limits. These are reused
+  results, not fresh B5 full-corpus executions or later-release certification.
+- No protein instances are asserted, so a live UniProt instance audit is inapplicable.
+  Optional dataset noncoverage and bounded reused runner discovery are not evidence
+  of missing function.
+- Human acceptance outside the declared ignored-inclusive local search remains unknown.
+  Automated retention, AI history and this review do not provide human scientific
+  sign-off.
+- No scientific record, mapping, history or generated product was edited. No paid
+  provider call, new molecular target, experimental procedure, organism optimization
+  or replacement biological mechanism was performed.
+notes:
+- 'Node, edge and extracted body-paragraph indices are zero-based. Three findings:
+  one major and two minor.'
+- Initial55-input capture09:44:00–02Z followed entire-record read; supplement09:46:38.823889–09:46:41.987721Z
+  retained all55 hashes and added three release-retention inputs. Final58 hashes independently
+  match.
+- The source ledger was completed09:50:11.948605Z, SHA2561e802920064dc2aaa3940944d733d9a56e03553fddc0f61f9df8fce49f2355b9.
+  Grounding ledger completed09:52:46.018616Z. Actual source acquisition times and
+  hashes are preserved rather than replaced by review serialization time.
+- Current target has three protein nodes, two explicitly REVIEWED_LABEL_ONLY and one
+  permitted GO MF facet; zero protein instances. Eighteen history events disclose
+  seventeen AI-assisted events and one automated seed.
+- 'No citation-identity finding is inferred from the cyclization article title: its
+  inspected introduction explicitly supports the existing contextual claim. The physiological-certainty
+  finding preserves the gyrase review’s positive explanation and same-source uncertainty.'
+tags:
+- record-review
+- extreme-hyperthermophilic
+- environment
+- needs-curation
