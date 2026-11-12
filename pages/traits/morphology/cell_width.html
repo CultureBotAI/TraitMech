@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -314,7 +315,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000882</code> <span class="dim-preview">[-1.477, -0.754, -1.899, +0.480, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000882" rel="nofollow noreferrer">cell width <code>METPO:1000882</code></a> <span class="dim-preview">[-1.477, -0.754, -1.899, +0.480, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -402,7 +403,7 @@
 
 Cell width is the lateral or radial dimension of rod-shaped bacterial cells, perpendicular to the long axis. It is mechanistically distinct from cell length (axial elongation), although both dimensions contribute to overall rod shape and aspect ratio. Width is primarily controlled by the orientation and activity of circumferential peptidoglycan (PG) synthesis machinery, specifically the MreB-directed Rod complex (elongasome). Width excludes processes governing septation, cell division septum thickness, or specialized stalk width in organisms like *Caulobacter crescentus*.
 
-The most direct mechanistic insight is provided by Hussain et al. (2018, DOI:10.1101/197475), who demonstrate that MreB filaments orient along the greatest principal membrane curvature—the circumference of rod-shaped cells—and propose a model where &#34;bacterial width may be specified by opposing actions... a decreasing, &#39;thinning&#39; activity from the action of MreB and its associated SEDS family PG synthases, and an increasing &#39;fattening&#39; activity from the non-MreB associated Class A PG synthases&#34; (hussain2017mrebfilamentscreate pages 35-39). This establishes width as a dynamic equilibrium phenotype determined by spatially distinct PG synthesis systems.
+The most direct mechanistic insight is provided by Hussain et al. (2018, <a href="https://doi.org/10.1101/197475" rel="nofollow noreferrer">DOI:10.1101/197475</a>), who demonstrate that MreB filaments orient along the greatest principal membrane curvature—the circumference of rod-shaped cells—and propose a model where &#34;bacterial width may be specified by opposing actions... a decreasing, &#39;thinning&#39; activity from the action of MreB and its associated SEDS family PG synthases, and an increasing &#39;fattening&#39; activity from the non-MreB associated Class A PG synthases&#34; (hussain2017mrebfilamentscreate pages 35-39). This establishes width as a dynamic equilibrium phenotype determined by spatially distinct PG synthesis systems.
 
 ---
 
@@ -608,7 +609,16 @@ Evidence-backed entities grouped by type are catalogued below with suggested ont
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -972,12 +982,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-26 03:23 UTC

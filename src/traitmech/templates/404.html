@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{#- Rendered to the repository root, which is this site's publishing root.
+    GitHub Pages serves it for a missing address at any depth, so root is
+    site-root-absolute and no link here may be relative. -#}
+{% block content %}
+<header>
+  <p class="breadcrumb"><a href="{{ root }}index.html">TraitMech</a> <span>›</span> Page not found</p>
+  <h1>Page not found</h1>
+  <p class="tagline">Nothing is published at this address. It may be mistyped, or the page may
+    have moved: a trait page is addressed by its category and record file name, so a record
+    that changes category gets a new address.</p>
+</header>
+<form class="page-search not-found-search" action="{{ root }}browse.html" method="get" role="search">
+  <label for="not-found-query">Search all traits</label>
+  <input id="not-found-query" type="search" name="q" placeholder="Search by label, CURIE, synonym or definition…">
+  <button type="submit">Search</button>
+</form>
+<ul class="not-found-links">
+  <li><a href="{{ root }}index.html">TraitMech home</a></li>
+  <li><a href="{{ root }}browse.html">Browse every trait record</a></li>
+  <li><a href="{{ root }}schema.html">Schema reference</a></li>
+  <li><a href="https://culturebotai.github.io/mechs/">All Mech projects</a></li>
+</ul>
+{% endblock %}
+{% block provenance %}{% endblock %}

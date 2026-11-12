@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -398,7 +399,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000306</code> <span class="dim-preview">[-3.058, -0.353, -2.836, +1.133, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000306" rel="nofollow noreferrer">temperature range <code>METPO:1000306</code></a> <span class="dim-preview">[-3.058, -0.353, -2.836, +1.133, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -481,7 +482,7 @@
 
 **Target trait:** `METPO:1000306` (**temperature range**; ENVIRONMENT; CLASS; REVIEWED).
 
-The trait should represent the **closed or operationally estimated interval of ambient temperatures supporting net microbial population growth under specified conditions**, conventionally bounded by minimum and maximum cardinal growth temperatures, *T*min and *T*max. In cardinal-temperature models, growth rate is zero below *T*min and above *T*max, while *T*opt is the temperature producing the maximum growth rate; therefore, *T*opt is a related parameter but is not the range itself. Rosso et al. explicitly model growth as zero for *T* &lt; *T*min or *T* &gt; *T*max. [DOI, published February 1995](https://doi.org/10.1128/aem.61.2.610-616.1995) (rosso1995convenientmodelto pages 1-2)
+The trait should represent the **closed or operationally estimated interval of ambient temperatures supporting net microbial population growth under specified conditions**, conventionally bounded by minimum and maximum cardinal growth temperatures, *T*min and *T*max. In cardinal-temperature models, growth rate is zero below *T*min and above *T*max, while *T*opt is the temperature producing the maximum growth rate; therefore, *T*opt is a related parameter but is not the range itself. Rosso et al. explicitly model growth as zero for *T* &lt; *T*min or *T* &gt; *T*max. [DOI, published February 1995](<a href="https://doi.org/10.1128/aem.61.2.610-616.1995" rel="nofollow noreferrer">https://doi.org/10.1128/aem.61.2.610-616.1995</a>) (rosso1995convenientmodelto pages 1-2)
 
 ### Included
 
@@ -492,8 +493,8 @@ The trait should represent the **closed or operationally estimated interval of a
 
 ### Boundary cases and exclusions
 
-1. **Not optimal growth temperature.** A change in *T*opt does not necessarily change range width or either boundary. In *Thermoanaerobacter kivui*, approximately 180 generations at 45°C shifted *T*opt from 66°C to 60°C, but the molecular basis and effects on the complete growth range remained unresolved. [DOI, published October 2023](https://doi.org/10.3389/fmicb.2023.1265216) (lehmann2023adaptivelaboratoryevolution pages 6-7, lehmann2023adaptivelaboratoryevolution pages 7-8)
-2. **Not acute thermal survival.** Heat-shock resistance can be mechanistically opposed to growth at high temperature. Loss of `dnaJ` increased acute survival by 1,000–100,000-fold yet prevented sustained growth above 43°C in *Salmonella Typhimurium* and above 41°C in *E. coli*. [DOI, published 13 February 2024](https://doi.org/10.1128/mbio.03105-23) (berdejo2024evolutionarytradeoffbetween pages 8-10, berdejo2024evolutionarytradeoffbetween pages 1-2)
+1. **Not optimal growth temperature.** A change in *T*opt does not necessarily change range width or either boundary. In *Thermoanaerobacter kivui*, approximately 180 generations at 45°C shifted *T*opt from 66°C to 60°C, but the molecular basis and effects on the complete growth range remained unresolved. [DOI, published October 2023](<a href="https://doi.org/10.3389/fmicb.2023.1265216" rel="nofollow noreferrer">https://doi.org/10.3389/fmicb.2023.1265216</a>) (lehmann2023adaptivelaboratoryevolution pages 6-7, lehmann2023adaptivelaboratoryevolution pages 7-8)
+2. **Not acute thermal survival.** Heat-shock resistance can be mechanistically opposed to growth at high temperature. Loss of `dnaJ` increased acute survival by 1,000–100,000-fold yet prevented sustained growth above 43°C in *Salmonella Typhimurium* and above 41°C in *E. coli*. [DOI, published 13 February 2024](<a href="https://doi.org/10.1128/mbio.03105-23" rel="nofollow noreferrer">https://doi.org/10.1128/mbio.03105-23</a>) (berdejo2024evolutionarytradeoffbetween pages 8-10, berdejo2024evolutionarytradeoffbetween pages 1-2)
 3. **Not dormancy or persistence.** A persister-like cell surviving heat without division does not establish that the organism grows at that temperature.
 4. **Not metabolic activity alone.** Maintenance metabolism, substrate turnover, transcription, or viability without net population increase should be modeled separately.
 5. **Not habitat temperature or isolation source.** Recovery from a hot spring, permafrost, or heated process is ecological evidence, not a measured growth range.
@@ -503,13 +504,13 @@ The trait should represent the **closed or operationally estimated interval of a
 
 ## 2. Current mechanistic synthesis
 
-Temperature range is an emergent systems phenotype. At the cold boundary, reduced reaction rates, membrane rigidification, impaired transport, stable inhibitory RNA structures, slow transcription/translation, protein folding defects, and possible ice formation jointly constrain growth. At the hot boundary, excess membrane fluidity/permeability, protein unfolding and aggregation, RNA/translation damage, redox imbalance, and loss of bioenergetic coupling become limiting. The authoritative psychrophile review lists “reduced enzyme activity,” “decreased membrane fluidity,” altered nutrient/waste transport, reduced transcription/translation/cell division, protein cold denaturation, inappropriate folding, and intracellular ice as cold-growth barriers. [DOI, published April 2006](https://doi.org/10.1038/sj.embor.7400662) (damico2006psychrophilicmicroorganismschallenges pages 1-2)
+Temperature range is an emergent systems phenotype. At the cold boundary, reduced reaction rates, membrane rigidification, impaired transport, stable inhibitory RNA structures, slow transcription/translation, protein folding defects, and possible ice formation jointly constrain growth. At the hot boundary, excess membrane fluidity/permeability, protein unfolding and aggregation, RNA/translation damage, redox imbalance, and loss of bioenergetic coupling become limiting. The authoritative psychrophile review lists “reduced enzyme activity,” “decreased membrane fluidity,” altered nutrient/waste transport, reduced transcription/translation/cell division, protein cold denaturation, inappropriate folding, and intracellular ice as cold-growth barriers. [DOI, published April 2006](<a href="https://doi.org/10.1038/sj.embor.7400662" rel="nofollow noreferrer">https://doi.org/10.1038/sj.embor.7400662</a>) (damico2006psychrophilicmicroorganismschallenges pages 1-2)
 
 The strongest current graph architecture is therefore:
 
 **ambient temperature → physicochemical damage/constraint → compensatory homeostasis module → retained cellular function → growth near boundary → temperature range.**
 
-Recent research reinforces that no single universal mechanism determines the range. In 2024, a comparison of 2,739 thermal-performance datasets fitted to 83 models found no universal best mathematical model across traits and taxa, supporting explicit assay and taxon annotation rather than a universal curve assumption. [DOI, published October 2024](https://doi.org/10.1038/s41467-024-53046-2)
+Recent research reinforces that no single universal mechanism determines the range. In 2024, a comparison of 2,739 thermal-performance datasets fitted to 83 models found no universal best mathematical model across traits and taxa, supporting explicit assay and taxon annotation rather than a universal curve assumption. [DOI, published October 2024](<a href="https://doi.org/10.1038/s41467-024-53046-2" rel="nofollow noreferrer">https://doi.org/10.1038/s41467-024-53046-2</a>)
 
 ## 3. Candidate nodes grouped by type
 
@@ -641,7 +642,7 @@ Recent research reinforces that no single universal mechanism determines the ran
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
-          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Lederbergia graminis (NCBITaxon:735518; DOI:10.1099/ijs.0.023820-0). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Lederbergia graminis (NCBITaxon:735518; <a href="https://doi.org/10.1099/ijs.0.023820-0" rel="nofollow noreferrer">DOI:10.1099/ijs.0.023820-0</a>). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
 
       </ol>
@@ -674,7 +675,16 @@ Recent research reinforces that no single universal mechanism determines the ran
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1038,12 +1048,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC

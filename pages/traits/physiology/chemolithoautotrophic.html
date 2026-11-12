@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -383,8 +384,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=920" rel="nofollow noreferrer">Acidithiobacillus ferrooxidans</a>
-                  <br><code>NCBITaxon:920</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=920" rel="nofollow noreferrer">Acidithiobacillus ferrooxidans
+                  <br><code>NCBITaxon:920</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -450,7 +451,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>chemolithoautotroph <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>chemolithoautotroph <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -466,7 +467,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000637</code> <span class="dim-preview">[-1.631, -1.052, -4.107, +0.857, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000637" rel="nofollow noreferrer">chemolithoautotrophic <code>METPO:1000637</code></a> <span class="dim-preview">[-1.631, -1.052, -4.107, +0.857, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -793,7 +794,7 @@ Identifiers below are deliberately conservative. Stable identifiers are supplied
         <li>
           <time>2026-10-25T12:55:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Replaced elliptical record-level evidence[0].snippet on DOI:10.1146/annurev.micro.52.1.191 with contiguous verbatim snippet already present on causal_graphs[0].edges[5].evidence[0] and parent record chemoautotrophic.yaml evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-008 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Replaced elliptical record-level evidence[0].snippet on <a href="https://doi.org/10.1146/annurev.micro.52.1.191" rel="nofollow noreferrer">DOI:10.1146/annurev.micro.52.1.191</a> with contiguous verbatim snippet already present on causal_graphs[0].edges[5].evidence[0] and parent record chemoautotrophic.yaml evidence[0] (Cycle 4 Stage 5 remediation of F-C4S4-DEF-SRC-008 in group G-C4S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -826,7 +827,16 @@ Identifiers below are deliberately conservative. Stable identifiers are supplied
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1190,12 +1200,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-25 12:55 UTC

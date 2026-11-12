@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -112,8 +113,8 @@
             <a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer"><code>METPO:1001105</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
-            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/ecology/biosafety_level.html"><code>METPO:1001101</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>BSL-4 is a member of the biosafety-level classification.</p>
             <ul>
 
@@ -323,7 +324,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>4 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>4 <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -339,7 +340,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1001105</code> <span class="dim-preview">[-2.744, -3.128, -2.945, +1.660, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1001105" rel="nofollow noreferrer">biosafety level 4 <code>METPO:1001105</code></a> <span class="dim-preview">[-2.744, -3.128, -2.945, +1.660, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -432,27 +433,27 @@ BSL-4 containment most frequently applies to certain filoviruses (e.g., Ebola, M
 ## Key Evidence-Backed Causal Edges
 | Subject | Predicate | Object | Source (DOI/URL) | Key snippet | Node type(s) | Curation uncertainty |
 |---|---|---|---|---|---|---|
-| Biosafety level 4 (BSL-4) | is_defined_as | highest containment level for dangerous/life-threatening pathogens | https://doi.org/10.3390/laboratories1030013 | “BSL-4 is characterized… as the highest containment level for dangerous and life-threatening pathogens” (gao2024frombiosafetyto pages 5-6) | trait class; containment level | Low |
-| Biosafety level 3 (BSL-3) | differs_from | BSL-4 by handling serious/lethal inhalation agents with less complex containment | https://doi.org/10.3390/laboratories1030013 | “BSL-3 addresses agents causing serious or lethal diseases via inhalation… while BSL-4 requires more complex self-contained facilities for maximum containment” (gao2024frombiosafetyto pages 5-6) | trait class; containment level | Low |
-| Global BSL-4 governance | has_current_count | 51 operational BSL-4 laboratories globally | https://doi.org/10.3390/laboratories1030013 | “51 BSL-4 laboratories currently operational globally, with 18 additional facilities in planning or construction” (gao2024frombiosafetyto pages 10-12) | governance/statistic | Low |
-| External biorisk assessment of BSL-4 laboratories | found | only 7 of 27 assessed labs met high standards | https://doi.org/10.3390/laboratories1030013 | “A 2023 King&#39;s College London report assessing 27 BSL-4 laboratories found only seven met high standards of biorisk management” (gao2024frombiosafetyto pages 10-12) | governance/statistic | Medium |
-| WHO Laboratory Biosafety Guideline (2024) | supports | countries lacking biosafety frameworks and emphasizes national oversight committees | https://doi.org/10.3390/laboratories1030013 | “the 2024 WHO Laboratory Biosafety Guideline was released to support countries lacking biosafety frameworks… emphasizing national biosafety oversight committees” (gao2024frombiosafetyto pages 10-12) | governance/policy | Medium |
-| Lassa virus | requires_handling_in | BSL-4 conditions | https://doi.org/10.1080/22221751.2024.2356149 | “Lassa virus (LASV), a risk-group 4 pathogen, must be handled in biosafety level-4 (BSL-4) conditions” (nunez2024treatmentofhighly pages 26-28) | agent; containment assignment | Low |
-| Lassa virus research constraints | motivate_development_of | BSL-2 surrogate reverse genetics systems | https://doi.org/10.1080/22221751.2024.2356149 | “thereby limiting its research and antiviral development… the first to study the complete LASV life cycle under BSL-2 conditions” (nunez2024treatmentofhighly pages 26-28) | application/model system | Low |
-| Ebola virus VP35 | inhibits | type I interferon production/induction | https://doi.org/10.1007/s40121-023-00913-y | “VP35 inhibits both the production of type I interferon (IFN)” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral protein; host process | Medium |
-| Ebola/filovirus VP35 | binds | dsRNA and blocks RIG-I/PACT-dependent IFN-I induction | https://doi.org/10.3390/cells13010071 | “the viral VP35 protein, which binds dsRNA… inhibit RIG-I activation, blocking IFNα/β induction” (vogel2023viraltargetingof pages 4-6) | viral protein; ligand; innate immune pathway | Low |
-| Ebola virus VP24 | competes_for_binding_to | importin alpha (IMPA5/6/7) | https://doi.org/10.3390/cells13010071 | “VP24 competes for this interaction, preventing STAT1 nuclear accumulation… by competitive binding to importin-alpha (IMPA) proteins, specifically IMPA5, 6, and 7” (vogel2023viraltargetingof pages 4-6) | viral protein; host transport protein | Low |
-| Ebola virus VP24 | prevents | STAT1 nuclear accumulation and ISG expression | https://doi.org/10.3390/cells13010071 | “preventing STAT1 nuclear accumulation and subsequent ISG expression” (vogel2023viraltargetingof pages 4-6) | viral protein; transcription factor; antiviral gene expression | Low |
-| VP24-IMPA antagonism | is_conserved_in | Orthoebolavirus but not Marburg virus | https://doi.org/10.3390/cells13010071 | “VP24-IMPA interaction is conserved in Orthoebolavirus genus but not Marburg virus” (vogel2023viraltargetingof pages 4-6) | comparative mechanism; taxon scope | Medium |
-| Ebola virus GP1 | binds_and_undergoes_conformational_change_to_enable | GP2-mediated membrane fusion | https://doi.org/10.1186/s43042-024-00600-8 | “GP1 binds to host cells and undergoes conformational change to expose GP2, enabling viral fusion with host cell membranes” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral glycoprotein; entry/fusion process | Medium |
-| Ebola virus shed glycoprotein (GP) | acts_as | antibody decoy/antigen sink | https://doi.org/10.1186/s43042-024-00600-8 | “The shed glycoprotein (GP) acts as an antigen sink/decoy that absorbs antibodies” (ndayambaje2024molecularcharacterizationof pages 4-6) | secreted viral protein; immune evasion | Medium |
-| Ebola virus shed glycoprotein (GP) | stimulates | macrophages and dendritic cells causing cytokine production and vascular permeability | https://doi.org/10.1186/s43042-024-00600-8 | “stimulating macrophages and dendritic cells, resulting in large-scale cytokine production and heightened vascular permeability” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral protein; immune cells; pathophysiology | Medium |
-| Filovirus infection | causes | organ injury via inflammation and endothelial dysfunction | https://doi.org/10.1038/s41390-023-02873-y | “organ injury due to inflammation, endothelial dysfunction” (ndayambaje2024molecularcharacterizationof pages 4-6) | disease process; host pathology | High |
-| LASV infection | can_use | LAMP1 for entry in a BSL-2 surrogate system | https://doi.org/10.1080/22221751.2024.2356149 | “membrane protein 1 (LAMP1), but not α-dystroglycan (α-DG)” (nunez2024treatmentofhighly pages 26-28) | viral entry; host receptor | Medium |
-| Alpha-dystroglycan | is_dispensable_for | LASVmg infection in helper-cell BSL-2 system | https://doi.org/10.1080/22221751.2024.2356149 | “a previously reported cellular receptor α-dystroglycan is dispensable for LASVmg infection” (nunez2024treatmentofhighly pages 26-28) | host receptor; surrogate assay finding | High |
-| Mammarenavirus NP | functions_as | interferon antagonist | https://doi.org/10.1080/17460441.2024.2340494 | “Like NP, Z is an interferon antagonist” (nunez2024treatmentofhighly pages 26-28) | viral protein; innate immune antagonism | Medium |
-| Mammarenavirus Z | functions_as | interferon antagonist | https://doi.org/10.1080/17460441.2024.2340494 | “Like NP, Z is an interferon antagonist” (nunez2024treatmentofhighly pages 26-28) | viral matrix protein; innate immune antagonism | Medium |
-| Mammarenavirus Z | mediates | virion budding | https://doi.org/10.1080/17460441.2024.2340494 | “Z-mediated virion budding” (nunez2024treatmentofhighly pages 26-28) | viral matrix protein; egress process | Medium |
+| Biosafety level 4 (BSL-4) | is_defined_as | highest containment level for dangerous/life-threatening pathogens | <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> | “BSL-4 is characterized… as the highest containment level for dangerous and life-threatening pathogens” (gao2024frombiosafetyto pages 5-6) | trait class; containment level | Low |
+| Biosafety level 3 (BSL-3) | differs_from | BSL-4 by handling serious/lethal inhalation agents with less complex containment | <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> | “BSL-3 addresses agents causing serious or lethal diseases via inhalation… while BSL-4 requires more complex self-contained facilities for maximum containment” (gao2024frombiosafetyto pages 5-6) | trait class; containment level | Low |
+| Global BSL-4 governance | has_current_count | 51 operational BSL-4 laboratories globally | <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> | “51 BSL-4 laboratories currently operational globally, with 18 additional facilities in planning or construction” (gao2024frombiosafetyto pages 10-12) | governance/statistic | Low |
+| External biorisk assessment of BSL-4 laboratories | found | only 7 of 27 assessed labs met high standards | <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> | “A 2023 King&#39;s College London report assessing 27 BSL-4 laboratories found only seven met high standards of biorisk management” (gao2024frombiosafetyto pages 10-12) | governance/statistic | Medium |
+| WHO Laboratory Biosafety Guideline (2024) | supports | countries lacking biosafety frameworks and emphasizes national oversight committees | <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> | “the 2024 WHO Laboratory Biosafety Guideline was released to support countries lacking biosafety frameworks… emphasizing national biosafety oversight committees” (gao2024frombiosafetyto pages 10-12) | governance/policy | Medium |
+| Lassa virus | requires_handling_in | BSL-4 conditions | <a href="https://doi.org/10.1080/22221751.2024.2356149" rel="nofollow noreferrer">https://doi.org/10.1080/22221751.2024.2356149</a> | “Lassa virus (LASV), a risk-group 4 pathogen, must be handled in biosafety level-4 (BSL-4) conditions” (nunez2024treatmentofhighly pages 26-28) | agent; containment assignment | Low |
+| Lassa virus research constraints | motivate_development_of | BSL-2 surrogate reverse genetics systems | <a href="https://doi.org/10.1080/22221751.2024.2356149" rel="nofollow noreferrer">https://doi.org/10.1080/22221751.2024.2356149</a> | “thereby limiting its research and antiviral development… the first to study the complete LASV life cycle under BSL-2 conditions” (nunez2024treatmentofhighly pages 26-28) | application/model system | Low |
+| Ebola virus VP35 | inhibits | type I interferon production/induction | <a href="https://doi.org/10.1007/s40121-023-00913-y" rel="nofollow noreferrer">https://doi.org/10.1007/s40121-023-00913-y</a> | “VP35 inhibits both the production of type I interferon (IFN)” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral protein; host process | Medium |
+| Ebola/filovirus VP35 | binds | dsRNA and blocks RIG-I/PACT-dependent IFN-I induction | <a href="https://doi.org/10.3390/cells13010071" rel="nofollow noreferrer">https://doi.org/10.3390/cells13010071</a> | “the viral VP35 protein, which binds dsRNA… inhibit RIG-I activation, blocking IFNα/β induction” (vogel2023viraltargetingof pages 4-6) | viral protein; ligand; innate immune pathway | Low |
+| Ebola virus VP24 | competes_for_binding_to | importin alpha (IMPA5/6/7) | <a href="https://doi.org/10.3390/cells13010071" rel="nofollow noreferrer">https://doi.org/10.3390/cells13010071</a> | “VP24 competes for this interaction, preventing STAT1 nuclear accumulation… by competitive binding to importin-alpha (IMPA) proteins, specifically IMPA5, 6, and 7” (vogel2023viraltargetingof pages 4-6) | viral protein; host transport protein | Low |
+| Ebola virus VP24 | prevents | STAT1 nuclear accumulation and ISG expression | <a href="https://doi.org/10.3390/cells13010071" rel="nofollow noreferrer">https://doi.org/10.3390/cells13010071</a> | “preventing STAT1 nuclear accumulation and subsequent ISG expression” (vogel2023viraltargetingof pages 4-6) | viral protein; transcription factor; antiviral gene expression | Low |
+| VP24-IMPA antagonism | is_conserved_in | Orthoebolavirus but not Marburg virus | <a href="https://doi.org/10.3390/cells13010071" rel="nofollow noreferrer">https://doi.org/10.3390/cells13010071</a> | “VP24-IMPA interaction is conserved in Orthoebolavirus genus but not Marburg virus” (vogel2023viraltargetingof pages 4-6) | comparative mechanism; taxon scope | Medium |
+| Ebola virus GP1 | binds_and_undergoes_conformational_change_to_enable | GP2-mediated membrane fusion | <a href="https://doi.org/10.1186/s43042-024-00600-8" rel="nofollow noreferrer">https://doi.org/10.1186/s43042-024-00600-8</a> | “GP1 binds to host cells and undergoes conformational change to expose GP2, enabling viral fusion with host cell membranes” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral glycoprotein; entry/fusion process | Medium |
+| Ebola virus shed glycoprotein (GP) | acts_as | antibody decoy/antigen sink | <a href="https://doi.org/10.1186/s43042-024-00600-8" rel="nofollow noreferrer">https://doi.org/10.1186/s43042-024-00600-8</a> | “The shed glycoprotein (GP) acts as an antigen sink/decoy that absorbs antibodies” (ndayambaje2024molecularcharacterizationof pages 4-6) | secreted viral protein; immune evasion | Medium |
+| Ebola virus shed glycoprotein (GP) | stimulates | macrophages and dendritic cells causing cytokine production and vascular permeability | <a href="https://doi.org/10.1186/s43042-024-00600-8" rel="nofollow noreferrer">https://doi.org/10.1186/s43042-024-00600-8</a> | “stimulating macrophages and dendritic cells, resulting in large-scale cytokine production and heightened vascular permeability” (ndayambaje2024molecularcharacterizationof pages 4-6) | viral protein; immune cells; pathophysiology | Medium |
+| Filovirus infection | causes | organ injury via inflammation and endothelial dysfunction | <a href="https://doi.org/10.1038/s41390-023-02873-y" rel="nofollow noreferrer">https://doi.org/10.1038/s41390-023-02873-y</a> | “organ injury due to inflammation, endothelial dysfunction” (ndayambaje2024molecularcharacterizationof pages 4-6) | disease process; host pathology | High |
+| LASV infection | can_use | LAMP1 for entry in a BSL-2 surrogate system | <a href="https://doi.org/10.1080/22221751.2024.2356149" rel="nofollow noreferrer">https://doi.org/10.1080/22221751.2024.2356149</a> | “membrane protein 1 (LAMP1), but not α-dystroglycan (α-DG)” (nunez2024treatmentofhighly pages 26-28) | viral entry; host receptor | Medium |
+| Alpha-dystroglycan | is_dispensable_for | LASVmg infection in helper-cell BSL-2 system | <a href="https://doi.org/10.1080/22221751.2024.2356149" rel="nofollow noreferrer">https://doi.org/10.1080/22221751.2024.2356149</a> | “a previously reported cellular receptor α-dystroglycan is dispensable for LASVmg infection” (nunez2024treatmentofhighly pages 26-28) | host receptor; surrogate assay finding | High |
+| Mammarenavirus NP | functions_as | interferon antagonist | <a href="https://doi.org/10.1080/17460441.2024.2340494" rel="nofollow noreferrer">https://doi.org/10.1080/17460441.2024.2340494</a> | “Like NP, Z is an interferon antagonist” (nunez2024treatmentofhighly pages 26-28) | viral protein; innate immune antagonism | Medium |
+| Mammarenavirus Z | functions_as | interferon antagonist | <a href="https://doi.org/10.1080/17460441.2024.2340494" rel="nofollow noreferrer">https://doi.org/10.1080/17460441.2024.2340494</a> | “Like NP, Z is an interferon antagonist” (nunez2024treatmentofhighly pages 26-28) | viral matrix protein; innate immune antagonism | Medium |
+| Mammarenavirus Z | mediates | virion budding | <a href="https://doi.org/10.1080/17460441.2024.2340494" rel="nofollow noreferrer">https://doi.org/10.1080/17460441.2024.2340494</a> | “Z-mediated virion budding” (nunez2024treatmentofhighly pages 26-28) | viral matrix protein; egress process | Medium |
 
 
 *Table: This table summarizes candidate evidence-backed causal graph edges relevant to the biosafety level 4 trait, combining containment definitions and representative taxon-specific mechanisms from Ebola and Lassa virus literature. It is useful for deciding which edges are appropriate for TraitMech curation and which should remain flagged as taxon-specific or uncertain.*
@@ -463,19 +464,19 @@ BSL-4 containment most frequently applies to certain filoviruses (e.g., Ebola, M
 * Some model findings (e.g., alpha-dystroglycan dispensability for LASV infection in surrogate BSL-2 systems) must be considered with caution for universal applicability.
 
 ## Bibliography and URLs (DOI-first)
-- Gao W et al. (2024) From Biosafety to National Security: The Evolution and Challenges of Biosafety Laboratories. Laboratories. https://doi.org/10.3390/laboratories1030013 (gao2024frombiosafetyto pages 5-6, gao2024frombiosafetyto pages 10-12)
-- Nuñez IA et al. (2024) Treatment of highly virulent mammarenavirus infections—status quo and future directions. Expert Opin Drug Discov. https://doi.org/10.1080/17460441.2024.2340494 (nunez2024treatmentofhighly pages 26-28)
-- Vogel OA et al. (2023) Viral targeting of importin alpha-mediated nuclear import to block innate immunity. Cells. https://doi.org/10.3390/cells13010071 (vogel2023viraltargetingof pages 4-6)
-- Ndayambaje M et al. (2024) Molecular characterization of ebola virus, immune response, and therapeutic challenges: a narrative review. Egyptian Journal of Medical Human Genetics. https://doi.org/10.1186/s43042-024-00600-8 (ndayambaje2024molecularcharacterizationof pages 4-6, ndayambaje2024molecularcharacterizationof pages 14-15)
+- Gao W et al. (2024) From Biosafety to National Security: The Evolution and Challenges of Biosafety Laboratories. Laboratories. <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a> (gao2024frombiosafetyto pages 5-6, gao2024frombiosafetyto pages 10-12)
+- Nuñez IA et al. (2024) Treatment of highly virulent mammarenavirus infections—status quo and future directions. Expert Opin Drug Discov. <a href="https://doi.org/10.1080/17460441.2024.2340494" rel="nofollow noreferrer">https://doi.org/10.1080/17460441.2024.2340494</a> (nunez2024treatmentofhighly pages 26-28)
+- Vogel OA et al. (2023) Viral targeting of importin alpha-mediated nuclear import to block innate immunity. Cells. <a href="https://doi.org/10.3390/cells13010071" rel="nofollow noreferrer">https://doi.org/10.3390/cells13010071</a> (vogel2023viraltargetingof pages 4-6)
+- Ndayambaje M et al. (2024) Molecular characterization of ebola virus, immune response, and therapeutic challenges: a narrative review. Egyptian Journal of Medical Human Genetics. <a href="https://doi.org/10.1186/s43042-024-00600-8" rel="nofollow noreferrer">https://doi.org/10.1186/s43042-024-00600-8</a> (ndayambaje2024molecularcharacterizationof pages 4-6, ndayambaje2024molecularcharacterizationof pages 14-15)
 
 ## Summary
 Significant progress has occurred from 2023–2024 in clarifying BSL-4 as a laboratory/containment trait, standardizing governance, and detailing viral-host mechanisms for classically assigned BSL-4 agents. Curation for TraitMech must distinguish between universal containment features and taxon-specific molecular mechanisms. See the embedded table for detailed evidence and curation assessment.
 
 References
 
-1. (gao2024frombiosafetyto pages 5-6): Wanying Gao, Zongzhen Wu, Kunlan Zuo, Qiangyu Xiang, Lu Zhang, Xiaoya Chen, Feng Tan, and Huan Liu. From biosafety to national security: the evolution and challenges of biosafety laboratories. Laboratories, 1:158-173, Dec 2024. URL: https://doi.org/10.3390/laboratories1030013, doi:10.3390/laboratories1030013. This article has 11 citations.
+1. (gao2024frombiosafetyto pages 5-6): Wanying Gao, Zongzhen Wu, Kunlan Zuo, Qiangyu Xiang, Lu Zhang, Xiaoya Chen, Feng Tan, and Huan Liu. From biosafety to national security: the evolution and challenges of biosafety laboratories. Laboratories, 1:158-173, Dec 2024. URL: <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a>, <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">doi:10.3390/laboratories1030013</a>. This article has 11 citations.
 
-2. (gao2024frombiosafetyto pages 10-12): Wanying Gao, Zongzhen Wu, Kunlan Zuo, Qiangyu Xiang, Lu Zhang, Xiaoya Chen, Feng Tan, and Huan Liu. From biosafety to national security: the evolution and challenges of biosafety laboratories. Laboratories, 1:158-173, Dec 2024. URL: https://doi.org/10.3390/laboratories1030013, doi:10.3390/laboratories1030013. This article has 11 citations.</pre>
+2. (gao2024frombiosafetyto pages 10-12): Wanying Gao, Zongzhen Wu, Kunlan Zuo, Qiangyu Xiang, Lu Zhang, Xiaoya Chen, Feng Tan, and Huan Liu. From biosafety to national security: the evolution and challenges of biosafety laboratories. Laboratories, 1:158-173, Dec 2024. URL: <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">https://doi.org/10.3390/laboratories1030013</a>, <a href="https://doi.org/10.3390/laboratories1030013" rel="nofollow noreferrer">doi:10.3390/laboratories1030013</a>. This article has 11 citations.</pre>
 
       <p class="meta">Showing the first 60 of
         68 lines of findings; the linked file also carries the
@@ -573,7 +574,7 @@ References
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;, whose sentence came from PMID:37362850. That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: PMID:37362850 &#39;Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;; PMID:41914886 &#39;Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.&#39;; PMID:40044492 &#39;However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.&#39;; PMID:39682751 &#39;The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.&#39;.</p>
+          <p class="meta">Scan provenance (#409). The kg-microbe-kgscan pass raised this discussion with the prompt &#39;Knowledge gap for biosafety level 4: Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;, whose sentence came from <a href="https://pubmed.ncbi.nlm.nih.gov/37362850/" rel="nofollow noreferrer">PMID:37362850</a>. That sentence is about microbiology and infection during celestial body habitation, not about this trait: the scan matched the hedging vocabulary of a gap statement without checking that the gap was about the trait it was filed under. The prompt above was authored instead from this record&#39;s own causal graph, and none of these references are carried as its evidence, because they support the scraped sentence rather than the question. The scan attached 3 further references whose snippets concern neither that sentence nor this trait; all 4 are reproduced here so nothing it produced is lost: <a href="https://pubmed.ncbi.nlm.nih.gov/37362850/" rel="nofollow noreferrer">PMID:37362850</a> &#39;Finally, this review examines the largely unknown microbiology and infection implications of celestial body habitation with an emphasis placed on Mars.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/41914886/" rel="nofollow noreferrer">PMID:41914886</a> &#39;Both Old World arenaviruses LASV and LCMV exploit host tyrosine kinase signaling to establish infection, though the molecular mechanisms remain incompletely understood.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/40044492/" rel="nofollow noreferrer">PMID:40044492</a> &#39;However, the comparatively low scientific commitment of countries that are usually among the major players in global scientific publications and the declining scientific interest in NiV research combined with the prevailing knowledge gaps in NiV infectiology in conjunction with the risk of NiV spreading to other areas is extremely threatening.&#39;; <a href="https://pubmed.ncbi.nlm.nih.gov/39682751/" rel="nofollow noreferrer">PMID:39682751</a> &#39;The COVID-19 pandemic has underscored the limitations of focusing solely on the pathogen-killing strategies of immunology and microbiology to address complex, multisystemic infectious diseases.&#39;.</p>
         </details>
 
       </div>
@@ -630,7 +631,7 @@ References
         <li>
           <time>2026-08-31T04:43:24Z</time> ·
           <strong>ADD_CANONICAL_EXAMPLES</strong> · codex
-          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Zaire ebolavirus (NCBITaxon:186538; https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/ebolavirus.html). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
+          <p class="changes">Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Zaire ebolavirus (NCBITaxon:186538; <a href="https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/ebolavirus.html" rel="nofollow noreferrer">https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/ebolavirus.html</a>). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.</p>
         </li>
 
       </ol>
@@ -663,7 +664,16 @@ References
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1027,12 +1037,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-31 04:43 UTC

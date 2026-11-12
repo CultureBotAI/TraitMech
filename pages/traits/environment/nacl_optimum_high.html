@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -137,8 +138,8 @@
             <a href="https://w3id.org/metpo/1000468" rel="nofollow noreferrer"><code>METPO:1000468</code></a>
             <span class="edge-predicate">is a</span>
             <strong>NaCl optimum</strong>
-            <a href="https://w3id.org/metpo/1000333" rel="nofollow noreferrer"><code>METPO:1000333</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/environment/nacl_optimum.html"><code>METPO:1000333</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>NaCl optimum high is a quantitative bin of the NaCl-optimum phenotype.</p>
             <ul>
 
@@ -311,9 +312,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>Extreme halophile <span class="meta">EXACT_SYNONYM · metpo.owl</span></li>
+        <li>Extreme halophile <span class="meta">EXACT_SYNONYM · <code>metpo.owl</code></span></li>
 
-        <li>NaO_&gt;8 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>NaO_&gt;8 <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -329,7 +330,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000468</code> <span class="dim-preview">[-2.565, -2.720, +0.941, +0.988, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1000468" rel="nofollow noreferrer">NaCl optimum high <code>METPO:1000468</code></a> <span class="dim-preview">[-2.565, -2.720, +0.941, +0.988, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -584,7 +585,7 @@ Salt-out organisms limit cytoplasmic inorganic ions and synthesize or import org
         <li>
           <time>2026-08-30T20:02:00Z</time> ·
           <strong>MOVE_CANONICAL_EXAMPLE_TO_SPECIFIC_BIN</strong> · codex
-          <p class="changes">Added Wallemia ichthyophaga (NCBITaxon:245174; DOI:10.1128/aem.02702-13) from the NaCl-optimum parent under the #478 most-specific-placement policy. Its complete measured optimum interval, 15-20% (w/v), is above this bin&#39;s &gt;8% (w/v) threshold.</p>
+          <p class="changes">Added Wallemia ichthyophaga (NCBITaxon:245174; <a href="https://doi.org/10.1128/aem.02702-13" rel="nofollow noreferrer">DOI:10.1128/aem.02702-13</a>) from the NaCl-optimum parent under the #478 most-specific-placement policy. Its complete measured optimum interval, 15-20% (w/v), is above this bin&#39;s &gt;8% (w/v) threshold.</p>
         </li>
 
       </ol>
@@ -617,7 +618,16 @@ Salt-out organisms limit cytoplasmic inorganic ions and synthesize or import org
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -981,12 +991,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-08-30 20:02 UTC

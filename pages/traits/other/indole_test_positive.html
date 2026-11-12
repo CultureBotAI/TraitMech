@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -76,7 +77,7 @@
       <h2>Bacterial L-tryptophan catabolism to indole</h2>
       <p class="meta">Evidence-backed metabolic pathway sketch linking bacterial tryptophan catabolism and indole formation to the indole test positive phenotype.</p>
 
-      <p class="graph-scope"><code>NONMECHANISTIC</code> · Pathway-and-metabolite sketch backed by DOI:10.1128/AEM.02787-15; strain-matched UniProtKB protein examples for Escherichia coli tryptophanase (TnaA) remain to be curated.</p>
+      <p class="graph-scope"><code>NONMECHANISTIC</code> · Pathway-and-metabolite sketch backed by <a href="https://doi.org/10.1128/AEM.02787-15" rel="nofollow noreferrer">DOI:10.1128/AEM.02787-15</a>; strain-matched UniProtKB protein examples for Escherichia coli tryptophanase (TnaA) remain to be curated.</p>
 
 
       <p id="pathograph-1-status" class="pathograph-status" role="status">Loading graph…</p>
@@ -178,7 +179,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>indole test <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>indole test <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -194,7 +195,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1005011</code> <span class="dim-preview">[-2.239, -2.286, -4.130, -0.165, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1005011" rel="nofollow noreferrer">indole test positive <code>METPO:1005011</code></a> <span class="dim-preview">[-2.239, -2.286, -4.130, -0.165, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -346,7 +347,7 @@
         </p>
 
 
-        <p>The record&#39;s primary literature (DOI:10.1128/AEM.02787-15) establishes L-tryptophan degradation to indole in enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401), but a verified UniProtKB accession for tryptophanase (TnaA) on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.</p>
+        <p>The record&#39;s primary literature (<a href="https://doi.org/10.1128/AEM.02787-15" rel="nofollow noreferrer">DOI:10.1128/AEM.02787-15</a>) establishes L-tryptophan degradation to indole in enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401), but a verified UniProtKB accession for tryptophanase (TnaA) on a GENE_OR_PROTEIN node must be curated before marking the graph MECHANISTIC.</p>
 
 
 
@@ -370,7 +371,7 @@
 
         <details class="discussion-notes">
           <summary class="meta">Provenance</summary>
-          <p class="meta">Cycle 3 Stage 3 UniProt audit: canonical_examples cites enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15), an analytical indole-assay study whose text does not mention tnaA or tryptophanase and for which UniProtKB lacks a strain H10407 tnaA entry, whereas reviewed Swiss-Prot tryptophanase TnaA (UniProtKB:P0A853) is annotated on Escherichia coli K-12 (NCBITaxon:83333; UP000000625). Keeping graph NONMECHANISTIC and discussion OPEN until a K-12 tnaA primary source snippet and canonical_examples entry are added.</p>
+          <p class="meta">Cycle 3 Stage 3 UniProt audit: canonical_examples cites enterotoxigenic Escherichia coli strain H10407 (NCBITaxon:316401; <a href="https://doi.org/10.1128/AEM.02787-15" rel="nofollow noreferrer">DOI:10.1128/AEM.02787-15</a>), an analytical indole-assay study whose text does not mention tnaA or tryptophanase and for which UniProtKB lacks a strain H10407 tnaA entry, whereas reviewed Swiss-Prot tryptophanase TnaA (UniProtKB:P0A853) is annotated on Escherichia coli K-12 (NCBITaxon:83333; UP000000625). Keeping graph NONMECHANISTIC and discussion OPEN until a K-12 tnaA primary source snippet and canonical_examples entry are added.</p>
         </details>
 
       </div>
@@ -409,7 +410,7 @@
         <li>
           <time>2026-10-23T22:45:00Z</time> ·
           <strong>RECORD_CURATION_DISCUSSION</strong> · claude
-          <p class="changes">Recorded Cycle 3 Stage 3 UniProtKB audit note on indole-test-positive-protein-example-gap documenting the source-snippet and strain-taxon blocker between Escherichia coli H10407 (NCBITaxon:316401; DOI:10.1128/AEM.02787-15) and Escherichia coli K-12 Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333).</p>
+          <p class="changes">Recorded Cycle 3 Stage 3 UniProtKB audit note on indole-test-positive-protein-example-gap documenting the source-snippet and strain-taxon blocker between Escherichia coli H10407 (NCBITaxon:316401; <a href="https://doi.org/10.1128/AEM.02787-15" rel="nofollow noreferrer">DOI:10.1128/AEM.02787-15</a>) and Escherichia coli K-12 Swiss-Prot TnaA (UniProtKB:P0A853; NCBITaxon:83333).</p>
         </li>
 
       </ol>
@@ -419,7 +420,7 @@
         <li><time>2026-09-11T06:47:35Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add indole test positive TraitRecord
-            <p>Seeded METPO:1005011 from data/raw/metpo.owl, enriched it with DOI:10.1128/AEM.02787-15 evidence for tryptophan-derived bacterial indole production, added Escherichia coli ETEC H10407 as a canonical example, and reparented the record from assay parent METPO:1005010 to METPO:1000059 with an open curation TODO for the missing non-assay parent.</p></li></ul>
+            <p>Seeded METPO:1005011 from data/raw/metpo.owl, enriched it with <a href="https://doi.org/10.1128/AEM.02787-15" rel="nofollow noreferrer">DOI:10.1128/AEM.02787-15</a> evidence for tryptophan-derived bacterial indole production, added Escherichia coli ETEC H10407 as a canonical example, and reparented the record from assay parent METPO:1005010 to METPO:1000059 with an open curation TODO for the missing non-assay parent.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/indole_test_positive/2026-09-11T064735Z-codex-8cf452.yaml">Read this curation session</a>
         </li>
         <li><time>2026-09-12T21:37:59Z</time>
@@ -457,7 +458,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>SEEDED</dd>
+      <dd>SEEDED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Imported verbatim from metpo.owl; not yet curator-reviewed.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -821,12 +831,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-23 22:45 UTC

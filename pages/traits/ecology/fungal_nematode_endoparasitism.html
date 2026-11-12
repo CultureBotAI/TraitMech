@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.1371/journal.pgen.1006017" rel="nofollow noreferrer"><code>DOI:10.1371/journal.pgen.1006017</code></a>
         <blockquote>Drechmeria coniospora is an obligate fungal pathogen that infects nematodes via the adhesion of specialized spores to the host cuticle.</blockquote>
-        <p class="meta">Lebrigand et al. 2016, PMID:27153332, PMCID:PMC4859500, scientific Abstract. Direct JATS match and native VERIFIED. Author Summary and Discussion distinguish spore-initiated endoparasitism from hyphal traps and egg infection. Actual Figures 8 and 9 show recombinant fungal growth in C. elegans, not unmodified natural exemplars. S1 Text was fully read and visually checked: the laboratory line was serially passaged for about 15 years; its source isolate and ARSEF 6962 share provenance. Obligate is the authors&#39; species description, not a universal class requirement or inability to grow on their artificial medium. Predicted genes and expression are not a universal mechanism.</p>
+        <p class="meta">Lebrigand et al. 2016, <a href="https://pubmed.ncbi.nlm.nih.gov/27153332/" rel="nofollow noreferrer">PMID:27153332</a>, PMCID:<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4859500/" rel="nofollow noreferrer">PMC4859500</a>, scientific Abstract. Direct JATS match and native VERIFIED. Author Summary and Discussion distinguish spore-initiated endoparasitism from hyphal traps and egg infection. Actual Figures 8 and 9 show recombinant fungal growth in C. elegans, not unmodified natural exemplars. S1 Text was fully read and visually checked: the laboratory line was serially passaged for about 15 years; its source isolate and ARSEF 6962 share provenance. Obligate is the authors&#39; species description, not a universal class requirement or inability to grow on their artificial medium. Predicted genes and expression are not a universal mechanism.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.3390/jof10010068" rel="nofollow noreferrer"><code>DOI:10.3390/jof10010068</code></a>
         <blockquote>Then, the fungal hyphae penetrate into the nematode body cavity and grow in the nematode body</blockquote>
-        <p class="meta">Sun et al. 2024, PMID:38248977, PMCID:PMC10820206, Results 3.2. Direct JATS match; native NOT_IN_ABSTRACT retained. Methods 2.5 and actual Figure 2c,d concern GFP-engineered HR-eGFP1 on Bursaphelenchus xylophilus; Figure 2 distinguishes attachment, entry, internal growth and emergence. The entire two-page supplement, including S1-S3, was inspected. Methods 2.6 scores attached spores or colonization as parasitism; no rate is imported as an internal-infection rate. Main-text intestinal infection after swallowing is tentative; do not silently strengthen it using the supplement caption. No field efficacy or safety is inferred.</p>
+        <p class="meta">Sun et al. 2024, <a href="https://pubmed.ncbi.nlm.nih.gov/38248977/" rel="nofollow noreferrer">PMID:38248977</a>, PMCID:<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10820206/" rel="nofollow noreferrer">PMC10820206</a>, Results 3.2. Direct JATS match; native NOT_IN_ABSTRACT retained. Methods 2.5 and actual Figure 2c,d concern GFP-engineered HR-eGFP1 on Bursaphelenchus xylophilus; Figure 2 distinguishes attachment, entry, internal growth and emergence. The entire two-page supplement, including S1-S3, was inspected. Methods 2.6 scores attached spores or colonization as parasitism; no rate is imported as an internal-infection rate. Main-text intestinal infection after swallowing is tentative; do not silently strengthen it using the supplement caption. No field efficacy or safety is inferred.</p>
       </li>
 
       <li>
@@ -119,7 +120,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1004002</code> <span class="dim-preview">[-1.564, -64.092, -0.620, -28.964, …]</span></li>
+        <li><a href="../../traits/ecology/animal_pathogen.html">animal pathogen <code>METPO:1004002</code></a> <span class="dim-preview">[-1.564, -64.092, -0.620, -28.964, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -339,7 +340,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -368,12 +378,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-14 15:22 UTC

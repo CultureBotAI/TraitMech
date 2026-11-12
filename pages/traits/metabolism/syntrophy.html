@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -188,7 +189,7 @@
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:18276" rel="nofollow noreferrer"><code>CHEBI:18276</code></a>
             <span class="edge-predicate">participates in</span>
             <strong>methanogenesis</strong>
-            <a href="https://w3id.org/metpo/1000844" rel="nofollow noreferrer"><code>METPO:1000844</code></a>
+            <a href="../../traits/metabolism/methanogenesis.html"><code>METPO:1000844</code></a>
             <a href="https://w3id.org/biolink/vocab/participates_in" rel="nofollow noreferrer"><code>biolink:participates_in</code></a>
             <p>Hydrogen can feed methanogenesis in syntrophic communities.</p>
             <ul>
@@ -415,8 +416,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335541" rel="nofollow noreferrer">Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)</a>
-                  <br><code>NCBITaxon:335541</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=335541" rel="nofollow noreferrer">Syntrophomonas wolfei subsp. wolfei (strain DSM 2245B / Goettingen)
+                  <br><code>NCBITaxon:335541</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -489,7 +490,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1002006</code> <span class="dim-preview">[-0.312, -0.639, -1.585, +0.222, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1002006" rel="nofollow noreferrer">Syntrophy <code>METPO:1002006</code></a> <span class="dim-preview">[-0.312, -0.639, -1.585, +0.222, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -575,7 +576,7 @@
 **Category:** METABOLISM; **term kind:** CLASS; **mapping:** REVIEWED
 **Parent:** METPO:1000060
 
-For TraitMech purposes, syntrophy should be modeled as a **community-dependent metabolic capacity**, not simply metabolite exchange. Its defining feature is that one organism’s reaction is thermodynamically feasible only because another organism removes products or accepts electrons. In classical methanogenic syntrophy, bacteria oxidize fatty acids or alcohols to acetate, H₂, and/or formate, while methanogens maintain sufficiently low H₂/formate activities and convert the products to CH₄ and CO₂. This is consistent with the supplied definition and the foundational interspecies-electron-transfer interpretation of DOI [10.1038/nrmicro2166](https://doi.org/10.1038/nrmicro2166). Recent literature recognizes both mediated interspecies electron transfer through H₂/formate and direct interspecies electron transfer (DIET). (muller2010syntrophicbutyrateand pages 1-2, nozhevnikova2020syntrophyandinterspecies pages 1-2, jin2023syntrophicpropionateoxidation pages 1-2)
+For TraitMech purposes, syntrophy should be modeled as a **community-dependent metabolic capacity**, not simply metabolite exchange. Its defining feature is that one organism’s reaction is thermodynamically feasible only because another organism removes products or accepts electrons. In classical methanogenic syntrophy, bacteria oxidize fatty acids or alcohols to acetate, H₂, and/or formate, while methanogens maintain sufficiently low H₂/formate activities and convert the products to CH₄ and CO₂. This is consistent with the supplied definition and the foundational interspecies-electron-transfer interpretation of DOI [<a href="https://doi.org/10.1038/nrmicro2166" rel="nofollow noreferrer">10.1038/nrmicro2166</a>](<a href="https://doi.org/10.1038/nrmicro2166" rel="nofollow noreferrer">https://doi.org/10.1038/nrmicro2166</a>). Recent literature recognizes both mediated interspecies electron transfer through H₂/formate and direct interspecies electron transfer (DIET). (muller2010syntrophicbutyrateand pages 1-2, nozhevnikova2020syntrophyandinterspecies pages 1-2, jin2023syntrophicpropionateoxidation pages 1-2)
 
 The most defensible core graph is therefore:
 
@@ -801,7 +802,16 @@ Identifiers below are deliberately conservative. Labels without a CURIE require 
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1165,12 +1175,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

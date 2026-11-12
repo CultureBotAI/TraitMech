@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -198,7 +199,7 @@
 
             <span class="edge-predicate">confers</span>
             <strong>Hachiman system</strong>
-            <code>traitmech:000219</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/hachiman_system.yaml" rel="nofollow noreferrer"><code>traitmech:000219</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>HamAB-mediated DNA cleavage is the antiviral output that realizes the Hachiman system trait.</p>
             <ul>
@@ -214,11 +215,11 @@
 
           <li id="pathograph-1-edge-5">
             <strong>Hachiman system</strong>
-            <code>traitmech:000219</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/hachiman_system.yaml" rel="nofollow noreferrer"><code>traitmech:000219</code></a>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
-            <code>traitmech:000209</code>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/genomics/phage_defense_system.html"><code>traitmech:000209</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Hachiman system possession is a phage-defense-system trait.</p>
             <ul>
 
@@ -288,9 +289,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>Hachiman antiphage defense system <span class="meta">EXACT_SYNONYM · DOI:10.1016/j.cell.2024.09.020</span></li>
+        <li>Hachiman antiphage defense system <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1016/j.cell.2024.09.020" rel="nofollow noreferrer"><code>DOI:10.1016/j.cell.2024.09.020</code></a></span></li>
 
-        <li>Hachiman defense system <span class="meta">EXACT_SYNONYM · DOI:10.1038/s41467-025-57851-1</span></li>
+        <li>Hachiman defense system <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1038/s41467-025-57851-1" rel="nofollow noreferrer"><code>DOI:10.1038/s41467-025-57851-1</code></a></span></li>
 
       </ul>
     </div>
@@ -306,7 +307,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+        <li><a href="../../traits/upper/quality.html">quality <code>METPO:1000188</code></a> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -427,7 +428,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output. Hachiman type II system (traitmech:000574) now resolves the HamABC architecture defined by Payne et al. (DOI:10.1093/nar/gkab883) and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence, but HamC function and type-II mechanism remain open. The family definition no longer requires universal DNA cleavage; this graph and its evidence remain restricted to characterized type-I systems. Proposal v451 replaces v96&#39;s overgeneralized family definition while preserving the stable local family identifier. Type I remains a separate architecture-class discovery lead. That architecture-class lead is now represented by traitmech:000575 Hachiman type I system for HamAB loci without HamC. The component definition follows Payne and Cui, not a failed detector hit or a type-II knockout. The existing graph still describes characterized I-A/I-B mechanisms, not all type-I subtypes. Subtype-specific mechanisms and native-locus activity remain open; no graph, example or hierarchy is changed.</p>
+        <p>Tuck et al. support DNA-damage-triggered type I-A HamAB activation and Cui et al. support type I-B HamAB ATPase and DNA-cleavage activity, but Hachiman variants need separate review before TraitMech asserts one universal triggering DNA substrate, HamA catalytic domain, HamC accessory role, Cap4 fusion architecture, phage range, or abortive-infection output. Hachiman type II system (traitmech:000574) now resolves the HamABC architecture defined by Payne et al. (<a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer">DOI:10.1093/nar/gkab883</a>) and retained by Cui et al. The DSM 14551 locus has heterologous antiphage evidence, but HamC function and type-II mechanism remain open. The family definition no longer requires universal DNA cleavage; this graph and its evidence remain restricted to characterized type-I systems. Proposal v451 replaces v96&#39;s overgeneralized family definition while preserving the stable local family identifier. Type I remains a separate architecture-class discovery lead. That architecture-class lead is now represented by traitmech:000575 Hachiman type I system for HamAB loci without HamC. The component definition follows Payne and Cui, not a failed detector hit or a type-II knockout. The existing graph still describes characterized I-A/I-B mechanisms, not all type-I subtypes. Subtype-specific mechanisms and native-locus activity remain open; no graph, example or hierarchy is changed.</p>
 
 
 
@@ -461,7 +462,7 @@
         <li>
           <time>2026-10-03T18:37:00Z</time> ·
           <strong>TRACK_HACHIMAN_TYPE_I_CLASS</strong> · codex
-          <p class="changes">Linked traitmech:000575 Hachiman type I system using the component classification in DOI:10.1093/nar/gkab883 and DOI:10.1038/s41467-025-57851-1. Kept definitions, hierarchy, examples, evidence and graphs unchanged; mechanism questions remain open. No absence assertion is inferred from detector output.</p>
+          <p class="changes">Linked traitmech:000575 Hachiman type I system using the component classification in <a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer">DOI:10.1093/nar/gkab883</a> and <a href="https://doi.org/10.1038/s41467-025-57851-1" rel="nofollow noreferrer">DOI:10.1038/s41467-025-57851-1</a>. Kept definitions, hierarchy, examples, evidence and graphs unchanged; mechanism questions remain open. No absence assertion is inferred from detector output.</p>
         </li>
 
       </ol>
@@ -515,7 +516,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -879,12 +889,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-03 18:41 UTC

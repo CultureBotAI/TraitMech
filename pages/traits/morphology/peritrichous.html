@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>peritrichous</strong>
-            <code>traitmech:000060</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/peritrichous.yaml" rel="nofollow noreferrer"><code>traitmech:000060</code></a>
             <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>Flagella distributed over the cell surface define the peritrichous arrangement.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>peritrichous</strong>
-            <code>traitmech:000060</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/peritrichous.yaml" rel="nofollow noreferrer"><code>traitmech:000060</code></a>
             <span class="edge-predicate">associated with</span>
             <strong>surface-distributed placement</strong>
 
@@ -153,7 +154,7 @@
 
           <li id="pathograph-1-edge-4">
             <strong>peritrichous</strong>
-            <code>traitmech:000060</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/peritrichous.yaml" rel="nofollow noreferrer"><code>traitmech:000060</code></a>
             <span class="edge-predicate">distinguished from</span>
             <strong>polar flagellar arrangement</strong>
 
@@ -299,7 +300,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000704</code> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
+        <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -512,7 +513,7 @@ Recent 2023–2024 FlhF/FlhG studies largely concern polar flagellates. They str
         <li>
           <time>2026-08-21T16:51:38Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · codex
-          <p class="changes">Replaced a polar-flagellation FlhG claim and an unrelated carbon-limitation island with the taxon-scoped B. subtilis rod/peptidoglycan mechanism supported by DOI:10.1128/mbio.00530-25. Connected the filament-number branch with a weak association rather than treating flagellar count as diagnostic; the graph is now one connected component.</p>
+          <p class="changes">Replaced a polar-flagellation FlhG claim and an unrelated carbon-limitation island with the taxon-scoped B. subtilis rod/peptidoglycan mechanism supported by <a href="https://doi.org/10.1128/mbio.00530-25" rel="nofollow noreferrer">DOI:10.1128/mbio.00530-25</a>. Connected the filament-number branch with a weak association rather than treating flagellar count as diagnostic; the graph is now one connected component.</p>
         </li>
 
         <li>
@@ -524,7 +525,7 @@ Recent 2023–2024 FlhF/FlhG studies largely concern polar flagellates. They str
         <li>
           <time>2026-10-24T02:45:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-003 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1093/femsre/fuv034" rel="nofollow noreferrer">DOI:10.1093/femsre/fuv034</a> (already present on causal_graphs[0].edges[2].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-003 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -534,7 +535,7 @@ Recent 2023–2024 FlhF/FlhG studies largely concern polar flagellates. They str
         <li><time>2026-08-21T16:55:30Z</time>
            · codex
           <ul><li><strong>EDIT</strong> — Apply verified peritrichous graph research
-            <p>Verified the historical enrichment lead against the current trait and primary sources. Removed a polar-specific FlhG branch and an unrelated carbon-limitation island, added the taxon-scoped Bacillus subtilis flagellar-rod and peptidoglycan-pore patterning mechanism from DOI:10.1128/mbio.00530-25, and connected the filament-number branch with a deliberately weak association. The graph moved from four components to one, reducing the corpus baseline by one fragmented graph and six unreachable nodes without introducing predicate-domain or evidence-snippet debt.</p></li></ul>
+            <p>Verified the historical enrichment lead against the current trait and primary sources. Removed a polar-specific FlhG branch and an unrelated carbon-limitation island, added the taxon-scoped Bacillus subtilis flagellar-rod and peptidoglycan-pore patterning mechanism from <a href="https://doi.org/10.1128/mbio.00530-25" rel="nofollow noreferrer">DOI:10.1128/mbio.00530-25</a>, and connected the filament-number branch with a deliberately weak association. The graph moved from four components to one, reducing the corpus baseline by one fragmented graph and six unreachable nodes without introducing predicate-domain or evidence-snippet debt.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/peritrichous/2026-08-21T165530Z-codex-21ea8d.yaml">Read this curation session</a>
         </li></ul>
 
@@ -566,7 +567,16 @@ Recent 2023–2024 FlhF/FlhG studies largely concern polar flagellates. They str
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -930,12 +940,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-24 02:45 UTC

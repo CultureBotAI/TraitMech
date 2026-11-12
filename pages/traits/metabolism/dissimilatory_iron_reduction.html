@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>dissimilatory iron reduction</strong>
-            <code>traitmech:000031</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/dissimilatory_iron_reduction.yaml" rel="nofollow noreferrer"><code>traitmech:000031</code></a>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>iron(3+)</strong>
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:29034" rel="nofollow noreferrer"><code>CHEBI:29034</code></a>
@@ -134,11 +135,11 @@
 
           <li id="pathograph-1-edge-3">
             <strong>dissimilatory iron reduction</strong>
-            <code>traitmech:000031</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/dissimilatory_iron_reduction.yaml" rel="nofollow noreferrer"><code>traitmech:000031</code></a>
             <span class="edge-predicate">is a</span>
             <strong>energy-conserving anaerobic respiration</strong>
 
-            <code>rdfs:subClassOf</code>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>DIR is a form of energy-conserving anaerobic respiration.</p>
             <ul>
 
@@ -210,7 +211,7 @@
 
           <li id="pathograph-1-edge-7">
             <strong>dissimilatory iron reduction</strong>
-            <code>traitmech:000031</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/dissimilatory_iron_reduction.yaml" rel="nofollow noreferrer"><code>traitmech:000031</code></a>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>solid Fe(III) mineral</strong>
 
@@ -229,7 +230,7 @@
 
           <li id="pathograph-1-edge-8">
             <strong>dissimilatory iron reduction</strong>
-            <code>traitmech:000031</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/dissimilatory_iron_reduction.yaml" rel="nofollow noreferrer"><code>traitmech:000031</code></a>
             <span class="edge-predicate">has electron acceptor</span>
             <strong>dissolved Fe(III)-organic-matter complex</strong>
 
@@ -288,8 +289,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586" rel="nofollow noreferrer">Shewanella oneidensis MR-1</a>
-                  <br><code>NCBITaxon:211586</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=211586" rel="nofollow noreferrer">Shewanella oneidensis MR-1
+                  <br><code>NCBITaxon:211586</code></a>
                 </td>
                 <td>
                   <code>UNREVIEWED</code><br>
@@ -355,9 +356,9 @@
       <h2>Synonyms (2)</h2>
       <ul class="synonyms">
 
-        <li>ferric iron respiration <span class="meta">RELATED_SYNONYM · DOI:10.1128/mr.55.2.259-287.1991</span></li>
+        <li>ferric iron respiration <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1128/mr.55.2.259-287.1991" rel="nofollow noreferrer"><code>DOI:10.1128/mr.55.2.259-287.1991</code></a></span></li>
 
-        <li>dissimilatory Fe(III) reduction <span class="meta">EXACT_SYNONYM · DOI:10.1128/mr.55.2.259-287.1991</span></li>
+        <li>dissimilatory Fe(III) reduction <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1128/mr.55.2.259-287.1991" rel="nofollow noreferrer"><code>DOI:10.1128/mr.55.2.259-287.1991</code></a></span></li>
 
       </ul>
     </div>
@@ -373,7 +374,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000802</code> <span class="dim-preview">[-0.426, -1.069, -1.023, +1.207, …]</span></li>
+        <li><a href="../../traits/metabolism/anaerobic_respiration.html">Anaerobic respiration <code>METPO:1000802</code></a> <span class="dim-preview">[-0.426, -1.069, -1.023, +1.207, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -595,7 +596,7 @@ Ontology mappings below are deliberately conservative. Protein names should be g
         <li>
           <time>2026-08-05T00:00:00Z</time> ·
           <strong>ENRICH_CAUSAL_GRAPH</strong> · claude
-          <p class="changes">Added 2 evidence-backed edges connecting the stranded Fe(III)-pool component to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral, and dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008 to match the established uses-electron-donor convention. Both carry verbatim snippets from PMID:15518832, checked character-for-character against the PubMed abstract rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.</p>
+          <p class="changes">Added 2 evidence-backed edges connecting the stranded Fe(III)-pool component to the trait (issue 183): dir_trait uses electron acceptor solid_fe3_mineral, and dir_trait uses electron acceptor dissolved_fe3_om_complex, both grounded METPO:2000008 to match the established uses-electron-donor convention. Both carry verbatim snippets from <a href="https://pubmed.ncbi.nlm.nih.gov/15518832/" rel="nofollow noreferrer">PMID:15518832</a>, checked character-for-character against the PubMed abstract rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and its 2 UNREACHABLE_FROM_TRAIT findings.</p>
         </li>
 
         <li>
@@ -629,7 +630,7 @@ Ontology mappings below are deliberately conservative. Protein names should be g
         <li><time>2026-08-05T00:00:00Z</time>
            · claude-code
           <ul><li><strong>EDIT</strong> — Connect the stranded Fe(III)-pool component to the trait
-            <p>The pair dissolved_fe3_om_complex -&gt; solid_fe3_mineral had no undirected path to dir_trait, so the graph carried a free-standing geochemical rate comparison beside a respiration mechanism. Both nodes are pools of the acceptor the organism reduces, so dir_trait now uses each as an electron acceptor (METPO:2000008), matching the TRAIT -&gt; CHEMICAL shape of the 13 existing uses-electron-donor edges (METPO:2000009). Both snippets are verbatim from PMID:15518832, pulled via PubMed efetch and compared character-for-character in the same run rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings. Scope caveat recorded in issue 297: the dissolved-pool quote concerns chelators the organism secretes, while the node is ambient Fe(III)-organic-matter complex.</p></li></ul>
+            <p>The pair dissolved_fe3_om_complex -&gt; solid_fe3_mineral had no undirected path to dir_trait, so the graph carried a free-standing geochemical rate comparison beside a respiration mechanism. Both nodes are pools of the acceptor the organism reduces, so dir_trait now uses each as an electron acceptor (METPO:2000008), matching the TRAIT -&gt; CHEMICAL shape of the 13 existing uses-electron-donor edges (METPO:2000009). Both snippets are verbatim from <a href="https://pubmed.ncbi.nlm.nih.gov/15518832/" rel="nofollow noreferrer">PMID:15518832</a>, pulled via PubMed efetch and compared character-for-character in the same run rather than lifted from the deep-research report, whose evidence text is paraphrase (issue 247). Resolves this graph&#39;s FRAGMENTED_GRAPH and 2 UNREACHABLE_FROM_TRAIT findings. Scope caveat recorded in issue 297: the dissolved-pool quote concerns chelators the organism secretes, while the node is ambient Fe(III)-organic-matter complex.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/dissimilatory_iron_reduction/2026-08-05T000000Z-claude-code-183a01.yaml">Read this curation session</a>
         </li></ul>
 
@@ -661,7 +662,16 @@ Ontology mappings below are deliberately conservative. Protein names should be g
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1025,12 +1035,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-22 01:35 UTC

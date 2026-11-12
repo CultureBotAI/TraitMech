@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -67,7 +68,7 @@
       <li>
         <a href="https://rest.uniprot.org/uniprotkb/P0DW44.json" rel="nofollow noreferrer"><code>https://rest.uniprot.org/uniprotkb/P0DW44.json</code></a>
         <blockquote>Component of antiviral defense system Lamassu type I, composed of LmuA and LmuB.</blockquote>
-        <p class="meta">Reviewed P0DW44, entry version 8, retrieved 2026-10-03: the FUNCTION annotation identifies the LmuA/LmuB system in the NIO-1130 source strain (taxon 1761765), citing PMID:29371424. Its protection assays were heterologous expression in B. subtilis BEST7003, not native-host assays. The source organism and expression host are not interchangeable.</p>
+        <p class="meta">Reviewed P0DW44, entry version 8, retrieved 2026-10-03: the FUNCTION annotation identifies the LmuA/LmuB system in the NIO-1130 source strain (taxon 1761765), citing <a href="https://pubmed.ncbi.nlm.nih.gov/29371424/" rel="nofollow noreferrer">PMID:29371424</a>. Its protection assays were heterologous expression in B. subtilis BEST7003, not native-host assays. The source organism and expression host are not interchangeable.</p>
       </li>
 
       <li>
@@ -118,7 +119,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>type I Lamassu <span class="meta">EXACT_SYNONYM · DOI:10.1073/pnas.2519643122</span></li>
+        <li>type I Lamassu <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a></span></li>
 
       </ul>
     </div>
@@ -134,7 +135,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+        <li><a href="../../traits/upper/quality.html">quality <code>METPO:1000188</code></a> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -287,7 +288,7 @@
         <li><time>2026-10-03T16:01:19Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add the LmuC-lacking Lamassu type-I possession trait
-            <p>Added traitmech:000573 with primary DOI sources 10.1073/pnas.2519643122 and 10.1038/s41589-025-02102-z, four directly verified contiguous snippets, reviewed UniProt P0DW44 and PDB 9UX7 source metadata, and NCBITaxon:1761765 Bacillus sp. nio-1130. Distinguished source possession from heterologous activity, component absence from missing hits, and composition from length families. Ignored-and-hidden searches established novelty and allocation. Reserved METPO:1052700 in v450; validate the guarded writer, proposal, histories and regenerated artifacts.</p></li></ul>
+            <p>Added traitmech:000573 with primary DOI sources <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer">10.1073/pnas.2519643122</a> and <a href="https://doi.org/10.1038/s41589-025-02102-z" rel="nofollow noreferrer">10.1038/s41589-025-02102-z</a>, four directly verified contiguous snippets, reviewed UniProt P0DW44 and PDB 9UX7 source metadata, and NCBITaxon:1761765 Bacillus sp. nio-1130. Distinguished source possession from heterologous activity, component absence from missing hits, and composition from length families. Ignored-and-hidden searches established novelty and allocation. Reserved METPO:1052700 in v450; validate the guarded writer, proposal, histories and regenerated artifacts.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lamassu_type_i_system/2026-10-03T160119Z-codex-401411.yaml">Read this curation session</a>
         </li></ul>
 
@@ -319,7 +320,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -348,12 +358,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-03 16:01 UTC

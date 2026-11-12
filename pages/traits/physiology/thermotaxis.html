@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,7 +56,7 @@
       <li>
         <a href="https://doi.org/10.7554/eLife.26607" rel="nofollow noreferrer"><code>DOI:10.7554/eLife.26607</code></a>
         <blockquote>detect and follow environmental temperature gradients</blockquote>
-        <p class="meta">Paulick et al., Introduction; version 2, Version of Record dated 2017-08-31, https://cdn.elifesciences.org/articles/26607/elife-26607-v2.pdf. Figures 1-3 and their figure supplements distinguish behavioral gradients from FRET reporters and chemical adaptation. Temperature preference for movement is not a growth-temperature class.</p>
+        <p class="meta">Paulick et al., Introduction; version 2, Version of Record dated 2017-08-31, <a href="https://cdn.elifesciences.org/articles/26607/elife-26607-v2.pdf" rel="nofollow noreferrer">https://cdn.elifesciences.org/articles/26607/elife-26607-v2.pdf</a>. Figures 1-3 and their figure supplements distinguish behavioral gradients from FRET reporters and chemical adaptation. Temperature preference for movement is not a growth-temperature class.</p>
       </li>
 
       <li>
@@ -175,7 +176,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0043052" rel="nofollow noreferrer"><code>GO:0043052</code></a>
             <span class="edge-predicate">confers</span>
             <strong>thermotaxis</strong>
-            <code>traitmech:000580</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/physiology/thermotaxis.yaml" rel="nofollow noreferrer"><code>traitmech:000580</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Temperature-guided migration realizes the organismal thermotaxis phenotype.</p>
             <ul>
@@ -212,8 +213,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12</a>
-                  <br><code>NCBITaxon:83333</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=83333" rel="nofollow noreferrer">Escherichia coli K-12
+                  <br><code>NCBITaxon:83333</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -286,7 +287,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000702</code> <span class="dim-preview">[+24.397, -70.567, +20.807, -80.811, …]</span></li>
+        <li><a href="../../traits/morphology/motile.html">motile <code>METPO:1000702</code></a> <span class="dim-preview">[+24.397, -70.567, +20.807, -80.811, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -407,7 +408,7 @@
           mechanism it concerns.</p>
 
 
-        <p>DOI:10.1073/pnas.0709903105 reports thermal-response inversion under its tethered-cell conditions. DOI:10.7554/eLife.26607 instead finds continued warm-seeking in buffer under flow; its Discussion suggests residual chemical stimulation as one explanation of earlier results, not a proven correction. Retain medium, adaptation, strain and assay context. Growth optima, passive thermophoresis and temperature-dependent speed alone do not establish thermotaxis. GO:0043052 is a biological process (QuickGO checked 2026-10-03), so it grounds the process node rather than an equivalent xref on the disposition. The Tar arm does not describe every thermotactic microbe.</p>
+        <p><a href="https://doi.org/10.1073/pnas.0709903105" rel="nofollow noreferrer">DOI:10.1073/pnas.0709903105</a> reports thermal-response inversion under its tethered-cell conditions. <a href="https://doi.org/10.7554/eLife.26607" rel="nofollow noreferrer">DOI:10.7554/eLife.26607</a> instead finds continued warm-seeking in buffer under flow; its Discussion suggests residual chemical stimulation as one explanation of earlier results, not a proven correction. Retain medium, adaptation, strain and assay context. Growth optima, passive thermophoresis and temperature-dependent speed alone do not establish thermotaxis. GO:0043052 is a biological process (QuickGO checked 2026-10-03), so it grounds the process node rather than an equivalent xref on the disposition. The Tar arm does not describe every thermotactic microbe.</p>
 
 
 
@@ -439,7 +440,7 @@
         <li><time>2026-10-03T22:20:04Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add temperature-guided active movement as thermotaxis
-            <p>Added traitmech:000580 using primary DOI:10.7554/eLife.26607 version 2, DOI:10.1073/pnas.0709903105, DOI:10.1074/jbc.271.30.17932 and DOI:10.1128/jb.179.21.6573-6580.1997. Verified exact snippets, K-12 behavioral assay scope, NCBITaxon:83333, reviewed UniProtKB:P07017 and GO:0043052 as a process-only grounding. The graph describes the Tar-mediated arm, not a universal or complete Tar/Tsr mechanism; an open discussion preserves assay-context uncertainty. Ignored-and-hidden novelty searches found no exact record or METPO term. Reserved METPO:1053400 in proposal v457 and updated README counts. Existing traits and the protected spore-germination record are untouched.</p></li></ul>
+            <p>Added traitmech:000580 using primary <a href="https://doi.org/10.7554/eLife.26607" rel="nofollow noreferrer">DOI:10.7554/eLife.26607</a> version 2, <a href="https://doi.org/10.1073/pnas.0709903105" rel="nofollow noreferrer">DOI:10.1073/pnas.0709903105</a>, <a href="https://doi.org/10.1074/jbc.271.30.17932" rel="nofollow noreferrer">DOI:10.1074/jbc.271.30.17932</a> and <a href="https://doi.org/10.1128/jb.179.21.6573-6580.1997" rel="nofollow noreferrer">DOI:10.1128/jb.179.21.6573-6580.1997</a>. Verified exact snippets, K-12 behavioral assay scope, NCBITaxon:83333, reviewed UniProtKB:P07017 and GO:0043052 as a process-only grounding. The graph describes the Tar-mediated arm, not a universal or complete Tar/Tsr mechanism; an open discussion preserves assay-context uncertainty. Ignored-and-hidden novelty searches found no exact record or METPO term. Reserved METPO:1053400 in proposal v457 and updated README counts. Existing traits and the protected spore-germination record are untouched.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/thermotaxis/2026-10-03T222004Z-codex-1fe3c7.yaml">Read this curation session</a>
         </li></ul>
 
@@ -471,7 +472,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -835,12 +845,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-03 22:20 UTC

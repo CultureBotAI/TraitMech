@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
             <a href="https://amigo.geneontology.org/amigo/term/GO:0009288" rel="nofollow noreferrer"><code>GO:0009288</code></a>
             <span class="edge-predicate">defines</span>
             <strong>monotrichous</strong>
-            <code>traitmech:000057</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/monotrichous.yaml" rel="nofollow noreferrer"><code>traitmech:000057</code></a>
             <a href="https://w3id.org/metpo/2007500" rel="nofollow noreferrer"><code>METPO:2007500</code></a>
             <p>A single polar flagellum defines the monotrichous arrangement.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>monotrichous</strong>
-            <code>traitmech:000057</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/morphology/monotrichous.yaml" rel="nofollow noreferrer"><code>traitmech:000057</code></a>
             <span class="edge-predicate">associated with</span>
             <strong>polar single-flagellum placement</strong>
 
@@ -299,7 +300,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000704</code> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
+        <li><a href="../../traits/morphology/flagellated.html">flagellated <code>METPO:1000704</code></a> <span class="dim-preview">[-2.371, -2.707, -4.290, +4.186, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -539,7 +540,7 @@ The terminal node should represent an **assay-observed morphology**, not a genom
         <li>
           <time>2026-10-24T02:45:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1093/femsre/fuv034 (already present on sibling record polar_flagellation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-017 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1093/femsre/fuv034" rel="nofollow noreferrer">DOI:10.1093/femsre/fuv034</a> (already present on sibling record polar_flagellation.yaml evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-017 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -572,7 +573,16 @@ The terminal node should represent an **assay-observed morphology**, not a genom
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -936,12 +946,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-24 02:45 UTC
