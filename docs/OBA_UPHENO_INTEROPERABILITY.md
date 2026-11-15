@@ -1,7 +1,8 @@
 # OBA and uPheno for microbial traits: fit with METPO and TraitMech
 
 Assessment date: 2026-11-07; revised 2026-11-15 when it moved here from
-[CultureBotAI/XMechBay#51](https://github.com/CultureBotAI/XMechBay/pull/51) after review. This is a research and modeling
+[CultureBotAI/XMechBay#51](https://github.com/CultureBotAI/XMechBay/pull/51)
+after review. This is a research and modeling
 assessment, not an implemented ontology mapping or schema migration.
 
 ## Papers and scope
@@ -34,7 +35,8 @@ leaves actual comparators and effect sizes to annotation metadata.
 Two microbial ontologies matter here and neither paper discusses them: OMP
 (Ontology of Microbial Phenotypes) and MicrO (Ontology of Prokaryotic Phenotypic
 and Metabolic Characters). The METPO snapshot cites OMP 116 times and MicrO 61
-times, every one as a definition source (`IAO:0000119` on a definition). The uPheno paper does not list
+times, every one as a definition source (`IAO:0000119` on a definition). The
+uPheno paper does not list
 OMP among its integrated ontologies; whether current uPheno releases import or
 map OMP was not checked. Any OBA or uPheno alignment for prokaryotic traits should
 state its relation to OMP and MicrO terms that METPO already cites.
@@ -62,14 +64,14 @@ causal mechanism.
 
 Alignment does not start from nothing. The METPO `2026-06-12` snapshot used by
 TraitMech (`data/raw/metpo.owl`) already gives OBA and uPheno classes as
-definition sources (`IAO:0000119` on the definition) of five terms, alongside
-other sources on the same axiom. The labels below are from OLS:
+definition sources (`IAO:0000119` on the definition) of five terms; three of them
+also cite other sources on the same axiom. The labels below are from OLS:
 
 | METPO term | OBA or uPheno source (label) | Other ontology sources on the same definition |
 |---|---|---|
 | `METPO:1000881` cell length | `OBA:2040145` cell length ("The length of a cell.") | none |
 | `METPO:1000882` cell width | `OBA:2040146` cell width ("The width of a cell.") | none |
-| `METPO:1000601` oxygen preference | `UPHENO:0049673` response to oxygen levels phenotype ("Changed response to oxygen levels.") | none (plus the DSMZ OxygenTolerance schema and trait databases) |
+| `METPO:1000601` oxygen preference | `UPHENO:0049673` response to oxygen levels phenotype ("Changed response to oxygen levels.") | none (plus the DSMZ OxygenTolerance schema) |
 | `METPO:1000703` non motile | `UPHENO:0034076` absent cell motility ("Lack of cell motility.") | `OMP:0000133` absence of motility; `OMP:0007488`, `OMP:0007489`, `OMP:0007490` |
 | `METPO:1000872` non-spore forming | `UPHENO:0083394` absent sporulation ("Lack of sporulation.") | `OMP:0000018` absence of endospore formation; `OMP:0007232`, `OMP:0007236`, `OMP:0007434` |
 
@@ -91,9 +93,13 @@ These citations show exactly the boundaries this assessment is about:
   an abnormal "changed response" phenotype is the conflation the table below warns
   against, already present in METPO. For non-motile and non-spore-forming
   *species* there is no wild-type reference to deviate from. For a non-motile
-  *mutant strain* there is, and METPO 1000703 can describe either case. The OMP
-  sources on the same definitions model capability absence ("lacks the ability"),
-  which fits species-level traits better.
+  *mutant strain* there is, and METPO 1000703 can describe either case. Two of the
+  co-cited OMP classes, `OMP:0000133` (absence of motility) and `OMP:0000018`
+  (absence of endospore formation), model capability absence, which fits
+  species-level traits better. The other co-cited OMP classes are narrower or
+  mismatched. Absence of gliding, swarming or swimming motility does not make an
+  organism non-motile. Absence of an exosporium presupposes an endospore. Absence
+  of asexual or sexual sporulation has the scope problem described below.
 - **Scope.** METPO 1000872 concerns endospores, while `UPHENO:0083394` covers all
   sporulation (GO:0043934). An exospore-forming organism such as *Streptomyces*
   is non-spore-forming in METPO's sense but not "absent sporulation".
@@ -107,8 +113,8 @@ At revision `0c20b4c`, TraitMech did not carry these ontology sources through. T
 [non motile](https://github.com/CultureBotAI/TraitMech/blob/0c20b4c82a8b5ae4a883cbc536abfd6fdca6380a/data/traits/morphology/non_motile.yaml) and
 [non-spore forming](https://github.com/CultureBotAI/TraitMech/blob/0c20b4c82a8b5ae4a883cbc536abfd6fdca6380a/data/traits/morphology/non_spore_forming.yaml)
 records each cite a paper as `definition_source` instead. For the three uPheno
-cases, leaving out the uPheno class may be the right outcome; the OMP sources are
-closer ([#2090](https://github.com/CultureBotAI/TraitMech/issues/2090)).
+cases, leaving out the uPheno class may be the right outcome; `OMP:0000133` and
+`OMP:0000018` are closer ([#2090](https://github.com/CultureBotAI/TraitMech/issues/2090)).
 
 ## Concrete microbial modeling choices
 
