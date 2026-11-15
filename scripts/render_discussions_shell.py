@@ -13,21 +13,31 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- TraitMech shell -->"
 END = "<!-- /TraitMech shell -->"
+LICENSE_BASE = "https://github.com/CultureBotAI/TraitMech/blob/main"
 
 
 def render_shell(text: str) -> str:
     text = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\n?", "", text, flags=re.S)
-    if text.count("</head>") != 1 or text.count('<nav aria-label="Project navigation">') != 1:
-        raise ValueError("Shared discussions template changed: check head/navigation anchors")
+    if (text.count("</head>") != 1 or text.count("</body>") != 1
+            or text.count('<nav aria-label="Project navigation">') != 1):
+        raise ValueError("Shared discussions template changed: check head/navigation/body anchors")
     head = (f'{START}\n<link rel="stylesheet" href="style.css">\n'
             '<script src="../../pages/theme-toggle.js"></script>\n'
             f'{END}\n')
     navigation = (f'{START}<a href="../../pages/index.html">TraitMech Home</a> · '
                   f'<a href="../../pages/browse.html">Browse</a> · {END}')
+    # The same licence statement as every pages/ footer: this index republishes
+    # record text, so it carries the record licence too.
+    footer = (f'{START}\n<footer class="shell-footer">'
+              f'Project data: <a href="{LICENSE_BASE}/LICENSE-DATA">CC BY 4.0</a>. '
+              f'Code: <a href="{LICENSE_BASE}/LICENSE-CODE">BSD-3-Clause</a>. '
+              'Third-party source material keeps its own terms '
+              f'(<a href="{LICENSE_BASE}/LICENSE">licence scope</a>).</footer>\n'
+              f'{END}\n')
     return text.replace('</head>', head + '</head>').replace(
         '<nav aria-label="Project navigation">',
         '<nav aria-label="Project navigation">' + navigation,
-    )
+    ).replace('</body>', footer + '</body>')
 
 
 def main() -> int:

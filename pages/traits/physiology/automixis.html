@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -61,7 +62,7 @@
       <li>
         <a href="https://doi.org/10.1186/s13059-021-02521-w" rel="nofollow noreferrer"><code>DOI:10.1186/s13059-021-02521-w</code></a>
         <blockquote>Mating of gametes from the same meiotic event represents a particular type of inbreeding referred to as intratetrad mating or automixis</blockquote>
-        <p class="meta">Papaioannou et al. (2021), PMID:34732243, PMC8567612, Background clause checked in publisher HTML and Europe PMC full-text XML. Scientific abstract, Results, Discussion and main Methods read; actual Figure 1 and all Table S1 pages visually inspected. Figure 1C depicts the automictic life cycle with NBRC 1722 and its diploid progenitor NBRC 1721. It is not a measured automixis rate. This fusion-based usage is narrower than Mogie&#39;s scope. Recombination experiments do not establish universal homozygosity or zero recombination. Other figures and detailed supplementary methods remain unread.</p>
+        <p class="meta">Papaioannou et al. (2021), <a href="https://pubmed.ncbi.nlm.nih.gov/34732243/" rel="nofollow noreferrer">PMID:34732243</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8567612/" rel="nofollow noreferrer">PMC8567612</a>, Background clause checked in publisher HTML and Europe PMC full-text XML. Scientific abstract, Results, Discussion and main Methods read; actual Figure 1 and all Table S1 pages visually inspected. Figure 1C depicts the automictic life cycle with NBRC 1722 and its diploid progenitor NBRC 1721. It is not a measured automixis rate. This fusion-based usage is narrower than Mogie&#39;s scope. Recombination experiments do not establish universal homozygosity or zero recombination. Other figures and detailed supplementary methods remain unread.</p>
       </li>
 
     </ul>
@@ -126,7 +127,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -215,7 +216,7 @@
 
           <a href="https://doi.org/10.1186/s13059-021-02521-w" rel="nofollow noreferrer"><code>DOI:10.1186/s13059-021-02521-w</code></a>
 
-          <span class="meta">Qualified NBRC 1721 strain-family example in Figure 1C; not a strain-specific automixis-frequency measurement. Table S1 p.1 and p.3 footnote 2 identify NBRC 1721 as a wild diploid isolate from grape must, Japan, 1964. NBRC 1722 is a single-spore descendant, not that wild parent or an engineered deletion strain. Provenance: https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13059-021-02521-w/MediaObjects/13059_2021_2521_MOESM1_ESM.pdf. NCBI taxonomy EFetch on 2026-10-05 confirmed the species name at https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36035; no genome accession is authenticated.</span>
+          <span class="meta">Qualified NBRC 1721 strain-family example in Figure 1C; not a strain-specific automixis-frequency measurement. Table S1 p.1 and p.3 footnote 2 identify NBRC 1721 as a wild diploid isolate from grape must, Japan, 1964. NBRC 1722 is a single-spore descendant, not that wild parent or an engineered deletion strain. Provenance: <a href="https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13059-021-02521-w/MediaObjects/13059_2021_2521_MOESM1_ESM.pdf" rel="nofollow noreferrer">https://media.springernature.com/original/springer-static/esm/art%3A10.1186%2Fs13059-021-02521-w/MediaObjects/13059_2021_2521_MOESM1_ESM.pdf</a>. NCBI taxonomy EFetch on 2026-10-05 confirmed the species name at <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36035" rel="nofollow noreferrer">https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=36035</a>; no genome accession is authenticated.</span>
         </li>
 
       </ul>
@@ -247,7 +248,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Mogie&#39;s broad reproductive class is not exclusively nuclear fusion or exclusively sexual reproduction. The operational autogamy traitmech:000622, cytogamy traitmech:000623 and paedogamy traitmech:000624 fit as narrower same-cell-origin routes; postmeiotic mitosis is allowed. Kaczmarska et al. DOI:10.1080/0269249X.2013.791344 section 5.2 directly names autogamy and paedogamy as automixis in diatoms. This does not make all botanical autogamy equivalent. Cytogamy&#39;s existing 1979 evidence supports same-parent meiotic origin despite cell pairing; cytoplasmic exchange is not nuclear outcrossing. Same-clone mating after different meioses is insufficient. Fungal homothallism, heterothallism and intratetrad mating are not exact synonyms of this broad class. External equivalences and narrower non-fusion microbial exemplars remain unresolved.</p>
+        <p>Mogie&#39;s broad reproductive class is not exclusively nuclear fusion or exclusively sexual reproduction. The operational autogamy traitmech:000622, cytogamy traitmech:000623 and paedogamy traitmech:000624 fit as narrower same-cell-origin routes; postmeiotic mitosis is allowed. Kaczmarska et al. <a href="https://doi.org/10.1080/0269249X.2013.791344" rel="nofollow noreferrer">DOI:10.1080/0269249X.2013.791344</a> section 5.2 directly names autogamy and paedogamy as automixis in diatoms. This does not make all botanical autogamy equivalent. Cytogamy&#39;s existing 1979 evidence supports same-parent meiotic origin despite cell pairing; cytoplasmic exchange is not nuclear outcrossing. Same-clone mating after different meioses is insufficient. Fungal homothallism, heterothallism and intratetrad mating are not exact synonyms of this broad class. External equivalences and narrower non-fusion microbial exemplars remain unresolved.</p>
 
 
 
@@ -341,7 +342,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -370,12 +380,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-05 18:22 UTC

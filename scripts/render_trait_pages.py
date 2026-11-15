@@ -27,13 +27,14 @@ import gzip
 import re
 import shutil
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
 import yaml
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader, pass_context, select_autoescape
+from markupsafe import Markup, escape
 
 from research_trait import is_pipeline_report
 from trait_causal_graph import causal_graphs_for_template
@@ -45,6 +46,7 @@ EMBED_DIR = REPO_ROOT / "data" / "embeddings"
 TEMPLATES_DIR = REPO_ROOT / "src" / "traitmech" / "templates"
 PAGES_DIR = REPO_ROOT / "pages"
 RAW_OWL = REPO_ROOT / "data" / "raw" / "metpo.owl"
+SCHEMA_PATH = REPO_ROOT / "src" / "traitmech" / "schema" / "traitmech.yaml"
 UMAP_JSON = EMBED_DIR / "trait_umap.json"
 GRAPH_JSON = EMBED_DIR / "trait_graph.json"
 CORPUS_MAP_JSON = EMBED_DIR / "corpus_map.json"
@@ -151,21 +153,157 @@ PREFIX_URL = {
     "biolink": "https://w3id.org/biolink/vocab/{local}",
     "Reactome": "https://reactome.org/content/detail/{local}",
     "MetaCyc": "https://metacyc.org/META/NEW-IMAGE?object={local}",
+    "MICRO": "http://purl.obolibrary.org/obo/MICRO_{local}",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#{local}",
 }
+
+# This repository's own namespace. No registry resolves it, so a traitmech:
+# CURIE is linkable only through the record page it names; one with no page is
+# a dangling reference, and a registry fallback would just invent a 404.
+LOCAL_PREFIX = "traitmech"
+CURIE_SHAPE = re.compile(r"[A-Za-z][A-Za-z0-9_.-]*:[^\s<>\"'\\]+")
 
 
 def curie_url(curie: object) -> str | None:
-    """Resolve ontology/database CURIEs to canonical external URLs."""
+    """Resolve ontology/database CURIEs to canonical external URLs.
+
+    Known prefixes use PREFIX_URL. Any other well-formed CURIE falls back to
+    bioregistry.io, which resolves or explains every registered prefix, so a
+    displayed identifier is never a dead end (the fleet's term_links rule).
+    """
     if not isinstance(curie, str) or ":" not in curie:
         return None
     ref = reference_url(curie)
     if ref:
         return ref
-    prefix, local = curie.strip().split(":", 1)
-    tmpl = PREFIX_URL.get(prefix)
-    if not tmpl or not local:
+    value = curie.strip()
+    if not CURIE_SHAPE.fullmatch(value):
         return None
-    return tmpl.format(curie=curie.strip(), local=local.strip())
+    prefix, local = value.split(":", 1)
+    tmpl = PREFIX_URL.get(prefix)
+    if tmpl:
+        return tmpl.format(curie=value, local=local)
+    if prefix == LOCAL_PREFIX:
+        return None
+    return "https://bioregistry.io/" + quote(value, safe=":/")
+
+
+@pass_context
+def term_link(context, curie: object, label: object = None) -> Markup:
+    """Render a displayed CURIE as a readable link.
+
+    A CURIE that names one of this corpus's records links to that record's
+    page, which is where a reader learns what it means. The page's own
+    identifier is the exception: a link back to the same page goes nowhere, so
+    it resolves the way the Identifier card does (METPO to w3id, a local id to
+    its YAML). Everything else goes through curie_url().
+    """
+    if not isinstance(curie, str) or not curie.strip():
+        return Markup("")
+    value = curie.strip()
+    code = Markup("<code>{}</code>").format(value)
+    text = Markup("{} {}").format(label, code) if label else code
+    trait = context.get("trait")
+    own = trait.get("identifier") if isinstance(trait, dict) else None
+    page_path = context.get("page_path") or {}
+    if value != own and value in page_path:
+        return Markup('<a href="{}{}">{}</a>').format(
+            context.get("root") or "", page_path[value], text)
+    if value == own and value.startswith(LOCAL_PREFIX + ":"):
+        url = context.get("yaml_blob_url")
+    else:
+        url = curie_url(value)
+    if url:
+        return Markup('<a href="{}" rel="nofollow noreferrer">{}</a>').format(url, text)
+    return text
+
+
+# Reference tokens inside free text. URLs come first so a DOI or PMCID inside a
+# URL stays part of that URL. Matching runs on the raw string and every piece is
+# escaped on the way out, so record text can never become markup.
+#
+# Research previews are Markdown, so a token also ends at "]": in
+# "[10.1038/x](https://doi.org/10.1038/x)" the parentheses balance, and without
+# the stop the DOI swallowed "](https://...)" into its href (#2022). No DOI or
+# URL in the corpus contains a bracket.
+AUTOLINK_TOKEN = re.compile(
+    r"(?P<url>\b(?i:https?)://[^\s<>\"\\\]]+)"
+    r"|(?P<doi>(?:\b(?i:doi)(?::\s?|=|\s))?(?<![\w./])10\.[0-9]{4,9}/[^\s<>\"\\\]]+)"
+    r"|(?P<pmid>\b(?i:pmid)(?::\s?|\s)(?P<pmid_number>[0-9]{1,9})\b)"
+    r"|(?P<pmcid>\bPMC[0-9]{4,9}\b)"
+)
+CLOSING = {")": "(", "]": "[", "}": "{"}
+# Sentence punctuation, plus the Markdown emphasis and code marks that close a
+# token written as **10.x/y** or `10.x/y`.
+TRAILING = ".,;:!?'\"*`"
+
+
+def _trim_token(token: str) -> str:
+    """Cut a token at a closing parenthesis it never opened, then drop the
+    punctuation, Markdown marks and unbalanced closers that end it.
+
+    "(10.1016/0005-2744(70)90044-4)" keeps the DOI's own parentheses, while in
+    "(https://a.org/x)-(https://b.org/y)" the first ")" closes the sentence's
+    parenthesis, so the token ends there and the second URL is its own (#2033).
+    """
+    depth = 0
+    for index, char in enumerate(token):
+        depth += {"(": 1, ")": -1}.get(char, 0)
+        if depth < 0:
+            token = token[:index]
+            break
+    while token:
+        last = token[-1]
+        if last in TRAILING or (last in CLOSING and token.count(last) > token.count(CLOSING[last])):
+            token = token[:-1]
+            continue
+        break
+    return token
+
+
+def _token_url(kind: str, token: str, match: re.Match[str]) -> str | None:
+    if kind == "url":
+        return reference_url(token)
+    if kind == "doi":
+        return reference_url("DOI:" + token[token.index("10."):])
+    if kind == "pmid":
+        return f"https://pubmed.ncbi.nlm.nih.gov/{match.group('pmid_number')}/"
+    return f"https://pmc.ncbi.nlm.nih.gov/articles/{token}/"
+
+
+def autolink(value: object) -> Markup:
+    """Escape free text and link the PMID, PMCID, DOI and http(s) URL tokens in it.
+
+    Applied wherever record prose can carry a reference -- notes, snippets,
+    rationale, change summaries, graph descriptions -- so a citation is
+    followable wherever it appears, not only in the structured ``reference``
+    slots the citation() macro handles. Surrounding text, including directive
+    debris such as ``:ref{doi=...}``, is kept verbatim; only the token itself
+    becomes the anchor, and only after reference_url() accepts its target.
+    """
+    if value is None:
+        return Markup("")
+    if isinstance(value, Markup):
+        return value
+    text = str(value)
+    out: list[str] = []
+    position = scan = 0
+    while match := AUTOLINK_TOKEN.search(text, scan):
+        kind = match.lastgroup if match.lastgroup != "pmid_number" else "pmid"
+        token = match.group(0)
+        if kind in {"url", "doi"}:
+            token = _trim_token(token)
+        url = _token_url(kind, token, match) if token else None
+        if not url:
+            scan = match.end()
+            continue
+        out.append(escape(text[position:match.start()]))
+        out.append(Markup('<a href="{}" rel="nofollow noreferrer">{}</a>').format(url, token))
+        # Resume after the token, not the match: what trimming cut off may hold
+        # the next citation, as in "(https://a.org/x)-(https://b.org/y)".
+        position = scan = match.start() + len(token)
+    out.append(escape(text[position:]))
+    return Markup("").join(out)
 
 
 def template_environment() -> Environment:
@@ -175,6 +313,8 @@ def template_environment() -> Environment:
     )
     env.filters["reference_url"] = reference_url
     env.filters["curie_url"] = curie_url
+    env.filters["term_link"] = term_link
+    env.filters["autolink"] = autolink
     return env
 
 
@@ -448,6 +588,99 @@ def research_answer(text: str) -> list[str]:
     return lines
 
 
+def schema_reference(schema_path: Path = SCHEMA_PATH) -> dict:
+    """Readable documentation of the record schema, read from the schema itself.
+
+    docs/SCHEMA.md is a hand-written quick reference that has already fallen
+    behind the schema it describes, so the site documents what LinkML resolves
+    instead: every class with its induced slots (imports and slot_usage
+    applied), and every enum with its permissible values. The output follows
+    the schema's own declaration order and carries no clock, so an unchanged
+    schema renders byte-identically under the pages/ staleness gate.
+    """
+    from linkml_runtime.utils.schemaview import SchemaView
+
+    view = SchemaView(str(schema_path))
+    view.imports_closure()
+    module_file = {}
+    for name, schema in view.schema_map.items():
+        source = schema_path.parent / f"{name}.yaml"
+        if source.exists():
+            module_file[schema.id] = source.relative_to(REPO_ROOT).as_posix()
+    classes = view.all_classes()
+    enums = view.all_enums()
+    local = list(view.all_classes(imports=False))
+    ordered = local + [name for name in classes if name not in local]
+
+    def range_kind(name: str | None) -> str:
+        if name in classes:
+            return "class"
+        if name in enums:
+            return "enum"
+        return "type"
+
+    def slot_row(slot) -> dict:
+        names = [alt.range for alt in (slot.any_of or slot.exactly_one_of or []) if alt.range]
+        ranges = names or [slot.range or view.schema.default_range or "string"]
+        return {
+            "name": slot.name,
+            "ranges": [{"name": name, "kind": range_kind(name)} for name in ranges],
+            "required": bool(slot.required or slot.identifier),
+            "multivalued": bool(slot.multivalued),
+            "identifier": bool(slot.identifier),
+            "pattern": slot.pattern or "",
+            "description": slot.description or "",
+        }
+
+    def source_of(element) -> str:
+        return module_file.get(element.from_schema, "")
+
+    return {
+        "title": view.schema.title or view.schema.name,
+        "description": view.schema.description or "",
+        "license": view.schema.license or "",
+        "source": schema_path.relative_to(REPO_ROOT).as_posix(),
+        "modules": sorted(set(module_file.values())),
+        "classes": [{
+            "name": name,
+            "description": classes[name].description or "",
+            "is_a": classes[name].is_a or "",
+            "source": source_of(classes[name]),
+            "slots": [slot_row(slot) for slot in view.class_induced_slots(name)],
+        } for name in ordered],
+        "enums": [{
+            "name": name,
+            "description": enum.description or "",
+            "source": source_of(enum),
+            "permissible": [{"text": text, "description": value.description or "",
+                        "meaning": value.meaning or ""}
+                       for text, value in (enum.permissible_values or {}).items()],
+        } for name, enum in enums.items()],
+    }
+
+
+def mapping_statuses(schema: dict) -> list[dict]:
+    """MappingStatusEnum's values with their descriptions, as the schema states them.
+
+    Pages quote these rather than paraphrase them, so a page cannot claim more
+    about a status (who reviewed a record, and how) than the schema does.
+    """
+    return next(enum["permissible"] for enum in schema["enums"]
+                if enum["name"] == "MappingStatusEnum")
+
+
+# GitHub Pages answers a missing URL at any depth with the publishing root's
+# 404.html, served at the address the reader asked for. Relative links would
+# resolve against that missing path, so the page uses site-root-absolute ones.
+SITE_ROOT = "/TraitMech/"
+
+
+def render_not_found(env: Environment) -> str:
+    """The themed not-found page, independent of corpus state."""
+    return env.get_template("404.html").render(
+        title="Page not found", root=SITE_ROOT + "pages/")
+
+
 def render_pages(args: argparse.Namespace) -> int:
     # Output root is a parameter, not the module constant, so the staleness gate
     # can render into a temp dir and diff (#230). Checking must never dirty the
@@ -465,6 +698,9 @@ def render_pages(args: argparse.Namespace) -> int:
     # One value for every page in the run, derived from the data (#228).
     corpus_stamp = corpus_timestamp(traits)
     record_sessions = load_record_sessions()
+    schema = schema_reference()
+    statuses = mapping_statuses(schema)
+    status_meanings = {value["text"]: value["description"] for value in statuses}
 
     if args.dry_run:
         print(f"[dry-run] {len(traits)} traits; {sum(1 for v in match_table.values() if v['n_kgm_nodes'] > 0)} matched")
@@ -569,6 +805,8 @@ def render_pages(args: argparse.Namespace) -> int:
             node_dim_preview=node_dim_preview,
             parent_pages=parent_pages,
             parent_labels=parent_labels,
+            page_path=page_path,
+            status_meanings=status_meanings,
             children=children,
             nearest_neighbors=nn_rows,
             research_md=research_md,
@@ -726,6 +964,8 @@ def render_pages(args: argparse.Namespace) -> int:
         embedding_per_category=dict(embedding_per_category),
         metpo_version=metpo_version,
         generated_at=corpus_stamp,
+        statuses=statuses,
+        status_counts=Counter(doc.get("mapping_status") for _path, doc in traits),
     )
     write_html(pages_dir / "index.html", landing)
 
@@ -744,6 +984,26 @@ def render_pages(args: argparse.Namespace) -> int:
     )
     write_html(pages_dir / "browse.html", browse)
 
+    # Readable schema documentation, generated from the LinkML schema.
+    schema_html = env.get_template("schema.html").render(
+        title="LinkML schema",
+        root="",
+        schema=schema,
+        gh_blob_base=GH_BLOB_BASE,
+        metpo_version=metpo_version,
+        generated_at=corpus_stamp,
+        total_traits=len(traits),
+        embedding_coverage_pct=_coverage_pct(match_table, len(traits)),
+    )
+    write_html(pages_dir / "schema.html", schema_html)
+
+    # The site's not-found page belongs at the publishing root, which for this
+    # branch-built site is the repository root, not pages/. A render into
+    # another --out root (the staleness gate's temp dir) leaves it alone;
+    # tests/test_unified_site_features.py checks the committed copy instead.
+    if pages_dir.resolve() == PAGES_DIR.resolve():
+        write_html(REPO_ROOT / "404.html", render_not_found(env))
+
     # Write bulk corpus JSON export for downstream consumers.
     import json as _json
     traits_json_dst = pages_dir / "data" / "traits.json"
@@ -756,6 +1016,9 @@ def render_pages(args: argparse.Namespace) -> int:
     print(f"Wrote {len(category_lists)} category index pages")
     print("Wrote pages/index.html")
     print("Wrote pages/browse.html")
+    print("Wrote pages/schema.html")
+    if pages_dir.resolve() == PAGES_DIR.resolve():
+        print("Wrote 404.html")
     print(f"Coverage: {embedded_count}/{len(traits)} ({_coverage_pct(match_table, len(traits))}%)")
     return 0
 

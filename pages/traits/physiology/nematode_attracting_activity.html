@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.7554/eLife.20023" rel="nofollow noreferrer"><code>DOI:10.7554/eLife.20023</code></a>
         <blockquote>C. elegans and other nematodes were attracted to volatile compounds produced by A. oligospora.</blockquote>
-        <p class="meta">Hsueh et al. 2017, PMID:28098555, scientific abstract; native VERIFIED and direct original XML match, not an editorial digest. The producer is Arthrobotrys oligospora CBS 115.81. The 2 h assay physically separates fungal material from nematodes and compares fungal volatiles with medium controls. Actual Figure 1B/D inspected: adult responses are stronger than L1/dauer responses, and not every tested nematode species is attracted. Figure 1D, not the capture image 1E, supplies the multispecies behavioral comparison. Sodium azide retains arrivals; it is not microbial killing evidence. No universal host range, evolutionary adaptation or exact pheromone mimicry is inferred.</p>
+        <p class="meta">Hsueh et al. 2017, <a href="https://pubmed.ncbi.nlm.nih.gov/28098555/" rel="nofollow noreferrer">PMID:28098555</a>, scientific abstract; native VERIFIED and direct original XML match, not an editorial digest. The producer is Arthrobotrys oligospora CBS 115.81. The 2 h assay physically separates fungal material from nematodes and compares fungal volatiles with medium controls. Actual Figure 1B/D inspected: adult responses are stronger than L1/dauer responses, and not every tested nematode species is attracted. Figure 1D, not the capture image 1E, supplies the multispecies behavioral comparison. Sodium azide retains arrivals; it is not microbial killing evidence. No universal host range, evolutionary adaptation or exact pheromone mimicry is inferred.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1038/ismej.2015.134" rel="nofollow noreferrer"><code>DOI:10.1038/ismej.2015.134</code></a>
         <blockquote>We showed that C. elegans is attracted to L. paracasei grown on citrate or yuzu media.</blockquote>
-        <p class="meta">Choi et al. 2016, online 2015, PMID:26241504, Discussion opening paragraph; native NOT_IN_ABSTRACT and direct publisher HTML match. Lactobacillus paracasei YSM0385-bearing plugs on the lid are compared with matched bacteria-free medium in a 1 h adult C. elegans N2 assay. Citrate medium includes glucose plus citrate. Actual Figures 1-4 and HTML Table 1 inspected; the table&#39;s wild co-occurrence observations alone do not establish attraction. Sodium azide retains arrivals, not bacterial toxicity. Wild isolate Y091 is only Lactobacillus sp., not an inferred L. paracasei assignment. Field recruitment, microbial benefit and nematode fitness benefit are not adopted.</p>
+        <p class="meta">Choi et al. 2016, online 2015, <a href="https://pubmed.ncbi.nlm.nih.gov/26241504/" rel="nofollow noreferrer">PMID:26241504</a>, Discussion opening paragraph; native NOT_IN_ABSTRACT and direct publisher HTML match. Lactobacillus paracasei YSM0385-bearing plugs on the lid are compared with matched bacteria-free medium in a 1 h adult C. elegans N2 assay. Citrate medium includes glucose plus citrate. Actual Figures 1-4 and HTML Table 1 inspected; the table&#39;s wild co-occurrence observations alone do not establish attraction. Sodium azide retains arrivals, not bacterial toxicity. Wild isolate Y091 is only Lactobacillus sp., not an inferred L. paracasei assignment. Field recruitment, microbial benefit and nematode fitness benefit are not adopted.</p>
       </li>
 
     </ul>
@@ -113,7 +114,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -303,7 +304,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -332,12 +342,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-13 23:04 UTC

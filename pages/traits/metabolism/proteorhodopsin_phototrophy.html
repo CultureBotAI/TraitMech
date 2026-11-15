@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -99,7 +100,7 @@
             <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR017402/" rel="nofollow noreferrer"><code>InterPro:IPR017402</code></a>
             <span class="edge-predicate">confers</span>
             <strong>proteorhodopsin phototrophy</strong>
-            <code>traitmech:000036</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/proteorhodopsin_phototrophy.yaml" rel="nofollow noreferrer"><code>traitmech:000036</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>The retinal-binding pump realizes proteorhodopsin phototrophy.</p>
             <ul>
@@ -115,7 +116,7 @@
 
           <li id="pathograph-1-edge-2">
             <strong>proteorhodopsin phototrophy</strong>
-            <code>traitmech:000036</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/proteorhodopsin_phototrophy.yaml" rel="nofollow noreferrer"><code>traitmech:000036</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>proton motive force</strong>
             <a href="https://w3id.org/metpo/1007500" rel="nofollow noreferrer"><code>METPO:1007500</code></a>
@@ -172,7 +173,7 @@
 
           <li id="pathograph-1-edge-5">
             <strong>proteorhodopsin phototrophy</strong>
-            <code>traitmech:000036</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/metabolism/proteorhodopsin_phototrophy.yaml" rel="nofollow noreferrer"><code>traitmech:000036</code></a>
             <span class="edge-predicate">does not produce</span>
             <strong>NAD(P)H</strong>
             <a href="https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:13392" rel="nofollow noreferrer"><code>CHEBI:13392</code></a>
@@ -250,8 +251,8 @@
                 </td>
                 <td>
 
-                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=133804" rel="nofollow noreferrer">gamma proteobacterium EBAC31A08</a>
-                  <br><code>NCBITaxon:133804</code>
+                  <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=133804" rel="nofollow noreferrer">gamma proteobacterium EBAC31A08
+                  <br><code>NCBITaxon:133804</code></a>
                 </td>
                 <td>
                   <code>REVIEWED</code><br>
@@ -317,7 +318,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>rhodopsin-based phototrophy <span class="meta">RELATED_SYNONYM · DOI:10.1038/35081051</span></li>
+        <li>rhodopsin-based phototrophy <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1038/35081051" rel="nofollow noreferrer"><code>DOI:10.1038/35081051</code></a></span></li>
 
       </ul>
     </div>
@@ -333,7 +334,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000060</code> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
+        <li><a href="../../traits/metabolism/metabolism.html">metabolism <code>METPO:1000060</code></a> <span class="dim-preview">[-1.052, -1.766, -1.194, +0.291, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -440,12 +441,12 @@ The minimum mechanistic phenotype should require evidence for functional light-d
 
 | Subject | Predicate | Object | Confidence | Key evidence |
 |---|---|---|---|---|
-| light | activates | retinal-bound proteorhodopsin | High | PR is a &#34;light-driven proton pump&#34; whose mechanism depends on retinal/photoisomerization; foundational identification in marine bacteria and later mechanistic summaries support light activation (DOI:10.1126/science.289.5486.1902; DOI:10.1038/35081051; DOI:10.25959/23241740) (feng2023isproteorhodopsina pages 17-23, feng2023isproteorhodopsina pages 28-34) |
-| retinal-bound proteorhodopsin | exports | protons (H+) across the membrane | High | Direct functional evidence from illuminated cells and heterologous expression shows outward proton pumping / external pH change; recent work summarizes PR as bacterial proton pumps (DOI:10.1128/AEM.02425-09; DOI:10.25959/23241740; DOI:10.1126/sciadv.adu5303) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 89-95, bukhdruker2025proteorhodopsininsightsinto pages 18-19) |
-| proton export by proteorhodopsin | generates | proton motive force | High | Multiple sources explicitly state PR translocates protons to create membrane potential/PMF; direct in engineered Shewanella, established across PR literature (DOI:10.1128/AEM.02425-09; DOI:10.25959/23241740) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 28-34, feng2023isproteorhodopsina pages 17-23) |
-| proton motive force | drives | F-type ATP synthase | Medium-High | Established bioenergetic coupling rather than directly reconstituted in every PR study: sources state PR-generated PMF drives ATP synthesis via F0F1-ATPase / proton-translocating ATPase (DOI:10.25959/23241740; DOI:10.1128/AEM.02425-09) (feng2023isproteorhodopsina pages 28-34, feng2023isproteorhodopsina pages 17-23, feng2023isproteorhodopsina pages 34-38, johnson2010enhancementofsurvival pages 1-2) |
-| F-type ATP synthase | produces | ATP | High | Established ATP synthase function; PR studies cite ATP increases or ATP synthesis supported by PR-generated PMF in heterologous/native systems (DOI:10.1128/AEM.02425-09; DOI:10.25959/23241740) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 28-34) |
-| beta-carotene cleavage / retinal supply | enables | functional proteorhodopsin | High | Genome and biochemical evidence link PR function to retinal availability: PR-containing marine genomes carry retinal biosynthesis genes including blh and carotenoid genes; PR requires retinal/retinol for functionality (DOI:10.1073/pnas.0712027105; DOI:10.1038/ismej.2011.189) (dupont2012genomicinsightsto pages 8-9) |
+| light | activates | retinal-bound proteorhodopsin | High | PR is a &#34;light-driven proton pump&#34; whose mechanism depends on retinal/photoisomerization; foundational identification in marine bacteria and later mechanistic summaries support light activation (<a href="https://doi.org/10.1126/science.289.5486.1902" rel="nofollow noreferrer">DOI:10.1126/science.289.5486.1902</a>; <a href="https://doi.org/10.1038/35081051" rel="nofollow noreferrer">DOI:10.1038/35081051</a>; <a href="https://doi.org/10.25959/23241740" rel="nofollow noreferrer">DOI:10.25959/23241740</a>) (feng2023isproteorhodopsina pages 17-23, feng2023isproteorhodopsina pages 28-34) |
+| retinal-bound proteorhodopsin | exports | protons (H+) across the membrane | High | Direct functional evidence from illuminated cells and heterologous expression shows outward proton pumping / external pH change; recent work summarizes PR as bacterial proton pumps (<a href="https://doi.org/10.1128/AEM.02425-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02425-09</a>; <a href="https://doi.org/10.25959/23241740" rel="nofollow noreferrer">DOI:10.25959/23241740</a>; <a href="https://doi.org/10.1126/sciadv.adu5303" rel="nofollow noreferrer">DOI:10.1126/sciadv.adu5303</a>) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 89-95, bukhdruker2025proteorhodopsininsightsinto pages 18-19) |
+| proton export by proteorhodopsin | generates | proton motive force | High | Multiple sources explicitly state PR translocates protons to create membrane potential/PMF; direct in engineered Shewanella, established across PR literature (<a href="https://doi.org/10.1128/AEM.02425-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02425-09</a>; <a href="https://doi.org/10.25959/23241740" rel="nofollow noreferrer">DOI:10.25959/23241740</a>) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 28-34, feng2023isproteorhodopsina pages 17-23) |
+| proton motive force | drives | F-type ATP synthase | Medium-High | Established bioenergetic coupling rather than directly reconstituted in every PR study: sources state PR-generated PMF drives ATP synthesis via F0F1-ATPase / proton-translocating ATPase (<a href="https://doi.org/10.25959/23241740" rel="nofollow noreferrer">DOI:10.25959/23241740</a>; <a href="https://doi.org/10.1128/AEM.02425-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02425-09</a>) (feng2023isproteorhodopsina pages 28-34, feng2023isproteorhodopsina pages 17-23, feng2023isproteorhodopsina pages 34-38, johnson2010enhancementofsurvival pages 1-2) |
+| F-type ATP synthase | produces | ATP | High | Established ATP synthase function; PR studies cite ATP increases or ATP synthesis supported by PR-generated PMF in heterologous/native systems (<a href="https://doi.org/10.1128/AEM.02425-09" rel="nofollow noreferrer">DOI:10.1128/AEM.02425-09</a>; <a href="https://doi.org/10.25959/23241740" rel="nofollow noreferrer">DOI:10.25959/23241740</a>) (johnson2010enhancementofsurvival pages 1-2, feng2023isproteorhodopsina pages 28-34) |
+| beta-carotene cleavage / retinal supply | enables | functional proteorhodopsin | High | Genome and biochemical evidence link PR function to retinal availability: PR-containing marine genomes carry retinal biosynthesis genes including blh and carotenoid genes; PR requires retinal/retinol for functionality (<a href="https://doi.org/10.1073/pnas.0712027105" rel="nofollow noreferrer">DOI:10.1073/pnas.0712027105</a>; <a href="https://doi.org/10.1038/ismej.2011.189" rel="nofollow noreferrer">DOI:10.1038/ismej.2011.189</a>) (dupont2012genomicinsightsto pages 8-9) |
 
 
 *Table: Compact curation table of the strongest mechanistic edges for proteorhodopsin phototrophy, from light activation and proton export to PMF-coupled ATP production, plus retinal supply. It distinguishes directly shown PR steps from the broader established ATP synthase coupling used in TraitMech curation.*
@@ -603,7 +604,7 @@ Polaribacter sp. MED152 contains PR together with carotenoid/retinal synthesis g
         <li>
           <time>2026-08-30T19:21:37Z</time> ·
           <strong>REVIEW_EVIDENCE_REFERENCE_CHURN</strong> · codex
-          <p class="changes">Offline review for issue 520 retained 4 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: DOI:10.1007/s12275-024-00125-0 -&gt; DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.1038/35081051 -&gt; DOI:10.1073/pnas.0611035104 (1 edge); DOI:10.34133/2022/9782712 -&gt; DOI:10.1128/MMBR.69.1.51-78.2005 (1 edge); DOI:10.4014/jmb.2410.10034 -&gt; DOI:10.1073/pnas.0611035104 (1 edge).</p>
+          <p class="changes">Offline review for issue 520 retained 4 evidence-reference replacement(s) that PR 511 made on surviving causal edges outside its stated protein-taxon scope. The pre-tranche evidence entries had references but no snippets; the retained entries supply edge-specific snippets and explanatory notes. Reverting would discard that claim-level provenance, so the scope defect is resolved by documenting the decision instead. This audit changed no causal claim or evidence field. Reviewed replacements: <a href="https://doi.org/10.1007/s12275-024-00125-0" rel="nofollow noreferrer">DOI:10.1007/s12275-024-00125-0</a> -&gt; <a href="https://doi.org/10.1073/pnas.0611035104" rel="nofollow noreferrer">DOI:10.1073/pnas.0611035104</a> (1 edge); <a href="https://doi.org/10.1038/35081051" rel="nofollow noreferrer">DOI:10.1038/35081051</a> -&gt; <a href="https://doi.org/10.1073/pnas.0611035104" rel="nofollow noreferrer">DOI:10.1073/pnas.0611035104</a> (1 edge); <a href="https://doi.org/10.34133/2022/9782712" rel="nofollow noreferrer">DOI:10.34133/2022/9782712</a> -&gt; <a href="https://doi.org/10.1128/MMBR.69.1.51-78.2005" rel="nofollow noreferrer">DOI:10.1128/MMBR.69.1.51-78.2005</a> (1 edge); <a href="https://doi.org/10.4014/jmb.2410.10034" rel="nofollow noreferrer">DOI:10.4014/jmb.2410.10034</a> -&gt; <a href="https://doi.org/10.1073/pnas.0611035104" rel="nofollow noreferrer">DOI:10.1073/pnas.0611035104</a> (1 edge).</p>
         </li>
 
         <li>
@@ -615,7 +616,7 @@ Polaribacter sp. MED152 contains PR together with carotenoid/retinal synthesis g
         <li>
           <time>2026-10-24T02:45:00Z</time> ·
           <strong>ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE</strong> · claude
-          <p class="changes">Added verified verbatim snippet from DOI:10.1126/science.289.5486.1902 (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-004 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
+          <p class="changes">Added verified verbatim snippet from <a href="https://doi.org/10.1126/science.289.5486.1902" rel="nofollow noreferrer">DOI:10.1126/science.289.5486.1902</a> (already present on causal_graphs[0].edges[0].evidence[0]) to record-level evidence[0] to match definition_source (Cycle 3 Stage 5 remediation of F-C3S4-DEF-SRC-004 in group G-C3S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).</p>
         </li>
 
       </ol>
@@ -648,7 +649,16 @@ Polaribacter sp. MED152 contains PR together with carotenoid/retinal synthesis g
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1012,12 +1022,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-24 02:45 UTC

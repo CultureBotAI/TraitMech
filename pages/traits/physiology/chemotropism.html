@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.1371/journal.pbio.3002726" rel="nofollow noreferrer"><code>DOI:10.1371/journal.pbio.3002726</code></a>
         <blockquote>Notably, many hyphae changed direction near the boundary, opting to remain in the pH 6.5 layer (Fig 3B).</blockquote>
-        <p class="meta">Results, Chemotropism to low pH; exact span in Europe PMC full text PMC11288418 (PMID:39078817), published 2024-07-30. The compared layers are pH 6.5 and 8. Figure 3 was visually inspected: tip trajectories support directional growth, not only greater biomass. Main Results and the primary abstract describe lower-pH preference in these comparisons; the separate summary abstract&#39;s acidic-pH avoidance wording conflicts with them. Growth inhibition at pH 3 and carbon-source growth differences confound those comparisons. The nitrogen Results separately report negative chemotropism. S1 Table (10.1371/journal.pbio.3002726.s002), inspected as PDF text and image, lists engineered backgrounds including TH122; no natural canonical strain is inferred. Other supplements and movies were not inspected.</p>
+        <p class="meta">Results, Chemotropism to low pH; exact span in Europe PMC full text <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11288418/" rel="nofollow noreferrer">PMC11288418</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/39078817/" rel="nofollow noreferrer">PMID:39078817</a>), published 2024-07-30. The compared layers are pH 6.5 and 8. Figure 3 was visually inspected: tip trajectories support directional growth, not only greater biomass. Main Results and the primary abstract describe lower-pH preference in these comparisons; the separate summary abstract&#39;s acidic-pH avoidance wording conflicts with them. Growth inhibition at pH 3 and carbon-source growth differences confound those comparisons. The nitrogen Results separately report negative chemotropism. S1 Table (<a href="https://doi.org/10.1371/journal.pbio.3002726.s002" rel="nofollow noreferrer">10.1371/journal.pbio.3002726.s002</a>), inspected as PDF text and image, lists engineered backgrounds including TH122; no natural canonical strain is inferred. Other supplements and movies were not inspected.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1038/s41598-020-67597-z" rel="nofollow noreferrer"><code>DOI:10.1038/s41598-020-67597-z</code></a>
         <blockquote>They respond to changes in their environment by directing hyphal growth towards or away from a range of chemical stimuli.</blockquote>
-        <p class="meta">Introduction, first paragraph; They refers to filamentous fungi. Exact span in Europe PMC full text PMC7329813 (PMID:32612109). This supports the polarity-neutral growth definition. The first Results subsection reports directional growth of Fusarium graminearum towards methionine, while rapid growth with other tested nitrogen compounds was not significantly directional. Table 1 identifies GZ-3639 as wild type, but natural provenance and an exact NCBI identity were not independently verified. Figures and supplements were not visually inspected. The paper&#39;s receptor and infection findings are not transferred into a universal chemotropism mechanism or canonical example.</p>
+        <p class="meta">Introduction, first paragraph; They refers to filamentous fungi. Exact span in Europe PMC full text <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7329813/" rel="nofollow noreferrer">PMC7329813</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/32612109/" rel="nofollow noreferrer">PMID:32612109</a>). This supports the polarity-neutral growth definition. The first Results subsection reports directional growth of Fusarium graminearum towards methionine, while rapid growth with other tested nitrogen compounds was not significantly directional. Table 1 identifies GZ-3639 as wild type, but natural provenance and an exact NCBI identity were not independently verified. Figures and supplements were not visually inspected. The paper&#39;s receptor and infection findings are not transferred into a universal chemotropism mechanism or canonical example.</p>
       </li>
 
     </ul>
@@ -124,7 +125,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -288,7 +289,7 @@
         <li><time>2026-10-04T13:44:35Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add evidence-backed chemotropism trait
-            <p>Added traitmech:000597 as PROPOSED PHYSIOLOGY with DOI:10.1371/journal.pbio.3002726 and DOI:10.1038/s41598-020-67597-z, full-text snippets, and METPO v474 reservation METPO:1055100. Ignored-and-hidden searches and structured OWL review distinguish chemical-directed polarized growth from chemotaxis and other tropisms. Inspected Aspergillus Figure 3 and S1 strain table; retained contradictory summary wording and growth-rate confounds, deferring natural canonical taxa and protein-resolved mechanisms. Raw source matching caught a missing figure pointer in the uncommitted draft quote; the guarded writer restores it and preserves both curation events. Updated add-trait guidance on directional-growth evidence and conflicting summaries.</p></li></ul>
+            <p>Added traitmech:000597 as PROPOSED PHYSIOLOGY with <a href="https://doi.org/10.1371/journal.pbio.3002726" rel="nofollow noreferrer">DOI:10.1371/journal.pbio.3002726</a> and <a href="https://doi.org/10.1038/s41598-020-67597-z" rel="nofollow noreferrer">DOI:10.1038/s41598-020-67597-z</a>, full-text snippets, and METPO v474 reservation METPO:1055100. Ignored-and-hidden searches and structured OWL review distinguish chemical-directed polarized growth from chemotaxis and other tropisms. Inspected Aspergillus Figure 3 and S1 strain table; retained contradictory summary wording and growth-rate confounds, deferring natural canonical taxa and protein-resolved mechanisms. Raw source matching caught a missing figure pointer in the uncommitted draft quote; the guarded writer restores it and preserves both curation events. Updated add-trait guidance on directional-growth evidence and conflicting summaries.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/chemotropism/2026-10-04T134435Z-codex-387efd.yaml">Read this curation session</a>
         </li></ul>
 
@@ -320,7 +321,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -349,12 +359,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-04 13:44 UTC

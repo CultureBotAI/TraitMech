@@ -26,7 +26,7 @@
 <details class="data-table-details">
   <summary>View data as table</summary>
   <div class="data-table-actions"><a id="csv-download" hidden download="trait_corpus_map.csv">Download CSV</a></div>
-  <div class="data-table-scroll">
+  <div class="data-table-scroll" role="region" tabindex="0" aria-label="Plotted points as a table">
     <table class="data-table" id="data-table">
       <thead><tr><th>Label</th><th>CURIE</th><th>Category</th><th>Term kind</th><th>PaCMAP x</th><th>PaCMAP y</th></tr></thead>
       <tbody></tbody>
@@ -59,7 +59,9 @@ function loadMap() {
     const margin = { top: 20, right: 20, bottom: 30, left: 30 };
 
     const svg = d3.select("#umap-plot").append("svg")
-      .attr("width", W).attr("height", H);
+      .attr("width", W).attr("height", H)
+      .attr("viewBox", "0 0 " + W + " " + H)
+      .style("width", "100%").style("height", "auto");
     const g = svg.append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
