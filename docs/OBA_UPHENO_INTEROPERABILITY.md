@@ -84,22 +84,32 @@ These citations show exactly the boundaries this assessment is about:
   OBA defines cell length as "the length of a cell", a species-neutral biological
   attribute. OBA can inform the definition, but an equivalence would carry METPO's
   intraspecific-phenotype parent and its planar wording over to OBA. That needs
-  the axiom-level review in pilot step 1 (berkeleybop/metpo#657).
+  the axiom-level review in pilot step 1
+  ([berkeleybop/metpo#657](https://github.com/berkeleybop/metpo/issues/657)).
 - **Normal adaptation versus abnormal phenotype.** In uPheno this is axiomatic, not
-  a matter of reading: all three uPheno classes above carry
-  `has_modifier PATO:0000460` (abnormal). The uPheno paper states that every
-  phenotype term represents a deviation from a reference phenotype. Oxygen
-  preference is a normal adaptation (aerobe, anaerobe, microaerophile), so citing
-  an abnormal "changed response" phenotype is the conflation the table below warns
-  against, already present in METPO. For non-motile and non-spore-forming
-  *species* there is no wild-type reference to deviate from. For a non-motile
-  *mutant strain* there is, and METPO 1000703 can describe either case. Two of the
-  co-cited OMP classes, `OMP:0000133` (absence of motility) and `OMP:0000018`
-  (absence of endospore formation), model capability absence, which fits
-  species-level traits better. The other co-cited OMP classes are narrower or
-  mismatched. Absence of gliding, swarming or swimming motility does not make an
-  organism non-motile. Absence of an exosporium presupposes an endospore. Absence
-  of asexual or sexual sporulation has the scope problem described below.
+  a matter of reading: in all three uPheno classes above, the quality in the
+  equivalence axiom carries `has_modifier PATO:0000460` (abnormal). The uPheno
+  paper states that every phenotype term represents a deviation from a reference
+  phenotype. Oxygen preference is a normal adaptation (aerobe, anaerobe,
+  microaerophile), so citing an abnormal "changed response" phenotype is the
+  conflation the table below warns against, already present in METPO. For
+  non-motile and non-spore-forming *species* there is no wild-type reference to
+  deviate from. For a non-motile *mutant strain* there is, and METPO 1000703 can
+  describe either case. Two of the co-cited OMP classes, `OMP:0000133` (absence of
+  motility) and `OMP:0000018` (absence of endospore formation), model capability
+  absence, which fits species-level traits better. The other co-cited OMP classes
+  are narrower or mismatched. Absence of gliding, swarming or swimming motility
+  does not make an organism non-motile. Absence of an exosporium presupposes an
+  endospore. Absence of asexual sporulation (`OMP:0007236`) has the scope problem
+  described below. Absence of sexual sporulation (`OMP:0007434`) has the opposite
+  problem: prokaryotes have no sexual sporulation, so endospore formers satisfy it.
+  OMP's asserted hierarchy needs a caveat too. It places absence of gliding,
+  swarming, swimming and twitching motility (`OMP:0007488`–`OMP:0007491`) under
+  `OMP:0000133`, so OMP's own logic does entail absence of motility, contrary to
+  the point above. `OMP:0000133` and `OMP:0000018` also have mutant-relative
+  children (`OMP:0007000` abolished motility, `OMP:0006110` abolished endospore
+  formation). Their definitions fit species-level traits; their hierarchy needs
+  checking before adoption.
 - **Scope.** METPO 1000872 concerns endospores, while `UPHENO:0083394` covers all
   sporulation (GO:0043934). An exospore-forming organism such as *Streptomyces*
   is non-spore-forming in METPO's sense but not "absent sporulation".
