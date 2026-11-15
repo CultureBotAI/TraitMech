@@ -15,8 +15,14 @@ synonyms:
   source: DOI:10.1038/ismej.2017.16
 evidence:
 - reference: DOI:10.1128/MMBR.67.2.238-276.2003
-  notes: Canchaya et al. review prophage genomics, showing most sequenced bacterial
-    genomes carry prophage sequences.
+  snippet: The majority of the bacterial genome sequences deposited in the National
+    Center for Biotechnology Information database contain prophage sequences. Analysis
+    of the prophages suggested that after being integrated into bacterial genomes,
+    they undergo a complex decay process consisting of inactivating point mutations,
+    genome rearrangements, modular exchanges, invasion by further mobile DNA elements,
+    and massive DNA deletion.
+  notes: Canchaya et al. review prophage integration into bacterial genomes and subsequent
+    mutational decay and rearrangement.
 - reference: DOI:10.1038/ismej.2017.16
   notes: Howard-Varona et al. review lysogeny in nature, the maintenance of temperate
     phage genomes within hosts.
@@ -258,4 +264,12 @@ curation_history:
   action: GROUND_CAUSAL_NODE
   changes: Grounded the RecA-LexA SOS-response biological-process node to GO:0009432
     while adding the organism-level traitmech:000207 SOS response record.
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/MMBR.67.2.238-276.2003
+    (Canchaya et al. 2003 Europe PMC abstract, ACT-C11S4-DEF-SRC-009) to record-level
+    evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-009
+    in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

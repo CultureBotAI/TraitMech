@@ -26,15 +26,17 @@ from curate_stage5_review_findings import (  # noqa: E402
     CYCLE8_TIMESTAMP,
     CYCLE9_TIMESTAMP,
     CYCLE10_TIMESTAMP,
+    CYCLE11_TIMESTAMP,
     REMEDIATION_SPECS,
     TIMESTAMP,
     process_all,
+    prune_evidence_snippet_baseline,
 )
 from traitmech.validation.write_validated import validate_trait  # noqa: E402
 
 
 def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
-    assert len(REMEDIATION_SPECS) == 115
+    assert len(REMEDIATION_SPECS) == 127
     assert "data/traits/physiology/spore_germination.yaml" not in REMEDIATION_SPECS
     finding_ids = {spec["finding_id"] for spec in REMEDIATION_SPECS.values()}
     assert finding_ids == {
@@ -153,6 +155,18 @@ def test_stage5_scope_excludes_do_not_work_and_matches_counts() -> None:
         "F-C10S4-DEF-SRC-012",
         "F-C10S4-DEF-SRC-013",
         "F-C10S4-DEF-SRC-014",
+        "F-C11S4-DEF-SRC-001",
+        "F-C11S4-DEF-SRC-002",
+        "F-C11S4-DEF-SRC-003",
+        "F-C11S4-DEF-SRC-004",
+        "F-C11S4-DEF-SRC-005",
+        "F-C11S4-DEF-SRC-006",
+        "F-C11S4-DEF-SRC-007",
+        "F-C11S4-DEF-SRC-008",
+        "F-C11S4-DEF-SRC-009",
+        "F-C11S4-DEF-SRC-010",
+        "F-C11S4-DEF-SRC-011",
+        "F-C11S4-DEF-SRC-012",
     }
 
 
@@ -181,12 +195,49 @@ def test_stage5_remediations_committed_and_schema_valid() -> None:
             CYCLE8_TIMESTAMP,
             CYCLE9_TIMESTAMP,
             CYCLE10_TIMESTAMP,
+            CYCLE11_TIMESTAMP,
         }
         assert last_event["changes"] == spec["changes"]
 
 
 def test_process_all_is_idempotent_on_committed_corpus() -> None:
-    assert process_all(apply=False) == (115, 0)
+    assert process_all(apply=False) == (127, 0)
+
+
+def test_cycle11_baseline_prune_is_narrow_and_idempotent(tmp_path: Path) -> None:
+    conf = tmp_path / "conf"
+    conf.mkdir()
+    baseline = conf / "evidence_snippet_baseline.tsv"
+    baseline.write_text(
+        "\n".join(
+            [
+                "file\tlocator\tdefect\tseverity\tdetail",
+                (
+                    "data/traits/genomics/codon_usage_bias.yaml\t"
+                    "evidence[0]\tMISSING_SNIPPET\tWARN\t"
+                    "reference=DOI:10.1038/nrg2899 has no snippet"
+                ),
+                (
+                    "data/traits/genomics/codon_usage_bias.yaml\t"
+                    "codon_bias_translation_efficiency:codon_bias_trait->"
+                    "translation[0]\tMISSING_SNIPPET\tWARN\t"
+                    "reference=DOI:10.1038/nrg2899 has no snippet"
+                ),
+            ]
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    assert prune_evidence_snippet_baseline(repo_root=tmp_path, apply=False) == 1
+    before = baseline.read_text(encoding="utf-8")
+    assert "evidence[0]\tMISSING_SNIPPET" in before
+
+    assert prune_evidence_snippet_baseline(repo_root=tmp_path, apply=True) == 1
+    after = baseline.read_text(encoding="utf-8")
+    assert "evidence[0]\tMISSING_SNIPPET" not in after
+    assert "codon_bias_translation_efficiency" in after
+    assert prune_evidence_snippet_baseline(repo_root=tmp_path, apply=False) == 0
 
 
 def test_zero_unquoted_definition_sources_on_remediated_records() -> None:

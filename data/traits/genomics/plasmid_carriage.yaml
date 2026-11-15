@@ -15,8 +15,11 @@ synonyms:
   source: DOI:10.1128/MMBR.00020-10
 evidence:
 - reference: DOI:10.1128/MMBR.00020-10
-  notes: Smillie et al. review plasmid mobility, classifying conjugative and mobilizable
-    plasmids as key vectors of horizontal gene transfer.
+  snippet: Plasmids are key vectors of horizontal gene transfer and essential genetic
+    engineering tools. They code for genes involved in many aspects of microbial biology,
+    including detoxication, virulence, ecological interactions, and antibiotic resistance.
+  notes: Smillie et al. review plasmids as vectors of horizontal gene transfer that
+    carry ecologically important accessory genes.
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include plasmids among the principal mobile genetic elements.
 canonical_examples:
@@ -249,4 +252,12 @@ curation_history:
     marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system,
     plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins);
     removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).'
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/MMBR.00020-10 (Smillie
+    et al. 2010 Europe PMC abstract, ACT-C11S4-DEF-SRC-007) to record-level evidence[0]
+    to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-007
+    in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

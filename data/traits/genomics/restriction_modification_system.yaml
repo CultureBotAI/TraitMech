@@ -15,8 +15,12 @@ synonyms:
   source: DOI:10.1128/MMBR.00044-12
 evidence:
 - reference: DOI:10.1128/MMBR.00044-12
-  notes: Vasu & Nagaraja review restriction-modification systems and their defense
-    and additional cellular functions.
+  snippet: Restriction-modification (R-M) systems are ubiquitous and are often considered
+    primitive immune systems in bacteria. Their diversity and prevalence across the
+    prokaryotic kingdom are an indication of their success as a defense mechanism
+    against invading genomes.
+  notes: Vasu & Nagaraja review the prevalence, diversity, and defensive role of bacterial
+    restriction-modification systems.
 - reference: DOI:10.3389/fmicb.2015.00528
   notes: Review of restriction-modification systems as engines of genomic diversity.
 canonical_examples:
@@ -254,4 +258,12 @@ curation_history:
   action: REFRESH_UNIPROT_ENTRY_VERSION
   changes: 'Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22:
     UniProtKB:P44413 (124 -> 125 on restriction_endonuclease).'
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1128/MMBR.00044-12 (Vasu &
+    Nagaraja 2013 Europe PMC abstract, ACT-C11S4-DEF-SRC-010) to record-level evidence[0]
+    to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-010
+    in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

@@ -18,8 +18,10 @@ synonyms:
   source: DOI:10.1111/1574-6976.12067
 evidence:
 - reference: DOI:10.1111/1574-6976.12067
-  notes: Siguier, Gourbeyre & Chandler review bacterial insertion sequences and their
-    genomic impact and diversity.
+  snippet: Insertion sequences (ISs), arguably the smallest and most numerous autonomous
+    transposable elements (TEs), are important players in shaping their host genomes.
+  notes: Siguier, Gourbeyre & Chandler review insertion sequences as small autonomous
+    transposable elements that shape prokaryotic genomes.
 - reference: DOI:10.1038/nrmicro1235
   notes: Frost et al. include transposons among the mobile genetic elements driving
     genome evolution.
@@ -189,4 +191,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope te_transposition_rearrangement=NONMECHANISTIC with
     scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1111/1574-6976.12067 (Siguier,
+    Gourbeyre & Chandler 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-012) to record-level
+    evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-012
+    in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

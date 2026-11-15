@@ -1044,7 +1044,6 @@ data/traits/genomics/codon_usage_bias.yaml	codon_bias_translation_efficiency:gen
 data/traits/genomics/codon_usage_bias.yaml	codon_bias_translation_efficiency:mrna_5prime_secondary_structure->translation_initiation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrg2899 has no snippet
 data/traits/genomics/codon_usage_bias.yaml	codon_bias_translation_efficiency:translation_initiation->translation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrg2899 has no snippet
 data/traits/genomics/codon_usage_bias.yaml	codon_bias_translation_efficiency:trna_abundance->codon_bias_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrg2899 has no snippet
-data/traits/genomics/codon_usage_bias.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrg2899 has no snippet
 data/traits/genomics/codon_usage_bias.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev.genet.42.110807.091442 has no snippet
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:cas1_cas2_complex->spacer_acquisition[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5483/bmbrep.2023-0050 has no snippet
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:cas9_effector->crispr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-019-0299-x has no snippet
@@ -1053,7 +1052,6 @@ data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:crispr_trai
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:crrna->crrna_effector_complex[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5483/bmbrep.2023-0050 has no snippet
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:crrna_effector_complex->invading_nucleic_acid[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5483/bmbrep.2023-0050 has no snippet
 data/traits/genomics/crispr_cas_system.yaml	crispr_adaptive_immunity:phage_plasmid_pressure->crispr_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.5483/bmbrep.2023-0050 has no snippet
-data/traits/genomics/crispr_cas_system.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41579-019-0299-x has no snippet
 data/traits/genomics/crispr_cas_system.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/j.molcel.2014.03.011 has no snippet
 data/traits/genomics/gc_content.yaml	evidence[0]	UNSUPPORTIVE_SNIPPET	WARN	10 chars, supports nothing specific: 'GC content'
 data/traits/genomics/gc_content.yaml	gc_content_composition_drivers:*	REUSED_SNIPPET	WARN	5 evidence items share one snippet: 'GC content'
@@ -1090,7 +1088,6 @@ data/traits/genomics/gc_mid2.yaml	gc_mid2_mid_high_gc_bin:gc_mid2_trait->gc_cont
 data/traits/genomics/gc_mid2.yaml	gc_mid2_mid_high_gc_bin:guanine_oxidation->mutation_bias_at[0]	MISSING_SNIPPET	WARN	reference=DOI:10.63635/mrj.v1i4.188 has no snippet
 data/traits/genomics/gc_mid2.yaml	gc_mid2_mid_high_gc_bin:homologous_recombination->moderate_gbgc[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/011023 has no snippet
 data/traits/genomics/gc_mid2.yaml	gc_mid2_mid_high_gc_bin:mutation_bias_at->gc_mid2_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/011023 has no snippet
-data/traits/genomics/gc_skew.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/oxfordjournals.molbev.a025626 has no snippet
 data/traits/genomics/gc_skew.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1016/S0378-1119(99)00297-8 has no snippet
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:cytosine_deamination->gc_skew_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2026.1727296 has no snippet
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:dna_replication->gc_skew_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/oxfordjournals.molbev.a025626 has no snippet
@@ -1100,7 +1097,6 @@ data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:lagging_s
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:strand_specific_repair->gc_skew_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2026.1727296 has no snippet
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:third_codon_mutational_bias->gc_skew_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1007/pl00006428 has no snippet
 data/traits/genomics/gc_skew.yaml	gc_skew_replication_strand_asymmetry:translational_selection->gc_skew_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2026.1727296 has no snippet
-data/traits/genomics/genome_size.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3331 has no snippet
 data/traits/genomics/genome_size.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/ismej.2014.60 has no snippet
 data/traits/genomics/genome_size.yaml	genome_size_population_lifestyle:effective_population_size->reductive_genome_evolution[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro3331 has no snippet
 data/traits/genomics/genome_size.yaml	genome_size_population_lifestyle:gene_loss->genome_size_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-024-50368-z has no snippet
@@ -1126,7 +1122,6 @@ data/traits/genomics/genomic_island.yaml	gi_hgt_accessory_function:horizontal_ge
 data/traits/genomics/genomic_island.yaml	gi_hgt_accessory_function:integrative_conjugative_element->conjugation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad644 has no snippet
 data/traits/genomics/genomic_island.yaml	gi_hgt_accessory_function:integrative_conjugative_element->type_iv_secretion_system[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad644 has no snippet
 data/traits/genomics/genomic_island.yaml	gi_hgt_accessory_function:integrative_mobilizable_element->conjugation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad644 has no snippet
-data/traits/genomics/mobile_genetic_element.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1235 has no snippet
 data/traits/genomics/mobile_genetic_element.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1574-6976.12067 has no snippet
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:antibiotic_selection->amr_cargo[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad644 has no snippet
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:conjugative_dna_transfer->horizontal_gene_transfer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1751-7915.14408 has no snippet
@@ -1141,7 +1136,6 @@ data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:re
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:t4ss->conjugative_dna_transfer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad024 has no snippet
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:transduction->horizontal_gene_transfer[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae489 has no snippet
 data/traits/genomics/mobile_genetic_element.yaml	mge_horizontal_gene_transfer:transposition->genome_plasticity[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1146/annurev-micro-032521-022006 has no snippet
-data/traits/genomics/pangenome_openness.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.0506758102 has no snippet
 data/traits/genomics/pangenome_openness.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2017.40 has no snippet
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:annotation_error->apparent_pangenome_openness[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2022.04.23.489244 has no snippet
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:core_gene_fraction->pangenome_openness_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12050986 has no snippet
@@ -1152,7 +1146,6 @@ data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:plasmid->hor
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:prophage->pangenome_openness_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12050986 has no snippet
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:rare_gene_fraction->pangenome_openness_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms12050986 has no snippet
 data/traits/genomics/pangenome_openness.yaml	pangenome_openness_hgt:sampling_bias->apparent_pangenome_openness[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1101/2022.04.23.489244 has no snippet
-data/traits/genomics/plasmid_carriage.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00020-10 has no snippet
 data/traits/genomics/plasmid_carriage.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1235 has no snippet
 data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:anti_restriction_proteins->restriction_of_plasmid_dna[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae896 has no snippet
 data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:antibiotic_selective_pressure->plasmid_carriage_trait[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1080/22221751.2024.2352432 has no snippet
@@ -1162,7 +1155,6 @@ data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:plasmid_carri
 data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:plasmid_carriage_trait->fitness_cost[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1080/22221751.2024.2352432 has no snippet
 data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:plasmid_methylase->restriction_of_plasmid_dna[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae896 has no snippet
 data/traits/genomics/plasmid_carriage.yaml	plasmid_conjugation_hgt:ta_system->plasmid_vertical_inheritance[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae018 has no snippet
-data/traits/genomics/ploidy.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1159/000368855 has no snippet
 data/traits/genomics/ploidy.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.0707522105 has no snippet
 data/traits/genomics/ploidy.yaml	ploidy_repair_survival:genome_copy_number->dna_phosphate_storage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11092267 has no snippet
 data/traits/genomics/ploidy.yaml	ploidy_repair_survival:genome_copy_number->growth_without_phosphate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3390/microorganisms11092267 has no snippet
@@ -1171,7 +1163,6 @@ data/traits/genomics/ploidy.yaml	ploidy_repair_survival:ploidy_trait->dna_recomb
 data/traits/genomics/ploidy.yaml	ploidy_repair_survival:ploidy_trait->long_term_survival[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1073/pnas.0707522105 has no snippet
 data/traits/genomics/ploidy.yaml	ploidy_repair_survival:ploidy_trait->segregational_drift[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pgen.1010829 has no snippet
 data/traits/genomics/ploidy.yaml	ploidy_repair_survival:segregational_drift->beneficial_allele_loss[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1371/journal.pgen.1010829 has no snippet
-data/traits/genomics/prophage.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.67.2.238-276.2003 has no snippet
 data/traits/genomics/prophage.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/ismej.2017.16 has no snippet
 data/traits/genomics/prophage.yaml	prophage_lysogeny:ci_repressor->lytic_gene_expression[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-023-06376-y has no snippet
 data/traits/genomics/prophage.yaml	prophage_lysogeny:ci_repressor->prophage_induction[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-023-06376-y has no snippet
@@ -1182,7 +1173,6 @@ data/traits/genomics/prophage.yaml	prophage_lysogeny:prophage_trait->host_phenot
 data/traits/genomics/prophage.yaml	prophage_lysogeny:prophage_trait->lysogeny[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.67.2.238-276.2003 has no snippet
 data/traits/genomics/prophage.yaml	prophage_lysogeny:reca_filament->ci_repressor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41586-023-06376-y has no snippet
 data/traits/genomics/prophage.yaml	prophage_lysogeny:reca_filament->lexa_repressor[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/aem.01716-22 has no snippet
-data/traits/genomics/restriction_modification_system.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00044-12 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2015.00528 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:cognate_mtase->host_site_methylation[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad452 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:dna_restriction_modification->foreign_dna[0]	MISSING_SNIPPET	WARN	reference=DOI:10.3389/fmicb.2015.00528 has no snippet
@@ -1192,7 +1182,6 @@ data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defens
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:plasmid_methylase->endonuclease_cleavage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkae896 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:restriction_endonuclease->endonuclease_cleavage[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1093/nar/gkad452 has no snippet
 data/traits/genomics/restriction_modification_system.yaml	rm_self_nonself_defense:rm_trait->dna_restriction_modification[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/MMBR.00044-12 has no snippet
-data/traits/genomics/rrna_operon_copy_number.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.66.4.1328-1333.2000 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->chemotactic_motility[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->genome_size[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
@@ -1200,7 +1189,6 @@ data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->maximal_growth_rate[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nmicrobiol.2016.160 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->ribosome_biogenesis[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.66.4.1328-1333.2000 has no snippet
 data/traits/genomics/rrna_operon_copy_number.yaml	rrn_copy_growth_rate:rrna_copy_trait->rrna_transcription[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1128/AEM.66.4.1328-1333.2000 has no snippet
-data/traits/genomics/transposable_element.yaml	evidence[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1111/1574-6976.12067 has no snippet
 data/traits/genomics/transposable_element.yaml	evidence[1]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1235 has no snippet
 data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:dna_transposition->genome_rearrangement[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/nrmicro1235 has no snippet
 data/traits/genomics/transposable_element.yaml	te_transposition_rearrangement:homologous_recombination_is->genome_rearrangement[0]	MISSING_SNIPPET	WARN	reference=DOI:10.1038/s41467-023-39964-7 has no snippet

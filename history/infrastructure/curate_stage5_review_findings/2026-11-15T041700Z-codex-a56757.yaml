@@ -1,0 +1,40 @@
+history_version: 1
+target:
+  kind: infrastructure
+  path: scripts/curate_stage5_review_findings.py
+  slug: curate_stage5_review_findings
+session:
+  id: 2026-11-15T041700Z-codex-a56757
+  timestamp: '2026-11-15T04:17:00Z'
+  actors:
+  - type: ai_agent
+    name: codex
+    model: gpt-5-codex
+    agent_tool: codex
+links:
+  issues:
+  - https://github.com/CultureBotAI/TraitMech/issues/2002
+  - https://github.com/CultureBotAI/TraitMech/issues/1982
+  - https://github.com/CultureBotAI/TraitMech/issues/1983
+  - https://github.com/CultureBotAI/TraitMech/issues/1984
+  - https://github.com/CultureBotAI/TraitMech/issues/1985
+  - https://github.com/CultureBotAI/TraitMech/issues/364
+events:
+- type: EDIT
+  outcome: changed
+  sections:
+  - evidence
+  - curation_history
+  summary: Resolve all 12 actionable Cycle 11 Stage 4 open findings in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+    and map 5 deferred cohort findings to open GitHub issues
+  details: Executed Stage 5 of run mech-goal-sequence-20261019 cycle 11, consuming Cycle 11
+    Stage 4 review evidence at reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/evidence.yaml
+    sha256 498792fbeb04a862b662df0d62635742a9abf511e8ef7808f3bac9379595393a. Grouped 17 carried-forward
+    findings into 6 cause and ownership groups, reused real GitHub issues 2002 for the resolved
+    group and 1982, 1983, 1984, 1985, and 364 for the 5 deferred source-limited or upstream-blocked
+    cohort groups. Remediated all 12 open findings F-C11S4-DEF-SRC-001 through F-C11S4-DEF-SRC-012
+    via guarded writer scripts/curate_stage5_review_findings.py across the genomics TraitRecord
+    files, removed the 12 resolved evidence[0] MISSING_SNIPPET entries from conf/evidence_snippet_baseline.tsv,
+    regenerated pages, and persisted fresh structured review bundle reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review
+    plus workflow evidence reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/evidence.yaml
+    confirming all 12 actionable findings resolved and 0 remaining open findings.
