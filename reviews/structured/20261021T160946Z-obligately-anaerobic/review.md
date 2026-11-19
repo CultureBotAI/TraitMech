@@ -1,0 +1,1729 @@
+# Whole-record documentary review of obligately anaerobic
+
+- Review: 20261021T160946Z-obligately-anaerobic
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T15:57:33.535153Z
+- Finished UTC: 2026-10-21T16:09:46Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Needs curation: one major concerns imported process regulation between a chemical and a trait. Two minors concern metal-centre/function referent clarity and human-acceptance traceability. Active identity, explicit predecessor links and generic classification remain positive. All 14 nodes and 12 edges have documentary coverage; detailed biological mechanisms remain unassessed.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Fifth record in the ninth path-ordered batch. The entire target was read before the 61-input native capture at 15:57:33–34 UTC. Source and ontology assessment followed capture. Parent, mappings, writers, authorities and two history inputs are context, not additional review targets.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000607 | data/traits/environment/obligately_anaerobic.yaml | maintained | obligately anaerobic |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1000607 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1000607 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1000607 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1000607 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1000607 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1000607 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1000607 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused native validation | passed | True | METPO:1000607 | Direct pass at 15:57:59 UTC on unchanged input; shape validity does not establish external ontology semantics. |
+| Focused strict validation | passed | True | METPO:1000607 | Direct pass at 15:57:59–15:58:00 UTC; no scientific truth or human acceptance implied. |
+| Focused snippet verification | passed | True | METPO:1000607 | Direct pass at 15:58:15–19 UTC: five snippets over two references, four VERIFIED and one NOT_IN_ABSTRACT. Manual title inspection resolves the latter; the sixth URL-book snippet was outside native coverage and remains unknown. |
+| Reused corpus protein/taxon audit | passed | True | METPO:1000607 | Original B4 08:55:04–10 UTC pass: 719 graphs, 129 PASS, 589 NONMECHANISTIC, one protected, no gaps/errors. Reused corpus context, not a new target run. |
+| Reused batch-eight maintained QC | passed | True | METPO:1000607 | Original B8 just qc passed 15:07:12–15:09:30 UTC. B9 byte comparison permits qualified reuse; no new B9 QC execution is claimed. |
+| Protein-instance metadata applicability | not_applicable | False | METPO:1000607 | Three reviewed label-only protein classes and zero instances in a NONMECHANISTIC graph; no token accession is required. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: active METPO identity, aliases and explicit predecessors
+
+identity: supported. Targets: METPO:1000607.
+
+Current 1000607 and both related synonyms are supported. Four deprecated terms explicitly point to it through IAO:0100001; the additive correction supersedes the erroneous original narrative. Identity remains positive.
+
+### Native checklist: retained local definition and parent
+
+identity: supported. Targets: METPO:1000607.
+
+Local oxygen preference wording and parent 1000601 are intentional maintained decisions; imported direct parent 1000603 is a narrower ancestor link. A broader valid parent is not an automatic defect.
+
+### Native checklist: generic oxygen-blocked-growth classification
+
+identity: supported. Targets: METPO:1000607.
+
+The assigned review abstract directly supports the defining blocked-growth classification. Indexed chapter text supplies related generic support; exact book snippet remains unknown. No detailed defense or intervention mechanism is inferred.
+
+### Native checklist: canonical and embedded organism identity/source scope
+
+evidence: unknown. Targets: METPO:1000607.
+
+The canonical citation is the correct C. acetobutylicum ATCC 824 genome paper with solvent-producing context, but exact obligacy/oxygen sensitivity is not established in the acquired abstract. B. fragilis classification is exact in its assigned title; its intervention content is unassessed.
+
+### Native checklist: five works and sixteen placements
+
+evidence: supported. Targets: METPO:1000607.
+
+All assigned identities resolve and all placements are covered. Available indexed status fields contain no correction annotation, within that bounded surface. Full-body failures are retained rather than converted into false source mismatches.
+
+### Native checklist: six formal snippet fields
+
+evidence: unknown. Targets: METPO:1000607.
+
+Five snippets are exact: four in the review abstract and the organism classification in a title. The sixth URL-book snippet remains unverified under challenged full-text access and different indexed wording. No source-only finding is established.
+
+### Native checklist: all fourteen node identities and facets
+
+grounding: concern. Targets: METPO:1000607.
+
+Four chemical identities and the canonical taxon resolve. Node 3 describes material catalytic centres but is typed as a molecular function; this is bounded facet clarity with possible activity shorthand, not a second imported-ontology major. Damage-event versus resulting-lesion wording remains a limitation.
+
+### Native checklist: all twelve formal and free predicate roles
+
+consistency: concern. Targets: METPO:1000607.
+
+Edge 0 uses process regulation between a chemical and a trait. RO2502 has no inspected domain/range or superproperty; seeAlso does not add them. Biolink causes is broad and free predicates receive no invented RO restrictions.
+
+### Native checklist: generic source context versus detailed biology
+
+scope: unknown. Targets: METPO:1000607.
+
+Edge 0 classification and environmental Introduction context for edges 4/5 are positive at that limited tier. Detailed biological claims on 1–3 and 6–11 remain UNASSESSED_SCOPE. No inference validates pathogen oxygen survival, ROS defense, enzyme-inactivation effectiveness or interventions.
+
+### Native checklist: whole target and optional mechanistic detail
+
+completeness: supported. Targets: METPO:1000607.
+
+All 14 nodes, 12 edges, two components, one canonical, two related synonyms and ten events are covered. NONMECHANISTIC scope permits three label-only protein classes and zero instances; no token protein, connector or experimental completion is required.
+
+### Native checklist: canonical-only retained catalog applicability
+
+scope: not_applicable. Targets: METPO:1000607.
+
+No C. acetobutylicum or verified historical synonym matches the complete retained 20-organism, 28-dataset catalog acquired at 07:36:12 UTC. No substituted organism or downstream pathogen gene/module query was made. This is not negative phenotype evidence.
+
+### Native checklist: maintained recurrence and captured history
+
+ownership: supported. Targets: METPO:1000607.
+
+Predicate row 58 can recreate the inhibited-regulation mapping only when the ID is empty; the grounder skips populated IDs. No exact maintained rewrite owner for node 3 was found in the bounded ignored-inclusive search. Two captured histories are infrastructure context; retained hierarchy decisions remain positive maintenance evidence.
+
+### Native checklist: REVIEWED and bounded acceptance traceability
+
+provenance: concern. Targets: METPO:1000607.
+
+Nine explicit AI events plus seed and two AI histories document maintenance. The bounded ignored-inclusive repository search and 67 matching review target arrays do not link human acceptance of this revision. Remote/private decisions remain unknown.
+
+### Native checklist: focused checks and qualified historical reuse
+
+schema: supported. Targets: METPO:1000607.
+
+Focused native, strict and snippet checks passed directly on unchanged inputs. Primary-body HTTP/challenge failures and an auxiliary HTML projection dependency error are separate source-access limitations. Qualified common checks and B8 QC retain original dates, baselines, failures and skips.
+
+## Findings
+
+### regulation-endpoint-roles: Process regulation is assigned between a chemical and a trait
+
+major / open / confirmed; issue key: obligately-anaerobic-regulation-endpoint-roles.
+
+Edge 0 assigns RO:0002212 to molecular oxygen inhibiting the obligately anaerobic trait. RO:0002212 inherits the process domain and range of RO:0002211. Current endpoints explicitly denote a material chemical and a trait, not two process executions. The defining growth-inhibition sentence has positive source support, but it does not change those represented roles. This is formal representation, not a false class definition, native validation failure, reasoner result or request to reconstruct oxygen-response biology.
+
+### metal-centre-function-facet: Metal-centre wording leaves the represented function facet unclear
+
+minor / open / confirmed; issue key: obligately-anaerobic-metal-centre-function-facet.
+
+Node 3 is labelled low-potential metal centres and described as catalytic centres, while MOLECULAR_FUNCTION denotes molecular activity/function. This warrants bounded referent precision. A functional shorthand reading remains possible, the node has no external activity grounding, and inspected RO:0002502 imposes no endpoint restriction. Do not promote this to another major or prescribe a replacement type, biological route or molecular target. The separate severity addendum supersedes the original candidate.
+
+### human-acceptance-link: Local provenance does not link human acceptance of this revision
+
+minor / open / confirmed; issue key: obligately-anaerobic-human-acceptance-link.
+
+REVIEWED accompanies nine explicit AI events plus seed. The own-repository search includes ignored and hidden files, excluding .git/.venv, and covers 198 matching files and 67 parsed review target arrays. Neither two captured AI infrastructure histories nor retained hierarchy dispositions establish human acceptance of this exact scientific snapshot. Remote/private acceptance remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-relation-roles
+
+During separately authorized curation, reconcile edge 0 with its intended represented referents and actual relation meaning.
+
+- Preserve the positive generic classification and explicitly distinguish chemical, trait and process referents; do not supply a repaired pathogen mechanism or new intervention.
+- Review mapping row 58 and the empty-ID-only writer behavior so an authorized fix does not recur.
+- Use guarded curation and append-only history, focused native/strict checks, applicable mapping audit and maintained QC; preserve this review and add a successor if inputs change.
+
+### clarify-node-facet
+
+Clarify whether the existing metal-centre node denotes material sites or a molecular activity, preserving the bounded source scope.
+
+- Use the current label, description and native enum meanings to document the intended facet; no forced replacement type or new biological target is prescribed.
+- Do not infer a RO2502 domain/range from seeAlso or conflate quotation matching with mechanism validation.
+- Apply any authorized wording/type change through the guarded writer with record and repository history, followed by focused native/strict validation.
+
+### link-human-acceptance
+
+Link an existing accountable human decision for this revision if available, or retain the acceptance uncertainty explicitly.
+
+- Preserve ten events and the two contextual AI histories; do not invent signoff or global absence.
+- Any acceptance record should identify this revision and the three findings. Contacting others is outside this review.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-009.x21w9b3v/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-obligately-anaerobic-validate | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-validate.log; Executed 2026-10-21T15:57:59Z through 2026-10-21T15:57:59Z; metadata obligately-anaerobic-validate.json | context_only | Direct pass at 15:57:59 UTC on unchanged input; shape validity does not establish external ontology semantics. |
+| check-obligately-anaerobic-strict | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-strict.log; Executed 2026-10-21T15:57:59Z through 2026-10-21T15:58:00Z; metadata obligately-anaerobic-strict.json | context_only | Direct pass at 15:57:59–15:58:00 UTC; no scientific truth or human acceptance implied. |
+| check-obligately-anaerobic-snippets | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-snippets.log; Executed 2026-10-21T15:58:15Z through 2026-10-21T15:58:19Z; metadata obligately-anaerobic-snippets.json | context_only | Direct pass at 15:58:15–19 UTC: five snippets over two references, four VERIFIED and one NOT_IN_ABSTRACT. Manual title inspection resolves the latter; the sixth URL-book snippet was outside native coverage and remains unknown. |
+| check-corpus-protein-taxa | /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log; Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json | context_only | Original B4 08:55:04–10 UTC pass: 719 graphs, 129 PASS, 589 NONMECHANISTIC, one protected, no gaps/errors. Reused corpus context, not a new target run. |
+| check-batch008-qc | /private/tmp/traitmech-record-sweep-008.o1f1xkbn/batch008-qc.log; Executed 2026-10-21T15:07:12Z through 2026-10-21T15:09:30Z; metadata batch008-qc.json | context_only | Original B8 just qc passed 15:07:12–15:09:30 UTC. B9 byte comparison permits qualified reuse; no new B9 QC execution is claimed. |
+| record | data/traits/environment/obligately_anaerobic.yaml; Entire record: 14 nodes, 12 edges, one canonical and 10 events | partial | Documentary coverage is complete; detailed biological mechanisms remain outside scope. |
+| capture | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic.inspect-command.json; Native inspect 15:57:33.535153–15:57:34.525081 UTC; 61 inputs | supports | Whole-target reading preceded capture and assessment. All input bytes remain unchanged; no supplemental chronology is invented. |
+| checklist | Maintained review policy; Whole-record checklist | supports | Identity, definition, canonical examples, evidence placements, formal graph roles and provenance are assessed separately. |
+| policy | Maintained review policy; Reviewed protein families and NONMECHANISTIC disposition | supports | Three protein aggregates carry reviewed label-only rationales; no token examples or connectors are required. |
+| native-types | Maintained review policy; CausalNodeTypeEnum | supports | MOLECULAR_FUNCTION denotes molecular activity/function; material sites and activities are distinct referents, with possible shorthand explicitly qualified. |
+| human-policy | Maintained review policy; REVIEWED acceptance and provenance | supports | Human scientific acceptance is distinct from seed, AI maintenance and passing validation. |
+| reuse | /private/tmp/traitmech-record-sweep-009.x21w9b3v/common-reuse-b8-qc-supplement-qualified.json; Qualified common-check and B8 QC reuse | supports | Original execution dates, failure attempts, successful retries, baselines and skipped adapters are retained under B9 byte equality. |
+| metpo-primary | /private/tmp/traitmech-record-sweep-009.x21w9b3v/repo/data/raw/metpo.owl; Active 1000607; direct parent 1000603, broader ancestor 1000601; two related synonyms; four explicit IAO:0100001 links | supports | Current active identity is supported. Deprecated METPO:0000055, METPO:000056, METPO:1000207 and METPO:1000354 explicitly point to it. The positive replacement addendum supersedes the erroneous frozen narrative; no link is inferred merely from deprecated status. |
+| retention | Maintained METPO release disposition; active_review rows 115–116; release_delta rows 1283–1284; finalize_metpo_2026_06_12_review.py | supports | Maintained decisions intentionally retain the local definition and valid broader parent. No forced hierarchy migration is warranted. |
+| ro-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db; RO:0002212 subproperty of RO:0002211; process domain/range; sparse RO:0002502 | supports | The actual database establishes the process-regulation roles used for edge 0. Sparse depends-on seeAlso is not a subproperty or inherited endpoint constraint. No reasoner was run. |
+| ro-projection | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/current-ro-projection.json; Current selected direct statements, primary source hash and read interval | supports | Derived projection is separately hashed; its receipt hash is not substituted for the primary database hash. |
+| biolink | /private/tmp/traitmech-record-sweep-009.x21w9b3v/repo/data/raw/biolink-model.yaml; causes → contributes to → related to at instance level → related to | supports | The inspected chain admits named thing endpoints. This does not validate biological causation or import RO constraints into free predicates. |
+| term-chebi15379 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_15379; Official current chemical or taxon identity | supports | Current active identity and represented chemical facet or canonical species only; taxonomy does not establish oxygen sensitivity, and identifier resolution does not validate mechanisms. |
+| term-chebi26523 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_26523; Official current chemical or taxon identity | supports | Current active identity and represented chemical facet or canonical species only; taxonomy does not establish oxygen sensitivity, and identifier resolution does not validate mechanisms. |
+| term-chebi16240 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_16240; Official current chemical or taxon identity | supports | Current active identity and represented chemical facet or canonical species only; taxonomy does not establish oxygen sensitivity, and identifier resolution does not validate mechanisms. |
+| term-chebi29191 | https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_29191; Official current chemical or taxon identity | supports | Current active identity and represented chemical facet or canonical species only; taxonomy does not establish oxygen sensitivity, and identifier resolution does not validate mechanisms. |
+| term-taxon1488 | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&amp;id=1488&amp;retmode=xml; Official current chemical or taxon identity | supports | Current active identity and represented chemical facet or canonical species only; taxonomy does not establish oxygen sensitivity, and identifier resolution does not validate mechanisms. |
+| identity | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/identity-assessment.json; identity-assessment.json | supports | Current identity, retained hierarchy and current chemical/taxon terms; erroneous predecessor sentence is superseded by the separate positive addendum. |
+| node-edges | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/node-edge-ledger.json; node-edge-ledger.json | supports | All 14 nodes and 12 edges, two components, and explicit distinction between formal roles and biological scope. |
+| owners | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/owner-provenance-assessment.json; owner-provenance-assessment.json | supports | 198 ignored-inclusive target matches, 67 parsed review target arrays, two captured AI histories and conditional mapping recurrence. |
+| expression | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/expression-applicability.json; expression-applicability.json | context_only | Canonical-only complete catalog matching and verified historical names; no substitution or downstream mechanism query. |
+| authority-reuse | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/authority-reuse-receipts.json; authority-reuse-receipts.json | supports | Original recursive RO, complete catalog and bounded runner-discovery receipts retain original times; copying is not a new acquisition. |
+| predecessor-addendum | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/identity-replacement-addendum.json; identity-replacement-addendum.json | supports | Four explicit deprecated predecessors correct the written summary without rewriting frozen evidence. |
+| facet-addendum | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/node-facet-severity-reassessment.json; node-facet-severity-reassessment.json | supports | Node 3 is a bounded minor: possible functional shorthand and sparse RO2502 authority prevent an independent major inference. |
+| ground-manifest | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/evidence-manifest.json; 26 frozen artifacts; two separate addenda also bound | supports | Frozen manifest and the later positive predecessor and severity addenda are all checked before serialization. |
+| meta-fragilis | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22778399+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=5; Actual indexed identifiers, title/abstract and available publication-status fields only | partial | The exact classification phrase is in the assigned article title. The indexed abstract describes interventions and pathogen-linked oxygen fitness; those details are UNASSESSED_SCOPE and are not used to validate, extend or repair this graph. This metadata entry does not claim later body reading.  |
+| meta-canonical | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11466286+AND+SRC%3AMED&amp;format=json&amp;resultType=core&amp;pageSize=5; Actual indexed identifiers, title/abstract and available publication-status fields only | partial | Correct assigned genome paper and C. acetobutylicum ATCC 824 study identity. Abstract supports solvent-producing organism/study context. It does not independently establish the exact obligate/oxygen-sensitive canonical note. Primary full-text attempts failed or returned challenges/no result; this is uncertainty, not a wrong-identity or false-phenotype finding. This metadata entry does not claim later body reading.  |
+| meta-oxygen-review | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41579-021-00583-y&amp;format=json&amp;resultType=core&amp;pageSize=5; Actual indexed identifiers, title/abstract and available publication-status fields only | partial | The review abstract explicitly supplies generic blocked-growth classification and all four assigned snippets. Detailed oxygen/hypoxia, ROS-defense and enzyme-inactivation claims are UNASSESSED_SCOPE in this mixed pathogen/environmental review. Only selected classification/quotation windows were read for this task; retained full bytes are not a claim of full article review. This metadata entry does not claim later body reading.  |
+| meta-oxygenation | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1186%2Fs40168-024-01909-7&amp;format=json&amp;resultType=core&amp;pageSize=5; Actual indexed identifiers, title/abstract and available publication-status fields only | partial | Correct environmental SRB research article. Introduction body paragraphs 0 and 1 support the generic oxygenation/oxidative-damage context and contain the two edge-note phrases. The study organisms and design remain specific to the article; no organism-specific optimization or universal response is inferred. This metadata entry does not claim later body reading.  |
+| meta-book | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:29493974%20AND%20SRC:MED&amp;format=json&amp;resultType=core; Actual indexed identifiers, title/abstract and available publication-status fields only | partial | Assigned NBK482349 resolves to Anaerobic Infections, PMID 29493974. Retained indexed classification supports generic oxygen intolerance/inhibition of obligate anaerobes. Exact requested short snippet is not established in this indexed wording; current full-page requests returned reCAPTCHA. No false-quotation or biological-falsity conclusion follows from unavailable full text. This metadata entry does not claim later body reading. Retained book bytes were acquired 10:25:48.391372–10:25:49.025576 UTC; current copy time is distinct. |
+| body-review | https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9191689/unicode; Retained BioC abstract passage offset 86 | supports | Selected generic defining sentence and four literal snippet matches only. Original primary bytes were acquired at 08:25:23 UTC; no detailed enzyme, pathogen-defense or intervention assessment is implied. |
+| body-environment | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11451228/fullTextXML; Article identifiers and Introduction body paragraphs 0 and 1, zero-based | partial | Actual environmental research article contains the two generic note phrases at edges 4 and 5. This supports existing introductory context without universal or organism-specific experimental inference. Acquisition 2026-10-21T15:58:44.924383+00:00 through 2026-10-21T15:58:46.223658+00:00. |
+| sources | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/source-ledger.json; source-ledger.json | supports | Five assigned source identities and precise metadata-versus-body scope. |
+| placements | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/placement-ledger.json; placement-ledger.json | supports | All 16 external placements, including definition, top evidence, canonical and 12 edge references. |
+| snippets | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/snippet-ledger.json; snippet-ledger.json | supports | All six formal snippets: four exact review-abstract occurrences, one exact title phrase and one unknown URL-book excerpt. |
+| canonical-source | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/canonical-assessment.json; canonical-assessment.json | partial | Positive C. acetobutylicum ATCC 824 study identity and solvent-producing context; exact obligacy/oxygen sensitivity unverified in available assigned text. |
+| node-sources | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/node-source-ledger.json; node-source-ledger.json | supports | All 14 nodes retained in source coverage without inventing protein anchors or mechanisms. |
+| edge-sources | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/edge-source-ledger.json; edge-source-ledger.json | supports | Generic classification at edge 0 and environmental context at edges 4/5 are positive; detailed mechanisms on 1–3 and 6–11 remain unassessed. |
+| source-reading | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/primary-reading-receipt.json; primary-reading-receipt.json | supports | Actual selected primary reading, retained acquisition dates and failed body surfaces are distinguished. |
+| source-status | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/publication-status-ledger.json; publication-status-ledger.json | supports | Indexed publication and available correction fields only; no exhaustive no-retraction claim. |
+| source-browser | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/browser-access-receipts.json; browser-access-receipts.json | partial | Two primary browser attempts returned reCAPTCHA. Observation-by time is recorded; per-call intervals and absent body hashes are not invented. |
+| source-manifest | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/receipt-manifest.json; 33 frozen source artifacts | supports | All frozen artifacts and direct acquisition receipts are hash-verified; unsuccessful HTTP surfaces are not represented as source bodies. |
+| root-initial | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/initial-root-reading.json; initial-root-reading.json | context_only | Whole target and 61 hashes; actual METPO/release decisions and both histories; four assigned metadata responses. No later body claims attributed to this early receipt. |
+| root-literals | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/literal-and-authority-root-reading.json; literal-and-authority-root-reading.json | context_only | Actual title/abstract literal comparison, indexed chapter classification, sparse RO2502 statements and native molecular-function meaning. |
+| root-canonical | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/canonical-browser-reading.json; canonical-browser-reading.json | context_only | Primary-page search extraction only, not direct article bytes; it does not establish exact obligacy or oxygen sensitivity. |
+| root-final | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/final-ledger-root-reading.json; final-ledger-root-reading.json | context_only | Complete final ledgers/addenda and challenge, selected environmental Introduction, actual chemical/taxon identities and four explicit predecessor links, with their documented chronology. |
+| challenge | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-semantic-challenge-agent/semantic-severity-challenge.json; Independent final recommendation and 25 evidence bindings | supports | One formal-role major and two bounded minors; source limits and both corrective ground addenda are preserved. |
+| adjudication | /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-root-adjudication.json; Final root decision at 16:05:10.057746 UTC | supports | Final 1 major and 2 minors; positive generic classification and explicit unassessed detailed biology. This supersedes preliminary node-facet severity without altering frozen ledgers. |
+
+## Limits And Additional Notes
+
+- Detailed claims on edges 1–3 and 6–11 remain UNASSESSED_SCOPE, including pathogen oxygen/hypoxia fitness, ROS defense, enzyme-inactivation and intervention implications. No new routes, targets, conditions, protocols or optimization are supplied. Generic classification and existing environmental Introduction context are separate limited tiers.
+- The exact URL-book snippet remains unverified under current reCAPTCHA access and different indexed wording. Its absence from an abstract does not establish absence from all chapter versions. Retained indexed bytes preserve original 10:25:48–49 UTC acquisition.
+- Canonical C. acetobutylicum ATCC 824 identity and solvent-producing study context are positive, while exact obligacy/oxygen sensitivity remain unverified in available assigned text. EPMC HTTP 500, publisher 403, BioC no-result and browser challenge do not prove a false example. Root primary-page search extraction is not treated as acquired article body.
+- Original ground narratives are preserved but corrected by two separately bound addenda: four explicit obsolete predecessors are positive, and the material-site/function facet is minor rather than an additional major.
+- RO2502 seeAlso is not inheritance. Biolink broad endpoints and free-text predicates cannot be assigned invented RO constraints. Possible function shorthand and damage-event versus lesion-result wording remain qualified.
+- Three reviewed label-only protein classes, zero instances and two components are allowed by NONMECHANISTIC policy; no accession, connector or expression dataset requirement is invented.
+- The complete retained catalog has 20 organisms and 28 datasets, with no canonical or verified-synonym match. Original catalog/runner discovery scope and acquisition times remain explicit; no whole-disk absence, organism substitution or downstream gene/module query.
+- Provenance absence is bounded to the own repository with ignored files included and .git/.venv excluded. The 198 file matches, 67 review arrays and two captured AI histories cannot establish absence of remote/private decisions.
+- Metadata/status readings do not establish exhaustive publication-history review. Primary bodies were read only at selected documented windows; provider-report frontmatter is contextual provenance, not primary science or proof of original enrichment bytes.
+- Common checks, B4 protein audit and B8 QC retain original bases, dates, failures, retries, baselines and adapter skips under verified B9 byte equality. No new B9 corpus run or OWL reasoner result is claimed.
+- Final count: one major and two minors, 14 assessments and three actions. Current capture has 61 inputs; 14 nodes, 12 edges, two components, three label-only protein classes, zero instances, one canonical and ten events (nine AI plus seed).
+- Source coverage is five works, 16 external placements and six snippets (five exact and one unknown). All 33 source and 26 grounding artifacts plus two corrective ground addenda and final root/challenge bindings are verified.
+- Serializer authorship and static checks do not execute it. Root owns one execution after review, subsequent native review validation and save. No scientific record, Git or persistent state is changed by this author.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T160946Z-obligately-anaerobic
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record documentary review of obligately anaerobic
+started_at: '2026-10-21T15:57:33.535153Z'
+finished_at: '2026-10-21T16:09:46Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: This session did not author or edit the scientific record. Separate
+    source and grounding audits, an independent challenge and root primary readings
+    inform final adjudication. Generic classification, source identity and literal
+    excerpts, formal relation roles and provenance are reviewed. Detailed oxygen/hypoxia,
+    ROS-defense, enzyme-inactivation, pathogen fitness and intervention mechanisms
+    remain UNASSESSED_SCOPE; no repaired route, molecular target, conditions or optimization
+    are supplied.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: one major concerns imported process regulation between a
+  chemical and a trait. Two minors concern metal-centre/function referent clarity
+  and human-acceptance traceability. Active identity, explicit predecessor links and
+  generic classification remain positive. All 14 nodes and 12 edges have documentary
+  coverage; detailed biological mechanisms remain unassessed.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/obligately_anaerobic.yaml
+    sha256: 1b12125f8ec6d84631f89b837dd2568e670cdeca8997b3afabca31c122130a60
+    role: target
+  - path: data/traits/environment/oxygen_preference.yaml
+    sha256: 16829173ea947f2fef083f673c51519aad962d6812fcd54826ea86f055c5a40b
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/oxygen-senses/2026-08-17T031421Z-claude-code-76561e.yaml
+    sha256: 2a021c768e6db37eed31e3ab73c9714bd85ef31bc5f04e986ac0642c16fbe2a3
+    role: context
+  - path: history/mappings/name-match-groundings/2026-08-17T042357Z-claude-code-2a9f93.yaml
+    sha256: c3f93d5c8c0da5c538af391bfdbad3a8bcbe238a26a8727764c3f0ddc3422ad8
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/obligately_anaerobic-deep-research-falcon.md
+    sha256: e1a5cdedd02bdca2e8f1e3e963a8fad68d415d24a74173d03ebbb6ae26156148
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_photoferrotrophy_trait.py
+    sha256: cc0e7dfb7234e00defe1f12876d526a32dd8c1fc59ef37df7f74e9d15f100506
+    role: context
+  - path: scripts/add_sos_response_trait.py
+    sha256: 75b01e4ad8065f723c9210652d85755145e45cb05f6f62bea449b5ecc0f5bbe2
+    role: context
+  - path: scripts/add_sspabcd_sspfgh_system_trait.py
+    sha256: f49739b210d672ac2367d9eca3c528f5b4ddf7641d1029d900be743b07384b59
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/connect_phototrophy_graphs_183.py
+    sha256: afdea1c107faa1d90b7f91adef4084cda801b8b60d139067e3796ab7b92c1fdc
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/document_evidence_reference_churn.py
+    sha256: 84f8638faa59e3909cdde0ccf2efbdf98521c8c423367fa78c139726ea545669
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_oxidative_stress_response_graph_183.py
+    sha256: 1b4f7e4494b777859a4f209ec765864b644f5df5a3e93f016679f4d3d490d417
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000607
+  path: data/traits/environment/obligately_anaerobic.yaml
+  label: obligately anaerobic
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained TraitRecord; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate mapping context.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Fifth record in the ninth path-ordered batch. The entire target was read
+    before the 61-input native capture at 15:57:33–34 UTC. Source and ontology assessment
+    followed capture. Parent, mappings, writers, authorities and two history inputs
+    are context, not additional review targets.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000607
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000607
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000607
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    009 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: obligately-anaerobic-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just validate data/traits/environment/obligately_anaerobic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Direct pass at 15:57:59 UTC on unchanged input; shape validity does not
+    establish external ontology semantics.
+  evidence_ids:
+  - check-obligately-anaerobic-validate
+- check_id: obligately-anaerobic-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just validate-strict data/traits/environment/obligately_anaerobic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Direct pass at 15:57:59–15:58:00 UTC; no scientific truth or human acceptance
+    implied.
+  evidence_ids:
+  - check-obligately-anaerobic-strict
+- check_id: obligately-anaerobic-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just verify-snippets --record data/traits/environment/obligately_anaerobic.yaml
+    --out /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct pass at 15:58:15–19 UTC: five snippets over two references, four
+    VERIFIED and one NOT_IN_ABSTRACT. Manual title inspection resolves the latter;
+    the sixth URL-book snippet was outside native coverage and remains unknown.'
+  evidence_ids:
+  - check-obligately-anaerobic-snippets
+- check_id: corpus-protein-taxa
+  name: Reused corpus protein/taxon audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Original B4 08:55:04–10 UTC pass: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, no gaps/errors. Reused corpus context, not a new target run.'
+  evidence_ids:
+  - check-corpus-protein-taxa
+- check_id: batch008-qc
+  name: Reused batch-eight maintained QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000607
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Original B8 just qc passed 15:07:12–15:09:30 UTC. B9 byte comparison permits
+    qualified reuse; no new B9 QC execution is claimed.
+  evidence_ids:
+  - check-batch008-qc
+  scope_note: Unchanged 1,130 trait files, 1,278 history files including README, 1,277
+    history YAMLs and 19 common inputs. Original failures, retries, baselines, adapter
+    skips and Git bases remain explicit.
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000607
+  summary: Three reviewed label-only protein classes and zero instances in a NONMECHANISTIC
+    graph; no token accession is required.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-obligately-anaerobic-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-validate.log
+  locator: Executed 2026-10-21T15:57:59Z through 2026-10-21T15:57:59Z; metadata obligately-anaerobic-validate.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: Direct pass at 15:57:59 UTC on unchanged input; shape validity does not
+    establish external ontology semantics.
+  snapshot_sha256: e16d9848295a1f9ef26a1ea9666ab02066f361ba97b21a9a6ad5f9017c15a5db
+- evidence_id: check-obligately-anaerobic-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-strict.log
+  locator: Executed 2026-10-21T15:57:59Z through 2026-10-21T15:58:00Z; metadata obligately-anaerobic-strict.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: Direct pass at 15:57:59–15:58:00 UTC; no scientific truth or human acceptance
+    implied.
+  snapshot_sha256: 5ac44153e544272daf4083a53c9c2214c06d8288b8ba99451dc0cdb149c1c42b
+- evidence_id: check-obligately-anaerobic-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-snippets.log
+  locator: Executed 2026-10-21T15:58:15Z through 2026-10-21T15:58:19Z; metadata obligately-anaerobic-snippets.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 'Direct pass at 15:58:15–19 UTC: five snippets over two references, four
+    VERIFIED and one NOT_IN_ABSTRACT. Manual title inspection resolves the latter;
+    the sixth URL-book snippet was outside native coverage and remains unknown.'
+  snapshot_sha256: b4aa46f9fc619ce08f3dd5087233ad4128f17775ca5c07922d6fbc06cec1af19
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: 'Original B4 08:55:04–10 UTC pass: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, no gaps/errors. Reused corpus context, not a new target run.'
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-batch008-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-008.o1f1xkbn/batch008-qc.log
+  locator: Executed 2026-10-21T15:07:12Z through 2026-10-21T15:09:30Z; metadata batch008-qc.json
+  accessed_at: '2026-10-21T16:09:46Z'
+  support: context_only
+  summary: Original B8 just qc passed 15:07:12–15:09:30 UTC. B9 byte comparison permits
+    qualified reuse; no new B9 QC execution is claimed.
+  snapshot_sha256: 013f23fc01bcd90d2fe0ec8a46b43a62fd577822eced629e32259149c670e30c
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/obligately_anaerobic.yaml
+  locator: 'Entire record: 14 nodes, 12 edges, one canonical and 10 events'
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: partial
+  summary: Documentary coverage is complete; detailed biological mechanisms remain
+    outside scope.
+  snapshot_sha256: 1b12125f8ec6d84631f89b837dd2568e670cdeca8997b3afabca31c122130a60
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic.inspect-command.json
+  locator: Native inspect 15:57:33.535153–15:57:34.525081 UTC; 61 inputs
+  accessed_at: '2026-10-21T15:57:34.525081Z'
+  support: supports
+  summary: Whole-target reading preceded capture and assessment. All input bytes remain
+    unchanged; no supplemental chronology is invented.
+  snapshot_sha256: 98df847e37aadeac9bb09118756d978dfcfd4a65d3f040f4f973021d2640299b
+- evidence_id: checklist
+  kind: authority
+  reference: Maintained review policy
+  locator: Whole-record checklist
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: Identity, definition, canonical examples, evidence placements, formal graph
+    roles and provenance are assessed separately.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: policy
+  kind: authority
+  reference: Maintained review policy
+  locator: Reviewed protein families and NONMECHANISTIC disposition
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: Three protein aggregates carry reviewed label-only rationales; no token
+    examples or connectors are required.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: native-types
+  kind: authority
+  reference: Maintained review policy
+  locator: CausalNodeTypeEnum
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: MOLECULAR_FUNCTION denotes molecular activity/function; material sites
+    and activities are distinct referents, with possible shorthand explicitly qualified.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: human-policy
+  kind: authority
+  reference: Maintained review policy
+  locator: REVIEWED acceptance and provenance
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: Human scientific acceptance is distinct from seed, AI maintenance and passing
+    validation.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/common-reuse-b8-qc-supplement-qualified.json
+  locator: Qualified common-check and B8 QC reuse
+  accessed_at: '2026-10-21T15:11:38.668990Z'
+  support: supports
+  summary: Original execution dates, failure attempts, successful retries, baselines
+    and skipped adapters are retained under B9 byte equality.
+  snapshot_sha256: ddafa7255d70aabec19bd168d7cb0a944777aedb1a0538fc755a602f5ae25c89
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/repo/data/raw/metpo.owl
+  locator: Active 1000607; direct parent 1000603, broader ancestor 1000601; two related
+    synonyms; four explicit IAO:0100001 links
+  accessed_at: '2026-10-21T16:04:03.881024Z'
+  support: supports
+  summary: Current active identity is supported. Deprecated METPO:0000055, METPO:000056,
+    METPO:1000207 and METPO:1000354 explicitly point to it. The positive replacement
+    addendum supersedes the erroneous frozen narrative; no link is inferred merely
+    from deprecated status.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: retention
+  kind: authority
+  reference: Maintained METPO release disposition
+  locator: active_review rows 115–116; release_delta rows 1283–1284; finalize_metpo_2026_06_12_review.py
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: Maintained decisions intentionally retain the local definition and valid
+    broader parent. No forced hierarchy migration is warranted.
+  snapshot_sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: RO:0002212 subproperty of RO:0002211; process domain/range; sparse RO:0002502
+  accessed_at: '2026-10-21T16:01:00.201168Z'
+  support: supports
+  summary: The actual database establishes the process-regulation roles used for edge
+    0. Sparse depends-on seeAlso is not a subproperty or inherited endpoint constraint.
+    No reasoner was run.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: ro-projection
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/current-ro-projection.json
+  locator: Current selected direct statements, primary source hash and read interval
+  accessed_at: '2026-10-21T16:01:00.201168Z'
+  support: supports
+  summary: Derived projection is separately hashed; its receipt hash is not substituted
+    for the primary database hash.
+  snapshot_sha256: ac313e7ff8c13b1abee1a57e45e612edb7313f14ee07c4f39bc27b22d7925f1e
+- evidence_id: biolink
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/repo/data/raw/biolink-model.yaml
+  locator: causes → contributes to → related to at instance level → related to
+  accessed_at: '2026-10-21T16:01:00.450474Z'
+  support: supports
+  summary: The inspected chain admits named thing endpoints. This does not validate
+    biological causation or import RO constraints into free predicates.
+  snapshot_sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+- evidence_id: term-chebi15379
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_15379
+  locator: Official current chemical or taxon identity
+  accessed_at: '2026-10-21T15:59:13.549619Z'
+  support: supports
+  summary: Current active identity and represented chemical facet or canonical species
+    only; taxonomy does not establish oxygen sensitivity, and identifier resolution
+    does not validate mechanisms.
+  snapshot_sha256: 68c310530d30379f78e9f302f3394ca9b8dde1bd84e32c60b439df1b6e12741c
+- evidence_id: term-chebi26523
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_26523
+  locator: Official current chemical or taxon identity
+  accessed_at: '2026-10-21T15:59:13.537948Z'
+  support: supports
+  summary: Current active identity and represented chemical facet or canonical species
+    only; taxonomy does not establish oxygen sensitivity, and identifier resolution
+    does not validate mechanisms.
+  snapshot_sha256: 64ee54de4b2ea1878ef07369c5688a2bade17716eac8861bd66738652230b97b
+- evidence_id: term-chebi16240
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_16240
+  locator: Official current chemical or taxon identity
+  accessed_at: '2026-10-21T15:59:13.621255Z'
+  support: supports
+  summary: Current active identity and represented chemical facet or canonical species
+    only; taxonomy does not establish oxygen sensitivity, and identifier resolution
+    does not validate mechanisms.
+  snapshot_sha256: e53fe8302f1588e90d434b2956d011e2d291ae0e31c3c5b5c8e750dfb1c8ff4a
+- evidence_id: term-chebi29191
+  kind: authority
+  reference: https://www.ebi.ac.uk/ols4/api/ontologies/chebi/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FCHEBI_29191
+  locator: Official current chemical or taxon identity
+  accessed_at: '2026-10-21T15:59:13.545347Z'
+  support: supports
+  summary: Current active identity and represented chemical facet or canonical species
+    only; taxonomy does not establish oxygen sensitivity, and identifier resolution
+    does not validate mechanisms.
+  snapshot_sha256: 36c6a86950e701b019d809e01f47c600fd7215ccd3f68ff55239dfffc50d3425
+- evidence_id: term-taxon1488
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1488&retmode=xml
+  locator: Official current chemical or taxon identity
+  accessed_at: '2026-10-21T15:59:13.176213Z'
+  support: supports
+  summary: Current active identity and represented chemical facet or canonical species
+    only; taxonomy does not establish oxygen sensitivity, and identifier resolution
+    does not validate mechanisms.
+  snapshot_sha256: 4fec152309dd8a954509c363570a9e216c6ba4781c0c4999cb5313189feff6dc
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/identity-assessment.json
+  locator: identity-assessment.json
+  accessed_at: '2026-10-21T16:01:00.445248Z'
+  support: supports
+  summary: Current identity, retained hierarchy and current chemical/taxon terms;
+    erroneous predecessor sentence is superseded by the separate positive addendum.
+  snapshot_sha256: 3d5d42080ecb85916e739a800a9a2ada0426d09ca7e2337f0cee3cac127cb4ba
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/node-edge-ledger.json
+  locator: node-edge-ledger.json
+  accessed_at: '2026-10-21T16:01:00.445445Z'
+  support: supports
+  summary: All 14 nodes and 12 edges, two components, and explicit distinction between
+    formal roles and biological scope.
+  snapshot_sha256: 4499dfa5db6e6abc55d6767fca688da5beaebcbe818174dc67729ca9feb1a735
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/owner-provenance-assessment.json
+  locator: owner-provenance-assessment.json
+  accessed_at: '2026-10-21T16:01:00.449914Z'
+  support: supports
+  summary: 198 ignored-inclusive target matches, 67 parsed review target arrays, two
+    captured AI histories and conditional mapping recurrence.
+  snapshot_sha256: fa021a0d73ba06268e9ac5b6045fccc6f0f21deabccfc3e16e4d8c5e6de54450
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/expression-applicability.json
+  locator: expression-applicability.json
+  accessed_at: '2026-10-21T16:01:00.450298Z'
+  support: context_only
+  summary: Canonical-only complete catalog matching and verified historical names;
+    no substitution or downstream mechanism query.
+  snapshot_sha256: d06c7e35ef8cf0a57a1a797fb3464b74d79936591c70453f6d03785e1a3c77c2
+- evidence_id: authority-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/authority-reuse-receipts.json
+  locator: authority-reuse-receipts.json
+  accessed_at: '2026-10-21T15:58:48.670171Z'
+  support: supports
+  summary: Original recursive RO, complete catalog and bounded runner-discovery receipts
+    retain original times; copying is not a new acquisition.
+  snapshot_sha256: 6fa82e0c9d83930f49c93639a82e97b6c278d4dce836153d81f182b7d7e72231
+- evidence_id: predecessor-addendum
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/identity-replacement-addendum.json
+  locator: identity-replacement-addendum.json
+  accessed_at: '2026-10-21T16:04:03.881024Z'
+  support: supports
+  summary: Four explicit deprecated predecessors correct the written summary without
+    rewriting frozen evidence.
+  snapshot_sha256: 3733039de92416c0b6a03379f577b23cd653d2002833865fd2d74379f9e4dbd4
+- evidence_id: facet-addendum
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/node-facet-severity-reassessment.json
+  locator: node-facet-severity-reassessment.json
+  accessed_at: '2026-10-21T16:01:10.533048Z'
+  support: supports
+  summary: 'Node 3 is a bounded minor: possible functional shorthand and sparse RO2502
+    authority prevent an independent major inference.'
+  snapshot_sha256: 1fd5b0170f79f598eb89278fb56ce524ae0a82a71902ce7a7f69c88d879fdd94
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-grounding-agent/evidence-manifest.json
+  locator: 26 frozen artifacts; two separate addenda also bound
+  accessed_at: '2026-10-21T16:01:00.455598Z'
+  support: supports
+  summary: Frozen manifest and the later positive predecessor and severity addenda
+    are all checked before serialization.
+  snapshot_sha256: 0cf16080b83e193e95750e8f2135df12c2dbd2e3bbc45d98c94a432103678185
+- evidence_id: meta-fragilis
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A22778399+AND+SRC%3AMED&format=json&resultType=core&pageSize=5
+  locator: Actual indexed identifiers, title/abstract and available publication-status
+    fields only
+  accessed_at: '2026-10-21T15:58:19.543716Z'
+  support: partial
+  summary: 'The exact classification phrase is in the assigned article title. The
+    indexed abstract describes interventions and pathogen-linked oxygen fitness; those
+    details are UNASSESSED_SCOPE and are not used to validate, extend or repair this
+    graph. This metadata entry does not claim later body reading. '
+  snapshot_sha256: 070731d5b8b2882fdfdc01b4c29e146b2af000a5c362479247e9121cd1c75125
+- evidence_id: meta-canonical
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A11466286+AND+SRC%3AMED&format=json&resultType=core&pageSize=5
+  locator: Actual indexed identifiers, title/abstract and available publication-status
+    fields only
+  accessed_at: '2026-10-21T15:58:19.543898Z'
+  support: partial
+  summary: 'Correct assigned genome paper and C. acetobutylicum ATCC 824 study identity.
+    Abstract supports solvent-producing organism/study context. It does not independently
+    establish the exact obligate/oxygen-sensitive canonical note. Primary full-text
+    attempts failed or returned challenges/no result; this is uncertainty, not a wrong-identity
+    or false-phenotype finding. This metadata entry does not claim later body reading. '
+  snapshot_sha256: bbd5eac198f3b5bddff13bd0b1260402c91e037d4d15ef9e529e20122f107626
+- evidence_id: meta-oxygen-review
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41579-021-00583-y&format=json&resultType=core&pageSize=5
+  locator: Actual indexed identifiers, title/abstract and available publication-status
+    fields only
+  accessed_at: '2026-10-21T15:58:19.564228Z'
+  support: partial
+  summary: 'The review abstract explicitly supplies generic blocked-growth classification
+    and all four assigned snippets. Detailed oxygen/hypoxia, ROS-defense and enzyme-inactivation
+    claims are UNASSESSED_SCOPE in this mixed pathogen/environmental review. Only
+    selected classification/quotation windows were read for this task; retained full
+    bytes are not a claim of full article review. This metadata entry does not claim
+    later body reading. '
+  snapshot_sha256: 31797ff6d30f7def5ac758b895c2bef99d443fe063f754f3a9de05dcd95fd8f6
+- evidence_id: meta-oxygenation
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1186%2Fs40168-024-01909-7&format=json&resultType=core&pageSize=5
+  locator: Actual indexed identifiers, title/abstract and available publication-status
+    fields only
+  accessed_at: '2026-10-21T15:58:19.600787Z'
+  support: partial
+  summary: 'Correct environmental SRB research article. Introduction body paragraphs
+    0 and 1 support the generic oxygenation/oxidative-damage context and contain the
+    two edge-note phrases. The study organisms and design remain specific to the article;
+    no organism-specific optimization or universal response is inferred. This metadata
+    entry does not claim later body reading. '
+  snapshot_sha256: 44109a2a457680c13d34f288d7fc22e03869d27a21f9b6b1e0388fd122d16a02
+- evidence_id: meta-book
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:29493974%20AND%20SRC:MED&format=json&resultType=core
+  locator: Actual indexed identifiers, title/abstract and available publication-status
+    fields only
+  accessed_at: '2026-10-21T10:25:49.025576Z'
+  support: partial
+  summary: Assigned NBK482349 resolves to Anaerobic Infections, PMID 29493974. Retained
+    indexed classification supports generic oxygen intolerance/inhibition of obligate
+    anaerobes. Exact requested short snippet is not established in this indexed wording;
+    current full-page requests returned reCAPTCHA. No false-quotation or biological-falsity
+    conclusion follows from unavailable full text. This metadata entry does not claim
+    later body reading. Retained book bytes were acquired 10:25:48.391372–10:25:49.025576
+    UTC; current copy time is distinct.
+  snapshot_sha256: 51b8d1584800f6c7ce65ea00267399d0656999482006883ad7aaae4949cd6e71
+- evidence_id: body-review
+  kind: primary_source
+  reference: https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9191689/unicode
+  locator: Retained BioC abstract passage offset 86
+  accessed_at: '2026-10-21T08:25:23Z'
+  support: supports
+  summary: Selected generic defining sentence and four literal snippet matches only.
+    Original primary bytes were acquired at 08:25:23 UTC; no detailed enzyme, pathogen-defense
+    or intervention assessment is implied.
+  snapshot_sha256: 8ce53770e39dc8f72cd5dc03fff9676954ed0f43c0ac36be40e2b78466239430
+- evidence_id: body-environment
+  kind: primary_source
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11451228/fullTextXML
+  locator: Article identifiers and Introduction body paragraphs 0 and 1, zero-based
+  accessed_at: '2026-10-21T15:58:46.223658Z'
+  support: partial
+  summary: Actual environmental research article contains the two generic note phrases
+    at edges 4 and 5. This supports existing introductory context without universal
+    or organism-specific experimental inference. Acquisition 2026-10-21T15:58:44.924383+00:00
+    through 2026-10-21T15:58:46.223658+00:00.
+  snapshot_sha256: f7694101ac0fa8849f605ffdbc83406db584d9fd859ab915cb387ba30db44917
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/source-ledger.json
+  locator: source-ledger.json
+  accessed_at: '2026-10-21T16:01:07.435261Z'
+  support: supports
+  summary: Five assigned source identities and precise metadata-versus-body scope.
+  snapshot_sha256: da9cf971c565bffd44b1889a0b307eec461299350f92f713821207ac30ce5545
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/placement-ledger.json
+  locator: placement-ledger.json
+  accessed_at: '2026-10-21T16:01:07.435508Z'
+  support: supports
+  summary: All 16 external placements, including definition, top evidence, canonical
+    and 12 edge references.
+  snapshot_sha256: 4861c7e4cc5ebfaa6db25cf343f26d2ddbd07e8547c51422d5cdd7377107b53e
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/snippet-ledger.json
+  locator: snippet-ledger.json
+  accessed_at: '2026-10-21T16:01:07.435777Z'
+  support: supports
+  summary: 'All six formal snippets: four exact review-abstract occurrences, one exact
+    title phrase and one unknown URL-book excerpt.'
+  snapshot_sha256: eb247feced53543b2517f05d2f0cc7b73ba88600f1ed9442112330c3cc539213
+- evidence_id: canonical-source
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/canonical-assessment.json
+  locator: canonical-assessment.json
+  accessed_at: '2026-10-21T16:01:07.436640Z'
+  support: partial
+  summary: Positive C. acetobutylicum ATCC 824 study identity and solvent-producing
+    context; exact obligacy/oxygen sensitivity unverified in available assigned text.
+  snapshot_sha256: 53b5459749d5630322802d7e3be8f0e020aafb393feb42f442215456a9592c83
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/node-source-ledger.json
+  locator: node-source-ledger.json
+  accessed_at: '2026-10-21T16:01:07.436382Z'
+  support: supports
+  summary: All 14 nodes retained in source coverage without inventing protein anchors
+    or mechanisms.
+  snapshot_sha256: 93df26a645876670801f3bc87d0f43adee4acbcbcef5fb25e49289fd6d2ef877
+- evidence_id: edge-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/edge-source-ledger.json
+  locator: edge-source-ledger.json
+  accessed_at: '2026-10-21T16:01:07.436515Z'
+  support: supports
+  summary: Generic classification at edge 0 and environmental context at edges 4/5
+    are positive; detailed mechanisms on 1–3 and 6–11 remain unassessed.
+  snapshot_sha256: 9bd86b0bb592f49233b2ced2a85a95c1245e8f8f351c909a17ca1e75a25828c6
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/primary-reading-receipt.json
+  locator: primary-reading-receipt.json
+  accessed_at: '2026-10-21T16:01:07.435954Z'
+  support: supports
+  summary: Actual selected primary reading, retained acquisition dates and failed
+    body surfaces are distinguished.
+  snapshot_sha256: bc0e661abe5a5412e521bcadf58f89dd28d48bd7f5b3cff50edbfc0ea4647096
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/publication-status-ledger.json
+  locator: publication-status-ledger.json
+  accessed_at: '2026-10-21T16:01:07.437976Z'
+  support: supports
+  summary: Indexed publication and available correction fields only; no exhaustive
+    no-retraction claim.
+  snapshot_sha256: 6c97e4a30fe62f5cfd5a8b790317a04c729368eef25a0c84e630fd6cd5d46aca
+- evidence_id: source-browser
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/browser-access-receipts.json
+  locator: browser-access-receipts.json
+  accessed_at: '2026-10-21T16:00:04.782408Z'
+  support: partial
+  summary: Two primary browser attempts returned reCAPTCHA. Observation-by time is
+    recorded; per-call intervals and absent body hashes are not invented.
+  snapshot_sha256: 0c6099df22e9b7c5ed7066c945303f14f2f9bd7b20e91e6f1b31171ddd1f86cb
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-agent/receipt-manifest.json
+  locator: 33 frozen source artifacts
+  accessed_at: '2026-10-21T16:01:07.443681Z'
+  support: supports
+  summary: All frozen artifacts and direct acquisition receipts are hash-verified;
+    unsuccessful HTTP surfaces are not represented as source bodies.
+  snapshot_sha256: 44a47034043ea03f57c7fb9ac62ee402722f5f7c8c151849557ad3e33fb3cfbf
+- evidence_id: root-initial
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/initial-root-reading.json
+  locator: initial-root-reading.json
+  accessed_at: '2026-10-21T15:59:23.057230Z'
+  support: context_only
+  summary: Whole target and 61 hashes; actual METPO/release decisions and both histories;
+    four assigned metadata responses. No later body claims attributed to this early
+    receipt.
+  snapshot_sha256: 7487e91fc797bae8c3f5dd5b9029920dc3ba9c699fe195f3583c5a89d257c609
+- evidence_id: root-literals
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/literal-and-authority-root-reading.json
+  locator: literal-and-authority-root-reading.json
+  accessed_at: '2026-10-21T16:01:07.373827Z'
+  support: context_only
+  summary: Actual title/abstract literal comparison, indexed chapter classification,
+    sparse RO2502 statements and native molecular-function meaning.
+  snapshot_sha256: 3fadb774f6f0047356e87ebe1f2694fe9f897444d64cf66e9451efaab73f33cc
+- evidence_id: root-canonical
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/canonical-browser-reading.json
+  locator: canonical-browser-reading.json
+  accessed_at: '2026-10-21T16:00:11.195745Z'
+  support: context_only
+  summary: Primary-page search extraction only, not direct article bytes; it does
+    not establish exact obligacy or oxygen sensitivity.
+  snapshot_sha256: 037639815919ca9a0154ca954ee76cb8581a45f9efc1244aa8908322b8463e86
+- evidence_id: root-final
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-source-root/final-ledger-root-reading.json
+  locator: final-ledger-root-reading.json
+  accessed_at: '2026-10-21T16:05:10.051487Z'
+  support: context_only
+  summary: Complete final ledgers/addenda and challenge, selected environmental Introduction,
+    actual chemical/taxon identities and four explicit predecessor links, with their
+    documented chronology.
+  snapshot_sha256: 716c25a3dd982b0f5c535bbb69d565cf1ad4db95187b680bac9a4f07d3176bfb
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Independent final recommendation and 25 evidence bindings
+  accessed_at: '2026-10-21T16:04:44.518974Z'
+  support: supports
+  summary: One formal-role major and two bounded minors; source limits and both corrective
+    ground addenda are preserved.
+  snapshot_sha256: ccfac2e89cb0c84b24f99d301cb3918344fc79e51facb432cf5ab002a83f4e03
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-009.x21w9b3v/obligately-anaerobic-root-adjudication.json
+  locator: Final root decision at 16:05:10.057746 UTC
+  accessed_at: '2026-10-21T16:05:10.057746Z'
+  support: supports
+  summary: Final 1 major and 2 minors; positive generic classification and explicit
+    unassessed detailed biology. This supersedes preliminary node-facet severity without
+    altering frozen ledgers.
+  snapshot_sha256: 5f1e110ec3d4df480fc9e2c8b836feb2634687468ea42791220e4ca35e1378df
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active METPO identity, aliases and explicit predecessors'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: Current 1000607 and both related synonyms are supported. Four deprecated
+    terms explicitly point to it through IAO:0100001; the additive correction supersedes
+    the erroneous original narrative. Identity remains positive.
+  evidence_ids:
+  - metpo-primary
+  - identity
+  - predecessor-addendum
+  - adjudication
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: retained local definition and parent'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: Local oxygen preference wording and parent 1000601 are intentional maintained
+    decisions; imported direct parent 1000603 is a narrower ancestor link. A broader
+    valid parent is not an automatic defect.
+  evidence_ids:
+  - identity
+  - retention
+  - root-initial
+- assessment_id: definition
+  area: identity
+  topic: 'Native checklist: generic oxygen-blocked-growth classification'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: The assigned review abstract directly supports the defining blocked-growth
+    classification. Indexed chapter text supplies related generic support; exact book
+    snippet remains unknown. No detailed defense or intervention mechanism is inferred.
+  evidence_ids:
+  - meta-book
+  - meta-oxygen-review
+  - body-review
+  - snippets
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: canonical and embedded organism identity/source scope'
+  outcome: unknown
+  target_ids:
+  - METPO:1000607
+  summary: The canonical citation is the correct C. acetobutylicum ATCC 824 genome
+    paper with solvent-producing context, but exact obligacy/oxygen sensitivity is
+    not established in the acquired abstract. B. fragilis classification is exact
+    in its assigned title; its intervention content is unassessed.
+  evidence_ids:
+  - canonical-source
+  - meta-canonical
+  - meta-fragilis
+  - term-taxon1488
+  - root-canonical
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: five works and sixteen placements'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: All assigned identities resolve and all placements are covered. Available
+    indexed status fields contain no correction annotation, within that bounded surface.
+    Full-body failures are retained rather than converted into false source mismatches.
+  evidence_ids:
+  - sources
+  - placements
+  - source-status
+  - source-reading
+- assessment_id: excerpts
+  area: evidence
+  topic: 'Native checklist: six formal snippet fields'
+  outcome: unknown
+  target_ids:
+  - METPO:1000607
+  summary: 'Five snippets are exact: four in the review abstract and the organism
+    classification in a title. The sixth URL-book snippet remains unverified under
+    challenged full-text access and different indexed wording. No source-only finding
+    is established.'
+  evidence_ids:
+  - snippets
+  - root-literals
+  - source-browser
+  - check-obligately-anaerobic-snippets
+- assessment_id: nodes
+  area: grounding
+  topic: 'Native checklist: all fourteen node identities and facets'
+  outcome: concern
+  target_ids:
+  - METPO:1000607
+  summary: Four chemical identities and the canonical taxon resolve. Node 3 describes
+    material catalytic centres but is typed as a molecular function; this is bounded
+    facet clarity with possible activity shorthand, not a second imported-ontology
+    major. Damage-event versus resulting-lesion wording remains a limitation.
+  evidence_ids:
+  - node-edges
+  - native-types
+  - facet-addendum
+  - identity
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all twelve formal and free predicate roles'
+  outcome: concern
+  target_ids:
+  - METPO:1000607
+  summary: Edge 0 uses process regulation between a chemical and a trait. RO2502 has
+    no inspected domain/range or superproperty; seeAlso does not add them. Biolink
+    causes is broad and free predicates receive no invented RO restrictions.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - ro-projection
+  - biolink
+  - adjudication
+- assessment_id: biology
+  area: scope
+  topic: 'Native checklist: generic source context versus detailed biology'
+  outcome: unknown
+  target_ids:
+  - METPO:1000607
+  summary: Edge 0 classification and environmental Introduction context for edges
+    4/5 are positive at that limited tier. Detailed biological claims on 1–3 and 6–11
+    remain UNASSESSED_SCOPE. No inference validates pathogen oxygen survival, ROS
+    defense, enzyme-inactivation effectiveness or interventions.
+  evidence_ids:
+  - edge-sources
+  - node-sources
+  - body-environment
+  - source-reading
+  - root-final
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole target and optional mechanistic detail'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: All 14 nodes, 12 edges, two components, one canonical, two related synonyms
+    and ten events are covered. NONMECHANISTIC scope permits three label-only protein
+    classes and zero instances; no token protein, connector or experimental completion
+    is required.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - checklist
+- assessment_id: expression
+  area: scope
+  topic: 'Native checklist: canonical-only retained catalog applicability'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1000607
+  summary: No C. acetobutylicum or verified historical synonym matches the complete
+    retained 20-organism, 28-dataset catalog acquired at 07:36:12 UTC. No substituted
+    organism or downstream pathogen gene/module query was made. This is not negative
+    phenotype evidence.
+  evidence_ids:
+  - expression
+  - authority-reuse
+- assessment_id: ownership
+  area: ownership
+  topic: 'Native checklist: maintained recurrence and captured history'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: Predicate row 58 can recreate the inhibited-regulation mapping only when
+    the ID is empty; the grounder skips populated IDs. No exact maintained rewrite
+    owner for node 3 was found in the bounded ignored-inclusive search. Two captured
+    histories are infrastructure context; retained hierarchy decisions remain positive
+    maintenance evidence.
+  evidence_ids:
+  - owners
+  - retention
+  - root-initial
+- assessment_id: human-acceptance
+  area: provenance
+  topic: 'Native checklist: REVIEWED and bounded acceptance traceability'
+  outcome: concern
+  target_ids:
+  - METPO:1000607
+  summary: Nine explicit AI events plus seed and two AI histories document maintenance.
+    The bounded ignored-inclusive repository search and 67 matching review target
+    arrays do not link human acceptance of this revision. Remote/private decisions
+    remain unknown.
+  evidence_ids:
+  - owners
+  - human-policy
+  - adjudication
+- assessment_id: checks
+  area: schema
+  topic: 'Native checklist: focused checks and qualified historical reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000607
+  summary: Focused native, strict and snippet checks passed directly on unchanged
+    inputs. Primary-body HTTP/challenge failures and an auxiliary HTML projection
+    dependency error are separate source-access limitations. Qualified common checks
+    and B8 QC retain original dates, baselines, failures and skips.
+  evidence_ids:
+  - capture
+  - reuse
+  - check-obligately-anaerobic-validate
+  - check-obligately-anaerobic-strict
+  - source-reading
+findings:
+- finding_id: regulation-endpoint-roles
+  issue_key: obligately-anaerobic-regulation-endpoint-roles
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Process regulation is assigned between a chemical and a trait
+  description: Edge 0 assigns RO:0002212 to molecular oxygen inhibiting the obligately
+    anaerobic trait. RO:0002212 inherits the process domain and range of RO:0002211.
+    Current endpoints explicitly denote a material chemical and a trait, not two process
+    executions. The defining growth-inhibition sentence has positive source support,
+    but it does not change those represented roles. This is formal representation,
+    not a false class definition, native validation failure, reasoner result or request
+    to reconstruct oxygen-response biology.
+  target_ids:
+  - METPO:1000607
+  field_paths:
+  - causal_graphs[0].edges[0]
+  evidence_ids:
+  - record
+  - node-edges
+  - ro-primary
+  - ro-projection
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: metal-centre-function-facet
+  issue_key: obligately-anaerobic-metal-centre-function-facet
+  category: consistency
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Metal-centre wording leaves the represented function facet unclear
+  description: Node 3 is labelled low-potential metal centres and described as catalytic
+    centres, while MOLECULAR_FUNCTION denotes molecular activity/function. This warrants
+    bounded referent precision. A functional shorthand reading remains possible, the
+    node has no external activity grounding, and inspected RO:0002502 imposes no endpoint
+    restriction. Do not promote this to another major or prescribe a replacement type,
+    biological route or molecular target. The separate severity addendum supersedes
+    the original candidate.
+  target_ids:
+  - METPO:1000607
+  field_paths:
+  - causal_graphs[0].nodes[3]
+  evidence_ids:
+  - record
+  - node-edges
+  - native-types
+  - facet-addendum
+  - ro-projection
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: obligately-anaerobic-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Local provenance does not link human acceptance of this revision
+  description: REVIEWED accompanies nine explicit AI events plus seed. The own-repository
+    search includes ignored and hidden files, excluding .git/.venv, and covers 198
+    matching files and 67 parsed review target arrays. Neither two captured AI infrastructure
+    histories nor retained hierarchy dispositions establish human acceptance of this
+    exact scientific snapshot. Remote/private acceptance remains unknown.
+  target_ids:
+  - METPO:1000607
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - human-policy
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relation-roles
+  description: During separately authorized curation, reconcile edge 0 with its intended
+    represented referents and actual relation meaning.
+  finding_ids:
+  - regulation-endpoint-roles
+  target_ids:
+  - METPO:1000607
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the positive generic classification and explicitly distinguish chemical,
+    trait and process referents; do not supply a repaired pathogen mechanism or new
+    intervention.
+  - Review mapping row 58 and the empty-ID-only writer behavior so an authorized fix
+    does not recur.
+  - Use guarded curation and append-only history, focused native/strict checks, applicable
+    mapping audit and maintained QC; preserve this review and add a successor if inputs
+    change.
+- action_id: clarify-node-facet
+  description: Clarify whether the existing metal-centre node denotes material sites
+    or a molecular activity, preserving the bounded source scope.
+  finding_ids:
+  - metal-centre-function-facet
+  target_ids:
+  - METPO:1000607
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Use the current label, description and native enum meanings to document the intended
+    facet; no forced replacement type or new biological target is prescribed.
+  - Do not infer a RO2502 domain/range from seeAlso or conflate quotation matching
+    with mechanism validation.
+  - Apply any authorized wording/type change through the guarded writer with record
+    and repository history, followed by focused native/strict validation.
+- action_id: link-human-acceptance
+  description: Link an existing accountable human decision for this revision if available,
+    or retain the acceptance uncertainty explicitly.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000607
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/obligately_anaerobic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve ten events and the two contextual AI histories; do not invent signoff
+    or global absence.
+  - Any acceptance record should identify this revision and the three findings. Contacting
+    others is outside this review.
+limitations:
+- Detailed claims on edges 1–3 and 6–11 remain UNASSESSED_SCOPE, including pathogen
+  oxygen/hypoxia fitness, ROS defense, enzyme-inactivation and intervention implications.
+  No new routes, targets, conditions, protocols or optimization are supplied. Generic
+  classification and existing environmental Introduction context are separate limited
+  tiers.
+- The exact URL-book snippet remains unverified under current reCAPTCHA access and
+  different indexed wording. Its absence from an abstract does not establish absence
+  from all chapter versions. Retained indexed bytes preserve original 10:25:48–49
+  UTC acquisition.
+- Canonical C. acetobutylicum ATCC 824 identity and solvent-producing study context
+  are positive, while exact obligacy/oxygen sensitivity remain unverified in available
+  assigned text. EPMC HTTP 500, publisher 403, BioC no-result and browser challenge
+  do not prove a false example. Root primary-page search extraction is not treated
+  as acquired article body.
+- 'Original ground narratives are preserved but corrected by two separately bound
+  addenda: four explicit obsolete predecessors are positive, and the material-site/function
+  facet is minor rather than an additional major.'
+- RO2502 seeAlso is not inheritance. Biolink broad endpoints and free-text predicates
+  cannot be assigned invented RO constraints. Possible function shorthand and damage-event
+  versus lesion-result wording remain qualified.
+- Three reviewed label-only protein classes, zero instances and two components are
+  allowed by NONMECHANISTIC policy; no accession, connector or expression dataset
+  requirement is invented.
+- The complete retained catalog has 20 organisms and 28 datasets, with no canonical
+  or verified-synonym match. Original catalog/runner discovery scope and acquisition
+  times remain explicit; no whole-disk absence, organism substitution or downstream
+  gene/module query.
+- Provenance absence is bounded to the own repository with ignored files included
+  and .git/.venv excluded. The 198 file matches, 67 review arrays and two captured
+  AI histories cannot establish absence of remote/private decisions.
+- Metadata/status readings do not establish exhaustive publication-history review.
+  Primary bodies were read only at selected documented windows; provider-report frontmatter
+  is contextual provenance, not primary science or proof of original enrichment bytes.
+- Common checks, B4 protein audit and B8 QC retain original bases, dates, failures,
+  retries, baselines and adapter skips under verified B9 byte equality. No new B9
+  corpus run or OWL reasoner result is claimed.
+notes:
+- 'Final count: one major and two minors, 14 assessments and three actions. Current
+  capture has 61 inputs; 14 nodes, 12 edges, two components, three label-only protein
+  classes, zero instances, one canonical and ten events (nine AI plus seed).'
+- Source coverage is five works, 16 external placements and six snippets (five exact
+  and one unknown). All 33 source and 26 grounding artifacts plus two corrective ground
+  addenda and final root/challenge bindings are verified.
+- Serializer authorship and static checks do not execute it. Root owns one execution
+  after review, subsequent native review validation and save. No scientific record,
+  Git or persistent state is changed by this author.
+tags:
+- record-review
+- obligately-anaerobic
+- environment
+- needs-curation
+native_verdict: needs_curation
+```
