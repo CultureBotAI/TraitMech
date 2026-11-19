@@ -1,0 +1,281 @@
+schema_version: 1.0.0
+repository_key: traitmech
+github_repository: CultureBotAI/TraitMech
+run_id: mech-goal-sequence-20261019
+cycle: 11
+stage: 5
+revision: 1
+outcome: completed
+summary: 'Consumed 17 carried-forward findings from Cycle 11 Stage 4, reused #2002 for the
+  12 actionable genomics definition-source snippet findings and #1982/#1983/#1984/#1985/#364
+  for five deferred cohort findings, resolved all 12 actionable findings via scripts/curate_stage5_review_findings.py,
+  pruned 12 baseline rows, regenerated pages, and obtained a fresh passing structured review.'
+source_revision: 2ccbc22ccfb8bd00c9d9ca70e11e020f818fbc18
+scope_frozen_at: '2026-11-15T04:17:00Z'
+previous_evidence:
+  path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/evidence.yaml
+  sha256: 498792fbeb04a862b662df0d62635742a9abf511e8ef7808f3bac9379595393a
+artifacts:
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  sha256: 43837382fb6617eada0575fc578f000b0ecc1a1ab1e6d81a231a01fa02f68e5d
+  kind: issue_map
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/validation.md
+  sha256: 8501a4a7fae205720cad4a5368f18e0ddf88605f07f1b5c98bb34efea8f7596a
+  kind: validation
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/remediated_records_review.yaml
+  sha256: 27540dc223c97da1ce9cf0135acf467405b331f0ae45f83ca7c7b5a8f3c70980
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/remediated_records_review.md
+  sha256: 2cc4124f270b8c1a8853f90e46d879ff9b792939defbb865c78857654045b877
+  kind: supporting
+- path: reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  sha256: b025c96061fdc88c5f9b37309dc6f78b707afd03f68d67f2b93b8033a7be6ccd
+  kind: supporting
+findings:
+- finding_id: F-C11S4-DEF-SRC-001
+  status: resolved
+  summary: data/traits/genomics/codon_usage_bias.yaml (traitmech:000096) now carries a verified
+    record-level evidence[0].snippet for definition_source DOI:10.1038/nrg2899.
+  carried_from: F-C11S4-DEF-SRC-001
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-002
+  status: resolved
+  summary: data/traits/genomics/crispr_cas_system.yaml (traitmech:000094) now carries a verified
+    record-level evidence[0].snippet for definition_source DOI:10.1038/s41579-019-0299-x.
+  carried_from: F-C11S4-DEF-SRC-002
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-003
+  status: resolved
+  summary: data/traits/genomics/gc_skew.yaml (traitmech:000097) now carries a verified record-level
+    evidence[0].snippet for definition_source DOI:10.1093/oxfordjournals.molbev.a025626.
+  carried_from: F-C11S4-DEF-SRC-003
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-004
+  status: resolved
+  summary: data/traits/genomics/genome_size.yaml (traitmech:000098) now carries a verified
+    record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro3331.
+  carried_from: F-C11S4-DEF-SRC-004
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-005
+  status: resolved
+  summary: data/traits/genomics/mobile_genetic_element.yaml (traitmech:000089) now carries
+    a verified record-level evidence[0].snippet for definition_source DOI:10.1038/nrmicro1235.
+  carried_from: F-C11S4-DEF-SRC-005
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-006
+  status: resolved
+  summary: data/traits/genomics/pangenome_openness.yaml (traitmech:000102) now carries a verified
+    record-level evidence[0].snippet for definition_source DOI:10.1073/pnas.0506758102.
+  carried_from: F-C11S4-DEF-SRC-006
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-007
+  status: resolved
+  summary: data/traits/genomics/plasmid_carriage.yaml (traitmech:000090) now carries a verified
+    record-level evidence[0].snippet for definition_source DOI:10.1128/MMBR.00020-10.
+  carried_from: F-C11S4-DEF-SRC-007
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-008
+  status: resolved
+  summary: data/traits/genomics/ploidy.yaml (traitmech:000100) now carries a verified record-level
+    evidence[0].snippet for definition_source DOI:10.1159/000368855.
+  carried_from: F-C11S4-DEF-SRC-008
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-009
+  status: resolved
+  summary: data/traits/genomics/prophage.yaml (traitmech:000091) now carries a verified record-level
+    evidence[0].snippet for definition_source DOI:10.1128/MMBR.67.2.238-276.2003.
+  carried_from: F-C11S4-DEF-SRC-009
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-010
+  status: resolved
+  summary: data/traits/genomics/restriction_modification_system.yaml (traitmech:000095) now
+    carries a verified record-level evidence[0].snippet for definition_source DOI:10.1128/MMBR.00044-12.
+  carried_from: F-C11S4-DEF-SRC-010
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-011
+  status: resolved
+  summary: data/traits/genomics/rrna_operon_copy_number.yaml (traitmech:000101) now carries
+    a verified record-level evidence[0].snippet for definition_source DOI:10.1128/AEM.66.4.1328-1333.2000.
+  carried_from: F-C11S4-DEF-SRC-011
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-C11S4-DEF-SRC-012
+  status: resolved
+  summary: data/traits/genomics/transposable_element.yaml (traitmech:000092) now carries a
+    verified record-level evidence[0].snippet for definition_source DOI:10.1111/1574-6976.12067.
+  carried_from: F-C11S4-DEF-SRC-012
+  group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  disposition: Resolved in Cycle 11 Stage 5 via scripts/curate_stage5_review_findings.py and
+    verified in reviews/structured/20261115T041700Z-cycle11-stage5-remediated-records-review/review.yaml.
+- finding_id: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  status: deferred
+  summary: 339 source-limited eligible records lack multi-step molecular pathways in currently
+    cited open abstracts, and 22 eligible records are non-mechanistic supporting vocabulary.
+  carried_from: F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  disposition: 'Deferred under open GitHub issue #1982 pending full-text PDF acquisition or
+    authorized deep-research runs.'
+- finding_id: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  status: deferred
+  summary: 551 eligible records lack strain/species canonical_examples because currently cited
+    open abstracts do not state verbatim strain-designated phenotype values.
+  carried_from: F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  disposition: 'Deferred under open GitHub issue #1983 pending primary strain characterization
+    literature or IJSEM species descriptions.'
+- finding_id: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  status: deferred
+  summary: 85 cross-record causal-graph warning rows remain baselined across 72 unique eligible
+    records.
+  carried_from: F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  disposition: 'Deferred under open GitHub issue #1984 for coordinated ontology and node-role
+    harmonization.'
+- finding_id: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  status: deferred
+  summary: 29 eligible records cite a paywalled or abstract-limited primary definition_source
+    that does not repeat in record-level evidence.
+  carried_from: F-COHORT-DEF-SOURCE-PAYWALLED-008
+  group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  disposition: 'Deferred under open GitHub issue #1985 pending full-text access to primary
+    discovery articles.'
+- finding_id: F-COHORT-METPO-UPSTREAM-MINTING-009
+  status: deferred
+  summary: 734 eligible records use repository-minted traitmech:NNNNNN identifiers packaged
+    into verified METPO proposal templates.
+  carried_from: F-COHORT-METPO-UPSTREAM-MINTING-009
+  group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  disposition: 'Deferred under open GitHub issue #364 and upstream berkeleybop/metpo#535.'
+groups:
+- group_id: G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS
+  finding_ids:
+  - F-C11S4-DEF-SRC-001
+  - F-C11S4-DEF-SRC-002
+  - F-C11S4-DEF-SRC-003
+  - F-C11S4-DEF-SRC-004
+  - F-C11S4-DEF-SRC-005
+  - F-C11S4-DEF-SRC-006
+  - F-C11S4-DEF-SRC-007
+  - F-C11S4-DEF-SRC-008
+  - F-C11S4-DEF-SRC-009
+  - F-C11S4-DEF-SRC-010
+  - F-C11S4-DEF-SRC-011
+  - F-C11S4-DEF-SRC-012
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/2002
+  status: resolved
+  summary: 'Twelve GENOMICS TraitRecord files declared a primary DOI definition_source and
+    cited the same DOI in record-level evidence[0] without a snippet. Repair owner: scripts/curate_stage5_review_findings.py,
+    conf/evidence_snippet_baseline.tsv, and the 12 target records.'
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/validation.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/remediated_records_review.yaml
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/remediated_records_review.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: Resolved all 12 open findings via guarded writer, removed the 12 resolved baseline
+    rows, regenerated pages, passed strict validation and snippet audit, and verified the
+    records with a fresh structured review.
+- group_id: G-STAGE4-CAUSAL-GRAPHS-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1982
+  status: deferred
+  summary: 339 source-limited eligible records lack multi-step molecular pathways in currently
+    cited open abstracts, and 22 eligible records are non-mechanistic supporting vocabulary.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1982 pending full-text PDF acquisition or
+    authorized deep-research runs.'
+- group_id: G-STAGE4-CANONICAL-EXAMPLES-SOURCE-LIMITED
+  finding_ids:
+  - F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1983
+  status: deferred
+  summary: 551 eligible records lack strain/species canonical_examples because currently cited
+    open abstracts do not state verbatim strain-designated phenotype values.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1983 pending primary strain characterization
+    literature or IJSEM species descriptions.'
+- group_id: G-STAGE4-CAUSAL-GRAPH-BASELINES
+  finding_ids:
+  - F-COHORT-CAUSAL-GRAPH-BASELINES-007
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1984
+  status: deferred
+  summary: 85 cross-record causal-graph warning rows remain baselined across 72 unique eligible
+    records.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1984 for coordinated ontology and node-role
+    harmonization.'
+- group_id: G-STAGE4-DEF-SOURCE-PAYWALLED
+  finding_ids:
+  - F-COHORT-DEF-SOURCE-PAYWALLED-008
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/1985
+  status: deferred
+  summary: 29 eligible records cite a paywalled or abstract-limited primary definition_source
+    that does not repeat in record-level evidence.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #1985 pending full-text access to primary
+    discovery articles.'
+- group_id: G-STAGE4-METPO-UPSTREAM-MINTING
+  finding_ids:
+  - F-COHORT-METPO-UPSTREAM-MINTING-009
+  issue_url: https://github.com/CultureBotAI/TraitMech/issues/364
+  status: deferred
+  summary: 734 eligible records use repository-minted traitmech:NNNNNN identifiers packaged
+    into verified METPO proposal templates.
+  resolution_evidence:
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/issue_map.md
+  - reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-05/revision-0001/c11s5_coverage_full.json
+  disposition: 'Deferred under open GitHub issue #364 and upstream berkeleybop/metpo#535.'
+carry_forward_ids:
+- F-COHORT-CAUSAL-GRAPHS-SOURCE-LIMITED-005
+- F-COHORT-CANONICAL-EXAMPLES-SOURCE-LIMITED-006
+- F-COHORT-CAUSAL-GRAPH-BASELINES-007
+- F-COHORT-DEF-SOURCE-PAYWALLED-008
+- F-COHORT-METPO-UPSTREAM-MINTING-009
+infra_tasks: []
