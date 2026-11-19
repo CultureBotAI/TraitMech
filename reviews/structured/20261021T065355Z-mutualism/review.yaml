@@ -1,0 +1,883 @@
+schema_version: 1.0.0
+review_id: 20261021T065355Z-mutualism
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of mutualism (traitmech:000041)
+started_at: '2026-10-21T06:48:49Z'
+finished_at: '2026-10-21T06:53:55Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The reciprocal-benefit identity, locally scoped symbiosis parent and both
+  species examples are supported. All ten nodes and seven edges were inspected. One
+  major finding concerns use of a material-producer predicate with a process subject;
+  two minor findings concern a provisional selection relation and the bounded absence
+  of a human-acceptance link. Seven citation identities resolve. Abstract-only access
+  limits certification of some causal wording; arbitrary exchange or host benefit
+  alone is not established as sufficient for mutualism.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/mutualism.yaml
+    sha256: 7247ae4be59ce2eb7f1cc9d7303e1a338af82cd49d255c60aa1442f6dc1c48a3
+    role: target
+  - path: data/traits/ecology/symbiosis.yaml
+    sha256: 86ad9516ff0879731da3792de1495ba1d0e107394edfcc754be03d052a677b21
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000041
+  path: data/traits/ecology/mutualism.yaml
+  label: mutualism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Ninth target in batch002, selected in lexicographic path order using
+    the validated inventory union; one entire previously uncovered TraitRecord.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000041
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000041
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000041
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: mutualism-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just validate data/traits/ecology/mutualism.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-mutualism-validate
+- check_id: mutualism-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just validate-strict data/traits/ecology/mutualism.yaml --out /private/tmp/traitmech-record-sweep-002.mdt7dqwk/mutualism-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-mutualism-strict
+- check_id: mutualism-snippets
+  name: Focused source snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000041
+  command: just verify-snippets --record data/traits/ecology/mutualism.yaml --out
+    /private/tmp/traitmech-record-sweep-002.mdt7dqwk/mutualism-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Zero snippet occurrences. This check does not verify the seven citation
+    identities or their evidence notes.
+  evidence_ids:
+  - check-mutualism-snippets
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000041
+  summary: The broad ecological graph asserts no strain/locus-specific expression
+    claim and contains no protein nodes; an expression module would not establish
+    reciprocal fitness benefit.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-mutualism-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/mutualism-validate.log
+  locator: Executed 2026-10-21T06:49:09Z through 2026-10-21T06:49:12Z; metadata mutualism-validate.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: 7b8a6ecd81a224cb49ba6e8bc226dba6f7bdf11b7888fda0ab74db8f36b0f77f
+- evidence_id: check-mutualism-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/mutualism-strict.log
+  locator: Executed 2026-10-21T06:49:09Z through 2026-10-21T06:49:13Z; metadata mutualism-strict.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 803714c1d667d028559c9498a34d36d0f029972288e7af4b4d058bbf0148701f
+- evidence_id: check-mutualism-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-002.mdt7dqwk/mutualism-snippets.log
+  locator: Executed 2026-10-21T06:49:09Z through 2026-10-21T06:49:09Z; metadata mutualism-snippets.json
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: context_only
+  summary: Zero snippet occurrences. This check does not verify the seven citation
+    identities or their evidence notes.
+  snapshot_sha256: e1b73cf2722434b909aed1b464e6a5dee422a9f1ad7e6924f04694341910b888
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/mutualism.yaml
+  locator: Entire record, two examples, ten nodes, seven edges and six history events
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: partial
+  summary: Reciprocal net benefit distinguishes the class. The graph is NONMECHANISTIC
+    and optional molecular examples are not required.
+  snapshot_sha256: 7247ae4be59ce2eb7f1cc9d7303e1a338af82cd49d255c60aa1442f6dc1c48a3
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Complete parsed RDF exact normalized label/synonym scan including deprecated
+    entities; class proposal rows42–43
+  accessed_at: '2026-10-21T06:49:17Z'
+  support: supports
+  summary: No exact mutualism or mutualist match occurs in the captured ontology.
+    The fallback identifier is documented by proposed METPO:1007640 under the symbiosis
+    proposal METPO:1007639; these proposals do not establish upstream acceptance.
+  snapshot_sha256: 7d42a3c554b8ac9f2ef52d56855d45533ddcf57660e7df10be19bf297d1f1784
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/ecology/symbiosis.yaml
+  locator: Entire parent definition
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: supports
+  summary: Under the target’s explicit definition as a symbiosis, benefit for both
+    partners narrows the persistent-association parent. This does not claim every
+    broader ecological use of mutualism requires persistent physical association.
+- evidence_id: biolink
+  kind: authority
+  reference: https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml
+  locator: Captured produces, causes and recursive ancestor slots; snapshot hash in
+    ledger
+  accessed_at: '2026-10-21T06:49:18Z'
+  support: partial
+  summary: The produces description specifies a material entity as producer; the record
+    supplies a biological process. Its formal inherited domain and range are named
+    thing, so this is a semantic mismatch, not a demonstrated explicit material-domain
+    validation failure. Causes has broader entity-level semantics.
+  snapshot_sha256: a792dba290bd2cd3f95ad1110db438960f5f9aabee42d209530995f7f6acf5b0
+- evidence_id: proposals
+  kind: authority
+  reference: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv; proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv;
+    mappings/predicate_grounding.tsv
+  locator: METPO:2007401 and METPO:2007700 definitions and mapping rows
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: partial
+  summary: The selection proposal describes environmental-condition pressure favoring
+    adapted traits, whereas this record has a host-control process. The confers proposal
+    admits QUALITY and BIOLOGICAL_PROCESS subjects with a TRAIT object. Neither property
+    occurs as an active exact identifier in the captured METPO RDF.
+- evidence_id: taxa
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=382,668&retmode=xml
+  locator: Exact NCBI taxonomy responses, scientific names and synonyms
+  accessed_at: '2026-10-21T06:49:38Z'
+  support: supports
+  summary: Taxon382 is currently Ensifer meliloti with Sinorhizobium meliloti explicitly
+    recognized as a synonym. Taxon668 is Aliivibrio fischeri with the historical Vibrio
+    name recognized. The record does not contain a wrong taxon identifier.
+  snapshot_sha256: 50549074cdb7f9da9c0b9b62b8fada4fafd22f5931c5868732c30dd3083df997
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: All seven distinct citation identities; source/access ledger
+  accessed_at: '2026-10-21T06:50:55Z'
+  support: supports
+  summary: All cited DOI/PMID identities resolve. Full article surfaces and abstract-only
+    sources are distinguished; successful identifiers alone do not validate edge claims.
+  snapshot_sha256: 48d3a1fee4d70fd82eae2bf67f9acd7c69d6ec666e578281bb08947dce4f684b
+- evidence_id: mcfall
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3587249/
+  locator: Introductory scope and Fig.4 caption
+  accessed_at: '2026-10-20T07:21:00Z'
+  support: supports
+  summary: The review supports reciprocal animal–bacterial ecological contributions
+    and diverse animal-associated relationships. Other citations supply non-animal
+    contexts.
+  snapshot_sha256: 9b5d60a370751beacc2464ed17c810d45b2f450d1fa6901e71fbd472fd7fd014
+- evidence_id: backhed
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.1104816
+  locator: Indexed abstract, PMID15790844
+  accessed_at: '2026-10-20T07:20:58Z'
+  support: partial
+  summary: The abstract explicitly characterizes the human intestinal relationship
+    as mutually beneficial and describes host benefits. It supports a contextual example,
+    not a universal guarantee that any nutrient/service exchange is net-beneficial.
+    The habitat-for-microbes detail was not independently checked against full text.
+  snapshot_sha256: a66eed790d0cf092a1d0529ad11629a1d735c8cec9cf8b6541919fddabb14bdf
+- evidence_id: meliloti
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3410850/
+  locator: Abstract and Introduction paragraphs2–3; PMID22876202
+  accessed_at: '2026-10-21T06:49:18Z'
+  support: supports
+  summary: The article supports facultatively mutualistic S. meliloti in legume nitrogen-fixing
+    symbiosis. The species example does not assert every isolate benefits every host.
+  snapshot_sha256: 597d3d9585aafebb3f2735abf042a385a972e8a5981331e2296a1c54a76ee001
+- evidence_id: fischeri
+  kind: primary_source
+  reference: https://www.caister.com/backlist/jmmb/v/v1/v1n1/04.pdf
+  locator: Printed pp.13–14, The Symbiotic Partners; PMID10941780
+  accessed_at: '2026-10-21T06:50:16Z'
+  support: supports
+  summary: The review identifies the squid light-organ symbiont, a light-based service
+    to the host, and nutritional support for the bacteria. The historical source name
+    is reconciled by the current taxonomy response.
+  snapshot_sha256: f50ff824476199ebad5010c0d78fbd4961e87df052e6072db5a1761b528ed3f2
+- evidence_id: hostcontrol
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.adi3338
+  locator: Indexed abstract, PMID39024451
+  accessed_at: '2026-10-21T06:49:14Z'
+  support: partial
+  summary: The abstract directly supports host controls generating selection for host-beneficial
+    microbial traits. It does not independently establish that host benefit alone
+    entails positive net benefit for the microbe. The subsequent confers-mutualism
+    edge needs its mutualistic context retained; full-paper support for that edge
+    remains unverified.
+  snapshot_sha256: e3fe655c42cbd0b0f21115d664e4032af2cfa4360c50fa88f454546ee04e5c4e
+- evidence_id: coauxotrophy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10914607/
+  locator: Main/Sec1 paragraph2 and abstract; DOI10.1038/s41564-023-01596-4
+  accessed_at: '2026-10-21T06:49:14Z'
+  support: supports
+  summary: The source explicitly uses syntrophy for obligate mutualism and describes
+    reciprocal co-auxotrophic dependence. The record node already specifies that dependence.
+    Its synthetic-yeast context is retained; neither arbitrary cross-feeding nor all
+    historical uses of syntrophy are equated with it.
+  snapshot_sha256: 9fde4cd77387bafdcbc55fca905870f8fca96ababf1b9f17657cba7dc1782c2a
+- evidence_id: algae
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC10974524/
+  locator: Abstract; Introduction paragraphs8–10; Conclusions first paragraph; DOI10.3390/plants13060829
+  accessed_at: '2026-10-21T06:49:15Z'
+  support: supports
+  summary: The review supports benefits to both organisms, metabolite-mediated benefits
+    in algal–bacterial systems, and changing interaction outcomes with metabolites
+    and context. This does not make a metabolite profile the sole universal determinant
+    of an outcome.
+  snapshot_sha256: 382b798e65a611d07d3e6b9a9b8b5679b0da9a2f89394e6b702d5c67be50a296
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph ledger
+  locator: All ten nodes and seven edges
+  accessed_at: '2026-10-21T06:49:47Z'
+  support: supports
+  summary: Every endpoint resolves. Structural validity is distinct from predicate
+    meaning and claim-specific literature evidence.
+  snapshot_sha256: c66f9b2e0a105024f20b0aa21e24a6c658fec0e4f2cbbfb6928e3dbaef7f6e6a
+- evidence_id: search
+  kind: search
+  reference: Local target identity/ownership/provenance search
+  locator: Ignored-inclusive identifier and label search across maintained local paths
+  accessed_at: '2026-10-21T06:50:19Z'
+  support: partial
+  summary: All six target history events identify AI assistance. Inspected target-specific
+    history and maintained context do not identify human scientific acceptance; private
+    or remote approval remains unknown.
+  snapshot_sha256: b3268913e7bc350bc1c3cf7ec86ca8034c79c101d285161aef1a719bd8492765
+  search_scope: rg --no-ignore --hidden over data/traits, scripts, history, mappings,
+    proposals, conf, docs and DO_NOT_WORK.md for traitmech:000041 or mutualism; ignored
+    files included. Complete captured METPO RDF was scanned separately. The acceptance
+    finding is bounded to inspected target-specific local material, not all private/remote
+    records.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Claim-specific evidence, predicate semantics and REVIEWED sign-off rules
+  accessed_at: '2026-10-21T06:53:55Z'
+  support: supports
+  summary: Every represented edge needs source and relation support; a NONMECHANISTIC
+    class does not require an invented molecular mechanism. REVIEWED requires human
+    scientific acceptance.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, polarity, class and alias'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: The fallback identity and related mutualist alias denote the same reciprocal-benefit
+    concept. The class proposal is documented without being mistaken for an active
+    upstream identifier.
+  evidence_ids:
+  - record
+  - identity
+  - mcfall
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: The definition distinguishes reciprocal benefit from mere association or
+    exchange. Animal, plant and microbial partner contexts are supported by the cited
+    literature considered together.
+  evidence_ids:
+  - record
+  - mcfall
+  - backhed
+  - meliloti
+  - fischeri
+  - coauxotrophy
+  - algae
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: broader symbiosis parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: The parent is broader under the explicitly selected persistent-association
+    meaning. Wider ecological uses of mutualism are not adjudicated here.
+  evidence_ids:
+  - record
+  - parent
+  - identity
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: ecological class and nonmechanistic scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: ECOLOGY and CLASS match the record. The declared broad graph does not need
+    molecular proteins, invented intermediates or forced connectivity.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: both species examples'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: Both taxon identifiers and narrow example statements are supported. The
+    Sinorhizobium label is an accepted synonym in the inspected authority, not a mistaken
+    taxon.
+  evidence_ids:
+  - taxa
+  - meliloti
+  - fischeri
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: all reference identities and evidence placement'
+  outcome: concern
+  target_ids:
+  - traitmech:000041
+  summary: Seven identities resolve and the principal contexts are supported. Bäckhed
+    and Wilde were available only as abstracts; some detailed wording and the sufficiency
+    of host-beneficial traits for mutualism remain unverified. No absent-full-text
+    finding is inferred.
+  evidence_ids:
+  - bibliography
+  - mcfall
+  - backhed
+  - meliloti
+  - fischeri
+  - hostcontrol
+  - coauxotrophy
+  - algae
+  - check-mutualism-snippets
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all ten nodes and seven edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000041
+  summary: All endpoints resolve. A material-producer predicate is used with a process,
+    and a provisional selection definition does not exactly match the subject representation.
+    Contextual evidence supports the remaining sketch but does not establish universal
+    sufficient conditions.
+  evidence_ids:
+  - record
+  - shape
+  - biolink
+  - proposals
+  - backhed
+  - mcfall
+  - hostcontrol
+  - coauxotrophy
+  - algae
+  - policy
+  details: 'Zero-based ledger: node0 is the local trait; nodes1,3,5,7 are processes,
+    nodes2/4 qualities, nodes6/9 interaction states, and node8 explicitly a metabolite
+    set rather than a measurement profile. Edge0 has compatible broad Biolink causal
+    semantics but only contextual gut evidence; it must not be read as every exchange
+    guaranteeing mutual benefit. Edge1 aligns the defining reciprocal-benefit quality
+    with the provisional confers relation. Edge2 has direct abstract support for selection
+    but a local-proposal subject-meaning mismatch. Edge3 has compatible confers endpoint
+    types; source sufficiency beyond the mutualistic context is unverified because
+    host benefit does not independently show microbial benefit. Edge4 has directly
+    attested reciprocal-dependence terminology but the material-producer grounding
+    is unsuitable for its process subject. Edge5 uses a permitted process-to-trait
+    relation with contextual metabolite-exchange support. Edge6 has no predicate_id,
+    which is permitted; its context-dependent direction is supported without treating
+    metabolites as the sole cause. No operational microbial engineering procedure
+    is proposed.'
+- assessment_id: optional
+  area: completeness
+  topic: 'Native checklist: discussion and dataset slots'
+  outcome: supported
+  target_ids:
+  - traitmech:000041
+  summary: No discussion placeholder or asserted dataset accession requires resolution.
+    These optional slots are not required to complete a review of this ecological
+    class.
+  evidence_ids:
+  - record
+  - policy
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: REVIEWED and curation history'
+  outcome: concern
+  target_ids:
+  - traitmech:000041
+  summary: The six AI-assisted events document changes but do not identify human scientific
+    acceptance in inspected target-specific material. The new review cannot supply
+    that acceptance.
+  evidence_ids:
+  - record
+  - search
+  - policy
+  - check-validate-history
+findings:
+- finding_id: material-producer-semantics
+  issue_key: mutualism-material-producer-semantics
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: A process uses the material-producer relation
+  description: Edge4 assigns biolink:produces to reciprocal metabolic dependence typed
+    BIOLOGICAL_PROCESS. Biolink describes a material entity producing a product, so
+    the existing subject does not play that role. The wildcard creates mapping does
+    not justify this semantic substitution. Formal ancestor domain/range are only
+    named thing; no formal material-domain or native-validator failure is claimed.
+  target_ids:
+  - traitmech:000041
+  field_paths:
+  - causal_graphs[0].edges[4].predicate_id
+  - causal_graphs[0].nodes[5]
+  evidence_ids:
+  - record
+  - biolink
+  - proposals
+  - shape
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; separately scope future changes
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: provisional-selection-meaning
+  issue_key: mutualism-provisional-selection-meaning
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Selection subject differs from the provisional definition
+  description: Edge2 models host control as a biological process, while provisional
+    METPO:2007401 describes an environmental condition exerting prolonged selective
+    pressure. The source supports selection, but the local subject representation
+    and proposed definition need reconciliation. This bounded proposal-consistency
+    issue is not an active upstream type failure.
+  target_ids:
+  - traitmech:000041
+  field_paths:
+  - causal_graphs[0].edges[2].predicate_id
+  - causal_graphs[0].nodes[3]
+  evidence_ids:
+  - record
+  - proposals
+  - hostcontrol
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; separately scope future changes
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    role: Maintained provisional selection definition
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: reviewed-signoff-not-documented
+  issue_key: mutualism-reviewed-signoff-not-documented
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The inspected REVIEWED provenance lacks a human-acceptance link
+  description: The six AI-assisted events do not identify human scientific acceptance.
+    The native checklist requires it for REVIEWED. This is a bounded local documentation
+    gap; it does not establish that private or remote approval never occurred.
+  target_ids:
+  - traitmech:000041
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - record
+  - search
+  - policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-relations
+  description: Reconcile relation meaning with the existing concepts during a separately
+    authorized curation pass.
+  finding_ids:
+  - material-producer-semantics
+  - provisional-selection-meaning
+  target_ids:
+  - traitmech:000041
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; separately scope future changes
+  - repository: CultureBotAI/TraitMech
+    path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    role: Maintained provisional selection definition
+  acceptance_checks:
+  - Inspect actual external definitions and local proposal meanings before assigning
+    a replacement.
+  - Preserve process identity, reciprocal dependence and evolutionary selection; do
+    not retype nodes merely to fit a predicate.
+  - Scope any shared mapping/proposal change separately and retain guarded writes,
+    appended history and required validation.
+- action_id: document-status-basis
+  description: Locate and document the human acceptance basis or retain the question
+    as unresolved.
+  finding_ids:
+  - reviewed-signoff-not-documented
+  target_ids:
+  - traitmech:000041
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/mutualism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Automated checks and AI-authored review do not establish a human approver.
+  - Any status change requires separate curation authorization and a new history event.
+limitations:
+- Bäckhed and Wilde were inspected through indexed abstracts only. Detailed full-text
+  wording and the stronger sufficient-condition reading of host-benefit-to-mutualism
+  remain unverified, not disproved.
+- The graph is assessed as a contextual ecological sketch. Arbitrary exchange and
+  host benefit alone do not establish positive net fitness for both partners.
+- Peng’s syntrophy terminology is directly attested in the cited synthetic-yeast paper.
+  This review does not adjudicate every historical definition or propose engineering
+  procedures.
+- The Biolink observation concerns descriptive semantics; inherited formal named-thing
+  typing is recorded separately. The METPO relations remain locally documented proposals.
+- The earlier corpus checks retain actual timestamps, baselined findings, superseded
+  failures and adapter skips at the unchanged scientific base.
+- No scientific record, mapping, proposal, status or history is changed; no human
+  scientific sign-off is conferred.
+notes:
+- Independent read-only source and ontology inspections informed this manually authored
+  whole-record assessment. The primary source surfaces, not provider or agent summaries
+  alone, are identified as evidence.
+tags:
+- record-review
+- mutualism
+- ecology
+- needs-curation
