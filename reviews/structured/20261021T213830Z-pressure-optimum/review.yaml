@@ -1,0 +1,1712 @@
+schema_version: 1.0.0
+review_id: 20261021T213830Z-pressure-optimum
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of pressure optimum
+started_at: '2026-10-21T21:31:47.438592Z'
+finished_at: '2026-10-21T21:38:30Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and bounded root primary/owner readings. Generic environmental pressure physiology,
+    measurement distinctions, literal text and formal roles assessed. Detailed pathogen
+    pressure-defense, fitness, AMR and intervention efficacy/methods are UNASSESSED_SCOPE.
+    No scientific record edited.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: two majors for internal grounding scope and imported state/process
+  roles, plus literal-format and human-acceptance minors.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/piezotolerant.yaml
+    sha256: 39c384c29f9ca7646a4f6c0533d317a8346703609e8c7634c517d4fb6c1546e9
+    role: context
+  - path: data/traits/environment/pressure_optimum.yaml
+    sha256: 98d6f055b4c928fa8d5a2992d82671920a4e7d5cd65d4b4166ab396c4015d0ea
+    role: target
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+    sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+    role: context
+  - path: proposals/metpo_traitmech_v4/proposal.md
+    sha256: c35d12fec87a3efdcfa320125446320315fca17bdb9228dd2b98ed00fe991bd8
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/pressure_optimum-deep-research-falcon.md
+    sha256: 4c121014ca66405fd3064c948b6be8e78960bec3b098ee232908b490addc8695
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_behavioral_habituation_trait.py
+    sha256: d10694ecc93aa91cf26c8e082573e67b28d0d8cb111b0deae762684da8d4b43a
+    role: context
+  - path: scripts/add_ds_8_system_trait.py
+    sha256: 873a0deaf648502d2f10d3a2c4aa2fcf8966ae5dfa08a4f276392f6077cf06b3
+    role: context
+  - path: scripts/add_extracellular_trail_memory_trait.py
+    sha256: 58e03fc80e042b3ecababe7475503dd09bec64095fdfc9c82d977fb8ed266098
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_nacl_optimum_graph_183.py
+    sha256: f1608bd82c1323c7d2306268860502ae3483d40f093e055b9b70cd463a1ecf04
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_nacl_delta_graph_183.py
+    sha256: 91b85da640baff48e0d317c206aaa24c1216b3725d9c9814c6fb9d4d975e192c
+    role: context
+  - path: scripts/review_nacl_delta_mid2_graph_183.py
+    sha256: 7d628bb0265a6f689dbeb47509be8c6528c0c64e6b3d59d84e5a8a0b9cb5e1a5
+    role: context
+  - path: scripts/review_nacl_optimum_graph_183.py
+    sha256: 6d0de1ccb1604fb87294432692cc051e3a8a1d52e082eaff6aa1f8d3cb621ffd
+    role: context
+  - path: scripts/review_nacl_range_low_graph_183.py
+    sha256: d7e6669f6d2aa295487a34cba7fe14666a979404614bdbdd3be529194649accf
+    role: context
+  - path: scripts/review_obligately_piezophilic_graph_183.py
+    sha256: d8fcbbb725162212cfce96bed9800e2cf08374170b7d929a1928248178111efb
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000004
+  path: data/traits/environment/pressure_optimum.yaml
+  label: pressure optimum
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Third record of the actual locally initialized batch 012 queue. Whole
+    244-line target and all 69 captured inputs verified before assessment; captured
+    piezotolerant supplies internal-grounding context. Local initialization at 21:02:18.445284
+    UTC does not assert publication of batch 011.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000004
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000004
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000004
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: pressure-optimum-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just validate data/traits/environment/pressure_optimum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-pressure-optimum-native
+- check_id: pressure-optimum-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just validate-strict data/traits/environment/pressure_optimum.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-pressure-optimum-strict
+- check_id: pressure-optimum-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just verify-snippets --record data/traits/environment/pressure_optimum.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Direct authorized network invocation passed with two NOT_IN_ABSTRACT results.
+    No target-specific initial failed attempt. Actual primary review establishes one
+    literal and one supported unit transcription.
+  evidence_ids:
+  - check-pressure-optimum-snippets-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000004
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000004
+  summary: Zero protein classes and instances in the contextual measurement graph;
+    no forced accession or detailed pressure-response query.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-pressure-optimum-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-native.log
+  locator: Executed 2026-10-21T21:32:12.205021+00:00 through 2026-10-21T21:32:12.938167+00:00;
+    metadata pressure-optimum-native.json
+  accessed_at: '2026-10-21T21:32:12.938167Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: 7c5515e3d682bd43db778a0e1ec8905a6628beece9a96d1065298fe191fa15e9
+- evidence_id: check-pressure-optimum-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-strict.log
+  locator: Executed 2026-10-21T21:32:12.205026+00:00 through 2026-10-21T21:32:13.329581+00:00;
+    metadata pressure-optimum-strict.json
+  accessed_at: '2026-10-21T21:32:13.329581Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: f114ce4329c4980d8f1be11760a1c2c86cfc32751ee15246e6200c6035f9409f
+- evidence_id: check-pressure-optimum-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-snippets-network.log
+  locator: Executed 2026-10-21T21:32:29.930181+00:00 through 2026-10-21T21:32:33.233290+00:00;
+    metadata pressure-optimum-snippets-network.json
+  accessed_at: '2026-10-21T21:32:33.233290Z'
+  support: context_only
+  summary: Direct authorized network invocation passed with two NOT_IN_ABSTRACT results.
+    No target-specific initial failed attempt. Actual primary review establishes one
+    literal and one supported unit transcription.
+  snapshot_sha256: 3bfb198717b17fbb46b104fb49a0a4d4a2029033443281996663c84dfd426383
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/pressure_optimum.yaml
+  locator: Entire current 244-line record
+  accessed_at: '2026-10-21T21:31:47.924099Z'
+  support: supports
+  summary: Nine nodes, seven edges, two snippets, one canonical and eleven AI events
+    covered.
+  snapshot_sha256: 98d6f055b4c928fa8d5a2992d82671920a4e7d5cd65d4b4166ab396c4015d0ea
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority or referenced class
+  accessed_at: '2026-10-21T21:34:39.162037Z'
+  support: supports
+  summary: Referent-based identity and imported formal roles.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority or referenced class
+  accessed_at: '2026-10-21T21:34:39.162037Z'
+  support: supports
+  summary: Source scope, literal copied snippets and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority or referenced class
+  accessed_at: '2026-10-21T21:34:39.162037Z'
+  support: supports
+  summary: Current node facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority or referenced class
+  accessed_at: '2026-10-21T21:34:39.162037Z'
+  support: supports
+  summary: Whole-record identity, evidence, graph, provenance and readiness checks.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: internal-piezotolerant
+  kind: authority
+  reference: data/traits/environment/piezotolerant.yaml
+  locator: Captured maintained authority or referenced class
+  accessed_at: '2026-10-21T21:34:39.162037Z'
+  support: supports
+  summary: Captured internal class additionally requires similar or faster atmospheric-pressure
+    growth; not generic pressure capability.
+  snapshot_sha256: 39c384c29f9ca7646a4f6c0533d317a8346703609e8c7634c517d4fb6c1546e9
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and all current byte comparisons bound.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck; no new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Local-only initialization on verified prior local commit; publication status
+    remains separately documented.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:20.020211Z'
+  support: supports
+  summary: All 69 inputs verified before grounding assessment.
+  snapshot_sha256: 0f3d345e420c09be038a04071cabaf3e81e2053a90a5337b3a4a35472b9e03e5
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/identity-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.160523Z'
+  support: supports
+  summary: Retained optimum fallback and distinct narrow internal piezotolerant grounding.
+  snapshot_sha256: 9a734b37c7e4212a74088095e63383ac200009d73cc2234d7f6ac89061aae626
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/node-edge-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.161036Z'
+  support: supports
+  summary: All nine nodes/seven edges and two components; imported roles separate
+    from biological efficacy.
+  snapshot_sha256: fc194ecbccc8d87b253a75b48d79534d8b6d71cdb1ce500340f1459e8855f098
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.161412Z'
+  support: supports
+  summary: Record-only node 6 grounding owner, conditional predicate recurrence and
+    bounded human search.
+  snapshot_sha256: 1f480ada81d1a193eb0b1736309cd7fccee6ee037403b5d1ea97b69c4a590cc7
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/expression-and-readiness-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.161797Z'
+  support: supports
+  summary: Canonical catalog applicability and zero-protein contextual graph.
+  snapshot_sha256: 90f35a513ad5aec5d35782f10abe587e5765e264dc02c4d9114a1726c4602ffb
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/catalog-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:30.969859Z'
+  support: supports
+  summary: Original catalog/runner receipts separate from current copies.
+  snapshot_sha256: 629634ac62b65f4a9724c96fe5a35eec1c0cadb769d1560db7a4bef4a0a6c7e9
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/local-authority-excerpts.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.152228Z'
+  support: supports
+  summary: Exact v5/v4/v8 proposals, maintained mappings, schema and Biolink.
+  snapshot_sha256: e5546222d8fd3eec6385f4fa8ae034f6f63b869b7989ee3f46d1a0b9346e2e5c
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:39.162182Z'
+  support: supports
+  summary: Actual selected primary/owner readings; zero matching repository histories
+    and all eleven current AI events.
+  snapshot_sha256: 11469b92e3cc3749f56d9bf0ab44c83738a1a1fbffe83324d3cf2e2efa38d16c
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:35:07.911363Z'
+  support: supports
+  summary: Frozen 27 grounding artifacts verified.
+  snapshot_sha256: b655e278f5c46ae24d55ffc469e9d1a58e1573dd76bddd4e5850bb3e59125b8c
+- evidence_id: taxon-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/taxonomy-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:30.969133Z'
+  support: supports
+  summary: Original Colwellia request and retained initial DNS failure separate from
+    current copies.
+  snapshot_sha256: 8c202c33b74c5e68a23288152f246ea5f019f86d437ebd840b8165e5e265f9d7
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Actual selected METPO XML
+  accessed_at: '2026-10-21T21:32:20.140594Z'
+  support: supports
+  summary: Broader pressure classes do not replace exact pressure optimum; local v5
+    separately sourced.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Actual RO2213 and RO2211 rows
+  accessed_at: '2026-10-21T21:32:20.023692Z'
+  support: supports
+  summary: Positive regulation inherits process subject and object requirements.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: pato-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/pato.db
+  locator: Actual PATO0001025 rows
+  accessed_at: '2026-10-21T21:32:20.027194Z'
+  support: supports
+  summary: Pressure physical quality supports the ambient condition identity; no process
+    event inferred.
+  snapshot_sha256: 179ab512b5c3a8827c74e2a496da575e2908a84740429deef265d58c9ce61d3b
+- evidence_id: proposal-v5-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Captured TSV rows 5/6
+  accessed_at: '2026-10-21T21:34:39.152228Z'
+  support: supports
+  summary: Proposed 1007602 preserves the atmospheric-rate piezotolerant criterion;
+    1007603 lifts pressure optimum. Neither is an installed replacement.
+  snapshot_sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+- evidence_id: proposal-v4-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+  locator: Captured TSV row 3
+  accessed_at: '2026-10-21T21:34:39.152228Z'
+  support: supports
+  summary: Defines permits a measurement axis or feature to parameterize a numerical
+    trait.
+  snapshot_sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+- evidence_id: proposal-v8-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+  locator: Captured TSV row 3
+  accessed_at: '2026-10-21T21:34:39.152228Z'
+  support: supports
+  summary: Confers permits presence, activity or state to contribute to a trait, with
+    broad formal endpoints.
+  snapshot_sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+- evidence_id: taxon-colwellia
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-grounding-agent/taxon1513592.xml
+  locator: Whole official taxonomy response; original successful request time
+  accessed_at: '2026-10-21T16:11:20.071001Z'
+  support: supports
+  summary: Official species and MTCD1 aliases positive; phenotype separately sourced.
+  snapshot_sha256: 44883620d8bdc159d01e53d74afc493e730bac233c92303887b704c10061050e
+- evidence_id: meta-membrane
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/membrane-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.668312Z'
+  support: supports
+  summary: Actual review abstract describes non-universal lipid responses and pressure/temperature
+    context; selected body separately bound.
+  snapshot_sha256: 60b0dd82b02eddbe01f9944f485da11c5ea9e55ec36f65b501a3a78ba9b1e9b3
+- evidence_id: meta-colwellia
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/colwellia-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.694246Z'
+  support: supports
+  summary: Actual primary abstract reports MTCD1 optimum 120 MPa at 6 °C, distinct
+    from the 80–140 MPa interval.
+  snapshot_sha256: e74a6f54136e6dcd2ab87b38d86de68e793d0dc28218b87b9f2bbd3ccd4103d2
+- evidence_id: meta-piezolytes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/piezolytes-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T20:42:51.672336Z'
+  support: supports
+  summary: Actual review identity/abstract; selected hydration wording and numerical
+    observation separately bound to body.
+  snapshot_sha256: f841a93f68b50bd7d184e38aeaf8ed5ebc840e76fd6864c64cedfb77bff21881
+- evidence_id: body-membrane
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/membrane.xml
+  locator: Selected actual JATS body paragraphs, zero-based indices
+  accessed_at: '2026-10-21T16:07:35.045859Z'
+  support: supports
+  summary: Actual body paragraph 1 supplies literal definition and comparative tolerance
+    distinction; paragraphs 10/12/13 retain generic lipid exceptions.
+  snapshot_sha256: d8320b3073b404cd79da19795d94f02477ce8a34accb22809294e05d1e72c032
+- evidence_id: body-piezolytes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/piezolytes.xml
+  locator: Selected actual JATS body paragraphs, zero-based indices
+  accessed_at: '2026-10-21T20:43:59.908978Z'
+  support: supports
+  summary: Actual body paragraphs 26/27 support existing hydration attribution and
+    20–30 MPa observation with solute/taxon/condition limits.
+  snapshot_sha256: b32571a4a2b468a959e4eb6d6b947576faa188eb3100daf47cc7840b23d2724e
+- evidence_id: meta-cations
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/cations-metadata.json
+  locator: Actual fresh indexed response; bounded metadata/abstract scope
+  accessed_at: '2026-10-21T21:32:33.498195Z'
+  support: supports
+  summary: Actual environmental Hujiaoplasma nucleasis source identity and abstract;
+    proposed-model caption separately cited. Detailed experiments/phage mechanisms
+    excluded.
+  snapshot_sha256: bfb39e71d7c85a8efa10ca0de1417daed172844a339ecbeea7b8acac7f9fae3a
+- evidence_id: meta-osmolytes
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/osmolytes-metadata.json
+  locator: Actual fresh indexed response; bounded metadata/abstract scope
+  accessed_at: '2026-10-21T21:32:33.500391Z'
+  support: supports
+  summary: Actual M. sediminis YLB-01 study identity/abstract; specific cross-taxa
+    five-solute list not verified by inspected metadata. Incidental protocol details
+    not adopted.
+  snapshot_sha256: 0363468628c065de0eaa1d1e028386573267c2f3e5561c2b9bb49e58c1576786
+- evidence_id: body-cations
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/cations.xml
+  locator: Actual JATS body paragraph 18 proposed-model caption
+  accessed_at: '2026-10-21T21:33:07.559814Z'
+  support: supports
+  summary: Caption explicitly presents the environmental cation-import/osmotic account
+    as a proposed model; current notes retain proposed status. No detailed efficacy
+    or intervention certification.
+  snapshot_sha256: cd9d8b5e47f8fd2585cd7baec2f517a4b7cdec5de2c8caaa21f9b7809ad1caa0
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/source-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.111930Z'
+  support: supports
+  summary: Final five-work source audit; one unit-format minor and separately corroborated
+    grounding scope.
+  snapshot_sha256: 867c7e4f1c5ce45e43a9271dea09bcf177b003a3bbf9d36a1315aa42b54ffd57
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.107657Z'
+  support: supports
+  summary: All five identities and distinct abstract/body reading scopes.
+  snapshot_sha256: e3076e727d3b7127d5caf6c20debf5ec4d1c1d64ec5e27c925e35f7c509fa15c
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/placement-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.108052Z'
+  support: supports
+  summary: All eleven external placements and ten grounding fields accounted for.
+  snapshot_sha256: 9d81ff5980aa2bfdd488b4db7befbd2a716694bd4dbf9d5a9297726af5eda270
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/snippet-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.109963Z'
+  support: supports
+  summary: One supported unit transcription and one literal phrase; numbers preserved.
+  snapshot_sha256: 3350828fdc77a4ca64f0d9174612ac9c450c8e3b0fbbe3a444a272dccd0856f3
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/node-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.108256Z'
+  support: supports
+  summary: All nine source node contexts.
+  snapshot_sha256: 1e09bbb33db26ef53905d181a135e960f88a6bc141febd882844ac74878507e9
+- evidence_id: edge-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/edge-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.108155Z'
+  support: supports
+  summary: All seven source edge contexts, proposed-model scope and unknown nearest
+    attribution.
+  snapshot_sha256: 2018ddb90bc8dbfe0132ca2e75e11235ae4aa644474916f243e3b9644505c5a6
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/publication-status-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.107945Z'
+  support: supports
+  summary: Actual returned publication-status fields; bounded history checks.
+  snapshot_sha256: 8929df99914f460a2e9518e0f38a714259873d1e2afbef421c21660d41f19da1
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/selected-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.110172Z'
+  support: supports
+  summary: Actual selected reading scopes; incidental excluded content not adopted.
+  snapshot_sha256: 90da3000d62c479eb93a51a6f26bc692ac5a4bd460d6cd27bbd9eb04a97cc88d
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/access-limitations.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.111083Z'
+  support: supports
+  summary: Colwellia body not acquired/inspected; osmolytes HTTP500/CAPTCHA/subscription
+    preview limits retained.
+  snapshot_sha256: 254db702809da1005bfea80000d4b7de2c7c2a1ea48493f1ce235501b27a5fe2
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/source-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:24.983435Z'
+  support: supports
+  summary: Original metadata/body acquisitions separate from current 21:32:24 copies.
+  snapshot_sha256: fa4ea8c85ca0ccd558dff64827d193dddc20eefe2a654893d2d6ad6a2f32ad37
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/canonical-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.110082Z'
+  support: supports
+  summary: Positive strain/temperature-specific optimum 120 MPa at 6 °C.
+  snapshot_sha256: 7caeafda1406b472df0ba593c391ade4eb5482b31e683c1f97633e188bb90140
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/native-check-context.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.110983Z'
+  support: supports
+  summary: All three current focused commands pass, including direct network snippet
+    check; no current initial failed attempt.
+  snapshot_sha256: d44ab95ac7efdde427dd540ae3187b4106360300940aff489979beffec34e776
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/final-capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.112087Z'
+  support: supports
+  summary: All 69 captured inputs unchanged.
+  snapshot_sha256: 581da9e496d415341669a617f8016dd527f06479bb97362aea3ce56abe44e74c
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:46.116634Z'
+  support: supports
+  summary: Thirty-four frozen source artifacts verified.
+  snapshot_sha256: c700c033457932683a171c7d7701a30c9e04917b14c93b16476b9ee0b69f17c9
+- evidence_id: osmolytes-browser
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/osmolytes-browser-response.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:33:20Z'
+  support: supports
+  summary: 'Actual web-tool response, not raw HTML: publisher abstract preview and
+    PMC CAPTCHA, not full body.'
+  snapshot_sha256: d2719602b81f4b5748f0241be3c731704f35b3854421d25d54c5ebbf02cee7d6
+- evidence_id: osmolytes-failure
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-agent/osmolytes.xml.access.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:33:06.574149Z'
+  support: supports
+  summary: HTTP500 request receipt; retained .xml file contains error bytes, not primary
+    article text.
+  snapshot_sha256: 7bf62bcdc64a8e172b9e62395d71eb7d2d095a9ab59d4ba8980d5dd6fc477395
+- evidence_id: root-reading-76
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/additional-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:07.646208Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: fd568cc3cf5f6f6e0766475ad4e2660e03f8c7e0d0d7a5c48656c236f6245e0f
+- evidence_id: root-reading-77
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/biolink-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:51.061681Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 2fb0cf74c98efb44d14a08d218ecc9928cf9bbd36b316aa003ab6ce3ba12e27d
+- evidence_id: root-reading-78
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/definition-canonical-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:33:15.933568Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: bc44a392d75f05727b5a64c5735bf2f612663756baea397be3d09011c17dcc16
+- evidence_id: root-reading-79
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/frozen-audits-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:35:26.276694Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 876b89bdfe63d68dcab14b8d5103f1d2858c1fee36bbda29847f398092687bfd
+- evidence_id: root-reading-80
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/identity-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:50.863452Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: bc01cc4bb75fce128b221046c096b0bb0383a96d5736e27928a0814004bebc8f
+- evidence_id: root-reading-81
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:33:31.242648Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 835ac992cbaca1c7ea15813fd410d0f17309a692aed4ccb2e203591f8e2a1748
+- evidence_id: root-reading-82
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/pato-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:07.650704Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 6f7bc5dbc5b014d261b5fc17500c75968878752b1ee063ff70b6250239dfefd3
+- evidence_id: root-reading-83
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/ro-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:32:50.844115Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 53b9a0c7d841a4c1139d6b4406109fec4956777dcd9a30ee488f59e9b4fd32f7
+- evidence_id: root-reading-84
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/root-reading-attestation.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:33:15.944423Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: dd854e46bfc09336dc67ba2d99fb5a9453f1bcf1fdf92572353e5913acb84d40
+- evidence_id: root-reading-85
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/source-access-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:36:13.320369Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: fdaa195703b96717b96ca82cf56cfc62e25f36df8ceea1776e7bf25e1f304742
+- evidence_id: root-reading-86
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-source-root/taxonomy-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:34:41.282799Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    an article-body hash.
+  snapshot_sha256: 9715877a08d85bf3d5abd84e89327f54b392112a678cf3a85eb51f8945f5084c
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T21:37:20.447428Z'
+  support: supports
+  summary: Exact fields, disposition and bindings verified.
+  snapshot_sha256: 7306a48b2b839b93eaf37f81267dce1970011574be3a33665322a159bdc32862
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/pressure-optimum-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T21:37:46.135175Z'
+  support: supports
+  summary: Final findings and nonfindings control serialization.
+  snapshot_sha256: 80acc83c98bc02e887acfe22c7490c68062562d1f8589f2c09b100fbe641eb87
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: optimum and internal trait scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000004
+  summary: The primary pressure-optimum fallback is a pressure coordinate at peak
+    growth, with exact local proposed 1007603 and active phenotype parent. Separately,
+    node 6 declares broad high-pressure growth/survival capacity but grounds to a
+    class requiring similar or faster atmospheric-pressure growth. Count one internal
+    grounding concern, not duplicate incoming-edge findings.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - proposal-v5-primary
+  - internal-piezotolerant
+  - body-membrane
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: measured optimal pressure'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: Assigned primary abstract explicitly reports optimum 120 MPa at 6 °C. The
+    definition records a pressure coordinate, distinct from maximum pressure, interval
+    breadth and maximal growth-rate value. Generic membrane context is not exclusive
+    optimum calibration.
+  evidence_ids:
+  - record
+  - sources
+  - meta-colwellia
+  - canonical-scope
+  - body-membrane
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: parent and local predicate authorities'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: Active phenotype parent is appropriate. Local defines admits an axis parameterizing
+    a numerical trait; confers admits chemical/state/process contributors to a trait.
+    Broad local endpoints do not waive imported RO requirements or establish node
+    6 exact identity.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - proposal-v4-primary
+  - proposal-v8-primary
+  - local-authority
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: all assigned citations and placements'
+  outcome: unknown
+  target_ids:
+  - traitmech:000004
+  summary: Five works and eleven external placements accounted for. Actual cation
+    model and review hydration wording are attributable with scope qualifications.
+    The cross-taxa solute list in the inaccessible nearest study body remains UNKNOWN,
+    not refuted. Metadata, actual JATS and browser preview are separately identified.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - source-status
+  - source-access
+  - source-reuse
+  - edge-sources
+  - body-cations
+  - body-piezolytes
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: literal unit-format fidelity'
+  outcome: concern
+  target_ids:
+  - traitmech:000004
+  summary: First snippet supports all interval, optimum and temperature values after
+    degrees C to °C normalization; only literal format differs. Second snippet is
+    literal in the assigned membrane body. Native NOT_IN_ABSTRACT results remain unchanged.
+  evidence_ids:
+  - snippets
+  - body-membrane
+  - meta-colwellia
+  - playbook
+  - native-checks
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: strain and temperature-specific optimum'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: Colwellia marinimaniae MTCD1 optimum 120 MPa at 6 °C is explicitly reported
+    by the assigned abstract. The 80–140 MPa range and derived 60 MPa breadth are
+    separate quantities. Official species/type aliases independently verify identity
+    without supplying phenotype.
+  evidence_ids:
+  - canonical-scope
+  - meta-colwellia
+  - taxon-colwellia
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all nine current referents'
+  outcome: concern
+  target_ids:
+  - traitmech:000004
+  summary: Pressure condition, maximal-growth-rate QUALITY, concentration/pressure
+    STATE and explicit accumulation/stabilization processes fit their descriptions.
+    Node 6 TRAIT type is coherent, but its narrow literal grounding is not entailed
+    by its broad capacity description. No extra protein or quantitative-value finding.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - pato-primary
+  - internal-piezotolerant
+  details: '[{"index": 0, "node": {"node_id": "pressure_optimum_trait", "label": "pressure
+    optimum", "node_type": "TRAIT", "grounding": "traitmech:000004", "description":
+    "Hydrostatic pressure at which growth rate is maximal."}, "assessment": "supported",
+    "reason": "Self-grounded pressure coordinate at maximal growth, matching the primary
+    definition."}, {"index": 1, "node": {"node_id": "hydrostatic_pressure", "label":
+    "hydrostatic pressure", "node_type": "ENVIRONMENTAL_FACTOR", "description": "Ambient
+    hydrostatic pressure imposed on the cell.", "grounding": "PATO:0001025"}, "assessment":
+    "supported", "reason": "Ambient pressure condition is coherently close-matched
+    to the PATO physical quality."}, {"index": 2, "node": {"node_id": "maximal_growth_rate",
+    "label": "maximal growth rate", "node_type": "QUALITY", "description": "Peak specific
+    growth rate achieved at the optimum pressure."}, "assessment": "supported", "reason":
+    "Peak specific growth rate is explicitly a measurable quality, distinct from the
+    pressure coordinate; association does not equate their identities."}, {"index":
+    3, "node": {"node_id": "membrane_unsaturated_fatty_acids", "label": "membrane
+    unsaturated fatty acids", "node_type": "CHEMICAL", "description": "Unsaturated/polyunsaturated
+    fatty acids whose abundance in membrane lipids rises with increasing hydrostatic
+    pressure."}, "assessment": "supported", "reason": "Fatty-acid constituents denote
+    material chemicals; no single chemical accession is forced for the broad collective
+    label."}, {"index": 4, "node": {"node_id": "intracellular_cation_concentration",
+    "label": "intracellular cation concentration", "node_type": "STATE", "description":
+    "Intracellular concentration of cations (Mg2+, K+, Na+) raised by cation import
+    under high hydrostatic pressure."}, "assessment": "supported", "reason": "Cation
+    concentration is a cellular state. Mention of its increase does not turn the node
+    itself into the import process."}, {"index": 5, "node": {"node_id": "intracellular_osmotic_pressure",
+    "label": "intracellular osmotic pressure", "node_type": "STATE", "description":
+    "Osmotic pressure inside the cell, raised by cation/compatible-solute accumulation."},
+    "assessment": "supported", "reason": "Intracellular osmotic pressure denotes a
+    state/value, not the process establishing it."}, {"index": 6, "node": {"node_id":
+    "hhp_tolerance", "label": "high hydrostatic pressure tolerance", "node_type":
+    "TRAIT", "grounding": "traitmech:000003", "description": "Capacity of an organism
+    to grow and survive under high hydrostatic pressure."}, "assessment": "major_grounding_scope",
+    "reason": "TRAIT is an appropriate disposition type, but the literal grounding
+    points to the narrower atmospheric-rate-defined piezotolerant class. The declared
+    broad high-pressure growth/survival capability does not entail that criterion."},
+    {"index": 7, "node": {"node_id": "compatible_solute_accumulation", "label": "compatible
+    solute accumulation", "node_type": "BIOLOGICAL_PROCESS", "description": "Accumulation
+    of piezolytes/osmolytes (glutamate, betaine, beta-hydroxybutyrate, proline, TMAO)."},
+    "assessment": "supported", "reason": "Accumulation is explicitly a biological
+    process; detailed solute effects remain unassessed."}, {"index": 8, "node": {"node_id":
+    "protein_stabilization_preferential_hydration", "label": "protein stabilization
+    by preferential hydration", "node_type": "BIOLOGICAL_PROCESS", "description":
+    "Stabilization of proteins by compatible solutes via preferential hydration."},
+    "assessment": "supported", "reason": "Stabilization is explicitly a biological
+    process. Detailed molecular mechanism and efficacy are outside this audit."}]'
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all seven relation roles'
+  outcome: concern
+  target_ids:
+  - traitmech:000004
+  summary: RO2213 at edge 3 inherits process/process requirements from RO2211; its
+    current endpoints denote concentration and osmotic-pressure states. Mention of
+    import in the edge description does not change those referents. RO2213 edge 5
+    explicitly relates processes and is formally positive; local confers and defines
+    fit their maintained roles.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - local-authority
+  - owners
+  - challenge
+  - adjudication
+  details: '[{"index": 0, "edge": {"subject": "hydrostatic_pressure", "predicate":
+    "defines", "object": "pressure_optimum_trait", "description": "The hydrostatic-pressure
+    axis defines the value at which growth is fastest.", "evidence": [{"reference":
+    "DOI:10.3389/fmolb.2022.1058381", "notes": "Pressure-adaptation review supports
+    an organism-specific optimal growth pressure as the defining piezophile quantity."}],
+    "predicate_id": "METPO:2007500"}, "assessment": "supported", "reason": "Exact
+    local v4 defines permits an environmental measurement axis to parameterize the
+    numerical optimum trait; no imported process constraint."}, {"index": 1, "edge":
+    {"subject": "pressure_optimum_trait", "predicate": "associated with", "object":
+    "maximal_growth_rate", "description": "The optimum pressure marks the peak of
+    the pressure-versus-growth curve.", "evidence": [{"reference": "DOI:10.1099/ijsem.0.001671",
+    "notes": "Colwellia marinimaniae MTCD1 illustrates a measurable pressure optimum
+    (120 MPa)."}], "predicate_id": "biolink:associated_with"}, "assessment": "qualified_positive",
+    "reason": "Broad Biolink association links the optimum coordinate and achieved
+    peak growth rate without asserting identity or an independently demonstrated causal
+    execution role."}, {"index": 2, "edge": {"subject": "membrane_unsaturated_fatty_acids",
+    "predicate": "confers", "object": "pressure_optimum_trait", "description": "Increased
+    membrane unsaturated/PUFA content confers growth at elevated hydrostatic pressure,
+    shaping the pressure optimum.", "evidence": [{"reference": "DOI:10.3389/fmolb.2022.1058381",
+    "notes": "Review: abundance of membrane lipids with unsaturated and branched-chain
+    fatty acids rises with increasing HHP."}], "predicate_id": "METPO:2007700"}, "assessment":
+    "supported_formal_scope", "reason": "Local confers admits a chemical subject and
+    trait object. Generic support for elevated-pressure growth is not automatically
+    exact-optimum calibration; source-strength scope is independently audited."},
+    {"index": 3, "edge": {"subject": "intracellular_cation_concentration", "predicate":
+    "increases", "object": "intracellular_osmotic_pressure", "description": "Increased
+    cation import raises intracellular osmotic pressure.", "evidence": [{"reference":
+    "DOI:10.1128/mbio.00958-23", "notes": "Authors propose increased cation import
+    to raise intracellular osmotic pressure under HHP."}], "predicate_id": "RO:0002213"},
+    "assessment": "major", "reason": "RO2213 positively regulates inherits process
+    domain and range from RO2211. Both declared endpoints are concentration/pressure
+    states, despite the edge description mentioning increased import. This is a referent-based
+    role mismatch, not a blanket prohibition on an enum."}, {"index": 4, "edge": {"subject":
+    "intracellular_osmotic_pressure", "predicate": "confers", "object": "hhp_tolerance",
+    "description": "Elevated intracellular osmotic pressure confers high hydrostatic
+    pressure tolerance.", "evidence": [{"reference": "DOI:10.1128/mbio.00958-23",
+    "notes": "Proposed HHP-tolerance model: importing cations to raise intracellular
+    osmotic pressure."}], "predicate_id": "METPO:2007700"}, "assessment": "supported_formal_scope_with_identity_issue",
+    "reason": "Local confers explicitly admits state to trait; no local domain failure.
+    Its object grounding inherits the separately counted node6 scope problem, not
+    a second formal edge finding."}, {"index": 5, "edge": {"subject": "compatible_solute_accumulation",
+    "predicate": "promotes", "object": "protein_stabilization_preferential_hydration",
+    "description": "Compatible solutes (piezolytes) stabilize proteins by preferential
+    hydration.", "evidence": [{"reference": "DOI:10.3390/microorganisms11071629",
+    "notes": "Compatible solutes displace water bound to proteins via preferential
+    hydration; glutamate/betaine/beta-hydroxybutyrate detected at 20-30 MPa."}], "predicate_id":
+    "RO:0002213"}, "assessment": "supported_formal_scope", "reason": "Accumulation
+    and stabilization are explicitly processes, so the RO2213 inherited process/process
+    roles fit. This does not certify detailed source biology or intervention efficacy."},
+    {"index": 6, "edge": {"subject": "compatible_solute_accumulation", "predicate":
+    "confers", "object": "hhp_tolerance", "description": "Compatible-solute (piezolyte)
+    accumulation confers pressure tolerance.", "evidence": [{"reference": "DOI:10.1007/s00253-023-12906-5",
+    "notes": "Osmolyte-based protection (proline, glutamate, betaine, beta-hydroxybutyrate,
+    TMAO) supports pressure tolerance across taxa."}], "predicate_id": "METPO:2007700"},
+    "assessment": "supported_formal_scope_with_identity_issue", "reason": "Local confers
+    admits biological process to trait. The broad pressure-tolerance wording is coherent
+    generically; node6 narrower literal grounding remains the single identity finding."}]'
+- assessment_id: biology
+  area: evidence
+  topic: 'Native checklist: generic environmental attribution and limits'
+  outcome: unknown
+  target_ids:
+  - traitmech:000004
+  summary: Cation/osmotic notes preserve proposed status for the assigned environmental
+    model. Piezolyte review observations differ by solute, taxon and conditions, including
+    glutamate/betaine contrasts; the graph is not interpreted as universal accumulation
+    or necessity. Detailed pressure-defense, fitness, AMR, phage interventions, efficacy
+    and methods are UNASSESSED_SCOPE.
+  evidence_ids:
+  - edge-sources
+  - source-reading
+  - source-access
+  - body-membrane
+  - body-cations
+  - body-piezolytes
+  - meta-osmolytes
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: NONMECHANISTIC applicability'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: Two disclosed components, zero protein classes and zero instances are proportionate
+    to the contextual quantitative graph. No mandatory connector, pathway, molecular
+    instance, additional canonical or experiment is prescribed.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - ground-reading
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: catalog applicability and bounded query scope'
+  outcome: unknown
+  target_ids:
+  - traitmech:000004
+  summary: Canonical Colwellia/MTCD1 aliases do not match the retained 20-organism
+    / 28-dataset catalog. Other source-organism coverage is not globally denied. No
+    strain-resolved locus or detailed pressure-response query was run.
+  evidence_ids:
+  - expression
+  - catalog-reuse
+  - taxon-colwellia
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: record and conditional writers'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: Record alone owns current node 6 grounding; no exact direct writer was
+    established. Predicate mapping/shared grounder conditionally recur on empty IDs
+    and skip nonempty values. Exact canonical backfill and growth-rate QUALITY normalization
+    are positive context. Historical TRAIT-object migrations and sibling writers do
+    not repair the current grounding or edge 3.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - local-authority
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - traitmech:000004
+  summary: Eleven current events are all AI. Ignored-inclusive target/all-node/source/canonical
+    discovery found zero repository history leads; 206 matching paths and 68 structured
+    review arrays contain zero exact current-target arrays. This bounds the missing
+    acceptance link without excluding remote or private review.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual checks and local preparation'
+  outcome: supported
+  target_ids:
+  - traitmech:000004
+  summary: All 69 inputs match. Current native, strict and direct network snippet
+    commands pass; no initial target-specific failure is invented. Original common
+    failures/retries remain preserved. Actual B11 QC/B12 qualification/postcheck and
+    local initialization are distinct from pending B11 publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - native-checks
+  - check-pressure-optimum-native
+  - check-pressure-optimum-strict
+  - check-pressure-optimum-snippets-network
+findings:
+- finding_id: piezotolerant-grounding-scope
+  issue_key: pressure-optimum-piezotolerant-grounding-scope
+  category: identity
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Broad pressure capacity is grounded to a narrower growth-preference class
+  description: Node 6 describes capacity to grow and survive under high pressure.
+    Its literal traitmech:000003 grounding additionally requires similar or faster
+    growth at atmospheric pressure. Broad capacity and proposed environmental contributions
+    do not establish that comparative criterion. Preserve current TRAIT type and count
+    the internal grounding mismatch once, without duplicate incoming-edge findings.
+  target_ids:
+  - traitmech:000004
+  field_paths:
+  - causal_graphs[0].nodes[6].grounding
+  evidence_ids:
+  - identity
+  - node-edges
+  - internal-piezotolerant
+  - proposal-v5-primary
+  - body-membrane
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: state-regulation-role
+  issue_key: pressure-optimum-state-regulation-role
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Process regulation is asserted between concentration and pressure states
+  description: RO2213 positively regulates inherits process domain and range. Current
+    edge 3 endpoints explicitly denote cation concentration and intracellular osmotic-pressure
+    states, even though the edge description mentions import. This referent-based
+    role mismatch preserves the assigned proposed-model attribution and is not a blanket
+    enum prohibition or request for mechanism repair.
+  target_ids:
+  - traitmech:000004
+  field_paths:
+  - causal_graphs[0].edges[3]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - schema
+  - owners
+  - body-cations
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard increases/promotes rows may recur on empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair the
+      current assertion.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: literal-unit-format
+  issue_key: pressure-optimum-literal-unit-format
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Snippet changes the source unit notation
+  description: The record writes degrees C where the actual primary abstract uses
+    °C. All interval, optimum and temperature values remain supported after normalization;
+    only the maintained literal copied-span rule is implicated.
+  target_ids:
+  - traitmech:000004
+  field_paths:
+  - evidence[0].snippet
+  evidence_ids:
+  - snippets
+  - meta-colwellia
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: pressure-optimum-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Current reviewed status lacks a locally attributable acceptance link
+  description: Eleven AI events, zero matching repository history leads and ignored-inclusive
+    206 matching paths/68 parsed review arrays/zero exact targets do not identify
+    current-target human acceptance. This is a bounded traceability gap, not proof
+    that private or remote review never occurred.
+  target_ids:
+  - traitmech:000004
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-internal-grounding
+  description: Reconcile node 6 literal grounding with its declared broad capability
+    during authorized curation.
+  finding_ids:
+  - piezotolerant-grounding-scope
+  target_ids:
+  - traitmech:000004
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the valid TRAIT facet and source-specific proposed-model context.
+  - Do not invent an atmospheric growth-rate comparison, transfer strain phenotypes
+    or duplicate this issue on incoming confers edges.
+- action_id: reconcile-imported-role
+  description: Reconcile edge 3 imported process-regulation roles with its actual
+    state referents.
+  finding_ids:
+  - state-regulation-role
+  target_ids:
+  - traitmech:000004
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard increases/promotes rows may recur on empty predicate fields.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair the
+      current assertion.
+  acceptance_checks:
+  - Preserve supported proposed environmental model attribution.
+  - Respect nonempty-ID guards; mapping changes alone do not repair current assertions.
+  - No detailed mechanism reconstruction or intervention prescription.
+- action_id: restore-literal-format
+  description: Use the actual source unit notation for the supported snippet.
+  finding_ids:
+  - literal-unit-format
+  target_ids:
+  - traitmech:000004
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve all numerical values and source identity.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000004
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/pressure_optimum.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain all eleven AI events and bounded ignored-inclusive search evidence.
+  - No contact or automatic status promotion authorized.
+limitations:
+- Detailed pathogen pressure-defense, fitness, AMR, phage intervention, survival-training
+  efficacy and methods are UNASSESSED_SCOPE; incidental displayed content is not adopted.
+- Canonical optimum 120 MPa at 6 °C is explicitly supported, distinct from maximum
+  pressure and interval breadth. Colwellia primary body was not acquired/inspected;
+  no failed body request or paper-wide absence is implied.
+- The osmolytes DOI identifies an environmental M. sediminis YLB-01 study. EPMC fulltext
+  returned HTTP500, PMC showed CAPTCHA and publisher supplied a subscription abstract
+  preview; exact across-taxa five-solute attribution remains UNKNOWN, not false.
+- Assigned cation/osmotic text is a proposed environmental model; the current notes
+  retain that status. Selected review hydration wording is attributable, with solute/taxon/condition
+  distinctions; no independent detailed efficacy or universal mechanism certification.
+- Generic lipid contributions do not alone calibrate every optimum, and known source
+  exceptions remain qualifications. Current local confers roles are separate from
+  the one narrow internal-grounding issue.
+- Fallback/proposed 1007603 is not an installed active replacement. Node 6 grounding
+  references a narrower atmospheric-rate criterion; no corrected identifier or experimental
+  test is prescribed.
+- Original metadata/body acquisitions, current 21:32:24 copies, new metadata at 21:32:32–33
+  and cation body at 21:33:05–07 are separately receipted. Official taxonomy retains
+  original 16:11:19–20 successful request and prior DNS failure.
+- Zero protein classes/instances and two contextual components do not require speculative
+  connectors. Canonical catalog absence is bounded; no global source-organism dataset
+  absence is claimed.
+- Actual prior QC, current qualification and local initialization do not assert B11
+  remote publication; publication remains separately documented.
+notes:
+- Final root adjudication and independent challenge are pinned; no builder/helper
+  import or execution during preparation.
+- 'Coverage: five works/five forms, eleven external placements, ten grounding fields,
+  nine nodes/seven edges, one canonical and two snippets: one literal and one supported
+  unit transcription.'
+- No scientific record, native inventory, Git or sweep-state mutation by serializer
+  preparation.
+tags:
+- record-review
+- pressure-optimum
+- environment
+- needs-curation
+native_verdict: needs_curation
