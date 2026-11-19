@@ -1,0 +1,4406 @@
+# Whole-record review of pH phenotype with numerical limits
+
+- Review: 20261021T193803Z-ph-phenotype-with-numerical-limits
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T19:26:07.462256Z
+- Finished UTC: 2026-10-21T19:38:03Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+One grouped imported-role major at edges 4, 6, 7 and 9, and one bounded human-acceptance minor. Source identity, generic context, fourteen literal snippets, enables at edge 5 and consumes at edge 8 remain supported.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Second record of the actual batch 011 queue. Entire target and successful 120-input capture precede substantive source/grounding judgment. Metadata was acquired before capture and interpreted afterward. Final frozen audits, challenge and root adjudication are mandatory before execution.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000531 | data/traits/environment/ph_phenotype_with_numerical_limits.yaml | maintained | pH phenotype with numerical limits |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1000531 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1000531 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1000531 | 19 links checked against the pinned PathwayMech snapshot. |
+| Full-corpus history integrity | passed | True | METPO:1000531 | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1000531 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1000531 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1000531 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused native validation | passed | True | METPO:1000531 | Direct successful current-target native validation; schema shape is separate from source support and formal roles. |
+| Focused strict validation | passed | True | METPO:1000531 | Direct successful current-target strict validation; no semantic role certification is inferred. |
+| Focused snippet verification | passed | True | METPO:1000531 | Direct pass: sixteen fields over three references, four VERIFIED and twelve NOT_IN_ABSTRACT. Independent actual source checks yield fourteen literal occurrences and two Baker body-unverified phrases; native results remain unchanged. |
+| Reused maintained batch-ten QC | passed | True | METPO:1000531 | Actual B10 QC pass at its retained time, qualified against B11 bytes; not a fresh B11 execution. |
+| Protein-instance metadata applicability | not_applicable | False | METPO:1000531 | The single reviewed label-only contextual protein class has no instance. No token accession is required. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: active identity and exact hierarchy
+
+identity: supported. Targets: METPO:1000531.
+
+The active numerical-pH phenotype and its broad parent are checked against actual METPO; optimum/range/delta hierarchy is verified independently of short source excerpts. No scientific identity is inferred from status metadata.
+
+### Native checklist: generic numerical external-pH definition
+
+evidence: supported. Targets: METPO:1000531.
+
+Inspected Krulwich text supports external growth-pH and pH-dependent activity context. The definition is compatible generic classification; no measured exact endpoint or derived descriptor calibration is invented.
+
+### Native checklist: nonmechanistic quantitative graph
+
+scope: supported. Targets: METPO:1000531.
+
+ENVIRONMENT, CLASS and NONMECHANISTIC fit the quantitative measurement graph. Its contextual branches are not automatically a universal or sufficient mechanism.
+
+### Native checklist: named strain and measurement context
+
+evidence: supported. Targets: METPO:1000531.
+
+The assigned abstract contains the current K-12 W3110 external-pH measurement wording. Official taxon 83333 identifies K-12, while W3110 is the narrower paper-named substrain. Only source/measurement fidelity is assessed; TolC/efflux/defense/fitness/AMR and perturbation efficacy remain UNASSESSED_SCOPE.
+
+### Native checklist: all works and citation placements
+
+evidence: supported. Targets: METPO:1000531.
+
+Four assigned works and all eighteen external placements resolve; four ontology grounding fields are distinguished. Available actual surfaces and bounded publication-notice checks are explicit.
+
+{
+  "completed_at": "2026-10-21T19:29:30.736290+00:00",
+  "target": {
+    "path": "data/traits/environment/ph_phenotype_with_numerical_limits.yaml",
+    "identifier": "METPO:1000531",
+    "sha256": "643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4"
+  },
+  "capture": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits.inspect.json",
+    "sha256": "6bfe43e19193f1ea5406b12e113dc889e1defaa5766deee9bd05bf76b64f6d8a"
+  },
+  "counts": {
+    "assigned_works": 4,
+    "external_placements": 18,
+    "ontology_grounding_fields": 4,
+    "nodes": 15,
+    "edges": 14,
+    "canonical_examples": 1,
+    "snippets": 16,
+    "literal_exact": 14,
+    "body_unknown": 2
+  },
+  "source_finding_candidates": [],
+  "assessment": "Assigned sources support broad quantitative external-pH and generic homeostasis context. The canonical example is faithful as a documentary W3110 measurement-context attribution. Fourteen snippets have actual exact occurrence; two Baker phrases remain body-unverified. No independent source-only material finding is established in this restricted audit.",
+  "positive_support": [
+    "Current external/internal pH distinction and numerical-environmental-axis context are supported by inspected Krulwich abstract and generic primary discussion.",
+    "Poolman existing generic physicochemical/context snippets are literal; current association notes explicitly avoid proof of a universal mechanism or measured external limit.",
+    "Named K-12 W3110 measurement context is present in assigned abstract; current note does not silently substitute a complete growth interval or optimum."
+  ],
+  "limitations": [
+    "Exact mathematical derived-descriptor and subclass hierarchy claims are not established by short review fragments alone; ontology/formal hierarchy is independently reviewed by grounding.",
+    "Two Baker body snippets remain unknown; no absence or false-quote finding follows from abstract nonmatch.",
+    "Record-level Krulwich quotation matches the indexed abstract; retained BioC uses pH-sensing typography.",
+    "Detailed defense/fitness/AMR/efflux/genetic-perturbation efficacy remains UNASSESSED_SCOPE; literal matching does not certify those mechanisms.",
+    "Publication status is bounded to current indexed metadata, not a global exhaustive retraction search."
+  ],
+  "delegations": "Formal role/ontology/human-acceptance/owner verdicts are independently owned by grounding and root; no scientific, native, Git or state mutation by source auditor."
+}
+
+### Native checklist: all sixteen excerpt occurrences
+
+evidence: unknown. Targets: METPO:1000531.
+
+Fourteen current excerpts have literal support: four Krulwich and ten Poolman. The two Baker phrases remain body-unverified. The indexed Krulwich abstract matches current unhyphenated text while BioC hyphenates pH-sensing. Native four VERIFIED/twelve NOT_IN_ABSTRACT is retained separately.
+
+{
+  "completed_at": "2026-10-21T19:29:30.731403+00:00",
+  "snippet_count": 16,
+  "literal_exact": 14,
+  "body_unknown": 2,
+  "snippets": [
+    {
+      "field": "evidence[0].snippet",
+      "reference": "DOI:10.1038/nrmicro2549",
+      "snippet": "Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis enable most bacteria to tolerate or grow at external pH values",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "current Europe PMC indexed abstract, opening sentence",
+          "match_start": 0,
+          "exact_text": "Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis enable most bacteria to tolerate or grow at external pH values"
+        }
+      ],
+      "source_version_qualification": "The actual BioC manuscript hyphenates pH-sensing; the fresh indexed abstract contains the current unhyphenated phrase exactly. Body-only first pass omitted metadata; this final check resolves that occurrence without pretending the source bodies are unavailable.",
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "evidence[1].snippet",
+      "reference": "DOI:10.1016/j.tim.2007.02.005",
+      "snippet": "proton motive force",
+      "status": "UNKNOWN_BODY_UNAVAILABLE",
+      "matches": [],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[0].evidence[0].snippet",
+      "reference": "DOI:10.1038/nrmicro2549",
+      "snippet": "external pH values that are outside",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "BioC passage offset 58",
+          "match_start": 109,
+          "match_length": 35,
+          "exact_text": "external pH values that are outside"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[1].evidence[0].snippet",
+      "reference": "DOI:10.1038/nrmicro2549",
+      "snippet": "cytoplasmic pH",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "BioC passage offset 58",
+          "match_start": 38,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 671",
+          "match_start": 408,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 2440",
+          "match_start": 486,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 3940",
+          "match_start": 624,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 4950",
+          "match_start": 44,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 7133",
+          "match_start": 10,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 7180",
+          "match_start": 88,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 7328",
+          "match_start": 23,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 7370",
+          "match_start": 762,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 8457",
+          "match_start": 282,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 9102",
+          "match_start": 55,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 17378",
+          "match_start": 796,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 27057",
+          "match_start": 175,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 37515",
+          "match_start": 879,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 39253",
+          "match_start": 415,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 47480",
+          "match_start": 268,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 49122",
+          "match_start": 14,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        },
+        {
+          "locator": "BioC passage offset 67131",
+          "match_start": 493,
+          "match_length": 14,
+          "exact_text": "cytoplasmic pH"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[2].evidence[0].snippet",
+      "reference": "DOI:10.1016/j.tim.2007.02.005",
+      "snippet": "proton motive force",
+      "status": "UNKNOWN_BODY_UNAVAILABLE",
+      "matches": [],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[3].evidence[0].snippet",
+      "reference": "DOI:10.1038/nrmicro2549",
+      "snippet": "pH homeostasis",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "BioC passage offset 58",
+          "match_start": 50,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 671",
+          "match_start": 43,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 2440",
+          "match_start": 498,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 3309",
+          "match_start": 568,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 3940",
+          "match_start": 88,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 6577",
+          "match_start": 10,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 9102",
+          "match_start": 67,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 9746",
+          "match_start": 32,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 9793",
+          "match_start": 40,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 10376",
+          "match_start": 31,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 12201",
+          "match_start": 133,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 13430",
+          "match_start": 0,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 13534",
+          "match_start": 28,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 15086",
+          "match_start": 29,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 15130",
+          "match_start": 22,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 16479",
+          "match_start": 406,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 17378",
+          "match_start": 93,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 18903",
+          "match_start": 110,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 19769",
+          "match_start": 504,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 20611",
+          "match_start": 170,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 26699",
+          "match_start": 9,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 27057",
+          "match_start": 60,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 27702",
+          "match_start": 41,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 34345",
+          "match_start": 359,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 36727",
+          "match_start": 31,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 39253",
+          "match_start": 4,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 40107",
+          "match_start": 28,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 42119",
+          "match_start": 101,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 44016",
+          "match_start": 64,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 48281",
+          "match_start": 9,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 49779",
+          "match_start": 35,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 51883",
+          "match_start": 61,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 52269",
+          "match_start": 24,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 53261",
+          "match_start": 70,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 59345",
+          "match_start": 0,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 61189",
+          "match_start": 76,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 61308",
+          "match_start": 91,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 67006",
+          "match_start": 53,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        },
+        {
+          "locator": "BioC passage offset 67131",
+          "match_start": 624,
+          "match_length": 14,
+          "exact_text": "pH homeostasis"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[4].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "cells maintain their cytoplasmic pH around neutral",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[1]",
+          "match_start": 158,
+          "match_length": 50,
+          "exact_text": "cells maintain their cytoplasmic pH around neutral"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[5].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "stored in the form of a proton motive force, which subsequently can be used by F0F1-ATP synthase to make ATP",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[5]",
+          "match_start": 492,
+          "match_length": 108,
+          "exact_text": "stored in the form of a proton motive force, which subsequently can be used by F0F1-ATP synthase to make ATP"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[6].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[4]",
+          "match_start": 518,
+          "match_length": 137,
+          "exact_text": "Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[7].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[1]",
+          "match_start": 842,
+          "match_length": 75,
+          "exact_text": "Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[8].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "the chemistry of the decarboxylation reaction requires a proton",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[7]",
+          "match_start": 337,
+          "match_length": 63,
+          "exact_text": "the chemistry of the decarboxylation reaction requires a proton"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[9].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "sufficient buffering capacity (e.g. inorganic and organic phosphates)",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[4]",
+          "match_start": 342,
+          "match_length": 69,
+          "exact_text": "sufficient buffering capacity (e.g. inorganic and organic phosphates)"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[10].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "drive the synthesis of ATP and the transport of solutes",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[0]",
+          "match_start": 148,
+          "match_length": 55,
+          "exact_text": "drive the synthesis of ATP and the transport of solutes"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[11].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "Cells use different transport mechanisms to interconvert the \u0394\u03a8 and \u0394pH to simultaneously maintain a relatively constant PMF and internal pH",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[1]",
+          "match_start": 700,
+          "match_length": 140,
+          "exact_text": "Cells use different transport mechanisms to interconvert the \u0394\u03a8 and \u0394pH to simultaneously maintain a relatively constant PMF and internal pH"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[12].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "the internal pH is increased",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[7]",
+          "match_start": 411,
+          "match_length": 28,
+          "exact_text": "the internal pH is increased"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    },
+    {
+      "field": "causal_graphs[0].edges[13].evidence[0].snippet",
+      "reference": "DOI:10.1093/femsre/fuad033",
+      "snippet": "the magnitude of the pH gradient is largely determined by the external pH",
+      "status": "EXACT_LITERAL",
+      "matches": [
+        {
+          "locator": "body/p[1]",
+          "match_start": 210,
+          "match_length": 73,
+          "exact_text": "the magnitude of the pH gradient is largely determined by the external pH"
+        }
+      ],
+      "assessment_scope": "Literal occurrence only; detailed biological efficacy and pathogen-defense interpretation are not implied."
+    }
+  ],
+  "prior_pass": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/literal-match-results.json",
+    "sha256": "7eae527c65865bb5397cef5dc51455655fe7cbb5823d0c1de545ba216594cf9b",
+    "bytes": 16765
+  },
+  "qualification": "Final coverage adds the actual indexed abstract for record evidence[0]. The retained first pass checked body files only and used an overbroad default unknown label; no native or source-access failure occurred."
+}
+
+### Native checklist: every existing node referent
+
+grounding: supported. Targets: METPO:1000531.
+
+All fifteen nodes are assessed against their actual descriptions. The two antiporter nodes are explicit activities, PMF/internal-pH nodes are states, and buffering is an explicit process. No unconditional assertion that this graph contains no pathway is made.
+
+[
+  {
+    "index": 0,
+    "field_path": "causal_graphs[0].nodes[0]",
+    "node_id": "ph_phenotype_trait",
+    "label": "pH phenotype with numerical limits",
+    "node_type": "TRAIT",
+    "grounding": "METPO:1000531",
+    "description": "Phenotype defined by a numerical external-pH descriptor.",
+    "documentary_assessment": "Active trait identity matches the record and parent hierarchy.",
+    "biology_scope": "Generic measurement identity"
+  },
+  {
+    "index": 1,
+    "field_path": "causal_graphs[0].nodes[1]",
+    "node_id": "external_ph_axis",
+    "label": "external pH axis",
+    "node_type": "ENVIRONMENTAL_FACTOR",
+    "description": "External proton activity (pH) as a continuous environmental variable.",
+    "documentary_assessment": "Explicit continuous external-pH environmental variable. Its current condition/axis referent is distinct from a temporal pH-change process; relation mismatch is assessed at edge 4.",
+    "biology_scope": "Generic measurement identity"
+  },
+  {
+    "index": 2,
+    "field_path": "causal_graphs[0].nodes[2]",
+    "node_id": "ph_optimum",
+    "label": "pH optimum",
+    "node_type": "TRAIT",
+    "grounding": "METPO:1000331",
+    "description": "External pH supporting the most efficient growth.",
+    "documentary_assessment": "Active pH optimum trait and subclass grounding agree; external optimum is distinct from internal pH.",
+    "biology_scope": "Generic measurement identity"
+  },
+  {
+    "index": 3,
+    "field_path": "causal_graphs[0].nodes[3]",
+    "node_id": "ph_range",
+    "label": "pH range",
+    "node_type": "TRAIT",
+    "grounding": "METPO:1000332",
+    "description": "Span of external pH values supporting growth.",
+    "documentary_assessment": "Active pH range trait and subclass grounding agree.",
+    "biology_scope": "Generic measurement identity"
+  },
+  {
+    "index": 4,
+    "field_path": "causal_graphs[0].nodes[4]",
+    "node_id": "ph_delta",
+    "label": "pH delta",
+    "node_type": "TRAIT",
+    "grounding": "METPO:1000232",
+    "description": "Breadth (max \u2212 min) of the growth-supporting external pH range.",
+    "documentary_assessment": "Active pH delta trait denotes numerical breadth and is an explicit upstream subclass.",
+    "biology_scope": "Generic measurement identity"
+  },
+  {
+    "index": 5,
+    "field_path": "causal_graphs[0].nodes[5]",
+    "node_id": "proton_motive_force",
+    "label": "proton motive force across cell envelope",
+    "node_type": "STATE",
+    "description": "Electrochemical proton gradient across the cell envelope linking external pH to bioenergetics.",
+    "documentary_assessment": "Electrochemical gradient is the schema\u2019s explicit STATE facet; no conversion to establishment process is warranted.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 6,
+    "field_path": "causal_graphs[0].nodes[6]",
+    "node_id": "f0f1_atpase",
+    "label": "F0F1-ATPase / ATP synthase",
+    "node_type": "GENE_OR_PROTEIN",
+    "grounding_status": "REVIEWED_LABEL_ONLY",
+    "grounding_notes": "Reviewed as a contextual protein or protein-complex label within a quantitative measurement graph; no exact semantic family term was established for this aggregate use.",
+    "description": "Membrane ATP synthase coupling proton motive force to ATP synthesis.",
+    "documentary_assessment": "Protein/complex aggregate is responsibly REVIEWED_LABEL_ONLY. NONMECHANISTIC measurement scope does not require a token UniProt instance.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 7,
+    "field_path": "causal_graphs[0].nodes[7]",
+    "node_id": "atp_synthesis_from_pmf",
+    "label": "ATP synthesis from proton motive force",
+    "node_type": "BIOLOGICAL_PROCESS",
+    "description": "Synthesis of ATP driven by the transmembrane proton gradient.",
+    "documentary_assessment": "Explicit ATP-synthesis process is distinct from the material enzyme and maintained gradient. Formal disposition only; detailed efficacy unassessed.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 8,
+    "field_path": "causal_graphs[0].nodes[8]",
+    "node_id": "na_h_antiport_activity",
+    "label": "Na+/H+ antiporter activity",
+    "node_type": "MOLECULAR_FUNCTION",
+    "description": "Cation/proton antiport activity regulating internal pH and PMF.",
+    "documentary_assessment": "Explicit antiport activity is a legitimate MOLECULAR_FUNCTION; no missing material protein instance or forced retype. Range issue at edge 6 is separate.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 9,
+    "field_path": "causal_graphs[0].nodes[9]",
+    "node_id": "k_h_antiporter",
+    "label": "K+/H+ antiporter activity",
+    "node_type": "MOLECULAR_FUNCTION",
+    "description": "Potassium/proton antiport activity regulating internal pH and PMF.",
+    "documentary_assessment": "Legacy node identifier does not override explicit activity label/description and MOLECULAR_FUNCTION type. No automatic protein retype; edge 7 range assessed separately.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 10,
+    "field_path": "causal_graphs[0].nodes[10]",
+    "node_id": "internal_ph_pmf",
+    "label": "internal pH / proton motive force",
+    "node_type": "STATE",
+    "description": "Regulated cytoplasmic pH and proton motive force homeostatic set-point.",
+    "documentary_assessment": "Combined maintained internal-pH/PMF set-point is a STATE, not the process regulating it.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 11,
+    "field_path": "causal_graphs[0].nodes[11]",
+    "node_id": "aa_decarboxylase_antiporter",
+    "label": "amino-acid decarboxylase + antiporter systems",
+    "node_type": "PATHWAY",
+    "description": "Decarboxylation-antiport cycles that consume cytoplasmic protons.",
+    "documentary_assessment": "Description explicitly selects coupled decarboxylation-antiport cycles. PATHWAY is defensible under current named-system convention despite systems wording in label; no extra node-facet finding.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 12,
+    "field_path": "causal_graphs[0].nodes[12]",
+    "node_id": "intracellular_proton",
+    "label": "intracellular H+",
+    "node_type": "CHEMICAL",
+    "description": "Cytoplasmic protons whose concentration sets internal pH.",
+    "documentary_assessment": "Material intracellular protons are CHEMICAL. Description mentions concentration as a related variable, not equivalence between material and pH.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 13,
+    "field_path": "causal_graphs[0].nodes[13]",
+    "node_id": "phosphate_buffering",
+    "label": "cytoplasmic phosphate buffering",
+    "node_type": "BIOLOGICAL_PROCESS",
+    "description": "Buffering of cytoplasmic protons by intracellular phosphate pools.",
+    "documentary_assessment": "Explicit phosphate-buffering action is BIOLOGICAL_PROCESS, reinforced by maintained migration and current history; it is not the reservoir-size facet.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  },
+  {
+    "index": 14,
+    "field_path": "causal_graphs[0].nodes[14]",
+    "node_id": "internal_ph",
+    "label": "internal pH",
+    "node_type": "STATE",
+    "description": "Cytoplasmic pH maintained by homeostatic mechanisms.",
+    "documentary_assessment": "Maintained cytoplasmic pH is a STATE, distinct from its homeostatic establishment process.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type only"
+  }
+]
+
+### Native checklist: all fourteen edges
+
+consistency: concern. Targets: METPO:1000531.
+
+Imported RO roles conflict at edges 4, 6, 7 and 9. Activity subjects at 6 and 7 are legitimate processual referents, but their current STATE object is not a process. Protein-to-process enables at 5 and process-input consumes at 8 are valid. Local defines, hierarchy and association links are separately assessed.
+
+[
+  {
+    "index": 0,
+    "field_path": "causal_graphs[0].edges[0]",
+    "subject": "external_ph_axis",
+    "predicate": "defines",
+    "predicate_id": "METPO:2007500",
+    "object": "ph_phenotype_trait",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Local v4 defines explicitly supports environmental-axis to trait parameterization; native wildcard gating is not the source of this positive conclusion.",
+    "biology_scope": "Generic axis/hierarchy; literature note support separately audited"
+  },
+  {
+    "index": 1,
+    "field_path": "causal_graphs[0].edges[1]",
+    "subject": "ph_optimum",
+    "predicate": "is a",
+    "predicate_id": "rdfs:subClassOf",
+    "object": "ph_phenotype_trait",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Actual METPO pH optimum subclass link supports RDFS class-to-class edge. Source explanatory note is independently audited, not elevated to ontology equivalence.",
+    "biology_scope": "Generic axis/hierarchy; literature note support separately audited"
+  },
+  {
+    "index": 2,
+    "field_path": "causal_graphs[0].edges[2]",
+    "subject": "ph_range",
+    "predicate": "is a",
+    "predicate_id": "rdfs:subClassOf",
+    "object": "ph_phenotype_trait",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Actual METPO pH range subclass link supports RDFS class-to-class edge.",
+    "biology_scope": "Generic axis/hierarchy; literature note support separately audited"
+  },
+  {
+    "index": 3,
+    "field_path": "causal_graphs[0].edges[3]",
+    "subject": "ph_delta",
+    "predicate": "is a",
+    "predicate_id": "rdfs:subClassOf",
+    "object": "ph_phenotype_trait",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Actual METPO pH delta subclass link supports RDFS class-to-class edge.",
+    "biology_scope": "Generic axis/hierarchy; literature note support separately audited"
+  },
+  {
+    "index": 4,
+    "field_path": "causal_graphs[0].edges[4]",
+    "subject": "external_ph_axis",
+    "predicate": "regulates",
+    "predicate_id": "RO:0002211",
+    "object": "proton_motive_force",
+    "documentary_status": "MAJOR_ROLE_MISMATCH",
+    "assessment": "Confirmed grouped role mismatch: RO:0002211 has process domain and process range. Current subject is an explicit environmental measurement axis/condition and object the maintained PMF STATE. A separately stated change event could be processual, but is not this current referent.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 5,
+    "field_path": "causal_graphs[0].edges[5]",
+    "subject": "f0f1_atpase",
+    "predicate": "enables",
+    "predicate_id": "RO:0002327",
+    "object": "atp_synthesis_from_pmf",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Positive formal fit: material ATPase/complex enables an ATP-synthesis process under RO:0002327 executor/process semantics. Detailed biological efficacy is unassessed.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 6,
+    "field_path": "causal_graphs[0].edges[6]",
+    "subject": "na_h_antiport_activity",
+    "predicate": "regulates",
+    "predicate_id": "RO:0002211",
+    "object": "internal_ph_pmf",
+    "documentary_status": "MAJOR_ROLE_MISMATCH",
+    "assessment": "Confirmed grouped role mismatch: activity subject is processual and admissible; STATE object internal_ph_pmf is not the process required by RO:0002211 range.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 7,
+    "field_path": "causal_graphs[0].edges[7]",
+    "subject": "k_h_antiporter",
+    "predicate": "regulates",
+    "predicate_id": "RO:0002211",
+    "object": "internal_ph_pmf",
+    "documentary_status": "MAJOR_ROLE_MISMATCH",
+    "assessment": "Confirmed grouped role mismatch: activity subject is processual and admissible; STATE object internal_ph_pmf is not the process required by RO:0002211 range.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 8,
+    "field_path": "causal_graphs[0].edges[8]",
+    "subject": "aa_decarboxylase_antiporter",
+    "predicate": "consumes",
+    "predicate_id": "biolink:consumes",
+    "object": "intracellular_proton",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Positive formal fit: actual Biolink consumes describes process input and inherits has input; current cycle/pathway to material protons fits. No material-only subject rule copied from produces; detailed defense biology unassessed.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 9,
+    "field_path": "causal_graphs[0].edges[9]",
+    "subject": "phosphate_buffering",
+    "predicate": "contributes to",
+    "predicate_id": "RO:0002326",
+    "object": "internal_ph",
+    "documentary_status": "MAJOR_ROLE_MISMATCH",
+    "assessment": "Confirmed grouped role mismatch: the inspected inherited chain is RO:0002326 \u2192 RO:0002216 \u2192 RO:0002500 \u2192 RO:0002595, yielding material-entity subject and process object constraints. RO:0002215 is not an ancestor in this chain. The current subject is the maintained buffering action and the object internal-pH STATE. This clarification preserves the frozen source ledger without copying its ambiguous capable-of wording.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 10,
+    "field_path": "causal_graphs[0].edges[10]",
+    "subject": "atp_synthesis_from_pmf",
+    "predicate": "associated with",
+    "predicate_id": "biolink:associated_with",
+    "object": "proton_motive_force",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Broad named-thing association endpoints admit current process/state context. Existing note explicitly avoids direct measurement-limit proof; detailed efficacy unassessed.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 11,
+    "field_path": "causal_graphs[0].edges[11]",
+    "subject": "internal_ph_pmf",
+    "predicate": "associated with",
+    "predicate_id": "biolink:associated_with",
+    "object": "proton_motive_force",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Broad association endpoints admit current state/state context. Existing note avoids a universal mechanism claim.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 12,
+    "field_path": "causal_graphs[0].edges[12]",
+    "subject": "intracellular_proton",
+    "predicate": "associated with",
+    "predicate_id": "biolink:associated_with",
+    "object": "internal_ph",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Broad association endpoints admit chemical/state context. Literal attribution and detailed defense biology are separate from formal validity.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  },
+  {
+    "index": 13,
+    "field_path": "causal_graphs[0].edges[13]",
+    "subject": "internal_ph",
+    "predicate": "associated with",
+    "predicate_id": "biolink:associated_with",
+    "object": "ph_phenotype_trait",
+    "documentary_status": "FORMALLY_COMPATIBLE_WITH_STATED_SCOPE",
+    "assessment": "Broad association endpoints admit state/trait context. Existing note explicitly avoids direct proof of a measured external-pH limit.",
+    "biology_scope": "UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal role assessment only"
+  }
+]
+
+### Native checklist: generic source context and explicit exclusions
+
+scope: unknown. Targets: METPO:1000531.
+
+Generic physicochemical attribution and literal text are retained. Detailed TolC, efflux, acid-defense, fitness, AMR, genetic perturbation and intervention efficacy are UNASSESSED_SCOPE. No repaired mechanism, optimized condition, assay recommendation or new route is provided.
+
+{
+  "completed_at": "2026-10-21T19:29:30.731403+00:00",
+  "edges": [
+    {
+      "index": 0,
+      "field": "causal_graphs[0].edges[0]",
+      "current_edge": {
+        "subject": "external_ph_axis",
+        "predicate": "defines",
+        "object": "ph_phenotype_trait",
+        "description": "External pH is the quantitative axis defining pH phenotypes.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1038/nrmicro2549",
+            "snippet": "external pH values that are outside",
+            "notes": "Verified against the open PMC manuscript of the Krulwich et al. review; microbial pH phenotypes are expressed relative to external growth pH values and internal pH-homeostatic limits."
+          }
+        ],
+        "predicate_id": "METPO:2007500"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Assigned Krulwich abstract explicitly discusses external pH values and growth. Its numerical measurement-axis interpretation is reasonable context; literal source text does not itself define this ontology class.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[0].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 1,
+      "field": "causal_graphs[0].edges[1]",
+      "current_edge": {
+        "subject": "ph_optimum",
+        "predicate": "is a",
+        "object": "ph_phenotype_trait",
+        "description": "pH optimum is a numerical-limit pH phenotype.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1038/nrmicro2549",
+            "snippet": "cytoplasmic pH",
+            "notes": "Supports pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis sustains maximal growth."
+          }
+        ],
+        "predicate_id": "rdfs:subClassOf"
+      },
+      "source_status": "SUPPORTED_CONTEXT_WITH_LIMITS",
+      "assessment": "The source discusses internal homeostasis and external growth-pH ranges. The short cytoplasmic-pH excerpt is literal but does not alone establish the exact optimum subclass definition or maximum-growth criterion; ontology hierarchy is independently reviewed by grounding.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[1].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 2,
+      "field": "causal_graphs[0].edges[2]",
+      "current_edge": {
+        "subject": "ph_range",
+        "predicate": "is a",
+        "object": "ph_phenotype_trait",
+        "description": "pH range is a numerical-limit pH phenotype.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1016/j.tim.2007.02.005",
+            "snippet": "proton motive force",
+            "notes": "Supports pH range as the span of external pH over which the proton motive force remains compatible with growth."
+          }
+        ],
+        "predicate_id": "rdfs:subClassOf"
+      },
+      "source_status": "UNKNOWN_NARROW_BODY_SUPPORT",
+      "assessment": "Baker abstract supplies acidophile pH-gradient and energy context, but actual full text is unavailable. The repeated PMF phrase and exact growth-compatible range wording remain unverified; absence of abstract match is not refutation.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[2].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 3,
+      "field": "causal_graphs[0].edges[3]",
+      "current_edge": {
+        "subject": "ph_delta",
+        "predicate": "is a",
+        "object": "ph_phenotype_trait",
+        "description": "pH delta is a numerical-limit pH phenotype.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1038/nrmicro2549",
+            "snippet": "pH homeostasis",
+            "notes": "Supports pH delta (range breadth) as a derived numerical descriptor reflecting pH-homeostasis flexibility."
+          }
+        ],
+        "predicate_id": "rdfs:subClassOf"
+      },
+      "source_status": "SUPPORTED_CONTEXT_WITH_LIMITS",
+      "assessment": "pH-homeostasis phrase is literal; range breadth is a derived measurement descriptor rather than a measured mechanistic calibration established by this short excerpt. No exact-bin or universal mechanism is asserted here.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[3].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 4,
+      "field": "causal_graphs[0].edges[4]",
+      "current_edge": {
+        "subject": "external_ph_axis",
+        "predicate": "regulates",
+        "object": "proton_motive_force",
+        "description": "External pH influences the proton motive force across the cell envelope.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "cells maintain their cytoplasmic pH around neutral",
+            "notes": "Verified against the open Poolman review; maintaining near-neutral cytoplasmic pH makes external pH a major determinant of the transmembrane pH-gradient component of the PMF."
+          }
+        ],
+        "predicate_id": "RO:0002211"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Poolman body paragraph1 directly links the external-pH variable with the gradient component of PMF; this is generic physicochemical context. Formal predicate roles are outside this source audit.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[4].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 5,
+      "field": "causal_graphs[0].edges[5]",
+      "current_edge": {
+        "subject": "f0f1_atpase",
+        "predicate": "enables",
+        "object": "atp_synthesis_from_pmf",
+        "description": "F0F1-ATPase couples the proton motive force to ATP synthesis.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "stored in the form of a proton motive force, which subsequently can be used by F0F1-ATP synthase to make ATP",
+            "notes": "Verified against the open Poolman review; the PMF links proton translocation by the F0F1-ATPase to ATP synthesis."
+          }
+        ],
+        "predicate_id": "RO:0002327"
+      },
+      "source_status": "LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED",
+      "assessment": "Poolman paragraph5 directly contains the assigned ATP-synthesis context phrase. No detailed F0F1 intervention, pathogen fitness or efficacy assessment is made.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[5].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 6,
+      "field": "causal_graphs[0].edges[6]",
+      "current_edge": {
+        "subject": "na_h_antiport_activity",
+        "predicate": "regulates",
+        "object": "internal_ph_pmf",
+        "description": "Na+/H+ antiporter activity regulates internal pH and PMF.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal pH gets too high",
+            "notes": "Verified against the open Poolman review; Na+/H+ antiporters are listed as key bacterial pH-homeostasis regulators."
+          }
+        ],
+        "predicate_id": "RO:0002211"
+      },
+      "source_status": "LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED",
+      "assessment": "Poolman paragraph4 contains the exact assigned generic antiporter sentence. Family-specific biological efficacy, physiological sufficiency and intervention claims remain UNASSESSED_SCOPE.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[6].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 7,
+      "field": "causal_graphs[0].edges[7]",
+      "current_edge": {
+        "subject": "k_h_antiporter",
+        "predicate": "regulates",
+        "object": "internal_ph_pmf",
+        "description": "K+/H+ antiporter activity regulates internal pH and PMF.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters",
+            "notes": "Verified against the open Poolman review; K+/H+ antiporters are listed as key bacterial pH-homeostasis regulators."
+          }
+        ],
+        "predicate_id": "RO:0002211"
+      },
+      "source_status": "LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED",
+      "assessment": "Poolman paragraph1 literally lists the two antiporter families as regulators. Detailed organism-specific defense/fitness interpretation remains UNASSESSED_SCOPE.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[7].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 8,
+      "field": "causal_graphs[0].edges[8]",
+      "current_edge": {
+        "subject": "aa_decarboxylase_antiporter",
+        "predicate": "consumes",
+        "object": "intracellular_proton",
+        "description": "Amino-acid decarboxylase plus antiporter systems consume intracellular protons, raising internal pH.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "the chemistry of the decarboxylation reaction requires a proton",
+            "notes": "Verified against the open Poolman review; substrate decarboxylation consumes a cytoplasmic proton and raises internal pH."
+          }
+        ],
+        "predicate_id": "biolink:consumes"
+      },
+      "source_status": "LITERAL_ONLY_UNASSESSED_SCOPE",
+      "assessment": "Exact assigned phrase occurs in paragraph7. The detailed decarboxylation/antiport defense or fitness mechanism is UNASSESSED_SCOPE; no repair, efficacy validation or additional components are proposed.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[8].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 9,
+      "field": "causal_graphs[0].edges[9]",
+      "current_edge": {
+        "subject": "phosphate_buffering",
+        "predicate": "contributes to",
+        "object": "internal_ph",
+        "description": "Cytoplasmic phosphate pools contribute to internal-pH stability.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "sufficient buffering capacity (e.g. inorganic and organic phosphates)",
+            "notes": "Verified against the open Poolman review; cytoplasmic phosphate pools are named as sufficient buffering capacity needed for internal-pH stability."
+          }
+        ],
+        "predicate_id": "RO:0002326"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Poolman paragraph4 directly names inorganic/organic phosphates as buffering capacity. This supports generic buffering context, not a measured numerical phenotype limit or universal quantitative threshold.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[9].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 10,
+      "field": "causal_graphs[0].edges[10]",
+      "current_edge": {
+        "subject": "atp_synthesis_from_pmf",
+        "predicate": "associated with",
+        "object": "proton_motive_force",
+        "description": "F0F1-coupled ATP synthesis from the PMF is associated with the PMF branch of pH numerical-limit context.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "drive the synthesis of ATP and the transport of solutes",
+            "notes": "Verified against the open Poolman review; this connector keeps PMF-driven ATP synthesis as bioenergetic context rather than direct proof of a pH numerical limit."
+          }
+        ],
+        "predicate_id": "biolink:associated_with"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Poolman paragraph0 directly supports the assigned ATP/solute-transport energy context. Current connector explicitly retains association rather than direct numerical-limit proof.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[10].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 11,
+      "field": "causal_graphs[0].edges[11]",
+      "current_edge": {
+        "subject": "internal_ph_pmf",
+        "predicate": "associated with",
+        "object": "proton_motive_force",
+        "description": "Regulated internal pH and PMF homeostasis is associated with the PMF branch of pH numerical-limit context.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "Cells use different transport mechanisms to interconvert the \u0394\u03a8 and \u0394pH to simultaneously maintain a relatively constant PMF and internal pH",
+            "notes": "Verified against the open Poolman review; this connector keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis context rather than a universal mechanism for every pH bin."
+          }
+        ],
+        "predicate_id": "biolink:associated_with"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Poolman paragraph1 exactly supports the current internal-pH/PMF association wording. Current note explicitly disclaims a universal mechanism for every bin.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[11].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 12,
+      "field": "causal_graphs[0].edges[12]",
+      "current_edge": {
+        "subject": "intracellular_proton",
+        "predicate": "associated with",
+        "object": "internal_ph",
+        "description": "Intracellular proton consumption is associated with cytoplasmic pH homeostasis in the pH numerical-limit context.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "the internal pH is increased",
+            "notes": "Verified against the open Poolman review; this connector keeps amino-acid decarboxylation as cytoplasmic proton control context."
+          }
+        ],
+        "predicate_id": "biolink:associated_with"
+      },
+      "source_status": "LITERAL_ONLY_UNASSESSED_SCOPE",
+      "assessment": "Exact paragraph7 phrase is verified. The detailed biological decarboxylation/proton-control efficacy and defense interpretation remains UNASSESSED_SCOPE.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[12].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    },
+    {
+      "index": 13,
+      "field": "causal_graphs[0].edges[13]",
+      "current_edge": {
+        "subject": "internal_ph",
+        "predicate": "associated with",
+        "object": "ph_phenotype_trait",
+        "description": "Cytoplasmic pH homeostasis is associated with external-pH numerical-limit phenotypes.",
+        "evidence": [
+          {
+            "reference": "DOI:10.1093/femsre/fuad033",
+            "snippet": "the magnitude of the pH gradient is largely determined by the external pH",
+            "notes": "Verified against the open Poolman review; this connector keeps internal-pH homeostasis as measured external-pH phenotype context rather than direct proof of a measured external-pH limit."
+          }
+        ],
+        "predicate_id": "biolink:associated_with"
+      },
+      "source_status": "SUPPORTED_GENERIC_CONTEXT",
+      "assessment": "Poolman paragraph1 exactly supplies the external-pH-gradient context. Current note expressly treats it as context rather than direct proof of a measured external-pH limit.",
+      "snippet_fields": [
+        "causal_graphs[0].edges[13].evidence[0].snippet"
+      ],
+      "formal_roles": "Delegated to independent grounding audit; native validity is not source proof."
+    }
+  ]
+}
+
+### Native checklist: full current graph and optional evidence
+
+completeness: supported. Targets: METPO:1000531.
+
+All fifteen nodes, fourteen edges, one component, one reviewed label-only protein class, zero instances, one canonical, sixteen excerpts and eighteen events are covered. The NONMECHANISTIC scope does not require a token protein instance, extra connector or forced named pathway. Existing pathway labels remain documented rather than denied.
+
+{
+  "completed_at": "2026-10-21T19:29:30.731403+00:00",
+  "node_count": 15,
+  "nodes": [
+    {
+      "index": 0,
+      "field": "causal_graphs[0].nodes[0]",
+      "current_node": {
+        "node_id": "ph_phenotype_trait",
+        "label": "pH phenotype with numerical limits",
+        "node_type": "TRAIT",
+        "grounding": "METPO:1000531",
+        "description": "Phenotype defined by a numerical external-pH descriptor."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        0,
+        1,
+        2,
+        3,
+        13
+      ],
+      "source_assessment": "Broad quantitative external-pH phenotype identity has generic source context; exact METPO identity/hierarchy is delegated to grounding."
+    },
+    {
+      "index": 1,
+      "field": "causal_graphs[0].nodes[1]",
+      "current_node": {
+        "node_id": "external_ph_axis",
+        "label": "external pH axis",
+        "node_type": "ENVIRONMENTAL_FACTOR",
+        "description": "External proton activity (pH) as a continuous environmental variable."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        0,
+        4
+      ],
+      "source_assessment": "External pH is explicitly described by Krulwich and Poolman as a growth/environmental variable."
+    },
+    {
+      "index": 2,
+      "field": "causal_graphs[0].nodes[2]",
+      "current_node": {
+        "node_id": "ph_optimum",
+        "label": "pH optimum",
+        "node_type": "TRAIT",
+        "grounding": "METPO:1000331",
+        "description": "External pH supporting the most efficient growth."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        1
+      ],
+      "source_assessment": "Optimum is a measurement concept; selected literature gives growth/homeostasis context, not a numerical optimum value for this generic node."
+    },
+    {
+      "index": 3,
+      "field": "causal_graphs[0].nodes[3]",
+      "current_node": {
+        "node_id": "ph_range",
+        "label": "pH range",
+        "node_type": "TRAIT",
+        "grounding": "METPO:1000332",
+        "description": "Span of external pH values supporting growth."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        2
+      ],
+      "source_assessment": "Growth-supporting external ranges are generic context; nearest Baker body claim is unverified."
+    },
+    {
+      "index": 4,
+      "field": "causal_graphs[0].nodes[4]",
+      "current_node": {
+        "node_id": "ph_delta",
+        "label": "pH delta",
+        "node_type": "TRAIT",
+        "grounding": "METPO:1000232",
+        "description": "Breadth (max \u2212 min) of the growth-supporting external pH range."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        3
+      ],
+      "source_assessment": "Range breadth is a derived descriptor. No source-specific bin calibration or universal mechanism is inferred."
+    },
+    {
+      "index": 5,
+      "field": "causal_graphs[0].nodes[5]",
+      "current_node": {
+        "node_id": "proton_motive_force",
+        "label": "proton motive force across cell envelope",
+        "node_type": "STATE",
+        "description": "Electrochemical proton gradient across the cell envelope linking external pH to bioenergetics."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        4,
+        10,
+        11
+      ],
+      "source_assessment": "Poolman paragraphs0/1 explicitly describe electrochemical PMF and gradient context; no detailed defense efficacy is assessed."
+    },
+    {
+      "index": 6,
+      "field": "causal_graphs[0].nodes[6]",
+      "current_node": {
+        "node_id": "f0f1_atpase",
+        "label": "F0F1-ATPase / ATP synthase",
+        "node_type": "GENE_OR_PROTEIN",
+        "grounding_status": "REVIEWED_LABEL_ONLY",
+        "grounding_notes": "Reviewed as a contextual protein or protein-complex label within a quantitative measurement graph; no exact semantic family term was established for this aggregate use.",
+        "description": "Membrane ATP synthase coupling proton motive force to ATP synthesis."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        5
+      ],
+      "source_assessment": "Assigned family label is literal source context; no added protein instance, detailed intervention or efficacy assessment."
+    },
+    {
+      "index": 7,
+      "field": "causal_graphs[0].nodes[7]",
+      "current_node": {
+        "node_id": "atp_synthesis_from_pmf",
+        "label": "ATP synthesis from proton motive force",
+        "node_type": "BIOLOGICAL_PROCESS",
+        "description": "Synthesis of ATP driven by the transmembrane proton gradient."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        5,
+        10
+      ],
+      "source_assessment": "Assigned ATP-synthesis context is literal; detailed biological efficacy remains UNASSESSED_SCOPE."
+    },
+    {
+      "index": 8,
+      "field": "causal_graphs[0].nodes[8]",
+      "current_node": {
+        "node_id": "na_h_antiport_activity",
+        "label": "Na+/H+ antiporter activity",
+        "node_type": "MOLECULAR_FUNCTION",
+        "description": "Cation/proton antiport activity regulating internal pH and PMF."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        6
+      ],
+      "source_assessment": "Existing function label and quoted generic attribution are documentary-only; detailed defense/fitness efficacy is UNASSESSED_SCOPE."
+    },
+    {
+      "index": 9,
+      "field": "causal_graphs[0].nodes[9]",
+      "current_node": {
+        "node_id": "k_h_antiporter",
+        "label": "K+/H+ antiporter activity",
+        "node_type": "MOLECULAR_FUNCTION",
+        "description": "Potassium/proton antiport activity regulating internal pH and PMF."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        7
+      ],
+      "source_assessment": "Existing function label and quoted generic attribution are documentary-only; detailed defense/fitness efficacy is UNASSESSED_SCOPE."
+    },
+    {
+      "index": 10,
+      "field": "causal_graphs[0].nodes[10]",
+      "current_node": {
+        "node_id": "internal_ph_pmf",
+        "label": "internal pH / proton motive force",
+        "node_type": "STATE",
+        "description": "Regulated cytoplasmic pH and proton motive force homeostatic set-point."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        6,
+        7,
+        11
+      ],
+      "source_assessment": "Source paragraph1 describes internal-pH/PMF context; record groups those concepts, with formal facets delegated."
+    },
+    {
+      "index": 11,
+      "field": "causal_graphs[0].nodes[11]",
+      "current_node": {
+        "node_id": "aa_decarboxylase_antiporter",
+        "label": "amino-acid decarboxylase + antiporter systems",
+        "node_type": "PATHWAY",
+        "description": "Decarboxylation-antiport cycles that consume cytoplasmic protons."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        8
+      ],
+      "source_assessment": "Existing system label is retained for documentary matching only; detailed decarboxylation defense mechanisms are UNASSESSED_SCOPE."
+    },
+    {
+      "index": 12,
+      "field": "causal_graphs[0].nodes[12]",
+      "current_node": {
+        "node_id": "intracellular_proton",
+        "label": "intracellular H+",
+        "node_type": "CHEMICAL",
+        "description": "Cytoplasmic protons whose concentration sets internal pH."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        8,
+        12
+      ],
+      "source_assessment": "Existing proton chemical label is supported by generic pH chemistry; detailed consumption/defense efficacy remains unassessed."
+    },
+    {
+      "index": 13,
+      "field": "causal_graphs[0].nodes[13]",
+      "current_node": {
+        "node_id": "phosphate_buffering",
+        "label": "cytoplasmic phosphate buffering",
+        "node_type": "BIOLOGICAL_PROCESS",
+        "description": "Buffering of cytoplasmic protons by intracellular phosphate pools."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        9
+      ],
+      "source_assessment": "Generic phosphate-buffering context is explicit in paragraph4; no quantitative sufficiency or exact phenotype limit inferred."
+    },
+    {
+      "index": 14,
+      "field": "causal_graphs[0].nodes[14]",
+      "current_node": {
+        "node_id": "internal_ph",
+        "label": "internal pH",
+        "node_type": "STATE",
+        "description": "Cytoplasmic pH maintained by homeostatic mechanisms."
+      },
+      "direct_external_evidence": [],
+      "incident_edges": [
+        9,
+        12,
+        13
+      ],
+      "source_assessment": "Internal pH is explicitly distinct from external pH in selected source passages; association does not establish an external limit."
+    }
+  ],
+  "note": "Node descriptions lack separate bibliography. Incident edge sources are mapped explicitly and are not silently treated as independent node-level citations."
+}
+
+### Native checklist: catalog and exact strain applicability
+
+evidence: unknown. Targets: METPO:1000531.
+
+The retained 20-organism/28-dataset catalog contains five e_coli candidate datasets. Species-level names do not establish W3110 coverage, and precise_mg1655 is not substituted. No detailed defense gene/module query or perturbation-efficacy interpretation is performed.
+
+{
+  "assessed_at": "2026-10-21T19:31:24.276845+00:00",
+  "target": "data/traits/environment/ph_phenotype_with_numerical_limits.yaml",
+  "status": "CANDIDATE_CATALOG_COVERAGE_SCOPE_LIMITED",
+  "canonical_taxon": "NCBITaxon:83333",
+  "canonical_context": "Escherichia coli K-12; cited paper names W3110.",
+  "catalog": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/reused-datasets.json",
+    "sha256": "155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693",
+    "bytes": 2871
+  },
+  "original_access": {
+    "started_at": "2026-10-21T07:36:12.732638+00:00",
+    "finished_at": "2026-10-21T07:36:12.858149+00:00"
+  },
+  "catalog_counts": {
+    "organisms": 20,
+    "datasets": 28
+  },
+  "matching_species_entry": {
+    "id": "e_coli",
+    "name": "Escherichia coli",
+    "description": "Escherichia coli dataset: modulome",
+    "datasets": [
+      "modulome",
+      "precise1k",
+      "precise278",
+      "precise815",
+      "precise_mg1655"
+    ]
+  },
+  "assessment": "The e_coli entry supplies five species-level candidate datasets. Catalog name alone does not establish W3110 exact-strain coverage; precise_mg1655 must not be substituted for W3110. No dataset absence finding.",
+  "queries": "No downstream gene, module, condition, TolC, acid-defense or fitness query; detailed biological interpretation remains UNASSESSED_SCOPE.",
+  "reuse": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/authority-reuse-receipts.json",
+    "sha256": "976dbb9aa49440762bd52687341d55a31234ac175f857432a33d0f87c285d885",
+    "bytes": 2020
+  },
+  "optional_proteins": "One reviewed label-only protein/complex and zero instances are acceptable within the NONMECHANISTIC quantitative scope; no mandatory instance or protein count."
+}
+
+### Native checklist: maintained writers and history
+
+provenance: supported. Targets: METPO:1000531.
+
+The current record, exact review writer and PR664 after-payload repair own relation recurrence. The connector validates existing source-edge context and adds associations; it is not an independent relation rewrite. Type migrations maintain intended facets, and the mapping grounder skips nonempty IDs. Broad shared-node histories are context, not automatically owners.
+
+{
+  "assessed_at": "2026-10-21T19:31:24.276026+00:00",
+  "target": "data/traits/environment/ph_phenotype_with_numerical_limits.yaml",
+  "counts": {
+    "nodes": 15,
+    "edges": 14,
+    "components": 1,
+    "protein_classes": 1,
+    "label_only_proteins": 1,
+    "protein_instances": 0,
+    "canonical_examples": 1,
+    "record_history_events": 18,
+    "ai_record_events": 17,
+    "seed_events": 1,
+    "captured_histories": 32,
+    "matching_paths": 195,
+    "review_target_arrays": 67,
+    "exact_target_review_arrays": 0
+  },
+  "search": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/search-and-provenance.json",
+    "sha256": "6ca63e5636b06d8586352c9296c9e1d6fdd25d0ab855ddc4147c61e34a1f7f79",
+    "bytes": 93184
+  },
+  "node_search": {
+    "path": "/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/all-node-owner-search.json",
+    "sha256": "c0462276f99fcc827ee6267541cee0e5266e04bd96b3616e9a9d4ce90c5013f0",
+    "bytes": 30276
+  },
+  "search_scope": "Ignored and hidden repository files included, excluding .git internals and .venv; exact target path/slug/hyphenated slug/label/full and numeric identifier. All 15 node identifiers separately searched. No uncaptured history lead found. No remote/private signoff search is claimed.",
+  "history_reading": {
+    "whole_read_current": [
+      "history/records/ph_phenotype_with_numerical_limits/2026-09-04T022000Z-codex-73fbda.yaml",
+      "history/records/ph_phenotype_with_numerical_limits/2026-09-04T180000Z-codex-183.yaml",
+      "history/infrastructure/pr664-adversarial-review/2026-09-07T010300Z-codex-95db7f.yaml",
+      "history/infrastructure/pr664-adversarial-review/2026-09-07T022400Z-codex-682abc.yaml",
+      "history/infrastructure/pr664-adversarial-review/2026-09-07T034000Z-codex-683abc.yaml",
+      "history/infrastructure/pr664-adversarial-review/2026-09-07T061600Z-codex-690abc.yaml"
+    ],
+    "all_actor_target_event_projections": 32,
+    "all_actors_ai": true,
+    "precise_status": "Two exact target record histories and three current-target PR664 repair histories show AI maintenance; the sixth full-read PR664 history is sibling-only. Other broad shared-node matches are contextual leads, not automatic owners."
+  },
+  "human_acceptance": "Within the stated 195 matching files, 67 structured review target arrays and 32 captured history actor/target projections, no linked named human acceptance of this current record was located. REVIEWED plus 17 AI events and an automated seed does not independently establish human approval. This bounded traceability gap is a minor, not a claim that a human never reviewed the record.",
+  "owners": [
+    {
+      "path": "data/traits/environment/ph_phenotype_with_numerical_limits.yaml",
+      "role": "Primary current record owner of all finding fields; human acceptance traceability is local to mapping_status and curation_history.",
+      "sha256": "643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4"
+    },
+    {
+      "path": "scripts/review_ph_phenotype_graph_183.py",
+      "role": "Exact current-target maintained writer. EDGE_REPLACEMENTS after payloads reproduce affected formal-role edges. Exact already-reviewed state is a no-op; partial/drifted state is rejected; no execution.",
+      "sha256": "651b46611c5e630e4db00f8d7525378ddb3a9f552c83e7f53387d14ab95dd2e2"
+    },
+    {
+      "path": "scripts/connect_ph_phenotype_graph_183.py",
+      "role": "Exact target connector writer. SOURCE_CONNECTOR_EDGES contain affected legacy relations, but its added edges are four association connectors. It validates guarded source context and exact final state, not an independent unconditional relation rewrite.",
+      "sha256": "7d13d108660bede28937d3f180e90c542c47869c10f34ca497f9ab6f8f5db4ba"
+    },
+    {
+      "path": "scripts/repair_pr664_adversarial_review.py",
+      "role": "Exact current-target recurrence owner: imports current review after payloads and connector additions, replaces matching edge keys through _replace_edges, and maintains target-specific evidence/history branches. Existing edge keys are required; replacement is by key rather than exact before-payload equality.",
+      "sha256": "5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96"
+    },
+    {
+      "path": "mappings/predicate_grounding.tsv",
+      "role": "Current contributes to/regulates/enables/association/consumes/defines rows provide label groundings; wildcard gates do not waive imported RO role semantics.",
+      "sha256": "8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52"
+    },
+    {
+      "path": "scripts/ground_causal_predicates.py",
+      "role": "Shared mapping writer; skips every already nonempty predicate_id. Mapping-only repair would not automatically correct these current edges.",
+      "sha256": "5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381"
+    },
+    {
+      "path": "scripts/migrate_process_quality_consistency.py",
+      "role": "Exact phosphate_buffering action-facet maintainer, not a replacement owner for edge 9; current node deliberately remains BIOLOGICAL_PROCESS while its incident relation requires reconciliation.",
+      "sha256": "1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a"
+    },
+    {
+      "path": "scripts/migrate_protein_vs_activity.py",
+      "role": "Exact historical activity rename owner for Na/H node and incident endpoint renaming; current explicit activity is positive. Does not establish current RO object validity.",
+      "sha256": "0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49"
+    },
+    {
+      "path": "scripts/migrate_node_type_consistency.py",
+      "role": "Maintains PMF STATE convention; current state is positive and must not be silently reinterpreted as a process to rescue an edge.",
+      "sha256": "a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e"
+    },
+    {
+      "path": "scripts/backfill_canonical_examples_444.py",
+      "role": "Exact current canonical example entry, guarded insertion/equality logic. K-12 W3110 study note is narrower than the official K-12 taxon; source interpretation remains separate.",
+      "sha256": "18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c"
+    }
+  ],
+  "research_limit": "Current August 4 Falcon frontmatter is contextual; it does not prove the exact June enrichment report version or provide human acceptance.",
+  "readiness": "Needs curation for current grouped imported-relation roles. Native structural success does not settle external semantics. No scientific record or writer was changed."
+}
+
+### Native checklist: bounded human acceptance traceability
+
+provenance: concern. Targets: METPO:1000531.
+
+The actual ignored-inclusive search found 195 paths and 67 review target arrays, with zero exact current target arrays. Thirty-two captured histories have AI actor projections; six were fully read, including one sibling-only context and five current-target maintenance histories. Eighteen record events comprise seventeen AI events plus seed. This positive maintenance provenance does not identify linked human acceptance within the bounded scope.
+
+### Native checklist: actual checks and qualified common reuse
+
+consistency: supported. Targets: METPO:1000531.
+
+All 120 captured inputs and frozen artifacts match. Focused native, strict and snippets passed. Original common failures, retries, skips and times remain explicit under actual B10-to-B11 qualification, without claiming new B11 QC.
+
+## Findings
+
+### imported-process-roles: Imported RO relations conflict with current condition and state referents
+
+major / open / confirmed; issue key: ph-phenotype-with-numerical-limits-imported-process-roles.
+
+RO:0002211 is process-to-process. Edge 4 represents an external-pH variable regulating a PMF STATE; edges 6 and 7 have valid activity subjects but STATE objects. RO:0002326 at 9 inherits material-to-process roles, whereas its current subject is buffering action and its object is an internal-pH STATE. This is a documentary role conflict, not a judgment of biological efficacy. Enables at edge 5 and consumes at edge 8 remain positive.
+
+### human-acceptance-link: Bounded local provenance lacks linked human acceptance
+
+minor / open / confirmed; issue key: ph-phenotype-with-numerical-limits-human-acceptance-link.
+
+AI and machine-seed maintenance, REVIEWED status and passing checks do not establish attributable current human scientific acceptance. The actual ignored-inclusive search and parsed target arrays bound this finding; remote or private acceptance is not declared absent.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-imported-roles
+
+Reconcile existing imported predicates with the intended current referents during separately authorized curation.
+
+- Preserve the legitimate activity subjects at 6 and 7 and valid enables at edge 5 and process-input consumes at edge 8; distinguish condition/state referents from processes.
+- Inspect exact target writer assignments and mapping empty-ID refill versus preservation of existing IDs; avoid claiming a table edit repairs current edges automatically.
+- Do not add defense mechanisms, interventions, new pathways or optimized conditions. Use guarded record/repository history, appropriate native/strict/grounding/QC checks and a successor review after changed inputs.
+
+### link-human-acceptance
+
+Link attributable human acceptance if available, or clarify status while retaining the bounded provenance result.
+
+- Preserve actual ignored-inclusive search counts and distinguish record events from separately read repository history.
+- Do not infer acceptance from AI activity, validators, ontology authorship or REVIEWED; no contact with others or automatic status promotion is authorized.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-ph-phenotype-with-numerical-limits-native | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-native.log; Executed 2026-10-21T19:26:35.565744+00:00 through 2026-10-21T19:26:38.753764+00:00; metadata ph-phenotype-with-numerical-limits-native.json | context_only | Direct successful current-target native validation; schema shape is separate from source support and formal roles. |
+| check-ph-phenotype-with-numerical-limits-strict | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-strict.log; Executed 2026-10-21T19:26:35.573905+00:00 through 2026-10-21T19:26:42.808665+00:00; metadata ph-phenotype-with-numerical-limits-strict.json | context_only | Direct successful current-target strict validation; no semantic role certification is inferred. |
+| check-ph-phenotype-with-numerical-limits-snippets | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-snippets.log; Executed 2026-10-21T19:26:37.894010+00:00 through 2026-10-21T19:26:43.450330+00:00; metadata ph-phenotype-with-numerical-limits-snippets.json | context_only | Direct pass: sixteen fields over three references, four VERIFIED and twelve NOT_IN_ABSTRACT. Independent actual source checks yield fourteen literal occurrences and two Baker body-unverified phrases; native results remain unchanged. |
+| check-batch010-qc | /private/tmp/traitmech-record-sweep-010.m7q2v9cx/batch010-qc.log; Executed 2026-10-21T19:06:27.731868+00:00 through 2026-10-21T19:08:11.219124+00:00; metadata batch010-qc.json | context_only | Actual B10 QC pass at its retained time, qualified against B11 bytes; not a fresh B11 execution. |
+| record | data/traits/environment/ph_phenotype_with_numerical_limits.yaml; Entire current record | supports | All fifteen nodes, fourteen edges, one canonical, sixteen snippet fields and eighteen events are covered. |
+| policy | docs/GROUNDING_POLICY.md; Captured maintained authority | supports | Reviewed label-only protein classes and optional instance absence are permitted; activity and material referents remain distinct. |
+| playbook | docs/CURATION_PLAYBOOK.md; Captured maintained authority | supports | Preserve source scope and exact quotation; AI maintenance is not attributable human acceptance. |
+| schema | src/traitmech/schema/traitmech.yaml; Captured maintained authority | supports | Native state, activity, process, chemical and protein meanings. |
+| checklist | .claude/skills/curate-yaml-record/references/review-checklist.md; Captured maintained authority | supports | Whole-record identity, hierarchy, bibliography, node/edge, ownership, optional evidence and readiness coverage. |
+| reuse | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json; Actual B10-to-B11 qualification | supports | All trait/history/common byte comparisons and original diagnostic outcomes remain explicit. |
+| reuse-postcheck | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-output-verification-agent/post-execution-verification.json; Actual independent qualification postcheck | supports | Recorded byte and native-output bindings verified without repeating QC. |
+| capture | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/capture-verification.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Successful 120-input capture independently rehashed. |
+| identity | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/identity-assessment.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Active METPO identity, parent and child hierarchy, bounded replacement-link scan and canonical identity scope. |
+| node-edges | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/node-edge-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Every node/edge and actual formal role, including valid activity subjects, enables and process-input consumes. |
+| owners | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/owner-provenance-assessment.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Exact maintained owners, targeted writer guards and bounded human-acceptance search. |
+| expression | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/expression-applicability.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual catalog and strain applicability, with detailed defense queries excluded. |
+| authority-reuse | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/authority-reuse-receipts.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Original retained catalog/runner acquisition times remain distinct from current copying. |
+| local-authority | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/local-authority-excerpts.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual local defines proposal and Biolink process-input semantics, not copied produces semantics. |
+| ground-reading | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/primary-reading-scope.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual authority/history reading scope and chronological limits. |
+| ground-manifest | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/evidence-manifest.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Frozen grounding manifest; every artifact verified before serialization. |
+| metpo-primary | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/repo/data/raw/metpo.owl; Actual target, parent and child XML plus replacement-link scan | supports | METPO hierarchy is assessed directly, separately from short generic literature snippets. No explicit replacement predecessor was found in the pinned snapshot scan; no remote absence is claimed. |
+| ro-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db; RO:0002211; RO:0002326→2216→2500→2595; RO:0002327 | supports | Regulation is process-to-process; contributes-to inherits material-to-process roles. Current explicit activities are processual, but their STATE objects are not processes. Protein-to-process enables is positive. |
+| biolink-primary | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/repo/data/raw/biolink-model.yaml; consumes and actual has-input inheritance | supports | Current Biolink consumes describes a process taking in an entity. The existing pathway-to-proton edge fits; no unrelated material-producer restriction is imported. |
+| taxonomy-primary | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/taxon83333.xml; Official NCBITaxon:83333 response | supports | Escherichia coli K-12 is a strain with alias E. coli K12. W3110 remains the paper-named narrower substrain, not a separate official alias established by this response. |
+| meta-krulwich | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/krulwich-metadata.json; Actual current indexed metadata/abstract surface | supports | Actual assigned indexed identity, abstract and returned publication-notice fields only; body text and its timing are separate. |
+| meta-baker | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/baker-metadata.json; Actual current indexed metadata/abstract surface | supports | Actual assigned indexed identity, abstract and returned publication-notice fields only; body text and its timing are separate. |
+| meta-poolman | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/poolman-metadata.json; Actual current indexed metadata/abstract surface | supports | Actual assigned indexed identity, abstract and returned publication-notice fields only; body text and its timing are separate. |
+| meta-canonical | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/canonical-metadata.json; Actual current indexed metadata/abstract surface | supports | Assigned abstract explicitly contains the existing K-12 W3110 buffered external-pH measurement-context wording. Detailed TolC/efflux/defense and perturbation efficacy are not assessed; no full body claim. |
+| body-krulwich-bioc.xml | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/krulwich-bioc.xml; Actual retained primary bytes; selected locators in reading receipt | supports | Selected generic BioC abstract/opening discussion and literal matching; incidental pathogen mechanisms are excluded. |
+| body-homeostasis.xml | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/homeostasis.xml; Actual retained primary bytes; selected locators in reading receipt | supports | Selected generic JATS paragraphs 0, 1, 4, 5 and 6 and existing paragraph 7 excerpt occurrences checked literally. No detailed defense or intervention efficacy assessment. |
+| sources | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/source-assessment.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Four assigned works, eighteen external placements and four ontology-grounding fields; no source-only finding. |
+| source-ledger | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/source-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | All publication identities and actual available surfaces. |
+| placements | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/placement-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Every current external citation placement and ontology grounding field. |
+| snippets | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/snippet-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Sixteen fields: fourteen exact occurrences and two Baker body-unverified phrases. Indexed Krulwich version resolves the body-only pass typography difference. |
+| node-sources | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/node-source-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Every node with incident-source context mapped explicitly. |
+| edge-sources | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/edge-source-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | All fourteen edges with generic attribution distinct from excluded detailed efficacy. |
+| source-status | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/publication-status-ledger.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Bounded actual indexed notice fields, not exhaustive retraction absence. |
+| source-reading | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/selected-primary-reading.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual selected reading scopes and separate original acquisition/current-copy times. |
+| source-access | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/access-limitations.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Baker body remains unknown; canonical abstract-only documentary scope is explicit. |
+| source-reuse | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/reuse-and-copy-receipt.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual current metadata and original retained body/taxonomy acquisition chronology. |
+| canonical-source | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/canonical-assessment.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Named substrain and measurement-context attribution only, without validating TolC perturbation efficacy. |
+| native-checks | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/native-check-context.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Actual direct passing checks and original native abstract-match result. |
+| source-manifest | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/evidence-manifest.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Thirty-one frozen source artifacts verified. |
+| root-reading-39 | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/builder-pending-root-reading.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Only the actual bounded reading and chronology recorded here; no whole-body or excluded efficacy reading inferred. |
+| root-reading-46 | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/primary-formal-reading.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Only the actual bounded reading and chronology recorded here; no whole-body or excluded efficacy reading inferred. |
+| root-reading-47 | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/root-reading-scope.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Only the actual bounded reading and chronology recorded here; no whole-body or excluded efficacy reading inferred. |
+| root-reading-48 | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/whole-target-preinspect-reading.json; Derived ledger or actual reading/access receipt; primary surfaces remain separate | supports | Only the actual bounded reading and chronology recorded here; no whole-body or excluded efficacy reading inferred. |
+| challenge | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-semantic-challenge-agent/semantic-severity-challenge.json; Final independent challenge | supports | Independent recommendation and all evidence bindings are verified before serialization. |
+| adjudication | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-root-adjudication.json; Final root disposition | supports | Final adjudication controls the findings; no scientific edit or status promotion occurs. |
+
+## Limits And Additional Notes
+
+- Detailed TolC/efflux/acid-defense/fitness/AMR and perturbation/intervention efficacy remains UNASSESSED_SCOPE. Canonical support denotes source/measurement-context fidelity, not efficacy validation.
+- Two Baker phrase occurrences remain unknown because actual body text is unavailable; no false-quote or false-biology inference follows.
+- Record-level Krulwich wording is exact in the indexed abstract; BioC manuscript typography differs. The retained body-only first pass is explicitly superseded for that occurrence without a native failure.
+- Short review fragments provide generic context, not independent exact-bin calibration, mathematical derivation, universal necessity or biological sufficiency. Formal hierarchy is verified separately against actual METPO.
+- Explicit activity nodes are legitimate processual referents. The grouped finding concerns their STATE objects and the specific imported roles; no blanket enum-only exclusion is imposed.
+- Current Biolink consumes is a process-input relation; an unrelated material-producer rule is not imported. The existing pathway label does not require new mechanistic reconstruction.
+- Actual official K-12 taxonomy does not establish W3110 as a separate indexed alias; paper-specific substrain and measurement context are retained.
+- Original Krulwich BioC acquisition at 07:57:33 and Poolman JATS at 10:34:33–34 remain distinct from current metadata at 19:25:54–55, copying and selected reading. No full article or new source request is claimed.
+- Native abstract matching is not a full-body literature check. Historical common failures/retries/skips remain explicit; no new B11 final QC is claimed.
+- The exact RO2326 chain is 2326→2216→2500→2595, not via 2215. Serialized edge 9 details clarify the original frozen ledger wording without changing that ledger.
+- Local ignored-inclusive search cannot establish absence of private or remote human decisions. Catalog matching does not prove phenotype, pathway efficacy or exact substrain identity.
+- Final root adjudication and independent challenge are pinned. Root owns single execution after independent static review, followed by native validation and final artifact review.
+- Source coverage: 4 works, 18 external placements, 4 ontology grounding fields, 15 nodes, 14 edges, 16 snippets (14 literal and 2 unknown), 1 canonical, and 18 record events (17 AI and 1 seed).
+- No scientific record, persistent sweep state, Git or native command is changed by preparation. Root owns eventual serialization, native validation and save.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T193803Z-ph-phenotype-with-numerical-limits
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of pH phenotype with numerical limits
+started_at: '2026-10-21T19:26:07.462256Z'
+finished_at: '2026-10-21T19:38:03Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Separate source and grounding audits, independent semantic challenge
+    and bounded root primary readings. Documentary identity, generic environmental
+    context, literal excerpts and formal roles are assessed. Detailed TolC/efflux/acid-defense/fitness/AMR
+    and genetic-perturbation efficacy are UNASSESSED_SCOPE. No scientific input was
+    edited.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: One grouped imported-role major at edges 4, 6, 7 and 9, and one bounded human-acceptance
+  minor. Source identity, generic context, fourteen literal snippets, enables at edge
+  5 and consumes at edge 8 remain supported.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/ph_delta.yaml
+    sha256: bddd29a48492578a5125f903de74f2c5476444e1069cb105008bdaf7fd2eacbf
+    role: context
+  - path: data/traits/environment/ph_optimum.yaml
+    sha256: 55981325e7e0e85fa5e1f52fc04cbc6de77b981783685c4bdab25e8bab26cfc4
+    role: context
+  - path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    sha256: 643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4
+    role: target
+  - path: data/traits/environment/ph_range.yaml
+    sha256: 8a9cac2ea39eaf0aaafb950fce9b8119713bbef55c43e84550f22c3ee9d13d1a
+    role: context
+  - path: data/traits/upper/phenotype.yaml
+    sha256: 502760fa1b7179bf4e25ab56ecb91d0b25d5f50ed5cfe44133c63a9b821cc4a4
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T060908Z-claude-code-f802c8.yaml
+    sha256: 8ede4f80f46395efb74643e1f4158975a119ffaec78b5b291f0fc3a520a11c59
+    role: context
+  - path: history/infrastructure/inconsistent-node-type/2026-08-12T000912Z-claude-code-779670.yaml
+    sha256: adb240d907348b52784c5e2f2e4b131af124877eeaaf1805c94713342763e5dd
+    role: context
+  - path: history/infrastructure/migration-history-idempotency/2026-08-16T190120Z-claude-code-49ec94.yaml
+    sha256: 460cfeb1207d22e3577b1b211c1d357cdae25013127ca985a5bb2244de6cb459
+    role: context
+  - path: history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    sha256: 21f19561c0d4769e7acc62e05e41d0d395a0f239938f00829f79f2b9c3ac2510
+    role: context
+  - path: history/infrastructure/pathway-vs-process/2026-08-16T010630Z-claude-code-192557.yaml
+    sha256: a45fff0e3ef24effb20c3b624dc14a6cab08f2094bc0f8033cd709c0cd60f012
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T010300Z-codex-95db7f.yaml
+    sha256: 28816e6b57360a9e5c7d6f2fe1a51bbc4289f4de6c010b5bf87c085d10a65c14
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T022400Z-codex-682abc.yaml
+    sha256: 557647c63e08f644fcedcb016d618d48c4d7b0085790a07c8d44bfefcf3ef4e5
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T034000Z-codex-683abc.yaml
+    sha256: 769cd277938c75d9f0b4d3f1331d9e967da145dd465f34248f769374af87be4e
+    role: context
+  - path: history/infrastructure/pr664-adversarial-review/2026-09-07T061600Z-codex-690abc.yaml
+    sha256: f2dee41c925c3ab238841ee0f9624a5311580125d40f05efdeda0ab17500151b
+    role: context
+  - path: history/infrastructure/predicate-gate-audit/2026-08-16T074719Z-claude-code-84d88d.yaml
+    sha256: d1ba848e155dbd3a65905f07af5539d3d22b8873b638cc6adb48b1a0e23c0a3d
+    role: context
+  - path: history/infrastructure/prioritize-graph-research/2026-08-18T073129Z-claude-code-6ffbb9.yaml
+    sha256: a1c2c954475853822eec940a2c6ec5fafb357039cddb9211568661ba8b9c739b
+    role: context
+  - path: history/infrastructure/prioritize-graph-research/2026-08-20T072722Z-claude-code-5774c9.yaml
+    sha256: f342f08a52f61fa1fe7350ee9aaba6f265760a90b959e98e979b3811135fbd3f
+    role: context
+  - path: history/infrastructure/protein-vs-activity/2026-08-15T202806Z-claude-code-ddcd62.yaml
+    sha256: 58f55f2617869c39eb6412455c0d838b350433ff0ad979c848be1df9bcb3fd4f
+    role: context
+  - path: history/infrastructure/trait-priority/2026-08-19T203529Z-claude-code-fbfb40.yaml
+    sha256: 5337f34a01bb7f39da1e604544e839a3e42d558069ff2cf52706fb5b05286766
+    role: context
+  - path: history/other/canonical-examples-batch1/2026-08-20T074839Z-claude-code-6fb2f5.yaml
+    sha256: c938f2928f2eb41505d58c2fb72d8de01d99534d766de9af400010e8778988a4
+    role: context
+  - path: history/other/canonical-examples-six/2026-08-21T065406Z-codex-a1ab82.yaml
+    sha256: 23be5f6ab519511e3e23feffa85813eec4fa3c7e6b900e77fd4a3adc0c26da0e
+    role: context
+  - path: history/records/ph_delta_mid2/2026-09-04T012000Z-codex-c2b994.yaml
+    sha256: 20f81cb8a888c5b27c69b3443ac5dedf5a8eea4e80f9a045093bd3629b418eb6
+    role: context
+  - path: history/records/ph_delta_mid2/2026-09-04T150000Z-codex-183.yaml
+    sha256: 7e63e01287759bd24840902179eeef44c47a919ac1e89f989882263f2c388aa9
+    role: context
+  - path: history/records/ph_delta_mid2/2026-09-06T133000Z-codex-2bd449.yaml
+    sha256: c35bda8421f2d19aad91a773482f76f3dfa190770fc7d9c853fa7f3a4fc29d1e
+    role: context
+  - path: history/records/ph_delta_mid2/2026-09-08T033000Z-codex-9842a8.yaml
+    sha256: 3e7c73dd3ce19cb1bfe1c212661f4437da11a271b3b75695791b1104a9268deb
+    role: context
+  - path: history/records/ph_delta_mid3/2026-09-04T014000Z-codex-398efe.yaml
+    sha256: 2d0d6f7b7384dad066fe94b657168f44667d6de570df360595e1948a7a577ddc
+    role: context
+  - path: history/records/ph_delta_mid3/2026-09-04T160000Z-codex-183.yaml
+    sha256: 0165fee9ce29ac9b142fd4653e9ff768940808e03f46035dab084a27041ef697
+    role: context
+  - path: history/records/ph_delta_mid3/2026-09-08T033000Z-codex-b36abc.yaml
+    sha256: 452faf633f0b8bad7ff1b39008b28e7c742719d3a236d728f79711e2b0ce9ee7
+    role: context
+  - path: history/records/ph_delta_very_low/2026-09-04T020000Z-codex-70a688.yaml
+    sha256: ad1a59989d57af0f936233b61005a9fd27b9de418747b43c2b4e3538a514ddc6
+    role: context
+  - path: history/records/ph_delta_very_low/2026-09-04T170000Z-codex-183.yaml
+    sha256: 02c9e4f114cff888a0e47573cdda51774a6239a5e15fc726256ec53be1a32608
+    role: context
+  - path: history/records/ph_delta_very_low/2026-09-08T033000Z-codex-6edfff.yaml
+    sha256: a39617668b6c8128cdb6273bc64f0eca735cd944154ef031de067755ffcfc6e0
+    role: context
+  - path: history/records/ph_phenotype_with_numerical_limits/2026-09-04T022000Z-codex-73fbda.yaml
+    sha256: aca551a5fa413f150acf64a9074ba913d1cb6c85b4962fd459276be79f836d62
+    role: context
+  - path: history/records/ph_phenotype_with_numerical_limits/2026-09-04T180000Z-codex-183.yaml
+    sha256: ee8e41be70786e254816eda9e09e34dc5c9af37bd5f45b6e88a18fa675b76f25
+    role: context
+  - path: history/records/ph_range_mid2/2026-09-04T024000Z-codex-3036b8.yaml
+    sha256: 5ac1f0e4fed3207531b7a5db26c67ff29e3e2a5c06ec1127107311d9e194f6a2
+    role: context
+  - path: history/records/siderophore_production/2026-09-14T183333Z-codex-0d9b0c.yaml
+    sha256: 47fd5a5b6280aabd6b87105618457723e3ee5b03b048345f4493d6f75adddbde
+    role: context
+  - path: history/records/thermotaxis/2026-10-03T222004Z-codex-1fe3c7.yaml
+    sha256: 2ad641e9a7c05913b8042053cfb9a2bf7db61c28a96f30401d84e85301f261c2
+    role: context
+  - path: history/records/trimethylamine_n_oxide_respiration/2026-09-15T020145Z-codex-45b255.yaml
+    sha256: f30ed97d0879e14111d51d1266ccf757237b440b5bdfbfc8d74f4ee53b244d22
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v3/proposal.md
+    sha256: 37be7b2c2efe0d1598d62b8df04f08262ba74b9d8068e010df6ee48069449067
+    role: context
+  - path: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+    sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+    role: context
+  - path: proposals/metpo_traitmech_v4/proposal.md
+    sha256: c35d12fec87a3efdcfa320125446320315fca17bdb9228dd2b98ed00fe991bd8
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/ph_phenotype_with_numerical_limits-deep-research-falcon.md
+    sha256: 0a8c037495ad9253ad9778e004c19ff04b272a14cca3f9177be90e9a864d8751
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_carbon_source_memory_trait.py
+    sha256: 290cbffea8a884d60116a69aaf44069fecbd91b6df71cc176458264638ced777
+    role: context
+  - path: scripts/add_cold_shock_response_trait.py
+    sha256: d90be1ba41afbc2c8194466485291a02c7f46c078cf4356c2635c169add6f521
+    role: context
+  - path: scripts/add_galvanotaxis_trait.py
+    sha256: 2328a18d0cba1caca2a3e6a443fe75bd5bc563182b284e1a863daf220a34041c
+    role: context
+  - path: scripts/add_heat_shock_response_trait.py
+    sha256: 359af09c3e8a77c1fa4143638a3c85daa221d9966a829a35bd4d5574448b9b7b
+    role: context
+  - path: scripts/add_homeoviscous_adaptation_trait.py
+    sha256: 1c757fd67bda18d2f4afb2fbf63d899844d416d084e2b9d53e298182ae2e4d09
+    role: context
+  - path: scripts/add_lit_system_trait.py
+    sha256: ea45d22d80d799f7ccb9b50133f716e9cfc141806a4908f6bd4afe1e91c6b992
+    role: context
+  - path: scripts/add_mazef_system_trait.py
+    sha256: 476feb73472b4f71851fb11f7c1e00b9a8023d3dc1187b7919cc7ec9bd2c6035
+    role: context
+  - path: scripts/add_mcrbc_system_trait.py
+    sha256: f6c1689c6e4887f8bb1be68865795d7ee49b8efd385ff4e269a54c87a1c7d620
+    role: context
+  - path: scripts/add_ornithine_decarboxylase_activity_trait.py
+    sha256: fa8417bb4a6dfe43fda1fe4f69e7645aefbc0a617d348eabb138620d1c5b4b05
+    role: context
+  - path: scripts/add_rheotaxis_trait.py
+    sha256: 032e7d998421ebef21a002457e992aab7663c6b0361ae0512c1c7ab0267e7f1e
+    role: context
+  - path: scripts/add_rnlab_system_trait.py
+    sha256: 0884250ce69b967a9bb1e3a1ee9dad68059757dc49e03146fdf4ec806c624fa0
+    role: context
+  - path: scripts/add_sos_response_trait.py
+    sha256: 75b01e4ad8065f723c9210652d85755145e45cb05f6f62bea449b5ecc0f5bbe2
+    role: context
+  - path: scripts/add_thermotaxis_trait.py
+    sha256: 37ed0df3824199c227ed98f79d17dbbcce3aff5ea4aea3103444c9c13a6fcf5a
+    role: context
+  - path: scripts/add_trimethylamine_n_oxide_respiration_trait.py
+    sha256: 92ef1bc42f26b9df73d94939a7823a655a2c0dd72cbb25087d31e93a6c5921b7
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_schema.py
+    sha256: ea8eb5b6f5355a87f6270ec67793e0a05811b14a67828543dad90f2465c5ddb1
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/build_embedding_index.py
+    sha256: d5ebf6612a04a67d74b2a245014a3624253d25f8d2b810e0b0ce528b7c851cd7
+    role: context
+  - path: scripts/connect_ph_delta_mid2_graph_183.py
+    sha256: 21e16ff508b7448d6a60bf0729585a2fa1879ce9ac98562de4652689aec75d91
+    role: context
+  - path: scripts/connect_ph_delta_mid3_graph_183.py
+    sha256: cf65890b2797032dcf9d2fa7b249a47cfe710501b3b2d8f610f323c6f27366e4
+    role: context
+  - path: scripts/connect_ph_delta_very_low_graph_183.py
+    sha256: 5abcdea4fbf7793bc718406439e63203726284d2c2d3222b4bdd00d3de2b6390
+    role: context
+  - path: scripts/connect_ph_phenotype_graph_183.py
+    sha256: 7d13d108660bede28937d3f180e90c542c47869c10f34ca497f9ab6f8f5db4ba
+    role: context
+  - path: scripts/connect_phototrophy_graphs_183.py
+    sha256: afdea1c107faa1d90b7f91adef4084cda801b8b60d139067e3796ab7b92c1fdc
+    role: context
+  - path: scripts/document_evidence_reference_churn.py
+    sha256: 84f8638faa59e3909cdde0ccf2efbdf98521c8c423367fa78c139726ea545669
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/repair_pr664_adversarial_review.py
+    sha256: 5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96
+    role: context
+  - path: scripts/review_ph_delta_mid2_graph_183.py
+    sha256: a7fcd17ebe8668b31f47c78b655ba908ffd537c3422f9bb2fd1cf3a66145b6c6
+    role: context
+  - path: scripts/review_ph_delta_mid3_graph_183.py
+    sha256: 47d0d2b09f3acce565d9779443d8a5ee6784989ae34c23c6f0875f74ad4a1532
+    role: context
+  - path: scripts/review_ph_delta_very_low_graph_183.py
+    sha256: 3fb1c239de9fb1bf91a5a97696053c7d652a619dc824ce160dd1063b44aad499
+    role: context
+  - path: scripts/review_ph_phenotype_graph_183.py
+    sha256: 651b46611c5e630e4db00f8d7525378ddb3a9f552c83e7f53387d14ab95dd2e2
+    role: context
+  - path: scripts/review_ph_range_mid2_graph_183.py
+    sha256: 2788c907439099c64cbc25c50b973e5ac0d2b93bc07ff7ed89e4cddaae500bd3
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/trait_priority.py
+    sha256: 96909390f0f55a76fe7161420813f072774a483797c29f96589be379c07892fb
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000531
+  path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  label: pH phenotype with numerical limits
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate assignment context; exact recurrence assessed only
+      after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; exact recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Second record of the actual batch 011 queue. Entire target and successful
+    120-input capture precede substantive source/grounding judgment. Metadata was
+    acquired before capture and interpreted afterward. Final frozen audits, challenge
+    and root adjudication are mandatory before execution.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000531
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000531
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000531
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at the 8eee base. The documented seven-file delta and actual B10 final QC
+    are qualified against B11 bytes, with independent postcheck. These are reused
+    executions, not a new B11 QC run. Original failures, retries and skips remain
+    explicit. Qualification: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json'
+- check_id: ph-phenotype-with-numerical-limits-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just validate data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Direct successful current-target native validation; schema shape is separate
+    from source support and formal roles.
+  evidence_ids:
+  - check-ph-phenotype-with-numerical-limits-native
+- check_id: ph-phenotype-with-numerical-limits-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just validate-strict data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Direct successful current-target strict validation; no semantic role certification
+    is inferred.
+  evidence_ids:
+  - check-ph-phenotype-with-numerical-limits-strict
+- check_id: ph-phenotype-with-numerical-limits-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just verify-snippets --record data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    --out /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct pass: sixteen fields over three references, four VERIFIED and twelve
+    NOT_IN_ABSTRACT. Independent actual source checks yield fourteen literal occurrences
+    and two Baker body-unverified phrases; native results remain unchanged.'
+  evidence_ids:
+  - check-ph-phenotype-with-numerical-limits-snippets
+- check_id: batch010-qc
+  name: Reused maintained batch-ten QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000531
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B10 QC pass at its retained time, qualified against B11 bytes; not
+    a fresh B11 execution.
+  evidence_ids:
+  - check-batch010-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000531
+  summary: The single reviewed label-only contextual protein class has no instance.
+    No token accession is required.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-ph-phenotype-with-numerical-limits-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-native.log
+  locator: Executed 2026-10-21T19:26:35.565744+00:00 through 2026-10-21T19:26:38.753764+00:00;
+    metadata ph-phenotype-with-numerical-limits-native.json
+  accessed_at: '2026-10-21T19:26:38.753764Z'
+  support: context_only
+  summary: Direct successful current-target native validation; schema shape is separate
+    from source support and formal roles.
+  snapshot_sha256: e292dd8187d7ab6f6d8b97f1a0c2d209a17829b1fdaa39425b857a40b1537f8c
+- evidence_id: check-ph-phenotype-with-numerical-limits-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-strict.log
+  locator: Executed 2026-10-21T19:26:35.573905+00:00 through 2026-10-21T19:26:42.808665+00:00;
+    metadata ph-phenotype-with-numerical-limits-strict.json
+  accessed_at: '2026-10-21T19:26:42.808665Z'
+  support: context_only
+  summary: Direct successful current-target strict validation; no semantic role certification
+    is inferred.
+  snapshot_sha256: 9bbbb0d843e6ffe9afaa220cbe9d094ef0ed356fab102ccc523c3e873787a831
+- evidence_id: check-ph-phenotype-with-numerical-limits-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-snippets.log
+  locator: Executed 2026-10-21T19:26:37.894010+00:00 through 2026-10-21T19:26:43.450330+00:00;
+    metadata ph-phenotype-with-numerical-limits-snippets.json
+  accessed_at: '2026-10-21T19:26:43.450330Z'
+  support: context_only
+  summary: 'Direct pass: sixteen fields over three references, four VERIFIED and twelve
+    NOT_IN_ABSTRACT. Independent actual source checks yield fourteen literal occurrences
+    and two Baker body-unverified phrases; native results remain unchanged.'
+  snapshot_sha256: dee8114ea5d239f82ffe99ac99b3eff3eb5d84a2cbafdc64ae9f9b632d5b6433
+- evidence_id: check-batch010-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-010.m7q2v9cx/batch010-qc.log
+  locator: Executed 2026-10-21T19:06:27.731868+00:00 through 2026-10-21T19:08:11.219124+00:00;
+    metadata batch010-qc.json
+  accessed_at: '2026-10-21T19:08:11.219124Z'
+  support: context_only
+  summary: Actual B10 QC pass at its retained time, qualified against B11 bytes; not
+    a fresh B11 execution.
+  snapshot_sha256: a97d2cc68e7db1ebd1a0edd19a7b0d03a4b1f45b55f8c6e6c2c48252f1705201
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+  locator: Entire current record
+  accessed_at: '2026-10-21T19:26:09.173992Z'
+  support: supports
+  summary: All fifteen nodes, fourteen edges, one canonical, sixteen snippet fields
+    and eighteen events are covered.
+  snapshot_sha256: 643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T19:31:24.277055Z'
+  support: supports
+  summary: Reviewed label-only protein classes and optional instance absence are permitted;
+    activity and material referents remain distinct.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T19:31:24.277055Z'
+  support: supports
+  summary: Preserve source scope and exact quotation; AI maintenance is not attributable
+    human acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T19:31:24.277055Z'
+  support: supports
+  summary: Native state, activity, process, chemical and protein meanings.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T19:31:24.277055Z'
+  support: supports
+  summary: Whole-record identity, hierarchy, bibliography, node/edge, ownership, optional
+    evidence and readiness coverage.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-b10-qc-supplement-qualified.json
+  locator: Actual B10-to-B11 qualification
+  accessed_at: '2026-10-21T19:08:29.388400Z'
+  support: supports
+  summary: All trait/history/common byte comparisons and original diagnostic outcomes
+    remain explicit.
+  snapshot_sha256: a728777b9987b1283d7d1382168af40739074fce5c05f9a3bd93d3738f56880f
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Actual independent qualification postcheck
+  accessed_at: '2026-10-21T19:08:41.804361Z'
+  support: supports
+  summary: Recorded byte and native-output bindings verified without repeating QC.
+  snapshot_sha256: a3a6f33363e71b00e8db09cbc318cae0027844aba584f7b4cafb282d11ab027a
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/capture-verification.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:26:23.810051Z'
+  support: supports
+  summary: Successful 120-input capture independently rehashed.
+  snapshot_sha256: 9daec174867ee104e049f33d5dcb0b9dac66dbfea31b6e3f62aad49ad987e07f
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/identity-assessment.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.275366Z'
+  support: supports
+  summary: Active METPO identity, parent and child hierarchy, bounded replacement-link
+    scan and canonical identity scope.
+  snapshot_sha256: c6096e36f62c6a127140bb7602403f2e9a7bcd4f44a3bd105e33a6ced263362c
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/node-edge-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.275819Z'
+  support: supports
+  summary: Every node/edge and actual formal role, including valid activity subjects,
+    enables and process-input consumes.
+  snapshot_sha256: fae59d04c7ce825bdf6eccf2f2688b81fc1d6f448568eb611d208d11b98ddef3
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/owner-provenance-assessment.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.276026Z'
+  support: supports
+  summary: Exact maintained owners, targeted writer guards and bounded human-acceptance
+    search.
+  snapshot_sha256: 982a50272f4c7b2b9f0e361e2ecc5976d1ea94ca2e26e9a43c5c0dd9be5ba5b0
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/expression-applicability.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.276845Z'
+  support: supports
+  summary: Actual catalog and strain applicability, with detailed defense queries
+    excluded.
+  snapshot_sha256: 283bdc048239742d2e8978eddafe0a38825dc91fadcaa6af0c7b095096ab2dc1
+- evidence_id: authority-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/authority-reuse-receipts.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:27:20.581880Z'
+  support: supports
+  summary: Original retained catalog/runner acquisition times remain distinct from
+    current copying.
+  snapshot_sha256: 976dbb9aa49440762bd52687341d55a31234ac175f857432a33d0f87c285d885
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/local-authority-excerpts.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:27:20.430847Z'
+  support: supports
+  summary: Actual local defines proposal and Biolink process-input semantics, not
+    copied produces semantics.
+  snapshot_sha256: b4b2f6011a895a5d5e2c1b542736f08dac79a9a8f65b83282bc1422f68f72ce1
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/primary-reading-scope.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.272031Z'
+  support: supports
+  summary: Actual authority/history reading scope and chronological limits.
+  snapshot_sha256: ebafb5d9f399759e37eec498617c52f479322527171e16fab979cdfef6c3fa89
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/evidence-manifest.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:24.282025Z'
+  support: supports
+  summary: Frozen grounding manifest; every artifact verified before serialization.
+  snapshot_sha256: 0895818b67d8b19c049212d16b3f535ca530c686430a8f976bb00ee03d043b79
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/repo/data/raw/metpo.owl
+  locator: Actual target, parent and child XML plus replacement-link scan
+  accessed_at: '2026-10-21T19:27:19.990612Z'
+  support: supports
+  summary: METPO hierarchy is assessed directly, separately from short generic literature
+    snippets. No explicit replacement predecessor was found in the pinned snapshot
+    scan; no remote absence is claimed.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: RO:0002211; RO:0002326→2216→2500→2595; RO:0002327
+  accessed_at: '2026-10-21T19:27:20.004975Z'
+  support: supports
+  summary: Regulation is process-to-process; contributes-to inherits material-to-process
+    roles. Current explicit activities are processual, but their STATE objects are
+    not processes. Protein-to-process enables is positive.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: biolink-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/repo/data/raw/biolink-model.yaml
+  locator: consumes and actual has-input inheritance
+  accessed_at: '2026-10-21T19:27:20.430847Z'
+  support: supports
+  summary: Current Biolink consumes describes a process taking in an entity. The existing
+    pathway-to-proton edge fits; no unrelated material-producer restriction is imported.
+  snapshot_sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+- evidence_id: taxonomy-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/taxon83333.xml
+  locator: Official NCBITaxon:83333 response
+  accessed_at: '2026-10-21T19:26:55.051308Z'
+  support: supports
+  summary: Escherichia coli K-12 is a strain with alias E. coli K12. W3110 remains
+    the paper-named narrower substrain, not a separate official alias established
+    by this response.
+  snapshot_sha256: c89efeb1937878f8c453d0ae0986a1bfa5835f01dc7980b65f42b12002324f67
+- evidence_id: meta-krulwich
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/krulwich-metadata.json
+  locator: Actual current indexed metadata/abstract surface
+  accessed_at: '2026-10-21T19:25:55.655429Z'
+  support: supports
+  summary: Actual assigned indexed identity, abstract and returned publication-notice
+    fields only; body text and its timing are separate.
+  snapshot_sha256: 484784a62fbb4c9d74a1feab4df2fdfdf37d4dd0ce3fa79f714c86a07d86d29c
+- evidence_id: meta-baker
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/baker-metadata.json
+  locator: Actual current indexed metadata/abstract surface
+  accessed_at: '2026-10-21T19:25:55.654804Z'
+  support: supports
+  summary: Actual assigned indexed identity, abstract and returned publication-notice
+    fields only; body text and its timing are separate.
+  snapshot_sha256: a78777bc3bb6444b32e2e8a13ab72c56d80592b97e30c9b5520c67cc040c631b
+- evidence_id: meta-poolman
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/poolman-metadata.json
+  locator: Actual current indexed metadata/abstract surface
+  accessed_at: '2026-10-21T19:25:55.655802Z'
+  support: supports
+  summary: Actual assigned indexed identity, abstract and returned publication-notice
+    fields only; body text and its timing are separate.
+  snapshot_sha256: 9438a145f5a3589f47880838848c92a29ad683eea0b0ef23dfda425b5fff4d5a
+- evidence_id: meta-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/canonical-metadata.json
+  locator: Actual current indexed metadata/abstract surface
+  accessed_at: '2026-10-21T19:25:55.654303Z'
+  support: supports
+  summary: Assigned abstract explicitly contains the existing K-12 W3110 buffered
+    external-pH measurement-context wording. Detailed TolC/efflux/defense and perturbation
+    efficacy are not assessed; no full body claim.
+  snapshot_sha256: 0c265f2147a4803b09fc9f84aacf020887d895044ae648e8e70dba2b132ab215
+- evidence_id: body-krulwich-bioc.xml
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/krulwich-bioc.xml
+  locator: Actual retained primary bytes; selected locators in reading receipt
+  accessed_at: '2026-10-21T07:57:33Z'
+  support: supports
+  summary: Selected generic BioC abstract/opening discussion and literal matching;
+    incidental pathogen mechanisms are excluded.
+  snapshot_sha256: 903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f
+- evidence_id: body-homeostasis.xml
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/homeostasis.xml
+  locator: Actual retained primary bytes; selected locators in reading receipt
+  accessed_at: '2026-10-21T10:34:34.760964Z'
+  support: supports
+  summary: Selected generic JATS paragraphs 0, 1, 4, 5 and 6 and existing paragraph
+    7 excerpt occurrences checked literally. No detailed defense or intervention efficacy
+    assessment.
+  snapshot_sha256: d55dbd224dbf2723a6a8a3e24460453f558ded3e2a6d4a9043395e2cb861f012
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/source-assessment.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.736290Z'
+  support: supports
+  summary: Four assigned works, eighteen external placements and four ontology-grounding
+    fields; no source-only finding.
+  snapshot_sha256: 7d7f4f8dd13edab2d76dfeb3967afe70f395f6034d9ab24a88b82a517d172bd4
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/source-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: All publication identities and actual available surfaces.
+  snapshot_sha256: 6e0a7fe67824a5619e3fb6b10c11a0e40bd48810d563ccac33669537e959ca27
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/placement-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Every current external citation placement and ontology grounding field.
+  snapshot_sha256: 5264939f400b7eef8759a511b6116394aa629f0cf3ab51dd88e36f67141353c2
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/snippet-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: 'Sixteen fields: fourteen exact occurrences and two Baker body-unverified
+    phrases. Indexed Krulwich version resolves the body-only pass typography difference.'
+  snapshot_sha256: 12b82b1df41c10df8acf9bc6599ebca776464ea7fa6662dd1dbe820618ca92d3
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/node-source-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Every node with incident-source context mapped explicitly.
+  snapshot_sha256: d56f6a53ed622f8a6c8899921ce52052f483e251eef7ee1bdbd2a264a6fd70da
+- evidence_id: edge-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/edge-source-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: All fourteen edges with generic attribution distinct from excluded detailed
+    efficacy.
+  snapshot_sha256: 1433a2612eb98e239e9e2d0e7f65f7640fcbf555fdf7451c980b3c6faece7ec3
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/publication-status-ledger.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Bounded actual indexed notice fields, not exhaustive retraction absence.
+  snapshot_sha256: 9fc856d1ea76341a061b7dc7ab52692f96b1d96aab05705e847c6e920b21876d
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/selected-primary-reading.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Actual selected reading scopes and separate original acquisition/current-copy
+    times.
+  snapshot_sha256: 37ee53f2935a982aa1e97936d6d54947a204fd925970c9a6e7c11575d0cba784
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/access-limitations.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Baker body remains unknown; canonical abstract-only documentary scope is
+    explicit.
+  snapshot_sha256: df563327abef036e64794d3e325b111740ddda0c07615b64ddaa0714e5b93a28
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/reuse-and-copy-receipt.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:27:50.842568Z'
+  support: supports
+  summary: Actual current metadata and original retained body/taxonomy acquisition
+    chronology.
+  snapshot_sha256: 64335f7fa4a7e0fa7135966df46f94f157ed1a6bbbcb1cd5cb3ae30b5f325ff7
+- evidence_id: canonical-source
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/canonical-assessment.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Named substrain and measurement-context attribution only, without validating
+    TolC perturbation efficacy.
+  snapshot_sha256: f8e2bbca5c453014b60a9847fd878ec801d99f75b42b85ab709d7b98048847f9
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/native-check-context.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.731403Z'
+  support: supports
+  summary: Actual direct passing checks and original native abstract-match result.
+  snapshot_sha256: 7f347e7f70752d87e2e5159b31600e1ee4cb663ac18d08d5115b451305b45bbc
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/evidence-manifest.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:29:30.761127Z'
+  support: supports
+  summary: Thirty-one frozen source artifacts verified.
+  snapshot_sha256: e2ad4f5ee2fd2ac1722ceb8ccff52a9e28baa283cbc5bd8493bb9fa22647232e
+- evidence_id: root-reading-39
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/builder-pending-root-reading.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:33:11.824674Z'
+  support: supports
+  summary: Only the actual bounded reading and chronology recorded here; no whole-body
+    or excluded efficacy reading inferred.
+  snapshot_sha256: 2cac710c96c461b14bd7abced44a507b8c27c89472adff6c4b91c9a33a37fa3d
+- evidence_id: root-reading-46
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/primary-formal-reading.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:30:52.280434Z'
+  support: supports
+  summary: Only the actual bounded reading and chronology recorded here; no whole-body
+    or excluded efficacy reading inferred.
+  snapshot_sha256: c208d26dfc536860ab0e660f7cbcb359ad94eaaa6c3b39d7897e4138c259abc5
+- evidence_id: root-reading-47
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/root-reading-scope.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:31:32.830753Z'
+  support: supports
+  summary: Only the actual bounded reading and chronology recorded here; no whole-body
+    or excluded efficacy reading inferred.
+  snapshot_sha256: e3b3e151218865311f3eb11e6657409b89bda288a9b2d16f74381bc4b4af1abf
+- evidence_id: root-reading-48
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-root/whole-target-preinspect-reading.json
+  locator: Derived ledger or actual reading/access receipt; primary surfaces remain
+    separate
+  accessed_at: '2026-10-21T19:25:32.525414Z'
+  support: supports
+  summary: Only the actual bounded reading and chronology recorded here; no whole-body
+    or excluded efficacy reading inferred.
+  snapshot_sha256: eb23d82bb68695ccffab137c05149478ae594b89d9543e236a2734008b1426ec
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T19:33:22.888820Z'
+  support: supports
+  summary: Independent recommendation and all evidence bindings are verified before
+    serialization.
+  snapshot_sha256: 41fe9dee839d1062bd71499821588aaf72f0cf56bb9eed48c2e99b0cc9515df5
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T19:33:50.250555Z'
+  support: supports
+  summary: Final adjudication controls the findings; no scientific edit or status
+    promotion occurs.
+  snapshot_sha256: 76bc8019c6573650aa9fd041a950926892bbe304a48b6256bb8582cbf0a5a105
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active identity and exact hierarchy'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: The active numerical-pH phenotype and its broad parent are checked against
+    actual METPO; optimum/range/delta hierarchy is verified independently of short
+    source excerpts. No scientific identity is inferred from status metadata.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: generic numerical external-pH definition'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: Inspected Krulwich text supports external growth-pH and pH-dependent activity
+    context. The definition is compatible generic classification; no measured exact
+    endpoint or derived descriptor calibration is invented.
+  evidence_ids:
+  - sources
+  - placements
+  - body-krulwich-bioc.xml
+- assessment_id: scope
+  area: scope
+  topic: 'Native checklist: nonmechanistic quantitative graph'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: ENVIRONMENT, CLASS and NONMECHANISTIC fit the quantitative measurement
+    graph. Its contextual branches are not automatically a universal or sufficient
+    mechanism.
+  evidence_ids:
+  - record
+  - policy
+  - checklist
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: named strain and measurement context'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: The assigned abstract contains the current K-12 W3110 external-pH measurement
+    wording. Official taxon 83333 identifies K-12, while W3110 is the narrower paper-named
+    substrain. Only source/measurement fidelity is assessed; TolC/efflux/defense/fitness/AMR
+    and perturbation efficacy remain UNASSESSED_SCOPE.
+  evidence_ids:
+  - canonical-source
+  - meta-canonical
+  - taxonomy-primary
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: all works and citation placements'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: Four assigned works and all eighteen external placements resolve; four
+    ontology grounding fields are distinguished. Available actual surfaces and bounded
+    publication-notice checks are explicit.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - source-status
+  - source-reuse
+  details: "{\n  \"completed_at\": \"2026-10-21T19:29:30.736290+00:00\",\n  \"target\"\
+    : {\n    \"path\": \"data/traits/environment/ph_phenotype_with_numerical_limits.yaml\"\
+    ,\n    \"identifier\": \"METPO:1000531\",\n    \"sha256\": \"643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4\"\
+    \n  },\n  \"capture\": {\n    \"path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits.inspect.json\"\
+    ,\n    \"sha256\": \"6bfe43e19193f1ea5406b12e113dc889e1defaa5766deee9bd05bf76b64f6d8a\"\
+    \n  },\n  \"counts\": {\n    \"assigned_works\": 4,\n    \"external_placements\"\
+    : 18,\n    \"ontology_grounding_fields\": 4,\n    \"nodes\": 15,\n    \"edges\"\
+    : 14,\n    \"canonical_examples\": 1,\n    \"snippets\": 16,\n    \"literal_exact\"\
+    : 14,\n    \"body_unknown\": 2\n  },\n  \"source_finding_candidates\": [],\n \
+    \ \"assessment\": \"Assigned sources support broad quantitative external-pH and\
+    \ generic homeostasis context. The canonical example is faithful as a documentary\
+    \ W3110 measurement-context attribution. Fourteen snippets have actual exact occurrence;\
+    \ two Baker phrases remain body-unverified. No independent source-only material\
+    \ finding is established in this restricted audit.\",\n  \"positive_support\"\
+    : [\n    \"Current external/internal pH distinction and numerical-environmental-axis\
+    \ context are supported by inspected Krulwich abstract and generic primary discussion.\"\
+    ,\n    \"Poolman existing generic physicochemical/context snippets are literal;\
+    \ current association notes explicitly avoid proof of a universal mechanism or\
+    \ measured external limit.\",\n    \"Named K-12 W3110 measurement context is present\
+    \ in assigned abstract; current note does not silently substitute a complete growth\
+    \ interval or optimum.\"\n  ],\n  \"limitations\": [\n    \"Exact mathematical\
+    \ derived-descriptor and subclass hierarchy claims are not established by short\
+    \ review fragments alone; ontology/formal hierarchy is independently reviewed\
+    \ by grounding.\",\n    \"Two Baker body snippets remain unknown; no absence or\
+    \ false-quote finding follows from abstract nonmatch.\",\n    \"Record-level Krulwich\
+    \ quotation matches the indexed abstract; retained BioC uses pH-sensing typography.\"\
+    ,\n    \"Detailed defense/fitness/AMR/efflux/genetic-perturbation efficacy remains\
+    \ UNASSESSED_SCOPE; literal matching does not certify those mechanisms.\",\n \
+    \   \"Publication status is bounded to current indexed metadata, not a global\
+    \ exhaustive retraction search.\"\n  ],\n  \"delegations\": \"Formal role/ontology/human-acceptance/owner\
+    \ verdicts are independently owned by grounding and root; no scientific, native,\
+    \ Git or state mutation by source auditor.\"\n}"
+- assessment_id: snippets
+  area: evidence
+  topic: 'Native checklist: all sixteen excerpt occurrences'
+  outcome: unknown
+  target_ids:
+  - METPO:1000531
+  summary: 'Fourteen current excerpts have literal support: four Krulwich and ten
+    Poolman. The two Baker phrases remain body-unverified. The indexed Krulwich abstract
+    matches current unhyphenated text while BioC hyphenates pH-sensing. Native four
+    VERIFIED/twelve NOT_IN_ABSTRACT is retained separately.'
+  evidence_ids:
+  - snippets
+  - source-reading
+  - source-access
+  - native-checks
+  details: "{\n  \"completed_at\": \"2026-10-21T19:29:30.731403+00:00\",\n  \"snippet_count\"\
+    : 16,\n  \"literal_exact\": 14,\n  \"body_unknown\": 2,\n  \"snippets\": [\n \
+    \   {\n      \"field\": \"evidence[0].snippet\",\n      \"reference\": \"DOI:10.1038/nrmicro2549\"\
+    ,\n      \"snippet\": \"Diverse mechanisms for pH sensing and cytoplasmic pH homeostasis\
+    \ enable most bacteria to tolerate or grow at external pH values\",\n      \"\
+    status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n          \"locator\"\
+    : \"current Europe PMC indexed abstract, opening sentence\",\n          \"match_start\"\
+    : 0,\n          \"exact_text\": \"Diverse mechanisms for pH sensing and cytoplasmic\
+    \ pH homeostasis enable most bacteria to tolerate or grow at external pH values\"\
+    \n        }\n      ],\n      \"source_version_qualification\": \"The actual BioC\
+    \ manuscript hyphenates pH-sensing; the fresh indexed abstract contains the current\
+    \ unhyphenated phrase exactly. Body-only first pass omitted metadata; this final\
+    \ check resolves that occurrence without pretending the source bodies are unavailable.\"\
+    ,\n      \"assessment_scope\": \"Literal occurrence only; detailed biological\
+    \ efficacy and pathogen-defense interpretation are not implied.\"\n    },\n  \
+    \  {\n      \"field\": \"evidence[1].snippet\",\n      \"reference\": \"DOI:10.1016/j.tim.2007.02.005\"\
+    ,\n      \"snippet\": \"proton motive force\",\n      \"status\": \"UNKNOWN_BODY_UNAVAILABLE\"\
+    ,\n      \"matches\": [],\n      \"assessment_scope\": \"Literal occurrence only;\
+    \ detailed biological efficacy and pathogen-defense interpretation are not implied.\"\
+    \n    },\n    {\n      \"field\": \"causal_graphs[0].edges[0].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"external\
+    \ pH values that are outside\",\n      \"status\": \"EXACT_LITERAL\",\n      \"\
+    matches\": [\n        {\n          \"locator\": \"BioC passage offset 58\",\n\
+    \          \"match_start\": 109,\n          \"match_length\": 35,\n          \"\
+    exact_text\": \"external pH values that are outside\"\n        }\n      ],\n \
+    \     \"assessment_scope\": \"Literal occurrence only; detailed biological efficacy\
+    \ and pathogen-defense interpretation are not implied.\"\n    },\n    {\n    \
+    \  \"field\": \"causal_graphs[0].edges[1].evidence[0].snippet\",\n      \"reference\"\
+    : \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"cytoplasmic pH\",\n     \
+    \ \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n          \"\
+    locator\": \"BioC passage offset 58\",\n          \"match_start\": 38,\n     \
+    \     \"match_length\": 14,\n          \"exact_text\": \"cytoplasmic pH\"\n  \
+    \      },\n        {\n          \"locator\": \"BioC passage offset 671\",\n  \
+    \        \"match_start\": 408,\n          \"match_length\": 14,\n          \"\
+    exact_text\": \"cytoplasmic pH\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 2440\",\n          \"match_start\": 486,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 3940\",\n          \"\
+    match_start\": 624,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"cytoplasmic pH\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 4950\",\n          \"match_start\": 44,\n          \"match_length\":\
+    \ 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 7133\",\n          \"match_start\"\
+    : 10,\n          \"match_length\": 14,\n          \"exact_text\": \"cytoplasmic\
+    \ pH\"\n        },\n        {\n          \"locator\": \"BioC passage offset 7180\"\
+    ,\n          \"match_start\": 88,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 7328\",\n          \"match_start\": 23,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 7370\",\n          \"\
+    match_start\": 762,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"cytoplasmic pH\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 8457\",\n          \"match_start\": 282,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 9102\",\n          \"match_start\"\
+    : 55,\n          \"match_length\": 14,\n          \"exact_text\": \"cytoplasmic\
+    \ pH\"\n        },\n        {\n          \"locator\": \"BioC passage offset 17378\"\
+    ,\n          \"match_start\": 796,\n          \"match_length\": 14,\n        \
+    \  \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 27057\",\n          \"match_start\": 175,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 37515\",\n          \"\
+    match_start\": 879,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"cytoplasmic pH\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 39253\",\n          \"match_start\": 415,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 47480\",\n          \"match_start\"\
+    : 268,\n          \"match_length\": 14,\n          \"exact_text\": \"cytoplasmic\
+    \ pH\"\n        },\n        {\n          \"locator\": \"BioC passage offset 49122\"\
+    ,\n          \"match_start\": 14,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"cytoplasmic pH\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 67131\",\n          \"match_start\": 493,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"cytoplasmic pH\"\n        }\n\
+    \      ],\n      \"assessment_scope\": \"Literal occurrence only; detailed biological\
+    \ efficacy and pathogen-defense interpretation are not implied.\"\n    },\n  \
+    \  {\n      \"field\": \"causal_graphs[0].edges[2].evidence[0].snippet\",\n  \
+    \    \"reference\": \"DOI:10.1016/j.tim.2007.02.005\",\n      \"snippet\": \"\
+    proton motive force\",\n      \"status\": \"UNKNOWN_BODY_UNAVAILABLE\",\n    \
+    \  \"matches\": [],\n      \"assessment_scope\": \"Literal occurrence only; detailed\
+    \ biological efficacy and pathogen-defense interpretation are not implied.\"\n\
+    \    },\n    {\n      \"field\": \"causal_graphs[0].edges[3].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1038/nrmicro2549\",\n      \"snippet\": \"pH\
+    \ homeostasis\",\n      \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n\
+    \        {\n          \"locator\": \"BioC passage offset 58\",\n          \"match_start\"\
+    : 50,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 671\",\n\
+    \          \"match_start\": 43,\n          \"match_length\": 14,\n          \"\
+    exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 2440\",\n          \"match_start\": 498,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 3309\",\n          \"\
+    match_start\": 568,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 3940\",\n          \"match_start\": 88,\n          \"match_length\":\
+    \ 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 6577\",\n          \"match_start\"\
+    : 10,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 9102\",\n\
+    \          \"match_start\": 67,\n          \"match_length\": 14,\n          \"\
+    exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 9746\",\n          \"match_start\": 32,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 9793\",\n          \"\
+    match_start\": 40,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 10376\",\n          \"match_start\": 31,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 12201\",\n          \"match_start\"\
+    : 133,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 13430\"\
+    ,\n          \"match_start\": 0,\n          \"match_length\": 14,\n          \"\
+    exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 13534\",\n          \"match_start\": 28,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 15086\",\n          \"\
+    match_start\": 29,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 15130\",\n          \"match_start\": 22,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 16479\",\n          \"match_start\"\
+    : 406,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 17378\"\
+    ,\n          \"match_start\": 93,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 18903\",\n          \"match_start\": 110,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 19769\",\n          \"\
+    match_start\": 504,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 20611\",\n          \"match_start\": 170,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 26699\",\n          \"match_start\"\
+    : 9,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 27057\"\
+    ,\n          \"match_start\": 60,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 27702\",\n          \"match_start\": 41,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 34345\",\n          \"\
+    match_start\": 359,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 36727\",\n          \"match_start\": 31,\n          \"match_length\"\
+    : 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 39253\",\n          \"match_start\"\
+    : 4,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 40107\"\
+    ,\n          \"match_start\": 28,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 42119\",\n          \"match_start\": 101,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 44016\",\n          \"\
+    match_start\": 64,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 48281\",\n          \"match_start\": 9,\n          \"match_length\":\
+    \ 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 49779\",\n          \"match_start\"\
+    : 35,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 51883\"\
+    ,\n          \"match_start\": 61,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 52269\",\n          \"match_start\": 24,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 53261\",\n          \"\
+    match_start\": 70,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        },\n        {\n          \"locator\": \"BioC passage\
+    \ offset 59345\",\n          \"match_start\": 0,\n          \"match_length\":\
+    \ 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n        {\n \
+    \         \"locator\": \"BioC passage offset 61189\",\n          \"match_start\"\
+    : 76,\n          \"match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\
+    \n        },\n        {\n          \"locator\": \"BioC passage offset 61308\"\
+    ,\n          \"match_start\": 91,\n          \"match_length\": 14,\n         \
+    \ \"exact_text\": \"pH homeostasis\"\n        },\n        {\n          \"locator\"\
+    : \"BioC passage offset 67006\",\n          \"match_start\": 53,\n          \"\
+    match_length\": 14,\n          \"exact_text\": \"pH homeostasis\"\n        },\n\
+    \        {\n          \"locator\": \"BioC passage offset 67131\",\n          \"\
+    match_start\": 624,\n          \"match_length\": 14,\n          \"exact_text\"\
+    : \"pH homeostasis\"\n        }\n      ],\n      \"assessment_scope\": \"Literal\
+    \ occurrence only; detailed biological efficacy and pathogen-defense interpretation\
+    \ are not implied.\"\n    },\n    {\n      \"field\": \"causal_graphs[0].edges[4].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    cells maintain their cytoplasmic pH around neutral\",\n      \"status\": \"EXACT_LITERAL\"\
+    ,\n      \"matches\": [\n        {\n          \"locator\": \"body/p[1]\",\n  \
+    \        \"match_start\": 158,\n          \"match_length\": 50,\n          \"\
+    exact_text\": \"cells maintain their cytoplasmic pH around neutral\"\n       \
+    \ }\n      ],\n      \"assessment_scope\": \"Literal occurrence only; detailed\
+    \ biological efficacy and pathogen-defense interpretation are not implied.\"\n\
+    \    },\n    {\n      \"field\": \"causal_graphs[0].edges[5].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    stored in the form of a proton motive force, which subsequently can be used by\
+    \ F0F1-ATP synthase to make ATP\",\n      \"status\": \"EXACT_LITERAL\",\n   \
+    \   \"matches\": [\n        {\n          \"locator\": \"body/p[5]\",\n       \
+    \   \"match_start\": 492,\n          \"match_length\": 108,\n          \"exact_text\"\
+    : \"stored in the form of a proton motive force, which subsequently can be used\
+    \ by F0F1-ATP synthase to make ATP\"\n        }\n      ],\n      \"assessment_scope\"\
+    : \"Literal occurrence only; detailed biological efficacy and pathogen-defense\
+    \ interpretation are not implied.\"\n    },\n    {\n      \"field\": \"causal_graphs[0].edges[6].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    Proton-sensing ion/H+ antiporters acidify the cytoplasm by exporting K+ or Na+\
+    \ in exchange for protons when the internal pH gets too high\",\n      \"status\"\
+    : \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n          \"locator\":\
+    \ \"body/p[4]\",\n          \"match_start\": 518,\n          \"match_length\"\
+    : 137,\n          \"exact_text\": \"Proton-sensing ion/H+ antiporters acidify\
+    \ the cytoplasm by exporting K+ or Na+ in exchange for protons when the internal\
+    \ pH gets too high\"\n        }\n      ],\n      \"assessment_scope\": \"Literal\
+    \ occurrence only; detailed biological efficacy and pathogen-defense interpretation\
+    \ are not implied.\"\n    },\n    {\n      \"field\": \"causal_graphs[0].edges[7].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    Key regulators of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters\"\
+    ,\n      \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n   \
+    \       \"locator\": \"body/p[1]\",\n          \"match_start\": 842,\n       \
+    \   \"match_length\": 75,\n          \"exact_text\": \"Key regulators of bacterial\
+    \ pH homeostasis are Na+/H+ and K+/H+ antiporters\"\n        }\n      ],\n   \
+    \   \"assessment_scope\": \"Literal occurrence only; detailed biological efficacy\
+    \ and pathogen-defense interpretation are not implied.\"\n    },\n    {\n    \
+    \  \"field\": \"causal_graphs[0].edges[8].evidence[0].snippet\",\n      \"reference\"\
+    : \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"the chemistry of the decarboxylation\
+    \ reaction requires a proton\",\n      \"status\": \"EXACT_LITERAL\",\n      \"\
+    matches\": [\n        {\n          \"locator\": \"body/p[7]\",\n          \"match_start\"\
+    : 337,\n          \"match_length\": 63,\n          \"exact_text\": \"the chemistry\
+    \ of the decarboxylation reaction requires a proton\"\n        }\n      ],\n \
+    \     \"assessment_scope\": \"Literal occurrence only; detailed biological efficacy\
+    \ and pathogen-defense interpretation are not implied.\"\n    },\n    {\n    \
+    \  \"field\": \"causal_graphs[0].edges[9].evidence[0].snippet\",\n      \"reference\"\
+    : \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"sufficient buffering capacity\
+    \ (e.g. inorganic and organic phosphates)\",\n      \"status\": \"EXACT_LITERAL\"\
+    ,\n      \"matches\": [\n        {\n          \"locator\": \"body/p[4]\",\n  \
+    \        \"match_start\": 342,\n          \"match_length\": 69,\n          \"\
+    exact_text\": \"sufficient buffering capacity (e.g. inorganic and organic phosphates)\"\
+    \n        }\n      ],\n      \"assessment_scope\": \"Literal occurrence only;\
+    \ detailed biological efficacy and pathogen-defense interpretation are not implied.\"\
+    \n    },\n    {\n      \"field\": \"causal_graphs[0].edges[10].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    drive the synthesis of ATP and the transport of solutes\",\n      \"status\":\
+    \ \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n          \"locator\":\
+    \ \"body/p[0]\",\n          \"match_start\": 148,\n          \"match_length\"\
+    : 55,\n          \"exact_text\": \"drive the synthesis of ATP and the transport\
+    \ of solutes\"\n        }\n      ],\n      \"assessment_scope\": \"Literal occurrence\
+    \ only; detailed biological efficacy and pathogen-defense interpretation are not\
+    \ implied.\"\n    },\n    {\n      \"field\": \"causal_graphs[0].edges[11].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    Cells use different transport mechanisms to interconvert the \\u0394\\u03a8 and\
+    \ \\u0394pH to simultaneously maintain a relatively constant PMF and internal\
+    \ pH\",\n      \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n\
+    \          \"locator\": \"body/p[1]\",\n          \"match_start\": 700,\n    \
+    \      \"match_length\": 140,\n          \"exact_text\": \"Cells use different\
+    \ transport mechanisms to interconvert the \\u0394\\u03a8 and \\u0394pH to simultaneously\
+    \ maintain a relatively constant PMF and internal pH\"\n        }\n      ],\n\
+    \      \"assessment_scope\": \"Literal occurrence only; detailed biological efficacy\
+    \ and pathogen-defense interpretation are not implied.\"\n    },\n    {\n    \
+    \  \"field\": \"causal_graphs[0].edges[12].evidence[0].snippet\",\n      \"reference\"\
+    : \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"the internal pH is increased\"\
+    ,\n      \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n   \
+    \       \"locator\": \"body/p[7]\",\n          \"match_start\": 411,\n       \
+    \   \"match_length\": 28,\n          \"exact_text\": \"the internal pH is increased\"\
+    \n        }\n      ],\n      \"assessment_scope\": \"Literal occurrence only;\
+    \ detailed biological efficacy and pathogen-defense interpretation are not implied.\"\
+    \n    },\n    {\n      \"field\": \"causal_graphs[0].edges[13].evidence[0].snippet\"\
+    ,\n      \"reference\": \"DOI:10.1093/femsre/fuad033\",\n      \"snippet\": \"\
+    the magnitude of the pH gradient is largely determined by the external pH\",\n\
+    \      \"status\": \"EXACT_LITERAL\",\n      \"matches\": [\n        {\n     \
+    \     \"locator\": \"body/p[1]\",\n          \"match_start\": 210,\n         \
+    \ \"match_length\": 73,\n          \"exact_text\": \"the magnitude of the pH gradient\
+    \ is largely determined by the external pH\"\n        }\n      ],\n      \"assessment_scope\"\
+    : \"Literal occurrence only; detailed biological efficacy and pathogen-defense\
+    \ interpretation are not implied.\"\n    }\n  ],\n  \"prior_pass\": {\n    \"\
+    path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-source-agent/literal-match-results.json\"\
+    ,\n    \"sha256\": \"7eae527c65865bb5397cef5dc51455655fe7cbb5823d0c1de545ba216594cf9b\"\
+    ,\n    \"bytes\": 16765\n  },\n  \"qualification\": \"Final coverage adds the\
+    \ actual indexed abstract for record evidence[0]. The retained first pass checked\
+    \ body files only and used an overbroad default unknown label; no native or source-access\
+    \ failure occurred.\"\n}"
+- assessment_id: nodes
+  area: grounding
+  topic: 'Native checklist: every existing node referent'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: All fifteen nodes are assessed against their actual descriptions. The two
+    antiporter nodes are explicit activities, PMF/internal-pH nodes are states, and
+    buffering is an explicit process. No unconditional assertion that this graph contains
+    no pathway is made.
+  evidence_ids:
+  - node-edges
+  - schema
+  - policy
+  details: "[\n  {\n    \"index\": 0,\n    \"field_path\": \"causal_graphs[0].nodes[0]\"\
+    ,\n    \"node_id\": \"ph_phenotype_trait\",\n    \"label\": \"pH phenotype with\
+    \ numerical limits\",\n    \"node_type\": \"TRAIT\",\n    \"grounding\": \"METPO:1000531\"\
+    ,\n    \"description\": \"Phenotype defined by a numerical external-pH descriptor.\"\
+    ,\n    \"documentary_assessment\": \"Active trait identity matches the record\
+    \ and parent hierarchy.\",\n    \"biology_scope\": \"Generic measurement identity\"\
+    \n  },\n  {\n    \"index\": 1,\n    \"field_path\": \"causal_graphs[0].nodes[1]\"\
+    ,\n    \"node_id\": \"external_ph_axis\",\n    \"label\": \"external pH axis\"\
+    ,\n    \"node_type\": \"ENVIRONMENTAL_FACTOR\",\n    \"description\": \"External\
+    \ proton activity (pH) as a continuous environmental variable.\",\n    \"documentary_assessment\"\
+    : \"Explicit continuous external-pH environmental variable. Its current condition/axis\
+    \ referent is distinct from a temporal pH-change process; relation mismatch is\
+    \ assessed at edge 4.\",\n    \"biology_scope\": \"Generic measurement identity\"\
+    \n  },\n  {\n    \"index\": 2,\n    \"field_path\": \"causal_graphs[0].nodes[2]\"\
+    ,\n    \"node_id\": \"ph_optimum\",\n    \"label\": \"pH optimum\",\n    \"node_type\"\
+    : \"TRAIT\",\n    \"grounding\": \"METPO:1000331\",\n    \"description\": \"External\
+    \ pH supporting the most efficient growth.\",\n    \"documentary_assessment\"\
+    : \"Active pH optimum trait and subclass grounding agree; external optimum is\
+    \ distinct from internal pH.\",\n    \"biology_scope\": \"Generic measurement\
+    \ identity\"\n  },\n  {\n    \"index\": 3,\n    \"field_path\": \"causal_graphs[0].nodes[3]\"\
+    ,\n    \"node_id\": \"ph_range\",\n    \"label\": \"pH range\",\n    \"node_type\"\
+    : \"TRAIT\",\n    \"grounding\": \"METPO:1000332\",\n    \"description\": \"Span\
+    \ of external pH values supporting growth.\",\n    \"documentary_assessment\"\
+    : \"Active pH range trait and subclass grounding agree.\",\n    \"biology_scope\"\
+    : \"Generic measurement identity\"\n  },\n  {\n    \"index\": 4,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[4]\",\n    \"node_id\": \"ph_delta\",\n    \"label\"\
+    : \"pH delta\",\n    \"node_type\": \"TRAIT\",\n    \"grounding\": \"METPO:1000232\"\
+    ,\n    \"description\": \"Breadth (max \\u2212 min) of the growth-supporting external\
+    \ pH range.\",\n    \"documentary_assessment\": \"Active pH delta trait denotes\
+    \ numerical breadth and is an explicit upstream subclass.\",\n    \"biology_scope\"\
+    : \"Generic measurement identity\"\n  },\n  {\n    \"index\": 5,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[5]\",\n    \"node_id\": \"proton_motive_force\",\n\
+    \    \"label\": \"proton motive force across cell envelope\",\n    \"node_type\"\
+    : \"STATE\",\n    \"description\": \"Electrochemical proton gradient across the\
+    \ cell envelope linking external pH to bioenergetics.\",\n    \"documentary_assessment\"\
+    : \"Electrochemical gradient is the schema\\u2019s explicit STATE facet; no conversion\
+    \ to establishment process is warranted.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE\
+    \ for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type\
+    \ only\"\n  },\n  {\n    \"index\": 6,\n    \"field_path\": \"causal_graphs[0].nodes[6]\"\
+    ,\n    \"node_id\": \"f0f1_atpase\",\n    \"label\": \"F0F1-ATPase / ATP synthase\"\
+    ,\n    \"node_type\": \"GENE_OR_PROTEIN\",\n    \"grounding_status\": \"REVIEWED_LABEL_ONLY\"\
+    ,\n    \"grounding_notes\": \"Reviewed as a contextual protein or protein-complex\
+    \ label within a quantitative measurement graph; no exact semantic family term\
+    \ was established for this aggregate use.\",\n    \"description\": \"Membrane\
+    \ ATP synthase coupling proton motive force to ATP synthesis.\",\n    \"documentary_assessment\"\
+    : \"Protein/complex aggregate is responsibly REVIEWED_LABEL_ONLY. NONMECHANISTIC\
+    \ measurement scope does not require a token UniProt instance.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 7,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[7]\",\n    \"node_id\": \"atp_synthesis_from_pmf\"\
+    ,\n    \"label\": \"ATP synthesis from proton motive force\",\n    \"node_type\"\
+    : \"BIOLOGICAL_PROCESS\",\n    \"description\": \"Synthesis of ATP driven by the\
+    \ transmembrane proton gradient.\",\n    \"documentary_assessment\": \"Explicit\
+    \ ATP-synthesis process is distinct from the material enzyme and maintained gradient.\
+    \ Formal disposition only; detailed efficacy unassessed.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 8,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[8]\",\n    \"node_id\": \"na_h_antiport_activity\"\
+    ,\n    \"label\": \"Na+/H+ antiporter activity\",\n    \"node_type\": \"MOLECULAR_FUNCTION\"\
+    ,\n    \"description\": \"Cation/proton antiport activity regulating internal\
+    \ pH and PMF.\",\n    \"documentary_assessment\": \"Explicit antiport activity\
+    \ is a legitimate MOLECULAR_FUNCTION; no missing material protein instance or\
+    \ forced retype. Range issue at edge 6 is separate.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 9,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[9]\",\n    \"node_id\": \"k_h_antiporter\",\n    \"\
+    label\": \"K+/H+ antiporter activity\",\n    \"node_type\": \"MOLECULAR_FUNCTION\"\
+    ,\n    \"description\": \"Potassium/proton antiport activity regulating internal\
+    \ pH and PMF.\",\n    \"documentary_assessment\": \"Legacy node identifier does\
+    \ not override explicit activity label/description and MOLECULAR_FUNCTION type.\
+    \ No automatic protein retype; edge 7 range assessed separately.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 10,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[10]\",\n    \"node_id\": \"internal_ph_pmf\",\n   \
+    \ \"label\": \"internal pH / proton motive force\",\n    \"node_type\": \"STATE\"\
+    ,\n    \"description\": \"Regulated cytoplasmic pH and proton motive force homeostatic\
+    \ set-point.\",\n    \"documentary_assessment\": \"Combined maintained internal-pH/PMF\
+    \ set-point is a STATE, not the process regulating it.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 11,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[11]\",\n    \"node_id\": \"aa_decarboxylase_antiporter\"\
+    ,\n    \"label\": \"amino-acid decarboxylase + antiporter systems\",\n    \"node_type\"\
+    : \"PATHWAY\",\n    \"description\": \"Decarboxylation-antiport cycles that consume\
+    \ cytoplasmic protons.\",\n    \"documentary_assessment\": \"Description explicitly\
+    \ selects coupled decarboxylation-antiport cycles. PATHWAY is defensible under\
+    \ current named-system convention despite systems wording in label; no extra node-facet\
+    \ finding.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense,\
+    \ fitness, TolC/efflux or intervention mechanisms; identity/type only\"\n  },\n\
+    \  {\n    \"index\": 12,\n    \"field_path\": \"causal_graphs[0].nodes[12]\",\n\
+    \    \"node_id\": \"intracellular_proton\",\n    \"label\": \"intracellular H+\"\
+    ,\n    \"node_type\": \"CHEMICAL\",\n    \"description\": \"Cytoplasmic protons\
+    \ whose concentration sets internal pH.\",\n    \"documentary_assessment\": \"\
+    Material intracellular protons are CHEMICAL. Description mentions concentration\
+    \ as a related variable, not equivalence between material and pH.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux or intervention\
+    \ mechanisms; identity/type only\"\n  },\n  {\n    \"index\": 13,\n    \"field_path\"\
+    : \"causal_graphs[0].nodes[13]\",\n    \"node_id\": \"phosphate_buffering\",\n\
+    \    \"label\": \"cytoplasmic phosphate buffering\",\n    \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n    \"description\": \"Buffering of cytoplasmic protons by intracellular phosphate\
+    \ pools.\",\n    \"documentary_assessment\": \"Explicit phosphate-buffering action\
+    \ is BIOLOGICAL_PROCESS, reinforced by maintained migration and current history;\
+    \ it is not the reservoir-size facet.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE\
+    \ for detailed defense, fitness, TolC/efflux or intervention mechanisms; identity/type\
+    \ only\"\n  },\n  {\n    \"index\": 14,\n    \"field_path\": \"causal_graphs[0].nodes[14]\"\
+    ,\n    \"node_id\": \"internal_ph\",\n    \"label\": \"internal pH\",\n    \"\
+    node_type\": \"STATE\",\n    \"description\": \"Cytoplasmic pH maintained by homeostatic\
+    \ mechanisms.\",\n    \"documentary_assessment\": \"Maintained cytoplasmic pH\
+    \ is a STATE, distinct from its homeostatic establishment process.\",\n    \"\
+    biology_scope\": \"UNASSESSED_SCOPE for detailed defense, fitness, TolC/efflux\
+    \ or intervention mechanisms; identity/type only\"\n  }\n]"
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all fourteen edges'
+  outcome: concern
+  target_ids:
+  - METPO:1000531
+  summary: Imported RO roles conflict at edges 4, 6, 7 and 9. Activity subjects at
+    6 and 7 are legitimate processual referents, but their current STATE object is
+    not a process. Protein-to-process enables at 5 and process-input consumes at 8
+    are valid. Local defines, hierarchy and association links are separately assessed.
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - biolink-primary
+  - local-authority
+  - challenge
+  details: "[\n  {\n    \"index\": 0,\n    \"field_path\": \"causal_graphs[0].edges[0]\"\
+    ,\n    \"subject\": \"external_ph_axis\",\n    \"predicate\": \"defines\",\n \
+    \   \"predicate_id\": \"METPO:2007500\",\n    \"object\": \"ph_phenotype_trait\"\
+    ,\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n  \
+    \  \"assessment\": \"Local v4 defines explicitly supports environmental-axis to\
+    \ trait parameterization; native wildcard gating is not the source of this positive\
+    \ conclusion.\",\n    \"biology_scope\": \"Generic axis/hierarchy; literature\
+    \ note support separately audited\"\n  },\n  {\n    \"index\": 1,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[1]\",\n    \"subject\": \"ph_optimum\",\n    \"predicate\"\
+    : \"is a\",\n    \"predicate_id\": \"rdfs:subClassOf\",\n    \"object\": \"ph_phenotype_trait\"\
+    ,\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n  \
+    \  \"assessment\": \"Actual METPO pH optimum subclass link supports RDFS class-to-class\
+    \ edge. Source explanatory note is independently audited, not elevated to ontology\
+    \ equivalence.\",\n    \"biology_scope\": \"Generic axis/hierarchy; literature\
+    \ note support separately audited\"\n  },\n  {\n    \"index\": 2,\n    \"field_path\"\
+    : \"causal_graphs[0].edges[2]\",\n    \"subject\": \"ph_range\",\n    \"predicate\"\
+    : \"is a\",\n    \"predicate_id\": \"rdfs:subClassOf\",\n    \"object\": \"ph_phenotype_trait\"\
+    ,\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n  \
+    \  \"assessment\": \"Actual METPO pH range subclass link supports RDFS class-to-class\
+    \ edge.\",\n    \"biology_scope\": \"Generic axis/hierarchy; literature note support\
+    \ separately audited\"\n  },\n  {\n    \"index\": 3,\n    \"field_path\": \"causal_graphs[0].edges[3]\"\
+    ,\n    \"subject\": \"ph_delta\",\n    \"predicate\": \"is a\",\n    \"predicate_id\"\
+    : \"rdfs:subClassOf\",\n    \"object\": \"ph_phenotype_trait\",\n    \"documentary_status\"\
+    : \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n    \"assessment\": \"Actual METPO\
+    \ pH delta subclass link supports RDFS class-to-class edge.\",\n    \"biology_scope\"\
+    : \"Generic axis/hierarchy; literature note support separately audited\"\n  },\n\
+    \  {\n    \"index\": 4,\n    \"field_path\": \"causal_graphs[0].edges[4]\",\n\
+    \    \"subject\": \"external_ph_axis\",\n    \"predicate\": \"regulates\",\n \
+    \   \"predicate_id\": \"RO:0002211\",\n    \"object\": \"proton_motive_force\"\
+    ,\n    \"documentary_status\": \"MAJOR_ROLE_MISMATCH\",\n    \"assessment\": \"\
+    Confirmed grouped role mismatch: RO:0002211 has process domain and process range.\
+    \ Current subject is an explicit environmental measurement axis/condition and\
+    \ object the maintained PMF STATE. A separately stated change event could be processual,\
+    \ but is not this current referent.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE\
+    \ for detailed defense/fitness/intervention efficacy; formal role assessment only\"\
+    \n  },\n  {\n    \"index\": 5,\n    \"field_path\": \"causal_graphs[0].edges[5]\"\
+    ,\n    \"subject\": \"f0f1_atpase\",\n    \"predicate\": \"enables\",\n    \"\
+    predicate_id\": \"RO:0002327\",\n    \"object\": \"atp_synthesis_from_pmf\",\n\
+    \    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n    \"\
+    assessment\": \"Positive formal fit: material ATPase/complex enables an ATP-synthesis\
+    \ process under RO:0002327 executor/process semantics. Detailed biological efficacy\
+    \ is unassessed.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense/fitness/intervention\
+    \ efficacy; formal role assessment only\"\n  },\n  {\n    \"index\": 6,\n    \"\
+    field_path\": \"causal_graphs[0].edges[6]\",\n    \"subject\": \"na_h_antiport_activity\"\
+    ,\n    \"predicate\": \"regulates\",\n    \"predicate_id\": \"RO:0002211\",\n\
+    \    \"object\": \"internal_ph_pmf\",\n    \"documentary_status\": \"MAJOR_ROLE_MISMATCH\"\
+    ,\n    \"assessment\": \"Confirmed grouped role mismatch: activity subject is\
+    \ processual and admissible; STATE object internal_ph_pmf is not the process required\
+    \ by RO:0002211 range.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed\
+    \ defense/fitness/intervention efficacy; formal role assessment only\"\n  },\n\
+    \  {\n    \"index\": 7,\n    \"field_path\": \"causal_graphs[0].edges[7]\",\n\
+    \    \"subject\": \"k_h_antiporter\",\n    \"predicate\": \"regulates\",\n   \
+    \ \"predicate_id\": \"RO:0002211\",\n    \"object\": \"internal_ph_pmf\",\n  \
+    \  \"documentary_status\": \"MAJOR_ROLE_MISMATCH\",\n    \"assessment\": \"Confirmed\
+    \ grouped role mismatch: activity subject is processual and admissible; STATE\
+    \ object internal_ph_pmf is not the process required by RO:0002211 range.\",\n\
+    \    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense/fitness/intervention\
+    \ efficacy; formal role assessment only\"\n  },\n  {\n    \"index\": 8,\n    \"\
+    field_path\": \"causal_graphs[0].edges[8]\",\n    \"subject\": \"aa_decarboxylase_antiporter\"\
+    ,\n    \"predicate\": \"consumes\",\n    \"predicate_id\": \"biolink:consumes\"\
+    ,\n    \"object\": \"intracellular_proton\",\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\"\
+    ,\n    \"assessment\": \"Positive formal fit: actual Biolink consumes describes\
+    \ process input and inherits has input; current cycle/pathway to material protons\
+    \ fits. No material-only subject rule copied from produces; detailed defense biology\
+    \ unassessed.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense/fitness/intervention\
+    \ efficacy; formal role assessment only\"\n  },\n  {\n    \"index\": 9,\n    \"\
+    field_path\": \"causal_graphs[0].edges[9]\",\n    \"subject\": \"phosphate_buffering\"\
+    ,\n    \"predicate\": \"contributes to\",\n    \"predicate_id\": \"RO:0002326\"\
+    ,\n    \"object\": \"internal_ph\",\n    \"documentary_status\": \"MAJOR_ROLE_MISMATCH\"\
+    ,\n    \"assessment\": \"Confirmed grouped role mismatch: the inspected inherited\
+    \ chain is RO:0002326 \\u2192 RO:0002216 \\u2192 RO:0002500 \\u2192 RO:0002595,\
+    \ yielding material-entity subject and process object constraints. RO:0002215\
+    \ is not an ancestor in this chain. The current subject is the maintained buffering\
+    \ action and the object internal-pH STATE. This clarification preserves the frozen\
+    \ source ledger without copying its ambiguous capable-of wording.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal\
+    \ role assessment only\"\n  },\n  {\n    \"index\": 10,\n    \"field_path\": \"\
+    causal_graphs[0].edges[10]\",\n    \"subject\": \"atp_synthesis_from_pmf\",\n\
+    \    \"predicate\": \"associated with\",\n    \"predicate_id\": \"biolink:associated_with\"\
+    ,\n    \"object\": \"proton_motive_force\",\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\"\
+    ,\n    \"assessment\": \"Broad named-thing association endpoints admit current\
+    \ process/state context. Existing note explicitly avoids direct measurement-limit\
+    \ proof; detailed efficacy unassessed.\",\n    \"biology_scope\": \"UNASSESSED_SCOPE\
+    \ for detailed defense/fitness/intervention efficacy; formal role assessment only\"\
+    \n  },\n  {\n    \"index\": 11,\n    \"field_path\": \"causal_graphs[0].edges[11]\"\
+    ,\n    \"subject\": \"internal_ph_pmf\",\n    \"predicate\": \"associated with\"\
+    ,\n    \"predicate_id\": \"biolink:associated_with\",\n    \"object\": \"proton_motive_force\"\
+    ,\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\",\n  \
+    \  \"assessment\": \"Broad association endpoints admit current state/state context.\
+    \ Existing note avoids a universal mechanism claim.\",\n    \"biology_scope\"\
+    : \"UNASSESSED_SCOPE for detailed defense/fitness/intervention efficacy; formal\
+    \ role assessment only\"\n  },\n  {\n    \"index\": 12,\n    \"field_path\": \"\
+    causal_graphs[0].edges[12]\",\n    \"subject\": \"intracellular_proton\",\n  \
+    \  \"predicate\": \"associated with\",\n    \"predicate_id\": \"biolink:associated_with\"\
+    ,\n    \"object\": \"internal_ph\",\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\"\
+    ,\n    \"assessment\": \"Broad association endpoints admit chemical/state context.\
+    \ Literal attribution and detailed defense biology are separate from formal validity.\"\
+    ,\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense/fitness/intervention\
+    \ efficacy; formal role assessment only\"\n  },\n  {\n    \"index\": 13,\n   \
+    \ \"field_path\": \"causal_graphs[0].edges[13]\",\n    \"subject\": \"internal_ph\"\
+    ,\n    \"predicate\": \"associated with\",\n    \"predicate_id\": \"biolink:associated_with\"\
+    ,\n    \"object\": \"ph_phenotype_trait\",\n    \"documentary_status\": \"FORMALLY_COMPATIBLE_WITH_STATED_SCOPE\"\
+    ,\n    \"assessment\": \"Broad association endpoints admit state/trait context.\
+    \ Existing note explicitly avoids direct proof of a measured external-pH limit.\"\
+    ,\n    \"biology_scope\": \"UNASSESSED_SCOPE for detailed defense/fitness/intervention\
+    \ efficacy; formal role assessment only\"\n  }\n]"
+- assessment_id: biological-scope
+  area: scope
+  topic: 'Native checklist: generic source context and explicit exclusions'
+  outcome: unknown
+  target_ids:
+  - METPO:1000531
+  summary: Generic physicochemical attribution and literal text are retained. Detailed
+    TolC, efflux, acid-defense, fitness, AMR, genetic perturbation and intervention
+    efficacy are UNASSESSED_SCOPE. No repaired mechanism, optimized condition, assay
+    recommendation or new route is provided.
+  evidence_ids:
+  - sources
+  - edge-sources
+  - source-reading
+  - source-access
+  details: "{\n  \"completed_at\": \"2026-10-21T19:29:30.731403+00:00\",\n  \"edges\"\
+    : [\n    {\n      \"index\": 0,\n      \"field\": \"causal_graphs[0].edges[0]\"\
+    ,\n      \"current_edge\": {\n        \"subject\": \"external_ph_axis\",\n   \
+    \     \"predicate\": \"defines\",\n        \"object\": \"ph_phenotype_trait\"\
+    ,\n        \"description\": \"External pH is the quantitative axis defining pH\
+    \ phenotypes.\",\n        \"evidence\": [\n          {\n            \"reference\"\
+    : \"DOI:10.1038/nrmicro2549\",\n            \"snippet\": \"external pH values\
+    \ that are outside\",\n            \"notes\": \"Verified against the open PMC\
+    \ manuscript of the Krulwich et al. review; microbial pH phenotypes are expressed\
+    \ relative to external growth pH values and internal pH-homeostatic limits.\"\n\
+    \          }\n        ],\n        \"predicate_id\": \"METPO:2007500\"\n      },\n\
+    \      \"source_status\": \"SUPPORTED_GENERIC_CONTEXT\",\n      \"assessment\"\
+    : \"Assigned Krulwich abstract explicitly discusses external pH values and growth.\
+    \ Its numerical measurement-axis interpretation is reasonable context; literal\
+    \ source text does not itself define this ontology class.\",\n      \"snippet_fields\"\
+    : [\n        \"causal_graphs[0].edges[0].evidence[0].snippet\"\n      ],\n   \
+    \   \"formal_roles\": \"Delegated to independent grounding audit; native validity\
+    \ is not source proof.\"\n    },\n    {\n      \"index\": 1,\n      \"field\"\
+    : \"causal_graphs[0].edges[1]\",\n      \"current_edge\": {\n        \"subject\"\
+    : \"ph_optimum\",\n        \"predicate\": \"is a\",\n        \"object\": \"ph_phenotype_trait\"\
+    ,\n        \"description\": \"pH optimum is a numerical-limit pH phenotype.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1038/nrmicro2549\"\
+    ,\n            \"snippet\": \"cytoplasmic pH\",\n            \"notes\": \"Supports\
+    \ pH optimum as the external-pH set-point at which cytoplasmic pH homeostasis\
+    \ sustains maximal growth.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"rdfs:subClassOf\"\n      },\n      \"source_status\": \"SUPPORTED_CONTEXT_WITH_LIMITS\"\
+    ,\n      \"assessment\": \"The source discusses internal homeostasis and external\
+    \ growth-pH ranges. The short cytoplasmic-pH excerpt is literal but does not alone\
+    \ establish the exact optimum subclass definition or maximum-growth criterion;\
+    \ ontology hierarchy is independently reviewed by grounding.\",\n      \"snippet_fields\"\
+    : [\n        \"causal_graphs[0].edges[1].evidence[0].snippet\"\n      ],\n   \
+    \   \"formal_roles\": \"Delegated to independent grounding audit; native validity\
+    \ is not source proof.\"\n    },\n    {\n      \"index\": 2,\n      \"field\"\
+    : \"causal_graphs[0].edges[2]\",\n      \"current_edge\": {\n        \"subject\"\
+    : \"ph_range\",\n        \"predicate\": \"is a\",\n        \"object\": \"ph_phenotype_trait\"\
+    ,\n        \"description\": \"pH range is a numerical-limit pH phenotype.\",\n\
+    \        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1016/j.tim.2007.02.005\"\
+    ,\n            \"snippet\": \"proton motive force\",\n            \"notes\": \"\
+    Supports pH range as the span of external pH over which the proton motive force\
+    \ remains compatible with growth.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"rdfs:subClassOf\"\n      },\n      \"source_status\": \"UNKNOWN_NARROW_BODY_SUPPORT\"\
+    ,\n      \"assessment\": \"Baker abstract supplies acidophile pH-gradient and\
+    \ energy context, but actual full text is unavailable. The repeated PMF phrase\
+    \ and exact growth-compatible range wording remain unverified; absence of abstract\
+    \ match is not refutation.\",\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[2].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 3,\n\
+    \      \"field\": \"causal_graphs[0].edges[3]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"ph_delta\",\n        \"predicate\": \"is a\",\n      \
+    \  \"object\": \"ph_phenotype_trait\",\n        \"description\": \"pH delta is\
+    \ a numerical-limit pH phenotype.\",\n        \"evidence\": [\n          {\n \
+    \           \"reference\": \"DOI:10.1038/nrmicro2549\",\n            \"snippet\"\
+    : \"pH homeostasis\",\n            \"notes\": \"Supports pH delta (range breadth)\
+    \ as a derived numerical descriptor reflecting pH-homeostasis flexibility.\"\n\
+    \          }\n        ],\n        \"predicate_id\": \"rdfs:subClassOf\"\n    \
+    \  },\n      \"source_status\": \"SUPPORTED_CONTEXT_WITH_LIMITS\",\n      \"assessment\"\
+    : \"pH-homeostasis phrase is literal; range breadth is a derived measurement descriptor\
+    \ rather than a measured mechanistic calibration established by this short excerpt.\
+    \ No exact-bin or universal mechanism is asserted here.\",\n      \"snippet_fields\"\
+    : [\n        \"causal_graphs[0].edges[3].evidence[0].snippet\"\n      ],\n   \
+    \   \"formal_roles\": \"Delegated to independent grounding audit; native validity\
+    \ is not source proof.\"\n    },\n    {\n      \"index\": 4,\n      \"field\"\
+    : \"causal_graphs[0].edges[4]\",\n      \"current_edge\": {\n        \"subject\"\
+    : \"external_ph_axis\",\n        \"predicate\": \"regulates\",\n        \"object\"\
+    : \"proton_motive_force\",\n        \"description\": \"External pH influences\
+    \ the proton motive force across the cell envelope.\",\n        \"evidence\":\
+    \ [\n          {\n            \"reference\": \"DOI:10.1093/femsre/fuad033\",\n\
+    \            \"snippet\": \"cells maintain their cytoplasmic pH around neutral\"\
+    ,\n            \"notes\": \"Verified against the open Poolman review; maintaining\
+    \ near-neutral cytoplasmic pH makes external pH a major determinant of the transmembrane\
+    \ pH-gradient component of the PMF.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"RO:0002211\"\n      },\n      \"source_status\": \"SUPPORTED_GENERIC_CONTEXT\"\
+    ,\n      \"assessment\": \"Poolman body paragraph1 directly links the external-pH\
+    \ variable with the gradient component of PMF; this is generic physicochemical\
+    \ context. Formal predicate roles are outside this source audit.\",\n      \"\
+    snippet_fields\": [\n        \"causal_graphs[0].edges[4].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 5,\n\
+    \      \"field\": \"causal_graphs[0].edges[5]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"f0f1_atpase\",\n        \"predicate\": \"enables\",\n\
+    \        \"object\": \"atp_synthesis_from_pmf\",\n        \"description\": \"\
+    F0F1-ATPase couples the proton motive force to ATP synthesis.\",\n        \"evidence\"\
+    : [\n          {\n            \"reference\": \"DOI:10.1093/femsre/fuad033\",\n\
+    \            \"snippet\": \"stored in the form of a proton motive force, which\
+    \ subsequently can be used by F0F1-ATP synthase to make ATP\",\n            \"\
+    notes\": \"Verified against the open Poolman review; the PMF links proton translocation\
+    \ by the F0F1-ATPase to ATP synthesis.\"\n          }\n        ],\n        \"\
+    predicate_id\": \"RO:0002327\"\n      },\n      \"source_status\": \"LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED\"\
+    ,\n      \"assessment\": \"Poolman paragraph5 directly contains the assigned ATP-synthesis\
+    \ context phrase. No detailed F0F1 intervention, pathogen fitness or efficacy\
+    \ assessment is made.\",\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[5].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 6,\n\
+    \      \"field\": \"causal_graphs[0].edges[6]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"na_h_antiport_activity\",\n        \"predicate\": \"regulates\"\
+    ,\n        \"object\": \"internal_ph_pmf\",\n        \"description\": \"Na+/H+\
+    \ antiporter activity regulates internal pH and PMF.\",\n        \"evidence\"\
+    : [\n          {\n            \"reference\": \"DOI:10.1093/femsre/fuad033\",\n\
+    \            \"snippet\": \"Proton-sensing ion/H+ antiporters acidify the cytoplasm\
+    \ by exporting K+ or Na+ in exchange for protons when the internal pH gets too\
+    \ high\",\n            \"notes\": \"Verified against the open Poolman review;\
+    \ Na+/H+ antiporters are listed as key bacterial pH-homeostasis regulators.\"\n\
+    \          }\n        ],\n        \"predicate_id\": \"RO:0002211\"\n      },\n\
+    \      \"source_status\": \"LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED\",\n\
+    \      \"assessment\": \"Poolman paragraph4 contains the exact assigned generic\
+    \ antiporter sentence. Family-specific biological efficacy, physiological sufficiency\
+    \ and intervention claims remain UNASSESSED_SCOPE.\",\n      \"snippet_fields\"\
+    : [\n        \"causal_graphs[0].edges[6].evidence[0].snippet\"\n      ],\n   \
+    \   \"formal_roles\": \"Delegated to independent grounding audit; native validity\
+    \ is not source proof.\"\n    },\n    {\n      \"index\": 7,\n      \"field\"\
+    : \"causal_graphs[0].edges[7]\",\n      \"current_edge\": {\n        \"subject\"\
+    : \"k_h_antiporter\",\n        \"predicate\": \"regulates\",\n        \"object\"\
+    : \"internal_ph_pmf\",\n        \"description\": \"K+/H+ antiporter activity regulates\
+    \ internal pH and PMF.\",\n        \"evidence\": [\n          {\n            \"\
+    reference\": \"DOI:10.1093/femsre/fuad033\",\n            \"snippet\": \"Key regulators\
+    \ of bacterial pH homeostasis are Na+/H+ and K+/H+ antiporters\",\n          \
+    \  \"notes\": \"Verified against the open Poolman review; K+/H+ antiporters are\
+    \ listed as key bacterial pH-homeostasis regulators.\"\n          }\n        ],\n\
+    \        \"predicate_id\": \"RO:0002211\"\n      },\n      \"source_status\":\
+    \ \"LITERAL_CONTEXT_SUPPORTED_EFFICACY_UNASSESSED\",\n      \"assessment\": \"\
+    Poolman paragraph1 literally lists the two antiporter families as regulators.\
+    \ Detailed organism-specific defense/fitness interpretation remains UNASSESSED_SCOPE.\"\
+    ,\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[7].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 8,\n\
+    \      \"field\": \"causal_graphs[0].edges[8]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"aa_decarboxylase_antiporter\",\n        \"predicate\"\
+    : \"consumes\",\n        \"object\": \"intracellular_proton\",\n        \"description\"\
+    : \"Amino-acid decarboxylase plus antiporter systems consume intracellular protons,\
+    \ raising internal pH.\",\n        \"evidence\": [\n          {\n            \"\
+    reference\": \"DOI:10.1093/femsre/fuad033\",\n            \"snippet\": \"the chemistry\
+    \ of the decarboxylation reaction requires a proton\",\n            \"notes\"\
+    : \"Verified against the open Poolman review; substrate decarboxylation consumes\
+    \ a cytoplasmic proton and raises internal pH.\"\n          }\n        ],\n  \
+    \      \"predicate_id\": \"biolink:consumes\"\n      },\n      \"source_status\"\
+    : \"LITERAL_ONLY_UNASSESSED_SCOPE\",\n      \"assessment\": \"Exact assigned phrase\
+    \ occurs in paragraph7. The detailed decarboxylation/antiport defense or fitness\
+    \ mechanism is UNASSESSED_SCOPE; no repair, efficacy validation or additional\
+    \ components are proposed.\",\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[8].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 9,\n\
+    \      \"field\": \"causal_graphs[0].edges[9]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"phosphate_buffering\",\n        \"predicate\": \"contributes\
+    \ to\",\n        \"object\": \"internal_ph\",\n        \"description\": \"Cytoplasmic\
+    \ phosphate pools contribute to internal-pH stability.\",\n        \"evidence\"\
+    : [\n          {\n            \"reference\": \"DOI:10.1093/femsre/fuad033\",\n\
+    \            \"snippet\": \"sufficient buffering capacity (e.g. inorganic and\
+    \ organic phosphates)\",\n            \"notes\": \"Verified against the open Poolman\
+    \ review; cytoplasmic phosphate pools are named as sufficient buffering capacity\
+    \ needed for internal-pH stability.\"\n          }\n        ],\n        \"predicate_id\"\
+    : \"RO:0002326\"\n      },\n      \"source_status\": \"SUPPORTED_GENERIC_CONTEXT\"\
+    ,\n      \"assessment\": \"Poolman paragraph4 directly names inorganic/organic\
+    \ phosphates as buffering capacity. This supports generic buffering context, not\
+    \ a measured numerical phenotype limit or universal quantitative threshold.\"\
+    ,\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[9].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 10,\n\
+    \      \"field\": \"causal_graphs[0].edges[10]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"atp_synthesis_from_pmf\",\n        \"predicate\": \"associated\
+    \ with\",\n        \"object\": \"proton_motive_force\",\n        \"description\"\
+    : \"F0F1-coupled ATP synthesis from the PMF is associated with the PMF branch\
+    \ of pH numerical-limit context.\",\n        \"evidence\": [\n          {\n  \
+    \          \"reference\": \"DOI:10.1093/femsre/fuad033\",\n            \"snippet\"\
+    : \"drive the synthesis of ATP and the transport of solutes\",\n            \"\
+    notes\": \"Verified against the open Poolman review; this connector keeps PMF-driven\
+    \ ATP synthesis as bioenergetic context rather than direct proof of a pH numerical\
+    \ limit.\"\n          }\n        ],\n        \"predicate_id\": \"biolink:associated_with\"\
+    \n      },\n      \"source_status\": \"SUPPORTED_GENERIC_CONTEXT\",\n      \"\
+    assessment\": \"Poolman paragraph0 directly supports the assigned ATP/solute-transport\
+    \ energy context. Current connector explicitly retains association rather than\
+    \ direct numerical-limit proof.\",\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[10].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 11,\n\
+    \      \"field\": \"causal_graphs[0].edges[11]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"internal_ph_pmf\",\n        \"predicate\": \"associated\
+    \ with\",\n        \"object\": \"proton_motive_force\",\n        \"description\"\
+    : \"Regulated internal pH and PMF homeostasis is associated with the PMF branch\
+    \ of pH numerical-limit context.\",\n        \"evidence\": [\n          {\n  \
+    \          \"reference\": \"DOI:10.1093/femsre/fuad033\",\n            \"snippet\"\
+    : \"Cells use different transport mechanisms to interconvert the \\u0394\\u03a8\
+    \ and \\u0394pH to simultaneously maintain a relatively constant PMF and internal\
+    \ pH\",\n            \"notes\": \"Verified against the open Poolman review; this\
+    \ connector keeps Na+/H+ and K+/H+ antiport activity as pH-homeostasis context\
+    \ rather than a universal mechanism for every pH bin.\"\n          }\n       \
+    \ ],\n        \"predicate_id\": \"biolink:associated_with\"\n      },\n      \"\
+    source_status\": \"SUPPORTED_GENERIC_CONTEXT\",\n      \"assessment\": \"Poolman\
+    \ paragraph1 exactly supports the current internal-pH/PMF association wording.\
+    \ Current note explicitly disclaims a universal mechanism for every bin.\",\n\
+    \      \"snippet_fields\": [\n        \"causal_graphs[0].edges[11].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 12,\n\
+    \      \"field\": \"causal_graphs[0].edges[12]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"intracellular_proton\",\n        \"predicate\": \"associated\
+    \ with\",\n        \"object\": \"internal_ph\",\n        \"description\": \"Intracellular\
+    \ proton consumption is associated with cytoplasmic pH homeostasis in the pH numerical-limit\
+    \ context.\",\n        \"evidence\": [\n          {\n            \"reference\"\
+    : \"DOI:10.1093/femsre/fuad033\",\n            \"snippet\": \"the internal pH\
+    \ is increased\",\n            \"notes\": \"Verified against the open Poolman\
+    \ review; this connector keeps amino-acid decarboxylation as cytoplasmic proton\
+    \ control context.\"\n          }\n        ],\n        \"predicate_id\": \"biolink:associated_with\"\
+    \n      },\n      \"source_status\": \"LITERAL_ONLY_UNASSESSED_SCOPE\",\n    \
+    \  \"assessment\": \"Exact paragraph7 phrase is verified. The detailed biological\
+    \ decarboxylation/proton-control efficacy and defense interpretation remains UNASSESSED_SCOPE.\"\
+    ,\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[12].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    },\n    {\n      \"index\": 13,\n\
+    \      \"field\": \"causal_graphs[0].edges[13]\",\n      \"current_edge\": {\n\
+    \        \"subject\": \"internal_ph\",\n        \"predicate\": \"associated with\"\
+    ,\n        \"object\": \"ph_phenotype_trait\",\n        \"description\": \"Cytoplasmic\
+    \ pH homeostasis is associated with external-pH numerical-limit phenotypes.\"\
+    ,\n        \"evidence\": [\n          {\n            \"reference\": \"DOI:10.1093/femsre/fuad033\"\
+    ,\n            \"snippet\": \"the magnitude of the pH gradient is largely determined\
+    \ by the external pH\",\n            \"notes\": \"Verified against the open Poolman\
+    \ review; this connector keeps internal-pH homeostasis as measured external-pH\
+    \ phenotype context rather than direct proof of a measured external-pH limit.\"\
+    \n          }\n        ],\n        \"predicate_id\": \"biolink:associated_with\"\
+    \n      },\n      \"source_status\": \"SUPPORTED_GENERIC_CONTEXT\",\n      \"\
+    assessment\": \"Poolman paragraph1 exactly supplies the external-pH-gradient context.\
+    \ Current note expressly treats it as context rather than direct proof of a measured\
+    \ external-pH limit.\",\n      \"snippet_fields\": [\n        \"causal_graphs[0].edges[13].evidence[0].snippet\"\
+    \n      ],\n      \"formal_roles\": \"Delegated to independent grounding audit;\
+    \ native validity is not source proof.\"\n    }\n  ]\n}"
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: full current graph and optional evidence'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: All fifteen nodes, fourteen edges, one component, one reviewed label-only
+    protein class, zero instances, one canonical, sixteen excerpts and eighteen events
+    are covered. The NONMECHANISTIC scope does not require a token protein instance,
+    extra connector or forced named pathway. Existing pathway labels remain documented
+    rather than denied.
+  evidence_ids:
+  - record
+  - node-edges
+  - node-sources
+  - policy
+  - checklist
+  details: "{\n  \"completed_at\": \"2026-10-21T19:29:30.731403+00:00\",\n  \"node_count\"\
+    : 15,\n  \"nodes\": [\n    {\n      \"index\": 0,\n      \"field\": \"causal_graphs[0].nodes[0]\"\
+    ,\n      \"current_node\": {\n        \"node_id\": \"ph_phenotype_trait\",\n \
+    \       \"label\": \"pH phenotype with numerical limits\",\n        \"node_type\"\
+    : \"TRAIT\",\n        \"grounding\": \"METPO:1000531\",\n        \"description\"\
+    : \"Phenotype defined by a numerical external-pH descriptor.\"\n      },\n   \
+    \   \"direct_external_evidence\": [],\n      \"incident_edges\": [\n        0,\n\
+    \        1,\n        2,\n        3,\n        13\n      ],\n      \"source_assessment\"\
+    : \"Broad quantitative external-pH phenotype identity has generic source context;\
+    \ exact METPO identity/hierarchy is delegated to grounding.\"\n    },\n    {\n\
+    \      \"index\": 1,\n      \"field\": \"causal_graphs[0].nodes[1]\",\n      \"\
+    current_node\": {\n        \"node_id\": \"external_ph_axis\",\n        \"label\"\
+    : \"external pH axis\",\n        \"node_type\": \"ENVIRONMENTAL_FACTOR\",\n  \
+    \      \"description\": \"External proton activity (pH) as a continuous environmental\
+    \ variable.\"\n      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\"\
+    : [\n        0,\n        4\n      ],\n      \"source_assessment\": \"External\
+    \ pH is explicitly described by Krulwich and Poolman as a growth/environmental\
+    \ variable.\"\n    },\n    {\n      \"index\": 2,\n      \"field\": \"causal_graphs[0].nodes[2]\"\
+    ,\n      \"current_node\": {\n        \"node_id\": \"ph_optimum\",\n        \"\
+    label\": \"pH optimum\",\n        \"node_type\": \"TRAIT\",\n        \"grounding\"\
+    : \"METPO:1000331\",\n        \"description\": \"External pH supporting the most\
+    \ efficient growth.\"\n      },\n      \"direct_external_evidence\": [],\n   \
+    \   \"incident_edges\": [\n        1\n      ],\n      \"source_assessment\": \"\
+    Optimum is a measurement concept; selected literature gives growth/homeostasis\
+    \ context, not a numerical optimum value for this generic node.\"\n    },\n  \
+    \  {\n      \"index\": 3,\n      \"field\": \"causal_graphs[0].nodes[3]\",\n \
+    \     \"current_node\": {\n        \"node_id\": \"ph_range\",\n        \"label\"\
+    : \"pH range\",\n        \"node_type\": \"TRAIT\",\n        \"grounding\": \"\
+    METPO:1000332\",\n        \"description\": \"Span of external pH values supporting\
+    \ growth.\"\n      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\"\
+    : [\n        2\n      ],\n      \"source_assessment\": \"Growth-supporting external\
+    \ ranges are generic context; nearest Baker body claim is unverified.\"\n    },\n\
+    \    {\n      \"index\": 4,\n      \"field\": \"causal_graphs[0].nodes[4]\",\n\
+    \      \"current_node\": {\n        \"node_id\": \"ph_delta\",\n        \"label\"\
+    : \"pH delta\",\n        \"node_type\": \"TRAIT\",\n        \"grounding\": \"\
+    METPO:1000232\",\n        \"description\": \"Breadth (max \\u2212 min) of the\
+    \ growth-supporting external pH range.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        3\n      ],\n      \"source_assessment\"\
+    : \"Range breadth is a derived descriptor. No source-specific bin calibration\
+    \ or universal mechanism is inferred.\"\n    },\n    {\n      \"index\": 5,\n\
+    \      \"field\": \"causal_graphs[0].nodes[5]\",\n      \"current_node\": {\n\
+    \        \"node_id\": \"proton_motive_force\",\n        \"label\": \"proton motive\
+    \ force across cell envelope\",\n        \"node_type\": \"STATE\",\n        \"\
+    description\": \"Electrochemical proton gradient across the cell envelope linking\
+    \ external pH to bioenergetics.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        4,\n        10,\n        11\n    \
+    \  ],\n      \"source_assessment\": \"Poolman paragraphs0/1 explicitly describe\
+    \ electrochemical PMF and gradient context; no detailed defense efficacy is assessed.\"\
+    \n    },\n    {\n      \"index\": 6,\n      \"field\": \"causal_graphs[0].nodes[6]\"\
+    ,\n      \"current_node\": {\n        \"node_id\": \"f0f1_atpase\",\n        \"\
+    label\": \"F0F1-ATPase / ATP synthase\",\n        \"node_type\": \"GENE_OR_PROTEIN\"\
+    ,\n        \"grounding_status\": \"REVIEWED_LABEL_ONLY\",\n        \"grounding_notes\"\
+    : \"Reviewed as a contextual protein or protein-complex label within a quantitative\
+    \ measurement graph; no exact semantic family term was established for this aggregate\
+    \ use.\",\n        \"description\": \"Membrane ATP synthase coupling proton motive\
+    \ force to ATP synthesis.\"\n      },\n      \"direct_external_evidence\": [],\n\
+    \      \"incident_edges\": [\n        5\n      ],\n      \"source_assessment\"\
+    : \"Assigned family label is literal source context; no added protein instance,\
+    \ detailed intervention or efficacy assessment.\"\n    },\n    {\n      \"index\"\
+    : 7,\n      \"field\": \"causal_graphs[0].nodes[7]\",\n      \"current_node\"\
+    : {\n        \"node_id\": \"atp_synthesis_from_pmf\",\n        \"label\": \"ATP\
+    \ synthesis from proton motive force\",\n        \"node_type\": \"BIOLOGICAL_PROCESS\"\
+    ,\n        \"description\": \"Synthesis of ATP driven by the transmembrane proton\
+    \ gradient.\"\n      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\"\
+    : [\n        5,\n        10\n      ],\n      \"source_assessment\": \"Assigned\
+    \ ATP-synthesis context is literal; detailed biological efficacy remains UNASSESSED_SCOPE.\"\
+    \n    },\n    {\n      \"index\": 8,\n      \"field\": \"causal_graphs[0].nodes[8]\"\
+    ,\n      \"current_node\": {\n        \"node_id\": \"na_h_antiport_activity\"\
+    ,\n        \"label\": \"Na+/H+ antiporter activity\",\n        \"node_type\":\
+    \ \"MOLECULAR_FUNCTION\",\n        \"description\": \"Cation/proton antiport activity\
+    \ regulating internal pH and PMF.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        6\n      ],\n      \"source_assessment\"\
+    : \"Existing function label and quoted generic attribution are documentary-only;\
+    \ detailed defense/fitness efficacy is UNASSESSED_SCOPE.\"\n    },\n    {\n  \
+    \    \"index\": 9,\n      \"field\": \"causal_graphs[0].nodes[9]\",\n      \"\
+    current_node\": {\n        \"node_id\": \"k_h_antiporter\",\n        \"label\"\
+    : \"K+/H+ antiporter activity\",\n        \"node_type\": \"MOLECULAR_FUNCTION\"\
+    ,\n        \"description\": \"Potassium/proton antiport activity regulating internal\
+    \ pH and PMF.\"\n      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\"\
+    : [\n        7\n      ],\n      \"source_assessment\": \"Existing function label\
+    \ and quoted generic attribution are documentary-only; detailed defense/fitness\
+    \ efficacy is UNASSESSED_SCOPE.\"\n    },\n    {\n      \"index\": 10,\n     \
+    \ \"field\": \"causal_graphs[0].nodes[10]\",\n      \"current_node\": {\n    \
+    \    \"node_id\": \"internal_ph_pmf\",\n        \"label\": \"internal pH / proton\
+    \ motive force\",\n        \"node_type\": \"STATE\",\n        \"description\"\
+    : \"Regulated cytoplasmic pH and proton motive force homeostatic set-point.\"\n\
+    \      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\":\
+    \ [\n        6,\n        7,\n        11\n      ],\n      \"source_assessment\"\
+    : \"Source paragraph1 describes internal-pH/PMF context; record groups those concepts,\
+    \ with formal facets delegated.\"\n    },\n    {\n      \"index\": 11,\n     \
+    \ \"field\": \"causal_graphs[0].nodes[11]\",\n      \"current_node\": {\n    \
+    \    \"node_id\": \"aa_decarboxylase_antiporter\",\n        \"label\": \"amino-acid\
+    \ decarboxylase + antiporter systems\",\n        \"node_type\": \"PATHWAY\",\n\
+    \        \"description\": \"Decarboxylation-antiport cycles that consume cytoplasmic\
+    \ protons.\"\n      },\n      \"direct_external_evidence\": [],\n      \"incident_edges\"\
+    : [\n        8\n      ],\n      \"source_assessment\": \"Existing system label\
+    \ is retained for documentary matching only; detailed decarboxylation defense\
+    \ mechanisms are UNASSESSED_SCOPE.\"\n    },\n    {\n      \"index\": 12,\n  \
+    \    \"field\": \"causal_graphs[0].nodes[12]\",\n      \"current_node\": {\n \
+    \       \"node_id\": \"intracellular_proton\",\n        \"label\": \"intracellular\
+    \ H+\",\n        \"node_type\": \"CHEMICAL\",\n        \"description\": \"Cytoplasmic\
+    \ protons whose concentration sets internal pH.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        8,\n        12\n      ],\n      \"\
+    source_assessment\": \"Existing proton chemical label is supported by generic\
+    \ pH chemistry; detailed consumption/defense efficacy remains unassessed.\"\n\
+    \    },\n    {\n      \"index\": 13,\n      \"field\": \"causal_graphs[0].nodes[13]\"\
+    ,\n      \"current_node\": {\n        \"node_id\": \"phosphate_buffering\",\n\
+    \        \"label\": \"cytoplasmic phosphate buffering\",\n        \"node_type\"\
+    : \"BIOLOGICAL_PROCESS\",\n        \"description\": \"Buffering of cytoplasmic\
+    \ protons by intracellular phosphate pools.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        9\n      ],\n      \"source_assessment\"\
+    : \"Generic phosphate-buffering context is explicit in paragraph4; no quantitative\
+    \ sufficiency or exact phenotype limit inferred.\"\n    },\n    {\n      \"index\"\
+    : 14,\n      \"field\": \"causal_graphs[0].nodes[14]\",\n      \"current_node\"\
+    : {\n        \"node_id\": \"internal_ph\",\n        \"label\": \"internal pH\"\
+    ,\n        \"node_type\": \"STATE\",\n        \"description\": \"Cytoplasmic pH\
+    \ maintained by homeostatic mechanisms.\"\n      },\n      \"direct_external_evidence\"\
+    : [],\n      \"incident_edges\": [\n        9,\n        12,\n        13\n    \
+    \  ],\n      \"source_assessment\": \"Internal pH is explicitly distinct from\
+    \ external pH in selected source passages; association does not establish an external\
+    \ limit.\"\n    }\n  ],\n  \"note\": \"Node descriptions lack separate bibliography.\
+    \ Incident edge sources are mapped explicitly and are not silently treated as\
+    \ independent node-level citations.\"\n}"
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: catalog and exact strain applicability'
+  outcome: unknown
+  target_ids:
+  - METPO:1000531
+  summary: The retained 20-organism/28-dataset catalog contains five e_coli candidate
+    datasets. Species-level names do not establish W3110 coverage, and precise_mg1655
+    is not substituted. No detailed defense gene/module query or perturbation-efficacy
+    interpretation is performed.
+  evidence_ids:
+  - expression
+  - authority-reuse
+  details: "{\n  \"assessed_at\": \"2026-10-21T19:31:24.276845+00:00\",\n  \"target\"\
+    : \"data/traits/environment/ph_phenotype_with_numerical_limits.yaml\",\n  \"status\"\
+    : \"CANDIDATE_CATALOG_COVERAGE_SCOPE_LIMITED\",\n  \"canonical_taxon\": \"NCBITaxon:83333\"\
+    ,\n  \"canonical_context\": \"Escherichia coli K-12; cited paper names W3110.\"\
+    ,\n  \"catalog\": {\n    \"path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/reused-datasets.json\"\
+    ,\n    \"sha256\": \"155607e7023efdead5ebab3919279a0776d5665a7de9e28b67f02f8f521b0693\"\
+    ,\n    \"bytes\": 2871\n  },\n  \"original_access\": {\n    \"started_at\": \"\
+    2026-10-21T07:36:12.732638+00:00\",\n    \"finished_at\": \"2026-10-21T07:36:12.858149+00:00\"\
+    \n  },\n  \"catalog_counts\": {\n    \"organisms\": 20,\n    \"datasets\": 28\n\
+    \  },\n  \"matching_species_entry\": {\n    \"id\": \"e_coli\",\n    \"name\"\
+    : \"Escherichia coli\",\n    \"description\": \"Escherichia coli dataset: modulome\"\
+    ,\n    \"datasets\": [\n      \"modulome\",\n      \"precise1k\",\n      \"precise278\"\
+    ,\n      \"precise815\",\n      \"precise_mg1655\"\n    ]\n  },\n  \"assessment\"\
+    : \"The e_coli entry supplies five species-level candidate datasets. Catalog name\
+    \ alone does not establish W3110 exact-strain coverage; precise_mg1655 must not\
+    \ be substituted for W3110. No dataset absence finding.\",\n  \"queries\": \"\
+    No downstream gene, module, condition, TolC, acid-defense or fitness query; detailed\
+    \ biological interpretation remains UNASSESSED_SCOPE.\",\n  \"reuse\": {\n   \
+    \ \"path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/authority-reuse-receipts.json\"\
+    ,\n    \"sha256\": \"976dbb9aa49440762bd52687341d55a31234ac175f857432a33d0f87c285d885\"\
+    ,\n    \"bytes\": 2020\n  },\n  \"optional_proteins\": \"One reviewed label-only\
+    \ protein/complex and zero instances are acceptable within the NONMECHANISTIC\
+    \ quantitative scope; no mandatory instance or protein count.\"\n}"
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: maintained writers and history'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: The current record, exact review writer and PR664 after-payload repair
+    own relation recurrence. The connector validates existing source-edge context
+    and adds associations; it is not an independent relation rewrite. Type migrations
+    maintain intended facets, and the mapping grounder skips nonempty IDs. Broad shared-node
+    histories are context, not automatically owners.
+  evidence_ids:
+  - owners
+  - local-authority
+  - ground-reading
+  details: "{\n  \"assessed_at\": \"2026-10-21T19:31:24.276026+00:00\",\n  \"target\"\
+    : \"data/traits/environment/ph_phenotype_with_numerical_limits.yaml\",\n  \"counts\"\
+    : {\n    \"nodes\": 15,\n    \"edges\": 14,\n    \"components\": 1,\n    \"protein_classes\"\
+    : 1,\n    \"label_only_proteins\": 1,\n    \"protein_instances\": 0,\n    \"canonical_examples\"\
+    : 1,\n    \"record_history_events\": 18,\n    \"ai_record_events\": 17,\n    \"\
+    seed_events\": 1,\n    \"captured_histories\": 32,\n    \"matching_paths\": 195,\n\
+    \    \"review_target_arrays\": 67,\n    \"exact_target_review_arrays\": 0\n  },\n\
+    \  \"search\": {\n    \"path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/search-and-provenance.json\"\
+    ,\n    \"sha256\": \"6ca63e5636b06d8586352c9296c9e1d6fdd25d0ab855ddc4147c61e34a1f7f79\"\
+    ,\n    \"bytes\": 93184\n  },\n  \"node_search\": {\n    \"path\": \"/private/tmp/traitmech-record-sweep-011.m6s8p2ra/ph-phenotype-with-numerical-limits-grounding-agent/all-node-owner-search.json\"\
+    ,\n    \"sha256\": \"c0462276f99fcc827ee6267541cee0e5266e04bd96b3616e9a9d4ce90c5013f0\"\
+    ,\n    \"bytes\": 30276\n  },\n  \"search_scope\": \"Ignored and hidden repository\
+    \ files included, excluding .git internals and .venv; exact target path/slug/hyphenated\
+    \ slug/label/full and numeric identifier. All 15 node identifiers separately searched.\
+    \ No uncaptured history lead found. No remote/private signoff search is claimed.\"\
+    ,\n  \"history_reading\": {\n    \"whole_read_current\": [\n      \"history/records/ph_phenotype_with_numerical_limits/2026-09-04T022000Z-codex-73fbda.yaml\"\
+    ,\n      \"history/records/ph_phenotype_with_numerical_limits/2026-09-04T180000Z-codex-183.yaml\"\
+    ,\n      \"history/infrastructure/pr664-adversarial-review/2026-09-07T010300Z-codex-95db7f.yaml\"\
+    ,\n      \"history/infrastructure/pr664-adversarial-review/2026-09-07T022400Z-codex-682abc.yaml\"\
+    ,\n      \"history/infrastructure/pr664-adversarial-review/2026-09-07T034000Z-codex-683abc.yaml\"\
+    ,\n      \"history/infrastructure/pr664-adversarial-review/2026-09-07T061600Z-codex-690abc.yaml\"\
+    \n    ],\n    \"all_actor_target_event_projections\": 32,\n    \"all_actors_ai\"\
+    : true,\n    \"precise_status\": \"Two exact target record histories and three\
+    \ current-target PR664 repair histories show AI maintenance; the sixth full-read\
+    \ PR664 history is sibling-only. Other broad shared-node matches are contextual\
+    \ leads, not automatic owners.\"\n  },\n  \"human_acceptance\": \"Within the stated\
+    \ 195 matching files, 67 structured review target arrays and 32 captured history\
+    \ actor/target projections, no linked named human acceptance of this current record\
+    \ was located. REVIEWED plus 17 AI events and an automated seed does not independently\
+    \ establish human approval. This bounded traceability gap is a minor, not a claim\
+    \ that a human never reviewed the record.\",\n  \"owners\": [\n    {\n      \"\
+    path\": \"data/traits/environment/ph_phenotype_with_numerical_limits.yaml\",\n\
+    \      \"role\": \"Primary current record owner of all finding fields; human acceptance\
+    \ traceability is local to mapping_status and curation_history.\",\n      \"sha256\"\
+    : \"643abb9898dc920fe3aeeb0fa337c1d3a7efa6f0b540cb4ad979a3a28e0702d4\"\n    },\n\
+    \    {\n      \"path\": \"scripts/review_ph_phenotype_graph_183.py\",\n      \"\
+    role\": \"Exact current-target maintained writer. EDGE_REPLACEMENTS after payloads\
+    \ reproduce affected formal-role edges. Exact already-reviewed state is a no-op;\
+    \ partial/drifted state is rejected; no execution.\",\n      \"sha256\": \"651b46611c5e630e4db00f8d7525378ddb3a9f552c83e7f53387d14ab95dd2e2\"\
+    \n    },\n    {\n      \"path\": \"scripts/connect_ph_phenotype_graph_183.py\"\
+    ,\n      \"role\": \"Exact target connector writer. SOURCE_CONNECTOR_EDGES contain\
+    \ affected legacy relations, but its added edges are four association connectors.\
+    \ It validates guarded source context and exact final state, not an independent\
+    \ unconditional relation rewrite.\",\n      \"sha256\": \"7d13d108660bede28937d3f180e90c542c47869c10f34ca497f9ab6f8f5db4ba\"\
+    \n    },\n    {\n      \"path\": \"scripts/repair_pr664_adversarial_review.py\"\
+    ,\n      \"role\": \"Exact current-target recurrence owner: imports current review\
+    \ after payloads and connector additions, replaces matching edge keys through\
+    \ _replace_edges, and maintains target-specific evidence/history branches. Existing\
+    \ edge keys are required; replacement is by key rather than exact before-payload\
+    \ equality.\",\n      \"sha256\": \"5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96\"\
+    \n    },\n    {\n      \"path\": \"mappings/predicate_grounding.tsv\",\n     \
+    \ \"role\": \"Current contributes to/regulates/enables/association/consumes/defines\
+    \ rows provide label groundings; wildcard gates do not waive imported RO role\
+    \ semantics.\",\n      \"sha256\": \"8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52\"\
+    \n    },\n    {\n      \"path\": \"scripts/ground_causal_predicates.py\",\n  \
+    \    \"role\": \"Shared mapping writer; skips every already nonempty predicate_id.\
+    \ Mapping-only repair would not automatically correct these current edges.\",\n\
+    \      \"sha256\": \"5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381\"\
+    \n    },\n    {\n      \"path\": \"scripts/migrate_process_quality_consistency.py\"\
+    ,\n      \"role\": \"Exact phosphate_buffering action-facet maintainer, not a\
+    \ replacement owner for edge 9; current node deliberately remains BIOLOGICAL_PROCESS\
+    \ while its incident relation requires reconciliation.\",\n      \"sha256\": \"\
+    1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a\"\n    },\n \
+    \   {\n      \"path\": \"scripts/migrate_protein_vs_activity.py\",\n      \"role\"\
+    : \"Exact historical activity rename owner for Na/H node and incident endpoint\
+    \ renaming; current explicit activity is positive. Does not establish current\
+    \ RO object validity.\",\n      \"sha256\": \"0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49\"\
+    \n    },\n    {\n      \"path\": \"scripts/migrate_node_type_consistency.py\"\
+    ,\n      \"role\": \"Maintains PMF STATE convention; current state is positive\
+    \ and must not be silently reinterpreted as a process to rescue an edge.\",\n\
+    \      \"sha256\": \"a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e\"\
+    \n    },\n    {\n      \"path\": \"scripts/backfill_canonical_examples_444.py\"\
+    ,\n      \"role\": \"Exact current canonical example entry, guarded insertion/equality\
+    \ logic. K-12 W3110 study note is narrower than the official K-12 taxon; source\
+    \ interpretation remains separate.\",\n      \"sha256\": \"18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c\"\
+    \n    }\n  ],\n  \"research_limit\": \"Current August 4 Falcon frontmatter is\
+    \ contextual; it does not prove the exact June enrichment report version or provide\
+    \ human acceptance.\",\n  \"readiness\": \"Needs curation for current grouped\
+    \ imported-relation roles. Native structural success does not settle external\
+    \ semantics. No scientific record or writer was changed.\"\n}"
+- assessment_id: human-acceptance
+  area: provenance
+  topic: 'Native checklist: bounded human acceptance traceability'
+  outcome: concern
+  target_ids:
+  - METPO:1000531
+  summary: The actual ignored-inclusive search found 195 paths and 67 review target
+    arrays, with zero exact current target arrays. Thirty-two captured histories have
+    AI actor projections; six were fully read, including one sibling-only context
+    and five current-target maintenance histories. Eighteen record events comprise
+    seventeen AI events plus seed. This positive maintenance provenance does not identify
+    linked human acceptance within the bounded scope.
+  evidence_ids:
+  - owners
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual checks and qualified common reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000531
+  summary: All 120 captured inputs and frozen artifacts match. Focused native, strict
+    and snippets passed. Original common failures, retries, skips and times remain
+    explicit under actual B10-to-B11 qualification, without claiming new B11 QC.
+  evidence_ids:
+  - capture
+  - reuse
+  - reuse-postcheck
+  - native-checks
+  - check-ph-phenotype-with-numerical-limits-native
+  - check-ph-phenotype-with-numerical-limits-strict
+  - check-ph-phenotype-with-numerical-limits-snippets
+findings:
+- finding_id: imported-process-roles
+  issue_key: ph-phenotype-with-numerical-limits-imported-process-roles
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported RO relations conflict with current condition and state referents
+  description: RO:0002211 is process-to-process. Edge 4 represents an external-pH
+    variable regulating a PMF STATE; edges 6 and 7 have valid activity subjects but
+    STATE objects. RO:0002326 at 9 inherits material-to-process roles, whereas its
+    current subject is buffering action and its object is an internal-pH STATE. This
+    is a documentary role conflict, not a judgment of biological efficacy. Enables
+    at edge 5 and consumes at edge 8 remain positive.
+  target_ids:
+  - METPO:1000531
+  field_paths:
+  - causal_graphs[0].edges[4]
+  - causal_graphs[0].edges[6]
+  - causal_graphs[0].edges[7]
+  - causal_graphs[0].edges[9]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_ph_phenotype_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: ph-phenotype-with-numerical-limits-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Bounded local provenance lacks linked human acceptance
+  description: AI and machine-seed maintenance, REVIEWED status and passing checks
+    do not establish attributable current human scientific acceptance. The actual
+    ignored-inclusive search and parsed target arrays bound this finding; remote or
+    private acceptance is not declared absent.
+  target_ids:
+  - METPO:1000531
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-imported-roles
+  description: Reconcile existing imported predicates with the intended current referents
+    during separately authorized curation.
+  finding_ids:
+  - imported-process-roles
+  target_ids:
+  - METPO:1000531
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_ph_phenotype_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the legitimate activity subjects at 6 and 7 and valid enables at edge
+    5 and process-input consumes at edge 8; distinguish condition/state referents
+    from processes.
+  - Inspect exact target writer assignments and mapping empty-ID refill versus preservation
+    of existing IDs; avoid claiming a table edit repairs current edges automatically.
+  - Do not add defense mechanisms, interventions, new pathways or optimized conditions.
+    Use guarded record/repository history, appropriate native/strict/grounding/QC
+    checks and a successor review after changed inputs.
+- action_id: link-human-acceptance
+  description: Link attributable human acceptance if available, or clarify status
+    while retaining the bounded provenance result.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000531
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ph_phenotype_with_numerical_limits.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve actual ignored-inclusive search counts and distinguish record events
+    from separately read repository history.
+  - Do not infer acceptance from AI activity, validators, ontology authorship or REVIEWED;
+    no contact with others or automatic status promotion is authorized.
+limitations:
+- Detailed TolC/efflux/acid-defense/fitness/AMR and perturbation/intervention efficacy
+  remains UNASSESSED_SCOPE. Canonical support denotes source/measurement-context fidelity,
+  not efficacy validation.
+- Two Baker phrase occurrences remain unknown because actual body text is unavailable;
+  no false-quote or false-biology inference follows.
+- Record-level Krulwich wording is exact in the indexed abstract; BioC manuscript
+  typography differs. The retained body-only first pass is explicitly superseded for
+  that occurrence without a native failure.
+- Short review fragments provide generic context, not independent exact-bin calibration,
+  mathematical derivation, universal necessity or biological sufficiency. Formal hierarchy
+  is verified separately against actual METPO.
+- Explicit activity nodes are legitimate processual referents. The grouped finding
+  concerns their STATE objects and the specific imported roles; no blanket enum-only
+  exclusion is imposed.
+- Current Biolink consumes is a process-input relation; an unrelated material-producer
+  rule is not imported. The existing pathway label does not require new mechanistic
+  reconstruction.
+- Actual official K-12 taxonomy does not establish W3110 as a separate indexed alias;
+  paper-specific substrain and measurement context are retained.
+- Original Krulwich BioC acquisition at 07:57:33 and Poolman JATS at 10:34:33–34 remain
+  distinct from current metadata at 19:25:54–55, copying and selected reading. No
+  full article or new source request is claimed.
+- Native abstract matching is not a full-body literature check. Historical common
+  failures/retries/skips remain explicit; no new B11 final QC is claimed.
+- The exact RO2326 chain is 2326→2216→2500→2595, not via 2215. Serialized edge 9 details
+  clarify the original frozen ledger wording without changing that ledger.
+- Local ignored-inclusive search cannot establish absence of private or remote human
+  decisions. Catalog matching does not prove phenotype, pathway efficacy or exact
+  substrain identity.
+notes:
+- Final root adjudication and independent challenge are pinned. Root owns single execution
+  after independent static review, followed by native validation and final artifact
+  review.
+- 'Source coverage: 4 works, 18 external placements, 4 ontology grounding fields,
+  15 nodes, 14 edges, 16 snippets (14 literal and 2 unknown), 1 canonical, and 18
+  record events (17 AI and 1 seed).'
+- No scientific record, persistent sweep state, Git or native command is changed by
+  preparation. Root owns eventual serialization, native validation and save.
+tags:
+- record-review
+- ph-phenotype-with-numerical-limits
+- environment
+- needs-curation
+native_verdict: needs_curation
+```
