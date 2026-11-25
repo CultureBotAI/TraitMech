@@ -63,7 +63,7 @@ jobs:
     # Keep this at the same immutable CLAW revision as scripts/.vendored_canon_ref:
     # tests/test_label_correspondence_pin.py fails when they differ, and claw's
     # `kg-microbe-governance pin-coupling` names this file on a re-pin (#2067).
-    uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@76c1ebeea3fc7f80bf1abe044688f298f390cfac
+    uses: CultureBotAI/culturebotai-claw/.github/workflows/label-correspondence-reusable.yaml@5669421db46a6e6142479caecd761dc57928ac78
     with:
       python-version: "3.13"
       # No prepare-recipe: the mappings this gate reads are committed, so
