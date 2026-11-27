@@ -1,0 +1,1429 @@
+# Evidence and ontology review of acidotolerant growth (METPO:1003008)
+
+- Review: 20261021T081019Z-acidotolerant
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T08:03:54Z
+- Finished UTC: 2026-10-21T08:10:19Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The acidotolerant identity, METPO operational definition, parent and current identifiers are sound. One major finding groups two external relation-endpoint conflicts; five minor findings concern definition attribution, quotation conjunction, source context, a historical inheritance explanation and human-acceptance linkage. All nine nodes and nine edges were assessed. The examples have positive acid-response support, while their near-neutral growth optima remain unverified. One of five snippets is exact, one is nonverbatim and three remain unverified.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Tenth batch003 target in lexicographic path order. Entire record read, then native capture after the preceding acidophilic bundle was saved; scientific assessment followed capture.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1003008 | data/traits/environment/acidotolerant.yaml | maintained | acidotolerant |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1003008 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1003008 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1003008 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | METPO:1003008 | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1003008 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1003008 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1003008 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | METPO:1003008 | The selected record validates. |
+| Focused strict validation | passed | True | METPO:1003008 | One file scanned; zero strict errors. |
+| Focused snippet verification | passed | True | METPO:1003008 | Five snippets over two references, all NOT_IN_ABSTRACT and therefore inconclusive. Manual checks verify one exact quote, identify one conjunction difference and leave three quotes unverified in inspected source versions. |
+| Structured-source runner availability | unavailable | False | METPO:1003008 | Reused bounded runner discovery; official API fallback completed. |
+| Official expression-source context | passed | False | METPO:1003008 | Canonical-organism datasets not applicable; two explicitly sourced E. coli gene queries and one shared module summary inspected. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identifier, label, synonym, attribution and parent
+
+identity: supported. Targets: METPO:1003008.
+
+The record faithfully represents active METPO1003008 beneath pH growth preference. The exact aciduric synonym and human creator attribution match upstream; they do not independently confer review status.
+
+### Native checklist: operational boundary and source attribution
+
+evidence: concern. Targets: METPO:1003008.
+
+The full typical-below5.5/near-neutral-optimum definition is supported by pinned METPO. Krulwich supplies physiological context, but the inspected lower growth-range passage does not itself define this exact operational class.
+
+### Native checklist: category, term kind and contextual scope
+
+representation: supported. Targets: METPO:1003008.
+
+ENVIRONMENT/CLASS and broad NONMECHANISTIC scope fit. The reaction-class description supports BIOLOGICAL_PROCESS, and optional protein examples, pathway links and datasets are not required.
+
+### Native checklist: both canonical taxa and complete trait criterion
+
+evidence: unknown. Targets: METPO:1003008.
+
+Both taxon identities resolve and both citations provide positive acid-response evidence. The inspected sources do not establish near-neutral growth optima. This is a coverage limitation, not evidence that either species fails the class; fuller growth measurements would resolve it.
+
+### Native checklist: current and withdrawn ontology groundings
+
+grounding: supported. Targets: METPO:1003008.
+
+CurrentGO0051453/CHEBI15378 match context. Historical wrong or redox/microbe-domain groundings were replaced and are not reported as current defects.
+
+### Native checklist: all nine edges and inherited relation meanings
+
+consistency: concern. Targets: METPO:1003008.
+
+Two current external relations conflict with endpoint kinds. Current negative-regulation edge6 fits process endpoints; event10’s rationale incorrectly dismisses inheritance. Provisional challenges permits both listed object kinds, so no extra object-range finding is made.
+
+### Native checklist: organism and acid-versus-alkaline context
+
+evidence: concern. Targets: METPO:1003008.
+
+The LAB extension goes beyond the directly inspected E. coli review, and the cation/proton-import discussion concerns alkaline homeostasis. These are bounded source-context clarifications, not evidence of universally false reactions or universal necessity.
+
+### Native checklist: five snippets and version/access limits
+
+evidence: concern. Targets: METPO:1003008.
+
+One quote is exact, one replaces or with and in the nearest inspected passage, and three are unverified. Absence from an abstract or an inspected manuscript version does not establish absence from every final source version.
+
+### Native checklist: structure and optional evidence surfaces
+
+completeness: supported. Targets: METPO:1003008.
+
+All nine nodes and nine edges are internally linked. Definition, citations and examples are present, with their scientific coverage limits stated. Optional protein examples and pathway-context links are not missing requirements.
+
+### Native checklist: history rationale and human scientific acceptance
+
+provenance: concern. Targets: METPO:1003008.
+
+The historical no-entailment explanation overlooks inherited constraints. Twelve AI-assisted events and one seed are explicit; human acceptance is not linked in the bounded local fields.
+
+### Native checklist: optional source-organism expression context
+
+evidence: supported. Targets: METPO:1003008.
+
+The canonical taxa lack catalog coverage. The source’s E. coli GadA/B names have computational module context, without inferring biological mechanism, growth optimum, strain equivalence or a substitute canonical example.
+
+## Findings
+
+### external-relation-endpoints: Two RO relations conflict with the endpoint meanings
+
+major / open / confirmed; issue key: acidotolerant-external-relation-endpoints.
+
+Edge5 uses positive regulation with a trait object although the relation inherits a process range. Edge8 uses contributes to with an explicitly described antiport activity although the relation requires a material contributor. These semantic conflicts are distinct from the native validators, which pass; no failed formal reasoner run is claimed.
+
+### definition-source-precision: Operational growth-preference boundary needs explicit source attribution
+
+minor / open / confirmed; issue key: acidotolerant-definition-source-precision.
+
+Pinned METPO supplies the typical-below5.5 and near-neutral-optimum conjunction. The cited physiological review discusses neutralophile growth ranges and acid stress rather than directly defining this exact class. Clarify which authority supports the operational convention without changing the correct upstream identity or calling the examples false.
+
+### quote-conjunction: Nearest inspected quotation uses or rather than and
+
+minor / open / confirmed; issue key: acidotolerant-quote-conjunction.
+
+The top-level snippet says tolerate and grow, whereas both the inspected author-manuscript abstract and publisher abstract say tolerate or grow. Keep a literal quote from an identified source surface or place interpretation in notes; do not combine survival and growth evidence implicitly.
+
+### source-context-qualification: Two source notes need organism or condition context
+
+minor / open / confirmed; issue key: acidotolerant-source-context-qualification.
+
+Edge4’s evidence note extends an E. coli-focused review to LAB without direct support in the inspected body. Edge8 cites general cation/proton antiport homeostasis while the relevant passage specifically describes proton uptake under alkaline conditions. Preserve these contexts in the acid-tolerance graph. This does not claim that every generic node is universal or that the reactions are false.
+
+### inherited-constraint-history: Historical rationale overlooks inherited RO constraints
+
+minor / open / confirmed; issue key: acidotolerant-inherited-constraint-history.
+
+History event10 infers no endpoint entailment from the absence of direct RO0002212 domain/range declarations. The relation inherits process constraints through its superproperty. Current edge6 has compatible process endpoints; this finding concerns the historical explanation, not another present graph-type error.
+
+### human-acceptance-link: Human acceptance is not linked in inspected local provenance
+
+minor / open / confirmed; issue key: acidotolerant-human-acceptance-link.
+
+Twelve events disclose AI assistance and one records automated import. The human created_by field is upstream ontology attribution. Neither it nor the inspected bounded local matches links human scientific acceptance of this record/revision; remote/private acceptance remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### repair-relations
+
+In separately authorized curation, reconcile the two current predicates with their activity/material/trait endpoint meanings while retaining supported and appropriately scoped biological claims.
+
+- Inspect inherited external relation constraints and endpoint meanings, not just direct declarations.
+- Check mapping replay for recurrence and preserve source-condition qualifications.
+- Run focused strict validation, relevant graph checks and just qc; append native history and regenerate affected products.
+
+### clarify-definition
+
+Make the operational boundary’s METPO provenance explicit alongside the physiological source; keep survival, growth, growth range and growth optimum distinct.
+
+- Evidence identifies the authority supplying both parts of the definition.
+- Do not infer a near-neutral optimum from acid production, survival or selected-pH comparisons alone.
+- Verify dedicated growth measurements before presenting either example as fully satisfying the compound criterion.
+
+### repair-quote
+
+Restore literal source wording in the top-level snippet or move the interpretation into notes.
+
+- The quote matches a precisely identified inspected surface.
+- The other three access-limited quotations remain explicitly unresolved until their source text is inspected.
+- Run snippet and focused validation after an authorized correction.
+
+### retain-source-context
+
+Retain E. coli and alkaline-condition qualifications at the relevant evidence notes, or supply directly inspected sources for the broader proposed scope.
+
+- The record separates the demonstrated source context from any class-level inference.
+- No unverified cross-taxon substitution or acid-specific benefit is introduced.
+- Reassess the affected claims and run focused checks plus just qc after authorized changes.
+
+### correct-history-rationale
+
+Append a corrective provenance explanation of the inherited RO constraints while preserving the original historical event and the compatible current edge6.
+
+- The correction distinguishes direct declarations, inherited entailments and current endpoint compatibility.
+- Historical provenance is not silently rewritten.
+- Run native record/history validation for any separately authorized corrective event.
+
+### link-acceptance
+
+Locate and link existing human scientific acceptance or obtain it through the established process; preserve AI history and reassess status if acceptance remains unavailable.
+
+- Acceptance identifies the record/revision and scientific scope.
+- Ontology attribution and automated validation are not represented as sign-off.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the current 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-acidotolerant-validate | /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-validate.log; Executed 2026-10-21T08:04:23Z through 2026-10-21T08:04:31Z; metadata acidotolerant-validate.json | context_only | The selected record validates. |
+| check-acidotolerant-strict | /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-strict.log; Executed 2026-10-21T08:04:23Z through 2026-10-21T08:04:34Z; metadata acidotolerant-strict.json | context_only | One file scanned; zero strict errors. |
+| check-acidotolerant-snippets | /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-snippets.log; Executed 2026-10-21T08:04:25Z through 2026-10-21T08:04:29Z; metadata acidotolerant-snippets.json | context_only | Five snippets over two references, all NOT_IN_ABSTRACT and therefore inconclusive. Manual checks verify one exact quote, identify one conjunction difference and leave three quotes unverified in inspected source versions. |
+| record | data/traits/environment/acidotolerant.yaml; Entire record: identity, definition, synonym, attribution, two examples, nine nodes, nine edges and thirteen events | partial | The record defines acid tolerance with near-neutral optimal growth. Two external relation meanings conflict with their endpoints, and bounded source/provenance details require clarification. |
+| parent | data/traits/environment/ph_growth_preference.yaml; Entire context record; identifier and definition | supports | Environmental-pH growth preference is strictly broader than the selected tolerance class. This parent is context, not a second review target. |
+| shape | Read-only graph and history inspection; All nine node IDs and nine edge endpoints | supports | All endpoints resolve. Thirteen events comprise twelve AI-assisted events and one automated seed; human created_by attribution is distinct from acceptance of this record revision. No pathway link is asserted. |
+| policy | docs/GROUNDING_POLICY.md; src/traitmech/schema/traitmech.yaml; NONMECHANISTIC scope and optional protein/dataset/predicate fields | supports | A broad environmental class need not supply token protein examples or one universal mechanism. A reaction-class node can be BIOLOGICAL_PROCESS despite system wording in its label. |
+| identity | data/raw/metpo.owl; Complete labels/synonyms scan; active1003008, parent1003000 and upstream authors | supports | Identifier, aciduric synonym, typical-below5.5/near-neutral-optimum definition and parent match upstream. The scalar created_by value matches one of two upstream authors and is not a claim of human scientific sign-off. |
+| ontology | QuickGO and ChEBI official responses; Reused07:58:24–26Z responses and verified original hashes | supports | CurrentGO0051453 is active intracellular-pH regulation and CHEBI15378 is hydron/H+. The former GO term is obsolete and already replaced. Current contextual proton naming is not treated as a wrong-isotope grounding. |
+| taxonomy | NCBI Taxonomy official endpoint; NCBITaxon1579 and435 | supports | Lactobacillus acidophilus and Acetobacter aceti match the listed current species identifiers. Taxonomic resolution alone does not verify the complete growth-preference criterion. |
+| relations | Cached authoritative RO; v2/v8/v9 local predicate proposals; Recursive superproperty constraints and current versus historical meanings | partial | RO positive regulation inherits process endpoints; RO contributes to inherits a material-contributor subject. RO negative regulation also inherits process constraints despite no direct endpoint declaration. Local challenges explicitly permits tolerance-trait and homeostatic-mechanism objects; confers is a documented provisional process-to-trait predicate. |
+| ledger | Independent documentary node/edge assessment; Nine nodes and nine edges, zero-based indices | partial | Confirms external relation conflicts at edges5/8 and a historical rationale error at event10. Current edge6 has process endpoints that fit the inherited constraints. No extra error is invented for challenges objects, the reaction-class node or withdrawn old groundings. |
+| owners | scripts/migrate_pathway_vs_process.py; scripts/migrate_disposition_typing.py; history/infrastructure/disposition-typing-burndown/2026-08-08T060908Z-claude-code-f802c8.yaml; Reaction-class decision; context explaining why acidotolerant excludes an acidophile-only interpretation | supports | The reaction-class writer supports the present BIOLOGICAL_PROCESS reading. The infrastructure history explains the near-neutral-optimum distinction when reviewing another record; it does not constitute approval of this target. |
+| bibliography | Europe PMC, NCBI BioC and actual publisher browser text; Five citation identities, all nine edge claims and five snippets | partial | Five identities resolve. One quote is exact, one differs in conjunction, and three remain unverified. Seven new attempts/five hashed responses and four verified reuses retain access modes and original times. A successful API-error HTML response and an unconfirmed candidate PII are explicitly excluded as evidence. |
+| krulwich | https://pmc.ncbi.nlm.nih.gov/articles/PMC3247762/; DOI10.1038/nrmicro2549; BioC offsets58,671,10376,12201,16479,44016 | partial | Supports general pH stress, lipid/porin changes and homeostasis. The abstract uses or rather than the record’s and; the cell-wide quote is exact. Proton-importing cation antiport is discussed in alkaline homeostasis. A typical neutralophile lower growth range is not an explicit definition of the exact tolerance class. |
+| preview | https://www.nature.com/articles/nrmicro2549; Publisher HTML preview abstract/Key Points/glossary, not final full article | partial | The inspected publisher abstract also uses or. The toxic-pH phrase was not found in this preview or the full author manuscript, but the final published body was not retrieved; its quotation remains unverified rather than declared fabricated. |
+| baker | https://pubmed.ncbi.nlm.nih.gov/17331729/; DOI10.1016/j.tim.2007.02.005; saved complete abstract only | partial | Supports acidic gradients and membrane-permeability context. Neither target body quotation is verified by this abstract; search-rendered body excerpts are excluded. Krulwich independently corroborates general proton export but cannot verify Baker wording. |
+| lactobacillus | https://journals.asm.org/doi/10.1128/aem.70.9.5315-5322.2004; PMID15345415; Results Tolerance of L. acidophilus to acid; Acid challenge and adaptation assays; Discussion | partial | Actual publisher full text supports acid tolerance in the NCFM/control background. Comparisons at selected pH values do not establish the growth optimum. Positive acid-response evidence is retained while the near-neutral-optimum component remains unverified. |
+| acetobacter | https://pubmed.ncbi.nlm.nih.gov/17920150/; DOI10.1016/j.ijfoodmicro.2007.05.015; indexed abstract | partial | Supports acetic-acid resistance of A. aceti. The inspected abstract does not establish a growth optimum, and the correct publisher full-text link could not be accessed. Weak-organic-acid resistance does not by itself establish both parts of the record definition. |
+| homeostasis | https://pmc.ncbi.nlm.nih.gov/articles/PMC11434309/; DOI10.3390/microorganisms12091774; Section3.2 AR2 paragraph1 and Section4 Cell Membrane Protection paragraph1 | partial | The actual relevant passages support decarboxylation and membrane-associated acid resistance in E. coli. The complete inspected article body contains no Lactobacillus/lactic-acid-bacteria mention; the record note’s LAB extension needs distinct support or qualification. This does not refute the generic reaction in other organisms. |
+| provenance | Target-specific local provenance; Ignored-inclusive identifier/path/graph search plus all thirteen target events | partial | No explicit human acceptance reference was found in the inspected target fields or matching local provenance. Human ontology attribution and automated seeding do not establish record approval. Private or remote approval remains unknown. |
+| status-rule | .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md; Status/audit and Verification gate | supports | REVIEWED requires human scientific acceptance; ontology author credit, AI events and automated checks have different roles. |
+| expression | https://imodulondb.org/api/datasets; Original07:36:12Z catalog; two E. coli source-context gene lookups08:08:19–41Z | context_only | Neither canonical species has a matching catalog dataset. The inspected review explicitly names E. coli GadA/B, motivating two bounded e_coli/modulome lookups: b3517 and b1493 belong to component22 GadXW with nineteen genes. Membership is computational context, not acid-tolerance phenotype, reaction proof, growth optimum or transfer to either canonical organism. |
+| runner | Local structured-source runner discovery; Reused bounded ignored-inclusive search07:35:50Z | context_only | No usable runner was found in the original install/PATH/project scope; official API fallback completed. This is not a new or global absence assertion. |
+
+## Limits And Additional Notes
+
+- Both example citations support acid-response behavior, but inspected evidence does not establish their complete near-neutral-optimum criterion. This is uncertainty, not proof of misclassification.
+- L. acidophilus relevant full text was inspected through an actual publisher browser open without a local article-body hash. The attempted BioC response was error/help HTML and was excluded.
+- A. aceti was assessed from its abstract; the correct publisher link was inaccessible. An initial unconfirmed PII lead is retained but excluded from source-scope conclusions.
+- Baker body quotations remain unverified; search output is a lead, not primary-source inspection. Krulwich corroboration cannot establish Baker quotation fidelity.
+- The toxic-pH quotation was not found in the full author manuscript or publisher preview, but the final published body was inaccessible. No global source-absence claim is made.
+- The inspected definition source supplies physiological context; exact operational class provenance comes from the pinned ontology.
+- Source-specific E. coli and alkaline-homeostasis context should not be silently generalized, but broad NONMECHANISTIC scope does not imply every mechanism is necessary in every taxon.
+- External relation semantics and inherited constraints are distinct from passing permissive native schema validation; no formal reasoner failure is claimed.
+- Human acceptance outside the inspected target fields and bounded ignored-inclusive search remains unknown.
+- No scientific record, schema, mapping, writer, history, status or generated page was changed.
+- Expression checks cover two genes and one shared component in a mixed-strain E. coli dataset only; no activity-response analysis, strain equivalence or canonical-species transfer was asserted.
+- Field paths use zero-based indices.
+- The current negative-regulation edge fits its inherited process endpoints; the historical-rationale finding is deliberately separate.
+- The example evidence gap is preserved as an unknown assessment and a bounded follow-up check, without declaring the species false examples.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T081019Z-acidotolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Evidence and ontology review of acidotolerant growth (METPO:1003008)
+started_at: '2026-10-21T08:03:54Z'
+finished_at: '2026-10-21T08:10:19Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The acidotolerant identity, METPO operational definition, parent and current
+  identifiers are sound. One major finding groups two external relation-endpoint conflicts;
+  five minor findings concern definition attribution, quotation conjunction, source
+  context, a historical inheritance explanation and human-acceptance linkage. All
+  nine nodes and nine edges were assessed. The examples have positive acid-response
+  support, while their near-neutral growth optima remain unverified. One of five snippets
+  is exact, one is nonverbatim and three remain unverified.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/acidotolerant.yaml
+    sha256: d1b7ecf1ebcf8f9502a82f7ec4fe21ba299fbf0d300a2e4e4575549e2ae540b7
+    role: target
+  - path: data/traits/environment/ph_growth_preference.yaml
+    sha256: e9ee5a74bff604a7b3ba06ff6610deb83d7df762d7e8b3647699b799be72201f
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T060908Z-claude-code-f802c8.yaml
+    sha256: 8ede4f80f46395efb74643e1f4158975a119ffaec78b5b291f0fc3a520a11c59
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: research/traits/environment/acidotolerant-deep-research-falcon.md
+    sha256: f83edcf4abd962ba42afdcdf1900bc7911a65f2b5b15ac7604bf1404ec038080
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1003008
+  path: data/traits/environment/acidotolerant.yaml
+  label: acidotolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Tenth batch003 target in lexicographic path order. Entire record read,
+    then native capture after the preceding acidophilic bundle was saved; scientific
+    assessment followed capture.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1003008
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1003008
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1003008
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: acidotolerant-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just validate data/traits/environment/acidotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-acidotolerant-validate
+- check_id: acidotolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just validate-strict data/traits/environment/acidotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-acidotolerant-strict
+- check_id: acidotolerant-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1003008
+  command: just verify-snippets --record data/traits/environment/acidotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Five snippets over two references, all NOT_IN_ABSTRACT and therefore inconclusive.
+    Manual checks verify one exact quote, identify one conjunction difference and
+    leave three quotes unverified in inspected source versions.
+  evidence_ids:
+  - check-acidotolerant-snippets
+- check_id: structured-source-runner
+  name: Structured-source runner availability
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1003008
+  summary: Reused bounded runner discovery; official API fallback completed.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Official expression-source context
+  status: passed
+  required: false
+  target_ids:
+  - METPO:1003008
+  summary: Canonical-organism datasets not applicable; two explicitly sourced E. coli
+    gene queries and one shared module summary inspected.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-acidotolerant-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-validate.log
+  locator: Executed 2026-10-21T08:04:23Z through 2026-10-21T08:04:31Z; metadata acidotolerant-validate.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: 3353b1788c3181aa0f47a1644f3bdebbc3baf694eda8301633f0f8e08eb12530
+- evidence_id: check-acidotolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-strict.log
+  locator: Executed 2026-10-21T08:04:23Z through 2026-10-21T08:04:34Z; metadata acidotolerant-strict.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: e6c984f99faefd249eb0477b516418a4d1a59dcb4646f852c7abd35b1ef26cfb
+- evidence_id: check-acidotolerant-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/acidotolerant-snippets.log
+  locator: Executed 2026-10-21T08:04:25Z through 2026-10-21T08:04:29Z; metadata acidotolerant-snippets.json
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: context_only
+  summary: Five snippets over two references, all NOT_IN_ABSTRACT and therefore inconclusive.
+    Manual checks verify one exact quote, identify one conjunction difference and
+    leave three quotes unverified in inspected source versions.
+  snapshot_sha256: 1c4f8a13f49760960a31ef9665ee613746f725cbc6aa08641046ea7e6481cfcf
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/acidotolerant.yaml
+  locator: 'Entire record: identity, definition, synonym, attribution, two examples,
+    nine nodes, nine edges and thirteen events'
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: partial
+  summary: The record defines acid tolerance with near-neutral optimal growth. Two
+    external relation meanings conflict with their endpoints, and bounded source/provenance
+    details require clarification.
+  snapshot_sha256: d1b7ecf1ebcf8f9502a82f7ec4fe21ba299fbf0d300a2e4e4575549e2ae540b7
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/environment/ph_growth_preference.yaml
+  locator: Entire context record; identifier and definition
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: supports
+  summary: Environmental-pH growth preference is strictly broader than the selected
+    tolerance class. This parent is context, not a second review target.
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph and history inspection
+  locator: All nine node IDs and nine edge endpoints
+  accessed_at: '2026-10-21T08:04:43Z'
+  support: supports
+  summary: All endpoints resolve. Thirteen events comprise twelve AI-assisted events
+    and one automated seed; human created_by attribution is distinct from acceptance
+    of this record revision. No pathway link is asserted.
+  snapshot_sha256: 517c08c7186ebd3ec2fec67d749cb953626e8e7c886c664031a2fa960e084c1a
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md; src/traitmech/schema/traitmech.yaml
+  locator: NONMECHANISTIC scope and optional protein/dataset/predicate fields
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: supports
+  summary: A broad environmental class need not supply token protein examples or one
+    universal mechanism. A reaction-class node can be BIOLOGICAL_PROCESS despite system
+    wording in its label.
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: Complete labels/synonyms scan; active1003008, parent1003000 and upstream
+    authors
+  accessed_at: '2026-10-21T08:04:46Z'
+  support: supports
+  summary: Identifier, aciduric synonym, typical-below5.5/near-neutral-optimum definition
+    and parent match upstream. The scalar created_by value matches one of two upstream
+    authors and is not a claim of human scientific sign-off.
+  snapshot_sha256: 257dad8c3bb2b79bac88a2c0dc04ab53d72c56bcf68c05dc1ae3db59c28d5495
+- evidence_id: ontology
+  kind: authority
+  reference: QuickGO and ChEBI official responses
+  locator: Reused07:58:24–26Z responses and verified original hashes
+  accessed_at: '2026-10-21T07:58:26Z'
+  support: supports
+  summary: CurrentGO0051453 is active intracellular-pH regulation and CHEBI15378 is
+    hydron/H+. The former GO term is obsolete and already replaced. Current contextual
+    proton naming is not treated as a wrong-isotope grounding.
+  snapshot_sha256: 482abac890106412c87546f4f7b564fb84ec702bd96e202d71a108b7728ade8c
+- evidence_id: taxonomy
+  kind: authority
+  reference: NCBI Taxonomy official endpoint
+  locator: NCBITaxon1579 and435
+  accessed_at: '2026-10-21T08:04:56Z'
+  support: supports
+  summary: Lactobacillus acidophilus and Acetobacter aceti match the listed current
+    species identifiers. Taxonomic resolution alone does not verify the complete growth-preference
+    criterion.
+  snapshot_sha256: df9e9fa6417ab4900937389cb40c99aed88835c59e1e3f74cbfcd535874a669b
+- evidence_id: relations
+  kind: authority
+  reference: Cached authoritative RO; v2/v8/v9 local predicate proposals
+  locator: Recursive superproperty constraints and current versus historical meanings
+  accessed_at: '2026-10-21T08:04:46Z'
+  support: partial
+  summary: RO positive regulation inherits process endpoints; RO contributes to inherits
+    a material-contributor subject. RO negative regulation also inherits process constraints
+    despite no direct endpoint declaration. Local challenges explicitly permits tolerance-trait
+    and homeostatic-mechanism objects; confers is a documented provisional process-to-trait
+    predicate.
+  snapshot_sha256: 94a3416fe44475655a430328e609b1e234e2952b974076ac027df435814d04c3
+- evidence_id: ledger
+  kind: validation
+  reference: Independent documentary node/edge assessment
+  locator: Nine nodes and nine edges, zero-based indices
+  accessed_at: '2026-10-21T08:05:57Z'
+  support: partial
+  summary: Confirms external relation conflicts at edges5/8 and a historical rationale
+    error at event10. Current edge6 has process endpoints that fit the inherited constraints.
+    No extra error is invented for challenges objects, the reaction-class node or
+    withdrawn old groundings.
+  snapshot_sha256: 6c0efac7cb7358c06ba6844b0f918cba24e3306643ea39f87a0ab8dfb3c5fe1a
+- evidence_id: owners
+  kind: record_content
+  reference: scripts/migrate_pathway_vs_process.py; scripts/migrate_disposition_typing.py;
+    history/infrastructure/disposition-typing-burndown/2026-08-08T060908Z-claude-code-f802c8.yaml
+  locator: Reaction-class decision; context explaining why acidotolerant excludes
+    an acidophile-only interpretation
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: supports
+  summary: The reaction-class writer supports the present BIOLOGICAL_PROCESS reading.
+    The infrastructure history explains the near-neutral-optimum distinction when
+    reviewing another record; it does not constitute approval of this target.
+  snapshot_sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+- evidence_id: bibliography
+  kind: database
+  reference: Europe PMC, NCBI BioC and actual publisher browser text
+  locator: Five citation identities, all nine edge claims and five snippets
+  accessed_at: '2026-10-21T08:07:41Z'
+  support: partial
+  summary: Five identities resolve. One quote is exact, one differs in conjunction,
+    and three remain unverified. Seven new attempts/five hashed responses and four
+    verified reuses retain access modes and original times. A successful API-error
+    HTML response and an unconfirmed candidate PII are explicitly excluded as evidence.
+  snapshot_sha256: 828170c7c22747aee2cd33a5ca0ac41dd49a03549e364ab8b3fe9479a7e9667c
+- evidence_id: krulwich
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3247762/
+  locator: DOI10.1038/nrmicro2549; BioC offsets58,671,10376,12201,16479,44016
+  accessed_at: '2026-10-21T07:57:33Z'
+  support: partial
+  summary: Supports general pH stress, lipid/porin changes and homeostasis. The abstract
+    uses or rather than the record’s and; the cell-wide quote is exact. Proton-importing
+    cation antiport is discussed in alkaline homeostasis. A typical neutralophile
+    lower growth range is not an explicit definition of the exact tolerance class.
+  snapshot_sha256: 903213411c506c8991863c506167027a9472d4fb436d3c7e8b38e9d87f7b656f
+- evidence_id: preview
+  kind: primary_source
+  reference: https://www.nature.com/articles/nrmicro2549
+  locator: Publisher HTML preview abstract/Key Points/glossary, not final full article
+  accessed_at: '2026-10-21T07:56:36Z'
+  support: partial
+  summary: The inspected publisher abstract also uses or. The toxic-pH phrase was
+    not found in this preview or the full author manuscript, but the final published
+    body was not retrieved; its quotation remains unverified rather than declared
+    fabricated.
+  snapshot_sha256: 4cd2836049dc36e43c7d3d33561d1aa0b33f542eac252b37dd8275cea7fceb66
+- evidence_id: baker
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/17331729/
+  locator: DOI10.1016/j.tim.2007.02.005; saved complete abstract only
+  accessed_at: '2026-10-21T07:55:43Z'
+  support: partial
+  summary: Supports acidic gradients and membrane-permeability context. Neither target
+    body quotation is verified by this abstract; search-rendered body excerpts are
+    excluded. Krulwich independently corroborates general proton export but cannot
+    verify Baker wording.
+  snapshot_sha256: e12f1b09a1467a8985fae8d345351ad5ef2fc532f35fb10be67203ec41ea939b
+- evidence_id: lactobacillus
+  kind: primary_source
+  reference: https://journals.asm.org/doi/10.1128/aem.70.9.5315-5322.2004
+  locator: PMID15345415; Results Tolerance of L. acidophilus to acid; Acid challenge
+    and adaptation assays; Discussion
+  accessed_at: '2026-10-21T08:06:19Z'
+  support: partial
+  summary: Actual publisher full text supports acid tolerance in the NCFM/control
+    background. Comparisons at selected pH values do not establish the growth optimum.
+    Positive acid-response evidence is retained while the near-neutral-optimum component
+    remains unverified.
+- evidence_id: acetobacter
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/17920150/
+  locator: DOI10.1016/j.ijfoodmicro.2007.05.015; indexed abstract
+  accessed_at: '2026-10-21T08:04:22Z'
+  support: partial
+  summary: Supports acetic-acid resistance of A. aceti. The inspected abstract does
+    not establish a growth optimum, and the correct publisher full-text link could
+    not be accessed. Weak-organic-acid resistance does not by itself establish both
+    parts of the record definition.
+  snapshot_sha256: 3feac4d7f87231f2411c0749b5df7d6151d2dd7ce9c479d7ee12f5c56579439b
+- evidence_id: homeostasis
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11434309/
+  locator: DOI10.3390/microorganisms12091774; Section3.2 AR2 paragraph1 and Section4
+    Cell Membrane Protection paragraph1
+  accessed_at: '2026-10-21T08:04:24Z'
+  support: partial
+  summary: The actual relevant passages support decarboxylation and membrane-associated
+    acid resistance in E. coli. The complete inspected article body contains no Lactobacillus/lactic-acid-bacteria
+    mention; the record note’s LAB extension needs distinct support or qualification.
+    This does not refute the generic reaction in other organisms.
+  snapshot_sha256: 3c70dd86fc09df61edcfd400967f1564ee1028403ec1b21b8ac51958cce5108d
+- evidence_id: provenance
+  kind: search
+  reference: Target-specific local provenance
+  locator: Ignored-inclusive identifier/path/graph search plus all thirteen target
+    events
+  accessed_at: '2026-10-21T08:04:43Z'
+  support: partial
+  summary: No explicit human acceptance reference was found in the inspected target
+    fields or matching local provenance. Human ontology attribution and automated
+    seeding do not establish record approval. Private or remote approval remains unknown.
+  snapshot_sha256: 22f6e11a71967c0b09f0fc0fb89c78b7cc678928bb987c1436c3db74cc627a8e
+  search_scope: rg --no-ignore --hidden across scripts, history, mappings, reviews
+    and research/traits/environment; all target events and matching infrastructure
+    history inspected. Other reviews listing this file as input are not target reviews.
+    Remote/private approvals unsearched.
+- evidence_id: status-rule
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md
+  locator: Status/audit and Verification gate
+  accessed_at: '2026-10-21T08:10:19Z'
+  support: supports
+  summary: REVIEWED requires human scientific acceptance; ontology author credit,
+    AI events and automated checks have different roles.
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original07:36:12Z catalog; two E. coli source-context gene lookups08:08:19–41Z
+  accessed_at: '2026-10-21T08:09:03Z'
+  support: context_only
+  summary: 'Neither canonical species has a matching catalog dataset. The inspected
+    review explicitly names E. coli GadA/B, motivating two bounded e_coli/modulome
+    lookups: b3517 and b1493 belong to component22 GadXW with nineteen genes. Membership
+    is computational context, not acid-tolerance phenotype, reaction proof, growth
+    optimum or transfer to either canonical organism.'
+  snapshot_sha256: 7434f680665490971346fbd87678c8010a220bdf13fcabeadd221953530af1e7
+- evidence_id: runner
+  kind: search
+  reference: Local structured-source runner discovery
+  locator: Reused bounded ignored-inclusive search07:35:50Z
+  accessed_at: '2026-10-21T07:35:50Z'
+  support: context_only
+  summary: No usable runner was found in the original install/PATH/project scope;
+    official API fallback completed. This is not a new or global absence assertion.
+  snapshot_sha256: 255ec15986d2ece8ee78c72591e43429c1bb5f22c3326a349667326e3fe1b380
+  search_scope: Original bounded PATH/install/project roots and ignored-inclusive
+    traversal are in the reused receipt; unsearched directories remain unknown.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, label, synonym, attribution and parent'
+  outcome: supported
+  target_ids:
+  - METPO:1003008
+  summary: The record faithfully represents active METPO1003008 beneath pH growth
+    preference. The exact aciduric synonym and human creator attribution match upstream;
+    they do not independently confer review status.
+  evidence_ids:
+  - identity
+  - parent
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: operational boundary and source attribution'
+  outcome: concern
+  target_ids:
+  - METPO:1003008
+  summary: The full typical-below5.5/near-neutral-optimum definition is supported
+    by pinned METPO. Krulwich supplies physiological context, but the inspected lower
+    growth-range passage does not itself define this exact operational class.
+  evidence_ids:
+  - identity
+  - krulwich
+  - preview
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: category, term kind and contextual scope'
+  outcome: supported
+  target_ids:
+  - METPO:1003008
+  summary: ENVIRONMENT/CLASS and broad NONMECHANISTIC scope fit. The reaction-class
+    description supports BIOLOGICAL_PROCESS, and optional protein examples, pathway
+    links and datasets are not required.
+  evidence_ids:
+  - record
+  - policy
+  - owners
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: both canonical taxa and complete trait criterion'
+  outcome: unknown
+  target_ids:
+  - METPO:1003008
+  summary: Both taxon identities resolve and both citations provide positive acid-response
+    evidence. The inspected sources do not establish near-neutral growth optima. This
+    is a coverage limitation, not evidence that either species fails the class; fuller
+    growth measurements would resolve it.
+  evidence_ids:
+  - taxonomy
+  - lactobacillus
+  - acetobacter
+  - identity
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: current and withdrawn ontology groundings'
+  outcome: supported
+  target_ids:
+  - METPO:1003008
+  summary: CurrentGO0051453/CHEBI15378 match context. Historical wrong or redox/microbe-domain
+    groundings were replaced and are not reported as current defects.
+  evidence_ids:
+  - ontology
+  - identity
+  - relations
+  - ledger
+- assessment_id: graph
+  area: consistency
+  topic: 'Native checklist: all nine edges and inherited relation meanings'
+  outcome: concern
+  target_ids:
+  - METPO:1003008
+  summary: Two current external relations conflict with endpoint kinds. Current negative-regulation
+    edge6 fits process endpoints; event10’s rationale incorrectly dismisses inheritance.
+    Provisional challenges permits both listed object kinds, so no extra object-range
+    finding is made.
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - shape
+- assessment_id: source-context
+  area: evidence
+  topic: 'Native checklist: organism and acid-versus-alkaline context'
+  outcome: concern
+  target_ids:
+  - METPO:1003008
+  summary: The LAB extension goes beyond the directly inspected E. coli review, and
+    the cation/proton-import discussion concerns alkaline homeostasis. These are bounded
+    source-context clarifications, not evidence of universally false reactions or
+    universal necessity.
+  evidence_ids:
+  - homeostasis
+  - krulwich
+  - record
+- assessment_id: quotes
+  area: evidence
+  topic: 'Native checklist: five snippets and version/access limits'
+  outcome: concern
+  target_ids:
+  - METPO:1003008
+  summary: One quote is exact, one replaces or with and in the nearest inspected passage,
+    and three are unverified. Absence from an abstract or an inspected manuscript
+    version does not establish absence from every final source version.
+  evidence_ids:
+  - bibliography
+  - krulwich
+  - preview
+  - baker
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: structure and optional evidence surfaces'
+  outcome: supported
+  target_ids:
+  - METPO:1003008
+  summary: All nine nodes and nine edges are internally linked. Definition, citations
+    and examples are present, with their scientific coverage limits stated. Optional
+    protein examples and pathway-context links are not missing requirements.
+  evidence_ids:
+  - shape
+  - policy
+  - record
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: history rationale and human scientific acceptance'
+  outcome: concern
+  target_ids:
+  - METPO:1003008
+  summary: The historical no-entailment explanation overlooks inherited constraints.
+    Twelve AI-assisted events and one seed are explicit; human acceptance is not linked
+    in the bounded local fields.
+  evidence_ids:
+  - relations
+  - ledger
+  - provenance
+  - status-rule
+- assessment_id: expression-context
+  area: evidence
+  topic: 'Native checklist: optional source-organism expression context'
+  outcome: supported
+  target_ids:
+  - METPO:1003008
+  summary: The canonical taxa lack catalog coverage. The source’s E. coli GadA/B names
+    have computational module context, without inferring biological mechanism, growth
+    optimum, strain equivalence or a substitute canonical example.
+  evidence_ids:
+  - expression
+  - homeostasis
+findings:
+- finding_id: external-relation-endpoints
+  issue_key: acidotolerant-external-relation-endpoints
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two RO relations conflict with the endpoint meanings
+  description: Edge5 uses positive regulation with a trait object although the relation
+    inherits a process range. Edge8 uses contributes to with an explicitly described
+    antiport activity although the relation requires a material contributor. These
+    semantic conflicts are distinct from the native validators, which pass; no failed
+    formal reasoner run is claimed.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - causal_graphs[0].edges[5]
+  - causal_graphs[0].edges[8]
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: definition-source-precision
+  issue_key: acidotolerant-definition-source-precision
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Operational growth-preference boundary needs explicit source attribution
+  description: Pinned METPO supplies the typical-below5.5 and near-neutral-optimum
+    conjunction. The cited physiological review discusses neutralophile growth ranges
+    and acid stress rather than directly defining this exact class. Clarify which
+    authority supports the operational convention without changing the correct upstream
+    identity or calling the examples false.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - definition_source
+  - definition
+  evidence_ids:
+  - identity
+  - krulwich
+  - preview
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: quote-conjunction
+  issue_key: acidotolerant-quote-conjunction
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Nearest inspected quotation uses or rather than and
+  description: The top-level snippet says tolerate and grow, whereas both the inspected
+    author-manuscript abstract and publisher abstract say tolerate or grow. Keep a
+    literal quote from an identified source surface or place interpretation in notes;
+    do not combine survival and growth evidence implicitly.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - evidence[0].snippet
+  evidence_ids:
+  - record
+  - krulwich
+  - preview
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: source-context-qualification
+  issue_key: acidotolerant-source-context-qualification
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Two source notes need organism or condition context
+  description: Edge4’s evidence note extends an E. coli-focused review to LAB without
+    direct support in the inspected body. Edge8 cites general cation/proton antiport
+    homeostasis while the relevant passage specifically describes proton uptake under
+    alkaline conditions. Preserve these contexts in the acid-tolerance graph. This
+    does not claim that every generic node is universal or that the reactions are
+    false.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - causal_graphs[0].edges[4].evidence[0].notes
+  - causal_graphs[0].edges[8].evidence[0].notes
+  evidence_ids:
+  - homeostasis
+  - krulwich
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: inherited-constraint-history
+  issue_key: acidotolerant-inherited-constraint-history
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Historical rationale overlooks inherited RO constraints
+  description: History event10 infers no endpoint entailment from the absence of direct
+    RO0002212 domain/range declarations. The relation inherits process constraints
+    through its superproperty. Current edge6 has compatible process endpoints; this
+    finding concerns the historical explanation, not another present graph-type error.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - curation_history[10].changes
+  evidence_ids:
+  - relations
+  - ledger
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: acidotolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human acceptance is not linked in inspected local provenance
+  description: Twelve events disclose AI assistance and one records automated import.
+    The human created_by field is upstream ontology attribution. Neither it nor the
+    inspected bounded local matches links human scientific acceptance of this record/revision;
+    remote/private acceptance remains unknown.
+  target_ids:
+  - METPO:1003008
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - status-rule
+  - identity
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: repair-relations
+  description: In separately authorized curation, reconcile the two current predicates
+    with their activity/material/trait endpoint meanings while retaining supported
+    and appropriately scoped biological claims.
+  finding_ids:
+  - external-relation-endpoints
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Inspect inherited external relation constraints and endpoint meanings, not just
+    direct declarations.
+  - Check mapping replay for recurrence and preserve source-condition qualifications.
+  - Run focused strict validation, relevant graph checks and just qc; append native
+    history and regenerate affected products.
+- action_id: clarify-definition
+  description: Make the operational boundary’s METPO provenance explicit alongside
+    the physiological source; keep survival, growth, growth range and growth optimum
+    distinct.
+  finding_ids:
+  - definition-source-precision
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Evidence identifies the authority supplying both parts of the definition.
+  - Do not infer a near-neutral optimum from acid production, survival or selected-pH
+    comparisons alone.
+  - Verify dedicated growth measurements before presenting either example as fully
+    satisfying the compound criterion.
+- action_id: repair-quote
+  description: Restore literal source wording in the top-level snippet or move the
+    interpretation into notes.
+  finding_ids:
+  - quote-conjunction
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The quote matches a precisely identified inspected surface.
+  - The other three access-limited quotations remain explicitly unresolved until their
+    source text is inspected.
+  - Run snippet and focused validation after an authorized correction.
+- action_id: retain-source-context
+  description: Retain E. coli and alkaline-condition qualifications at the relevant
+    evidence notes, or supply directly inspected sources for the broader proposed
+    scope.
+  finding_ids:
+  - source-context-qualification
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The record separates the demonstrated source context from any class-level inference.
+  - No unverified cross-taxon substitution or acid-specific benefit is introduced.
+  - Reassess the affected claims and run focused checks plus just qc after authorized
+    changes.
+- action_id: correct-history-rationale
+  description: Append a corrective provenance explanation of the inherited RO constraints
+    while preserving the original historical event and the compatible current edge6.
+  finding_ids:
+  - inherited-constraint-history
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The correction distinguishes direct declarations, inherited entailments and current
+    endpoint compatibility.
+  - Historical provenance is not silently rewritten.
+  - Run native record/history validation for any separately authorized corrective
+    event.
+- action_id: link-acceptance
+  description: Locate and link existing human scientific acceptance or obtain it through
+    the established process; preserve AI history and reassess status if acceptance
+    remains unavailable.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1003008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/acidotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the record/revision and scientific scope.
+  - Ontology attribution and automated validation are not represented as sign-off.
+limitations:
+- Both example citations support acid-response behavior, but inspected evidence does
+  not establish their complete near-neutral-optimum criterion. This is uncertainty,
+  not proof of misclassification.
+- L. acidophilus relevant full text was inspected through an actual publisher browser
+  open without a local article-body hash. The attempted BioC response was error/help
+  HTML and was excluded.
+- A. aceti was assessed from its abstract; the correct publisher link was inaccessible.
+  An initial unconfirmed PII lead is retained but excluded from source-scope conclusions.
+- Baker body quotations remain unverified; search output is a lead, not primary-source
+  inspection. Krulwich corroboration cannot establish Baker quotation fidelity.
+- The toxic-pH quotation was not found in the full author manuscript or publisher
+  preview, but the final published body was inaccessible. No global source-absence
+  claim is made.
+- The inspected definition source supplies physiological context; exact operational
+  class provenance comes from the pinned ontology.
+- Source-specific E. coli and alkaline-homeostasis context should not be silently
+  generalized, but broad NONMECHANISTIC scope does not imply every mechanism is necessary
+  in every taxon.
+- External relation semantics and inherited constraints are distinct from passing
+  permissive native schema validation; no formal reasoner failure is claimed.
+- Human acceptance outside the inspected target fields and bounded ignored-inclusive
+  search remains unknown.
+- No scientific record, schema, mapping, writer, history, status or generated page
+  was changed.
+- Expression checks cover two genes and one shared component in a mixed-strain E.
+  coli dataset only; no activity-response analysis, strain equivalence or canonical-species
+  transfer was asserted.
+notes:
+- Field paths use zero-based indices.
+- The current negative-regulation edge fits its inherited process endpoints; the historical-rationale
+  finding is deliberately separate.
+- The example evidence gap is preserved as an unknown assessment and a bounded follow-up
+  check, without declaring the species false examples.
+tags:
+- record-review
+- acidotolerant
+- environment
+- needs-curation
+```

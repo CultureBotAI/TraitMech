@@ -1,0 +1,1275 @@
+schema_version: 1.0.0
+review_id: 20261021T074817Z-soil-dwelling
+kind: record
+repository: CultureBotAI/TraitMech
+title: Evidence and ontology review of soil-dwelling (traitmech:000050)
+started_at: '2026-10-21T07:40:53Z'
+finished_at: '2026-10-21T07:48:17Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The soil habitat identity, broader parent, current GO term and all sixteen
+  quoted snippets are supported. Two major findings concern two RO relation meanings
+  and a historical F113 citation attached to a different current species. Three minor
+  findings concern STATE vocabulary scope, one quote-location note and locally undocumented
+  human acceptance. Fifteen nodes and fourteen edges were reviewed, preserving proxy/association
+  qualifiers and the directly linked methodological debate over genomic life-history
+  axes.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/habitat_association.yaml
+    sha256: 623d18cf295c01782024055b4dca534217f52d3ef18d46f086af27fe504bbd2a
+    role: context
+  - path: data/traits/ecology/soil_dwelling.yaml
+    sha256: 9560bc7f560f9f97dab1ffe2cb930feda57eac65ed732215425b1c1f0d434515
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/mappings/name-match-groundings/2026-08-17T042357Z-claude-code-2a9f93.yaml
+    sha256: c3f93d5c8c0da5c538af391bfdbad3a8bcbe238a26a8727764c3f0ddc3422ad8
+    role: context
+  - path: history/records/soil_dwelling/2026-09-04T002000Z-claude-code-50a534.yaml
+    sha256: 7488ac6410bff2c1a1430f5df44a2d1881b23da5a1a1684826d991e5ac0e1358
+    role: context
+  - path: history/records/soil_dwelling/2026-09-04T120000Z-codex-183.yaml
+    sha256: c305f06c3a2982c40f5e97c8162f93079a590db3015264e321a84615e7443843
+    role: context
+  - path: history/records/soil_dwelling/2026-09-06T133000Z-codex-0f1048.yaml
+    sha256: fc5c7018271174244786a49e60b49621b75cd9055704c698285cff68b73853d5
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: research/traits/ecology/soil_dwelling-deep-research-falcon.md
+    sha256: 10a039398e81d05e5867fe98daa30280131deb2f233e2fcf2547b27938b1e951
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/connect_soil_dwelling_graph_183.py
+    sha256: 8859ec1a06573e82995d427fa4127d3da5bec6687ededca3d962db42abb052ef
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/repair_pr664_adversarial_review.py
+    sha256: 5717a89bee383aa0e12aec9bf30434ccff74efcbe64684d13ef9b290b1accf96
+    role: context
+  - path: scripts/review_soil_dwelling_graph_183.py
+    sha256: 17bcf631620cb26cb0f99d373541f5775e66b1972ec01c4d8df2b29f88338a32
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000050
+  path: data/traits/ecology/soil_dwelling.yaml
+  label: soil-dwelling
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific record
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_soil_dwelling_graph_183.py
+    role: Maintained source-specific evidence writer
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained context-connector writer
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained later evidence-repair writer
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Seventh batch003 target in lexicographic path order. Source capture preceded
+    judgment; the preceding saprotrophy bundle was saved before soil-dwelling scientific
+    assessment began.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000050
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000050
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000050
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran at the current 8eee base. Other commands ran
+    at f25; the full Git delta contains only seven added workflow/skill/infrastructure-history
+    files, with scientific records and existing validation inputs unchanged. Original
+    timestamps, failures and skips are retained; these checks do not certify later
+    ontology releases.
+- check_id: soil_dwelling-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just validate data/traits/ecology/soil_dwelling.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-soil_dwelling-validate
+- check_id: soil_dwelling-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just validate-strict data/traits/ecology/soil_dwelling.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-soil_dwelling-strict
+- check_id: soil_dwelling-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000050
+  command: just verify-snippets --record data/traits/ecology/soil_dwelling.yaml --out
+    /private/tmp/traitmech-record-sweep-003.4opxlhgf/soil_dwelling-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Sixteen snippets over seven references: eleven VERIFIED, five NOT_IN_ABSTRACT.
+    Abstract nonmatches are inconclusive; all were checked against relevant source
+    text separately.'
+  evidence_ids:
+  - check-soil_dwelling-snippets
+- check_id: structured-source-runner
+  name: Structured-source adapter availability
+  status: unavailable
+  required: false
+  target_ids:
+  - traitmech:000050
+  summary: Recent bounded runner search reused with its actual timestamp; official
+    API fallback completed.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Official expression-source cross-check
+  status: passed
+  required: false
+  target_ids:
+  - traitmech:000050
+  summary: Nine searches limited to20 hits across three matching datasets; three selected
+    module summaries, not an exhaustive module review.
+  evidence_ids:
+  - expression
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-soil_dwelling-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/soil_dwelling-validate.log
+  locator: Executed 2026-10-21T07:42:31Z through 2026-10-21T07:42:33Z; metadata soil_dwelling-validate.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: f2f5a60923d82911a053462bf686fd896723643271f29a8b1c29d354317966e9
+- evidence_id: check-soil_dwelling-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/soil_dwelling-strict.log
+  locator: Executed 2026-10-21T07:42:31Z through 2026-10-21T07:42:34Z; metadata soil_dwelling-strict.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: a6283621650609f79cc6897ae4bce8c4392df901a3a8d6d6878ef7537a6562c5
+- evidence_id: check-soil_dwelling-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/soil_dwelling-snippets.log
+  locator: Executed 2026-10-21T07:42:34Z through 2026-10-21T07:42:47Z; metadata soil_dwelling-snippets.json
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: context_only
+  summary: 'Sixteen snippets over seven references: eleven VERIFIED, five NOT_IN_ABSTRACT.
+    Abstract nonmatches are inconclusive; all were checked against relevant source
+    text separately.'
+  snapshot_sha256: fdb7a8b2495c17d974cb9e5ecdf820fe62649fb7eeb222f5bbd824e18fd9ecc8
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/soil_dwelling.yaml
+  locator: Entire record, fifteen nodes, fourteen edges and thirteen history events
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: partial
+  summary: The record describes a soil habitat class with qualified ecological association
+    branches. Two external relation meanings, one current example/taxon alignment
+    and bounded model/provenance details require follow-up.
+  snapshot_sha256: 9560bc7f560f9f97dab1ffe2cb930feda57eac65ed732215425b1c1f0d434515
+- evidence_id: parent
+  kind: record_content
+  reference: data/traits/ecology/habitat_association.yaml
+  locator: Entire context record; identifier and habitat definition used for hierarchy
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: supports
+  summary: Soil residence is narrower than the parent primary-habitat/niche classifier.
+    No scientific verdict is made on that separate parent here.
+- evidence_id: shape
+  kind: validation
+  reference: Read-only graph inspection
+  locator: All node identifiers and endpoint references
+  accessed_at: '2026-10-21T07:42:51Z'
+  support: supports
+  summary: Fifteen unique nodes and fourteen edges; every endpoint resolves. Thirteen
+    events disclose AI assistance.
+  snapshot_sha256: c2d3454da4cc38b81bb8b4b97248d0f6f46b46ff0eb4ebfc0b54a58175adccda
+- evidence_id: policy
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml; docs/GROUNDING_POLICY.md
+  locator: CausalNodeTypeEnum.STATE and reviewed NONMECHANISTIC scope policy
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: partial
+  summary: STATE denotes a cellular bioenergetic/molecular state, while three current
+    nodes describe ecological strategies or a community grouping. Optional token protein
+    examples and a universal mechanism are not requirements for this habitat class.
+- evidence_id: owners
+  kind: record_content
+  reference: scripts/review_soil_dwelling_graph_183.py; scripts/connect_soil_dwelling_graph_183.py;
+    scripts/repair_pr664_adversarial_review.py
+  locator: Current replacement tables, connector metadata/ADDED_NODES and repair dispatch
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: supports
+  summary: The maintained writers preserve qualified associations, the heat-only statement
+    and contextual connectors. Future corrections must reconcile these replay expectations
+    with the maintained record.
+  snapshot_sha256: 8859ec1a06573e82995d427fa4127d3da5bec6687ededca3d962db42abb052ef
+- evidence_id: provenance
+  kind: search
+  reference: Local target-specific record and repository history
+  locator: Ignored-inclusive identifier/label/slug search; entire target events and
+    three matching repository histories
+  accessed_at: '2026-10-21T07:42:51Z'
+  support: partial
+  summary: All thirteen target events disclose AI work; the three target-specific
+    history records identify AI actors. No human scientific acceptance link was found
+    in those inspected fields. Private/remote approval remains unknown.
+  snapshot_sha256: d3867898e3da7bae2f398ab5b16b298c3e043ff21064edb2fb809f2a1c772241
+  search_scope: Exact rg --no-ignore --hidden command in receipt covers scripts, history,
+    mappings, reviews and research/traits/ecology. Current target and all three record-specific
+    history files were inspected. Private/remote approvals are outside scope.
+- evidence_id: status-rule
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/CURATION_PLAYBOOK.md
+  locator: Status/audit checklist and Verification status gate
+  accessed_at: '2026-10-21T07:48:17Z'
+  support: supports
+  summary: REVIEWED requires human curator sign-off; AI review events and successful
+    validation do not establish that acceptance.
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original07:36:12Z catalog, nine bounded searches and three selected module
+    summaries
+  accessed_at: '2026-10-21T07:43:54Z'
+  support: context_only
+  summary: Matching-name datasets exist for Bacillus subtilis and Streptomyces coelicolor;
+    no P. fluorescens entry was in the inspected catalog. Three selected components
+    supply motility/sporulation context only. Search limits and strain limitations
+    are explicit; no ecological phenotype or community-level activity is inferred.
+  snapshot_sha256: af45bb835cad03bf5a7e8ed046333fe24f7c6abd8935d7935f128494a46ad285
+- evidence_id: runner
+  kind: search
+  reference: Local structured-source runner discovery
+  locator: Reused bounded discovery07:35:50Z; original timestamp and source hash retained
+  accessed_at: '2026-10-21T07:35:50Z'
+  support: context_only
+  summary: No usable runner was found in that ignored-inclusive PATH/install/project
+    scope; official API fallback completed. This is not represented as a new search
+    or a filesystem-wide absence assertion.
+  snapshot_sha256: 255ec15986d2ece8ee78c72591e43429c1bb5f22c3326a349667326e3fe1b380
+  search_scope: Original bounded PATH/install/project roots and ignored-inclusive
+    traversal are listed in the receipt; unsearched directories remain unknown.
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl; proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+  locator: Complete captured RDF active/deprecated label/literal scan and proposal
+    rows49/52
+  accessed_at: '2026-10-21T07:43:09Z'
+  support: supports
+  summary: No exact active/deprecated soil-dwelling class was found. Fallback000050
+    maps to proposed1007649 under habitat-association000047/proposed1007646. Pending
+    placeholders are distinguished from minted terms.
+  snapshot_sha256: 1c4f7141e7050bd86b75932ac7bf96c55eb787b5eb5fce0fc0ad0d1e465a406b
+- evidence_id: identifiers
+  kind: authority
+  reference: QuickGO and NCBI Taxonomy official endpoints
+  locator: Exact live current and historical identifier responses
+  accessed_at: '2026-10-21T07:43:39Z'
+  support: supports
+  summary: Current GO0071973 is active bacterial-type flagellum-dependent cell motility.
+    The earlier cilium term was withdrawn from this record. Listed taxa1423/1902/294
+    each match their current labels; source-to-example attribution requires the separate
+    F113 check.
+  snapshot_sha256: 52211f5baa99d392a29dbec21a9e1a99c1518acfac3e84b60bd9cd812364245e
+- evidence_id: F113-taxonomy
+  kind: authority
+  reference: NCBI Taxonomy exact historical-name resolution; PMID23350846
+  locator: F113-source-taxonomy-correlation.json; current taxonomy Includes and type-material
+    fields
+  accessed_at: '2026-10-21T07:45:50Z'
+  support: refutes
+  summary: The paper explicitly concerns F113. NCBI now includes its historical P.
+    fluorescens F113 name under1114970, Pseudomonas ogarae, distinct from current294.
+    Historical naming remains valid, but the current example identifier does not match
+    that cited organism.
+  snapshot_sha256: 5370dc78e92fcdcd0ded20e97f2dc0043a8de72875f1cd8df43436607df6b72d
+- evidence_id: relations
+  kind: authority
+  reference: Cached authoritative RO database and pinned Biolink model
+  locator: Recursive relation meaning and associated_with proxy-variable allowance
+  accessed_at: '2026-10-21T07:43:09Z'
+  support: partial
+  summary: RO contributes to assigns a material-contributor role that the trait itself
+    does not fill. RO positive regulation concerns process execution, which is distinct
+    from relative gene abundance. Biolink association explicitly permits related concepts
+    represented by measured proxies, so qualified gene-prevalence associations are
+    not separately rejected.
+  snapshot_sha256: b225f28b97f20cac583aa4828c8fc6935cd8cf20b8c6b582d8490a205820a62f
+- evidence_id: ledger
+  kind: validation
+  reference: Independent documentary ontology assessment
+  locator: All fifteen nodes and fourteen edges, zero-based locators
+  accessed_at: '2026-10-21T07:45:50Z'
+  support: partial
+  summary: Confirms two RO meaning issues, current F113 alignment and the bounded
+    STATE-vocabulary issue. It does not infer false biology from the broad NONMECHANISTIC
+    context or from proxy variables.
+  snapshot_sha256: 5571414fede200419e815ed0af486a45cbee28b470a80debf1c0961351f6a58c
+- evidence_id: bibliography
+  kind: database
+  reference: Europe PMC, publisher and institutional sources
+  locator: All ten citation identities, sixteen snippet occurrences and fourteen edge
+    assessments
+  accessed_at: '2026-10-21T07:45:32Z'
+  support: supports
+  summary: Every citation identity resolves and all sixteen snippets match inspected
+    source text. Eight sources had relevant full text; Martiny had abstract and Piton
+    abstract/preview access. Twenty hashed receipts include four reused sources with
+    original times preserved.
+  snapshot_sha256: 630bb2cf6f8c51e4219dfbaa7331baf76af5c9719db3e46a60bca4b8d21e3a63
+- evidence_id: fierer
+  kind: primary_source
+  reference: https://www.fiererlab.org/s/Fierer_Nat_Rev_Micro_2017.pdf
+  locator: DOI10.1038/nrmicro.2017.87; PDFp1 abstract and introductory microbial-controls
+    paragraph
+  accessed_at: '2026-10-21T06:34:33Z'
+  support: supports
+  summary: Supports heterogeneous soil habitat, microbial biogeochemical roles and
+    ecological-strategy grouping. Primary residence is the record’s operational boundary,
+    not a verbatim definition or a claim about every detected soil taxon.
+  snapshot_sha256: eb3930ba598e301f098d61bab6f5f4a0047c8b1c55726618cce1494621ac31d4
+- evidence_id: martiny
+  kind: primary_source
+  reference: https://pubmed.ncbi.nlm.nih.gov/16415926/
+  locator: DOI10.1038/nrmicro1341; abstract sentences2–3
+  accessed_at: '2026-10-21T07:42:23Z'
+  support: supports
+  summary: The exact snippet supports free-living microbial biogeography and environmental/spatial
+    context. The record appropriately uses this broad review as context rather than
+    a soil-only primary experiment.
+  snapshot_sha256: 62809d88a54b244d068e2a038755dbec397bbdc6c74aad7d1e625214beafefb0
+- evidence_id: bacillus
+  kind: primary_source
+  reference: https://academic.oup.com/femsec/article/28/1/1/433772
+  locator: DOI10.1111/j.1574-6941.1999.tb00555.x; abstract, Introduction and Section2
+    taxonomy/distribution paragraphs
+  accessed_at: '2026-10-21T07:43:05Z'
+  support: supports
+  summary: Directly supports the simple B. subtilis soil/rhizosphere example and distinguishes
+    spores detected elsewhere from active growth. Europe PMC returned no index record,
+    but publisher text and Crossref resolve the exact DOI.
+  snapshot_sha256: 76e8a0f94d4295d4fe8483d7909b27925918caa214bf77411a99089139abdc15
+- evidence_id: scoelicolor
+  kind: primary_source
+  reference: https://www.nature.com/articles/417141a.pdf
+  locator: PMID12000953; PDFp1/printed141 abstract and introduction
+  accessed_at: '2026-10-21T07:37:45Z'
+  support: supports
+  summary: Supports S. coelicolor as a soil actinomycete/model, with A3(2) and its
+    sequenced M145 derivative distinguished. No strain mechanism is generalized to
+    every member.
+  snapshot_sha256: d77a97e644c2be7fb60ac98ddff856d4981dc39737b076295b38880bdf51b5d5
+- evidence_id: F113-source
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC3570484/
+  locator: PMID23350846; abstract Background first sentence and Results first two
+    sentences
+  accessed_at: '2026-10-21T07:43:07Z'
+  support: partial
+  summary: Supports sugar-beet rhizosphere origin for the historically named F113
+    isolate. Current taxon attribution is evaluated independently. Host-interaction
+    mechanisms were not investigated in this review.
+  snapshot_sha256: b38235761a3970c49fb7da1f485e8521e9157fb829fa7367f0ef9e3af143bc57
+- evidence_id: oligotrophy
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11234899/
+  locator: DOI10.1093/ismeco/ycae081; abstract, Results sec12 and Conclusions sec15
+  accessed_at: '2026-10-21T07:43:05Z'
+  support: supports
+  summary: Supports statistical carbon-gradient associations involving genome size,
+    potential growth and motility/chemotaxis gene prevalence, while noting variation
+    and limits of genome size as a predictor. The current association edges do not
+    assert a deterministic universal strategy.
+  snapshot_sha256: 42e165eaaea53cb4021a691e6888f9265a89a164c8e190c70e1eaf07cf829eda
+- evidence_id: motility
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11095265/
+  locator: DOI10.1093/ismejo/wrae067; abstract, Results sec19 and Conclusions sec20
+  accessed_at: '2026-10-21T07:43:05Z'
+  support: supports
+  summary: Four field datasets and an amended incubation support a community-level
+    association of carbon availability with inferred flagellar-motility prevalence.
+    Current descriptions disclose gene prevalence; this is not direct observation
+    of every cell moving in situ.
+  snapshot_sha256: 283f4f3d87262196f967eebefa173a744c8ba31a8c5255918ccbd4b1e3d62bca
+- evidence_id: growth
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11531530/
+  locator: DOI10.1038/s41467-024-53753-w; abstract Abs1 and Introduction Sec1 final
+    results-summary paragraph
+  accessed_at: '2026-10-21T07:43:05Z'
+  support: partial
+  summary: Supports potential-growth associations with resource/moisture/soil conditions.
+    The edge2 quote occurs in the Introduction paragraph beginning In this work, while
+    its note says abstract. That locator error does not undermine the supported association.
+  snapshot_sha256: 232f68b6b647762b318cd143238160203684dba7a661628b5cfa2e1d5a6c68d0
+- evidence_id: heat
+  kind: primary_source
+  reference: https://pmc.ncbi.nlm.nih.gov/articles/PMC11655354/
+  locator: DOI10.1038/s41586-024-08185-3; abstract Abs1, Main Sec1 functional-gene
+    paragraphs and Figure3 caption
+  accessed_at: '2026-10-21T07:43:05Z'
+  support: supports
+  summary: Supports heat-associated changes in relative dormancy/sporulation gene
+    abundance after disturbance. These metagenomic community changes do not by themselves
+    measure expression or process activation. Additional treatments in the body do
+    not invalidate the narrower heat-specific record claim.
+  snapshot_sha256: 74b1fa350fd6c106403b7a68b43ed33f1349ed93d611b36dd58a96c43e7feaaf
+- evidence_id: lifehistory
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41564-023-01465-0
+  locator: DOI10.1038/s41564-023-01465-0; indexed abstract and publisher-preview Figure4
+    heading
+  accessed_at: '2026-10-21T07:43:08Z'
+  support: partial
+  summary: The snippets support the reported genomic strategy framework and environmental
+    statistical associations; preview Figure4 confirms MCOA dimensions1/2. The attempted
+    PDF endpoint returned HTML preview, so no full-body/methods access is claimed.
+  snapshot_sha256: d5080d204d8264f1289a1a55ad6fb7d010a2e1fbbcf0bcb41b9de448c465c739
+- evidence_id: lifehistory-criticism
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41564-024-01687-w
+  locator: PMID38740929; Osburn et al., author-hosted PDFpp1–3 and publisher preview
+  accessed_at: '2026-10-21T07:47:16Z'
+  support: partial
+  summary: The directly linked critique argues that variable non-bacterial DNA can
+    bias average-genome-size estimates and their environmental relationships, potentially
+    affecting the first strategy dimension. It also acknowledges limitations in its
+    alternative approach. This is a contested interpretation, not proof that every
+    reported association is false.
+  snapshot_sha256: da151fe9849502b988921281a0fabff701123dbc0cb20ebb5585bc1a475b0607
+- evidence_id: lifehistory-reply
+  kind: primary_source
+  reference: https://www.nature.com/articles/s41564-024-01688-9
+  locator: PMID38740930; publisher opening paragraph and figure headings; full reply
+    body unavailable
+  accessed_at: '2026-10-21T07:46:26Z'
+  support: partial
+  summary: Piton et al. acknowledge average-genome-size overestimation, argue that
+    the alternative has stronger underestimation, and state that either calculation
+    preserves their broader strategy conclusion. The exchange documents disagreement;
+    no independent reanalysis was performed.
+  snapshot_sha256: e77e94d316a9254cca3ffaff5c9e7351430ce0ceea18d43ca579808d2dba2b22
+- evidence_id: discussion-receipt
+  kind: database
+  reference: Directly linked Matters Arising and reply
+  locator: Supplement preserving the initial ledger; exact access modes and five verified
+    file hashes
+  accessed_at: '2026-10-21T07:47:41Z'
+  support: supports
+  summary: Both discussion identities resolve; the critique has inspected body text,
+    while the reply is preview-only. The original sixteen snippets remain authentic.
+    The evidence qualification concerns interpretation of the MCOA context.
+  snapshot_sha256: 758eda1ef1b3dea1fc1245659f198a56f2b16fdf631d2fa01aebeee9fd2d49d1
+assessments:
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: ecological class and contextual scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000050
+  summary: ECOLOGY/CLASS and NONMECHANISTIC scope fit the habitat concept. Association
+    branches do not assert one universal soil mechanism. Optional protein examples
+    and datasets are not missing required content.
+  evidence_ids:
+  - record
+  - parent
+  - policy
+- assessment_id: shape
+  area: completeness
+  topic: 'Native checklist: graph integrity and optional content'
+  outcome: supported
+  target_ids:
+  - traitmech:000050
+  summary: All endpoints resolve. The ecological definition, source evidence and examples
+    are present; no pathway-context link is asserted, and additional discussions or
+    token mechanisms are not required.
+  evidence_ids:
+  - record
+  - shape
+  - policy
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: bounded expression-module cross-check'
+  outcome: supported
+  target_ids:
+  - traitmech:000050
+  summary: The matching-name datasets offer contextual annotations only. Species/strain
+    data cannot establish soil residence, community gene abundance, heat-response
+    causality or MCOA community axes.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: provenance
+  area: provenance
+  topic: 'Native checklist: maintained writers and scientific acceptance'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: Maintained writer/history provenance is recoverable, but the inspected
+    local target-specific fields do not link human scientific acceptance.
+  evidence_ids:
+  - owners
+  - provenance
+  - status-rule
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: fallback, definition, related synonym and parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000050
+  summary: The fallback/proposal denotes soil residence beneath broader habitat association.
+    Source text supports the habitat and ecosystem context; primary environment is
+    an operational boundary, without asserting exclusive residence or universal activity.
+  evidence_ids:
+  - record
+  - identity
+  - parent
+  - fierer
+  - martiny
+- assessment_id: examples
+  area: evidence
+  topic: 'Native checklist: all three canonical species examples'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: B. subtilis and S. coelicolor examples have direct soil context. The third
+    source supports F113 habitat, but current F113 taxonomy differs from listed294.
+    All three listed labels resolve; resolution alone does not repair the source alignment.
+  evidence_ids:
+  - identifiers
+  - bacillus
+  - scoelicolor
+  - F113-source
+  - F113-taxonomy
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: external relation meanings and measured proxies'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: Two RO relations do not encode the claim made in their descriptions. Other
+    association edges retain statistical/proxy scope, including gene-prevalence context.
+    The experimental-event subject is not rejected categorically as a nonprocess.
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - heat
+  - motility
+- assessment_id: node-types
+  area: representation
+  topic: 'Native checklist: native STATE vocabulary scope'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: Nodes4/13/14 denote ecological strategies/community axes or a grouping
+    context, beyond the enum’s cellular bioenergetic/molecular-state wording. This
+    is a bounded modeling issue, not failed strict validation or denial of the ecological
+    concepts.
+  evidence_ids:
+  - record
+  - policy
+  - owners
+  - ledger
+- assessment_id: grounding
+  area: grounding
+  topic: 'Native checklist: current and historical ontology identifiers'
+  outcome: supported
+  target_ids:
+  - traitmech:000050
+  summary: The bacterial flagellar-process GO term resolves appropriately. The prior
+    cilium term is withdrawn and is not a current error. Trait fallbacks and proposal
+    status are explicit.
+  evidence_ids:
+  - identifiers
+  - identity
+  - ledger
+- assessment_id: source-support
+  area: evidence
+  topic: 'Native checklist: snippet fidelity and source placement'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: All sixteen snippets are exact in the inspected sources. Edge2 misstates
+    the location of its quote; otherwise the source notes preserve relevant ecological
+    associations, potential-growth scope and the narrow heat statement.
+  evidence_ids:
+  - bibliography
+  - growth
+  - fierer
+  - martiny
+  - oligotrophy
+  - motility
+  - heat
+  - lifehistory
+- assessment_id: lifehistory-certainty
+  area: evidence
+  topic: 'Native checklist: directly linked methodological disagreement'
+  outcome: concern
+  target_ids:
+  - traitmech:000050
+  summary: Edges6/12 describe a framework reported by Piton et al. Its average-genome-size
+    contribution and environmental interpretation have been challenged; the reply
+    acknowledges estimation bias but defends the broader conclusion. Retain attribution
+    and this uncertainty without treating statistical association as mechanism or
+    the framework as disproven.
+  evidence_ids:
+  - lifehistory
+  - lifehistory-criticism
+  - lifehistory-reply
+  - discussion-receipt
+findings:
+- finding_id: relation-semantics
+  issue_key: soil-dwelling-relation-semantics
+  category: graph
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Two RO groundings alter the described claims
+  description: Edge0 uses the soil-dwelling trait as RO contributes to’s material
+    contributor. Edge5 describes increased relative gene abundance but grounds increases
+    to RO positive regulation of process execution. Neither issue is cured by a plausible
+    informal verb. Gene prevalence is explicitly disclosed in other association edges,
+    and Biolink permits such proxies; those edges are not rejected. The heat event
+    is not blanket-classified as a nonprocess.
+  target_ids:
+  - traitmech:000050
+  field_paths:
+  - causal_graphs[0].edges[0]
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - record
+  - relations
+  - ledger
+  - heat
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: F113-current-taxon
+  issue_key: soil-dwelling-F113-current-taxon
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Historical F113 evidence attached to a different current species
+  description: PMID23350846 explicitly concerns F113, whose historical P. fluorescens
+    name now resolves in NCBI to P. ogarae1114970. The record instead links the example
+    to current P. fluorescens294. The paper’s historical naming and rhizosphere evidence
+    are valid; current identifier/source alignment needs reconciliation. This finding
+    does not claim that P. fluorescens cannot inhabit soil.
+  target_ids:
+  - traitmech:000050
+  field_paths:
+  - canonical_examples[2]
+  evidence_ids:
+  - F113-source
+  - F113-taxonomy
+  - identifiers
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: state-vocabulary-scope
+  issue_key: soil-dwelling-state-vocabulary-scope
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Community contexts exceed the current STATE definition
+  description: Nodes4/13/14 describe an ecological strategy, genomic community axes
+    and a grouping context. The native enum instead defines a cellular bioenergetic/molecular
+    state. Preserve the useful ecological distinctions while resolving this vocabulary
+    mismatch; no unverified replacement type is prescribed.
+  target_ids:
+  - traitmech:000050
+  field_paths:
+  - causal_graphs[0].nodes[4].node_type
+  - causal_graphs[0].nodes[13].node_type
+  - causal_graphs[0].nodes[14].node_type
+  evidence_ids:
+  - record
+  - policy
+  - owners
+  - ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: src/traitmech/schema/traitmech.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: growth-quote-locator
+  issue_key: soil-dwelling-growth-quote-locator
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Growth quote is in the introduction rather than the abstract
+  description: The edge2 snippet matches the final Introduction paragraph summarizing
+    results. Its evidence note says it was verified against the abstract, which omits
+    the final word of the quoted span. The association and quotation are supported;
+    only the cited location needs correction.
+  target_ids:
+  - traitmech:000050
+  field_paths:
+  - causal_graphs[0].edges[2].evidence[0].notes
+  evidence_ids:
+  - growth
+  - bibliography
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: soil-dwelling-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Human acceptance is not linked in inspected local provenance
+  description: Thirteen target events and three matching repository histories disclose
+    AI-assisted work. The inspected local target-specific fields do not link the human
+    acceptance required for REVIEWED. Private or remote acceptance was not searched
+    and is not ruled out.
+  target_ids:
+  - traitmech:000050
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - status-rule
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: repair-relations
+  description: In separately authorized curation, reconcile the two RO relations with
+    the material-actor and measured-abundance claims, preserving the qualified ecological
+    associations and valid source evidence.
+  finding_ids:
+  - relation-semantics
+  target_ids:
+  - traitmech:000050
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Verify external relation meaning and endpoint roles rather than relying on local
+    type permissiveness.
+  - Reconcile source-specific and connector writer replay expectations.
+  - Run focused validation, relevant relation/graph audits and writer tests, then
+    just qc; append native curation history and regenerate affected artifacts.
+- action_id: align-example
+  description: Reconcile the F113 example with current taxonomic identity while preserving
+    its historical source name, or supply an independently verified soil example supporting
+    current taxon294.
+  finding_ids:
+  - F113-current-taxon
+  target_ids:
+  - traitmech:000050
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The example identifier, source organism/strain and evidence note refer to the
+    same entity.
+  - Check current taxonomy and retain an explicit historical-name explanation where
+    needed.
+  - Run focused strict validation and relevant product/history checks, then just qc.
+- action_id: resolve-context-types
+  description: Choose a scientifically appropriate existing representation for the
+    three ecological contexts, or propose a deliberate vocabulary extension if the
+    current enum lacks one; reconcile the connector writer.
+  finding_ids:
+  - state-vocabulary-scope
+  target_ids:
+  - traitmech:000050
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: src/traitmech/schema/traitmech.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Document why the selected type’s definition fits each node.
+  - Do not relabel the concepts as cellular states merely to fit the enum.
+  - Run applicable schema/record/writer checks and just qc after any authorized change.
+- action_id: correct-locator
+  description: Correct the edge2 source-location note and its maintained writer copies
+    while preserving the verified snippet and biological association.
+  finding_ids:
+  - growth-quote-locator
+  target_ids:
+  - traitmech:000050
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/review_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/connect_soil_dwelling_graph_183.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/repair_pr664_adversarial_review.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The note identifies the Introduction results-summary paragraph.
+  - Writer replay and source-snippet checks remain consistent; record the correction
+    through native history.
+- action_id: link-acceptance
+  description: Locate and link existing human scientific acceptance or obtain it through
+    the established process; preserve AI history and reassess status if acceptance
+    remains unavailable.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000050
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/soil_dwelling.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - A human acceptance reference identifies this record/revision and scientific scope.
+  - Automated validation is not treated as human sign-off.
+limitations:
+- Martiny was inspected through its abstract; Piton through abstract and publisher
+  preview. The apparent PDF response was HTML, not full article access. No absence
+  of support is inferred from inaccessible sections.
+- The directly linked critique had relevant body text available; the reply was preview-only.
+  This bounded exchange was inspected without reanalysis or an exhaustive subsequent-literature
+  audit. The contested genome-size/axis interpretation remains explicit.
+- Eight cited sources had relevant full-text passages inspected, not every section
+  or all underlying primary experiments. Exact snippets establish source fidelity,
+  not independent replication.
+- The historical F113 paper was inspected for source identity and habitat attribution
+  only; host-interaction mechanisms were not investigated.
+- Community gene abundance/prevalence, potential growth and statistical genomic axes
+  are distinct measurements. Most current descriptions preserve these distinctions;
+  the RO heat edge remains a material semantic mismatch.
+- Official expression-source searches were bounded to three terms, three datasets
+  and20 results per query; three selected module summaries were inspected. No specific
+  record gene/protein join or causal interpretation was made.
+- The structured-source runner was unavailable in a recent bounded local search, reused
+  with its original timestamp; official API fallback completed. Search or dataset
+  nonmatches are not negative biological evidence.
+- External relation semantics and native enum descriptions are distinct from passing
+  permissive schema checks. No failed formal reasoner result is claimed.
+- Human acceptance was not located in inspected target-specific local fields; private/remote
+  approval was not searched.
+- No scientific record, mapping, schema, writer, history, status or generated page
+  was modified by this review.
+notes:
+- Field paths use zero-based indices.
+- The methodology dispute is retained as an assessment limitation, without adding
+  a defect solely because the record cites a debated framework and already attributes
+  the associations.
+- The STATE finding proposes a vocabulary decision rather than an unverified replacement
+  type.
+tags:
+- record-review
+- soil-dwelling
+- ecology
+- needs-curation
