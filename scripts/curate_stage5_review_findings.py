@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–10 #2002).
+"""Curate Stage 5 grouped review remediation (Cycle 1 #1981, Cycle 2 #1995, Cycle 3–11 #2002).
 
 Resolves the 4 actionable open findings from the Cycle 1 Stage 4 corpus-wide
 record and cohort review (`reviews/workflow/mech-goal-sequence-20261019/cycle-000001/stage-04/revision-0001/evidence.yaml`,
@@ -27,9 +27,12 @@ Cycle 8 Stage 4 corpus-wide record and cohort review
 tracked in GitHub issue #2002), the 9 actionable open findings from the
 Cycle 9 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000009/stage-04/revision-0001/evidence.yaml`,
-tracked in GitHub issue #2002), and the 14 actionable open findings from the
+tracked in GitHub issue #2002), the 14 actionable open findings from the
 Cycle 10 Stage 4 corpus-wide record and cohort review
 (`reviews/workflow/mech-goal-sequence-20261019/cycle-000010/stage-04/revision-0001/evidence.yaml`,
+tracked in GitHub issue #2002), and the 12 actionable open findings from the
+Cycle 11 Stage 4 corpus-wide record and cohort review
+(`reviews/workflow/mech-goal-sequence-20261019/cycle-000011/stage-04/revision-0001/evidence.yaml`,
 tracked in GitHub issue #2002):
 - `F-DEF-SRC-CYANOPHYCIN-001`..`004` (Cycle 1 #1981, 4 records)
 - `F-DEF-SRC-CARBON-FIXATION-010`..`015` (Cycle 2 #1995, 6 records)
@@ -41,6 +44,7 @@ tracked in GitHub issue #2002):
 - `F-C8S4-DEF-SRC-001`..`012` (Cycle 8 #2002, 12 records)
 - `F-C9S4-DEF-SRC-001`..`009` (Cycle 9 #2002, 9 records)
 - `F-C10S4-DEF-SRC-001`..`014` (Cycle 10 #2002, 14 records)
+- `F-C11S4-DEF-SRC-001`..`012` (Cycle 11 #2002, 12 records)
 
 Default is dry-run; pass `--apply` to write changes via `write_validated_trait`
 and `record_curation_event`.
@@ -53,6 +57,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import copy
 import sys
 from pathlib import Path
@@ -71,6 +76,7 @@ from traitmech.validation.write_validated import (  # noqa: E402
 )
 
 DO_NOT_WORK_PATH = REPO_ROOT / "DO_NOT_WORK.md"
+EVIDENCE_SNIPPET_BASELINE_REL = Path("conf/evidence_snippet_baseline.tsv")
 CURATOR = "claude"
 TIMESTAMP = "2026-10-22T05:20:00Z"
 CYCLE2_TIMESTAMP = "2026-10-23T16:05:00Z"
@@ -82,6 +88,7 @@ CYCLE7_TIMESTAMP = "2026-10-30T22:10:00Z"
 CYCLE8_TIMESTAMP = "2026-10-31T10:45:00Z"
 CYCLE9_TIMESTAMP = "2026-11-04T11:10:00Z"
 CYCLE10_TIMESTAMP = "2026-11-04T23:20:00Z"
+CYCLE11_TIMESTAMP = "2026-11-15T04:10:30Z"
 ACTION = "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE"
 
 REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
@@ -3182,6 +3189,379 @@ REMEDIATION_SPECS: dict[str, dict[str, Any]] = {
             "group G-C10S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
         ),
     },
+    "data/traits/genomics/codon_usage_bias.yaml": {
+        "identifier": "traitmech:000096",
+        "finding_id": "F-C11S4-DEF-SRC-001",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrg2899",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrg2899",
+            "snippet": (
+                "Despite their name, synonymous mutations have significant "
+                "consequences for cellular processes in all taxa. As a result, an "
+                "understanding of codon bias is central to fields as diverse as "
+                "molecular evolution and biotechnology."
+            ),
+            "notes": (
+                "Plotkin & Kudla review synonymous codon bias and its causes and "
+                "cellular consequences."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrg2899 "
+            "(Plotkin & Kudla 2011 Europe PMC abstract, ACT-C11S4-DEF-SRC-001) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-001 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/crispr_cas_system.yaml": {
+        "identifier": "traitmech:000094",
+        "finding_id": "F-C11S4-DEF-SRC-002",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1038/s41579-019-0299-x",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/s41579-019-0299-x",
+            "snippet": (
+                "The number and diversity of known CRISPR-Cas systems have "
+                "substantially increased in recent years. Here, we provide an "
+                "updated evolutionary classification of CRISPR-Cas systems and "
+                "cas genes, with an emphasis on the major developments that have "
+                "occurred since the publication of the latest classification, in "
+                "2015. The new classification includes 2 classes, 6 types and 33 "
+                "subtypes, compared with 5 types and 16 subtypes in 2015."
+            ),
+            "notes": (
+                "Makarova et al. present an updated evolutionary classification "
+                "of CRISPR-Cas systems into two classes, six types, and 33 "
+                "subtypes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1038/s41579-019-0299-x (Makarova et al. 2020 Europe PMC "
+            "abstract, ACT-C11S4-DEF-SRC-002) to record-level evidence[0] to "
+            "match definition_source (Cycle 11 Stage 5 remediation of "
+            "F-C11S4-DEF-SRC-002 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/gc_skew.yaml": {
+        "identifier": "traitmech:000097",
+        "finding_id": "F-C11S4-DEF-SRC-003",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1093/oxfordjournals.molbev.a025626",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1093/oxfordjournals.molbev.a025626",
+            "snippet": (
+                "There was a departure from intrastrand equifrequency between A "
+                "and T or between C and G, showing that the substitution patterns "
+                "of the two strands of DNA were asymmetric. The positions of the "
+                "boundaries between these compartments were found to coincide "
+                "with the origin and terminus of chromosome replication, and "
+                "there were more A-T and C-G deviations in intergenic regions and "
+                "third codon positions, suggesting that a mutational bias was "
+                "responsible for this asymmetry."
+            ),
+            "notes": (
+                "Lobry shows that prokaryotic chromosome strands can depart from "
+                "A/T and C/G equifrequency around the replication origin and "
+                "terminus."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1093/oxfordjournals.molbev.a025626 (Lobry 1996 Europe PMC "
+            "abstract, ACT-C11S4-DEF-SRC-003) to record-level evidence[0] to "
+            "match definition_source (Cycle 11 Stage 5 remediation of "
+            "F-C11S4-DEF-SRC-003 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/genome_size.yaml": {
+        "identifier": "traitmech:000098",
+        "finding_id": "F-C11S4-DEF-SRC-004",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro3331",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro3331",
+            "snippet": (
+                "Bacterial genomes show substantial variations in size. The "
+                "smallest bacterial genomes are those of endocellular symbionts "
+                "of eukaryotic hosts, which have undergone massive genome "
+                "reduction and show patterns that are consistent with the "
+                "degenerative processes that are predicted to occur in species "
+                "with small effective population sizes. However, similar genome "
+                "reduction is found in some free-living marine cyanobacteria that "
+                "are characterized by extremely large populations."
+            ),
+            "notes": (
+                "Batut et al. review the evolutionary processes that drive large "
+                "bacterial genome-size variation and genome reduction."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro3331 "
+            "(Batut et al. 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-004) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-004 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/mobile_genetic_element.yaml": {
+        "identifier": "traitmech:000089",
+        "finding_id": "F-C11S4-DEF-SRC-005",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1038/nrmicro1235",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1038/nrmicro1235",
+            "snippet": (
+                "Horizontal genomics is a new field in prokaryotic biology that "
+                "is focused on the analysis of DNA sequences in prokaryotic "
+                "chromosomes that seem to have originated from other prokaryotes "
+                "or eukaryotes. However, it is equally important to understand "
+                "the agents that effect DNA movement: plasmids, bacteriophages "
+                "and transposons."
+            ),
+            "notes": (
+                "Frost et al. identify plasmids, bacteriophages, and transposons "
+                "as the principal agents of horizontal DNA movement in "
+                "prokaryotes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1038/nrmicro1235 "
+            "(Frost et al. 2005 Europe PMC abstract, ACT-C11S4-DEF-SRC-005) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-005 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/pangenome_openness.yaml": {
+        "identifier": "traitmech:000102",
+        "finding_id": "F-C11S4-DEF-SRC-006",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1073/pnas.0506758102",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1073/pnas.0506758102",
+            "snippet": (
+                "Analysis of these genomes and those available in databases "
+                "showed that the S. agalactiae species can be described by a "
+                "pan-genome consisting of a core genome shared by all isolates, "
+                "accounting for approximately 80% of any single genome, plus a "
+                "dispensable genome consisting of partially shared and "
+                "strain-specific genes. Mathematical extrapolation of the data "
+                "suggests that the gene reservoir available for inclusion in the "
+                "S. agalactiae pan-genome is vast and that unique genes will "
+                "continue to be identified even after sequencing hundreds of "
+                "genomes."
+            ),
+            "notes": (
+                "Tettelin et al. introduce an open Streptococcus agalactiae "
+                "pan-genome whose accessory gene reservoir remains unsaturated "
+                "as genomes are sampled."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1073/pnas.0506758102 (Tettelin et al. 2005 Europe PMC "
+            "abstract, ACT-C11S4-DEF-SRC-006) to record-level evidence[0] to "
+            "match definition_source (Cycle 11 Stage 5 remediation of "
+            "F-C11S4-DEF-SRC-006 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/plasmid_carriage.yaml": {
+        "identifier": "traitmech:000090",
+        "finding_id": "F-C11S4-DEF-SRC-007",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1128/MMBR.00020-10",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/MMBR.00020-10",
+            "snippet": (
+                "Plasmids are key vectors of horizontal gene transfer and "
+                "essential genetic engineering tools. They code for genes "
+                "involved in many aspects of microbial biology, including "
+                "detoxication, virulence, ecological interactions, and antibiotic "
+                "resistance."
+            ),
+            "notes": (
+                "Smillie et al. review plasmids as vectors of horizontal gene "
+                "transfer that carry ecologically important accessory genes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/MMBR.00020-10 "
+            "(Smillie et al. 2010 Europe PMC abstract, ACT-C11S4-DEF-SRC-007) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-007 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/ploidy.yaml": {
+        "identifier": "traitmech:000100",
+        "finding_id": "F-C11S4-DEF-SRC-008",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1159/000368855",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1159/000368855",
+            "snippet": (
+                "During recent years, it has become clear that many species of "
+                "archaea and bacteria are polyploid and contain more than 10 "
+                "copies of their chromosome."
+            ),
+            "notes": (
+                "Soppa reviews archaeal and bacterial polyploidy, including "
+                "species with more than 10 chromosome copies."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1159/000368855 "
+            "(Soppa 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-008) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-008 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/prophage.yaml": {
+        "identifier": "traitmech:000091",
+        "finding_id": "F-C11S4-DEF-SRC-009",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1128/MMBR.67.2.238-276.2003",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/MMBR.67.2.238-276.2003",
+            "snippet": (
+                "The majority of the bacterial genome sequences deposited in the "
+                "National Center for Biotechnology Information database contain "
+                "prophage sequences. Analysis of the prophages suggested that "
+                "after being integrated into bacterial genomes, they undergo a "
+                "complex decay process consisting of inactivating point "
+                "mutations, genome rearrangements, modular exchanges, invasion "
+                "by further mobile DNA elements, and massive DNA deletion."
+            ),
+            "notes": (
+                "Canchaya et al. review prophage integration into bacterial "
+                "genomes and subsequent mutational decay and rearrangement."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1128/MMBR.67.2.238-276.2003 (Canchaya et al. 2003 Europe "
+            "PMC abstract, ACT-C11S4-DEF-SRC-009) to record-level evidence[0] "
+            "to match definition_source (Cycle 11 Stage 5 remediation of "
+            "F-C11S4-DEF-SRC-009 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/restriction_modification_system.yaml": {
+        "identifier": "traitmech:000095",
+        "finding_id": "F-C11S4-DEF-SRC-010",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1128/MMBR.00044-12",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/MMBR.00044-12",
+            "snippet": (
+                "Restriction-modification (R-M) systems are ubiquitous and are "
+                "often considered primitive immune systems in bacteria. Their "
+                "diversity and prevalence across the prokaryotic kingdom are an "
+                "indication of their success as a defense mechanism against "
+                "invading genomes."
+            ),
+            "notes": (
+                "Vasu & Nagaraja review the prevalence, diversity, and defensive "
+                "role of bacterial restriction-modification systems."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1128/MMBR.00044-12 "
+            "(Vasu & Nagaraja 2013 Europe PMC abstract, ACT-C11S4-DEF-SRC-010) "
+            "to record-level evidence[0] to match definition_source (Cycle 11 "
+            "Stage 5 remediation of F-C11S4-DEF-SRC-010 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/rrna_operon_copy_number.yaml": {
+        "identifier": "traitmech:000101",
+        "finding_id": "F-C11S4-DEF-SRC-011",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1128/AEM.66.4.1328-1333.2000",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000",
+            "snippet": (
+                "Although natural selection appears to favor the elimination of "
+                "gene redundancy in prokaryotes, multiple copies of each "
+                "rRNA-encoding gene are common on bacterial chromosomes. Despite "
+                "this conspicuous deviation from single-copy genes, no phenotype "
+                "has been consistently associated with rRNA gene copy number. We "
+                "found that the number of rRNA genes correlates with the rate at "
+                "which phylogenetically diverse bacteria respond to resource "
+                "availability."
+            ),
+            "notes": (
+                "Klappenbach, Dunbar & Schmidt link bacterial rRNA operon copy "
+                "number with ecological response to resource availability."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from "
+            "DOI:10.1128/AEM.66.4.1328-1333.2000 (Klappenbach, Dunbar & Schmidt "
+            "2000 Europe PMC abstract, ACT-C11S4-DEF-SRC-011) to record-level "
+            "evidence[0] to match definition_source (Cycle 11 Stage 5 "
+            "remediation of F-C11S4-DEF-SRC-011 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
+    "data/traits/genomics/transposable_element.yaml": {
+        "identifier": "traitmech:000092",
+        "finding_id": "F-C11S4-DEF-SRC-012",
+        "timestamp": CYCLE11_TIMESTAMP,
+        "definition_source": "DOI:10.1111/1574-6976.12067",
+        "baseline_locator": "evidence[0]",
+        "baseline_defect": "MISSING_SNIPPET",
+        "evidence_entry": {
+            "reference": "DOI:10.1111/1574-6976.12067",
+            "snippet": (
+                "Insertion sequences (ISs), arguably the smallest and most "
+                "numerous autonomous transposable elements (TEs), are important "
+                "players in shaping their host genomes."
+            ),
+            "notes": (
+                "Siguier, Gourbeyre & Chandler review insertion sequences as "
+                "small autonomous transposable elements that shape prokaryotic "
+                "genomes."
+            ),
+        },
+        "changes": (
+            "Added verified verbatim snippet from DOI:10.1111/1574-6976.12067 "
+            "(Siguier, Gourbeyre & Chandler 2014 Europe PMC abstract, "
+            "ACT-C11S4-DEF-SRC-012) to record-level evidence[0] to match "
+            "definition_source (Cycle 11 Stage 5 remediation of "
+            "F-C11S4-DEF-SRC-012 in group "
+            "G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002)."
+        ),
+    },
 }
 
 
@@ -3255,12 +3635,70 @@ def apply_remediation_to_doc(doc: dict[str, Any], spec: dict[str, Any]) -> bool:
     return changed
 
 
+def prune_evidence_snippet_baseline(
+    repo_root: Path = REPO_ROOT,
+    *,
+    apply: bool = False,
+) -> int:
+    """Remove Cycle 11 resolved record-level rows from the evidence snippet baseline."""
+    target_keys = {
+        (rel_path, str(spec["baseline_locator"]), str(spec["baseline_defect"]))
+        for rel_path, spec in REMEDIATION_SPECS.items()
+        if "baseline_locator" in spec
+    }
+    if not target_keys:
+        return 0
+
+    baseline_path = repo_root / EVIDENCE_SNIPPET_BASELINE_REL
+    with baseline_path.open(encoding="utf-8", newline="") as stream:
+        reader = csv.DictReader(stream, delimiter="\t")
+        fieldnames = reader.fieldnames
+        if fieldnames is None:
+            raise ValueError(f"Missing TSV header in {baseline_path}")
+        required_fields = {"file", "locator", "defect"}
+        missing_fields = required_fields.difference(fieldnames)
+        if missing_fields:
+            raise ValueError(
+                f"Missing required TSV columns in {baseline_path}: "
+                f"{sorted(missing_fields)}"
+            )
+        rows = list(reader)
+
+    kept_rows: list[dict[str, str]] = []
+    removed_keys: list[tuple[str, str, str]] = []
+    for row in rows:
+        key = (row["file"], row["locator"], row["defect"])
+        if key in target_keys:
+            removed_keys.append(key)
+        else:
+            kept_rows.append(row)
+
+    if len(removed_keys) != len(set(removed_keys)):
+        duplicates = sorted(
+            key for key in set(removed_keys) if removed_keys.count(key) > 1
+        )
+        raise ValueError(f"Duplicate baseline rows for Cycle 11 targets: {duplicates}")
+
+    if apply and removed_keys:
+        with baseline_path.open("w", encoding="utf-8", newline="") as stream:
+            writer = csv.DictWriter(
+                stream,
+                fieldnames=fieldnames,
+                delimiter="\t",
+                lineterminator="\n",
+            )
+            writer.writeheader()
+            writer.writerows(kept_rows)
+
+    return len(removed_keys)
+
+
 def process_all(
     repo_root: Path = REPO_ROOT,
     *,
     apply: bool = False,
 ) -> tuple[int, int]:
-    """Process all 115 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
+    """Process all 127 Stage 5 remediation targets. Returns (findings_resolved, files_updated)."""
     excluded = load_do_not_work(repo_root / "DO_NOT_WORK.md")
     findings_resolved = 0
     files_updated = 0
@@ -3294,8 +3732,12 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
     resolved, updated = process_all(apply=args.apply)
+    baseline_pruned = prune_evidence_snippet_baseline(apply=args.apply)
     mode = "APPLIED" if args.apply else "DRY-RUN"
-    print(f"[{mode}] Stage 4 open findings resolved: {resolved}; files updated: {updated}")
+    print(
+        f"[{mode}] Stage 4 open findings resolved: {resolved}; "
+        f"files updated: {updated}; baseline rows pruned: {baseline_pruned}"
+    )
     return 0
 
 

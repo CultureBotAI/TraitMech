@@ -15,7 +15,11 @@ synonyms:
   source: DOI:10.1038/nrg2899
 evidence:
 - reference: DOI:10.1038/nrg2899
-  notes: Plotkin & Kudla review the causes and consequences of synonymous codon bias.
+  snippet: Despite their name, synonymous mutations have significant consequences
+    for cellular processes in all taxa. As a result, an understanding of codon bias
+    is central to fields as diverse as molecular evolution and biotechnology.
+  notes: Plotkin & Kudla review synonymous codon bias and its causes and cellular
+    consequences.
 - reference: DOI:10.1146/annurev.genet.42.110807.091442
   notes: Hershberg & Petrov review selection on codon bias across genomes.
 canonical_examples:
@@ -161,4 +165,12 @@ curation_history:
     tranche of 2026-08-24/25, which shipped without a per-record event. In this record
     the tranche: set graph scope codon_bias_translation_efficiency=NONMECHANISTIC
     with scope_notes.'
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrg2899 (Plotkin & Kudla
+    2011 Europe PMC abstract, ACT-C11S4-DEF-SRC-001) to record-level evidence[0] to
+    match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-001 in
+    group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true

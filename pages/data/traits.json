@@ -69590,7 +69590,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrg2899",
-        "notes": "Plotkin & Kudla review the causes and consequences of synonymous codon bias."
+        "snippet": "Despite their name, synonymous mutations have significant consequences for cellular processes in all taxa. As a result, an understanding of codon bias is central to fields as diverse as molecular evolution and biotechnology.",
+        "notes": "Plotkin & Kudla review synonymous codon bias and its causes and cellular consequences."
       },
       {
         "reference": "DOI:10.1146/annurev.genet.42.110807.091442",
@@ -69779,6 +69780,13 @@
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope codon_bias_translation_efficiency=NONMECHANISTIC with scope_notes.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrg2899 (Plotkin & Kudla 2011 Europe PMC abstract, ACT-C11S4-DEF-SRC-001) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-001 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -69803,7 +69811,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/s41579-019-0299-x",
-        "notes": "Makarova et al. present an evolutionary classification of CRISPR-Cas systems into two classes, six types, and many subtypes."
+        "snippet": "The number and diversity of known CRISPR-Cas systems have substantially increased in recent years. Here, we provide an updated evolutionary classification of CRISPR-Cas systems and cas genes, with an emphasis on the major developments that have occurred since the publication of the latest classification, in 2015. The new classification includes 2 classes, 6 types and 33 subtypes, compared with 5 types and 16 subtypes in 2015.",
+        "notes": "Makarova et al. present an updated evolutionary classification of CRISPR-Cas systems into two classes, six types, and 33 subtypes."
       },
       {
         "reference": "DOI:10.1016/j.molcel.2014.03.011",
@@ -70150,6 +70159,13 @@
         "curator": "claude",
         "action": "CURATE_PROTEIN_TAXON_EXAMPLE",
         "changes": "Added reviewed E. coli K-12 subunit protein_examples UniProtKB:Q46896 (Cas1/ygbT, v154) and UniProtKB:P45956 (Cas2/ygbF, v145) on cas1_cas2_complex (DOI:10.1038/nsmb.2820), updated scope_notes for component-level subunit scope, and refreshed UniProtKB:Q99ZW2 entry_version 147 -> 148 on cas9_effector.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/s41579-019-0299-x (Makarova et al. 2020 Europe PMC abstract, ACT-C11S4-DEF-SRC-002) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-002 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -97751,7 +97767,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1093/oxfordjournals.molbev.a025626",
-        "notes": "Lobry first described asymmetric substitution patterns between the two DNA strands of bacteria, the basis of GC skew that marks replication boundaries."
+        "snippet": "There was a departure from intrastrand equifrequency between A and T or between C and G, showing that the substitution patterns of the two strands of DNA were asymmetric. The positions of the boundaries between these compartments were found to coincide with the origin and terminus of chromosome replication, and there were more A-T and C-G deviations in intergenic regions and third codon positions, suggesting that a mutational bias was responsible for this asymmetry.",
+        "notes": "Lobry shows that prokaryotic chromosome strands can depart from A/T and C/G equifrequency around the replication origin and terminus."
       },
       {
         "reference": "DOI:10.1016/S0378-1119(99)00297-8",
@@ -97981,6 +97998,13 @@
         "action": "ADD_CANONICAL_EXAMPLES",
         "changes": "Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Escherichia coli (NCBITaxon:562; PMID:9278503). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1093/oxfordjournals.molbev.a025626 (Lobry 1996 Europe PMC abstract, ACT-C11S4-DEF-SRC-003) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-003 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -98199,7 +98223,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro3331",
-        "notes": "Batut et al. review reductive genome evolution, linking genome size to population size and lifestyle across prokaryotes."
+        "snippet": "Bacterial genomes show substantial variations in size. The smallest bacterial genomes are those of endocellular symbionts of eukaryotic hosts, which have undergone massive genome reduction and show patterns that are consistent with the degenerative processes that are predicted to occur in species with small effective population sizes. However, similar genome reduction is found in some free-living marine cyanobacteria that are characterized by extremely large populations.",
+        "notes": "Batut et al. review the evolutionary processes that drive large bacterial genome-size variation and genome reduction."
       },
       {
         "reference": "DOI:10.1038/ismej.2014.60",
@@ -98447,6 +98472,13 @@
         "curator": "codex",
         "action": "ADD_CANONICAL_EXAMPLES",
         "changes": "Resolved issue #444 after the #591 source/bin policy with 1 direct source-backed canonical example(s): Mycoplasmoides genitalium G37 (NCBITaxon:243273; DOI:10.1126/science.270.5235.397). The note retains the measured value or scopes broad-class examples to the cited branch; no paid research was used.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro3331 (Batut et al. 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-004) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-004 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -108097,7 +108129,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1038/nrmicro1235",
-        "notes": "Frost et al. review mobile genetic elements as the agents of horizontal gene transfer and genome plasticity; parent of the plasmid, prophage, transposable- element, and genomic-island sub-variants."
+        "snippet": "Horizontal genomics is a new field in prokaryotic biology that is focused on the analysis of DNA sequences in prokaryotic chromosomes that seem to have originated from other prokaryotes or eukaryotes. However, it is equally important to understand the agents that effect DNA movement: plasmids, bacteriophages and transposons.",
+        "notes": "Frost et al. identify plasmids, bacteriophages, and transposons as the principal agents of horizontal DNA movement in prokaryotes."
       },
       {
         "reference": "DOI:10.1111/1574-6976.12067",
@@ -108467,6 +108500,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope mge_horizontal_gene_transfer=NONMECHANISTIC with scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (relaxase, coupling_protein, integrase_excisionase, integron_integrase).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1038/nrmicro1235 (Frost et al. 2005 Europe PMC abstract, ACT-C11S4-DEF-SRC-005) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-005 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -111755,7 +111795,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1073/pnas.0506758102",
-        "notes": "Tettelin et al. introduced the microbial pan-genome concept, distinguishing core and dispensable genes and open versus closed pangenomes."
+        "snippet": "Analysis of these genomes and those available in databases showed that the S. agalactiae species can be described by a pan-genome consisting of a core genome shared by all isolates, accounting for approximately 80% of any single genome, plus a dispensable genome consisting of partially shared and strain-specific genes. Mathematical extrapolation of the data suggests that the gene reservoir available for inclusion in the S. agalactiae pan-genome is vast and that unique genes will continue to be identified even after sequencing hundreds of genomes.",
+        "notes": "Tettelin et al. introduce an open Streptococcus agalactiae pan-genome whose accessory gene reservoir remains unsaturated as genomes are sampled."
       },
       {
         "reference": "DOI:10.1038/nmicrobiol.2017.40",
@@ -112004,6 +112045,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope pangenome_openness_hgt=NONMECHANISTIC with scope_notes; retyped 2 node(s) (plasmid->GENETIC_ELEMENT, prophage->GENETIC_ELEMENT).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1073/pnas.0506758102 (Tettelin et al. 2005 Europe PMC abstract, ACT-C11S4-DEF-SRC-006) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-006 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -119280,7 +119328,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/MMBR.00020-10",
-        "notes": "Smillie et al. review plasmid mobility, classifying conjugative and mobilizable plasmids as key vectors of horizontal gene transfer."
+        "snippet": "Plasmids are key vectors of horizontal gene transfer and essential genetic engineering tools. They code for genes involved in many aspects of microbial biology, including detoxication, virulence, ecological interactions, and antibiotic resistance.",
+        "notes": "Smillie et al. review plasmids as vectors of horizontal gene transfer that carry ecologically important accessory genes."
       },
       {
         "reference": "DOI:10.1038/nrmicro1235",
@@ -119550,6 +119599,13 @@
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope plasmid_conjugation_hgt=NONMECHANISTIC with scope_notes; marked 3 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes (ta_system, plasmid_methylase, anti_restriction_proteins); added 1 node(s) and 1 edge(s) (anti_restriction_proteins); removed 1 node(s) and 1 edge(s) together with their evidence (anti_restriction_genes).",
         "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/MMBR.00020-10 (Smillie et al. 2010 Europe PMC abstract, ACT-C11S4-DEF-SRC-007) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-007 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
+        "llm_assisted": true
       }
     ]
   },
@@ -119577,7 +119633,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1159/000368855",
-        "notes": "Soppa reviews polyploidy in archaea and bacteria and its links to desiccation resistance, giant cell size, and long-term survival."
+        "snippet": "During recent years, it has become clear that many species of archaea and bacteria are polyploid and contain more than 10 copies of their chromosome.",
+        "notes": "Soppa reviews archaeal and bacterial polyploidy, including species with more than 10 chromosome copies."
       },
       {
         "reference": "DOI:10.1073/pnas.0707522105",
@@ -119800,6 +119857,13 @@
         "curator": "codex",
         "action": "ADD_EXACT_ONTOLOGY_MATCH",
         "changes": "Ontology exact-match review (2026-08-25): approved exact xref(s): PATO:0001374. Evidence is predicate-scoped in the versioned ontology snapshots; OAK cross-checked direct data, and OLS4 spot-checked release deltas and disputed hits.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1159/000368855 (Soppa 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-008) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-008 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -120150,7 +120214,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/MMBR.67.2.238-276.2003",
-        "notes": "Canchaya et al. review prophage genomics, showing most sequenced bacterial genomes carry prophage sequences."
+        "snippet": "The majority of the bacterial genome sequences deposited in the National Center for Biotechnology Information database contain prophage sequences. Analysis of the prophages suggested that after being integrated into bacterial genomes, they undergo a complex decay process consisting of inactivating point mutations, genome rearrangements, modular exchanges, invasion by further mobile DNA elements, and massive DNA deletion.",
+        "notes": "Canchaya et al. review prophage integration into bacterial genomes and subsequent mutational decay and rearrangement."
       },
       {
         "reference": "DOI:10.1038/ismej.2017.16",
@@ -120452,6 +120517,13 @@
         "curator": "codex",
         "action": "GROUND_CAUSAL_NODE",
         "changes": "Grounded the RecA-LexA SOS-response biological-process node to GO:0009432 while adding the organism-level traitmech:000207 SOS response record.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/MMBR.67.2.238-276.2003 (Canchaya et al. 2003 Europe PMC abstract, ACT-C11S4-DEF-SRC-009) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-009 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -122390,7 +122462,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/MMBR.00044-12",
-        "notes": "Vasu & Nagaraja review restriction-modification systems and their defense and additional cellular functions."
+        "snippet": "Restriction-modification (R-M) systems are ubiquitous and are often considered primitive immune systems in bacteria. Their diversity and prevalence across the prokaryotic kingdom are an indication of their success as a defense mechanism against invading genomes.",
+        "notes": "Vasu & Nagaraja review the prevalence, diversity, and defensive role of bacterial restriction-modification systems."
       },
       {
         "reference": "DOI:10.3389/fmicb.2015.00528",
@@ -122678,6 +122751,13 @@
         "curator": "claude",
         "action": "REFRESH_UNIPROT_ENTRY_VERSION",
         "changes": "Refreshed UniProtKB entry_version against live UniProt REST on 2026-10-22: UniProtKB:P44413 (124 -> 125 on restriction_endonuclease).",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/MMBR.00044-12 (Vasu & Nagaraja 2013 Europe PMC abstract, ACT-C11S4-DEF-SRC-010) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-010 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -124061,7 +124141,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1128/AEM.66.4.1328-1333.2000",
-        "notes": "Klappenbach, Dunbar & Schmidt show rRNA operon copy number reflects ecological strategies, with fast responders carrying more copies."
+        "snippet": "Although natural selection appears to favor the elimination of gene redundancy in prokaryotes, multiple copies of each rRNA-encoding gene are common on bacterial chromosomes. Despite this conspicuous deviation from single-copy genes, no phenotype has been consistently associated with rRNA gene copy number. We found that the number of rRNA genes correlates with the rate at which phylogenetically diverse bacteria respond to resource availability.",
+        "notes": "Klappenbach, Dunbar & Schmidt link bacterial rRNA operon copy number with ecological response to resource availability."
       },
       {
         "reference": "DOI:10.1038/nmicrobiol.2016.160",
@@ -124263,6 +124344,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope rrn_copy_growth_rate=NONMECHANISTIC with scope_notes.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1128/AEM.66.4.1328-1333.2000 (Klappenbach, Dunbar & Schmidt 2000 Europe PMC abstract, ACT-C11S4-DEF-SRC-011) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-011 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]
@@ -133751,7 +133839,8 @@
     "evidence": [
       {
         "reference": "DOI:10.1111/1574-6976.12067",
-        "notes": "Siguier, Gourbeyre & Chandler review bacterial insertion sequences and their genomic impact and diversity."
+        "snippet": "Insertion sequences (ISs), arguably the smallest and most numerous autonomous transposable elements (TEs), are important players in shaping their host genomes.",
+        "notes": "Siguier, Gourbeyre & Chandler review insertion sequences as small autonomous transposable elements that shape prokaryotic genomes."
       },
       {
         "reference": "DOI:10.1038/nrmicro1235",
@@ -133981,6 +134070,13 @@
         "curator": "claude",
         "action": "REVIEW_GRAPH_PROTEIN_TAXON",
         "changes": "Backfilled provenance (review issue 517) for the codex protein-taxon review tranche of 2026-08-24/25, which shipped without a per-record event. In this record the tranche: set graph scope te_transposition_rearrangement=NONMECHANISTIC with scope_notes.",
+        "llm_assisted": true
+      },
+      {
+        "timestamp": "2026-11-15T04:10:30Z",
+        "curator": "claude",
+        "action": "ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE",
+        "changes": "Added verified verbatim snippet from DOI:10.1111/1574-6976.12067 (Siguier, Gourbeyre & Chandler 2014 Europe PMC abstract, ACT-C11S4-DEF-SRC-012) to record-level evidence[0] to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-012 in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).",
         "llm_assisted": true
       }
     ]

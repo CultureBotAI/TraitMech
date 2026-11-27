@@ -15,9 +15,13 @@ synonyms:
   source: DOI:10.1038/nrmicro1235
 evidence:
 - reference: DOI:10.1038/nrmicro1235
-  notes: Frost et al. review mobile genetic elements as the agents of horizontal gene
-    transfer and genome plasticity; parent of the plasmid, prophage, transposable-
-    element, and genomic-island sub-variants.
+  snippet: 'Horizontal genomics is a new field in prokaryotic biology that is focused
+    on the analysis of DNA sequences in prokaryotic chromosomes that seem to have
+    originated from other prokaryotes or eukaryotes. However, it is equally important
+    to understand the agents that effect DNA movement: plasmids, bacteriophages and
+    transposons.'
+  notes: Frost et al. identify plasmids, bacteriophages, and transposons as the principal
+    agents of horizontal DNA movement in prokaryotes.
 - reference: DOI:10.1111/1574-6976.12067
   notes: Siguier, Gourbeyre & Chandler review insertion sequences as a major class
     of mobile genetic elements shaping bacterial genomes.
@@ -314,4 +318,12 @@ curation_history:
     the tranche: set graph scope mge_horizontal_gene_transfer=NONMECHANISTIC with
     scope_notes; marked 4 GENE_OR_PROTEIN node(s) REVIEWED_LABEL_ONLY with grounding_notes
     (relaxase, coupling_protein, integrase_excisionase, integron_integrase).'
+  llm_assisted: true
+- timestamp: '2026-11-15T04:10:30Z'
+  curator: claude
+  action: ADD_RECORD_LEVEL_DEFINITION_SOURCE_EVIDENCE
+  changes: 'Added verified verbatim snippet from DOI:10.1038/nrmicro1235 (Frost et
+    al. 2005 Europe PMC abstract, ACT-C11S4-DEF-SRC-005) to record-level evidence[0]
+    to match definition_source (Cycle 11 Stage 5 remediation of F-C11S4-DEF-SRC-005
+    in group G-C11S4-RECORD-LEVEL-DEFINITION-SOURCE-SNIPPETS, issue #2002).'
   llm_assisted: true
