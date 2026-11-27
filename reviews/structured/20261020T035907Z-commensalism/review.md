@@ -1,0 +1,1256 @@
+# Scientific and source review of commensalism (traitmech:000042)
+
+- Review: 20261020T035907Z-commensalism
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-20T03:47:39Z
+- Finished UTC: 2026-10-20T03:59:07Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+The local identifier, ecological class, broader symbiosis parent and near-neutral definition are defensible. All eleven nodes and ten edges were assessed. Two major findings concern the example’s mismatch with the record’s strict neutrality criterion and three RO endpoint-type conflicts. Three minor findings concern contextual source scope, low-virulence shorthand and the discussion’s interpretation of context dependence. Four active articles were inspected in full text; the McFall-Ngai article was limited to metadata and abstract.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Tenth previously uncovered record in lexicographic path order; exactly one complete record, with parent, sibling, ontology, writer and history inputs as context.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base f25e2af0b38a8303b13f627a9a5c33b36af4b3d2.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| traitmech:000042 | data/traits/ecology/commensalism.yaml | maintained | commensalism |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | traitmech:000042 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | traitmech:000042 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | traitmech:000042 | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| Full-corpus history integrity | passed | True | traitmech:000042 | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| Initial full-product validation | failed | False | traitmech:000042 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | traitmech:000042 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | traitmech:000042 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused LinkML validation | passed | True | traitmech:000042 | The selected record validates. |
+| Focused strict validation | passed | True | traitmech:000042 | One file scanned; zero error rows. |
+| Focused snippet verification | passed | True | traitmech:000042 | Zero snippets and zero references were selected by this checker. Exit zero does not verify the record’s citations; manual source inspection is recorded separately. |
+| Expression-module applicability | not_applicable | False | traitmech:000042 | The target names generic protein families and a species example, but no exact strain, gene accession or expression dataset. No defensible iModulon component claim is made; unavailable shared adapter infrastructure is not negative biological evidence. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: identity, synonym, polarity and term kind
+
+identity: supported. Targets: traitmech:000042.
+
+The complete record denotes one ecological relationship class. The local identifier is justified by an obsolete exact METPO term and an unadopted proposal; neither should be silently substituted.
+
+### Native checklist: definition and nearest source
+
+evidence: supported. Targets: traitmech:000042.
+
+The near-neutral definition is noncircular and consistent with the inspected continuum review. It distinguishes the concept from mutualism and parasitism; operational shorthand elsewhere needs to preserve that distinction.
+
+### Native checklist: strictly broader parent
+
+consistency: supported. Targets: traitmech:000042.
+
+The symbiosis parent is broader, and the sibling records preserve distinct host-effect outcomes. No inverse or correlated relationship is used as a parent.
+
+### Native checklist: category, scope and node representation
+
+representation: supported. Targets: traitmech:000042.
+
+ECOLOGY, CLASS and NONMECHANISTIC are appropriate. The record does not need invented strain-specific protein exemplars or a universal molecular mechanism. The schema permits a cellular-component reading of the matrix node.
+
+### Native checklist: example identity and ecological support
+
+scope: concern. Targets: traitmech:000042.
+
+The species identifier is correct, but the cited review’s broad clinical commensal usage does not establish the strict neutral-fitness relationship asserted by this record. This does not mean the species can never participate in commensalism.
+
+### Native checklist: source identities, placement and quotations
+
+evidence: concern. Targets: traitmech:000042.
+
+All active source identities resolve. Four active full texts were inspected, including an accepted manuscript. The McFall-Ngai abstract is narrower than the edge claim and its full text remains unavailable. The snippet command tested no claims; historical fragments are explicitly non-evidentiary.
+
+### Native checklist: all eleven nodes and all ten edges
+
+graph: concern. Targets: traitmech:000042.
+
+Every endpoint resolves. The contextual evidence is mostly plausible within its source setting, but three RO assignments conflict with endpoint types. Colonization pathways do not themselves determine the host-effect classification. Generic protein-family annotations are allowed under the declared scope.
+
+Zero-based edge ledger: 0, host_colonization/confers/commensalism_trait: explicitly conditional on no host benefit or harm; the local proposal is identifiable, but nearest-source full-text support remains unresolved. 1, trait/associated with/neutral_host_fitness: consistent with Drew’s conceptual continuum; association is not a measured result for every example. 2, secretory_iga/promotes/host_colonization: qualified contextual prose is supported; RO:0002213 requires a process subject, unlike the protein node. 3, mucus_layer/provides resources for/host_colonization: contextual resource claim supported by the accepted review, not proof of neutral host fitness. 4, glycan_binding_proteins/enables/mucin_attachment: compatible material-actor/process semantics and contextual source support. 5, mucin_attachment/enables/host_colonization: contextual support does not cure RO:0002327’s incompatibility with a process subject. 6, eps_production/has output/biofilm_matrix: process-to-output statement supported in the oral-source context. 7, biofilm_matrix/confers/persistence_protection: qualitative contextual statement supported; the ungrounded relation label does not claim an unavailable ontology identity. 8, persistence_protection/promotes/host_colonization: plausible contextual inference, but the quality subject conflicts with RO:0002213. 9, low_virulence/operationalizes/commensalism_trait: follows the cited shorthand but does not by itself exclude a host benefit, and low virulence is not identical to neutrality.
+
+### Native checklist: discussion, references and inference boundary
+
+scope: concern. Targets: traitmech:000042.
+
+The question and node anchor are relevant, and historical irrelevant snippets are correctly disclaimed. The conditional question is not treated as an asserted universal absence claim. The interpretation of a changed effect in another context nevertheless exceeds what it establishes about the original association.
+
+### Native checklist: mapping status, audit history and native checks
+
+provenance: unknown. Targets: traitmech:000042.
+
+Focused schema checks pass and earlier corpus history/product checks retain their real scope and skips. The target records AI-assisted promotion and follow-up events. Human scientific sign-off for REVIEWED is not independently established by those entries or this review.
+
+## Findings
+
+### example-neutrality-scope: The canonical example is not supported at the record’s neutrality criterion
+
+major / open / confirmed; issue key: commensalism-example-neutrality-scope.
+
+The note calls the species an archetypal skin commensal, while the definition requires essentially unchanged host fitness. The cited review uses commensal more broadly and explicitly includes beneficial and harmful contextual outcomes. Thus the citation verifies common skin association, but not the narrower example claim without a stated context or an explicit evidence limitation. This finding does not assert that the record literally claims every strain is neutral, or that the species can never exemplify commensalism.
+
+### ro-endpoint-semantics: Three RO assignments conflict with their subject types
+
+major / open / confirmed; issue key: commensalism-ro-endpoint-semantics.
+
+Edges 2 and 8 apply process-to-process positive regulation to a protein and a quality. Edge 5 applies material-entity enables to a biological process. The record’s node descriptions confirm these meanings; this is not merely a naming mismatch. Mapping-table wildcards and successful shape checks do not override RO declarations.
+
+### contextual-edge-scope: Contextual colonization evidence loses its ecological setting
+
+minor / open / confirmed; issue key: commensalism-contextual-edge-scope.
+
+The graph’s generic wording omits the host-niche limits of the mucosal review and the oral setting of the biofilm review. The latter includes a cariogenic context. These sources can legitimately support contextual colonization statements in a NONMECHANISTIC graph, but they do not independently establish neutrality or a universal route to this trait. The already qualified first edge should be preserved.
+
+### low-virulence-shorthand: Low virulence and no detectable cost are weaker than neutral host effect
+
+minor / open / confirmed; issue key: commensalism-low-virulence-shorthand.
+
+The low_virulence label and edge 9 use shorthand that does not exclude a host benefit; low virulence can also include a nonzero adverse effect. Although the cited review uses no-detectable-cost wording, the record’s own definition and sibling boundary require a near-neutral net host effect. This is a local consistency inference, not a claim that the cited review denies the continuum.
+
+### discussion-context-inference: A context-dependent effect does not invalidate the original classification
+
+minor / open / confirmed; issue key: commensalism-discussion-context-inference.
+
+The discussion correctly asks whether neutrality is evidenced. Its refutation text goes further by treating an effect in a changed context as an artefact requiring reassignment of the original association. The source explicitly allows context-dependent transitions. The appropriate logical conclusion is limited to the changed context; finite nondetection also does not establish universal neutrality.
+
+## Recommended Actions And Acceptance Checks
+
+### bound-example
+
+Qualify or withdraw the example at the strict ecological criterion, retaining the correct species identity.
+
+- Distinguish conventional clinical commensal naming from demonstrated near-neutral host effect.
+- Use only inspected evidence for any narrower context; do not invent a measured example.
+- After authorized curation, run focused validation, strict validation, source checks and applicable qc.
+
+### align-relation-semantics
+
+Reconcile the intended conceptual relation and its identifier while preserving what the evidence actually supports.
+
+- Inspect subject and object meaning against the selected relation’s inherited domain and range.
+- Do not relabel a material entity or quality as a process merely to satisfy a predicate.
+- Run focused strict validation and graph/predicate audits; retain a manual semantic check because permissive mappings can pass incorrect uses.
+
+### preserve-source-context
+
+Make the contextual role and source settings of the illustrative colonization edges explicit.
+
+- Keep the distinction between source-backed colonization and the separately required host-effect classification.
+- Do not extend or complete a pathogen mechanism; the corrective task is evidence scope and wording.
+- Retain source qualification and recheck nearest evidence after any authorized edit.
+
+### clarify-neutrality-wording
+
+Align the shorthand with the record’s near-neutral concept and distinguish it from low virulence.
+
+- Preserve the host-benefit boundary with mutualism and the adverse-effect boundary with parasitism.
+- Avoid claiming universal neutrality from an unspecified nondetection; keep any uncertainty explicit.
+
+### bound-discussion-inference
+
+Revise the discussion’s epistemic conclusion and its maintained writer to preserve context dependence.
+
+- Retain a useful evidence question without asserting that context dependence makes a category biologically unreal.
+- Scope any classification conclusion to the association and conditions supported by evidence.
+- Review only interpretation and provenance; no experimental redesign or pathogen co-infection procedure is proposed.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. Target asserts no pathway context link. |
+| check-validate-history | /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json | context_only | 1276 history records checked, zero invalid links; integrity does not establish scientific correctness or human sign-off. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-commensalism-validate | /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-validate.log; Executed 2026-10-20T03:48:14Z through 2026-10-20T03:48:15Z; metadata commensalism-validate.json | context_only | The selected record validates. |
+| check-commensalism-strict | /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-strict.log; Executed 2026-10-20T03:48:15Z through 2026-10-20T03:48:16Z; metadata commensalism-strict.json | context_only | One file scanned; zero error rows. |
+| check-commensalism-snippets-network | /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-snippets-network.log; Executed 2026-10-20T03:48:15Z through 2026-10-20T03:48:15Z; metadata commensalism-snippets-network.json | context_only | Zero snippets and zero references were selected by this checker. Exit zero does not verify the record’s citations; manual source inspection is recorded separately. |
+| record | data/traits/ecology/commensalism.yaml; Entire record, including eleven nodes, ten edges, one example, one discussion and all history | partial | The complete target is an ecological relationship class with explicit NONMECHANISTIC scope. The first edge already qualifies colonization by the absence of host benefit or harm; it does not assert that colonization alone is sufficient. |
+| identity | data/raw/metpo.owl; All literal values in the complete captured ontology; normalized exact commensalism/commensal search; METPO:1000074; v5 proposal row METPO:1007641 | supports | The exact old term is explicitly obsolete with no replacement in the inspected statements. The proposed new class is absent from the captured ontology and cross-references traitmech:000042 in the proposal. The local fallback is therefore defensible; a proposed ID is not an active exact match. |
+| hierarchy | data/traits/ecology/symbiosis.yaml; Definition and identity; mutualism.yaml and parasitism.yaml definitions; v5 class proposal | supports | The parent includes beneficial, neutral and harmful host associations and is broader than this target. The inspected sibling definitions preserve the host-effect distinction. The related synonym does not assert lexical identity with a species or protein. |
+| model | src/traitmech/schema/traitmech.yaml; CausalNodeTypeEnum; docs/GROUNDING_POLICY.md; mapping and v8 proposal rows | partial | The schema permits a cellular component or localization, so the matrix label alone is not a demonstrated node-type error. Generic protein-family nodes with documented REVIEWED_LABEL_ONLY status are permitted in NONMECHANISTIC scope. The confers CURIE is a locally documented proposal; permissive mapping gates do not remove external ontology semantics. |
+| ro | http://purl.obolibrary.org/obo/ro.owl; RO:0002213/0002211 definitions and ancestry; RO:0002327/0002215/0002595 definitions and domain/range | refutes | Positive regulation is process-to-process; enables relates a material enabler to a process. Comparing those declarations with this record’s protein, process and quality nodes exposes three endpoint-type conflicts. This is manual semantic assessment, not a reported reasoner run. |
+| bibliography | https://www.ebi.ac.uk/europepmc/webservices/rest/search; Exact DOI searches for the four active articles and PMID:33180890; stored core records | supports | All five active references resolve to matching bibliographic records. The articles are scholarly reviews, not five independent experimental demonstrations. Their identities were checked separately from support for individual claims. |
+| drew | https://doi.org/10.1038/s41579-021-00550-7; Drew et al. 2021, Microbial evolution and transitions along the parasite-mutualist continuum; introduction and contextual-transition discussion, PMC8054256 full text | supports | The article places commensals near the middle of a host-effect continuum and explicitly discusses changes across ecological contexts. It supports the general definition and context dependence. Translating its no-detectable-cost shorthand into a complete classification rule requires care about host benefits. |
+| brown | https://doi.org/10.1371/journal.ppat.1009026; Brown and Horswill 2020, Staphylococcus epidermidis—Skin friend or foe?; introduction, beneficial/contextual effects and conclusion, PMC7660545 full text | partial | The source uses the clinical skin-commensal label while discussing beneficial and harmful effects that depend on strain and context. It supports ordinary skin association; it does not by that label alone substantiate the stricter neutral-host-fitness criterion used in this record. |
+| taxon | https://rest.uniprot.org/taxonomy/1282; Taxonomy record 1282, scientific name and rank | supports | Identifier 1282 resolves to Staphylococcus epidermidis at species rank. This verifies the taxon identity, not its ecological phenotype. |
+| wilde | https://doi.org/10.1126/science.adi3338; Wilde, Slack and Foster 2024, Host control of the microbiome: Mechanisms, evolution, and disease; accepted manuscript, IgA, mucus and adhesion sections | supports | The accepted manuscript supports qualified contextual colonization claims, including the record’s can wording. Some propositions are tentative or limited to particular host niches. These passages do not independently establish a neutral net host-fitness outcome. |
+| wilde-access | https://www.research-collection.ethz.ch/server/api/core/bitstreams/8de18562-e1fe-476a-ba57-eb491bb98ece/content; Institutional accepted-manuscript PDF; independent Oxford institutional copy | context_only | Both institutional PDF downloads succeeded. The accepted version, rather than an inaccessible publisher rendering, was inspected; bibliographic identity was cross-checked. |
+| oral | https://doi.org/10.3389/fcimb.2024.1357631; Oral streptococci: modulators of health and disease, 2024; extracellular matrix and colonization passages, PMC10917908 full text | partial | The passages support contextual matrix and persistence claims in oral biofilms, including a cariogenic setting. They do not establish host neutrality. The source’s ecological setting should remain visible when its statements are reused in a broad classification graph. |
+| mcfall | https://doi.org/10.1073/pnas.1218525110; McFall-Ngai et al. 2013, Animals in a bacterial world, a new imperative for the life sciences; abstract in the core metadata record | partial | The abstract supports broad animal–bacterial associations. Full text was not successfully obtained, so the exact support for the first edge’s neutral-host condition remains unverified. This is an access limitation, not a finding that the entire article lacks that support. |
+| mcfall-access | https://authors.library.caltech.edu/records/pr309-7b157; Primary institutional record and attempted PDF; Europe PMC, NCBI BioC and Harvard alternatives | context_only | Metadata and abstract were available. Full-text attempts returned an HTTP500, an empty-result HTML response, HTTP429 or HTTP403. The unsuccessful NCBI response was not mistaken for article text. |
+| historical | https://www.ebi.ac.uk/europepmc/webservices/rest/search; PMIDs 40945860, 40574831, 42197356 and 41808832; exact retained-fragment checks | context_only | All four historical identifiers resolve, and the retained text fragments match the inspected abstracts. The target explicitly disclaims these as support for its current discussion; preserving that provenance is appropriate. |
+| owners | scripts/curate_knowledge_gaps.py; PLAN entry kgscan-3606bdcc991b; captured history records and predicate mapping | context_only | The maintained discussion writer reproduces the current inference language and therefore owns part of any future correction. The target and mapping table own the scoped graph representation. Recorded AI-assisted history does not independently establish human sign-off. |
+
+## Limits And Additional Notes
+
+- The McFall-Ngai full text remained unavailable after multiple public-source attempts; only identity and abstract support are assessed. No full-article absence claim is made.
+- The Wilde source was inspected as an institutional accepted manuscript; the final publisher formatting was not available.
+- This is a bounded review of the cited literature, not an exhaustive search for every measured neutral association or every alternative ontology term.
+- The focused snippet command selected zero snippets. Source judgments therefore rely on the documented manual inspections, not its exit code.
+- Earlier corpus diagnostics retain their actual timestamps, baselines, adapter skips and superseded failures. No reasoner or expression-module result is invented.
+- Human scientific sign-off remains unresolved. This new review neither promotes mapping status nor replaces existing history.
+- The discussion was assessed for inference and provenance only. No operational experiment, pathogen manipulation or mechanism improvement is assessed or recommended.
+- The ontology identity check and endpoint/anchor check are documented manual diagnostics, separate from the native validation commands.
+- Ignored-inclusive searches covered the corpus and maintained scripts, mappings, proposals, configuration and history for target identity and potential ownership. The conclusion is bounded to those surfaces.
+- Only the new immutable review bundle is saved; the scientific record, its writer, mappings, history and generated pages remain untouched.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261020T035907Z-commensalism
+kind: record
+repository: CultureBotAI/TraitMech
+title: Scientific and source review of commensalism (traitmech:000042)
+started_at: '2026-10-20T03:47:39Z'
+finished_at: '2026-10-20T03:59:07Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The local identifier, ecological class, broader symbiosis parent and near-neutral
+  definition are defensible. All eleven nodes and ten edges were assessed. Two major
+  findings concern the example’s mismatch with the record’s strict neutrality criterion
+  and three RO endpoint-type conflicts. Three minor findings concern contextual source
+  scope, low-virulence shorthand and the discussion’s interpretation of context dependence.
+  Four active articles were inspected in full text; the McFall-Ngai article was limited
+  to metadata and abstract.
+source:
+  git_revision: f25e2af0b38a8303b13f627a9a5c33b36af4b3d2
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/ecology/commensalism.yaml
+    sha256: 145d5d82edb69ec596fe6b1fd068ee6eb686cfd6da37f0aff22427fa8ce5907d
+    role: target
+  - path: data/traits/ecology/mutualism.yaml
+    sha256: 7247ae4be59ce2eb7f1cc9d7303e1a338af82cd49d255c60aa1442f6dc1c48a3
+    role: context
+  - path: data/traits/ecology/parasitism.yaml
+    sha256: 06714e9bc42a3405dc4700e41a0d6a92ae814c0122375a40b3ad776fda1a6040
+    role: context
+  - path: data/traits/ecology/symbiosis.yaml
+    sha256: 86ad9516ff0879731da3792de1495ba1d0e107394edfcc754be03d052a677b21
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/README.md
+    sha256: f795a191e17978454a8bb80da91ed6873a9405a240e6e5758837dd9bdc3b5c07
+    role: context
+  - path: history/infrastructure/curate-knowledge-gaps/2026-08-17T214933Z-claude-code-9c4af0.yaml
+    sha256: a58b53be777e58ac29eb1c1571feb2593633c83d158aff4b6c96b8a1b9214c0f
+    role: context
+  - path: history/infrastructure/protein-taxon-event-backfill/2026-08-26T032525Z-claude-936bf3.yaml
+    sha256: e32f537bb5192c12e9dae5f37ca07f71221402373551506429ce30445137fbab
+    role: context
+  - path: history/other/protein-taxon-review-tranche/2026-08-26T032524Z-codex-f46ce8.yaml
+    sha256: dbd304ce7c2dfaf1525a12c1d5b4bf04a1ec66f00b92e4917d642c5fba6370fd
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000042
+  path: data/traits/ecology/commensalism.yaml
+  label: commensalism
+  record_class: TraitRecord
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained TraitRecord; use guarded curation/history for any authorized
+      correction
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Tenth previously uncovered record in lexicographic path order; exactly
+    one complete record, with parent, sibling, ontology, writer and history inputs
+    as context.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000042
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  evidence_ids:
+  - check-validate-history
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000042
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000042
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: Actual earlier command at the same unchanged source base; only new structured
+    review files have been added. Original timestamps and failed attempts are retained.
+- check_id: commensalism-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just validate data/traits/ecology/commensalism.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: The selected record validates.
+  evidence_ids:
+  - check-commensalism-validate
+- check_id: commensalism-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just validate-strict data/traits/ecology/commensalism.yaml --out /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-strict.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero error rows.
+  evidence_ids:
+  - check-commensalism-strict
+- check_id: commensalism-snippets-network
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000042
+  command: just verify-snippets --record data/traits/ecology/commensalism.yaml --out
+    /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Zero snippets and zero references were selected by this checker. Exit zero
+    does not verify the record’s citations; manual source inspection is recorded separately.
+  evidence_ids:
+  - check-commensalism-snippets-network
+- check_id: expression-applicability
+  name: Expression-module applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000042
+  summary: The target names generic protein families and a species example, but no
+    exact strain, gene accession or expression dataset. No defensible iModulon component
+    claim is made; unavailable shared adapter infrastructure is not negative biological
+    evidence.
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-history.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:24Z; metadata validate-history.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: 1276 history records checked, zero invalid links; integrity does not establish
+    scientific correctness or human sign-off.
+  snapshot_sha256: 1fc48f1203fbfcd27b1243e4e147afb367aebfc592b496b352201058c6ee85d2
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-commensalism-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-validate.log
+  locator: Executed 2026-10-20T03:48:14Z through 2026-10-20T03:48:15Z; metadata commensalism-validate.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: The selected record validates.
+  snapshot_sha256: d507d05ec4e659791caf441f997fb15842d5de85370374cb49a203efa4cf185c
+- evidence_id: check-commensalism-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-strict.log
+  locator: Executed 2026-10-20T03:48:15Z through 2026-10-20T03:48:16Z; metadata commensalism-strict.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: One file scanned; zero error rows.
+  snapshot_sha256: a4f7c5416dffa9a9619762823361b3fc909c7bc0879bd6349b6a87a09489e74c
+- evidence_id: check-commensalism-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/commensalism-snippets-network.log
+  locator: Executed 2026-10-20T03:48:15Z through 2026-10-20T03:48:15Z; metadata commensalism-snippets-network.json
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: Zero snippets and zero references were selected by this checker. Exit zero
+    does not verify the record’s citations; manual source inspection is recorded separately.
+  snapshot_sha256: 97a537c07058578349013728ba9e5d714498aa84048c2209e4da514a1d2c345e
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/ecology/commensalism.yaml
+  locator: Entire record, including eleven nodes, ten edges, one example, one discussion
+    and all history
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: partial
+  summary: The complete target is an ecological relationship class with explicit NONMECHANISTIC
+    scope. The first edge already qualifies colonization by the absence of host benefit
+    or harm; it does not assert that colonization alone is sufficient.
+  snapshot_sha256: 145d5d82edb69ec596fe6b1fd068ee6eb686cfd6da37f0aff22427fa8ce5907d
+- evidence_id: identity
+  kind: authority
+  reference: data/raw/metpo.owl
+  locator: All literal values in the complete captured ontology; normalized exact
+    commensalism/commensal search; METPO:1000074; v5 proposal row METPO:1007641
+  accessed_at: '2026-10-20T03:52:29Z'
+  support: supports
+  summary: The exact old term is explicitly obsolete with no replacement in the inspected
+    statements. The proposed new class is absent from the captured ontology and cross-references
+    traitmech:000042 in the proposal. The local fallback is therefore defensible;
+    a proposed ID is not an active exact match.
+  snapshot_sha256: 034e67a7f0291a4e25e7b8cda2287e8af0717d5244dda43789b0fc288ad1fee1
+- evidence_id: hierarchy
+  kind: record_content
+  reference: data/traits/ecology/symbiosis.yaml
+  locator: Definition and identity; mutualism.yaml and parasitism.yaml definitions;
+    v5 class proposal
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: supports
+  summary: The parent includes beneficial, neutral and harmful host associations and
+    is broader than this target. The inspected sibling definitions preserve the host-effect
+    distinction. The related synonym does not assert lexical identity with a species
+    or protein.
+- evidence_id: model
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: CausalNodeTypeEnum; docs/GROUNDING_POLICY.md; mapping and v8 proposal rows
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: partial
+  summary: The schema permits a cellular component or localization, so the matrix
+    label alone is not a demonstrated node-type error. Generic protein-family nodes
+    with documented REVIEWED_LABEL_ONLY status are permitted in NONMECHANISTIC scope.
+    The confers CURIE is a locally documented proposal; permissive mapping gates do
+    not remove external ontology semantics.
+- evidence_id: ro
+  kind: authority
+  reference: http://purl.obolibrary.org/obo/ro.owl
+  locator: RO:0002213/0002211 definitions and ancestry; RO:0002327/0002215/0002595
+    definitions and domain/range
+  accessed_at: '2026-10-19T23:34:08Z'
+  support: refutes
+  summary: Positive regulation is process-to-process; enables relates a material enabler
+    to a process. Comparing those declarations with this record’s protein, process
+    and quality nodes exposes three endpoint-type conflicts. This is manual semantic
+    assessment, not a reported reasoner run.
+  snapshot_sha256: 3120f8e09fcf819197ecf3b15f27d6633811b297e1f6a88aad8fd86d79b616bb
+- evidence_id: bibliography
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: Exact DOI searches for the four active articles and PMID:33180890; stored
+    core records
+  accessed_at: '2026-10-20T03:49:02Z'
+  support: supports
+  summary: All five active references resolve to matching bibliographic records. The
+    articles are scholarly reviews, not five independent experimental demonstrations.
+    Their identities were checked separately from support for individual claims.
+  snapshot_sha256: 0bd3f79e1f58771302624072c44bda56b58167ba5cce21e5804cf24e4070e7c4
+- evidence_id: drew
+  kind: primary_source
+  reference: https://doi.org/10.1038/s41579-021-00550-7
+  locator: Drew et al. 2021, Microbial evolution and transitions along the parasite-mutualist
+    continuum; introduction and contextual-transition discussion, PMC8054256 full
+    text
+  accessed_at: '2026-10-20T03:49:37Z'
+  support: supports
+  summary: The article places commensals near the middle of a host-effect continuum
+    and explicitly discusses changes across ecological contexts. It supports the general
+    definition and context dependence. Translating its no-detectable-cost shorthand
+    into a complete classification rule requires care about host benefits.
+  snapshot_sha256: a431624c1430ff8e3076a79cf7304c19127c8a3813e2e49f018dc35a8eb2d5d6
+- evidence_id: brown
+  kind: primary_source
+  reference: https://doi.org/10.1371/journal.ppat.1009026
+  locator: Brown and Horswill 2020, Staphylococcus epidermidis—Skin friend or foe?;
+    introduction, beneficial/contextual effects and conclusion, PMC7660545 full text
+  accessed_at: '2026-10-20T03:49:37Z'
+  support: partial
+  summary: The source uses the clinical skin-commensal label while discussing beneficial
+    and harmful effects that depend on strain and context. It supports ordinary skin
+    association; it does not by that label alone substantiate the stricter neutral-host-fitness
+    criterion used in this record.
+  snapshot_sha256: faa72317501019cff36d982f879df6e69bff9cebdaad644b8d78f188d383d7c4
+- evidence_id: taxon
+  kind: database
+  reference: https://rest.uniprot.org/taxonomy/1282
+  locator: Taxonomy record 1282, scientific name and rank
+  accessed_at: '2026-10-20T03:49:37Z'
+  support: supports
+  summary: Identifier 1282 resolves to Staphylococcus epidermidis at species rank.
+    This verifies the taxon identity, not its ecological phenotype.
+  snapshot_sha256: c5a6170238882b83e964b90fd84fe73f73cc1bdd12007cf758f5b6fc27271e0b
+- evidence_id: wilde
+  kind: primary_source
+  reference: https://doi.org/10.1126/science.adi3338
+  locator: 'Wilde, Slack and Foster 2024, Host control of the microbiome: Mechanisms,
+    evolution, and disease; accepted manuscript, IgA, mucus and adhesion sections'
+  accessed_at: '2026-10-20T03:51:31Z'
+  support: supports
+  summary: The accepted manuscript supports qualified contextual colonization claims,
+    including the record’s can wording. Some propositions are tentative or limited
+    to particular host niches. These passages do not independently establish a neutral
+    net host-fitness outcome.
+  snapshot_sha256: 91fb1d9436065212edb301e73b1e985faf20eebad9dbed7d53669a0025ce43e7
+- evidence_id: wilde-access
+  kind: authority
+  reference: https://www.research-collection.ethz.ch/server/api/core/bitstreams/8de18562-e1fe-476a-ba57-eb491bb98ece/content
+  locator: Institutional accepted-manuscript PDF; independent Oxford institutional
+    copy
+  accessed_at: '2026-10-20T03:51:31Z'
+  support: context_only
+  summary: Both institutional PDF downloads succeeded. The accepted version, rather
+    than an inaccessible publisher rendering, was inspected; bibliographic identity
+    was cross-checked.
+  snapshot_sha256: dc0993229abc1c9377e7aa54e2484aca1ca0fa1c2096eb5121cea2d0468cf277
+- evidence_id: oral
+  kind: primary_source
+  reference: https://doi.org/10.3389/fcimb.2024.1357631
+  locator: 'Oral streptococci: modulators of health and disease, 2024; extracellular
+    matrix and colonization passages, PMC10917908 full text'
+  accessed_at: '2026-10-20T03:49:37Z'
+  support: partial
+  summary: The passages support contextual matrix and persistence claims in oral biofilms,
+    including a cariogenic setting. They do not establish host neutrality. The source’s
+    ecological setting should remain visible when its statements are reused in a broad
+    classification graph.
+  snapshot_sha256: 7dfcfe8e64f91565b21ea050ed03ff67784154236abf7eb6ba37e0cd6d12f69e
+- evidence_id: mcfall
+  kind: primary_source
+  reference: https://doi.org/10.1073/pnas.1218525110
+  locator: McFall-Ngai et al. 2013, Animals in a bacterial world, a new imperative
+    for the life sciences; abstract in the core metadata record
+  accessed_at: '2026-10-20T03:49:02Z'
+  support: partial
+  summary: The abstract supports broad animal–bacterial associations. Full text was
+    not successfully obtained, so the exact support for the first edge’s neutral-host
+    condition remains unverified. This is an access limitation, not a finding that
+    the entire article lacks that support.
+  snapshot_sha256: 0bd3f79e1f58771302624072c44bda56b58167ba5cce21e5804cf24e4070e7c4
+- evidence_id: mcfall-access
+  kind: search
+  reference: https://authors.library.caltech.edu/records/pr309-7b157
+  locator: Primary institutional record and attempted PDF; Europe PMC, NCBI BioC and
+    Harvard alternatives
+  accessed_at: '2026-10-20T03:53:34Z'
+  support: context_only
+  summary: Metadata and abstract were available. Full-text attempts returned an HTTP500,
+    an empty-result HTML response, HTTP429 or HTTP403. The unsuccessful NCBI response
+    was not mistaken for article text.
+  snapshot_sha256: 946524b4dddc05cf5eb5d233246dcd2eee60aeb3d73f3e1a21d93d6257149439
+  search_scope: Exact DOI 10.1073/pnas.1218525110 and PMC3587249; Europe PMC fullTextXML,
+    NCBI BioC, the identified Harvard manuscript URL and the identified Caltech record/PDF.
+    Public-source access attempts only, bounded to those endpoints at the recorded
+    timestamps. No filesystem-absence claim; ignored-file inclusion is not applicable
+    to these external requests.
+- evidence_id: historical
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search
+  locator: PMIDs 40945860, 40574831, 42197356 and 41808832; exact retained-fragment
+    checks
+  accessed_at: '2026-10-20T03:51:31Z'
+  support: context_only
+  summary: All four historical identifiers resolve, and the retained text fragments
+    match the inspected abstracts. The target explicitly disclaims these as support
+    for its current discussion; preserving that provenance is appropriate.
+  snapshot_sha256: 077814fb2bd8ba9e8c091b857179f65b75611a1ddc9ef34fcde00b56790ba6e8
+- evidence_id: owners
+  kind: record_content
+  reference: scripts/curate_knowledge_gaps.py
+  locator: PLAN entry kgscan-3606bdcc991b; captured history records and predicate
+    mapping
+  accessed_at: '2026-10-20T03:59:07Z'
+  support: context_only
+  summary: The maintained discussion writer reproduces the current inference language
+    and therefore owns part of any future correction. The target and mapping table
+    own the scoped graph representation. Recorded AI-assisted history does not independently
+    establish human sign-off.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identity, synonym, polarity and term kind'
+  outcome: supported
+  target_ids:
+  - traitmech:000042
+  summary: The complete record denotes one ecological relationship class. The local
+    identifier is justified by an obsolete exact METPO term and an unadopted proposal;
+    neither should be silently substituted.
+  evidence_ids:
+  - record
+  - identity
+  - hierarchy
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and nearest source'
+  outcome: supported
+  target_ids:
+  - traitmech:000042
+  summary: The near-neutral definition is noncircular and consistent with the inspected
+    continuum review. It distinguishes the concept from mutualism and parasitism;
+    operational shorthand elsewhere needs to preserve that distinction.
+  evidence_ids:
+  - record
+  - drew
+  - hierarchy
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader parent'
+  outcome: supported
+  target_ids:
+  - traitmech:000042
+  summary: The symbiosis parent is broader, and the sibling records preserve distinct
+    host-effect outcomes. No inverse or correlated relationship is used as a parent.
+  evidence_ids:
+  - record
+  - hierarchy
+- assessment_id: category
+  area: representation
+  topic: 'Native checklist: category, scope and node representation'
+  outcome: supported
+  target_ids:
+  - traitmech:000042
+  summary: ECOLOGY, CLASS and NONMECHANISTIC are appropriate. The record does not
+    need invented strain-specific protein exemplars or a universal molecular mechanism.
+    The schema permits a cellular-component reading of the matrix node.
+  evidence_ids:
+  - record
+  - model
+- assessment_id: examples
+  area: scope
+  topic: 'Native checklist: example identity and ecological support'
+  outcome: concern
+  target_ids:
+  - traitmech:000042
+  summary: The species identifier is correct, but the cited review’s broad clinical
+    commensal usage does not establish the strict neutral-fitness relationship asserted
+    by this record. This does not mean the species can never participate in commensalism.
+  evidence_ids:
+  - record
+  - taxon
+  - brown
+  - drew
+  dimensions:
+  - name: taxon_rank
+    value: Species
+    definition: Rank of the sole canonical example, not the rank of evidence for host-fitness
+      neutrality.
+    evidence_ids:
+    - taxon
+  - name: example_evidence_tier
+    value: Narrative review with context-dependent host effects
+    definition: Source type and scope; not a direct measured neutral-fitness association.
+    evidence_ids:
+    - brown
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: source identities, placement and quotations'
+  outcome: concern
+  target_ids:
+  - traitmech:000042
+  summary: All active source identities resolve. Four active full texts were inspected,
+    including an accepted manuscript. The McFall-Ngai abstract is narrower than the
+    edge claim and its full text remains unavailable. The snippet command tested no
+    claims; historical fragments are explicitly non-evidentiary.
+  evidence_ids:
+  - bibliography
+  - drew
+  - brown
+  - wilde
+  - oral
+  - mcfall
+  - mcfall-access
+  - historical
+  - check-commensalism-snippets-network
+- assessment_id: graph
+  area: graph
+  topic: 'Native checklist: all eleven nodes and all ten edges'
+  outcome: concern
+  target_ids:
+  - traitmech:000042
+  summary: Every endpoint resolves. The contextual evidence is mostly plausible within
+    its source setting, but three RO assignments conflict with endpoint types. Colonization
+    pathways do not themselves determine the host-effect classification. Generic protein-family
+    annotations are allowed under the declared scope.
+  evidence_ids:
+  - record
+  - model
+  - ro
+  - drew
+  - wilde
+  - oral
+  - mcfall
+  details: 'Zero-based edge ledger: 0, host_colonization/confers/commensalism_trait:
+    explicitly conditional on no host benefit or harm; the local proposal is identifiable,
+    but nearest-source full-text support remains unresolved. 1, trait/associated with/neutral_host_fitness:
+    consistent with Drew’s conceptual continuum; association is not a measured result
+    for every example. 2, secretory_iga/promotes/host_colonization: qualified contextual
+    prose is supported; RO:0002213 requires a process subject, unlike the protein
+    node. 3, mucus_layer/provides resources for/host_colonization: contextual resource
+    claim supported by the accepted review, not proof of neutral host fitness. 4,
+    glycan_binding_proteins/enables/mucin_attachment: compatible material-actor/process
+    semantics and contextual source support. 5, mucin_attachment/enables/host_colonization:
+    contextual support does not cure RO:0002327’s incompatibility with a process subject.
+    6, eps_production/has output/biofilm_matrix: process-to-output statement supported
+    in the oral-source context. 7, biofilm_matrix/confers/persistence_protection:
+    qualitative contextual statement supported; the ungrounded relation label does
+    not claim an unavailable ontology identity. 8, persistence_protection/promotes/host_colonization:
+    plausible contextual inference, but the quality subject conflicts with RO:0002213.
+    9, low_virulence/operationalizes/commensalism_trait: follows the cited shorthand
+    but does not by itself exclude a host benefit, and low virulence is not identical
+    to neutrality.'
+- assessment_id: discussions
+  area: scope
+  topic: 'Native checklist: discussion, references and inference boundary'
+  outcome: concern
+  target_ids:
+  - traitmech:000042
+  summary: The question and node anchor are relevant, and historical irrelevant snippets
+    are correctly disclaimed. The conditional question is not treated as an asserted
+    universal absence claim. The interpretation of a changed effect in another context
+    nevertheless exceeds what it establishes about the original association.
+  evidence_ids:
+  - record
+  - drew
+  - historical
+  - owners
+- assessment_id: status
+  area: provenance
+  topic: 'Native checklist: mapping status, audit history and native checks'
+  outcome: unknown
+  target_ids:
+  - traitmech:000042
+  summary: Focused schema checks pass and earlier corpus history/product checks retain
+    their real scope and skips. The target records AI-assisted promotion and follow-up
+    events. Human scientific sign-off for REVIEWED is not independently established
+    by those entries or this review.
+  evidence_ids:
+  - record
+  - owners
+  - check-commensalism-validate
+  - check-commensalism-strict
+  - check-validate-history
+findings:
+- finding_id: example-neutrality-scope
+  issue_key: commensalism-example-neutrality-scope
+  category: scope
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The canonical example is not supported at the record’s neutrality criterion
+  description: The note calls the species an archetypal skin commensal, while the
+    definition requires essentially unchanged host fitness. The cited review uses
+    commensal more broadly and explicitly includes beneficial and harmful contextual
+    outcomes. Thus the citation verifies common skin association, but not the narrower
+    example claim without a stated context or an explicit evidence limitation. This
+    finding does not assert that the record literally claims every strain is neutral,
+    or that the species can never exemplify commensalism.
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - canonical_examples[0].note
+  - canonical_examples[0].reference
+  evidence_ids:
+  - record
+  - brown
+  - taxon
+  - drew
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: ro-endpoint-semantics
+  issue_key: commensalism-ro-endpoint-semantics
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Three RO assignments conflict with their subject types
+  description: Edges 2 and 8 apply process-to-process positive regulation to a protein
+    and a quality. Edge 5 applies material-entity enables to a biological process.
+    The record’s node descriptions confirm these meanings; this is not merely a naming
+    mismatch. Mapping-table wildcards and successful shape checks do not override
+    RO declarations.
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - causal_graphs[0].edges[2].predicate_id
+  - causal_graphs[0].edges[5].predicate_id
+  - causal_graphs[0].edges[8].predicate_id
+  evidence_ids:
+  - record
+  - ro
+  - model
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; permissive gates must not be read as ontology-wide
+      permission
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: contextual-edge-scope
+  issue_key: commensalism-contextual-edge-scope
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Contextual colonization evidence loses its ecological setting
+  description: The graph’s generic wording omits the host-niche limits of the mucosal
+    review and the oral setting of the biofilm review. The latter includes a cariogenic
+    context. These sources can legitimately support contextual colonization statements
+    in a NONMECHANISTIC graph, but they do not independently establish neutrality
+    or a universal route to this trait. The already qualified first edge should be
+    preserved.
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - causal_graphs[0].scope_notes
+  - causal_graphs[0].description
+  - causal_graphs[0].edges[2:9].evidence
+  evidence_ids:
+  - record
+  - wilde
+  - oral
+  - drew
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: low-virulence-shorthand
+  issue_key: commensalism-low-virulence-shorthand
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Low virulence and no detectable cost are weaker than neutral host effect
+  description: The low_virulence label and edge 9 use shorthand that does not exclude
+    a host benefit; low virulence can also include a nonzero adverse effect. Although
+    the cited review uses no-detectable-cost wording, the record’s own definition
+    and sibling boundary require a near-neutral net host effect. This is a local consistency
+    inference, not a claim that the cited review denies the continuum.
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - causal_graphs[0].nodes[10]
+  - causal_graphs[0].edges[9]
+  evidence_ids:
+  - record
+  - drew
+  - hierarchy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: discussion-context-inference
+  issue_key: commensalism-discussion-context-inference
+  category: scope
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: A context-dependent effect does not invalidate the original classification
+  description: The discussion correctly asks whether neutrality is evidenced. Its
+    refutation text goes further by treating an effect in a changed context as an
+    artefact requiring reassignment of the original association. The source explicitly
+    allows context-dependent transitions. The appropriate logical conclusion is limited
+    to the changed context; finite nondetection also does not establish universal
+    neutrality.
+  target_ids:
+  - traitmech:000042
+  field_paths:
+  - discussions[0].rationale
+  - discussions[0].proposed_experiments[0].would_support
+  - discussions[0].proposed_experiments[0].would_refute
+  evidence_ids:
+  - record
+  - drew
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/curate_knowledge_gaps.py
+    role: Maintained PLAN entry that can reproduce discussion wording
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: bound-example
+  description: Qualify or withdraw the example at the strict ecological criterion,
+    retaining the correct species identity.
+  finding_ids:
+  - example-neutrality-scope
+  target_ids:
+  - traitmech:000042
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Distinguish conventional clinical commensal naming from demonstrated near-neutral
+    host effect.
+  - Use only inspected evidence for any narrower context; do not invent a measured
+    example.
+  - After authorized curation, run focused validation, strict validation, source checks
+    and applicable qc.
+- action_id: align-relation-semantics
+  description: Reconcile the intended conceptual relation and its identifier while
+    preserving what the evidence actually supports.
+  finding_ids:
+  - ro-endpoint-semantics
+  target_ids:
+  - traitmech:000042
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Shared predicate mapping; permissive gates must not be read as ontology-wide
+      permission
+  acceptance_checks:
+  - Inspect subject and object meaning against the selected relation’s inherited domain
+    and range.
+  - Do not relabel a material entity or quality as a process merely to satisfy a predicate.
+  - Run focused strict validation and graph/predicate audits; retain a manual semantic
+    check because permissive mappings can pass incorrect uses.
+- action_id: preserve-source-context
+  description: Make the contextual role and source settings of the illustrative colonization
+    edges explicit.
+  finding_ids:
+  - contextual-edge-scope
+  target_ids:
+  - traitmech:000042
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Keep the distinction between source-backed colonization and the separately required
+    host-effect classification.
+  - Do not extend or complete a pathogen mechanism; the corrective task is evidence
+    scope and wording.
+  - Retain source qualification and recheck nearest evidence after any authorized
+    edit.
+- action_id: clarify-neutrality-wording
+  description: Align the shorthand with the record’s near-neutral concept and distinguish
+    it from low virulence.
+  finding_ids:
+  - low-virulence-shorthand
+  target_ids:
+  - traitmech:000042
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Preserve the host-benefit boundary with mutualism and the adverse-effect boundary
+    with parasitism.
+  - Avoid claiming universal neutrality from an unspecified nondetection; keep any
+    uncertainty explicit.
+- action_id: bound-discussion-inference
+  description: Revise the discussion’s epistemic conclusion and its maintained writer
+    to preserve context dependence.
+  finding_ids:
+  - discussion-context-inference
+  target_ids:
+  - traitmech:000042
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/ecology/commensalism.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/curate_knowledge_gaps.py
+    role: Maintained PLAN entry that can reproduce discussion wording
+  acceptance_checks:
+  - Retain a useful evidence question without asserting that context dependence makes
+    a category biologically unreal.
+  - Scope any classification conclusion to the association and conditions supported
+    by evidence.
+  - Review only interpretation and provenance; no experimental redesign or pathogen
+    co-infection procedure is proposed.
+limitations:
+- The McFall-Ngai full text remained unavailable after multiple public-source attempts;
+  only identity and abstract support are assessed. No full-article absence claim is
+  made.
+- The Wilde source was inspected as an institutional accepted manuscript; the final
+  publisher formatting was not available.
+- This is a bounded review of the cited literature, not an exhaustive search for every
+  measured neutral association or every alternative ontology term.
+- The focused snippet command selected zero snippets. Source judgments therefore rely
+  on the documented manual inspections, not its exit code.
+- Earlier corpus diagnostics retain their actual timestamps, baselines, adapter skips
+  and superseded failures. No reasoner or expression-module result is invented.
+- Human scientific sign-off remains unresolved. This new review neither promotes mapping
+  status nor replaces existing history.
+- The discussion was assessed for inference and provenance only. No operational experiment,
+  pathogen manipulation or mechanism improvement is assessed or recommended.
+notes:
+- The ontology identity check and endpoint/anchor check are documented manual diagnostics,
+  separate from the native validation commands.
+- Ignored-inclusive searches covered the corpus and maintained scripts, mappings,
+  proposals, configuration and history for target identity and potential ownership.
+  The conclusion is bounded to those surfaces.
+- Only the new immutable review bundle is saved; the scientific record, its writer,
+  mappings, history and generated pages remain untouched.
+tags:
+- record-review
+- commensalism
+- ecology
+- needs-curation
+```
