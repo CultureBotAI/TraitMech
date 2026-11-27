@@ -1,0 +1,952 @@
+schema_version: 1.0.0
+review_id: 20261021T091235Z-capnophilic
+kind: record
+repository: CultureBotAI/TraitMech
+title: Identity, hierarchy and citation review of capnophilic phenotype (METPO:1005021)
+started_at: '2026-10-21T09:08:26Z'
+finished_at: '2026-10-21T09:12:35Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Current review session did not author or change the captured
+    trait. Supporting agents inspected sources and prepared draft observations; root
+    reviewer integrates and validates the final review. Historical Codex/Claude curation
+    events are disclosed and are not human sign-off.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: The capnophilic record has correct current METPO identity, exact strain taxonomy,
+  two verified quotations and appropriately conservative SEEDED status. One major
+  finding concerns a CO2-defined phenotype placed under oxygen preference, faithfully
+  inherited from upstream and required by the dedicated enrichment guard. One minor
+  finding concerns attribution of an optimum-growth source statement to the broader
+  definition. No graph is required; CanB mechanisms and experimental conditions remain
+  explicitly unassessed.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/capnophilic.yaml
+    sha256: 8cfe3a2ee391c292bd27122711bc3ca3abd9a1f9f7f9d2d79fdfc2daa85d05e5
+    role: target
+  - path: data/traits/environment/oxygen_preference.yaml
+    sha256: 16829173ea947f2fef083f673c51519aad962d6812fcd54826ea86f055c5a40b
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/records/capnophilic/2026-09-11T071859Z-codex-b63934.yaml
+    sha256: 4634bcb22e8fc64a3936f737887531b9202e851b41c0aac2963e5c966217b1ba
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/enrich_capnophilic_trait.py
+    sha256: b9aded24ee5a9299e4181a3f8288b061528fee3e165806f6ebb708703b257166
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1005021
+  path: data/traits/environment/capnophilic.yaml
+  label: capnophilic
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/capnophilic.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Original METPO import identity/provenance
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Eighth batch004 target in lexicographic path order. Entire record, dedicated
+    writer and linked history read before native capture. Documentary citation, identity,
+    hierarchy, strain attribution and broad definition scope assessed; pathogen fitness
+    mechanisms and experimental conditions were not reconstructed or optimized.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1005021
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1005021
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1005021
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    004 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: capnophilic-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just validate data/traits/environment/capnophilic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Selected record validates.
+  evidence_ids:
+  - check-capnophilic-validate
+- check_id: capnophilic-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just validate-strict data/traits/environment/capnophilic.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: One file scanned; zero strict errors.
+  evidence_ids:
+  - check-capnophilic-strict
+- check_id: capnophilic-snippets
+  name: Focused abstract snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1005021
+  command: just verify-snippets --record data/traits/environment/capnophilic.yaml
+    --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/capnophilic-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Both snippets are VERIFIED against the one cited reference. This establishes
+    exact text, not the truth of every underlying mechanistic interpretation.
+  evidence_ids:
+  - check-capnophilic-snippets
+- check_id: structured-source-runner
+  name: Structured-source runner discovery
+  status: unavailable
+  required: false
+  target_ids:
+  - METPO:1005021
+  summary: Original bounded discovery reused; official catalog fallback inspected.
+  evidence_ids:
+  - runner
+- check_id: expression-context
+  name: Documentary canonical-taxon catalog applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1005021
+  summary: No matching organism/strain dataset; no gene/module queries.
+  evidence_ids:
+  - expression
+- check_id: protein-instance-validation
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1005021
+  summary: The target has no protein instance or causal graph; a protein mentioned
+    in a paper does not require an invented instance.
+  evidence_ids:
+  - record
+  - shape
+  - policy
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-capnophilic-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/capnophilic-validate.log
+  locator: Executed 2026-10-21T09:08:59Z through 2026-10-21T09:09:02Z; metadata capnophilic-validate.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: Selected record validates.
+  snapshot_sha256: 061c8a31b2566468c7e8d9a7a242d7a35e0980ed17a34b1589cff2fd76eb6848
+- evidence_id: check-capnophilic-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/capnophilic-strict.log
+  locator: Executed 2026-10-21T09:08:59Z through 2026-10-21T09:09:03Z; metadata capnophilic-strict.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: One file scanned; zero strict errors.
+  snapshot_sha256: 75f4d92b4ae0600473e86edde2e984a885ac12999ab4f1ef08ecb1bb9e631d49
+- evidence_id: check-capnophilic-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/capnophilic-snippets.log
+  locator: Executed 2026-10-21T09:09:02Z through 2026-10-21T09:09:04Z; metadata capnophilic-snippets.json
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: context_only
+  summary: Both snippets are VERIFIED against the one cited reference. This establishes
+    exact text, not the truth of every underlying mechanistic interpretation.
+  snapshot_sha256: 8712246358c7fff11d76654dd917a9d5ca428e201a22afacac1a7027fae0d1db
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/capnophilic.yaml
+  locator: Whole seeded record, two excerpts, canonical strain and two events
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: partial
+  summary: The record denotes elevated-carbon-dioxide requirement, retains SEEDED
+    status and asserts no causal graph. It cites one study and one exact strain; the
+    inherited oxygen-preference parent needs conceptual review.
+  snapshot_sha256: 8cfe3a2ee391c292bd27122711bc3ca3abd9a1f9f7f9d2d79fdfc2daa85d05e5
+- evidence_id: shape
+  kind: validation
+  reference: Whole-record structure inspection
+  locator: Zero graphs, one canonical example, two events
+  accessed_at: '2026-10-21T09:09:04Z'
+  support: supports
+  summary: One seed event and one explicitly AI-assisted literature enrichment are
+    present. No graph, protein-instance or pathway-link assertion needs a completeness
+    repair.
+  snapshot_sha256: 9d06170d78f7ce91e1761a9f6ac55f600a5057c22b83f3a3b1ceed4f4c476c65
+- evidence_id: identity
+  kind: authority
+  reference: Pinned data/raw/metpo.owl
+  locator: Active1005021 label/definition and explicit obsolete replacements
+  accessed_at: '2026-10-21T09:10:21Z'
+  support: supports
+  summary: Current identity and definition match the pinned ontology exactly. Three
+    obsolete capnophile terms explicitly point to1005021. Omission of a duplicate
+    label synonym is not loss of a distinct synonym.
+  snapshot_sha256: 143cdec2c39f6b8399e73e59cde9c1793368bd497f42258d1140c2cf33c100f0
+- evidence_id: hierarchy
+  kind: authority
+  reference: data/raw/metpo.owl; data/traits/environment/oxygen_preference.yaml
+  locator: 1005021 subClassOf1000601, with both definitions inspected
+  accessed_at: '2026-10-21T09:10:21Z'
+  support: refutes
+  summary: The local parent faithfully copies upstream METPO, but the child definition
+    concerns carbon dioxide whereas1000601 denotes oxygen requirement/tolerance. Co-occurrence
+    of the two preferences in one strain does not establish strict class subsumption.
+    This is an inherited conceptual hierarchy concern, not a wrong-ID import or failed
+    native validator.
+  snapshot_sha256: c3c6512acf98cda5be275435554814598392b79d20e54bd71dfda5fe111a4e0b
+- evidence_id: writer
+  kind: record_content
+  reference: scripts/enrich_capnophilic_trait.py; scripts/seed_from_metpo.py
+  locator: Dedicated guard82–83 and UPDATES; seeder parent ingestion174–178
+  accessed_at: '2026-10-21T09:10:21Z'
+  support: partial
+  summary: 'The enrichment guard requires1000601 and incorrectly calls it an environmental-phenotype
+    parent. UPDATES does not assign parent_traits: correcting the record alone would
+    make the guard reject it, not silently restore the old parent. The seeder reads
+    upstream parent links; no existing-record overwrite behavior is inferred.'
+  snapshot_sha256: c3c6512acf98cda5be275435554814598392b79d20e54bd71dfda5fe111a4e0b
+- evidence_id: taxonomy
+  kind: authority
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=192222&retmode=xml
+  locator: Current taxon192222 response09:09:14–15Z
+  accessed_at: '2026-10-21T09:09:15Z'
+  support: supports
+  summary: The complete recorded C. jejuni subspecies/strain label, including NCTC11168
+    and ATCC700819, matches current taxonomy. This is identity verification, not validation
+    of pathogen fitness mechanisms.
+  snapshot_sha256: 3b36799566bc02dbd8fd6de6a5d07c3bacc7fc851fd737c8ecf52f593a387bb0
+- evidence_id: source
+  kind: primary_source
+  reference: https://doi.org/10.1111/1462-2920.13092
+  locator: PMID26470757; abstract opening, closing quotation and NCTC11168 attribution
+  accessed_at: '2026-10-21T09:09:04Z'
+  support: partial
+  summary: Both snippets are exact and the study strain attribution is explicit. The
+    opening phenotype statement is qualified by optimum growth, while the record’s
+    ontology definition states a requirement for growth without that qualifier. The
+    closing quotation retains suggest. CanB attribution was checked documentarily;
+    its mechanism and experimental conditions were not assessed.
+  snapshot_sha256: a0df5f27148bd17ccd80ff56070e65b4e780cf7f36f7ff5bc30d25536b642c90
+- evidence_id: source-ledger
+  kind: database
+  reference: Complete scoped source assessment
+  locator: One reference, four citation placements, two excerpts
+  accessed_at: '2026-10-21T09:09:49Z'
+  support: supports
+  summary: The DOI/PMID/title/author identity resolves, both excerpts match and strain
+    attribution is supported. The one actual metadata response has a retained hash/time.
+    Source interpretation is restricted to broad phenotype wording and documentary
+    attribution.
+  snapshot_sha256: 9e7f5f18ef1228dbc20f6fbcc9572872965c1272dc023771fd767c99614e2946
+- evidence_id: provenance
+  kind: record_content
+  reference: history/records/capnophilic/2026-09-11T071859Z-codex-b63934.yaml; target
+    curation_history
+  locator: Linked AI repository history, seed and enrichment events
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: supports
+  summary: The linked history identifies an AI actor and literature enrichment; the
+    per-record enrichment also discloses AI assistance. SEEDED does not claim human
+    scientific acceptance. No REVIEWED-status sign-off defect is introduced and no
+    promotion is proposed.
+  snapshot_sha256: 4634bcb22e8fc64a3936f737887531b9202e851b41c0aac2963e5c966217b1ba
+- evidence_id: owner-search
+  kind: search
+  reference: Bounded target history/mapping/writer/review search
+  locator: Exact identifier/path/label with ignored files included
+  accessed_at: '2026-10-21T09:09:04Z'
+  support: context_only
+  summary: The dedicated enrichment writer and repository history are explicit maintained
+    owners/provenance. Search scope and283matching lines are retained; contextual
+    review references do not establish target coverage. No remote/private acceptance
+    absence claim is needed for this SEEDED record.
+  snapshot_sha256: 5f3c1cdbbe66a6885f7ad147d0931d40a495baa8279bb262da601b3fdebc09d9
+  search_scope: rg --no-ignore --hidden over history,mappings,scripts,reviews/structured
+    for METPO1005021, exact target path and capnophilic; exact command and output
+    retained.
+- evidence_id: policy
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md; docs/GROUNDING_POLICY.md
+  locator: Broader-parent semantics, optional mechanisms and status scope
+  accessed_at: '2026-10-21T09:12:35Z'
+  support: supports
+  summary: A parent must be strictly broader rather than a correlated trait. Optional
+    graph/protein fields need not be invented. SEEDED status and explicit AI provenance
+    remain distinct from human scientific acceptance.
+- evidence_id: expression
+  kind: database
+  reference: https://imodulondb.org/api/datasets
+  locator: Original07:36:12Z catalog with current hash-verified documentary applicability
+  accessed_at: '2026-10-21T09:11:04Z'
+  support: context_only
+  summary: No Campylobacter/jejuni/NCTC11168/ATCC700819 dataset matches. No gene/module
+    query or organism substitution was made. Catalog noncoverage is not negative evidence
+    about growth phenotype, expression or mechanism.
+  snapshot_sha256: cadfd0b49ea270050402aafa6e9fbb7dccd55168fe6c0bdddeb6f8d48fde49fc
+- evidence_id: runner
+  kind: search
+  reference: Structured-source runner discovery
+  locator: Original bounded ignored-inclusive08:17:15Z search
+  accessed_at: '2026-10-21T08:17:15Z'
+  support: context_only
+  summary: The original runner search is reused with its scope and official-catalog
+    fallback; this is not fresh or global filesystem absence.
+  snapshot_sha256: 39b52930f52e898f85ac3bbb88f11ac674a355967b5704e2b62f0bda259d404f
+  search_scope: Original PATH/project/install/B4 roots include hidden/ignored and
+    virtual-environment contents, with Git internals excluded; unsearched roots remain
+    unknown.
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: current term, polarity and historical replacements'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: The active METPO identifier, label and definition match. Explicit obsolete
+    replacements were verified; no nearby phenotype was substituted. ENVIRONMENT/CLASS
+    describes a positive phenotype rather than an organism or protein.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: hierarchy
+  area: consistency
+  topic: 'Native checklist: strictly broader parent versus correlated gas preferences'
+  outcome: concern
+  target_ids:
+  - METPO:1005021
+  summary: The CO2-defined child is asserted beneath oxygen requirement/tolerance
+    in both local record and upstream ontology. A strain can show both preferences
+    without making one phenotype a subclass of the other. The import is faithful but
+    the asserted hierarchy is conceptually inconsistent with the inspected definitions.
+  evidence_ids:
+  - hierarchy
+  - identity
+  - policy
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: ontology wording and primary-source qualifier'
+  outcome: concern
+  target_ids:
+  - METPO:1005021
+  summary: The general definition is sourced directly in METPO. The selected study’s
+    opening sentence supports elevated CO2 for optimum growth in its species context,
+    a narrower attribution than an unqualified requirement for growth. Preserve the
+    distinction without declaring the organism classification false.
+  evidence_ids:
+  - identity
+  - source
+  - source-ledger
+- assessment_id: example
+  area: evidence
+  topic: 'Native checklist: canonical strain attribution and exact taxonomy'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: The article explicitly identifies NCTC11168, and the current NCBI strain/subspecies/ATCC
+    label matches. This supports documentary exemplar attribution without assessing
+    detailed growth conditions or genetic fitness contributions.
+  evidence_ids:
+  - taxonomy
+  - source
+  - record
+- assessment_id: evidence
+  area: evidence
+  topic: 'Native checklist: one citation and two quotations'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: Citation identity and both exact excerpts are verified. The concluding
+    quotation retains suggest. Attribution is supported; the biological CanB mechanism
+    and experimental support are outside this review’s verification scope.
+  evidence_ids:
+  - source
+  - source-ledger
+  - check-capnophilic-snippets
+- assessment_id: graph
+  area: representation
+  topic: 'Native checklist: optional mechanism and protein surfaces'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1005021
+  summary: No causal graph, protein instance or pathway link is asserted. The record
+    can represent a seeded phenotype with literature evidence without inventing a
+    mechanism merely because the paper names a protein.
+  evidence_ids:
+  - record
+  - shape
+  - policy
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: required fields and optional discussions/datasets'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: Required identity, definition, parent, source, strain example and history
+    structures are present. Optional synonyms, discussions, graphs and datasets are
+    not mandatory gaps. The hierarchy concern is semantic rather than missing shape.
+  evidence_ids:
+  - record
+  - shape
+  - check-capnophilic-validate
+  - check-capnophilic-strict
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: documentary catalog applicability'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: No canonical organism/strain matches the inspected catalog; no substitution
+    or gene/module query was used. The result neither supports nor refutes a mechanism
+    or growth preference.
+  evidence_ids:
+  - expression
+  - runner
+- assessment_id: audit
+  area: provenance
+  topic: 'Native checklist: seeded status and linked AI history'
+  outcome: supported
+  target_ids:
+  - METPO:1005021
+  summary: SEEDED is retained. The linked repository history and enrichment event
+    disclose the AI contribution; no human-review status is claimed, so no missing-acceptance
+    defect is assigned.
+  evidence_ids:
+  - provenance
+  - record
+  - policy
+- assessment_id: owners
+  area: provenance
+  topic: 'Native checklist: upstream hierarchy, import and dedicated writer guard'
+  outcome: concern
+  target_ids:
+  - METPO:1005021
+  summary: The seeder imports the upstream parent, and the dedicated enrichment guard
+    would reject a corrected parent while misnaming the current one. UPDATES does
+    not write the parent. Follow-up must coordinate source hierarchy and guard semantics
+    rather than assume a reinserted value.
+  evidence_ids:
+  - writer
+  - hierarchy
+  - owner-search
+findings:
+- finding_id: co2-oxygen-parent
+  issue_key: capnophilic-co2-oxygen-parent
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The carbon-dioxide phenotype inherits an oxygen-preference parent
+  description: The child definition concerns elevated carbon dioxide, while parent
+    METPO1000601 explicitly denotes oxygen requirements/tolerance. The same subclass
+    assertion exists in pinned upstream METPO, so the record faithfully imports an
+    upstream conceptual problem. Co-occurrence of low-oxygen and high-carbon-dioxide
+    preferences in one study strain does not establish class subsumption. The dedicated
+    enrichment guard also requires this parent and misnames it environmental phenotype;
+    it would reject a changed parent, not silently reassign it.
+  target_ids:
+  - METPO:1005021
+  field_paths:
+  - parent_traits[0]
+  evidence_ids:
+  - identity
+  - hierarchy
+  - writer
+  - policy
+  - source
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/capnophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: data/raw/metpo.owl
+    role: Pinned upstream ontology input; resolve source hierarchy and refresh through
+      maintained acquisition, not hand-edit the snapshot
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/enrich_capnophilic_trait.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: definition-source-qualifier
+  issue_key: capnophilic-definition-source-qualifier
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Distinguish the optimum-growth source qualifier from the general definition
+  description: The record’s METPO definition states a carbon-dioxide requirement for
+    growth, while its nearest inspected study sentence specifies optimum growth in
+    C. jejuni. Clarify which authority supplies the general definition and retain
+    the study’s narrower qualifier. This is bounded attribution precision, not proof
+    that elevated carbon dioxide is unnecessary or that the canonical classification
+    is wrong.
+  target_ids:
+  - METPO:1005021
+  field_paths:
+  - definition
+  - definition_source
+  - evidence[0].notes
+  evidence_ids:
+  - identity
+  - source
+  - source-ledger
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/capnophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/enrich_capnophilic_trait.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-hierarchy
+  description: In separately authorized curation, resolve the upstream CO2-versus-O2
+    hierarchy and coordinate the local record/import and dedicated parent guard with
+    the accepted decision.
+  finding_ids:
+  - co2-oxygen-parent
+  target_ids:
+  - METPO:1005021
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/capnophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: data/raw/metpo.owl
+    role: Pinned source snapshot; refresh through maintained acquisition after an
+      upstream decision
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/enrich_capnophilic_trait.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The retained parent is genuinely broader by the defining phenotype axis, not merely
+    correlated in a canonical strain.
+  - Preserve correct current trait identity and document upstream agreement or an
+    explicit supported local policy; do not silently rewrite the ontology snapshot.
+  - Update the dedicated parent precondition and its error wording if the accepted
+    parent changes; static UPDATES does not reinsert a parent.
+  - After authorized changes use guarded curation/history, focused strict/term validation
+    and just qc; regenerate affected products through maintained recipes.
+- action_id: clarify-attribution
+  description: Make the general ontology definition’s authority and the study’s optimum-growth
+    qualifier explicit in the record and its enrichment owner.
+  finding_ids:
+  - definition-source-qualifier
+  target_ids:
+  - METPO:1005021
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/capnophilic.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/enrich_capnophilic_trait.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The source’s optimum qualifier and species scope remain visible.
+  - Keep both exact quotations and the concluding suggest wording; no unsupported
+    mechanism, numerical culture condition or experimental recommendation is added.
+  - Run focused record and snippet validation after authorized edits.
+limitations:
+- The scientific assessment covers identity, conceptual hierarchy, citation text,
+  strain attribution and broad definition-source scope. It does not validate or reconstruct
+  pathogen fitness mechanisms, genetic contributions, culture conditions or optimization.
+- The primary study was inspected selectively at indexed-abstract level for exact
+  quotations, strain identity and broad phenotype wording; no fulltext or experimental-method
+  inference was used.
+- Both quotations are exact. The source’s suggest qualification is preserved; documentary
+  attribution is not a biological mechanism verdict.
+- The optimum-growth wording is narrower than the ontology definition’s unqualified
+  growth wording. This supports a bounded attribution finding, not categorical rejection
+  of the phenotype or organism classification.
+- The parent assertion is present upstream in the pinned METPO snapshot. No native
+  schema or OWL reasoner failure is claimed, and no local import transcription error
+  is alleged.
+- The dedicated writer checks the existing parent rather than assigning it. A corrected
+  parent would fail that precondition until coordinated; no writer dry run or mutation
+  was performed.
+- SEEDED does not claim human acceptance. Missing graph/protein fields and absence
+  of a matching expression dataset are not scientific defects.
+- Catalog and common validation reuse retain original times/hashes and declared scope;
+  they are not newly executed external release checks.
+- No provider research, paid call, scientific record edit, status promotion, history
+  change or generated-page mutation was performed.
+notes:
+- All field indices are zero-based.
+- Native capture09:08:26–30Z retained54inputs, including the dedicated enrichment
+  writer and exact repository history, after their bytes were read.
+- The review targets only capnophilic; the oxygen-preference record is a hierarchy
+  context input, not an additional reviewed target.
+tags:
+- record-review
+- capnophilic
+- environment
+- needs-curation
