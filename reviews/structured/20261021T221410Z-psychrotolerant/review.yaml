@@ -1,0 +1,1910 @@
+schema_version: 1.0.0
+review_id: 20261021T221410Z-psychrotolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of psychrotolerant
+started_at: '2026-10-21T22:06:10.867530Z'
+finished_at: '2026-10-21T22:14:10Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and bounded root primary/owner readings. Generic classification, existing reported
+    phenotype, identity, literal attribution and formal relation roles assessed. Detailed
+    pathogen cold-survival, fitness, ROS-defense, AMR, vectors and intervention efficacy/methods
+    remain UNASSESSED_SCOPE. No scientific record edited.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: two major findings concern imported process roles and canonical
+  species attribution; one minor concerns bounded human-acceptance traceability.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/psychrotolerant.yaml
+    sha256: 313c668f6414ba4bc84ef8893c4db094d6037e458290a0354cb584b1767b129e
+    role: target
+  - path: data/traits/environment/temperature_preference.yaml
+    sha256: 124373347177201d4a2ed44d2d69d1160636e6a99aacc87b4b0ee71e73f0234f
+    role: context
+  - path: data/traits/physiology/cold_shock_response.yaml
+    sha256: 5e131592cffeb87cd2081b3c70a885c3a9d667a52c02cd82537691a1ca57be61
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/node-type-consistency/2026-08-15T014631Z-claude-code-9d7f4d.yaml
+    sha256: 21f19561c0d4769e7acc62e05e41d0d395a0f239938f00829f79f2b9c3ac2510
+    role: context
+  - path: history/infrastructure/process-quality-consistency/2026-08-21T073211Z-codex-174227.yaml
+    sha256: e35d99e8285d488d98584d046aa001825527609cfd62575b3b839c4a31230642
+    role: context
+  - path: history/records/cold_shock_response/2026-09-15T053301Z-codex-3c5c55.yaml
+    sha256: c75358bd8e07b363ab2151029cb825b398fec0d99968c7347c757ea15d9f2b50
+    role: context
+  - path: history/records/homeoviscous_adaptation/2026-09-15T072704Z-codex-6cb554.yaml
+    sha256: f82d94646e70fd82a5d3f6939339efae8ce0fe5e80fe6f50aab994de6c409fa8
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v3/proposal.md
+    sha256: 37be7b2c2efe0d1598d62b8df04f08262ba74b9d8068e010df6ee48069449067
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v83/metpo_proposal_classes_robot.tsv
+    sha256: efe801d5ed725ff9da4389085da90ef77585dc3a9db5c0a94f44f9ee9ac8c6e9
+    role: context
+  - path: proposals/metpo_traitmech_v83/proposal.md
+    sha256: 0f10cba9c83f388abfbf3da93fe998a2ece18e874f806c33607d328668e11e58
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/psychrotolerant-deep-research-falcon.md
+    sha256: 86d68a88622ba59e17281caeb6f172e5d2721c64ef9293fe91e6b837611068cb
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/add_abortive_infection_system_trait.py
+    sha256: 7207df218c1f67a7472e9de442729c2834406fcbe230ad9d0344dc5e0d1250fb
+    role: context
+  - path: scripts/add_alpha_mannosidase_activity_trait.py
+    sha256: fd8cf25bd5a2f3b4cea0641da26b3cc89f13a81b23cdcbd449dc0bde0175ba17
+    role: context
+  - path: scripts/add_cold_shock_response_trait.py
+    sha256: d90be1ba41afbc2c8194466485291a02c7f46c078cf4356c2635c169add6f521
+    role: context
+  - path: scripts/add_homeoviscous_adaptation_trait.py
+    sha256: 1c757fd67bda18d2f4afb2fbf63d899844d416d084e2b9d53e298182ae2e4d09
+    role: context
+  - path: scripts/add_lamassu_hnh_system_trait.py
+    sha256: d577b8bb6c983129e0e4a1f170c3b8799aec008d3301fcc7d2b4b834693b47bc
+    role: context
+  - path: scripts/add_panoptes_system_trait.py
+    sha256: 7872d7d35efd453e4db3d74051266ad406f82de43655e87271d2985f765b4f26
+    role: context
+  - path: scripts/add_toxin_system_trait.py
+    sha256: 6ad63bc375cc3d9a72cd6db58c34f7bfc920434b09bfa99cbf01cfb4979a881e
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_mesophilic_graph_183.py
+    sha256: 3f1fa78321d7aa98dc2fedde9784e71ed60624a94f825bf3af1674753af56f85
+    role: context
+  - path: scripts/connect_nacl_optimum_graph_183.py
+    sha256: f1608bd82c1323c7d2306268860502ae3483d40f093e055b9b70cd463a1ecf04
+    role: context
+  - path: scripts/connect_temperature_delta_high_graph_183.py
+    sha256: ccbb1e6bb0e050d2975425914d6412fb3eb5812720407e1d143fbaae5a548bb7
+    role: context
+  - path: scripts/connect_temperature_delta_very_low_graph_183.py
+    sha256: 19eb2722de2fae0c76bf4c83b5f5b13f09841b17def22cdccb86d373711bf879
+    role: context
+  - path: scripts/connect_temperature_optimum_very_low_graph_183.py
+    sha256: 4749be5b5aacc87817ea013e587c41096e8a213c93dde74546f4906a0a08dc7e
+    role: context
+  - path: scripts/connect_temperature_range_mid3_graph_183.py
+    sha256: 0b72a42532f79c8efef52aaec4e60e0b58a7c8b9bc7ec288b9fa21a4c0e25656
+    role: context
+  - path: scripts/connect_temperature_range_mid4_graph_183.py
+    sha256: dd4b85888e88346adb515170c8fa37d542c7c7d9307d8a9fc63b22bdd6fb8b70
+    role: context
+  - path: scripts/connect_temperature_range_very_low_graph_183.py
+    sha256: 71755acb7ce3311fd473c8bef9a71dfed5fc6b8089b79cf33ea95cd5d1dad0a1
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/normalize_homeoviscous_nodes.py
+    sha256: 9b219161570aff3ca48bf79d7fac0fe0da0a629a32ce6ca60bee9b4b9d0f4bc9
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_mesophilic_graph_183.py
+    sha256: 46f9548808936268217a5e078fc1fa64d74cc2eeb69863ab6f3bb0da21e2b59c
+    role: context
+  - path: scripts/review_nacl_delta_graph_183.py
+    sha256: 91b85da640baff48e0d317c206aaa24c1216b3725d9c9814c6fb9d4d975e192c
+    role: context
+  - path: scripts/review_nacl_delta_mid2_graph_183.py
+    sha256: 7d628bb0265a6f689dbeb47509be8c6528c0c64e6b3d59d84e5a8a0b9cb5e1a5
+    role: context
+  - path: scripts/review_nacl_optimum_graph_183.py
+    sha256: 6d0de1ccb1604fb87294432692cc051e3a8a1d52e082eaff6aa1f8d3cb621ffd
+    role: context
+  - path: scripts/review_nacl_range_low_graph_183.py
+    sha256: d7e6669f6d2aa295487a34cba7fe14666a979404614bdbdd3be529194649accf
+    role: context
+  - path: scripts/review_obligately_piezophilic_graph_183.py
+    sha256: d8fcbbb725162212cfce96bed9800e2cf08374170b7d929a1928248178111efb
+    role: context
+  - path: scripts/review_temperature_delta_high_graph_183.py
+    sha256: dcade5d2fdf07c76e06cd5d8abca898af95a8faabf70e45a62bebf951f2ae31b
+    role: context
+  - path: scripts/review_temperature_delta_very_low_graph_183.py
+    sha256: 1ac23973b6cf54861f6ae79afefe93e39cc9382a93c73c36a8daa37b376334d0
+    role: context
+  - path: scripts/review_temperature_optimum_very_low_graph_183.py
+    sha256: 17e41b0426e6c41a43e7624799cf35db9737ef372d3aeb3ea40ac0a2dce20869
+    role: context
+  - path: scripts/review_temperature_range_mid3_graph_183.py
+    sha256: 623668a7f0f2cd487c096c2b786471fe986f64cfd5c34edad30422299f03794a
+    role: context
+  - path: scripts/review_temperature_range_mid4_graph_183.py
+    sha256: 51611a8200146f1887831e5b2a49800151dc0b112d177853c3055dd442852a5a
+    role: context
+  - path: scripts/review_temperature_range_very_low_graph_183.py
+    sha256: 4a48e54f1e448c2a4f67088cce8ecfe248f81034faf7271ab272e45e9e2541d4
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000618
+  path: data/traits/environment/psychrotolerant.yaml
+  label: psychrotolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Sixth record of the actual locally initialized batch 012 queue. Whole
+    308-line target and all 94 captured inputs verified before assessment, including
+    the preinspection internal cold-shock-response context addendum. Local initialization
+    at 21:02:18.445284 UTC does not assert B11 publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000618
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000618
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000618
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: psychrotolerant-native
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just validate data/traits/environment/psychrotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-psychrotolerant-native
+- check_id: psychrotolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just validate-strict data/traits/environment/psychrotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-psychrotolerant-strict
+- check_id: psychrotolerant-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just verify-snippets --record data/traits/environment/psychrotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-snippets-network.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct network invocation passed: six fields over three references, three
+    VERIFIED and three NOT_IN_ABSTRACT. Manual audit found five literal spans and
+    one PDF typography normalization; no current initial failed snippet attempt.'
+  evidence_ids:
+  - check-psychrotolerant-snippets-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000618
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000618
+  summary: No gene/protein classes or instances in this NONMECHANISTIC graph; no forced
+    accession or detailed stress-response query.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-psychrotolerant-native
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-native.log
+  locator: Executed 2026-10-21T22:06:38.808436+00:00 through 2026-10-21T22:06:39.384064+00:00;
+    metadata psychrotolerant-native.json
+  accessed_at: '2026-10-21T22:06:39.384064Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: e6ed8a3a22845177b9dbf611b1ebe43a933ab3016a3545565552bf0a17edbcde
+- evidence_id: check-psychrotolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-strict.log
+  locator: Executed 2026-10-21T22:06:38.808434+00:00 through 2026-10-21T22:06:39.766973+00:00;
+    metadata psychrotolerant-strict.json
+  accessed_at: '2026-10-21T22:06:39.766973Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: 614c93f82452b691b9e3022bb4c5f7b198d8849ea5d8de0200f27bb5c0027b82
+- evidence_id: check-psychrotolerant-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-snippets-network.log
+  locator: Executed 2026-10-21T22:06:44.362994+00:00 through 2026-10-21T22:06:49.327029+00:00;
+    metadata psychrotolerant-snippets-network.json
+  accessed_at: '2026-10-21T22:06:49.327029Z'
+  support: context_only
+  summary: 'Direct network invocation passed: six fields over three references, three
+    VERIFIED and three NOT_IN_ABSTRACT. Manual audit found five literal spans and
+    one PDF typography normalization; no current initial failed snippet attempt.'
+  snapshot_sha256: 0970de0bfdcc63febd92004a8a6d6acd309f2b111f601dca889a90266f393692
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual B11 final QC at its original time, qualified against B12 bytes;
+    independent of pending publication.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/psychrotolerant.yaml
+  locator: Entire current 308-line record
+  accessed_at: '2026-10-21T22:06:11.366586Z'
+  support: supports
+  summary: Eleven nodes, eight edges, six snippets, two canonical examples and twenty-one
+    events covered.
+  snapshot_sha256: 313c668f6414ba4bc84ef8893c4db094d6037e458290a0354cb584b1767b129e
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Referent-based identity and optional protein applicability.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Source scope, literal copied snippets and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Current node facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Whole-record identity, evidence, graph, provenance and readiness checks.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: predicate-mapping-primary
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Conditional RO wildcard rows and compatible local relation gates.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and all current byte comparisons bound.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck; no new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Local-only initialization on verified prior local commit; publication status
+    remains separately documented.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:06:33.932000Z'
+  support: supports
+  summary: All 94 inputs verified before grounding assessment.
+  snapshot_sha256: 17f3868ab786f227cb1e207c42bdc678788712ccc08c226b8c9117a4daae1a63
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/identity-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.788771Z'
+  support: supports
+  summary: Exact active identity, direct parent, explicit obsolete replacements and
+    official canonical names.
+  snapshot_sha256: e0217c8f503a566c35e48c5a49a1b0649269b0107ec64fec4ba0c8448a985e69
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/node-edge-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.789632Z'
+  support: supports
+  summary: All eleven nodes, eight edges and three components; formal roles separate
+    from biology.
+  snapshot_sha256: cb0696ea92c1ecf401aa772410af098fe257156c5f7bdf25882d8c0737eed748
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.790701Z'
+  support: supports
+  summary: Record and conditional mappings; direct preimage-guarded internal grounding
+    writer distinguished from context.
+  snapshot_sha256: 38a9c61de6cd093b3f7448a3074994d9fbd1866e8efc1a67cec9696d18046060
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/expression-and-readiness-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.791196Z'
+  support: supports
+  summary: Exact canonical/example catalog applicability and no protein instances.
+  snapshot_sha256: 92bff7a3282bb8ef17377b09740e57650e8c1079fcbc7c5e8d412bc9657b371f
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/catalog-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:34.138531Z'
+  support: supports
+  summary: Original catalog/runner receipts separate from current copies.
+  snapshot_sha256: 77cd59674e3eff13f9a6b62d61db76d760f8e43b2c1253082edac7cf722a40dc
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/local-authority-and-mapping-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:51.097450Z'
+  support: supports
+  summary: Actual v2/v3/v8/v83 rows, current internal response definition and mapping
+    gates.
+  snapshot_sha256: a550c261efab8aa82cf0031ff98eb0f24bd6cbe0b3ed50f7155bbf9a3419e9ce
+- evidence_id: metpo-supplement
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/metpo-psychrotolerant-supplement.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:50.863276Z'
+  support: supports
+  summary: Additional exact lexical selection from the captured raw METPO snapshot.
+  snapshot_sha256: c80448d0c50bff66bfda55aa10b30cc2b70abc2874bfcf819917321e80858902
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/owner-primary-excerpts.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:51.098105Z'
+  support: supports
+  summary: Actual selected writer guards; conservative input capture does not imply
+    full script reading.
+  snapshot_sha256: af4a41d5b8346460164f03999f09936ad610d9fb5d1abc0fe6b0fdee92439655
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.791675Z'
+  support: supports
+  summary: Four complete contextual histories and twenty-one events read.
+  snapshot_sha256: 4512afbd0a053654666c8e857f5926e465d36f6f772cf3dd9136c11fcd71c236
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:11:05.381798Z'
+  support: supports
+  summary: Frozen thirty grounding artifacts verified.
+  snapshot_sha256: 627968c1d43d753188422f5ed422bb0f85df9b2df1ab0e0548b440976a7e07a0
+- evidence_id: ground-disposition
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/documentary-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:10:54.791417Z'
+  support: supports
+  summary: Grouped imported-role finding, bounded human link and explicit local predicate
+    limitations.
+  snapshot_sha256: 2074bfdabe69937f5e082530fac36056492d31b707516c804a6410c7be4ac3c2
+- evidence_id: discovery-correction
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/discovery-projection-correction.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:34.133973Z'
+  support: supports
+  summary: Qualified discovery replaces incidental bare-taxonomy-number matches; target
+    human search remains unchanged.
+  snapshot_sha256: 99ece8c90e254db72b14be55b9d3f6e46699dc5af9e9bb1335699ff43ca72b99
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Selected current/parent XML and lexical candidates
+  accessed_at: '2026-10-21T22:06:56.794850Z'
+  support: supports
+  summary: Exact broad psychrotolerant preference and direct parent; nearby numeric
+    bins do not replace it.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Actual RO2211/2212/2213 rows
+  accessed_at: '2026-10-21T22:06:56.680252Z'
+  support: supports
+  summary: Processual regulation has process domain and range; positive current process
+    subjects remain distinct.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: pato-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/pato.db
+  locator: Actual PATO0001306 rows
+  accessed_at: '2026-10-21T22:06:56.683629Z'
+  support: supports
+  summary: Relatively low temperature is a physical condition/quality, not automatically
+    a process.
+  snapshot_sha256: 179ab512b5c3a8827c74e2a496da575e2908a84740429deef265d58c9ce61d3b
+- evidence_id: manifests-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+  locator: row 3
+  accessed_at: '2026-10-21T22:09:51.097450Z'
+  support: supports
+  summary: State-to-observable-phenotype prose with broad scaffold endpoints; current
+    process interpretation remains qualified.
+  snapshot_sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+- evidence_id: fluidity-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+  locator: row 8
+  accessed_at: '2026-10-21T22:09:51.097450Z'
+  support: supports
+  summary: Membrane fluidity is a physical quality under this local proposal.
+  snapshot_sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+- evidence_id: confers-primary
+  kind: authority
+  reference: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+  locator: row 3
+  accessed_at: '2026-10-21T22:09:51.097450Z'
+  support: supports
+  summary: Presence/activity/state can confer a trait; broad formal endpoints and
+    current process-to-trait mapping gates retained.
+  snapshot_sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+- evidence_id: cold-response-primary
+  kind: authority
+  reference: data/traits/physiology/cold_shock_response.yaml
+  locator: captured identity/definition fields only
+  accessed_at: '2026-10-21T22:09:51.097450Z'
+  support: supports
+  summary: Internal response identifier denotes a process; detailed mechanism content
+    is outside declared review scope.
+  snapshot_sha256: 5e131592cffeb87cd2081b3c70a885c3a9d667a52c02cd82537691a1ca57be61
+- evidence_id: taxon-listeria
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/taxon1639.xml
+  locator: Whole successful official taxonomy response; typed names exclude category
+    strings
+  accessed_at: '2026-10-21T22:08:58.940545Z'
+  support: supports
+  summary: Official Listeria monocytogenes species identity, independent of reported
+    phenotype.
+  snapshot_sha256: 898b8061ec49ea39c3d00a6a4a1c690725adc352a2cff081bc3eca02313a3c56
+- evidence_id: taxon-fluorescens
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-grounding-agent/taxon294.xml
+  locator: Whole successful official taxonomy response; typed names exclude category
+    strings
+  accessed_at: '2026-10-21T22:08:59.011052Z'
+  support: supports
+  summary: Official Pseudomonas fluorescens species identity does not identify the
+    paper strain MPC6.
+  snapshot_sha256: 21b46c87e0e5af775b371bf29f4a8574308da49ca33d4e84f060d9c4ede3d7b8
+- evidence_id: meta-definition
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/definition-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T10:00:01.461116Z'
+  support: supports
+  summary: Reused EMBO review identity/abstract, including generic physical membrane
+    context; not the assigned definition source DOI.
+  snapshot_sha256: 24d64254a2baba7c573dff7ae523cc0e00d30e297c4f1fd7aa3a23c51a057059
+- evidence_id: meta-annual
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/annual-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T10:00:02.042457Z'
+  support: supports
+  summary: Indexed identity, literal lipid phrase and generic membrane context only.
+  snapshot_sha256: 801da630644a181211f991a6f21c49b178e42a65f615c4eebd8196bc29244588
+- evidence_id: meta-solutes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/solutes-metadata.json
+  locator: Actual retained indexed metadata/abstract; original request time
+  accessed_at: '2026-10-21T10:00:02.275195Z'
+  support: context_only
+  summary: Zero-hit Europe PMC response is a retrieval diagnostic; positive DOI identity
+    comes from separate Crossref.
+  snapshot_sha256: d0eef7c61f38fab3f0b2a3d73127915d63da077e0617bff6ac487ec290045df3
+- evidence_id: meta-solutes-crossref
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/solutes-crossref.json
+  locator: Positive retained Crossref identity; original request time
+  accessed_at: '2026-10-21T10:00:29.852181Z'
+  support: supports
+  summary: AMTT review identity positive; exact solute/EPS notes remain body-unverified.
+  snapshot_sha256: 9f5ed8f0f9d07aface3f482bc888a6c47a4d9683abf51f76b16bf56412857cf7
+- evidence_id: body-embo
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/definition-author.pdf
+  locator: 'Author PDF p385: generic classification and literal membrane/CSP spans'
+  accessed_at: '2026-10-21T10:03:39.641646Z'
+  support: supports
+  summary: Review includes psychrotolerant forms within a broad cold-adapted scope.
+    Literal CSP phrase requires only line-wrap dehyphenation; no detailed efficacy
+    conclusion.
+  snapshot_sha256: 5a7678c6418efbcccf54d91c55eea1c08f2a4ed0ce0e07a6995d5903b9a0eb2e
+- evidence_id: meta-guineae
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/guineae-metadata.json
+  locator: Actual indexed metadata/abstract at its request time
+  accessed_at: '2026-10-21T22:07:32.294539Z'
+  support: supports
+  summary: Assigned definition source title/abstract identifies psychrotolerant environmental
+    strains spanning low and moderate temperatures; full lipid causal mechanism is
+    not established.
+  snapshot_sha256: 4cbe1b5638cfca7072c11d4b752e4481cc48d258b4b6336c13f9cf9655eb675a
+- evidence_id: meta-listeria
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/listeria-metadata.json
+  locator: Actual indexed metadata/abstract at its request time
+  accessed_at: '2026-10-21T22:07:08.870667Z'
+  support: supports
+  summary: Assigned review identity/abstract only; refrigeration-growth classification
+    is separately supported by selected primary body.
+  snapshot_sha256: 0d2b7cc44a1881cfe5b19564e663bf382f994f9d0fd8902d092c7c7fedd3e9cb
+- evidence_id: meta-fluorescens
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/fluorescens-metadata.json
+  locator: Actual indexed metadata/abstract at its request time
+  accessed_at: '2026-10-21T22:07:08.855366Z'
+  support: supports
+  summary: Actual title/abstract identifies Pseudomonas sp. MPC6 in the fluorescens
+    phylogroup, distinct from exact species attribution.
+  snapshot_sha256: f3149e8638246255b7af7c8d7c40db2d5e915b268f00d28ff98986a6fffc7ec4
+- evidence_id: meta-spectrum
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/spectrum-metadata.json
+  locator: Actual indexed metadata/abstract at its request time
+  accessed_at: '2026-10-21T22:07:08.906527Z'
+  support: supports
+  summary: Indexed identity and abstract only; antibiotic/sensor experimental efficacy
+    remains unassessed.
+  snapshot_sha256: 745eedfa2c11814739b07a4d944725bf565eb4e3f9c6b207ba0d31b967563f98
+- evidence_id: meta-hopanoid
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/hopanoid-metadata.json
+  locator: Actual indexed metadata/abstract at its request time
+  accessed_at: '2026-10-21T22:07:08.865512Z'
+  support: supports
+  summary: Indexed review identity and generic environmental adaptation scope; numerical
+    observation separately bound to actual body.
+  snapshot_sha256: da5cffab81fe0e039c6fcec8f318b2715f5604eaf8722ea6f63f944178ed447b
+- evidence_id: body-listeria
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/listeria.xml
+  locator: zero-based .//body//p[11], first two sentences only
+  accessed_at: '2026-10-21T22:07:32.953708Z'
+  support: supports
+  summary: Reported psychrotolerant/refrigeration-growth classification positive;
+    all detailed pathogen mechanisms and interventions unassessed.
+  snapshot_sha256: 99d9a418aadfff7d05f8603aad853156ed9a11b9bc7ba7060698055808d1da4d
+- evidence_id: body-fluorescens
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/fluorescens.xml
+  locator: zero-based .//body//p[23]/[24] taxonomy and selected p[48] classification
+  accessed_at: '2026-10-21T22:07:32.991299Z'
+  support: supports
+  summary: MPC6 is a proposed distinct species in the fluorescens phylogroup. This
+    does not support the exact species294 attribution.
+  snapshot_sha256: 4b07beac94a902da2f6fb28ac646745292607cecf657471871ae2aa212f5ca96
+- evidence_id: body-spectrum
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/spectrum.xml
+  locator: zero-based .//body//p[1], fourth/final sentence; locator addendum controls
+  accessed_at: '2026-10-21T22:07:32.905772Z'
+  support: supports
+  summary: Generic temperature-induced membrane rigidification/thickening supported;
+    sensor/AMR/intervention efficacy remains unassessed.
+  snapshot_sha256: 4e57f358369566231e022520fc5b5adad7b8c182adfa282d9ed404fa3298a561
+- evidence_id: body-hopanoid-pmc
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/hopanoid-pmc.html
+  locator: zero-based HTML p[27], first four sentences only
+  accessed_at: '2026-10-21T22:07:50.938485Z'
+  support: supports
+  summary: Reported environmental Methylovulum observation is taxon-scoped; no universal
+    response or research recommendation inferred.
+  snapshot_sha256: bb09a59c07f43ff0af177f89b624c8b5d4841e513ed0d478120954a016342889
+- evidence_id: embo-derived-text
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/definition-author-raw.txt
+  locator: Retained derived reading-order text, lines 7–18/24–35/46–61
+  accessed_at: '2026-10-21T21:57:11.990598Z'
+  support: context_only
+  summary: Original PDF acquisition, prior text derivation and current copying are
+    separate.
+  snapshot_sha256: 71ef77b88e880420f533454926cac17498cbf8db380465139c888057115143e8
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/source-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.304882Z'
+  support: supports
+  summary: Eight-work source audit; source outcome UNKNOWN for excluded detailed and
+    unavailable note claims.
+  snapshot_sha256: f04f4757d58b35a11ef974875094cabb6c82b887d14693a845c0b77a2e098cec
+- evidence_id: source-ledger
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.266413Z'
+  support: supports
+  summary: Eight bibliographic identities and actual title/abstract/body scopes.
+  snapshot_sha256: b1938db4067fca4269238129737298c66f85c43cca5d82dfb051efa4d853525c
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/placement-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.266609Z'
+  support: supports
+  summary: Thirteen external placements; ten grounding fields separately accounted
+    for.
+  snapshot_sha256: a7ad70d62329368ea67018e963b4689ad60f1302a8986e20a43457d7133a90a2
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/snippet-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.268149Z'
+  support: supports
+  summary: 'Six snippets: five literal and one PDF line-wrap typography normalization.'
+  snapshot_sha256: ddbc0c35d753b432860c6276bd6c9f8212a2cc30d3407f25d3c9cb3209395fa1
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/node-edge-source-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.268302Z'
+  support: supports
+  summary: All eleven source node and eight edge assessments; detailed efficacy excluded.
+  snapshot_sha256: 6195c070f20739d79b9c3b9e2044ea424f9193132949f1facbf62dff0c54ef43
+- evidence_id: source-notes
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/note-attribution-ledger.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.268452Z'
+  support: supports
+  summary: All existing edge notes accounted for, with source and taxon limitations.
+  snapshot_sha256: 398497c22146ece18cdf9ead7ee9ba5db78b376131fcd86680c7f9a03b840816
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/publication-status-audit.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.269189Z'
+  support: supports
+  summary: Actual returned notice fields and bounded publication-status audit.
+  snapshot_sha256: 70798575e1a0d8b31c47b54b33b8d54a6809c7c33b182b50cf38975d5aa72632
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/primary-reading-scope.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.269425Z'
+  support: supports
+  summary: Actual selected reading; spectrum sentence position corrected separately.
+  snapshot_sha256: e9e5692dd5aa5775d7b121337732da169da9a68f26e92f817ad7c9d06cac959e
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/access-limits.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.269341Z'
+  support: supports
+  summary: Old failed API/BioC/publisher routes distinct from actual successful current
+    body requests.
+  snapshot_sha256: 031585ab8dc339b50034e9356add729aebb6a18848aa8b73649cbedb289c8c3b
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/source-reuse-receipt.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:08.128636Z'
+  support: supports
+  summary: Original acquisitions/derivation are distinct from current copies.
+  snapshot_sha256: 8e0204161810e9669a2113e3d9b8da394752ba99d031d16dea8a5c3d984e1aaa
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/canonical-assessment.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.268539Z'
+  support: supports
+  summary: Existing Listeria phenotype positive; Pseudomonas species versus phylogroup
+    mismatch.
+  snapshot_sha256: d68ef2bf2e850b1cfa1b77c2721e259b1c8734c71073e9f5bd5183ca86abf707
+- evidence_id: source-locators
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/selected-primary-locators.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.264599Z'
+  support: supports
+  summary: Exact primary locations with separate corrected spectrum sentence locator.
+  snapshot_sha256: f24300e06fb2459ec14e373dc144d86425306e4f4642ef3b31b60d171f95bcdd
+- evidence_id: source-locator-addendum
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/spectrum-sentence-locator-addendum.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:11:04.244522Z'
+  support: supports
+  summary: 'Append-only locator correction: spectrum paragraph1 fourth/final sentence,
+    no science change.'
+  snapshot_sha256: f4277534739e2ec6863c4b9233b66a3ceb9b8c37e7e4b89e1e9548a63c4f9419
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/native-check-context.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.269798Z'
+  support: supports
+  summary: Native/strict/direct network snippet commands passed; six fields with three
+    VERIFIED and three NOT_IN_ABSTRACT.
+  snapshot_sha256: b148e45a6b88d9924e9efad064a3f45ca4f82294a6991f46f710856998d8084f
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/capture-verification.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:08.121896Z'
+  support: supports
+  summary: All 94 inputs verified before source assessment.
+  snapshot_sha256: 51b3089cd5a7bda92b18ad81438fad28f606599a53381f94777d90ebee347a0a
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-agent/evidence-manifest.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:09:29.310626Z'
+  support: supports
+  summary: Frozen fifty-three source artifacts verified.
+  snapshot_sha256: 0f6e2809b0338c152b128a7e469e3d0d16d4046d671b734ccbc0c399a306eb71
+- evidence_id: root-reading-101
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-root/identity-ontology-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:16.820982Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: feef6a85fa8e8f7cbb95b3deb40cc17eef253302c75b55e973af3c83ec3e6bf7
+- evidence_id: root-reading-102
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-root/metadata-identity-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:07:52.482887Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: 6db452ffcdab5bc5f0743c25dfc77b5e16d9b4e8c6b212252d78f7afe5fc8017
+- evidence_id: root-reading-103
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-root/owner-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:11:23.471707Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: 0ee0eaa4f073fdf316b6084c780195d9dbdc06b058ea84f0db309f29c329fea5
+- evidence_id: root-reading-104
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-root/provenance-taxonomy-catalog-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:11:28.162064Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: b93d413446d0ee21a79dbd031d3ebf62f17b1cfb3401f26100d184afa6054e02
+- evidence_id: root-reading-105
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-source-root/selected-primary-reading.json
+  locator: Derived audit or bounded reading/access receipt; primary bytes separately
+    identified
+  accessed_at: '2026-10-21T22:11:02.743883Z'
+  support: supports
+  summary: Only actual bounded root reading/observation scope; receipt hash is not
+    a primary-body hash.
+  snapshot_sha256: b9b8680f8d5d595612660ce84ec7ba902b53955c6ae73c9dadd1fab6905248f7
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T22:13:10.620023Z'
+  support: supports
+  summary: Exact fields, disposition and bindings verified.
+  snapshot_sha256: 65747a12da53b5d66549b17faf7079479d4225c9244ff01e55264e7a3940d45b
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/psychrotolerant-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T22:13:18.639220Z'
+  support: supports
+  summary: Final findings control serialization without expanding excluded biological
+    scope.
+  snapshot_sha256: 2a2c838abc1d8af55849bf82a909eb68bdb6e268933629d530ae39c757da90b3
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active broad preference and current groundings'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Exact METPO1000618 and direct parent1000613 match current broad psychrotolerant
+    preference, with three explicit obsolete replacements. PATO low-temperature condition,
+    local membrane-fluidity quality and internal cold-shock-response process retain
+    their actual facets. Nearby quantitative bins do not replace this class.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - metpo-supplement
+  - pato-primary
+  - fluidity-primary
+  - cold-response-primary
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: non-obligate low-temperature growth'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Assigned Guineae title/abstract explicitly describes psychrotolerant strains
+    with low-to-moderate temperature growth, supporting the representative classification.
+    Exact active ontology wording is positive. The reused EMBO review is a separate
+    broad cold-adaptation source, not the assigned definition DOI.
+  evidence_ids:
+  - record
+  - sources
+  - meta-guineae
+  - identity
+  - metpo-primary
+  - source-reading
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: direct parent and local relation semantics'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Temperature-preference parent is appropriate. Local confers supports current
+    process-to-trait form; internal response grounding denotes a process. Manifests-as
+    state/process interpretation remains qualified under broad scaffold endpoints,
+    not a confirmed hard-domain defect.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - confers-primary
+  - manifests-primary
+  - cold-response-primary
+  - local-authority
+  - node-edges
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: all assigned citations and placements'
+  outcome: unknown
+  target_ids:
+  - METPO:1000618
+  summary: Eight bibliographic identities, generic classification and selected literal/physical
+    passages are supported within their actual scopes. Solute/EPS bodies and detailed
+    efficacy remain unknown or unassessed. The canonical species attribution is a
+    separate confirmed concern. The append-only locator correction controls spectrum
+    sentence numbering.
+  evidence_ids:
+  - sources
+  - source-ledger
+  - placements
+  - source-status
+  - source-access
+  - source-reuse
+  - node-sources
+  - source-locator-addendum
+  details: '{"completed_at": "2026-10-21T22:09:29.268302+00:00", "nodes": [{"index":
+    0, "node_id": "psychrotolerant_trait", "field_path": "causal_graphs[0].nodes[0]",
+    "node_type": "TRAIT", "source_outcome": "supported_generic", "assessment": "Definition
+    and representative guineae classification support non-obligate low-temperature
+    growth."}, {"index": 1, "node_id": "low_temperature", "field_path": "causal_graphs[0].nodes[1]",
+    "node_type": "ENVIRONMENTAL_FACTOR", "source_outcome": "supported_generic", "assessment":
+    "Generic ambient-temperature context; no precise numerical criterion asserted."},
+    {"index": 2, "node_id": "membrane_fluidity", "field_path": "causal_graphs[0].nodes[2]",
+    "node_type": "QUALITY", "source_outcome": "supported_generic", "assessment": "Generic
+    physical membrane fluidity, supported in EMBO/Annual Review physical context."},
+    {"index": 3, "node_id": "facultative_lipid_remodeling", "field_path": "causal_graphs[0].nodes[3]",
+    "node_type": "BIOLOGICAL_PROCESS", "source_outcome": "qualified", "assessment":
+    "Contextual process; exclusivity or universality to psychrotolerance unestablished."},
+    {"index": 4, "node_id": "cold_shock_response", "field_path": "causal_graphs[0].nodes[4]",
+    "node_type": "BIOLOGICAL_PROCESS", "source_outcome": "qualified", "assessment":
+    "Literal CSP context positive; detailed efficacy and exact internal grounding
+    independently assessed."}, {"index": 5, "node_id": "membrane_rigidity", "field_path":
+    "causal_graphs[0].nodes[5]", "node_type": "QUALITY", "source_outcome": "supported_generic",
+    "assessment": "Physical rigidification/thickening supported in spectrum introductory
+    sentence."}, {"index": 6, "node_id": "unsaturated_hopanoids", "field_path": "causal_graphs[0].nodes[6]",
+    "node_type": "CHEMICAL", "source_outcome": "supported_taxon_context", "assessment":
+    "Assigned environmental Methylovulum observation supports unsaturation change;
+    no all-taxa universal inference."}, {"index": 7, "node_id": "compatible_solute_accumulation",
+    "field_path": "causal_graphs[0].nodes[7]", "node_type": "BIOLOGICAL_PROCESS",
+    "source_outcome": "unknown", "assessment": "Exact solute source body unavailable;
+    detailed protective efficacy UNASSESSED_SCOPE."}, {"index": 8, "node_id": "protein_membrane_stability",
+    "field_path": "causal_graphs[0].nodes[8]", "node_type": "QUALITY", "source_outcome":
+    "unknown", "assessment": "Resulting integrity claim remains contextual; protective
+    efficacy UNASSESSED_SCOPE."}, {"index": 9, "node_id": "extracellular_polymeric_substances",
+    "field_path": "causal_graphs[0].nodes[9]", "node_type": "CHEMICAL", "source_outcome":
+    "unknown", "assessment": "EPS source body unavailable; detailed cryoprotective
+    efficacy UNASSESSED_SCOPE."}, {"index": 10, "node_id": "freeze_thaw_cryoprotection",
+    "field_path": "causal_graphs[0].nodes[10]", "node_type": "BIOLOGICAL_PROCESS",
+    "source_outcome": "unknown", "assessment": "Protection outcome attributed by record;
+    detailed efficacy and methods UNASSESSED_SCOPE."}], "edges": [{"index": 0, "field_path":
+    "causal_graphs[0].edges[0]", "subject": "low_temperature", "predicate": "decreases",
+    "object": "membrane_fluidity", "source_outcome": "supported_generic", "assessment":
+    "Generic membrane physical challenge supported by D’Amico abstract; detailed adaptation
+    efficacy not assessed.", "reference": "DOI:10.1038/sj.embor.7400662"}, {"index":
+    1, "field_path": "causal_graphs[0].edges[1]", "subject": "facultative_lipid_remodeling",
+    "predicate": "regulates", "object": "membrane_fluidity", "source_outcome": "supported_generic",
+    "assessment": "Annual Review abstract supports temperature-dependent unsaturation
+    and membrane-fluidity context; broad mechanism exclusivity remains unestablished.",
+    "reference": "DOI:10.1146/annurev-micro-091313-103612"}, {"index": 2, "field_path":
+    "causal_graphs[0].edges[2]", "subject": "cold_shock_response", "predicate": "confers",
+    "object": "psychrotolerant_trait", "source_outcome": "qualified", "assessment":
+    "Literal cold-shock-protein phrase verified with PDF dehyphenation. It does not
+    alone establish a universal or psychrotolerance-exclusive hallmark; detailed efficacy
+    UNASSESSED_SCOPE.", "reference": "DOI:10.1038/sj.embor.7400662"}, {"index": 3,
+    "field_path": "causal_graphs[0].edges[3]", "subject": "facultative_lipid_remodeling",
+    "predicate": "manifests as", "object": "psychrotolerant_trait", "source_outcome":
+    "qualified", "assessment": "Guineae title/abstract positively supports the trait
+    endpoint only, as the note states. It does not establish the entire lipid-remodeling
+    causal pathway; retained attribution limitation.", "reference": "DOI:10.1099/ijs.0.65141-0"},
+    {"index": 4, "field_path": "causal_graphs[0].edges[4]", "subject": "low_temperature",
+    "predicate": "causes", "object": "membrane_rigidity", "source_outcome": "supported_generic",
+    "assessment": "Exact generic physical temperature/membrane statement in spectrum
+    introduction. All detailed sensor/antibiotic/method efficacy UNASSESSED_SCOPE.",
+    "reference": "DOI:10.1128/spectrum.03925-23"}, {"index": 5, "field_path": "causal_graphs[0].edges[5]",
+    "subject": "low_temperature", "predicate": "increases", "object": "unsaturated_hopanoids",
+    "source_outcome": "supported_taxon_context", "assessment": "Actual assigned HTML
+    paragraph supports the reported 27–49% observation in environmental Methylovulum
+    psychrotolerans. Generalized universality is not asserted or established.", "reference":
+    "DOI:10.1007/s42770-023-01057-4"}, {"index": 6, "field_path": "causal_graphs[0].edges[6]",
+    "subject": "compatible_solute_accumulation", "predicate": "protects", "object":
+    "protein_membrane_stability", "source_outcome": "unknown", "assessment": "Assigned
+    solute source identity positive; body and exact note unavailable. Detailed protective
+    efficacy UNASSESSED_SCOPE; access limits are not biological refutation.", "reference":
+    "DOI:10.37256/amtt.5220244537"}, {"index": 7, "field_path": "causal_graphs[0].edges[7]",
+    "subject": "extracellular_polymeric_substances", "predicate": "provides", "object":
+    "freeze_thaw_cryoprotection", "source_outcome": "unknown", "assessment": "Assigned
+    EPS source identity positive; body and exact note unavailable. Detailed protection
+    efficacy UNASSESSED_SCOPE; no false-source inference.", "reference": "DOI:10.37256/amtt.5220244537"}],
+    "scope": "All 11 nodes/eight edges accounted for. Source support is distinct from
+    formal imported relation semantics. Detailed pathogen cold survival, defense,
+    fitness, AMR, ROS, vectors, intervention efficacy and methods UNASSESSED_SCOPE."}'
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: native and manual copied-span coverage'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Six snippets have five literal matches and one PDF line-wrap dehyphenation
+    without omitted substantive words. Native abstract-only results remain three VERIFIED
+    and three NOT_IN_ABSTRACT; selected title/body reading supplies further support.
+  evidence_ids:
+  - snippets
+  - source-reading
+  - playbook
+  - native-checks
+  - body-embo
+  - embo-derived-text
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: species identity and source attribution'
+  outcome: concern
+  target_ids:
+  - METPO:1000618
+  summary: Listeria basic refrigeration-growth classification is explicitly reported,
+    with detailed pathogen mechanisms excluded. PMID31178851 instead describes Pseudomonas
+    sp. MPC6 in the fluorescens phylogroup and proposes a distinct species; that does
+    not identify NCBITaxon294. The species ontology ID is valid, but the assigned
+    source does not support this exact example.
+  evidence_ids:
+  - canonical-scope
+  - sources
+  - meta-fluorescens
+  - body-fluorescens
+  - body-listeria
+  - taxon-listeria
+  - taxon-fluorescens
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all eleven current referents'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Current environmental condition, membrane/stability qualities, explicit
+    processes and chemical aggregates retain meaningful facets. Cold-shock response
+    is an internal process rather than a forced trait retype. No protein accession
+    or automatic facet change is required.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - pato-primary
+  - fluidity-primary
+  - cold-response-primary
+  details: '[{"index": 0, "node": {"node_id": "psychrotolerant_trait", "label": "psychrotolerant",
+    "node_type": "TRAIT", "grounding": "METPO:1000618", "description": "Growth at
+    low temperatures without an obligate low-temperature preference."}, "assessment":
+    "supported", "reason": "Exact self-grounded broad cold-tolerant growth trait;
+    no optimum or obligatory-cold equivalence imposed."}, {"index": 1, "node": {"node_id":
+    "low_temperature", "label": "low temperature", "node_type": "ENVIRONMENTAL_FACTOR",
+    "description": "Ambient temperature below the mesophile optimum range.", "grounding":
+    "PATO:0001306"}, "assessment": "supported", "reason": "Ambient low temperature
+    is an environmental condition supported by a PATO temperature quality; no blanket
+    enum exclusion is applied."}, {"index": 2, "node": {"node_id": "membrane_fluidity",
+    "label": "membrane fluidity", "node_type": "QUALITY", "description": "Physical
+    state of the cytoplasmic membrane supporting transport and bioenergetics.", "grounding":
+    "METPO:1007505"}, "assessment": "supported", "reason": "Membrane lipid mobility
+    is explicitly QUALITY, consistent with local v3 and maintained schema."}, {"index":
+    3, "node": {"node_id": "facultative_lipid_remodeling", "label": "facultative lipid
+    remodeling", "node_type": "BIOLOGICAL_PROCESS", "description": "Cold-induced shifts
+    in lipid composition without obligate low-temperature specialization."}, "assessment":
+    "supported", "reason": "Lipid-composition remodeling describes an explicit biological
+    process rather than the fatty-acid material it changes."}, {"index": 4, "node":
+    {"node_id": "cold_shock_response", "label": "cold-shock response", "node_type":
+    "BIOLOGICAL_PROCESS", "description": "Cold-shock-protein induction supporting
+    transient low-temperature acclimation.", "grounding": "traitmech:000206"}, "assessment":
+    "supported", "reason": "Cold-shock response is an induced process, compatible
+    with captured internal000206 and v83. Identity assessment does not certify detailed
+    protein induction or pathogen efficacy."}, {"index": 5, "node": {"node_id": "membrane_rigidity",
+    "label": "membrane rigidification and thickening", "node_type": "QUALITY", "description":
+    "Cold-induced increase in membrane order and bilayer thickness approaching a gel-phase
+    transition."}, "assessment": "qualified_positive", "reason": "Although its label
+    uses rigidification, its description states increased order/thickness and current
+    QUALITY facet is supported by exact maintained normalization; no extra retype
+    finding."}, {"index": 6, "node": {"node_id": "unsaturated_hopanoids", "label":
+    "unsaturated hopanoids", "node_type": "CHEMICAL", "description": "Hopanoid lipids
+    whose unsaturation rises at low temperature, aiding membrane homeostasis."}, "assessment":
+    "supported", "reason": "Unsaturated hopanoids are material chemical constituents,
+    not the process of synthesis or a measured concentration."}, {"index": 7, "node":
+    {"node_id": "compatible_solute_accumulation", "label": "compatible solute accumulation",
+    "node_type": "BIOLOGICAL_PROCESS", "description": "Accumulation of compatible
+    solutes that stabilize proteins and membranes under cold stress."}, "assessment":
+    "supported", "reason": "Compatible-solute accumulation explicitly denotes a process.
+    No inferred enzyme/accession requirement."}, {"index": 8, "node": {"node_id":
+    "protein_membrane_stability", "label": "protein and membrane stability under cold
+    stress", "node_type": "QUALITY", "description": "Maintained integrity of proteins
+    and membranes during low-temperature stress."}, "assessment": "supported", "reason":
+    "Maintained structural integrity of proteins and membranes is a positive QUALITY.
+    Current protects relation has compatible positive wording; no inherited previous-record
+    polarity finding."}, {"index": 9, "node": {"node_id": "extracellular_polymeric_substances",
+    "label": "extracellular polymeric substances (EPS)", "node_type": "CHEMICAL",
+    "description": "Secreted polymeric matrix surrounding cells that acts as a cryoprotectant."},
+    "assessment": "supported", "reason": "Extracellular polymeric substances denote
+    secreted material matrix, compatible CHEMICAL aggregate without forced single
+    chemical ID."}, {"index": 10, "node": {"node_id": "freeze_thaw_cryoprotection",
+    "label": "cryoprotection against freeze-thaw cycles", "node_type": "BIOLOGICAL_PROCESS",
+    "description": "Protection of cells from damage during freeze-thaw cycling."},
+    "assessment": "qualified_positive", "reason": "Freeze-thaw cryoprotection is represented
+    as protection from damage, a processual reading. Detailed efficacy remains unassessed;
+    no automatic disposition retype."}]'
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all eight relation roles'
+  outcome: concern
+  target_ids:
+  - METPO:1000618
+  summary: 'Imported RO2211/2212/2213 roles conflict at edges 0/1/5: fluidity quality
+    and hopanoid chemical objects are independently decisive process-range mismatches.
+    Remodeling at edge1 is a valid process subject. Local confers, broad Biolink causes
+    and lexical protects/provides retain their own rules. Manifests-as remains an
+    interpretation limitation.'
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - local-authority
+  - owners
+  - ground-disposition
+  - challenge
+  - adjudication
+  details: '[{"index": 0, "edge": {"subject": "low_temperature", "predicate": "decreases",
+    "object": "membrane_fluidity", "description": "Low temperature reduces membrane
+    fluidity, requiring compensation.", "evidence": [{"reference": "DOI:10.1038/sj.embor.7400662",
+    "snippet": "decreased membrane fluidity", "notes": "Supports cold-end membrane
+    stress as the physical challenge for psychrotolerant growth."}], "predicate_id":
+    "RO:0002212"}, "assessment": "major", "reason": "RO2212 inherits process/process
+    fromRO2211. Current PATO-grounded low-temperature condition and explicit fluidity
+    QUALITY are not two processes. The quality object independently establishes mismatch
+    even if a temperature-change event were intended."}, {"index": 1, "edge": {"subject":
+    "facultative_lipid_remodeling", "predicate": "regulates", "object": "membrane_fluidity",
+    "description": "Facultative lipid remodeling maintains workable membrane fluidity
+    at low temperature.", "evidence": [{"reference": "DOI:10.1146/annurev-micro-091313-103612",
+    "snippet": "more unsaturated fatty acids", "notes": "Supports homoviscous adaptation
+    as the mechanism employed under cold exposure."}], "predicate_id": "RO:0002211"},
+    "assessment": "major", "reason": "RO2211 directly requires process/process. Remodeling
+    subject is a valid process; its explicit membrane-fluidity QUALITY object is not."},
+    {"index": 2, "edge": {"subject": "cold_shock_response", "predicate": "confers",
+    "object": "psychrotolerant_trait", "description": "The cold-shock response enables
+    acclimation to low temperature without obligate cold dedication.", "evidence":
+    [{"reference": "DOI:10.1038/sj.embor.7400662", "snippet": "Cold-shock proteins
+    have also been described", "notes": "Supports cold-shock proteins as a hallmark
+    facultative-cold adaptation."}], "predicate_id": "METPO:2007700"}, "assessment":
+    "supported", "reason": "Local v8 confers and maintained gates permit cold-shock
+    process to trait. This is not imported RO2327 and carries no copied material-executor
+    rule."}, {"index": 3, "edge": {"subject": "facultative_lipid_remodeling", "predicate":
+    "manifests as", "object": "psychrotolerant_trait", "description": "Facultative
+    lipid remodeling at low temperature manifests the psychrotolerant trait in representative
+    organisms.", "evidence": [{"reference": "DOI:10.1099/ijs.0.65141-0", "snippet":
+    "Pseudomonas guineae sp. nov., a novel psychrotolerant bacterium", "notes": "Supports
+    the trait endpoint in a representative organism."}], "predicate_id": "METPO:2007400"},
+    "assessment": "limitation", "reason": "Local v2 manifests-as prose names a physiological/molecular
+    state while the current subject is remodeling process. Broad scaffold domain/range
+    and process-to-phenotype usage leave a bounded interpretation question, not a
+    confirmed hard-domain finding."}, {"index": 4, "edge": {"subject": "low_temperature",
+    "predicate": "causes", "object": "membrane_rigidity", "description": "A low-temperature
+    shift causes membrane rigidification and thickening toward a gel-phase transition.",
+    "evidence": [{"reference": "DOI:10.1128/spectrum.03925-23", "notes": "Cold shock
+    causes membrane rigidification and concomitant thickening, potentially culminating
+    in a gel-phase transition."}], "predicate_id": "biolink:causes"}, "assessment":
+    "supported", "reason": "Actual Biolink causes and contributes-to/related-to ancestry
+    have broad named-thing endpoints. The temperature-shift wording can be causal
+    context; no imported RO process-only requirement inferred from mapping cross-references."},
+    {"index": 5, "edge": {"subject": "low_temperature", "predicate": "increases",
+    "object": "unsaturated_hopanoids", "description": "Decreasing growth temperature
+    increases the unsaturated hopanoid fraction as a compositional cold adaptation.",
+    "evidence": [{"reference": "DOI:10.1007/s42770-023-01057-4", "notes": "As the
+    growth temperature decreased from 20 to 4 C, the total percent of unsaturated
+    hopanoids increased from 27 to 49%."}], "predicate_id": "RO:0002213"}, "assessment":
+    "major", "reason": "RO2213 inherits process/process fromRO2211. Unsaturated-hopanoid
+    CHEMICAL object independently conflicts with process range; this remains true
+    if temperature subject is interpreted as an exposure event. No detailed response
+    efficacy judgment."}, {"index": 6, "edge": {"subject": "compatible_solute_accumulation",
+    "predicate": "protects", "object": "protein_membrane_stability", "description":
+    "Compatible solute accumulation stabilizes proteins and membranes during low-temperature
+    stress.", "evidence": [{"reference": "DOI:10.37256/amtt.5220244537", "notes":
+    "Compatible solutes depress freezing point, stabilize proteins and membranes,
+    scavenge radicals, and act as cryoprotectants."}]}, "assessment": "lexical_qualified",
+    "reason": "Ungrounded protects links an explicit accumulation process to positive
+    stability quality. No imported role constraint or negative polarity contradiction;
+    detailed protective efficacy is UNASSESSED_SCOPE."}, {"index": 7, "edge": {"subject":
+    "extracellular_polymeric_substances", "predicate": "provides", "object": "freeze_thaw_cryoprotection",
+    "description": "EPS surrounding cells provide cryoprotection against freeze-thaw
+    cycles.", "evidence": [{"reference": "DOI:10.37256/amtt.5220244537", "notes":
+    "EPS surrounding cells play a critical role in cold adaptation by providing protection
+    against freeze-thaw cycles and acting as cryoprotectants."}]}, "assessment": "lexical_qualified",
+    "reason": "Ungrounded provides links material EPS to a protective process. No
+    imported formal-role constraint and no invented biological mechanism; detailed
+    efficacy is UNASSESSED_SCOPE."}]'
+- assessment_id: biology
+  area: scope
+  topic: 'Native checklist: generic context and excluded detailed efficacy'
+  outcome: unknown
+  target_ids:
+  - METPO:1000618
+  summary: Generic environmental classification, existing reported phenotypes and
+    nonoperational physical context are distinguished from detailed pathogen cold-survival,
+    fitness, ROS-defense, AMR, vectors and intervention efficacy/methods, which remain
+    UNASSESSED_SCOPE. No experimental or mechanism repair is proposed.
+  evidence_ids:
+  - node-sources
+  - source-reading
+  - source-access
+  - ground-reading
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: NONMECHANISTIC applicability'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Three disclosed components, no protein classes and zero instances are proportionate
+    to this contextual graph. No mandatory connector, accession, extra example or
+    experiment is prescribed.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+  - ground-reading
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: bounded catalog applicability'
+  outcome: unknown
+  target_ids:
+  - METPO:1000618
+  summary: Exact Listeria, P. fluorescens and P. guineae names do not match the retained
+    20-organism / 28-dataset catalog. Other Pseudomonas species and source organisms
+    may be covered; they are not substituted. No strain-resolved gene/module or detailed
+    stress-response query was run.
+  evidence_ids:
+  - expression
+  - catalog-reuse
+  - taxon-listeria
+  - taxon-fluorescens
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: current assertions and conditional writers'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: Record owns canonical attribution and relation assertions. Shared predicate
+    mapping fills empty IDs and preserves existing nonempty IDs. The direct internal
+    cold-response writer checks a full ungrounded preimage; current grounded state
+    does not replay that preimage. Normalizers already agree with current qualities,
+    and sibling/context writers do not own these findings.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - ground-reading
+  - local-authority
+  - predicate-mapping-primary
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - METPO:1000618
+  summary: Twenty-one embedded events contain twenty AI events and an automated seed.
+    Four complete repository histories are contextual AI records; ignored-inclusive
+    194 matching paths and 67 structured review target arrays contain zero exact current
+    targets. Private or off-repository acceptance is not excluded.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual checks and local preparation'
+  outcome: supported
+  target_ids:
+  - METPO:1000618
+  summary: All 94 captured inputs match. Native, strict and direct network snippet
+    commands pass; both current official taxonomies succeeded without an invented
+    initial failure. Historical common failures/retries remain explicit. Actual prior
+    QC, qualification and local initialization do not assert B11 remote publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - native-checks
+  - taxon-listeria
+  - taxon-fluorescens
+  - check-psychrotolerant-native
+  - check-psychrotolerant-strict
+  - check-psychrotolerant-snippets-network
+findings:
+- finding_id: imported-process-roles
+  issue_key: psychrotolerant-imported-process-roles
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Imported process relations conflict with current endpoint referents
+  description: RO2211/2212/2213 require process endpoints. Current edges 0/1 use the
+    explicit membrane-fluidity quality as object, and edge5 uses material unsaturated
+    hopanoids. Those objects independently violate the process range even if a temperature
+    exposure event is intended. Preserve the valid remodeling process subject and
+    current node meanings; this is not a categorical ban on environmental nodes.
+  target_ids:
+  - METPO:1000618
+  field_paths:
+  - causal_graphs[0].edges[0]
+  - causal_graphs[0].edges[1]
+  - causal_graphs[0].edges[5]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - pato-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: RO wildcard mappings recur only for empty predicate fields; compatible local
+      gates remain separate.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: canonical-species-attribution
+  issue_key: psychrotolerant-canonical-species-attribution
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Phylogroup membership is assigned to an exact species
+  description: The PMID31178851 paper describes psychrotolerant Pseudomonas sp. MPC6
+    as belonging to the fluorescens phylogroup and proposes a distinct species. This
+    is not identification as Pseudomonas fluorescens NCBITaxon294. The cold-growth
+    phenotype for the paper strain remains positive; the finding concerns exact canonical
+    attribution, not a denial that P. fluorescens can be cold tolerant.
+  target_ids:
+  - METPO:1000618
+  field_paths:
+  - canonical_examples[1]
+  evidence_ids:
+  - canonical-scope
+  - meta-fluorescens
+  - body-fluorescens
+  - taxon-fluorescens
+  - source-ledger
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: psychrotolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reviewed status lacks a locally attributable acceptance link
+  description: Twenty AI events and an automated seed, four contextual AI histories,
+    and ignored-inclusive 194 paths/67 parsed target arrays/zero exact targets do
+    not identify current-target human acceptance. This bounded traceability gap does
+    not exclude private or remote review.
+  target_ids:
+  - METPO:1000618
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-imported-roles
+  description: Reconcile the three imported relation-role mismatches during authorized
+    curation.
+  finding_ids:
+  - imported-process-roles
+  target_ids:
+  - METPO:1000618
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: RO wildcard mappings recur only for empty predicate fields; compatible local
+      gates remain separate.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping edits alone do not repair current
+      assertions.
+  acceptance_checks:
+  - Preserve actual node facets and compatible local/lexical relations.
+  - Respect existing nonempty-ID guards; mapping edits alone do not repair current
+    assertions.
+  - Do not reconstruct detailed pathogen mechanisms or prescribe interventions.
+- action_id: reconcile-canonical-attribution
+  description: Reconcile the canonical species with the identity actually established
+    by its source.
+  finding_ids:
+  - canonical-species-attribution
+  target_ids:
+  - METPO:1000618
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Require source-backed exact taxon attribution; phylogroup membership is not species
+    identity.
+  - Preserve the reported MPC6 phenotype and uncertainty without silently transferring
+    it to a named species.
+  - No operational growth optimization or mechanism repair.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000618
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/psychrotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain all twenty-one events and bounded ignored-inclusive search evidence.
+  - No contact or automatic status promotion authorized.
+limitations:
+- Detailed pathogen cold-survival, fitness, ROS-defense, AMR, vectors and intervention
+  efficacy/methods remain UNASSESSED_SCOPE; incidental source content is not adopted.
+- The assigned Guineae citation supports the trait endpoint, not the entire lipid-remodeling
+  causal chain. Generic CSP wording does not alone establish an exclusive or universal
+  hallmark.
+- Manifests-as state/process interpretation remains a bounded limitation under local
+  broad scaffold endpoints. No additional finding or forced retype follows.
+- The hopanoid observation is environmental Methylovulum context, not universal cold
+  adaptation. Solute/EPS body support remains unknown, not disproven by access limits.
+- The frozen spectrum locator said first sentence; the separately bound correction
+  specifies the fourth/final sentence of paragraph1. Original artifacts remain unchanged.
+- Original metadata/PDF acquisition and text derivation are separate from current
+  copies and fresh 22:07 source requests; publisher preview/API500/BioC help are not
+  full body evidence.
+- Four whole contextual histories and local search cannot rule out private or off-repository
+  acceptance.
+- Three NONMECHANISTIC components and zero protein instances do not require speculative
+  connectors, molecular examples or experiments.
+- Actual prior QC, qualification and local initialization do not assert B11 remote
+  publication; publication remains separately documented.
+notes:
+- Final root and independent challenge are pinned; no builder/helper import or execution
+  occurred during preparation.
+- 'Coverage: eight works, thirteen external placements, ten grounding fields, eleven
+  nodes/eight edges, six snippets (five literal, one typographic), two canonicals,
+  three components and twenty-one embedded events.'
+- No scientific record, native inventory, Git or sweep-state mutation by serializer
+  preparation.
+tags:
+- record-review
+- psychrotolerant
+- environment
+- needs-curation
+native_verdict: needs_curation

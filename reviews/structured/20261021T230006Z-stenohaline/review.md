@@ -1,0 +1,1743 @@
+# Whole-record review of stenohaline
+
+- Review: 20261021T230006Z-stenohaline
+- Repository: CultureBotAI/TraitMech
+- Started UTC: 2026-10-21T22:52:25.412177Z
+- Finished UTC: 2026-10-21T23:00:06Z
+- Reviewer: codex (independent)
+- Completion: completed
+- Verdict: needs_curation
+- Scientific review: true
+
+## Summary
+
+Needs curation: one grouped major concerns current facets/imported relation roles; two minors concern copied spans and attributable acceptance.
+
+## Scope And Provenance
+
+One entire maintained TraitRecord. Contextual ontology, source, parent, writer and history inputs are not additional review targets.
+
+Selection: Tenth record of the actual locally initialized batch 012 queue. Entire 392-line target and all 64 captured inputs verified before assessment. Local initialization does not assert B11 publication.
+Coverage: full; 1 reviewed / 1 in the declared population.
+Source: working_tree at Git base 8eee04a8c65609fbaff6df7c54597dcaf1b9d282.
+Working-tree hashes do not imply those bytes were committed.
+
+| Target | Path / selector | Kind | Label |
+| --- | --- | --- | --- |
+| METPO:1000626 | data/traits/environment/stenohaline.yaml | maintained | stenohaline |
+
+## Validation
+
+| Check | Status | Required | Targets | Result |
+| --- | --- | --- | --- | --- |
+| Full-corpus graph audit | passed | True | METPO:1000626 | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| Full-corpus snippet audit | passed | True | METPO:1000626 | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| Full-corpus pathway links | passed | True | METPO:1000626 | 19 links checked against the pinned PathwayMech snapshot. |
+| Full-corpus history integrity | passed | True | METPO:1000626 | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| Initial full-product validation | failed | False | METPO:1000626 | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation with isolated local cache | failed | False | METPO:1000626 | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| Product validation after isolated-cache download | passed | True | METPO:1000626 | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| Focused native validation | passed | True | METPO:1000626 | Successful schema validation; source and semantics separately assessed. |
+| Focused strict validation | passed | True | METPO:1000626 | Successful strict validation; no biological efficacy certification. |
+| Focused network snippet check | passed | True | METPO:1000626 | Direct network invocation passed: eleven fields over two references, all NOT_IN_ABSTRACT. Actual body audit verifies nine literal spans and identifies two paraphrases. No initial target-specific failed snippet attempt. |
+| Reused maintained batch-eleven QC | passed | True | METPO:1000626 | Actual prior QC qualified against B12 bytes; independent of publication status. |
+| Protein-instance metadata applicability | not_applicable | False | METPO:1000626 | Three reviewed label-only protein classes and no instances; no token accession or mandatory instance inferred. |
+
+## Scientific And Domain Assessments
+
+### Native checklist: active term and parent
+
+identity: supported. Targets: METPO:1000626.
+
+Active METPO1000626 and direct parent1000629 are coherent; the parent covers salt requirements or tolerance. Exact canonical taxonomy is positive.
+
+### Native checklist: narrow-salinity classification
+
+evidence: supported. Targets: METPO:1000626.
+
+Assigned primary introduction explicitly defines the narrow-range category. Its field MAG abundance criterion is separate from a measured growth interval; neither imposes a universal numerical threshold.
+
+### Native checklist: tolerance and context
+
+identity: supported. Targets: METPO:1000626.
+
+Narrow tolerance is compatible with the actual parent. Generic contextual osmoadaptation branches are not represented as sufficient causes of stenohaly; the evidence notes preserve that boundary.
+
+### Native checklist: four works and nineteen placements
+
+evidence: unknown. Targets: METPO:1000626.
+
+All four source identities are verified. Complete placement/node-edge ledgers identify the inspected support and explicit inference; detailed binding, mutant fitness and intervention claims on edges5–7 remain UNASSESSED_SCOPE.
+
+### Native checklist: eleven copied-span fields
+
+evidence: concern. Targets: METPO:1000626.
+
+Nine spans match actual body text after whitespace normalization. Edge3 and edge15 snippets are paraphrases, not contiguous copied spans; this is not a biological contradiction. The append-only locator correction is retained.
+
+### Native checklist: existing two-point strain observation
+
+evidence: supported. Targets: METPO:1000626.
+
+The assigned article confirms YX04-3 at two tested salinities, with the reported failure at 13 ppt and comparison at 32 ppt. Current notes already preserve the unknown complete tolerated interval and distinguish HK05.
+
+### Native checklist: all seventeen current referents
+
+consistency: concern. Targets: METPO:1000626.
+
+Node3 describes a difference in osmotic potential but declares a biological process. This linked facet/role problem is grouped once with imported relations. The explicit aquaporin molecular activity and three reviewed protein classes remain positive facets. Full per-node coverage is in the indexed ledger.
+
+### Native checklist: all sixteen relation roles
+
+consistency: concern. Targets: METPO:1000626.
+
+Six RO assertions conflict with current process/material referents: edges2/3/5/6/7/10. Material enables11, process-part15, generic local defines/mitigates and broad Biolink context remain positive or qualified. Full edge-specific reasoning is in the indexed ledger.
+
+### Native checklist: generic attribution and excluded detailed branches
+
+scope: unknown. Targets: METPO:1000626.
+
+Generic classification, physical context and literal attribution are assessed. Detailed pathogen survival, defense, fitness, AMR and intervention efficacy remain UNASSESSED_SCOPE. Edge3 repertoire direction is explicitly inferred; no added source-major claim is made.
+
+### Native checklist: contextual graph and proteins
+
+completeness: supported. Targets: METPO:1000626.
+
+The NONMECHANISTIC graph has one component, three reviewed label-only protein classes and no instances. Those facts do not require additional connectors, accessions or canonical examples.
+
+### Native checklist: bounded catalog applicability
+
+evidence: unknown. Targets: METPO:1000626.
+
+The retained 20-organism / 28-dataset catalog lacks an exact YX04-3 match. S. elongatus is a distinct species, while E. coli and B. subtilis source-species coverage is positive. Exact strain/phenotype applicability and detailed module queries remain unestablished.
+
+### Native checklist: current assertions and conditional mappings
+
+provenance: supported. Targets: METPO:1000626.
+
+The record owns current facets and assertions. Predicate mappings and grounder affect empty IDs; current nonempty IDs are skipped. Sibling connector/review scripts are contextual, not current recurrence owners.
+
+### Native checklist: bounded acceptance trace
+
+provenance: concern. Targets: METPO:1000626.
+
+Fourteen AI events plus a seed, two whole histories and ignored-inclusive 182 matching paths / 67 parsed review target arrays / zero exact current targets do not establish attributable current-target acceptance. Named creator metadata does not itself certify acceptance; private or remote review is unexcluded.
+
+### Native checklist: actual focused checks and qualified reuse
+
+consistency: supported. Targets: METPO:1000626.
+
+All 64 inputs match and current validate/strict/direct-network commands passed. Source acquisition, reuse/copy and reading times remain distinct; prior failures/retries and actual common qualification are preserved. Local initialization does not claim publication.
+
+## Findings
+
+### imported-process-roles: Current facets and imported relations disagree on process/material roles
+
+major / open / confirmed; issue key: stenohaline-imported-process-roles.
+
+Node3 describes an osmotic-potential difference rather than a process. Regulation edges2/3/5/6/7 and material-enables edge10 conflict with the represented endpoint roles. Node3 and its linked edge2 are grouped once. Formal errors are independent of detailed biological efficacy.
+
+### nonverbatim-source-snippets: Two snippet fields contain paraphrases
+
+minor / open / confirmed; issue key: stenohaline-nonverbatim-source-snippets.
+
+Actual full definition XML does not contain the two current contiguous spans. Positive related passages support paraphrases, including enable rather than enabling. Preserve the scientific context and inference qualification; the issue is copied-span precision.
+
+### human-acceptance-link: Reviewed status lacks a locally attributable acceptance link
+
+minor / open / confirmed; issue key: stenohaline-human-acceptance-link.
+
+Bounded ignored-inclusive evidence contains fourteen AI events plus a seed, two whole histories and no exact current target among 67 review arrays. It does not establish attributable acceptance; private or remote acceptance remains unknown.
+
+## Recommended Actions And Acceptance Checks
+
+### reconcile-process-roles
+
+Reconcile current referents with imported relation roles during authorized curation.
+
+- Preserve explicit molecular activity and valid material/process positive controls.
+- Respect nonempty-ID guards and group the linked node3/edge2 problem once.
+- No detailed mechanism reconstruction or intervention optimization.
+
+### reconcile-copied-spans
+
+Use verified contiguous spans or identify paraphrases as notes.
+
+- Keep the current inference qualification and generic source scope.
+- Use the corrected paragraph5 locator; preserve frozen evidence and original provenance.
+
+### link-human-acceptance
+
+Link attributable acceptance if available or clarify status while preserving provenance.
+
+- Retain bounded search evidence and events.
+- No contact or automatic status promotion.
+
+## Category Boundaries
+
+
+## Evidence
+
+| Evidence | Reference / locator | Support | Observation |
+| --- | --- | --- | --- |
+| check-audit-graphs | /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json | context_only | 74 baselined findings, zero new/blocking findings; connectivity report covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific verification of this target. |
+| check-audit-snippets | /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json | context_only | 2419 baselined findings, zero new/blocking findings. Focused source checks and manual evidence review are recorded separately. |
+| check-check-pathway-links | /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json | context_only | 19 links checked against the pinned PathwayMech snapshot. |
+| check-validate-history | /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log; Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json | context_only | 1277 history records checked, zero invalid links at the 8eee source base; integrity does not establish science or human acceptance. |
+| check-validate-products | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log; Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json | context_only | Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-local | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log; Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json | context_only | Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful network retry. |
+| check-validate-products-retry-network | /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log; Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json | context_only | Passed: 361 canonical matches, two synonym matches, one exception, 123 SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered. |
+| check-stenohaline-validate | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-validate.log; Executed 2026-10-21T22:52:42.055282+00:00 through 2026-10-21T22:52:42.595948+00:00; metadata stenohaline-validate.json | context_only | Successful schema validation; source and semantics separately assessed. |
+| check-stenohaline-strict | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-strict.log; Executed 2026-10-21T22:52:42.055052+00:00 through 2026-10-21T22:52:42.959785+00:00; metadata stenohaline-strict.json | context_only | Successful strict validation; no biological efficacy certification. |
+| check-stenohaline-snippets-network | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-snippets-network.log; Executed 2026-10-21T22:52:46.351872+00:00 through 2026-10-21T22:52:49.981101+00:00; metadata stenohaline-snippets-network.json | context_only | Direct network invocation passed: eleven fields over two references, all NOT_IN_ABSTRACT. Actual body audit verifies nine literal spans and identifies two paraphrases. No initial target-specific failed snippet attempt. |
+| check-batch011-qc | /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log; Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00; metadata batch011-qc.json | context_only | Actual prior QC qualified against B12 bytes; independent of publication status. |
+| record | data/traits/environment/stenohaline.yaml; Entire current 392-line record | supports | All seventeen nodes, sixteen edges, eleven snippets and one canonical example covered. |
+| policy | docs/GROUNDING_POLICY.md; Captured maintained authority | supports | Actual referents and optional protein applicability. |
+| playbook | docs/CURATION_PLAYBOOK.md; Captured maintained authority | supports | Copied spans and attributable acceptance. |
+| schema | src/traitmech/schema/traitmech.yaml; Captured maintained authority | supports | Current node/relation facets and review contract. |
+| checklist | .claude/skills/curate-yaml-record/references/review-checklist.md; Captured maintained authority | supports | Whole-record checklist. |
+| predicate-mapping-primary | mappings/predicate_grounding.tsv; Captured maintained authority | supports | Conditional mappings preserve imported role constraints. |
+| reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json; Actual B11-to-B12 qualification | supports | Original outcomes and current byte comparisons. |
+| reuse-postcheck | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json; Independent actual-output verification | supports | Actual output/hash postcheck, not new QC. |
+| local-init | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual local initialization preserves separately documented publication status. |
+| capture | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/capture-verification.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | All 64 inputs verified before assessment. |
+| identity | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/identity-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Active exact term and parent; no fixed numerical interval imposed. |
+| node-edges | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/node-edge-grounding-ledger.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Complete indexed seventeen-node/sixteen-edge ledger, with formal positive controls and linked node3/edge2 defect grouped once. |
+| owners | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/owner-provenance-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual current record and conditional mapping/grounder responsibilities. |
+| expression | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/expression-and-readiness.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Exact canonical absence, distinct S. elongatus context, positive source-species E. coli/B. subtilis catalog coverage. |
+| catalog-reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/catalog-reuse-receipt.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Original catalog access and current copying remain distinct. |
+| local-authority | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/local-authority-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual v2/v4 local proposals and mapping rows. |
+| owner-primary | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/owner-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Exact nonempty guards and sibling-only writer context. |
+| ground-reading | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/reading-scope-receipt.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual primary scope, two whole histories and fifteen events. |
+| ground-manifest | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/evidence-manifest.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Frozen twenty-eight grounding artifacts verified. |
+| ground-disposition | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/documentary-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Ground disposition and positive controls retained. |
+| metpo-primary | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl; Actual selected primary ontology statements | supports | Current direct parent covers salt requirements or tolerance; no optimum-only restriction. |
+| ro-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db; Actual selected primary ontology statements | supports | Actual process-regulation and material-enables inherited constraints. |
+| go-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/go.db; Actual selected primary ontology statements | supports | Water-channel molecular activity is a valid explicit facet; not automatically a protein. |
+| chebi-primary | /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/chebi.db; Actual selected primary ontology statements | supports | Cyclic di-AMP chemical identity positive; detailed efficacy unassessed. |
+| taxon | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/taxon1979153-network-retry.xml; Whole successful official XML; initial DNS error kept separately | supports | Exact Synechococcus sp. YX04-3 identifier/name; no phenotype inference. |
+| taxon-access | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/taxonomy-access-network-retry.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Successful official acquisition at 22:53:39; original failed path is error text, not taxonomy XML. |
+| retained-definition-metadata | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/definition-metadata.json; Original acquisition; current copy and selected reading separately recorded | supports | Assigned estuary metagenomics identity/abstract; field abundance assignment differs from direct growth measurement. |
+| retained-definition | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/definition.xml; Original acquisition; current copy and selected reading separately recorded | supports | Selected generic classification p0, abundance criterion p14, functional attribution p36 and contextual water flux p47. |
+| retained-mmbr-metadata | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/mmbr-metadata.json; Original acquisition; current copy and selected reading separately recorded | supports | Assigned bacterial volume-regulation review identity; detailed regulation and fitness efficacy unassessed. |
+| retained-stress-metadata | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/stress-metadata.json; Original acquisition; current copy and selected reading separately recorded | supports | Assigned Streptomyces review identity/abstract; generic source context only. |
+| retained-stress | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/stress.xml; Original acquisition; current copy and selected reading separately recorded | supports | Only p13 first two sentences, p15 first sentence and p19 first two sentences adopted for generic context. |
+| meta-canonical | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical-metadata.json; Actual successful public acquisition and bounded selected reading | supports | Assigned Synechococcus paper identity/abstract; exact two-point observation separately read in body. |
+| body-canonical | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical.xml; Actual successful public acquisition and bounded selected reading | supports | Selected body paragraphs12/13 confirm the existing YX04-3/HK05 two-salinity comparison; full tolerated interval unknown. |
+| body-mmbr | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/mmbr.html; Actual successful public acquisition and bounded selected reading | supports | Actual accessible PMC article: only existing generic quoted clauses at HTML paragraphs28/38/53 adopted; detailed intervention/fitness biology unassessed. |
+| sources | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Four identities and full coverage; overall UNKNOWN for excluded detailed claims. |
+| source-status | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-status-ledger.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual four metadata identities and observed notice scope; no universal current-status claim. |
+| placements | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-placement-ledger.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | All nineteen external placements assessed individually. |
+| snippets | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/snippet-ledger.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | All eleven supplied snippets: nine literal, two nonverbatim paraphrases. |
+| snippet-precision | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/copied-span-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Whole retained definition XML contiguous-span checks; no biological refutation. |
+| locator-correction | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/near-span-locator-correction.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Append-only locator correction: nearby gene/adaptation wording is paragraph5, not2; frozen original audit preserved. |
+| node-sources | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/node-edge-source-ledger.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Complete indexed source ledger for all seventeen nodes and sixteen edges, including every evidence note. |
+| source-reading | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/primary-reading-scope.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual selected primary scopes; automated incidental displays not adopted. |
+| source-access | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-access-limits.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Older MMBR failures/help distinct from current successful PMC HTML; metadata and body separated. |
+| source-reuse | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-reuse-receipt.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Hash-qualified original access and current copying separately timed. |
+| canonical-scope | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical-assessment.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Positive bounded canonical observation; no complete interval inferred. |
+| native-checks | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/native-check-context.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual root-owned validate/strict/direct-network commands. |
+| source-capture | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/input-verification.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | All 64 source inputs verified before assessment. |
+| source-manifest | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/evidence-manifest.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Frozen twenty-six source artifacts verified. |
+| root-reading-77 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/biolink-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-78 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/canonical-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-79 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/corrected-near-span-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-80 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/definition-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-81 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/history-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-82 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/metadata-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-83 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/mmbr-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-84 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/ontology-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-85 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/owner-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-86 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/snippet-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-87 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/source-organism-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| root-reading-88 | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/stress-primary-reading.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Actual bounded root reading scope; derived receipt is not raw primary text. |
+| challenge-locator | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-semantic-challenge-agent/source-locator-correction-addendum.json; Derived audit or reading/access receipt; primary bytes separately identified | supports | Independent append-only confirmation of corrected paragraph5 locator; findings unchanged. |
+| challenge | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-semantic-challenge-agent/semantic-severity-challenge.json; Final independent challenge | supports | Actual disposition and bindings verified. |
+| adjudication | /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-root-adjudication.json; Final root disposition | supports | Final findings control serialization. |
+
+## Limits And Additional Notes
+
+- Detailed pathogen survival, fitness, defense, AMR and intervention efficacy remain UNASSESSED_SCOPE; incidental broad text displays were not adopted.
+- Canonical evidence compares two salinities, not a complete tolerated interval; current notes correctly preserve that limit.
+- The definition paper classifies environmental MAGs using relative abundance. Edge3 is explicitly inferred and does not establish universal repertoire-to-stenohaly causation.
+- Generic water flux depends on osmotic conditions; source channel/taxon qualifications and contextual branch notes remain explicit.
+- Nine snippets are literal; two are paraphrases. The copied-span finding does not refute biology or identify a wrong article.
+- Exact source metadata/body acquisitions, current copies and selected reading are distinct. Prior MMBR errors/help are not primary article text; fresh PMC HTML is successful.
+- Catalog absence is canonical-specific; same-genus and source-species coverage cannot establish exact strain or phenotype applicability. No required proteins, connectors or external acceptance absence is inferred.
+- Actual past QC/qualification and local initialization do not assert fresh B12 QC or B11 publication.
+- Final root, independent challenge and separate locator correction/addendum are pinned; builder/helper not imported or executed during preparation.
+- Coverage: four works, nineteen external placements, fifteen grounding fields, seventeen nodes/sixteen edges, eleven snippets, one canonical example, one component, fifteen events and two whole contextual histories. Detailed indexed ledgers are cited without duplicating their full text.
+- Serializer preparation does not mutate scientific records, native inventory, Git or sweep state.
+
+## Complete Structured Record
+
+The sibling review.yaml is authoritative.
+
+```yaml
+schema_version: 1.0.0
+review_id: 20261021T230006Z-stenohaline
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of stenohaline
+started_at: '2026-10-21T22:52:25.412177Z'
+finished_at: '2026-10-21T23:00:06Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: Independent source and grounding audits, separate semantic challenge
+    and root primary/owner readings. Generic environmental classification, source
+    attribution, literal spans and formal roles assessed. Detailed pathogen survival,
+    fitness, defense, AMR and intervention efficacy remain UNASSESSED_SCOPE; no optimization
+    or protocol recommendations.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: 'Needs curation: one grouped major concerns current facets/imported relation
+  roles; two minors concern copied spans and attributable acceptance.'
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: conf/record_review.yaml
+    sha256: 5adc6244761fb2baf8a059d81f23b0c9b32a33f9426ab84094234c3ec417269d
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/halophily_preference.yaml
+    sha256: d9d43dfaca09069195f27bdf5ceee8aa3465909f862e4ecff07dd22252b2c5dc
+    role: context
+  - path: data/traits/environment/stenohaline.yaml
+    sha256: 174f204b4454f531e9d88ef23c144df9b1f10813e7638edf919ebbdb123cac85
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/other/canonical-examples-batch1/2026-08-20T074839Z-claude-code-6fb2f5.yaml
+    sha256: c938f2928f2eb41505d58c2fb72d8de01d99534d766de9af400010e8778988a4
+    role: context
+  - path: history/records/stenohaline/2026-08-26T100455Z-codex-c70b581.yaml
+    sha256: 76e4b695ebb9fda4a04e474694f8f0918fe390db7bc5b4f36c7c38d56bf46314
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v4/metpo_proposal_properties_robot.tsv
+    sha256: 55a96748c50b60ba0622170ef0eb09833f6d1e59431a4ab32b6fcb079103c0b7
+    role: context
+  - path: proposals/metpo_traitmech_v4/proposal.md
+    sha256: c35d12fec87a3efdcfa320125446320315fca17bdb9228dd2b98ed00fe991bd8
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/stenohaline-deep-research-falcon.md
+    sha256: eda4a2f2874a4e1b2c6779db6fc388a4b53ea598aafd202595112558f7d96121
+    role: context
+  - path: schema/record_review.yaml
+    sha256: 229baf9b69118a1fe318e4c31085c0820e4e3d1365e7b04d6ace451b7c35f9bb
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_predicate_domains.py
+    sha256: 35be8589638b8b21379f2dfd7fa7fb7d4eb422ccf71063e1e21a6bc19b767bcf
+    role: context
+  - path: scripts/audit_unapplied_groundings.py
+    sha256: 5afa6a602f0d7d5107adebf8b067d61bde9ea9adb267f9dfaed8a0b7cc0cc76b
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/connect_nacl_optimum_graph_183.py
+    sha256: f1608bd82c1323c7d2306268860502ae3483d40f093e055b9b70cd463a1ecf04
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_range_edges.py
+    sha256: 3d0d1bddcaa76baef5833973e2e979e4fee1f834c67d1abcc69a8d866ecb8f32
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_metpo_2026_06_12.py
+    sha256: 0f3945e7b8e6ddccdc9eaeed32737a2a1cf0832748af2b72a6a0195ba661188f
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_node_type_consistency.py
+    sha256: a3e7bc170e60f406a73e06c893d74f5253671028d3d40cc15ecf882b6684a69e
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_remaining_microbe_domain_edges.py
+    sha256: 110542d49e25007122c7c254966ad87dc3f7f054358766e933aff89e8ef0a994
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/record_review.py
+    sha256: 95a4ec41e38ec47ba3578e76838c46a0adbf47e49ad3636524735d08cfcb1c4d
+    role: context
+  - path: scripts/review_nacl_delta_graph_183.py
+    sha256: 91b85da640baff48e0d317c206aaa24c1216b3725d9c9814c6fb9d4d975e192c
+    role: context
+  - path: scripts/review_nacl_delta_mid2_graph_183.py
+    sha256: 7d628bb0265a6f689dbeb47509be8c6528c0c64e6b3d59d84e5a8a0b9cb5e1a5
+    role: context
+  - path: scripts/review_nacl_optimum_graph_183.py
+    sha256: 6d0de1ccb1604fb87294432692cc051e3a8a1d52e082eaff6aa1f8d3cb621ffd
+    role: context
+  - path: scripts/review_nacl_range_low_graph_183.py
+    sha256: d7e6669f6d2aa295487a34cba7fe14666a979404614bdbdd3be529194649accf
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000626
+  path: data/traits/environment/stenohaline.yaml
+  label: stenohaline
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained target; read-only review.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained predicate context; recurrence assessed only after capture.
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained grounding context; recurrence assessed only after capture.
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: Tenth record of the actual locally initialized batch 012 queue. Entire
+    392-line target and all 64 captured inputs verified before assessment. Local initialization
+    does not assert B11 publication.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000626
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000626
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000626
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: 'Original common diagnostics ran at f25; history validation ran in batch
+    003 at 8eee. Actual B11 final QC ran 20:52:41.208560–20:54:10.001030 UTC; B12
+    byte qualification completed 20:56:21.138176 and independent postcheck 20:58:20.194890.
+    Original failures/retries/skips and seven-file delta remain explicit; no fresh
+    B12 QC or B11 publication is claimed. Qualification: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json'
+- check_id: stenohaline-validate
+  name: Focused native validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just validate data/traits/environment/stenohaline.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful schema validation; source and semantics separately assessed.
+  evidence_ids:
+  - check-stenohaline-validate
+- check_id: stenohaline-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just validate-strict data/traits/environment/stenohaline.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Successful strict validation; no biological efficacy certification.
+  evidence_ids:
+  - check-stenohaline-strict
+- check_id: stenohaline-snippets-network
+  name: Focused network snippet check
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just verify-snippets --record data/traits/environment/stenohaline.yaml
+    --out /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Direct network invocation passed: eleven fields over two references, all
+    NOT_IN_ABSTRACT. Actual body audit verifies nine literal spans and identifies
+    two paraphrases. No initial target-specific failed snippet attempt.'
+  evidence_ids:
+  - check-stenohaline-snippets-network
+- check_id: batch011-qc
+  name: Reused maintained batch-eleven QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000626
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual prior QC qualified against B12 bytes; independent of publication
+    status.
+  evidence_ids:
+  - check-batch011-qc
+- check_id: uniprot-applicability
+  name: Protein-instance metadata applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000626
+  summary: Three reviewed label-only protein classes and no instances; no token accession
+    or mandatory instance inferred.
+  evidence_ids:
+  - record
+  - policy
+  - node-edges
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-19T07:33:29Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-19T07:33:33Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-19T07:33:28Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-003.4opxlhgf/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T07:03:30Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the 8eee source base;
+    integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-19T07:34:01Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-19T07:35:24Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-19T07:36:03Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-stenohaline-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-validate.log
+  locator: Executed 2026-10-21T22:52:42.055282+00:00 through 2026-10-21T22:52:42.595948+00:00;
+    metadata stenohaline-validate.json
+  accessed_at: '2026-10-21T22:52:42.595948Z'
+  support: context_only
+  summary: Successful schema validation; source and semantics separately assessed.
+  snapshot_sha256: 79ef0517cc06f0e693d7dcb5772c95dacb1011f0d65ec7efde04e5e7fd32a439
+- evidence_id: check-stenohaline-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-strict.log
+  locator: Executed 2026-10-21T22:52:42.055052+00:00 through 2026-10-21T22:52:42.959785+00:00;
+    metadata stenohaline-strict.json
+  accessed_at: '2026-10-21T22:52:42.959785Z'
+  support: context_only
+  summary: Successful strict validation; no biological efficacy certification.
+  snapshot_sha256: 1d9bf9b54c89e6ac469a1449e0fb891060d01bae3e997b3119b5716d23ce038f
+- evidence_id: check-stenohaline-snippets-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-snippets-network.log
+  locator: Executed 2026-10-21T22:52:46.351872+00:00 through 2026-10-21T22:52:49.981101+00:00;
+    metadata stenohaline-snippets-network.json
+  accessed_at: '2026-10-21T22:52:49.981101Z'
+  support: context_only
+  summary: 'Direct network invocation passed: eleven fields over two references, all
+    NOT_IN_ABSTRACT. Actual body audit verifies nine literal spans and identifies
+    two paraphrases. No initial target-specific failed snippet attempt.'
+  snapshot_sha256: b203cbf578d1e288d862cf21514486351334452a89d52d232b2a79732108bf73
+- evidence_id: check-batch011-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-011.m6s8p2ra/batch011-qc.log
+  locator: Executed 2026-10-21T20:52:41.208560+00:00 through 2026-10-21T20:54:10.001030+00:00;
+    metadata batch011-qc.json
+  accessed_at: '2026-10-21T20:54:10.001030Z'
+  support: context_only
+  summary: Actual prior QC qualified against B12 bytes; independent of publication
+    status.
+  snapshot_sha256: e9c9063f603119bbd8b98e5ba52a6eb85dbad77b92405eefc249af01216f248f
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/stenohaline.yaml
+  locator: Entire current 392-line record
+  accessed_at: '2026-10-21T22:52:26.075396Z'
+  support: supports
+  summary: All seventeen nodes, sixteen edges, eleven snippets and one canonical example
+    covered.
+  snapshot_sha256: 174f204b4454f531e9d88ef23c144df9b1f10813e7638edf919ebbdb123cac85
+- evidence_id: policy
+  kind: authority
+  reference: docs/GROUNDING_POLICY.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Actual referents and optional protein applicability.
+  snapshot_sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+- evidence_id: playbook
+  kind: authority
+  reference: docs/CURATION_PLAYBOOK.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Copied spans and attributable acceptance.
+  snapshot_sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+- evidence_id: schema
+  kind: authority
+  reference: src/traitmech/schema/traitmech.yaml
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Current node/relation facets and review contract.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: checklist
+  kind: authority
+  reference: .claude/skills/curate-yaml-record/references/review-checklist.md
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Whole-record checklist.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: predicate-mapping-primary
+  kind: authority
+  reference: mappings/predicate_grounding.tsv
+  locator: Captured maintained authority
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Conditional mappings preserve imported role constraints.
+  snapshot_sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+- evidence_id: reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-b11-qc-supplement-qualified.json
+  locator: Actual B11-to-B12 qualification
+  accessed_at: '2026-10-21T20:56:21.138176Z'
+  support: supports
+  summary: Original outcomes and current byte comparisons.
+  snapshot_sha256: 237e3fe64b4790f2caa121b17e2a9d6857dd4cfbf74d824d29d986d6c8ff1602
+- evidence_id: reuse-postcheck
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/common-reuse-output-verification-agent/post-execution-verification.json
+  locator: Independent actual-output verification
+  accessed_at: '2026-10-21T20:58:20.194890Z'
+  support: supports
+  summary: Actual output/hash postcheck, not new QC.
+  snapshot_sha256: 59659bb5400fdae759f8a705c18869cfc9192db0234b2a4d763b882f5e67e1c4
+- evidence_id: local-init
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/batch012-local-initialization-receipt.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T21:02:18.445284Z'
+  support: supports
+  summary: Actual local initialization preserves separately documented publication
+    status.
+  snapshot_sha256: 542fa42507cccb7806576817933aa17f8f43f309702934d265a0c2debccb7cef
+- evidence_id: capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/capture-verification.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:52:52.429098Z'
+  support: supports
+  summary: All 64 inputs verified before assessment.
+  snapshot_sha256: 0586cd3922bf577e70919293f44546b10ec7f8e5839a8a99dbb589a0444c8c3f
+- evidence_id: identity
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/identity-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.419136Z'
+  support: supports
+  summary: Active exact term and parent; no fixed numerical interval imposed.
+  snapshot_sha256: 94854b46eb7735f5f3c1027a234ab6f6ccc710954a6143499e3f914b28b604f6
+- evidence_id: node-edges
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/node-edge-grounding-ledger.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.419475Z'
+  support: supports
+  summary: Complete indexed seventeen-node/sixteen-edge ledger, with formal positive
+    controls and linked node3/edge2 defect grouped once.
+  snapshot_sha256: 507c6c51fdc749732a9d88abac2a213f6a5469bcc2c4c06568e6aa0d501def20
+- evidence_id: owners
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/owner-provenance-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.419679Z'
+  support: supports
+  summary: Actual current record and conditional mapping/grounder responsibilities.
+  snapshot_sha256: 4571c2e9c389a2befec44e3a897f50596dd267b5e0c01b82a5004236c58650f2
+- evidence_id: expression
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/expression-and-readiness.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.419961Z'
+  support: supports
+  summary: Exact canonical absence, distinct S. elongatus context, positive source-species
+    E. coli/B. subtilis catalog coverage.
+  snapshot_sha256: ee922c5b9b488a29b156ca9934283a5eb003b0abb1ede9f260eeb483959ca853
+- evidence_id: catalog-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/catalog-reuse-receipt.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:53:10.260033Z'
+  support: supports
+  summary: Original catalog access and current copying remain distinct.
+  snapshot_sha256: 97d4cf6b946de73c2567e1d1c39bdf370b5510805271905fe1ef80c3cfd691d4
+- evidence_id: local-authority
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/local-authority-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.394993Z'
+  support: supports
+  summary: Actual v2/v4 local proposals and mapping rows.
+  snapshot_sha256: 0ac0709bb0709e751095a41e12fe8714b8ee608f6d9ff0c4a0ccf7de81476532
+- evidence_id: owner-primary
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/owner-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.396255Z'
+  support: supports
+  summary: Exact nonempty guards and sibling-only writer context.
+  snapshot_sha256: 94d347528cb15bb93cc872635ee69684acc14fbc8d9b68e4cfd89bd01b88a58d
+- evidence_id: ground-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/reading-scope-receipt.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.420169Z'
+  support: supports
+  summary: Actual primary scope, two whole histories and fifteen events.
+  snapshot_sha256: e13507e6f535341d5553a5dcd26eb8a765bb3449e08af06d6612cd60e1726a16
+- evidence_id: ground-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/evidence-manifest.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.424985Z'
+  support: supports
+  summary: Frozen twenty-eight grounding artifacts verified.
+  snapshot_sha256: 4d10e514d1f33a5a8f1267d5e6e09a52731bdc2a47b6fe9589c248220e1f5b73
+- evidence_id: ground-disposition
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/documentary-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:17.420045Z'
+  support: supports
+  summary: Ground disposition and positive controls retained.
+  snapshot_sha256: c8670560c5ca6aae04db06331e482178a6ac2e584fd191bd2f84707a483b75d4
+- evidence_id: metpo-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/repo/data/raw/metpo.owl
+  locator: Actual selected primary ontology statements
+  accessed_at: '2026-10-21T22:52:59.265336Z'
+  support: supports
+  summary: Current direct parent covers salt requirements or tolerance; no optimum-only
+    restriction.
+  snapshot_sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+- evidence_id: ro-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/ro.db
+  locator: Actual selected primary ontology statements
+  accessed_at: '2026-10-21T22:52:56.603505Z'
+  support: supports
+  summary: Actual process-regulation and material-enables inherited constraints.
+  snapshot_sha256: 849e616c29fecd0d4a6c6dee0dc0f6f117ace7167dbfa1e0f043dc84868f83cb
+- evidence_id: go-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/go.db
+  locator: Actual selected primary ontology statements
+  accessed_at: '2026-10-21T22:52:56.607281Z'
+  support: supports
+  summary: Water-channel molecular activity is a valid explicit facet; not automatically
+    a protein.
+  snapshot_sha256: 018a7ef0a5bd1c0767abc3d71b413264a25be7579533daf5349f739cd9a122cd
+- evidence_id: chebi-primary
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/pystow/oaklib/chebi.db
+  locator: Actual selected primary ontology statements
+  accessed_at: '2026-10-21T22:52:57.289025Z'
+  support: supports
+  summary: Cyclic di-AMP chemical identity positive; detailed efficacy unassessed.
+  snapshot_sha256: 26ad4890cdcf6ee357760d815dfee8f5ba81e0873e62cb379369b04205722b0f
+- evidence_id: taxon
+  kind: authority
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/taxon1979153-network-retry.xml
+  locator: Whole successful official XML; initial DNS error kept separately
+  accessed_at: '2026-10-21T22:53:39.280189Z'
+  support: supports
+  summary: Exact Synechococcus sp. YX04-3 identifier/name; no phenotype inference.
+  snapshot_sha256: efe1401263d7fec8292cea667f5f1848180408853e475f20fe225424c7a1f65f
+- evidence_id: taxon-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-grounding-agent/taxonomy-access-network-retry.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:53:39.280189Z'
+  support: supports
+  summary: Successful official acquisition at 22:53:39; original failed path is error
+    text, not taxonomy XML.
+  snapshot_sha256: 75bf12479f05123995c03f3a86b969ab4247b826ea8607fd2514afd6a95a2060
+- evidence_id: retained-definition-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/definition-metadata.json
+  locator: Original acquisition; current copy and selected reading separately recorded
+  accessed_at: '2026-10-21T09:39:13.783651Z'
+  support: supports
+  summary: Assigned estuary metagenomics identity/abstract; field abundance assignment
+    differs from direct growth measurement.
+  snapshot_sha256: fdebc39d33c7da1e249585b29f72f5ae9d7deb6e1ab57ff536f427e38eb2321c
+- evidence_id: retained-definition
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/definition.xml
+  locator: Original acquisition; current copy and selected reading separately recorded
+  accessed_at: '2026-10-21T09:41:55.597430Z'
+  support: supports
+  summary: Selected generic classification p0, abundance criterion p14, functional
+    attribution p36 and contextual water flux p47.
+  snapshot_sha256: 3110325f660ea1d154942a99b6c2d67281c4cb3d19dd9f5884d41683caae246f
+- evidence_id: retained-mmbr-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/mmbr-metadata.json
+  locator: Original acquisition; current copy and selected reading separately recorded
+  accessed_at: '2026-10-21T12:54:10.798929Z'
+  support: supports
+  summary: Assigned bacterial volume-regulation review identity; detailed regulation
+    and fitness efficacy unassessed.
+  snapshot_sha256: 8e8d519adb3ef7e613cf8c987a0190f5f253ee4ec94ff65591654f577f894215
+- evidence_id: retained-stress-metadata
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/stress-metadata.json
+  locator: Original acquisition; current copy and selected reading separately recorded
+  accessed_at: '2026-10-21T14:27:07.140132Z'
+  support: supports
+  summary: Assigned Streptomyces review identity/abstract; generic source context
+    only.
+  snapshot_sha256: 95d4253c1401794e108e5eb34cfcbc3e301f2c124de770dde91d5643ca0ddd2b
+- evidence_id: retained-stress
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/stress.xml
+  locator: Original acquisition; current copy and selected reading separately recorded
+  accessed_at: '2026-10-21T14:27:50.910004Z'
+  support: supports
+  summary: Only p13 first two sentences, p15 first sentence and p19 first two sentences
+    adopted for generic context.
+  snapshot_sha256: fe613e3b1e3d8d52ef4564efc5bff73a82e6aca108bdc227ade6fcb3c6bbf2e9
+- evidence_id: meta-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical-metadata.json
+  locator: Actual successful public acquisition and bounded selected reading
+  accessed_at: '2026-10-21T22:54:20.865990Z'
+  support: supports
+  summary: Assigned Synechococcus paper identity/abstract; exact two-point observation
+    separately read in body.
+  snapshot_sha256: 1d7c29111b1b6de17d7def52b18fd1344b82cefc61cf2d2043544cec2c31e992
+- evidence_id: body-canonical
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical.xml
+  locator: Actual successful public acquisition and bounded selected reading
+  accessed_at: '2026-10-21T22:54:34.498522Z'
+  support: supports
+  summary: Selected body paragraphs12/13 confirm the existing YX04-3/HK05 two-salinity
+    comparison; full tolerated interval unknown.
+  snapshot_sha256: 5fb95430694babfa1fa612cab5dbe046aad8b4d921644a65275f1a5bbf9b1290
+- evidence_id: body-mmbr
+  kind: primary_source
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/mmbr.html
+  locator: Actual successful public acquisition and bounded selected reading
+  accessed_at: '2026-10-21T22:54:21.399690Z'
+  support: supports
+  summary: 'Actual accessible PMC article: only existing generic quoted clauses at
+    HTML paragraphs28/38/53 adopted; detailed intervention/fitness biology unassessed.'
+  snapshot_sha256: bc20ab1fdada146f7b756fe3d4849ee2b183dfa9a486c4b425891dea528f20b0
+- evidence_id: sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.777978Z'
+  support: supports
+  summary: Four identities and full coverage; overall UNKNOWN for excluded detailed
+    claims.
+  snapshot_sha256: 00caa568b64ade020823ed082c32ccf3d1c00486b66fe6abee7e7e77ff777489
+- evidence_id: source-status
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-status-ledger.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:40.035185Z'
+  support: supports
+  summary: Actual four metadata identities and observed notice scope; no universal
+    current-status claim.
+  snapshot_sha256: 5fe87816bb6e48a5c4bc426cc03e3e0fc807293b5e392650b56cf7c9e6843f07
+- evidence_id: placements
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-placement-ledger.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.776336Z'
+  support: supports
+  summary: All nineteen external placements assessed individually.
+  snapshot_sha256: a6eef0cd61f5b97af7451741fb98b688844124d116e23d13745d2f79f8e164ac
+- evidence_id: snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/snippet-ledger.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:40.051949Z'
+  support: supports
+  summary: 'All eleven supplied snippets: nine literal, two nonverbatim paraphrases.'
+  snapshot_sha256: 570dccb6b49aa0537d214c30625e13d86eac8bf8f7de4866f867ee9200472e3a
+- evidence_id: snippet-precision
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/copied-span-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:40.055511Z'
+  support: supports
+  summary: Whole retained definition XML contiguous-span checks; no biological refutation.
+  snapshot_sha256: 9c831fed8ba5d5031e9a33a6d932fe6c482c475e9e694bef22fe2914b15f753e
+- evidence_id: locator-correction
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/near-span-locator-correction.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:57:23.279218Z'
+  support: supports
+  summary: 'Append-only locator correction: nearby gene/adaptation wording is paragraph5,
+    not2; frozen original audit preserved.'
+  snapshot_sha256: af2b44f3d1862c8c994ed7b953b78ed81268c6026acdf13c5a7ed8414bb120e1
+- evidence_id: node-sources
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/node-edge-source-ledger.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.776026Z'
+  support: supports
+  summary: Complete indexed source ledger for all seventeen nodes and sixteen edges,
+    including every evidence note.
+  snapshot_sha256: f8ac6d75f617343e3a6840b510b0cdcf7da8722e57a1fa035f5722352d1f2767
+- evidence_id: source-reading
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/primary-reading-scope.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.776707Z'
+  support: supports
+  summary: Actual selected primary scopes; automated incidental displays not adopted.
+  snapshot_sha256: 7888ddd7b77bfefc4b3390f21761f35f3908ae7520b61bec5794cdd80b2ce005
+- evidence_id: source-access
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-access-limits.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.776626Z'
+  support: supports
+  summary: Older MMBR failures/help distinct from current successful PMC HTML; metadata
+    and body separated.
+  snapshot_sha256: 1d904368913501e4765ccb9769ccef88f36ba61921819f67438618d1e9f0e892
+- evidence_id: source-reuse
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/source-reuse-receipt.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:54:11.588007Z'
+  support: supports
+  summary: Hash-qualified original access and current copying separately timed.
+  snapshot_sha256: d29d8fd5bfc3baefe421232254e0301ce279e1d9074b9081cd09867815d000c5
+- evidence_id: canonical-scope
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/canonical-assessment.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.776434Z'
+  support: supports
+  summary: Positive bounded canonical observation; no complete interval inferred.
+  snapshot_sha256: 76c8b1f405318365266d22d79a19ebc493b6bacd4e11973a3e84133360ef730f
+- evidence_id: native-checks
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/native-check-context.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.777866Z'
+  support: supports
+  summary: Actual root-owned validate/strict/direct-network commands.
+  snapshot_sha256: acfe66860162d478be0be00a927ec3e6894acf8d626c31d7eee1b30c3b19a1ee
+- evidence_id: source-capture
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/input-verification.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:52:35.984208Z'
+  support: supports
+  summary: All 64 source inputs verified before assessment.
+  snapshot_sha256: 748b229f9ab0335348c289f8577cd7c0474b6db1fde9958f2a0d38eaec2b1eef
+- evidence_id: source-manifest
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-agent/evidence-manifest.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:49.778152Z'
+  support: supports
+  summary: Frozen twenty-six source artifacts verified.
+  snapshot_sha256: e1a8d814c4529bc431dd91ae10ea8d63eb3f30ced66ba0162334107be4e855e7
+- evidence_id: root-reading-77
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/biolink-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:53:59.106228Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: cf4de0b017bc4de1931813d8b7b69432bf9551e7ac88e6a5165f07c9ce350d4d
+- evidence_id: root-reading-78
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/canonical-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:54:46.178767Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 4171f9c71e3035c0de70910a7ba7d03ab21bcdcf52f0c2449720d8b3de2e3ff7
+- evidence_id: root-reading-79
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/corrected-near-span-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:57:37.690723Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 86b21dfca6667aed9cc93ce97ec72f919779e49820062c0cea3b7682e939ff4f
+- evidence_id: root-reading-80
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/definition-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:54:18.458426Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 9cfa59e498a885e38565093b367f762b7779add92e1b825b44656678d4038981
+- evidence_id: root-reading-81
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/history-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:54:10.501631Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 9f0608c26bc95fc65ecb6da0a3794d406cff8ac21ab472bfb8ad1e510414fe3e
+- evidence_id: root-reading-82
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/metadata-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:54:52.229344Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 77360eac977f98e720df78e94a93c7b46406c39cdb32a1cdfaf892b66fa127ee
+- evidence_id: root-reading-83
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/mmbr-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:02.530592Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 5f6f5d566cb19a0452844a41dd45b96ea29e47f22ea9d67304d69050fe51c321
+- evidence_id: root-reading-84
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/ontology-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:53:05.671167Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 7be0d1fc3f317dbe39655edc9b461c78f7e0c43851ad961bfae5f89b78c7b78e
+- evidence_id: root-reading-85
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/owner-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:53:34.494224Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 7ead2c4de89c379c92067fd4f96d9167d94eca24d29f89510b1221eefdca15fc
+- evidence_id: root-reading-86
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/snippet-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:55:18.696196Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 7b253a212df5511bf52b0adbbff457570cf91968a5225f1d73d523b2ce813c88
+- evidence_id: root-reading-87
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/source-organism-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:56:26.567959Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: ca4e9e2cce1cdc75d7319cb3a4d5174cd77698571957406ba751a42a02f3ba2e
+- evidence_id: root-reading-88
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-source-root/stress-primary-reading.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:57:10.604983Z'
+  support: supports
+  summary: Actual bounded root reading scope; derived receipt is not raw primary text.
+  snapshot_sha256: 564d8ee1483e7db4c52d91a584f3c3c71c767921ff37e8af6332c611c8f00715
+- evidence_id: challenge-locator
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-semantic-challenge-agent/source-locator-correction-addendum.json
+  locator: Derived audit or reading/access receipt; primary bytes separately identified
+  accessed_at: '2026-10-21T22:58:12.057789Z'
+  support: supports
+  summary: Independent append-only confirmation of corrected paragraph5 locator; findings
+    unchanged.
+  snapshot_sha256: 4ba9b1334e64ba4806b52dddfcd47c2ccda6c31c4e54697311beddf687c6b38f
+- evidence_id: challenge
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-semantic-challenge-agent/semantic-severity-challenge.json
+  locator: Final independent challenge
+  accessed_at: '2026-10-21T22:57:58.774030Z'
+  support: supports
+  summary: Actual disposition and bindings verified.
+  snapshot_sha256: 315b335fc477cf0de1a57dd3e9bd72aaf1192c10dedd89affb23db06caa8c7b7
+- evidence_id: adjudication
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-012.j4n7q2vc/stenohaline-root-adjudication.json
+  locator: Final root disposition
+  accessed_at: '2026-10-21T22:58:49.201074Z'
+  support: supports
+  summary: Final findings control serialization.
+  snapshot_sha256: 7415370d37e9a65988b502c8935104a18626ef0ad522647b9d33c81069e61e8c
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: active term and parent'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: Active METPO1000626 and direct parent1000629 are coherent; the parent covers
+    salt requirements or tolerance. Exact canonical taxonomy is positive.
+  evidence_ids:
+  - record
+  - identity
+  - metpo-primary
+  - taxon
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: narrow-salinity classification'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: Assigned primary introduction explicitly defines the narrow-range category.
+    Its field MAG abundance criterion is separate from a measured growth interval;
+    neither imposes a universal numerical threshold.
+  evidence_ids:
+  - sources
+  - retained-definition
+  - identity
+  - source-reading
+- assessment_id: hierarchy
+  area: identity
+  topic: 'Native checklist: tolerance and context'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: Narrow tolerance is compatible with the actual parent. Generic contextual
+    osmoadaptation branches are not represented as sufficient causes of stenohaly;
+    the evidence notes preserve that boundary.
+  evidence_ids:
+  - identity
+  - metpo-primary
+  - node-sources
+- assessment_id: sources
+  area: evidence
+  topic: 'Native checklist: four works and nineteen placements'
+  outcome: unknown
+  target_ids:
+  - METPO:1000626
+  summary: All four source identities are verified. Complete placement/node-edge ledgers
+    identify the inspected support and explicit inference; detailed binding, mutant
+    fitness and intervention claims on edges5–7 remain UNASSESSED_SCOPE.
+  evidence_ids:
+  - sources
+  - placements
+  - source-status
+  - node-sources
+  - source-access
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: eleven copied-span fields'
+  outcome: concern
+  target_ids:
+  - METPO:1000626
+  summary: Nine spans match actual body text after whitespace normalization. Edge3
+    and edge15 snippets are paraphrases, not contiguous copied spans; this is not
+    a biological contradiction. The append-only locator correction is retained.
+  evidence_ids:
+  - snippets
+  - snippet-precision
+  - locator-correction
+  - playbook
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: existing two-point strain observation'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: The assigned article confirms YX04-3 at two tested salinities, with the
+    reported failure at 13 ppt and comparison at 32 ppt. Current notes already preserve
+    the unknown complete tolerated interval and distinguish HK05.
+  evidence_ids:
+  - canonical-scope
+  - body-canonical
+  - meta-canonical
+  - taxon
+- assessment_id: nodes
+  area: consistency
+  topic: 'Native checklist: all seventeen current referents'
+  outcome: concern
+  target_ids:
+  - METPO:1000626
+  summary: Node3 describes a difference in osmotic potential but declares a biological
+    process. This linked facet/role problem is grouped once with imported relations.
+    The explicit aquaporin molecular activity and three reviewed protein classes remain
+    positive facets. Full per-node coverage is in the indexed ledger.
+  evidence_ids:
+  - node-edges
+  - node-sources
+  - schema
+  - policy
+  - go-primary
+- assessment_id: predicates
+  area: consistency
+  topic: 'Native checklist: all sixteen relation roles'
+  outcome: concern
+  target_ids:
+  - METPO:1000626
+  summary: 'Six RO assertions conflict with current process/material referents: edges2/3/5/6/7/10.
+    Material enables11, process-part15, generic local defines/mitigates and broad
+    Biolink context remain positive or qualified. Full edge-specific reasoning is
+    in the indexed ledger.'
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - local-authority
+  - owners
+  - challenge
+  - adjudication
+- assessment_id: biology
+  area: scope
+  topic: 'Native checklist: generic attribution and excluded detailed branches'
+  outcome: unknown
+  target_ids:
+  - METPO:1000626
+  summary: Generic classification, physical context and literal attribution are assessed.
+    Detailed pathogen survival, defense, fitness, AMR and intervention efficacy remain
+    UNASSESSED_SCOPE. Edge3 repertoire direction is explicitly inferred; no added
+    source-major claim is made.
+  evidence_ids:
+  - node-sources
+  - source-reading
+  - source-access
+  - ground-reading
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: contextual graph and proteins'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: The NONMECHANISTIC graph has one component, three reviewed label-only protein
+    classes and no instances. Those facts do not require additional connectors, accessions
+    or canonical examples.
+  evidence_ids:
+  - record
+  - node-edges
+  - policy
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: bounded catalog applicability'
+  outcome: unknown
+  target_ids:
+  - METPO:1000626
+  summary: The retained 20-organism / 28-dataset catalog lacks an exact YX04-3 match.
+    S. elongatus is a distinct species, while E. coli and B. subtilis source-species
+    coverage is positive. Exact strain/phenotype applicability and detailed module
+    queries remain unestablished.
+  evidence_ids:
+  - expression
+  - catalog-reuse
+  - taxon
+- assessment_id: ownership
+  area: provenance
+  topic: 'Native checklist: current assertions and conditional mappings'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: The record owns current facets and assertions. Predicate mappings and grounder
+    affect empty IDs; current nonempty IDs are skipped. Sibling connector/review scripts
+    are contextual, not current recurrence owners.
+  evidence_ids:
+  - owners
+  - owner-primary
+  - predicate-mapping-primary
+  - ground-reading
+- assessment_id: human
+  area: provenance
+  topic: 'Native checklist: bounded acceptance trace'
+  outcome: concern
+  target_ids:
+  - METPO:1000626
+  summary: Fourteen AI events plus a seed, two whole histories and ignored-inclusive
+    182 matching paths / 67 parsed review target arrays / zero exact current targets
+    do not establish attributable current-target acceptance. Named creator metadata
+    does not itself certify acceptance; private or remote review is unexcluded.
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+- assessment_id: readiness
+  area: consistency
+  topic: 'Native checklist: actual focused checks and qualified reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000626
+  summary: All 64 inputs match and current validate/strict/direct-network commands
+    passed. Source acquisition, reuse/copy and reading times remain distinct; prior
+    failures/retries and actual common qualification are preserved. Local initialization
+    does not claim publication.
+  evidence_ids:
+  - capture
+  - source-capture
+  - native-checks
+  - reuse
+  - reuse-postcheck
+  - local-init
+  - taxon-access
+findings:
+- finding_id: imported-process-roles
+  issue_key: stenohaline-imported-process-roles
+  category: consistency
+  severity: major
+  status: open
+  certainty: confirmed
+  title: Current facets and imported relations disagree on process/material roles
+  description: Node3 describes an osmotic-potential difference rather than a process.
+    Regulation edges2/3/5/6/7 and material-enables edge10 conflict with the represented
+    endpoint roles. Node3 and its linked edge2 are grouped once. Formal errors are
+    independent of detailed biological efficacy.
+  target_ids:
+  - METPO:1000626
+  field_paths:
+  - causal_graphs[0].nodes[3].node_type
+  - causal_graphs[0].edges[2]
+  - causal_graphs[0].edges[3]
+  - causal_graphs[0].edges[5]
+  - causal_graphs[0].edges[6]
+  - causal_graphs[0].edges[7]
+  - causal_graphs[0].edges[10]
+  evidence_ids:
+  - node-edges
+  - ro-primary
+  - schema
+  - owners
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional empty-ID mappings; broad gates do not remove imported role constraints.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping-only repair is insufficient.
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: nonverbatim-source-snippets
+  issue_key: stenohaline-nonverbatim-source-snippets
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Two snippet fields contain paraphrases
+  description: Actual full definition XML does not contain the two current contiguous
+    spans. Positive related passages support paraphrases, including enable rather
+    than enabling. Preserve the scientific context and inference qualification; the
+    issue is copied-span precision.
+  target_ids:
+  - METPO:1000626
+  field_paths:
+  - causal_graphs[0].edges[3].evidence[0].snippet
+  - causal_graphs[0].edges[15].evidence[0].snippet
+  evidence_ids:
+  - snippets
+  - snippet-precision
+  - locator-correction
+  - retained-definition
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: stenohaline-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Reviewed status lacks a locally attributable acceptance link
+  description: Bounded ignored-inclusive evidence contains fourteen AI events plus
+    a seed, two whole histories and no exact current target among 67 review arrays.
+    It does not establish attributable acceptance; private or remote acceptance remains
+    unknown.
+  target_ids:
+  - METPO:1000626
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - owners
+  - ground-reading
+  - playbook
+  - challenge
+  - adjudication
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-process-roles
+  description: Reconcile current referents with imported relation roles during authorized
+    curation.
+  finding_ids:
+  - imported-process-roles
+  target_ids:
+  - METPO:1000626
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Conditional empty-ID mappings; broad gates do not remove imported role constraints.
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing nonempty IDs are skipped; mapping-only repair is insufficient.
+  acceptance_checks:
+  - Preserve explicit molecular activity and valid material/process positive controls.
+  - Respect nonempty-ID guards and group the linked node3/edge2 problem once.
+  - No detailed mechanism reconstruction or intervention optimization.
+- action_id: reconcile-copied-spans
+  description: Use verified contiguous spans or identify paraphrases as notes.
+  finding_ids:
+  - nonverbatim-source-snippets
+  target_ids:
+  - METPO:1000626
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Keep the current inference qualification and generic source scope.
+  - Use the corrected paragraph5 locator; preserve frozen evidence and original provenance.
+- action_id: link-human-acceptance
+  description: Link attributable acceptance if available or clarify status while preserving
+    provenance.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000626
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/stenohaline.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Retain bounded search evidence and events.
+  - No contact or automatic status promotion.
+limitations:
+- Detailed pathogen survival, fitness, defense, AMR and intervention efficacy remain
+  UNASSESSED_SCOPE; incidental broad text displays were not adopted.
+- Canonical evidence compares two salinities, not a complete tolerated interval; current
+  notes correctly preserve that limit.
+- The definition paper classifies environmental MAGs using relative abundance. Edge3
+  is explicitly inferred and does not establish universal repertoire-to-stenohaly
+  causation.
+- Generic water flux depends on osmotic conditions; source channel/taxon qualifications
+  and contextual branch notes remain explicit.
+- Nine snippets are literal; two are paraphrases. The copied-span finding does not
+  refute biology or identify a wrong article.
+- Exact source metadata/body acquisitions, current copies and selected reading are
+  distinct. Prior MMBR errors/help are not primary article text; fresh PMC HTML is
+  successful.
+- Catalog absence is canonical-specific; same-genus and source-species coverage cannot
+  establish exact strain or phenotype applicability. No required proteins, connectors
+  or external acceptance absence is inferred.
+- Actual past QC/qualification and local initialization do not assert fresh B12 QC
+  or B11 publication.
+notes:
+- Final root, independent challenge and separate locator correction/addendum are pinned;
+  builder/helper not imported or executed during preparation.
+- 'Coverage: four works, nineteen external placements, fifteen grounding fields, seventeen
+  nodes/sixteen edges, eleven snippets, one canonical example, one component, fifteen
+  events and two whole contextual histories. Detailed indexed ledgers are cited without
+  duplicating their full text.'
+- Serializer preparation does not mutate scientific records, native inventory, Git
+  or sweep state.
+tags:
+- record-review
+- stenohaline
+- environment
+- needs-curation
+native_verdict: needs_curation
+```
