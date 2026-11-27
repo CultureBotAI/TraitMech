@@ -1,0 +1,1646 @@
+schema_version: 1.0.0
+review_id: 20261021T112543Z-halotolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of halotolerant
+started_at: '2026-10-21T11:14:40.027422Z'
+finished_at: '2026-10-21T11:25:43Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: This session did not author or modify the captured record. Separate
+    agents supplied source and grounding ledgers. The parent reads the complete builder
+    before serialization and native validation. AI maintenance and this review are
+    distinct from human scientific acceptance.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Active qualitative METPO identity and hierarchy are supported. One major
+  finding concerns stress versus response identity. Four minors concern the osmolyte
+  role/material approximation, enzyme-module versus operon prose, local human-acceptance
+  attribution and an omitted linked expression of concern. All twelve nodes and twelve
+  edges are covered; current RO endpoint roles and named PATHWAY typing remain compatible.
+  Nine assigned works cover sixteen placements. Five of eight snippets are literal
+  exact, one is title punctuation-normalized and two remain unknown. Canonical criterion
+  uncertainty and detailed pathogen-associated biology remain explicit limitations.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/halophily_preference.yaml
+    sha256: d9d43dfaca09069195f27bdf5ceee8aa3465909f862e4ecff07dd22252b2c5dc
+    role: context
+  - path: data/traits/environment/halotolerant.yaml
+    sha256: e3319db0bcc6539233ad930833fe29cd78a515a30cdbc0dd9661283e16c3efb3
+    role: target
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T014114Z-claude-code-5d4383.yaml
+    sha256: 8fecb441b9374b0a0f69f131afce56f86ff69c212c52f45967c2e05ccb8ee98a
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T030032Z-claude-code-d72d86.yaml
+    sha256: efe9fd09e810c5d0d0c447b74bdf1038d2bcf7fd3524f13c3a6b3aa67f0b6ced
+    role: context
+  - path: history/infrastructure/disposition-typing-burndown/2026-08-08T060908Z-claude-code-f802c8.yaml
+    sha256: 8ede4f80f46395efb74643e1f4158975a119ffaec78b5b291f0fc3a520a11c59
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v7/proposal.md
+    sha256: bc6ea10ebc4bec0f446cee92578602889ec464295ce5ecce27fed76eb06528ce
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/halotolerant-deep-research-falcon.md
+    sha256: 21918dcda47254d435804be36612295c0c6052677007c87b14853c07e18cc08f
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: METPO:1000622
+  path: data/traits/environment/halotolerant.yaml
+  label: halotolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained TraitRecord; scientific changes require guarded curation
+  - repository: CultureBotAI/TraitMech
+    path: scripts/seed_from_metpo.py
+    role: Maintained seeder for ontology identity and hierarchy
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One complete maintained environmental TraitRecord, fully read with all
+    three captured AI infrastructure histories. The 62-input supplemental capture
+    preserves the original 59. All twelve nodes, twelve edges, one canonical example,
+    one top-level organism example, nine assigned works, sixteen placements, eight
+    snippets and nineteen history events are accounted for. Clinical and pathogen-associated
+    source material receives documentary classification, identity and quotation assessment
+    only. Detailed thesis-associated biology remains UNASSESSED_SCOPE; no route reconstruction,
+    intervention or optimization is supplied.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - METPO:1000622
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000622
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - METPO:1000622
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: halotolerant-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just validate data/traits/environment/halotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual execution at 11:15:12–13Z passed. Structural acceptance does not
+    certify source support or external semantic meaning.
+  evidence_ids:
+  - check-halotolerant-validate
+- check_id: halotolerant-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just validate-strict data/traits/environment/halotolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual execution at 11:15:12–14Z passed. Native acceptance is separate
+    from grounding and human acceptance.
+  evidence_ids:
+  - check-halotolerant-strict
+- check_id: halotolerant-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just verify-snippets --record data/traits/environment/halotolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-006.nq5qngor/halotolerant-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Actual execution at 11:15:16–26Z passed: eight snippets over six references,
+    three VERIFIED and five NOT_IN_ABSTRACT. Manual inspection distinguishes five
+    literal matches, one title match after quotation-mark normalization and two unverified
+    FUY009 occurrences. Abstract misses are inconclusive.'
+  evidence_ids:
+  - check-halotolerant-snippets
+- check_id: corpus-protein-taxa
+  name: Reused corpus protein/taxon audit
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'B4 execution at 08:55:04–10Z passed: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, zero gaps and zero errors. Historical corpus coverage is not a
+    fresh focused scientific check.'
+  evidence_ids:
+  - check-corpus-protein-taxa
+  scope_note: Current source base and scientific bytes match. Two label-only protein
+    classes and zero instances are compatible with NONMECHANISTIC scope. B5 QC includes
+    a later corpus audit.
+- check_id: batch005-qc
+  name: Reused full-corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - METPO:1000622
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: B5 actual execution at 10:21:03–10:23:38Z passed. The separate B6 common/scientific
+    byte comparison and environment readiness support scoped historical reuse.
+  evidence_ids:
+  - check-batch005-qc
+  scope_note: B6 compares 1130 traits, 1278 history files and 19 common inputs. Preserve
+    original warnings, baselines, dates and scope. B3 history and OLD product failures,
+    retry and adapter skips remain separate actual executions.
+- check_id: uniprot-applicability
+  name: UniProt instance audit applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - METPO:1000622
+  summary: Two REVIEWED_LABEL_ONLY protein classes assert zero instances or accessions.
+    No mandatory protein anchor is inferred from the NONMECHANISTIC graph.
+  evidence_ids:
+  - record
+  - node-edges
+  - native-policy
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-halotolerant-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/halotolerant-validate.log
+  locator: Executed 2026-10-21T11:15:12Z through 2026-10-21T11:15:13Z; metadata halotolerant-validate.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: Actual execution at 11:15:12–13Z passed. Structural acceptance does not
+    certify source support or external semantic meaning.
+  snapshot_sha256: 06805bcd02814152d6010925fd92d05d4d31d01b0eb932dfb6a109ff47f13ac8
+- evidence_id: check-halotolerant-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/halotolerant-strict.log
+  locator: Executed 2026-10-21T11:15:12Z through 2026-10-21T11:15:14Z; metadata halotolerant-strict.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: Actual execution at 11:15:12–14Z passed. Native acceptance is separate
+    from grounding and human acceptance.
+  snapshot_sha256: 14284da7a1678116bb18132889cea3f5406ee0b057961f388b7ba474946983c8
+- evidence_id: check-halotolerant-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/halotolerant-snippets.log
+  locator: Executed 2026-10-21T11:15:16Z through 2026-10-21T11:15:26Z; metadata halotolerant-snippets.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 'Actual execution at 11:15:16–26Z passed: eight snippets over six references,
+    three VERIFIED and five NOT_IN_ABSTRACT. Manual inspection distinguishes five
+    literal matches, one title match after quotation-mark normalization and two unverified
+    FUY009 occurrences. Abstract misses are inconclusive.'
+  snapshot_sha256: d639f3b8feaf04fee135bda36da271afed95283f3fc485b3f1b4b99b181bba77
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: 'B4 execution at 08:55:04–10Z passed: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, zero gaps and zero errors. Historical corpus coverage is not a
+    fresh focused scientific check.'
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-batch005-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/batch005-qc.log
+  locator: Executed 2026-10-21T10:21:03Z through 2026-10-21T10:23:38Z; metadata batch005-qc.json
+  accessed_at: '2026-10-21T11:25:43Z'
+  support: context_only
+  summary: B5 actual execution at 10:21:03–10:23:38Z passed. The separate B6 common/scientific
+    byte comparison and environment readiness support scoped historical reuse.
+  snapshot_sha256: 206638ef702eef1ea64f13c4be3ef11180f9659383be68d1e492a9760c8f79be
+- evidence_id: capture
+  kind: validation
+  reference: Native supplemental selected-record capture
+  locator: 62 inputs at 11:14:48.267615–11:14:49.041047Z
+  accessed_at: '2026-10-21T11:14:49.041047Z'
+  support: supports
+  summary: All current captured hashes match and preserve the original 59. Three AI
+    infrastructure histories were fully read as context, not current-target human
+    acceptance.
+  snapshot_sha256: fe84287b2791335d77c88aeb3aaec6f362c26fb8f98453bc28d8d45ff9999b9c
+- evidence_id: preparation
+  kind: validation
+  reference: Whole-record and captured-history preparation
+  locator: Complete target and all three captured histories read before adjudication
+  accessed_at: '2026-10-21T11:18:03.284417Z'
+  support: context_only
+  summary: Counts and hashes were derived without adopting neighboring-record findings.
+    The canonical classification and detailed pathogen source claims were left for
+    bounded current assessment.
+  snapshot_sha256: e6610785288c8f69332a8cce7ee6f93ce8d69db3b8317585040b3174d7462a5b
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/halotolerant.yaml
+  locator: Entire current record; twelve nodes, twelve edges, nineteen history events
+  accessed_at: '2026-10-21T11:21:08.485695Z'
+  support: partial
+  summary: The qualitative trait is REVIEWED with eighteen explicit AI changes plus
+    seed. Two protein classes retain label-only status with zero instances. Historical
+    withdrawn grounds are distinguished from current assertions.
+  snapshot_sha256: e3319db0bcc6539233ad930833fe29cd78a515a30cdbc0dd9661283e16c3efb3
+- evidence_id: native-policy
+  kind: authority
+  reference: Native field-by-field checklist
+  locator: Evidence, entity facets, optional completeness and Status/audit guidance
+  accessed_at: '2026-10-21T11:21:08.485695Z'
+  support: supports
+  summary: Independent source support, consistent represented meanings and attributed
+    human acceptance for REVIEWED apply. Automated success is not scientific acceptance.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: reuse
+  kind: validation
+  reference: B6 common-input comparison
+  locator: Original verification at 10:14:46.298715Z
+  accessed_at: '2026-10-21T10:14:46.298715Z'
+  support: supports
+  summary: 1130 traits, 1278 history files and 19 common inputs match the preceding
+    batch. This setup receipt predates B5 final QC; that actual result is recorded
+    separately.
+  snapshot_sha256: 91de0fcd8f598a37b867033da1a4d732eaf5676848023a41dd6963612a78aa44
+- evidence_id: reuse-supplement
+  kind: validation
+  reference: B5 checks and B6 readiness supplement
+  locator: Original supplement 10:28:10.859819Z; QC 10:21:03–10:23:38Z
+  accessed_at: '2026-10-21T10:28:10.859819Z'
+  support: supports
+  summary: Historical command/log hashes, readiness, failures and retry remain distinct.
+    B3 validated 1277 history records; byte comparison inventories 1278 files. No
+    fresh B6 QC execution is claimed.
+  snapshot_sha256: f5e234e9de85ff4dbd486c2f4e4c9c8df915a767fb67afa4da204ab28f57a7f4
+- evidence_id: identity
+  kind: authority
+  reference: Pinned METPO identity and hierarchy
+  locator: METPO:1000622 and parent 1000629; complete 1631-label scan
+  accessed_at: '2026-10-21T11:21:08.094571Z'
+  support: supports
+  summary: The active qualitative class exactly matches the current definition and
+    parent. Numeric NaCl classes also carry overloaded synonyms, so this is not a
+    unique-string claim. Redundant related-synonym omission is documented; no fallback
+    or invented obsolete replacement is needed.
+  snapshot_sha256: 90aece2b9203a04fa457435bff7412401e696c47221e4eed1c319c1ada1d896c
+- evidence_id: go-response
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006970
+  locator: Active response to osmotic stress; original access completed 09:55:27.370489Z
+  accessed_at: '2026-10-21T09:55:27.370489Z'
+  support: supports
+  summary: The term denotes a response process, while the current node describes the
+    stress itself. The maintained closeMatch approximation does not resolve the referent
+    distinction.
+  snapshot_sha256: 339ad274398990a437798d05314aee93937436dbb58511ce94fdc224f34d9358
+- evidence_id: osmolyte-role
+  kind: database
+  reference: https://www.ebi.ac.uk/chebi/backend/api/public/compound/25728/
+  locator: Osmolyte biological role; original access completed 09:39:23.921481Z
+  accessed_at: '2026-10-21T09:39:23.921481Z'
+  support: supports
+  summary: Material compatible solutes bear the role. The explicit closeMatch owner
+    bounds the concern to role/material precision rather than false exact equivalence.
+  snapshot_sha256: 3ac5acae1be6a60d90b9bce4f9893325210f7f3018fd31e57fa67fe7c93a5de2
+- evidence_id: biosynthesis-identity
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0031456%2CGO%3A0019491
+  locator: Active biosynthetic-process identities; original access completed 09:39:23.789948Z
+  accessed_at: '2026-10-21T09:39:23.789948Z'
+  support: supports
+  summary: Current identities match the named processes. Native PATHWAY can represent
+    a named processual route; this is identity support, not detailed source-route
+    verification.
+  snapshot_sha256: f83e0016fffd443295ddc23b250a4267e0d2d9c7a36f85c9eadb15b7be65e545
+- evidence_id: taxon
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1570&retmode=xml
+  locator: Fresh request 11:15:33.754522–11:15:33.981351Z
+  accessed_at: '2026-10-21T11:15:33.981351Z'
+  support: supports
+  summary: Current NCBI1570 resolves to Halobacillus halophilus and records historical
+    names. Taxonomic identity does not establish the exact no-high-salt-requirement
+    phenotype.
+  snapshot_sha256: 48b5a736af0247c93293259ed74e3d041708fb2d45b73abcbb29378b9044dccc
+- evidence_id: local-authority
+  kind: authority
+  reference: Maintained node/predicate mappings, proposals and guards
+  locator: Node rows 15/28/147–148/189; predicate rows 9–10/39/65/90/102/105; v2/v8/v9
+  accessed_at: '2026-10-21T11:21:08.483599Z'
+  support: supports
+  summary: Stress and osmolyte mappings use closeMatch. Imports expressly admits molecular-function
+    activity. Existing-ID guards and exact-label/type keys govern recurrence; the
+    current ectoine PATHWAY ground remains valid.
+  snapshot_sha256: d374df03b7ad9bd426ce0d7883db42e6360677401bcd41de92e7c759ed4ca88f
+- evidence_id: predicate-authority
+  kind: authority
+  reference: Recursive retained RO and captured Biolink semantics
+  locator: Complete superproperty chain integration at 11:21:28.320338Z
+  accessed_at: '2026-10-21T11:21:28.320338Z'
+  support: supports
+  summary: Declared RO endpoints fit this record. Has output inherits occurrent/continuant
+    endpoints, not a narrower asserted material-only range. Process regulation, material
+    capability and executor meanings remain distinct. Original RO reads at 08:04:46.869674Z,
+    09:52:45.989262Z and 09:41:51.917664Z are retained; no executed OWL failure is
+    claimed.
+  snapshot_sha256: a699ac3bb9cf49d23d33828def2f11513154ecd8e003bf4d80a14a2f46ff4afa
+- evidence_id: authority-reuse
+  kind: validation
+  reference: Official authority and catalog reuse chain
+  locator: Copy/hash verification 11:16:24.178185Z; original times summarized 11:21:08.485503Z
+  accessed_at: '2026-10-21T11:21:08.485503Z'
+  support: supports
+  summary: GO, ChEBI, RO and catalog responses retain original acquisition bounds
+    and hashes. Fresh taxonomy is separate from copying. Current grounding integration
+    is not a fresh request for reused authorities.
+  snapshot_sha256: 8172ccd96e91dc3ab52f0fb8bab320c8acab5e1405ebc5179c2e59e3255dc8a6
+- evidence_id: grounding-ledger
+  kind: validation
+  reference: Complete documentary grounding assessment
+  locator: Twelve nodes, twelve edges, one component and 62 matching inputs
+  accessed_at: '2026-10-21T11:21:08.485695Z'
+  support: partial
+  summary: The current identity, biosynthesis grounds, taxon and declared relation
+    roles are supported. Stress/response identity and two bounded documentary facets
+    need attention; no inherited endpoint error is manufactured.
+  snapshot_sha256: 299ae489cfabcd56c027b3d9f15b4d9881816b7e9629128b301239e86e1c0ffa
+- evidence_id: node-edges
+  kind: validation
+  reference: Complete current node and edge ledger
+  locator: nodes[0–11] and edges[0–11], zero-based
+  accessed_at: '2026-10-21T11:21:08.338155Z'
+  support: partial
+  summary: All endpoints resolve. Named PATHWAY and label-only enzyme aggregates are
+    permitted. Formal role compatibility does not validate detailed pathogen-associated
+    biology or remove the shared stress/response ambiguity.
+  snapshot_sha256: 3907b0e1c7ec4ab9f2e03245620b91a80f5ce2ec3134f47a6f1406c03f5f8191
+- evidence_id: owners
+  kind: authority
+  reference: Maintained mappings, migration writers and historical boundaries
+  locator: Node guards 156–174; predicate guards 152–176; named-route migration 18–42/74–85
+  accessed_at: '2026-10-21T11:21:08.479919Z'
+  support: supports
+  summary: Mappings can retain or recreate current ambiguity. Former chemical/microbe
+    assignments are withdrawn history. Current enzyme-module identity differs deliberately
+    from the legacy ID; the bounded finding concerns remaining edge prose, not forced
+    retyping.
+  snapshot_sha256: 8e3e55de421c327f5cb5da23bd4e03ccbe2b148ac8b48b8458e0c895935c5d06
+- evidence_id: provenance
+  kind: search
+  reference: Bounded ignored-inclusive target and node searches
+  locator: Search at 11:15:59.718636Z; 220 matching files and no targeted saved review
+  accessed_at: '2026-10-21T11:21:08.479764Z'
+  support: partial
+  summary: Eighteen AI events plus seed and three AI infrastructure histories establish
+    maintenance, but inspected local entries do not attribute human acceptance for
+    this target. Those histories concern other records and comparator use. Linked
+    remote/private content is unassessed.
+  snapshot_sha256: bd33618038881577c10b9e81749801f14badfbbd83bdbb0c6c1a4c3d2b91e9c9
+  search_scope: Own B6 repository exact target label, ID and graph search includes
+    ignored and hidden files, excluding .git and .venv. Matching saved reviews were
+    parsed by target ID/path; supplemental node-history and canonical-writer searches
+    retain exact commands. All three captured histories were fully read. No remote,
+    private or global absence claim.
+- evidence_id: expression
+  kind: validation
+  reference: Canonical catalog applicability
+  locator: Original official catalog request 07:36:12.732638–07:36:12.858149Z; twenty
+    organisms and twenty-eight datasets
+  accessed_at: '2026-10-21T11:21:08.484207Z'
+  support: context_only
+  summary: No canonical Halobacillus or inspected official historical Sporosarcina
+    name/genus match was found in the retained catalog. The embedded clinical example
+    is not substituted. No downstream gene/module query or negative phenotype inference
+    follows.
+  snapshot_sha256: 3bbb364075373b9f4cefb33dd8525bc854dca322118e599c24fd34ecdcb5a89b
+- evidence_id: runner
+  kind: search
+  reference: Retained structured-runner discovery
+  locator: B5 PATH/project scope 09:27:57Z; external bounds 08:17:15Z
+  accessed_at: '2026-10-21T09:27:57.542053Z'
+  support: context_only
+  summary: No callable runner was found within those historical bounds. The official
+    catalog is the available fallback; no fresh B6 or global runner absence is claimed.
+  snapshot_sha256: 43597ec8b007fc605fabf9069534281f331a33bda5615b9ce9c473facf744179
+  search_scope: Historical B5 PATH plus ignored-inclusive project filename/manifest
+    search, .git excluded; earlier external checkout bounds retained in prior-runner-discovery-external.json.
+    No fresh whole-machine search or unrestricted absence claim.
+- evidence_id: source-ledger
+  kind: validation
+  reference: Qualified nine-work source assessment
+  locator: Original assessment 11:17:55.946315Z; status-qualified version 11:19:26.955785Z
+  accessed_at: '2026-10-21T11:19:26.955785Z'
+  support: partial
+  summary: All nine works and sixteen placements resolve. General contextual support
+    is distinguished from exact trait criteria and unassessed detailed biology. The
+    qualified ledger supersedes the original publication-status omission while preserving
+    original receipts.
+  snapshot_sha256: 471d886d55f1ce7a75ce21d0385fe4cf6f194bc1a9f7d0118f8124a9b6a6ef86
+- evidence_id: placements
+  kind: validation
+  reference: Complete assigned citation-placement inventory
+  locator: Nine works, sixteen placements including definition, top evidence, canonical
+    and all edge sources
+  accessed_at: '2026-10-21T11:17:55.946315Z'
+  support: supports
+  summary: All current references are accounted for at their inspected scope. The
+    publication notice is supplemental status evidence, not a tenth assigned work.
+  snapshot_sha256: fde6c832014982c459679a37cfc506b4cf756994332108ed36a6c3ac89ad94ae
+- evidence_id: snippets
+  kind: validation
+  reference: Complete quotation ledger
+  locator: 'Eight occurrences: five literal exact, one title punctuation-normalized
+    and two unknown'
+  accessed_at: '2026-10-21T11:17:55.946315Z'
+  support: partial
+  summary: The two FUY009 body occurrences remain unverified. The organism title preserves
+    words and order after species-name quotation-mark normalization; it is not counted
+    as a raw literal match.
+  snapshot_sha256: 8e66f0a474968dd95a9c5fbc734d75d96738cec5e936599193d7c29d1eed39be
+- evidence_id: edge-sources
+  kind: validation
+  reference: Complete nearest-source ledger
+  locator: All twelve current edges; introductory/contextual and unassessed scopes
+    separated
+  accessed_at: '2026-10-21T11:17:55.946315Z'
+  support: partial
+  summary: Generic environmental framing is positively supported where inspected.
+    Thesis-dependent detailed biology on edges 8–11 remains UNASSESSED_SCOPE; general
+    title/abstract framing and semantic role compatibility are not mechanism validation.
+  snapshot_sha256: 5ebad066de27d042dc6fa99abc20a30e2efb900a4fb63ebc33d048e4de8c5d09
+- evidence_id: metadata-salinity
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1093%2Ffemsre%2Ffuy009&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:16.231231+00:00 through 2026-10-21T11:15:17.032097+00:00
+  accessed_at: '2026-10-21T11:15:17.032097Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: bc6a10ee6244e1ba4efb4ccb9abd95a51aa3d9482ff4c9ee3d1eb79a140e5064
+- evidence_id: metadata-organism_example
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27621824+AND+SRC%3AMED&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:16.232393+00:00 through 2026-10-21T11:15:17.033079+00:00
+  accessed_at: '2026-10-21T11:15:17.033079Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 038a26aa2dd9042510fb27c67d72f4d4b58dfe94eaf43edaf3593d8c0fb9ca84
+- evidence_id: metadata-canonical
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A18442383+AND+SRC%3AMED&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:16.233007+00:00 through 2026-10-21T11:15:16.977260+00:00
+  accessed_at: '2026-10-21T11:15:16.977260Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 56a0dc96c95ae9338cf87d2a0dd5a2222da1d019bfd86d42108410126d3ef1b2
+- evidence_id: metadata-salts_review
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1186%2F1746-1448-4-2&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:16.233591+00:00 through 2026-10-21T11:15:17.053208+00:00
+  accessed_at: '2026-10-21T11:15:17.053208Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 0c259095f9c5bf15fad2d6af505da1a31593135a3d56ef85f6a7710b5561dad3
+- evidence_id: metadata-solute_review
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1016%2Fj.csbj.2021.01.030&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:16.977351+00:00 through 2026-10-21T11:15:17.718237+00:00
+  accessed_at: '2026-10-21T11:15:17.718237Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: b5b9a76fc7e576b7c1fa1b9685b49912e00cd33d7a6f94a4003479f7b7754850
+- evidence_id: metadata-haloalkaliphile_review
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1139%2Fcjm-2014-0233&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:17.032271+00:00 through 2026-10-21T11:15:17.706829+00:00
+  accessed_at: '2026-10-21T11:15:17.706829Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 975f566f86f68baab0148006a77516b2303bc680e954bc79796efc01e614c4ac
+- evidence_id: metadata-elongata_study
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1371%2Fjournal.pone.0168818&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:17.033117+00:00 through 2026-10-21T11:15:17.761298+00:00
+  accessed_at: '2026-10-21T11:15:17.761298Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: d5ed9cb708f021ebb8c00bab48ff80130fd58dc5bf4ceaebf768c2c97b9cc514
+- evidence_id: metadata-marine_bacteria
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.58088%2F07hg-r941&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:17.053254+00:00 through 2026-10-21T11:15:17.774095+00:00
+  accessed_at: '2026-10-21T11:15:17.774095Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 38f074806e04099f70eb330ba1dc437e0c604b3807455376569e836c6137e7cd
+- evidence_id: metadata-salt_out
+  kind: database
+  reference: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1038%2Fs41598-024-63581-z&format=json&resultType=core
+  locator: Original request 2026-10-21T11:15:17.706976+00:00 through 2026-10-21T11:15:18.344312+00:00
+  accessed_at: '2026-10-21T11:15:18.344312Z'
+  support: context_only
+  summary: Citation identity and available title/abstract text are used only at the
+    scope declared in the qualified source ledger. The thesis has zero index hits
+    but resolves through its actual university metadata; no detailed pathogen mechanism
+    is verified.
+  snapshot_sha256: 53cb1a794559c168bcbd68db32587d78ef00d244f38b7cf2ad6409d337e1f4ea
+- evidence_id: body-canonical
+  kind: primary_source
+  reference: DOI:10.1186/1746-1448-4-4
+  locator: PMC2412884 title,abstract opening,and body paragraph6; S.aureus bibliography
+    occurrence only; original acquisition 2026-10-21T11:15:54.299623+00:00 through
+    2026-10-21T11:15:56.541338+00:00
+  accessed_at: '2026-10-21T11:15:56.541338Z'
+  support: supports
+  summary: Only title, abstract opening and classification paragraph 6 support moderate-halophile
+    and chloride-dependent context. The exact no-high-salt-requirement criterion remains
+    unestablished; clinical exemplar wording is not established by a bibliography
+    mention.
+  snapshot_sha256: 49d3b0ccc141cd73a2b84dd7ecebc338a26b163e86e5bec9cf96d239d858d7e1
+- evidence_id: body-salts_review
+  kind: primary_source
+  reference: DOI:10.1186/1746-1448-4-2
+  locator: PMC2329653 body paragraph0; original acquisition 2026-10-21T11:00:28.895258+00:00
+    through 2026-10-21T11:00:30.770195+00:00
+  accessed_at: '2026-10-21T11:00:30.770195Z'
+  support: supports
+  summary: Only the general introductory setting and exact assigned phrase are used;
+    no taxon-specific causal assay is inferred.
+  snapshot_sha256: 4a5840428b634e769b7be5778e94ecbc8d14fc63f99db96f9a830e1e68922ae1
+- evidence_id: body-elongata_study
+  kind: primary_source
+  reference: DOI:10.1371/journal.pone.0168818
+  locator: PMC5231179 Introduction body paragraph0, opening generic statement; original
+    acquisition 2026-10-21T11:00:28.895354+00:00 through 2026-10-21T11:00:30.688752+00:00
+  accessed_at: '2026-10-21T11:00:30.688752Z'
+  support: supports
+  summary: Only the introductory generic coping statement and exact assigned phrase
+    are used. A halophile study does not independently establish the no-high-salt-requirement
+    branch.
+  snapshot_sha256: bc2886d1aff18badcf9a60dbfba0532920974de6d5f50ebbfd37e2f8b2a7159b
+- evidence_id: body-marine_bacteria
+  kind: primary_source
+  reference: DOI:10.58088/07hg-r941
+  locator: University of Delaware UDSpace full metadata page,dc.title,dc.contributor.author,dc.date.issued,dc.description.degree,dc.identifier.doi,dc.type
+    and general abstract opening; original acquisition 2026-10-21T11:15:54.300099+00:00
+    through 2026-10-21T11:15:56.076804+00:00
+  accessed_at: '2026-10-21T11:15:56.076804Z'
+  support: supports
+  summary: Actual University of Delaware metadata verifies Katherine Boas Lichty,
+    2024, PhD thesis and DOI. General title/abstract scope only; no thesis chapters,
+    detailed pathogen routes or mechanism repair are assessed.
+  snapshot_sha256: cb08fdbf04662f010cefead92a963919af768bf2706f47c4f5125fe0b5893e06
+- evidence_id: body-salt_out
+  kind: primary_source
+  reference: DOI:10.1038/s41598-024-63581-z
+  locator: PMC11231302 Introduction body paragraph0; publisher Introduction69–74;
+    original acquisition 2026-10-21T11:15:54.299987+00:00 through 2026-10-21T11:15:59.702592+00:00
+  accessed_at: '2026-10-21T11:15:59.702592Z'
+  support: supports
+  summary: The inspected Introduction supplies contextual salt-out and halotolerant
+    classification support, distinct from experimental correlations. No universal
+    necessity or operational salt threshold is inferred.
+  snapshot_sha256: 445d0836029227974a3f14fcd1d89f6d5e29b2d6e10b0f2568b5c201d313fdac
+- evidence_id: source-access
+  kind: validation
+  reference: Source access and reuse outcomes
+  locator: Actual browser observations at 11:15:04–11:16:27Z; separate body/reuse
+    receipts
+  accessed_at: '2026-10-21T11:16:27Z'
+  support: context_only
+  summary: University and Nature primary pages were actually inspected at 11:15:24–25Z.
+    Initial DOI access failures and later FUY009 PDF failure are retained; search
+    results were leads, not primary proof. Reused JATS retains original 11:00 acquisition
+    times.
+  snapshot_sha256: 5d1be612b4382c1e5d3e321cbf166582f3d0a3a8adad0d24040f6dc51c19f756
+- evidence_id: source-status
+  kind: validation
+  reference: Publication-status qualification and failed notice access
+  locator: Status integration 11:19:26.955049Z; reciprocal metadata and original deposited
+    JATS
+  accessed_at: '2026-10-21T11:19:26.955049Z'
+  support: supports
+  summary: PMID27621824 has a linked expression of concern, PMID38799920 / DOI10.1016/j.nmni.2024.101324.
+    Its reason is UNVERIFIED. EPMC 500 and BioC HTTP-200 error/help are not notice
+    text. A second empty JATS link is unresolved, not a second independently established
+    substantive notice.
+  snapshot_sha256: ca4cea0e03590627cc98529c19c36a30c19e4436acd3c575359763778c12e5c0
+- evidence_id: notice-metadata
+  kind: database
+  reference: https://pubmed.ncbi.nlm.nih.gov/38799920/
+  locator: Reciprocal indexed notice; actual metadata request 11:18:10.939972–11:18:11.857281Z
+  accessed_at: '2026-10-21T11:18:11.857281Z'
+  support: supports
+  summary: The notice is classified as an expression of concern for PMID27621824.
+    No reason, retraction or false trait classification is inferred from metadata.
+  snapshot_sha256: 00c4a6788c6690f426e814e8c6d278a0ebfb99a88556c1b95c29c89534b0bb9a
+- evidence_id: original-status-jats
+  kind: primary_source
+  reference: DOI:10.1016/j.nmni.2016.07.013
+  locator: Publisher-deposited original JATS related-article annotations; actual access
+    11:18:24.378315–11:18:25.279523Z
+  accessed_at: '2026-10-21T11:18:25.279523Z'
+  support: supports
+  summary: The original article identifies the linked expression of concern. This
+    is documentary status verification only; the notice rationale and clinical or
+    organism biology are not validated.
+  snapshot_sha256: f32c8d571d1173ed11432378b29c17d189452b7ee218690a238612bac092ac4e
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: ID, label, synonym and hierarchy'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: Active METPO:1000622 matches the qualitative definition and broader halophily-preference
+    parent. Overloaded numeric-bin synonyms and obsolete labels do not displace the
+    explicit current identity. Redundant related-synonym omission is documented; no
+    fallback or invented replacement relation is required.
+  evidence_ids:
+  - identity
+  - record
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: definition and nearest-source bounds'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: Pinned METPO supports the exact qualitative definition. The inspected Nature
+    Introduction separately supports salt tolerance without a salt requirement, while
+    nearest FUY009 abstract supplies broader physiology rather than the complete criterion.
+    The undefined high-salt boundary remains a limitation; no numeric threshold is
+    invented.
+  evidence_ids:
+  - identity
+  - metadata-salinity
+  - body-salt_out
+  - source-ledger
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: canonical phenotype and clinical aside'
+  outcome: unknown
+  target_ids:
+  - METPO:1000622
+  summary: NCBI1570 resolves correctly, and the cited source supports moderate-halophile
+    and chloride-dependent context. That passage neither establishes the exact no-high-salt-requirement
+    criterion nor contradicts it solely through a nonzero chloride requirement. The
+    clinical exemplar aside is unverified in the inspected classification passage.
+    These remain bounded limitations rather than a false-classification finding.
+  evidence_ids:
+  - taxon
+  - body-canonical
+  - placements
+  - source-ledger
+- assessment_id: organism-example
+  area: evidence
+  topic: 'Native checklist: top-level organism report and publication status'
+  outcome: concern
+  target_ids:
+  - METPO:1000622
+  summary: The cited title reports the organism as halotolerant, with quotation-mark
+    normalization acknowledged. A linked 2024 expression of concern is confirmed by
+    reciprocal indexed metadata and the original deposited JATS. The record lacks
+    that qualification. Its rationale is unverified, and no retraction, false classification
+    or species-wide assay is inferred.
+  evidence_ids:
+  - metadata-organism_example
+  - notice-metadata
+  - original-status-jats
+  - source-status
+  - snippets
+- assessment_id: model
+  area: representation
+  topic: 'Native checklist: entity facets and optional fields'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: Named ectoine PATHWAY and glycine-betaine process facets are compatible
+    with their active GO identities and maintained native conventions. Two material
+    enzyme aggregates retain permitted label-only status with zero instances. Transport
+    activity is valid and local imports expressly admits it; systems wording remains
+    a limitation only.
+  evidence_ids:
+  - node-edges
+  - biosynthesis-identity
+  - local-authority
+  - owners
+  - native-policy
+- assessment_id: node-grounding
+  area: grounding
+  topic: 'Native checklist: all twelve nodes'
+  outcome: concern
+  target_ids:
+  - METPO:1000622
+  summary: The material stress/response ambiguity at node 2 and bounded osmolyte role/material
+    approximation at node 3 need attention. Other current identities and type facets
+    are supported within documentary scope; no arbitrary chemical replacement, protein
+    instance or forced pathway retype is required.
+  evidence_ids:
+  - go-response
+  - osmolyte-role
+  - identity
+  - node-edges
+  - biosynthesis-identity
+  details: 'Nodes 0–1: qualitative trait and environmental condition. Node 2: stress
+    versus GO response. Node 3: chemical bearer versus osmolyte-role closeMatch. Node
+    4: permitted transport activity. Nodes 5–7: protective, accumulation and strategy
+    processes. Node 8: material enzyme module. Node 9: valid named processual route.
+    Node 10: material enzyme aggregate. Node 11: active biosynthetic-process identity.'
+- assessment_id: predicate-roles
+  area: consistency
+  topic: 'Native checklist: all twelve relations and local proposals'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: 'The declared RO endpoints are compatible: material contribution to protective
+    process, process regulation, material enabling process/pathway, and processual
+    output to a chemical. Has output has inherited continuant range, not an asserted
+    material-only range. Biolink and local imports/confers/mitigates introduce no
+    separate endpoint finding. Shared stress/response meaning remains grouped at node
+    2; compatibility alone is not biological proof.'
+  evidence_ids:
+  - predicate-authority
+  - local-authority
+  - node-edges
+  details: 'Edges 0/7: ungrounded contextual relations; optional identifiers are not
+    required. Edges 1/2/6 share node 2 meaning. Edge 3: permitted MF imports. Edge
+    4: compatible material/process roles, with capability nuances bounded. Edge 5:
+    valid local confers. Edges 8/9: material executor roles fit; edge 8 has documentary
+    actor wording. Edges 10/11: processual output direction fits; shared role grounding
+    remains a separate minor.'
+- assessment_id: edge-sources
+  area: evidence
+  topic: 'Native checklist: all twelve nearest source claims'
+  outcome: unknown
+  target_ids:
+  - METPO:1000622
+  summary: Inspected general passages support the environmental, compatible-solute
+    and salt-out framing with source qualifiers retained. Halophile background does
+    not independently prove the no-high-salt-requirement branch. The thesis is an
+    official 2024 PhD work; its title/abstract is documentary context only. Detailed
+    biology on edges 8–11 and specialized pathogen stress interpretation remain UNASSESSED_SCOPE,
+    without reconstruction or source-falsity inference.
+  evidence_ids:
+  - edge-sources
+  - placements
+  - source-ledger
+  - body-marine_bacteria
+  - body-salt_out
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: nine works and sixteen placements'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: Eight indexed publications and the university-verified thesis resolve all
+    nine assigned works and sixteen placements. The expression-of-concern notice is
+    additional status evidence rather than a tenth assigned citation. A zero Europe
+    PMC hit does not invalidate the thesis DOI, and a thesis is not represented as
+    a journal article.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - body-marine_bacteria
+  - source-status
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: eight occurrences and exactness limits'
+  outcome: unknown
+  target_ids:
+  - METPO:1000622
+  summary: Five snippets are raw literal matches, one preserves title words after
+    species-name quotation-mark normalization, and two FUY009 occurrences remain unverified
+    because the body was unavailable. No false-quote finding follows from abstract
+    nonmatches. The normalized title match is kept separate from raw exactness.
+  evidence_ids:
+  - snippets
+  - check-halotolerant-snippets
+  - source-access
+  - source-ledger
+- assessment_id: quantity
+  area: quantity
+  topic: 'Native checklist: qualitative scope and no inferred assay'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: The record is qualitative and supplies no measured threshold requiring
+    conversion. Do not infer no-ion growth, a species-uniform cutoff, strain/condition
+    equivalence, or growth measurements from title classification. Canonical requirement
+    evidence remains bounded.
+  evidence_ids:
+  - record
+  - body-canonical
+  - body-salt_out
+  - placements
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record coverage and explicit unknowns'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: All twelve nodes, twelve edges, nineteen events, both example locations,
+    nine assigned works, sixteen placements and eight snippets are covered. Complete
+    accounting is distinct from full-body or detailed biological verification. One
+    connected NONMECHANISTIC graph with optional label-only proteins requires no invented
+    mechanism completion.
+  evidence_ids:
+  - capture
+  - node-edges
+  - placements
+  - native-policy
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: canonical catalog applicability'
+  outcome: not_applicable
+  target_ids:
+  - METPO:1000622
+  summary: The retained complete catalog has no canonical or inspected historical-name
+    match for H. halophilus. No clinical-example substitution or downstream gene/module
+    query was made. This is noncoverage by the available catalog, not negative biology
+    or a mandatory dataset defect.
+  evidence_ids:
+  - expression
+  - runner
+  - authority-reuse
+- assessment_id: ownership
+  area: ownership
+  topic: 'Native checklist: maintained recurrence and historical boundaries'
+  outcome: concern
+  target_ids:
+  - METPO:1000622
+  summary: Current record and node mappings own the stress/response and role-facet
+    concerns; existing-grounding skips preserve them. The current material module
+    is deliberate, while edge prose retains locus wording. Named-route and predicate
+    migration history support current valid conventions. Bounded searches found no
+    canonical-specific writer, without asserting global historical absence.
+  evidence_ids:
+  - owners
+  - local-authority
+  - provenance
+- assessment_id: human-acceptance
+  area: provenance
+  topic: 'Native checklist: REVIEWED and attributed local acceptance'
+  outcome: concern
+  target_ids:
+  - METPO:1000622
+  summary: Eighteen explicit AI changes plus seed and three contextual AI infrastructure
+    histories positively establish maintenance. They do not attribute a human scientific
+    acceptance decision for this current target. Linked remote/private content is
+    unassessed; the finding concerns local traceability, not whether any human has
+    ever reviewed the record.
+  evidence_ids:
+  - provenance
+  - native-policy
+  - record
+- assessment_id: checks
+  area: schema
+  topic: 'Native checklist: focused checks and scoped historical reuse'
+  outcome: supported
+  target_ids:
+  - METPO:1000622
+  summary: Focused validation, strict and snippet checks passed at their actual times.
+    B4 protein/taxon, B5 QC, B3 history and OLD common checks retain original execution
+    bounds, failed product attempts, successful retry and adapter skips. Readiness
+    is distinct from QC; no fresh B6 corpus execution is claimed.
+  evidence_ids:
+  - check-halotolerant-validate
+  - check-halotolerant-strict
+  - check-halotolerant-snippets
+  - check-corpus-protein-taxa
+  - check-batch005-qc
+  - reuse
+  - reuse-supplement
+findings:
+- finding_id: stress-response-grounding
+  issue_key: halotolerant-stress-response-grounding
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: The stress node carries the identity of the response to that stress
+  description: Node 2 describes cellular stress caused by external salinity but is
+    grounded to GO:0006970, response to osmotic stress. Its uses on edges 1, 2 and
+    6 retain that unresolved stress/response distinction. The maintained closeMatch
+    mapping does not reconcile the referents. This is one shared semantic finding,
+    not an independent RO endpoint failure or claimed native/OWL validation error.
+  target_ids:
+  - METPO:1000622
+  field_paths:
+  - causal_graphs[0].nodes[2].grounding
+  - causal_graphs[0].nodes[2].description
+  evidence_ids:
+  - go-response
+  - node-edges
+  - local-authority
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Stress closeMatch row 28 and response exactMatch row 189
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_nodes.py
+    role: Existing-grounding skip and mapping recurrence
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: osmolyte-role-facet
+  issue_key: halotolerant-osmolyte-role-facet
+  category: grounding
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The compatible-solute role/material approximation needs explicit qualification
+  description: Node 3 describes material compatible solutes, while CHEBI:25728 denotes
+    the osmolyte biological role. Mapping row 15 explicitly uses closeMatch, so this
+    is bounded facet precision rather than false exact equivalence. Preserve the distinction
+    between the material bearer and its role without prescribing a replacement chemical
+    or denying the supported generic context.
+  target_ids:
+  - METPO:1000622
+  field_paths:
+  - causal_graphs[0].nodes[3].grounding
+  - causal_graphs[0].nodes[3].description
+  evidence_ids:
+  - osmolyte-role
+  - local-authority
+  - node-edges
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Row 15 explicit closeMatch
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_nodes.py
+    role: Existing-grounding guard
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: module-operon-wording
+  issue_key: halotolerant-module-operon-wording
+  category: representation
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Edge prose names an operon where the current node denotes an enzyme module
+  description: Node 8 expressly represents a material enzyme module in its current
+    label and description, while edge 8 describes that actor as an operon. The legacy
+    node ID and operon metadata do not invalidate the current material facet. Bound
+    the correction to documentary consistency; current RO enabling roles and named
+    PATHWAY remain valid. This finding does not verify, reconstruct or correct the
+    thesis-associated biological route.
+  target_ids:
+  - METPO:1000622
+  field_paths:
+  - causal_graphs[0].nodes[8].label
+  - causal_graphs[0].edges[8].description
+  evidence_ids:
+  - record
+  - node-edges
+  - owners
+  - edge-sources
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: halotolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Inspected local provenance does not attribute human scientific acceptance
+  description: REVIEWED is accompanied by eighteen AI changes and an automated seed.
+    Three fully read AI infrastructure histories concern other records and comparator
+    uses; they do not attribute current-target human acceptance. The ignored-inclusive
+    local search is bounded and remote/private review content is unassessed. This
+    is a traceability concern under native policy, not a claim that no human review
+    ever occurred.
+  target_ids:
+  - METPO:1000622
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - native-policy
+  - record
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: source-status-qualification
+  issue_key: halotolerant-source-status-qualification
+  category: evidence
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: The organism-example citation omits its linked expression of concern
+  description: Top-level evidence[1] uses PMID27621824 without its confirmed 2024
+    expression-of-concern qualification. Reciprocal metadata for PMID38799920 and
+    the original publisher-deposited JATS establish the link. The cited title still
+    reports the classification. The notice rationale is UNVERIFIED, and no retraction,
+    false phenotype, automatic withdrawal or second independently established substantive
+    notice is inferred.
+  target_ids:
+  - METPO:1000622
+  field_paths:
+  - evidence[1].reference
+  - evidence[1].notes
+  evidence_ids:
+  - metadata-organism_example
+  - notice-metadata
+  - original-status-jats
+  - source-status
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-stress-response
+  description: Reconcile the intended stress versus response referent and its maintained
+    grounding.
+  finding_ids:
+  - stress-response-grounding
+  target_ids:
+  - METPO:1000622
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_nodes.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The current identity, description and uses consistently distinguish stress from
+    response, with the mapping recurrence addressed.
+  - Preserve compatible relation roles and contextual evidence. No new mechanism,
+    pathogen route, intervention or arbitrary replacement identifier is prescribed.
+  - After separately authorized curation, use guarded writes, append-only record/repository
+    history, focused validation/strict/source checks and relevant maintained audits/QC;
+    regenerate affected outputs through maintained recipes. This review makes no scientific
+    mutation.
+- action_id: clarify-osmolyte-facet
+  description: Document the material-solute facet and its approximate role grounding.
+  finding_ids:
+  - osmolyte-role-facet
+  target_ids:
+  - METPO:1000622
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/node_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_nodes.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Explicit closeMatch and the difference between a role and its material bearer
+    remain visible.
+  - No forced actor retype, replacement compound or biological mechanism change is
+    required.
+  - After separately authorized curation, use guarded writes, append-only record/repository
+    history, focused validation/strict/source checks and relevant maintained audits/QC;
+    regenerate affected outputs through maintained recipes. This review makes no scientific
+    mutation.
+- action_id: align-actor-wording
+  description: Align the edge actor wording with the current enzyme-module representation.
+  finding_ids:
+  - module-operon-wording
+  target_ids:
+  - METPO:1000622
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Existing label and edge prose refer consistently to the current represented actor
+    while retaining legacy identifier/history provenance.
+  - No forced GENETIC_ELEMENT retype, pathway completion, new protein instance or
+    detailed source-route repair is required.
+  - After separately authorized curation, use guarded writes, append-only record/repository
+    history, focused validation/strict/source checks and relevant maintained audits/QC;
+    regenerate affected outputs through maintained recipes. This review makes no scientific
+    mutation.
+- action_id: attribute-human-acceptance
+  description: Link existing human scientific acceptance or obtain it through the
+    established process.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - METPO:1000622
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the revision and scope, including unknown canonical criteria,
+    source-status qualification and unassessed detailed biology. Preserve AI and contextual
+    history.
+  - Automated validation and this agent review do not substitute for human acceptance;
+    reassess status if necessary.
+- action_id: qualify-publication-status
+  description: Retain the linked expression-of-concern status when assessing the organism
+    report.
+  finding_ids:
+  - source-status-qualification
+  target_ids:
+  - METPO:1000622
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/halotolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The citation qualification links the confirmed notice and distinguishes its known
+    status from the unavailable rationale.
+  - Do not describe the notice as a retraction or infer false classification; further
+    documentary evaluation must preserve actual access limits and existing source
+    context.
+  - After separately authorized curation, use guarded writes, append-only record/repository
+    history, focused validation/strict/source checks and relevant maintained audits/QC;
+    regenerate affected outputs through maintained recipes. This review makes no scientific
+    mutation.
+limitations:
+- Nearest FUY009 abstract supports general high-salt physiology but does not establish
+  the complete no-high-salt-requirement definition or two quoted body occurrences.
+  The pinned ontology and separately inspected Nature Introduction provide distinct
+  support; high salt has no new numeric threshold here.
+- The canonical source supports a moderate halophile and chloride dependence. It does
+  not establish the exact no-high-salt-requirement criterion, but a nonzero chloride
+  requirement alone is not a contradiction of an unspecified high-salt boundary. The
+  clinical exemplar aside remains unverified in the inspected passage.
+- The top organism report has a confirmed linked expression of concern. Notice body
+  and rationale were unavailable; EPMC 500, publisher access failure and BioC HTTP-200
+  error/help are not article evidence. The second empty JATS link is unresolved. No
+  retraction or false-classification inference is made.
+- Five snippets are literal matches, one preserves title words after punctuation normalization,
+  and two are unverified. These categories remain distinct; failed access and abstract
+  nonmatches are not source-wide disproof.
+- The Delaware source is a 2024 PhD thesis by Katherine Boas Lichty, verified from
+  actual university metadata despite zero Europe PMC hits. No thesis chapters or detailed
+  pathogen stress mechanisms were researched. Edges 8–11 biology is UNASSESSED_SCOPE;
+  identity and formal role compatibility are not route validation.
+- Vibrionaceae and other pathogen-associated source material receives only documentary
+  identity, classification and generic quotation/framing assessment. No organism-specific
+  stress, survival, virulence, fitness, intervention, growth-condition or engineering
+  recommendation is supplied.
+- Source may/can qualifiers, halophile contexts and generic introductory statements
+  remain bounded. They do not establish universal class-wide necessity, every depicted
+  component or a new causal assay.
+- Current RO endpoints are compatible as declared; component/capability nuances are
+  not proven merely by type fit. Has output inherits a continuant range. Stress/response
+  sense is grouped at node 2 rather than duplicated as a relation major. No executed
+  OWL reasoning result is claimed.
+- Local v2/v8/v9 predicates are maintained provisional proposals absent from pinned
+  METPO. Imports expressly permits activity, named ectoine PATHWAY is valid, and historical
+  withdrawn chemical/microbe assignments are not current defects.
+- Two label-only protein classes and zero instances are permitted in NONMECHANISTIC
+  scope. No mandatory accession, dataset, replacement chemical or pathway completion
+  is inferred.
+- The retained catalog contains no canonical or inspected historical-name match for
+  H. halophilus. No clinical-example substitution or downstream module query occurred.
+  Noncoverage is not negative biology, and historical runner discovery is not a fresh
+  global absence claim.
+- Ignored-inclusive local provenance searches have explicit repository and exclusion
+  bounds. The three captured AI infrastructure histories concern other targets; remote/private
+  human acceptance is unassessed. Existing record ownership is preserved even without
+  a canonical-specific writer in the bounded search.
+- Reused authorities and B4 protein/taxon, B5 QC, B3 history and OLD common checks
+  retain original acquisition/execution times, failures, retry and adapter skips.
+  Environment readiness is distinct from QC and no fresh B6 corpus execution is claimed.
+- No scientific record, mapping, history, generated output, environment or Git state
+  was modified. No paid research, experiment, new molecular target or organism intervention
+  was performed.
+notes:
+- 'Five findings: one major and four minor; all indices are zero-based.'
+- All 62 captured hashes are preserved, including three fully read contextual histories.
+  The original 59 inputs remain unchanged.
+- Source assessment was qualified at 11:19:26.955785Z; grounding finalized at 11:21:08.485695Z
+  with recursive relation integration at 11:21:28.320338Z. Acquisition, copying and
+  integration times remain distinct.
+- Nineteen record events comprise eighteen explicit AI changes and one automated seed.
+  Both protein classes remain label-only with zero instances.
+tags:
+- record-review
+- halotolerant
+- environment
+- needs-curation

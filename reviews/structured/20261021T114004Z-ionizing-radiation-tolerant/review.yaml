@@ -1,0 +1,1393 @@
+schema_version: 1.0.0
+review_id: 20261021T114004Z-ionizing-radiation-tolerant
+kind: record
+repository: CultureBotAI/TraitMech
+title: Whole-record review of ionizing radiation tolerant
+started_at: '2026-10-21T11:27:45.709844Z'
+finished_at: '2026-10-21T11:40:04Z'
+reviewer:
+  identity: codex
+  kind: agent
+  independence: independent
+  independence_basis: This session did not author or modify the captured record. Separate
+    agents supplied final source and grounding ledgers. The parent independently read
+    selected primary passages and reviews the complete builder before serialization
+    and native validation. AI maintenance and this review are distinct from human
+    scientific acceptance.
+  model: GPT-6 (Codex)
+skill: .claude/skills/review-yaml-record/SKILL.md
+completion: completed
+verdict: needs_curation
+scientific_review: true
+summary: Accepted local identity, the contextual definition, canonical D. radiodurans
+  classification and current GO ground are supported. Two major findings concern a
+  concentration ratio assigned the RO material-executor role and a DSB-repair claim
+  extended to an entire mixed lesion state beyond its nearest chapter. One minor concerns
+  bounded local human-acceptance attribution. All six nodes and seven edges are covered.
+  Four works supply twelve placements; one of two snippets is notation-normalized
+  and the other remains unknown. Positive causal proteome-protection support is retained,
+  with exact Mn/Fe details unverified.
+source:
+  git_revision: 8eee04a8c65609fbaff6df7c54597dcaf1b9d282
+  state: working_tree
+  inputs:
+  - path: .claude/skills/curate-yaml-record/references/review-checklist.md
+    sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+    role: context
+  - path: .claude/skills/manage-identifiers/SKILL.md
+    sha256: a5c5aaa10943ee6d15423a5878ed2189e4e0b28a5c6e09fda80ba299ab779ebb
+    role: context
+  - path: .claude/skills/review-yaml-record/SKILL.md
+    sha256: bb03efa3bbd3748ee1dccf57612a6ce8fcc861f20eb57c33eb16e3ac1dd728bd
+    role: context
+  - path: CLAUDE.md
+    sha256: 4d328127022388e1affe9b71be24bc93944a971636d0d0ea902f6511e0b405c5
+    role: context
+  - path: DO_NOT_WORK.md
+    sha256: 9ae0b05cc06f4ce8938801287a568d535e471d06dda5e258fcdbbed222abf712
+    role: context
+  - path: conf/evidence_snippet_baseline.tsv
+    sha256: cbe5c82379e796446366b292f15194d80625b928119b482a67d857a379ab31a7
+    role: context
+  - path: data/raw/biolink-model.yaml
+    sha256: 4955709e1cac1d26fd657f7a0c29d6c8390f42e41f9ebfab859c82b102f2bebb
+    role: context
+  - path: data/raw/metpo.owl
+    sha256: 8b6f8fe0510a698579e532658c8ace05da2550093365df9ca83feb0741778415
+    role: context
+  - path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    sha256: 95ec210aa700b57b5e8235d6078fa04cb0621bf4fd96c46d6970788b400176ba
+    role: target
+  - path: data/traits/environment/radiotolerant.yaml
+    sha256: f3bae2896b2801fcaaacdf9c6783ef0df7b96d441e8858b5e1fa0b10e3713bf6
+    role: context
+  - path: docs/CURATION_PLAYBOOK.md
+    sha256: 735e9b810471da9f7d8364e35ffe1e741edb3421480dac01727db6ea5aa65da9
+    role: context
+  - path: docs/GROUNDING_POLICY.md
+    sha256: 891678c983c2283a47c81c47950b35753981e9339d105f3bbdda92a1f5ab7f42
+    role: context
+  - path: docs/PATHWAY_LINKS.md
+    sha256: 800492750fb3c025dfdf7164813e7a00b3bd72dc8cc6f8e754e2aed5d7bbf414
+    role: context
+  - path: docs/record-review-profile.md
+    sha256: cac714488cad03263ca3847737d5f70d174d40b5be677a09e0c1d9c814d9bc6a
+    role: context
+  - path: docs/record-reviews.md
+    sha256: 452a19ab688276747b7c4308523a14d4d99c1c39ef6909ae8a90b85b7a9b3e9b
+    role: context
+  - path: justfile
+    sha256: 008643042a721e84f647be6beda104ae02fe616361ff9b34fc608643a7526ee2
+    role: context
+  - path: mappings/node_grounding.tsv
+    sha256: d7de9b3ab04960c4775a5bc295a945bd1a72d81467830459f4793e654f82b3d0
+    role: context
+  - path: mappings/predicate_grounding.tsv
+    sha256: 8e28c19e93aca3dc164a3befbe2612b289241de457c59f499e65936c03b7ce52
+    role: context
+  - path: mappings/trait_exact_match_review.tsv
+    sha256: 7728593d526d9a723716e5daad64beb7e1ab5c2e4221ae8d43dd9480cd02f62b
+    role: context
+  - path: mappings/uniprot_regrounding_candidates.tsv
+    sha256: c36d8e038886d137d5a1ae609240e59ce74b6aeee17ae24f21b6c4a0d7407391
+    role: context
+  - path: proposals/metpo_traitmech_v2/metpo_proposal_properties_robot.tsv
+    sha256: 4ab5ca37ff8595210254b1099563b4425ecd737ed375dc5a932b44e2ad5c332e
+    role: context
+  - path: proposals/metpo_traitmech_v2/proposal.md
+    sha256: fe0601356b120ef9babc6f90a417f860bf02aa628c46af661517f168e01bc48f
+    role: context
+  - path: proposals/metpo_traitmech_v3/metpo_proposal_classes_robot.tsv
+    sha256: 1a1cc789782cfae195c1fc81ddaf848d06d162c7434d94cceb66838de98ab6fa
+    role: context
+  - path: proposals/metpo_traitmech_v5/metpo_proposal_classes_robot.tsv
+    sha256: d4b899de7077b33f4bdc6cb8cdebf28b5a705b7a65ba3620f3113b76d8666910
+    role: context
+  - path: proposals/metpo_traitmech_v5/proposal.md
+    sha256: 5d54623dd00ac80a8d67a0eab7b70385f7f57b36daa205c28aa1f9d6f9be6167
+    role: context
+  - path: proposals/metpo_traitmech_v6/metpo_proposal_properties_robot.tsv
+    sha256: ed877efe2d59f43c51898e2dc85440188711455dcc5c882af2dc1384fc38fc19
+    role: context
+  - path: proposals/metpo_traitmech_v6/proposal.md
+    sha256: aecbd48fd73712ccab57619d753b6084a7fa2fbf616f80623f63ce15b65871ae
+    role: context
+  - path: proposals/metpo_traitmech_v7/metpo_proposal_classes_robot.tsv
+    sha256: 99e779afa894363b32966bd15415417035d246970aab02931ce896f37c910a73
+    role: context
+  - path: proposals/metpo_traitmech_v7/proposal.md
+    sha256: bc6ea10ebc4bec0f446cee92578602889ec464295ce5ecce27fed76eb06528ce
+    role: context
+  - path: proposals/metpo_traitmech_v8/metpo_proposal_properties_robot.tsv
+    sha256: 5445e86e845e0a2638292cff4586bf3858b1341d37fecf2e86cefcdbc9a046cd
+    role: context
+  - path: proposals/metpo_traitmech_v8/proposal.md
+    sha256: 119d51e7b7194890514a9e313505212bab92aeba607f7c1b8f9d9d2edeef67e7
+    role: context
+  - path: proposals/metpo_traitmech_v9/metpo_proposal_properties_robot.tsv
+    sha256: 5ae84dd1351a4bec39adf7bcd5b3a8982af2e95fbccd0b53c0efa3efbfc89b0e
+    role: context
+  - path: proposals/metpo_traitmech_v9/proposal.md
+    sha256: 85fde22f4733863188b437cfcf7552a31fea07ad1d32c0400cf493295c1e1156
+    role: context
+  - path: reports/metpo_2026_06_12_active_review.tsv
+    sha256: 45e9c6471475635ba1f2602cd636a119d490f5dbd8dd6ac8af1aab89a321379f
+    role: context
+  - path: reports/metpo_2026_06_12_release_delta.tsv
+    sha256: afe858d2aa0ade08322c7808d5917ff370e069ba02c2642d483342db8e9323ac
+    role: context
+  - path: reports/ontology_snapshot_manifest.tsv
+    sha256: 4a157279a8c4e3fc2afb5382a45c31961991bbd1f330f26d0061b0cfd0b4d213
+    role: context
+  - path: research/traits/environment/ionizing_radiation_tolerant-deep-research-falcon.md
+    sha256: 4be48a7af3011dcce42622a6c2c9247bcce4d0c902aa64f5f7c9189ca8eb13e3
+    role: context
+  - path: scripts/audit_causal_graphs.py
+    sha256: e0c26506c9de712700317284f142097e7bf69334806b8010db5d6517e905e834
+    role: context
+  - path: scripts/audit_graph_protein_taxa.py
+    sha256: d3375861829c612483b3545dd0f5e2b79872a4576b626edc08714a09fbd9a24d
+    role: context
+  - path: scripts/audit_uniprot_grounding.py
+    sha256: 91eb2165c69b3a4fcb53154dc8c835ac1070577f88065a43dfc881284d3d1052
+    role: context
+  - path: scripts/backfill_canonical_examples_444.py
+    sha256: 18ca0766789c239d693ef665e8b1d43c1209a0f414a326f1c5d890f88de7b20c
+    role: context
+  - path: scripts/curate_knowledge_gaps.py
+    sha256: 9e0fb7e01a901d84189a28f1912a2552f28d2da8733c113589e4947359d48c73
+    role: context
+  - path: scripts/finalize_metpo_2026_06_12_review.py
+    sha256: b850b386183b2d86647dada43f7f157059017dbb881f7e1fb2e220ae697d3bea
+    role: context
+  - path: scripts/ground_causal_nodes.py
+    sha256: 204ce4162544154b1752b65da2136538847ea25ced26a52f5708eadff08f5d42
+    role: context
+  - path: scripts/ground_causal_predicates.py
+    sha256: 5a788eeaabf3a56b0d82c469a3e3fe28f1d51707d9382313b9a94289be7d1381
+    role: context
+  - path: scripts/migrate_disposition_typing.py
+    sha256: ebafdd145fc0729d32f3b8a45f570d97a8e001838afadd698e2b246cb8950714
+    role: context
+  - path: scripts/migrate_enables_trait_edges.py
+    sha256: a5e7965ee4f6b6ba5bae3a06bced2a83cbf755f3b9b150ce6acc0cd808cb1d88
+    role: context
+  - path: scripts/migrate_microbe_domain_edges.py
+    sha256: 5187ccfb2897d415b243792a27afd6002c0eea4b167068639ff5be73ed583bb6
+    role: context
+  - path: scripts/migrate_name_match_groundings.py
+    sha256: 9b3ea1153839b9b260638cef95eba2d1ccc6d7b3825e7352c33cceb21bfe4dd4
+    role: context
+  - path: scripts/migrate_oxygen_senses.py
+    sha256: 372e977a58ec6e17cdd45021c5849895142c67187eb29b995b8c39f0e899d2f3
+    role: context
+  - path: scripts/migrate_pathway_vs_process.py
+    sha256: f236de7183048732e9001b7fac4367affff58d8b7a7d5c63286e6b058a4b38c2
+    role: context
+  - path: scripts/migrate_process_quality_consistency.py
+    sha256: 1a83ad3dba79ed0c958b875a6fcc4b9e562259af26da2f248d32d5cf7784f80a
+    role: context
+  - path: scripts/migrate_protein_vs_activity.py
+    sha256: 0b183248ff22d3d8aa66b35aece40c53b516684ca499cf73b7714206031dad49
+    role: context
+  - path: scripts/migrate_uniprot_instance_groundings.py
+    sha256: 07d2a5405cff5857239757e0a3791f411b1d25709a5760c1e49553eed066993d
+    role: context
+  - path: scripts/seed_from_metpo.py
+    sha256: 0fb9c9f7ea6a8f137eecd5c319775b511c398dba6158c81b1fbfb94210f7d851
+    role: context
+  - path: scripts/verify_metpo_proposal.py
+    sha256: f58355151f7d6a807bb50dc8b732184994b0d6145d3c57f54e29fd0bb76268b6
+    role: context
+  - path: src/traitmech/schema/mech_shared.yaml
+    sha256: c2e7054fd32635e380c698282bd886a9105861009b9f0474f02bb1b80865e895
+    role: context
+  - path: src/traitmech/schema/traitmech.yaml
+    sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+    role: context
+  - path: src/traitmech/validation/write_validated.py
+    sha256: 68cfeb876a60d67fd72d5a2800cd29e41b5cf563be5a27b698398a5bb3e67231
+    role: context
+targets:
+- target_id: traitmech:000008
+  path: data/traits/environment/ionizing_radiation_tolerant.yaml
+  label: ionizing radiation tolerant
+  kind: maintained
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained accepted synthetic TraitRecord; scientific changes require guarded
+      curation
+  record_class: TraitRecord
+scope:
+  description: One entire maintained TraitRecord. Contextual ontology, source, parent,
+    writer and history inputs are not additional review targets.
+  selection: One complete maintained environmental TraitRecord, fully read with the
+    parent as context only. The v5 proposal narrative and relevant rows were read;
+    only the historical provider report header was inspected. All 59 captured inputs,
+    six nodes, seven edges, one canonical example, four assigned works, twelve citation
+    placements including the synonym source, two snippets and six explicit AI events
+    are accounted for. Existing benign radiation-resistance claims receive bounded
+    documentary review. No new molecular target, biological route, irradiation condition,
+    experiment or optimization is supplied; incidental pathogen-specific material
+    remains unassessed.
+  coverage: full
+  population_size: 1
+  reviewed_target_ids:
+  - traitmech:000008
+checks:
+- check_id: audit-graphs
+  name: Full-corpus graph audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just audit-graphs --out /private/tmp/traitmech-record-sweep.FU79Gr/causal_graph_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  evidence_ids:
+  - check-audit-graphs
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: audit-snippets
+  name: Full-corpus snippet audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just audit-snippets --report /private/tmp/traitmech-record-sweep.FU79Gr/evidence_snippet_audit.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  evidence_ids:
+  - check-audit-snippets
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: check-pathway-links
+  name: Full-corpus pathway links
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just check-pathway-links
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  evidence_ids:
+  - check-check-pathway-links
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-history
+  name: Full-corpus history integrity
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just validate-history
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  evidence_ids:
+  - check-validate-history
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products
+  name: Initial full-product validation
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000008
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  evidence_ids:
+  - check-validate-products
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-local
+  name: Product validation with isolated local cache
+  status: failed
+  required: false
+  target_ids:
+  - traitmech:000008
+  command: just validate-products
+  exit_code: 2
+  expected_exit_code: 0
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  evidence_ids:
+  - check-validate-products-retry-local
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: validate-products-retry-network
+  name: Product validation after isolated-cache download
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just validate-products
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  evidence_ids:
+  - check-validate-products-retry-network
+  scope_note: History validation ran in batch 003 at the same 8eee source base; batch
+    006 byte comparison confirms all history, trait and common validation inputs unchanged.
+    Other commands ran at f25; the Git delta to 8eee contains only seven added workflow/skill/infrastructure-history
+    files. Original timestamps, failures and skips are retained; these are reused
+    results, not new executions or certification against later ontology releases.
+- check_id: ionizing-radiation-validate
+  name: Focused LinkML validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just validate data/traits/environment/ionizing_radiation_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual execution at 11:28:09–11Z passed. Structural acceptance does not
+    establish scientific support.
+  evidence_ids:
+  - check-ionizing-radiation-validate
+- check_id: ionizing-radiation-strict
+  name: Focused strict validation
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just validate-strict data/traits/environment/ionizing_radiation_tolerant.yaml
+  exit_code: 0
+  expected_exit_code: 0
+  summary: Actual execution at 11:28:09–12Z passed. Native acceptance is separate
+    from imported semantic and source assessment.
+  evidence_ids:
+  - check-ionizing-radiation-strict
+- check_id: ionizing-radiation-snippets
+  name: Focused snippet verification
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just verify-snippets --record data/traits/environment/ionizing_radiation_tolerant.yaml
+    --out /private/tmp/traitmech-record-sweep-006.nq5qngor/ionizing-radiation-snippets.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'Actual execution at 11:28:12–17Z passed: two snippets over two references,
+    both NOT_IN_ABSTRACT. Manual review supports one through notation normalization;
+    the other remains unknown. Abstract misses are inconclusive.'
+  evidence_ids:
+  - check-ionizing-radiation-snippets
+- check_id: corpus-protein-taxa
+  name: Reused corpus protein/taxon audit
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just audit-graph-protein-taxa --out /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.tsv
+  exit_code: 0
+  expected_exit_code: 0
+  summary: 'B4 execution at 08:55:04–10Z passed: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, zero gaps and zero errors. Historical corpus coverage is not a
+    new focused scientific check.'
+  evidence_ids:
+  - check-corpus-protein-taxa
+  scope_note: The current target asserts no protein class or instance. Parent proteins
+    belong to a different record. NONMECHANISTIC scope does not require token protein
+    accessions or added biological routes.
+- check_id: batch005-qc
+  name: Reused full-corpus QC
+  status: passed
+  required: true
+  target_ids:
+  - traitmech:000008
+  command: just qc
+  exit_code: 0
+  expected_exit_code: 0
+  summary: B5 actual execution at 10:21:03–10:23:38Z passed. B6 input comparison and
+    environment readiness support scoped historical reuse; no fresh B6 corpus execution
+    is claimed.
+  evidence_ids:
+  - check-batch005-qc
+  scope_note: 1130 trait files, 1278 history files and 19 common inputs match. B3
+    history validated 1277 records; OLD failures, successful network retry, baselines
+    and adapter skips retain their original dates and meanings.
+- check_id: uniprot-applicability
+  name: UniProt instance audit applicability
+  status: not_applicable
+  required: false
+  target_ids:
+  - traitmech:000008
+  summary: The target has zero protein classes, instances or accessions. Parent protein
+    examples are separate and no artificial accession is required.
+  evidence_ids:
+  - record
+  - node-edges
+  - native-policy
+evidence:
+- evidence_id: check-audit-graphs
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-graphs.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:29Z; metadata audit-graphs.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 74 baselined findings, zero new/blocking findings; connectivity report
+    covers 130 mechanistic graphs. This is a corpus diagnostic, not focused scientific
+    verification of this target.
+  snapshot_sha256: ecce27e6a8f8b8b1fc54a9a0564a27626ee33774da508665859c6d1429337f4d
+- evidence_id: check-audit-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/audit-snippets.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:33Z; metadata audit-snippets.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 2419 baselined findings, zero new/blocking findings. Focused source checks
+    and manual evidence review are recorded separately.
+  snapshot_sha256: beafaa5c82645f5cf216142b6e0369d556202bcc72fdabbf35825fce955fd59f
+- evidence_id: check-check-pathway-links
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/check-pathway-links.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:33:28Z; metadata check-pathway-links.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 19 links checked against the pinned PathwayMech snapshot. Target asserts
+    no pathway context link.
+  snapshot_sha256: e77729b8afd6ae02cd834e516c48dd5c72d10498802e7a1b0004eebb4831f6a0
+- evidence_id: check-validate-history
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/validate-history.log
+  locator: Executed 2026-10-21T07:03:25Z through 2026-10-21T07:03:30Z; metadata validate-history.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 1277 history records checked, zero invalid links at the current 8eee source
+    base; integrity does not establish science or human acceptance.
+  snapshot_sha256: 02f94872992b2fbc3cc455c552d56a338dd449a315e02b1bf0226b68a8d2cfe3
+- evidence_id: check-validate-products
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products.log
+  locator: Executed 2026-10-19T07:33:16Z through 2026-10-19T07:34:01Z; metadata validate-products.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: Exit 2 during PATO/RO downloads; 36 adapter errors and 123 no-adapter skips.
+    Superseded by successful network retry.
+  snapshot_sha256: 697efcbe603c9a5e27f9726e688d1b9d9f621fa548f585d9005b5157d81dadae
+- evidence_id: check-validate-products-retry-local
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-local.log
+  locator: Executed 2026-10-19T07:34:53Z through 2026-10-19T07:35:24Z; metadata validate-products-retry-local.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: Exit 2; 36 adapter errors and 123 no-adapter skips. Superseded by successful
+    network retry.
+  snapshot_sha256: b636ab6978cf8b8d4cc2cc4033f1cdca399cca46dc615a26073cfe680d44ebb5
+- evidence_id: check-validate-products-retry-network
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep.FU79Gr/validate-products-retry-network.log
+  locator: Executed 2026-10-19T07:35:34Z through 2026-10-19T07:36:03Z; metadata validate-products-retry-network.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 'Passed: 361 canonical matches, two synonym matches, one exception, 123
+    SKIPPED_NO_ADAPTER pairs. Not every target identifier is covered.'
+  snapshot_sha256: 67e91252adce1d441ad6b37d6904f0cbcea703575aec8011e65e94822fa810ea
+- evidence_id: check-ionizing-radiation-validate
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/ionizing-radiation-validate.log
+  locator: Executed 2026-10-21T11:28:09Z through 2026-10-21T11:28:11Z; metadata ionizing-radiation-validate.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: Actual execution at 11:28:09–11Z passed. Structural acceptance does not
+    establish scientific support.
+  snapshot_sha256: e2025e5f11cccc15b97c058ae5ee6d72898d892a9fe6c1730230746f31ef7fe7
+- evidence_id: check-ionizing-radiation-strict
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/ionizing-radiation-strict.log
+  locator: Executed 2026-10-21T11:28:09Z through 2026-10-21T11:28:12Z; metadata ionizing-radiation-strict.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: Actual execution at 11:28:09–12Z passed. Native acceptance is separate
+    from imported semantic and source assessment.
+  snapshot_sha256: 81e2b2b21d70b88c1d2886bfd2259df9cf4d54642b5cab281001644cc96aa90d
+- evidence_id: check-ionizing-radiation-snippets
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-006.nq5qngor/ionizing-radiation-snippets.log
+  locator: Executed 2026-10-21T11:28:12Z through 2026-10-21T11:28:17Z; metadata ionizing-radiation-snippets.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 'Actual execution at 11:28:12–17Z passed: two snippets over two references,
+    both NOT_IN_ABSTRACT. Manual review supports one through notation normalization;
+    the other remains unknown. Abstract misses are inconclusive.'
+  snapshot_sha256: e0760b3b4e1e1312aa2813a9bcfc53dabd7fc44b67a834dcfbc637be182628c9
+- evidence_id: check-corpus-protein-taxa
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-004.f7_g5r4w/corpus-protein-taxa.log
+  locator: Executed 2026-10-21T08:55:04Z through 2026-10-21T08:55:10Z; metadata corpus-protein-taxa.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: 'B4 execution at 08:55:04–10Z passed: 719 graphs, 129 PASS, 589 NONMECHANISTIC,
+    one protected, zero gaps and zero errors. Historical corpus coverage is not a
+    new focused scientific check.'
+  snapshot_sha256: f5f1a6be7789f2b3e487fcbc354361f8f1f0d0d0f90a9ba59864d26ed7ac49ef
+- evidence_id: check-batch005-qc
+  kind: validation
+  reference: /private/tmp/traitmech-record-sweep-005.klfwsp1f/batch005-qc.log
+  locator: Executed 2026-10-21T10:21:03Z through 2026-10-21T10:23:38Z; metadata batch005-qc.json
+  accessed_at: '2026-10-21T11:40:04Z'
+  support: context_only
+  summary: B5 actual execution at 10:21:03–10:23:38Z passed. B6 input comparison and
+    environment readiness support scoped historical reuse; no fresh B6 corpus execution
+    is claimed.
+  snapshot_sha256: 206638ef702eef1ea64f13c4be3ef11180f9659383be68d1e492a9760c8f79be
+- evidence_id: capture
+  kind: validation
+  reference: Native selected-record capture
+  locator: 59 inputs; executed 11:27:45.709844–11:27:48.611290Z
+  accessed_at: '2026-10-21T11:27:48.611290Z'
+  support: supports
+  summary: All current captured hashes match. Parent and proposal inputs supply context,
+    not additional review targets.
+  snapshot_sha256: 43fd8e9a56d76407578e88875444b5afd08250d8d3615d4062332dd4839154c0
+- evidence_id: preparation
+  kind: validation
+  reference: Whole-target and bounded context preparation
+  locator: Full target and parent; v5 narrative and relevant rows; provider header
+    only
+  accessed_at: '2026-10-21T11:31:46.746541Z'
+  support: context_only
+  summary: Counts include the synonym DOI placement. Historical provider material
+    is provenance only; no full-report scientific verification is claimed.
+  snapshot_sha256: a3acf1f94de3e736fe4df43b8450cdfb8c1e4ee338efa14926d23239c6e1cb79
+- evidence_id: record
+  kind: record_content
+  reference: data/traits/environment/ionizing_radiation_tolerant.yaml
+  locator: Entire current record, six nodes, seven edges and six AI events
+  accessed_at: '2026-10-21T11:33:38.635492Z'
+  support: partial
+  summary: The record is REVIEWED with present AI maintenance history. Its ratio is
+    a QUALITY, its mixed lesion object a STATE, and it contains no protein instances.
+  snapshot_sha256: 95ec210aa700b57b5e8235d6078fa04cb0621bf4fd96c46d6970788b400176ba
+- evidence_id: native-policy
+  kind: authority
+  reference: Native field-by-field review checklist
+  locator: Evidence placement, represented meanings, completeness and human acceptance
+  accessed_at: '2026-10-21T11:33:38.635492Z'
+  support: supports
+  summary: Nearest-source scope and explicit represented meanings matter. Optional
+    datasets, protein instances and predicate IDs are not mandatory completeness requirements.
+    Automated validation does not establish human scientific acceptance.
+  snapshot_sha256: da8896328a0fd6cc92f1adf0d8be8980d0ddd41f3172c7936f2c7f119b293ac1
+- evidence_id: native-types
+  kind: authority
+  reference: Native CausalNodeTypeEnum
+  locator: Schema lines 687–700, BIOLOGICAL_PROCESS, STATE and QUALITY
+  accessed_at: '2026-10-21T11:33:38.635492Z'
+  support: supports
+  summary: A molecular damage state and a measurable concentration-ratio quality are
+    legitimate facets. Preserve those meanings rather than forcing a material or process
+    retype to accommodate an imported relation.
+  snapshot_sha256: 46c47fc627b80ccbba1e8ab3fb6f2aee93bc2aef7aaf72fe9aadc3257f2c02dd
+- evidence_id: reuse
+  kind: validation
+  reference: B6 common-input comparison
+  locator: Original verification 10:14:46.298715Z
+  accessed_at: '2026-10-21T10:14:46.298715Z'
+  support: supports
+  summary: 1130 traits, 1278 history files and 19 common inputs match the preceding
+    batch. This comparison predates B5 final QC, whose actual result is retained separately.
+  snapshot_sha256: 91de0fcd8f598a37b867033da1a4d732eaf5676848023a41dd6963612a78aa44
+- evidence_id: reuse-supplement
+  kind: validation
+  reference: B5 check and B6 readiness supplement
+  locator: Original supplement 10:28:10.859819Z; QC 10:21:03–10:23:38Z
+  accessed_at: '2026-10-21T10:28:10.859819Z'
+  support: supports
+  summary: Original command/log hashes, earlier product failures, successful retry,
+    adapter skips and environment readiness remain distinct. Historical execution
+    is not a new focused scientific certificate.
+  snapshot_sha256: f5e234e9de85ff4dbd486c2f4e4c9c8df915a767fb67afa4da204ab28f57a7f4
+- evidence_id: identity
+  kind: authority
+  reference: Pinned METPO and accepted local identity
+  locator: traitmech:000008; v5 class rows 9–10; active-review row 39 and release-delta
+    row 1180
+  accessed_at: '2026-10-21T11:33:38.350021Z'
+  support: supports
+  summary: The complete pinned active/deprecated label scan found no exact ionizing-radiation
+    term. Local 000008 remains authoritative pending proposed 1007607. Broader radiation
+    tolerance 1007072 overlaps the deliberately retained parent 000007; it does not
+    require changing this child or forcibly migrating its parent.
+  snapshot_sha256: 1b79350af9f722eff39d8e78ca3cd8931dae22098a47345f91e5396da7c59261
+- evidence_id: go-repair
+  kind: database
+  reference: https://www.ebi.ac.uk/QuickGO/services/ontology/go/terms/GO%3A0006302%2CGO%3A0005886%2CGO%3A0003674
+  locator: GO:0006302; original access 09:35:04.453158–09:35:05.132886Z
+  accessed_at: '2026-10-21T09:35:05.132886Z'
+  support: supports
+  summary: The active biological process is DNA double-strand-break repair. This identity
+    does not establish coverage of every lesion aggregated in another node.
+  snapshot_sha256: d6287b8bb98d099448bf3920731d5d7b193ce94d98bb75731f391fc4844c13c2
+- evidence_id: taxon
+  kind: database
+  reference: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&id=1299&retmode=xml
+  locator: Actual access 11:30:47.489792–11:30:47.743169Z
+  accessed_at: '2026-10-21T11:30:47.743169Z'
+  support: supports
+  summary: NCBI1299 resolves to Deinococcus radiodurans with documented historical
+    names. Phenotype support comes separately from assigned publications, not from
+    taxonomic identity alone.
+  snapshot_sha256: 0afb2130502e4595002b0420d7b5dc9a89f56b4f4e90d505cf06f8300234cd73
+- evidence_id: predicate-authority
+  kind: authority
+  reference: Recursive RO and Biolink semantics
+  locator: RO original authority 09:52:45.989262Z; integration 11:33:38.624789Z
+  accessed_at: '2026-10-21T11:33:38.624789Z'
+  support: supports
+  summary: RO:0002327 inherits independent-continuant/process and material-entity/process
+    roles and describes an entity acting to execute a process. A concentration ratio
+    is not that material executor. Its process object fits. Biolink causes permits
+    the environmental exposure and damage-state endpoints. No OWL reasoner execution
+    is claimed.
+  snapshot_sha256: c326b5409afdac9c0aa771fe1830e4690bb1b4d22c406a18e83d6b62d2faa6d9
+- evidence_id: local-authority
+  kind: authority
+  reference: Maintained local properties, mappings and schema
+  locator: v2 property row 9; v8 row 3; wildcard enables mapping row 9
+  accessed_at: '2026-10-21T11:33:38.634052Z'
+  support: supports
+  summary: Local challenges and confers have compatible roles. The broad enables mapping
+    and existing-ID skip can preserve the ratio assignment; free-text repairs and
+    correlation do not inherit unasserted RO constraints. Local proposal identifiers
+    remain provisional.
+  snapshot_sha256: 124749da9b2724c4e94e7b1e380bcd12370beb5fb2cd119facf4c86b9352b395
+- evidence_id: authority-reuse
+  kind: validation
+  reference: Hash-verified authority and catalog reuse chain
+  locator: Reuse verification 11:30:36.899257Z
+  accessed_at: '2026-10-21T11:30:36.899257Z'
+  support: supports
+  summary: GO, RO, catalog and runner sources retain original acquisition times and
+    hashes. Fresh taxonomy is separate. Copying and current interpretation do not
+    create a new external observation.
+  snapshot_sha256: d3e217fab6d33eb4162d7499e2023565185e858d7a1f2efaa26683cd8a5c5341
+- evidence_id: ground-ledger
+  kind: validation
+  reference: Complete documentary grounding assessment
+  locator: Six nodes, seven edges, one component and 59 matching inputs
+  accessed_at: '2026-10-21T11:33:38.635492Z'
+  support: partial
+  summary: Local identity, GO, taxonomy, native node facets and local/Biolink predicates
+    are supported. One current imported RO material-executor conflict remains; no
+    parent migration, artificial protein or new graph connection is required.
+  snapshot_sha256: 101e16fcc5aa11b40029dce63bbe05d7a6e42918965b3e504659450bb11443d8
+- evidence_id: node-edges
+  kind: validation
+  reference: Complete current node and edge ledger
+  locator: nodes[0–5] and edges[0–6], zero-based
+  accessed_at: '2026-10-21T11:33:38.627578Z'
+  support: partial
+  summary: Every endpoint resolves. The valid QUALITY ratio is distinct from a material
+    manganese pool. Repair coverage of the mixed damage STATE is a source question;
+    no missing optional identifier is inferred.
+  snapshot_sha256: a729d8285277e7b9ae1f20ff21d40e0445e6b71b851a28611138f3a15feded94
+- evidence_id: owners
+  kind: authority
+  reference: Maintained mapping, writer and retention ownership
+  locator: Predicate mapping row 9; writer guards 152–176; v5 proposal rows 9–10 and
+    parent crosswalk
+  accessed_at: '2026-10-21T11:33:38.628499Z'
+  support: supports
+  summary: Current record and wildcard mapping own recurrence of the RO conflict.
+    Existing-ID preservation explains persistence; prior trait-object enables migrations
+    are not present defects. Parent retention and valid ratio/state facets remain
+    intact.
+  snapshot_sha256: c8920a57c4a37a034868328d31d942250fd3f5975182b1cba5220b55688d5a02
+- evidence_id: provenance
+  kind: search
+  reference: Bounded ignored-inclusive local provenance search
+  locator: Primary search 11:30:36.914014–11:30:49.059782Z; exact follow-ups through
+    11:30:49.165034Z
+  accessed_at: '2026-10-21T11:33:38.627982Z'
+  support: partial
+  summary: Six explicit AI events establish maintenance, but the inspected local material
+    does not attribute a human acceptance decision. No targeted saved review or target-specific
+    repository history was found within the stated bounds. Remote/private acceptance
+    remains unassessed.
+  snapshot_sha256: 3b222b5939bf1a3cb052717cdb8f8cbfd57cbdec6d4b19da3d7591a3e43ee7ff
+  search_scope: Own B6 repository exact target ID, label, slug and graph searches
+    included ignored and hidden files, excluding .git and .venv. Additional exact
+    node searches covered history; exact target searches covered scripts, mappings
+    and proposals; canonical name/ID/PMID searches covered history and scripts. Results
+    cover 167 matching files, not private or remote material.
+- evidence_id: expression
+  kind: validation
+  reference: Canonical catalog applicability
+  locator: Complete retained catalog, 20 organisms and 28 datasets; original 07:36:12.732638–07:36:12.858149Z
+  accessed_at: '2026-10-21T11:33:38.634583Z'
+  support: context_only
+  summary: No canonical Deinococcus radiodurans, official historical-name or genus
+    match occurs. No other organism or parent protein is substituted. No downstream
+    module query was performed; noncoverage is not negative phenotype evidence.
+  snapshot_sha256: 74280a8aca01b4d5e1e76b850b0ec8436fee9ec94e23fe0293c82dcad2885de7
+- evidence_id: runner
+  kind: search
+  reference: Historical bounded structured-runner discovery
+  locator: Original B5 PATH/project 09:27:57.380287–09:27:57.542053Z; external bounds
+    08:17:15.206671–08:17:15.338052Z
+  accessed_at: '2026-10-21T09:27:57.542053Z'
+  support: context_only
+  summary: The prior bounded discovery supports use of the official catalog fallback.
+    This is reused evidence, not a fresh B6 or whole-machine absence claim.
+  snapshot_sha256: 43597ec8b007fc605fabf9069534281f331a33bda5615b9ce9c473facf744179
+  search_scope: Original B5 PATH and ignored-inclusive project discovery plus the
+    separately retained earlier bounded installation search; original searched roots
+    and exclusions remain in the two runner receipts. No fresh B6/global discovery
+    was performed.
+- evidence_id: source-ledger
+  kind: validation
+  reference: Final documentary source assessment
+  locator: Four works, twelve placements, two snippets; finalized 11:32:31.439116Z
+  accessed_at: '2026-10-21T11:32:31.439116Z'
+  support: partial
+  summary: Definition and canonical classification have positive contextual support.
+    One gamma excerpt is notation-normalized and one CSH quotation is unknown. The
+    chapter materially limits the combined-lesion repair claim; CSH positively supports
+    general causal proteome protection.
+  snapshot_sha256: baefd49d2960f9ba1bd242195af0209c62186600f44fbeff915097f9ae6adb36
+- evidence_id: placements
+  kind: validation
+  reference: Complete citation-placement inventory
+  locator: Twelve placements including synonym provenance and all seven edges
+  accessed_at: '2026-10-21T11:32:31.438578Z'
+  support: partial
+  summary: All assigned sources resolve. Actual source surfaces and each placement
+    are distinguished; nearest canonical classification, comparative dose context
+    and repair mechanism are not interchangeable evidence tiers.
+  snapshot_sha256: f0c684e8c6bb180f41671fea6446af3a25985a86aee7a446ead277097f579754
+- evidence_id: snippets
+  kind: validation
+  reference: Complete manual quotation ledger
+  locator: 'Two occurrences: one notation-normalized, one unknown; zero raw literal
+    matches'
+  accessed_at: '2026-10-21T11:32:31.438326Z'
+  support: partial
+  summary: Greek gamma, subscripts and superscripts explain the supported normalized
+    excerpt. The precise Mn/Fe wording is not verified from an inaccessible body,
+    and absence from an abstract does not make it false.
+  snapshot_sha256: 11a181da03aae676bb90332cc08f4a11f58b51106aca5a4995f4230bd1b82d80
+- evidence_id: edge-sources
+  kind: validation
+  reference: Complete seven-edge source assessment
+  locator: All existing assertions at stated documentary scope
+  accessed_at: '2026-10-21T11:32:31.438413Z'
+  support: partial
+  summary: Positive radiation-damage and general repair/protection support remains.
+    The chapter does not support DSB repair resolving the entire mixed lesion object.
+    Exact Mn/Fe magnitude and precise material-role assertions remain unknown rather
+    than contradicted.
+  snapshot_sha256: b6842983dba726610d1bea8b92dec3c957bff87fcabab851a2247eceee100114
+- evidence_id: meta-0
+  kind: database
+  reference: DOI:10.3390/genes14091803
+  locator: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.3390%2Fgenes14091803&format=json&resultType=core;
+    actual indexed/registry record
+  accessed_at: '2026-10-21T11:30:05.915966Z'
+  support: supports
+  summary: 'Involvement of Nucleotide Excision Repair and Rec-Dependent Pathway Genes
+    for UV Radiation Resistance in <i>Deinococcus irradiatisoli</i> 17bor-2. Access
+    scope: Full JATS reused with original acquisition receipt and hash. Current metadata
+    status freshly checked.'
+  snapshot_sha256: f36f1906f8312ae15ae676b6110a39592678f66d826ea38d997c5b9fb4a7d624
+- evidence_id: meta-1
+  kind: database
+  reference: DOI:10.1101/cshperspect.a012765
+  locator: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A10.1101%2Fcshperspect.a012765&format=json&resultType=core;
+    actual indexed/registry record
+  accessed_at: '2026-10-21T11:30:06.026298Z'
+  support: supports
+  summary: 'Biology of extreme radiation resistance: the way of Deinococcus radiodurans.
+    Access scope: Actual indexed abstract; full-text requests failed or returned API
+    help/challenge. No body verification.'
+  snapshot_sha256: 7b91df06fc970dfcb21725385f0748995b86f87e863864fbf9199ac3db8400ae
+- evidence_id: meta-2
+  kind: database
+  reference: PMID:10567266
+  locator: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A10567266+AND+SRC%3AMED&format=json&resultType=core;
+    actual indexed/registry record
+  accessed_at: '2026-10-21T11:30:05.921192Z'
+  support: supports
+  summary: 'Genome sequence of the radioresistant bacterium Deinococcus radiodurans
+    R1. Access scope: Actual indexed title/abstract; full-text requests failed or
+    returned API help/challenge.'
+  snapshot_sha256: 47f131b583e9dc4c8082987dfd88ec40235a51bbabe41ddef0e96cc9bb5233df
+- evidence_id: meta-3
+  kind: database
+  reference: DOI:10.1007/978-3-031-18810-7_9
+  locator: https://api.crossref.org/works/10.1007%2F978-3-031-18810-7_9; actual indexed/registry
+    record
+  accessed_at: '2026-10-21T11:30:21.530576Z'
+  support: supports
+  summary: 'Environmental Radiobiology Access scope: Full publisher HTML, including
+    §9.3.1, acquired and inspected. EPMC DOI query returned zero indexed hits; this
+    is not an invalid DOI.'
+  snapshot_sha256: 2d4e822b3a1335d75e9126d40520d71e26d37c54a5012ced83b74c2b938efed4
+- evidence_id: genes-primary
+  kind: primary_source
+  reference: DOI:10.3390/genes14091803
+  locator: 'Full JATS: Introduction paragraph 0, Results §3.1 paragraph 11, Discussion
+    paragraphs 19/21–22; original 09:37:42.074503–09:37:43.175723Z'
+  accessed_at: '2026-10-21T09:37:43.175723Z'
+  support: supports
+  summary: The paper contains the D. radiodurans comparison and general repair context
+    despite principally studying D. irradiatisoli and UV. Gamma and UV endpoints use
+    different quantities. Its comparative background is not a new isolated DSB-repair
+    assay.
+  snapshot_sha256: 2564113369503820a669b56961713e37baa11fe6096dd4cf10c7945c2704f48e
+- evidence_id: chapter-primary
+  kind: primary_source
+  reference: DOI:10.1007/978-3-031-18810-7_9
+  locator: Environmental Radiobiology §9.3.1, extracted HTML paragraph 77; actual
+    11:30:21.095521–11:30:28.774576Z
+  accessed_at: '2026-10-21T11:30:28.774576Z'
+  support: refutes
+  summary: The chapter supports multiple radiation-induced lesions but distinguishes
+    lesion-specific repair and repair-resistant clusters. It does not support assigning
+    DSB repair to the entire mixed state of single-strand breaks, abasic sites and
+    complex clusters. This does not mean all clusters are irreparable.
+  snapshot_sha256: b8067edb423a1494b990259195108c3f5892ffaddbaed273779cff4ca9b66ee5
+- evidence_id: root-primary
+  kind: primary_source
+  reference: Actual publisher browser observations
+  locator: CSH abstract only and Springer chapter §9.3.1; qualified 11:30:19.500919Z
+  accessed_at: '2026-10-21T11:30:19.500919Z'
+  support: partial
+  summary: The parent actually read the CSH abstract supporting causal proteome protection
+    and the chapter repair-scope passage. Root MDPI returned 429; later CSH full-body
+    access failed. Browser observations have no downloaded article-body hash; the
+    hashed file is the observation receipt.
+  snapshot_sha256: 638b76f5cc05bb21dfb9ae7b7fa8eec169560f070f1840221539f5d3762b73d9
+- evidence_id: root-genes-read
+  kind: validation
+  reference: Independent primary-window read receipt
+  locator: Actual JATS paragraphs 0–4, 11 and 22; recorded 11:31:36.926074Z
+  accessed_at: '2026-10-21T11:31:36.926074Z'
+  support: supports
+  summary: The root read the retained article windows and verified the body hash.
+    Dose notation and the distinction between comparative classification/background
+    and the principal UV study are retained.
+  snapshot_sha256: 72d9e00165817728e32d648902a50be40736e592354e90c76748b57d1099a082
+- evidence_id: source-access
+  kind: validation
+  reference: Actual source access and failure ledger
+  locator: Original JATS reuse; chapter HTML; failed XML, BioC help, publisher 403
+    and browser challenges
+  accessed_at: '2026-10-21T11:32:31.438990Z'
+  support: context_only
+  summary: CSH and canonical sources were inspected at abstract level. HTTP 200 BioC
+    help is not article text. Original successful and failed observations remain distinct;
+    no full-body or globally exhaustive verification is implied.
+  snapshot_sha256: 9a529c6f318dc44d879f7072e960e8cf2d0483b387ad30deeaff2462abb26431
+- evidence_id: source-reuse
+  kind: validation
+  reference: Original Genes body reuse receipts
+  locator: Original GET 09:37:42.074503–09:37:43.175723Z; copy 11:29:55Z
+  accessed_at: '2026-10-21T11:29:55.099245Z'
+  support: supports
+  summary: The original JATS body hash and acquisition time are retained separately
+    from current copying, source assessment and fresh metadata. Copying is not a new
+    primary-body retrieval.
+  snapshot_sha256: 061b756f14504c028959dbb13ebac94ec6ef755d356d39a1cb0ffd2f49446f8f
+- evidence_id: publication-status
+  kind: validation
+  reference: Bounded publication-status field inspection
+  locator: Three fresh indexed records and one Crossref/publisher chapter identity
+  accessed_at: '2026-10-21T11:32:31.437728Z'
+  support: context_only
+  summary: No corrective relation was present in the inspected fields. This is not
+    a globally exhaustive notice search or proof that none exists anywhere; the chapter
+    is a resolved book chapter despite an empty indexed DOI search.
+  snapshot_sha256: 239b438eef960ab831c90b0247fffbf6ac1bba3599c713208730b0caa8d2d779
+assessments:
+- assessment_id: identity
+  area: identity
+  topic: 'Native checklist: identifier, hierarchy, scope and synonym'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: Accepted local traitmech:000008 has no exact active/deprecated match in
+    the pinned ontology and maps to proposed v5 child 1007607. Broader METPO1007072
+    overlaps the deliberately retained parent, not this narrower target. Gamma is
+    explicitly a narrow synonym. No forced parent migration or native OWL equivalence
+    is inferred.
+  evidence_ids:
+  - identity
+  - local-authority
+  - record
+  - placements
+- assessment_id: definition
+  area: evidence
+  topic: 'Native checklist: complete contextual definition'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: The existing definition has positive ionizing-radiation, repair and protection
+    context in the assigned Genes paper. Its typical wording does not assert a universal
+    mechanism or a fixed quantitative threshold across taxa. The paper is a comparative
+    study, not a formal all-organism definition source.
+  evidence_ids:
+  - genes-primary
+  - placements
+  - source-ledger
+- assessment_id: canonical
+  area: evidence
+  topic: 'Native checklist: canonical classification and taxon'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: NCBI1299 is D. radiodurans. The nearest assigned PMID title/abstract supports
+    its radiation-resistant classification through strain R1; quantified extreme-dose
+    context comes separately from the already assigned Genes comparison. This is not
+    a new growth assay or proof of equal resistance in all isolates.
+  evidence_ids:
+  - taxon
+  - meta-2
+  - genes-primary
+  - placements
+- assessment_id: node-grounding
+  area: grounding
+  topic: 'Native checklist: all six nodes and optional protein scope'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: Trait, environmental challenge, two biological processes, existing damage
+    STATE and concentration-ratio QUALITY are coherent facets. GO0006302 is active
+    double-strand-break repair. Preserve the ratio as a quality rather than silently
+    turning it into a material pool. Zero protein classes and instances require no
+    token accession.
+  evidence_ids:
+  - native-types
+  - go-repair
+  - node-edges
+  - ground-ledger
+  details: 'Nodes 0–1: local trait and radiation context. Nodes 2–3: repair/protection
+    processes. Node 4: mixed damage state whose source coverage is assessed separately.
+    Node 5: measurable concentration ratio, not a material executor.'
+- assessment_id: relations
+  area: consistency
+  topic: 'Native checklist: all seven predicates and endpoints'
+  outcome: concern
+  target_ids:
+  - traitmech:000008
+  summary: 'Only edge 6 has an imported role conflict: RO enables requires a material
+    executor, while the subject denotes a ratio QUALITY. The process object is valid.
+    Local challenges/confers and Biolink causes fit their stated endpoints. Free-text
+    repairs/correlation have no unasserted RO constraints or mandatory predicate IDs.'
+  evidence_ids:
+  - predicate-authority
+  - local-authority
+  - node-edges
+  - owners
+  details: 'Edge 0: local environmental challenge. Edges 1–2: compatible process-to-trait
+    conferral. Edge 3: broad causal damage relation. Edge 4: free-text repair with
+    source-scope concern. Edge 5: explicitly observational association. Edge 6: material-executor
+    mismatch; preserve legitimate endpoint facets.'
+- assessment_id: edge-sources
+  area: evidence
+  topic: 'Native checklist: all seven nearest-source claims'
+  outcome: concern
+  target_ids:
+  - traitmech:000008
+  summary: Radiation damage and general repair/protection framing have positive contextual
+    support. The CSH abstract causally frames proteome protection, so it is not restricted
+    to correlation-only support. Edge 4 overextends DSB repair to the entire mixed
+    lesion state despite the chapter’s lesion-specific and repair-resistant-cluster
+    distinctions. Exact Mn/Fe and detailed material claims remain unknown.
+  evidence_ids:
+  - edge-sources
+  - placements
+  - chapter-primary
+  - genes-primary
+  - meta-1
+  - root-primary
+- assessment_id: quotations
+  area: evidence
+  topic: 'Native checklist: both snippet occurrences'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: The gamma comparison is supported after explicit notation normalization,
+    not a raw literal match. The CSH exact wording remains unverified because only
+    its abstract was inspected. No quotation defect is assigned from typography or
+    an abstract miss.
+  evidence_ids:
+  - snippets
+  - genes-primary
+  - source-access
+  - check-ionizing-radiation-snippets
+- assessment_id: quantity
+  area: quantity
+  topic: 'Native checklist: dose interpretation and Mn/Fe comparison'
+  outcome: unknown
+  target_ids:
+  - traitmech:000008
+  summary: The assigned paper supports its comparative D10 statement with gamma and
+    UV kept as distinct radiation types and units. D10 is a population-reduction endpoint,
+    not complete survival. The approximately threefold iron comparison and precise
+    ratio wording remain unverified in unseen CSH body text. No new threshold, conversion
+    or irradiation recommendation follows.
+  evidence_ids:
+  - snippets
+  - placements
+  - genes-primary
+  - source-access
+- assessment_id: bibliography
+  area: evidence
+  topic: 'Native checklist: four works and twelve placements'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: All four identities resolve; twelve placements include the narrow-synonym
+    DOI. Current status inspection covers three indexed records and one chapter registry/publisher
+    record. Actual article bodies, abstracts, browser observations and access failures
+    remain separate. No globally exhaustive publication-status absence is claimed.
+  evidence_ids:
+  - source-ledger
+  - placements
+  - meta-0
+  - meta-1
+  - meta-2
+  - meta-3
+  - publication-status
+  - source-access
+- assessment_id: completeness
+  area: completeness
+  topic: 'Native checklist: whole-record and contextual graph coverage'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: All six nodes, seven edges, the canonical example, four works, twelve placements,
+    two snippets and six events are covered. One NONMECHANISTIC component, optional
+    ungrounded predicates and absent protein instances need no artificial completion.
+    Parent assertions are context, not target claims.
+  evidence_ids:
+  - capture
+  - node-edges
+  - placements
+  - native-policy
+  - preparation
+- assessment_id: expression
+  area: evidence
+  topic: 'Native checklist: canonical dataset applicability'
+  outcome: not_applicable
+  target_ids:
+  - traitmech:000008
+  summary: The retained complete catalog has no canonical or official historical-name/genus
+    match. No substitute organism, parent protein or downstream gene/module query
+    was used. Catalog noncoverage is not negative biological evidence or a mandatory
+    dataset defect.
+  evidence_ids:
+  - expression
+  - runner
+  - authority-reuse
+- assessment_id: ownership
+  area: ownership
+  topic: 'Native checklist: predicate recurrence and local identity retention'
+  outcome: concern
+  target_ids:
+  - traitmech:000008
+  summary: The record, wildcard enables mapping and existing-ID writer guard can preserve
+    the present RO conflict. Prior migrations of other edges to confers are already
+    reflected and are not new defects. Accepted fallback/proposal and broader parent
+    retention remain deliberate. Source-scope wording is owned by the maintained record.
+  evidence_ids:
+  - owners
+  - local-authority
+  - identity
+  - provenance
+- assessment_id: human-acceptance
+  area: provenance
+  topic: 'Native checklist: REVIEWED and bounded acceptance attribution'
+  outcome: concern
+  target_ids:
+  - traitmech:000008
+  summary: Six explicit AI events document proposal, enrichment, grounding and later
+    maintenance. The ignored-inclusive local searches do not identify a human acceptance
+    decision for this target. This is bounded traceability; private or remote review
+    and the broader ontology creator are not evidence of local current-target acceptance.
+  evidence_ids:
+  - provenance
+  - record
+  - native-policy
+- assessment_id: checks
+  area: schema
+  topic: 'Native checklist: focused checks and original corpus reuse'
+  outcome: supported
+  target_ids:
+  - traitmech:000008
+  summary: Focused validation, strict validation and the snippet command passed. Manual
+    snippet statuses remain separate. Historical B4/B5/B3/OLD checks retain original
+    times, baselines, product failures, network retry and adapter skips; environment
+    readiness is not an additional QC or scientific validation.
+  evidence_ids:
+  - check-ionizing-radiation-validate
+  - check-ionizing-radiation-strict
+  - check-ionizing-radiation-snippets
+  - check-corpus-protein-taxa
+  - check-batch005-qc
+  - reuse
+  - reuse-supplement
+findings:
+- finding_id: ratio-executor
+  issue_key: ionizing-radiation-tolerant-ratio-executor
+  category: grounding
+  severity: major
+  status: open
+  certainty: confirmed
+  title: RO enables assigns a material-executor role to a concentration ratio
+  description: Edge 6 uses RO:0002327 from the high intracellular Mn/Fe ratio QUALITY
+    to a biological process. The inherited relation describes a material entity acting
+    to execute that process; the ratio is a measurable attribute, not the material
+    manganese pool. The process object is compatible. Preserve the legitimate QUALITY
+    node and reconcile the relation rather than forcing a node retype or inventing
+    replacement biology. Native validity is not external semantic validity.
+  target_ids:
+  - traitmech:000008
+  field_paths:
+  - causal_graphs[0].edges[6].predicate_id
+  - causal_graphs[0].edges[6].description
+  evidence_ids:
+  - predicate-authority
+  - node-edges
+  - native-types
+  - owners
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Wildcard enables mapping row 9 permits recurrence
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Existing-ID preservation and type gates
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: repair-scope
+  issue_key: ionizing-radiation-tolerant-repair-scope
+  category: evidence
+  severity: major
+  status: open
+  certainty: confirmed
+  title: DSB repair is assigned the entire mixed lesion state beyond the cited source
+    scope
+  description: Edge 4 states that double-strand-break repair resolves clustered lesions
+    and points to a STATE that also includes single-strand breaks, abasic sites and
+    complex clusters. The nearest chapter §9.3.1 distinguishes lesion-specific repair
+    and notes repair-resistant clusters. It supports radiation damage and DSB repair
+    context, but not the asserted coverage of the whole mixed state. This is a material
+    scope overstatement, not a claim that every cluster is irreparable or an instruction
+    to add repair mechanisms.
+  target_ids:
+  - traitmech:000008
+  field_paths:
+  - causal_graphs[0].edges[4].object
+  - causal_graphs[0].edges[4].description
+  - causal_graphs[0].edges[4].evidence[0].notes
+  evidence_ids:
+  - chapter-primary
+  - edge-sources
+  - placements
+  - go-repair
+  - node-edges
+  - root-primary
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: major
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+- finding_id: human-acceptance-link
+  issue_key: ionizing-radiation-tolerant-human-acceptance-link
+  category: provenance
+  severity: minor
+  status: open
+  certainty: confirmed
+  title: Inspected local provenance does not attribute human scientific acceptance
+  description: REVIEWED is accompanied by six explicit AI maintenance events. The
+    bounded ignored-inclusive local searches and inspected provenance do not identify
+    a human acceptance decision for this target. Existing maintenance history is positive
+    evidence and is retained. Remote/private decisions remain unassessed; this does
+    not claim that no human review ever occurred.
+  target_ids:
+  - traitmech:000008
+  field_paths:
+  - mapping_status
+  - curation_history
+  evidence_ids:
+  - provenance
+  - record
+  - native-policy
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  rule_id: review-yaml-record Evidence Rules; native field-by-field checklist
+  native_severity: minor
+  normalization_reason: Major denotes material claim/source or representation errors;
+    minor denotes bounded provenance or wording defects.
+actions:
+- action_id: reconcile-ratio-relation
+  description: Reconcile the imported relation with the existing concentration-ratio
+    meaning.
+  finding_ids:
+  - ratio-executor
+  target_ids:
+  - traitmech:000008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: mappings/predicate_grounding.tsv
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  - repository: CultureBotAI/TraitMech
+    path: scripts/ground_causal_predicates.py
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Any retained RO identifier satisfies its inherited material-executor meaning.
+    Preserve the ratio as QUALITY and the valid biological-process object.
+  - Address mapping recurrence and existing-ID preservation without prescribing a
+    new material actor, pathway, molecular target or intervention.
+  - After separately authorized curation, use guarded writes and append-only record/repository
+    history, rerun focused validation/strict/source checks and applicable maintained
+    audits/QC, and regenerate affected outputs through maintained recipes. This review
+    makes no scientific mutation.
+- action_id: bound-repair-coverage
+  description: Bound the existing repair assertion to the lesion scope actually supported
+    by its source.
+  finding_ids:
+  - repair-scope
+  target_ids:
+  - traitmech:000008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - The relation no longer attributes resolution of the entire mixed lesion state
+    to DSB repair without supporting evidence. Preserve the positive damage and DSB-repair
+    context.
+  - Do not infer that all clusters are irreparable or supply additional pathways,
+    experimental conditions or optimization.
+  - After separately authorized curation, use guarded writes and append-only record/repository
+    history, rerun focused validation/strict/source checks and applicable maintained
+    audits/QC, and regenerate affected outputs through maintained recipes. This review
+    makes no scientific mutation.
+- action_id: attribute-human-acceptance
+  description: Link existing human scientific acceptance or obtain it through the
+    established process.
+  finding_ids:
+  - human-acceptance-link
+  target_ids:
+  - traitmech:000008
+  owner_paths:
+  - repository: CultureBotAI/TraitMech
+    path: data/traits/environment/ionizing_radiation_tolerant.yaml
+    role: Maintained scientific input; authorized changes require guarded curation
+      and history
+  acceptance_checks:
+  - Acceptance identifies the current revision and reviewed scope, including source-access
+    limits and relation/scope concerns. Preserve all six AI history events.
+  - Automated validation and this agent review do not substitute for human scientific
+    acceptance; reassess status if necessary.
+limitations:
+- Local traitmech:000008 remains authoritative pending the exact v5 proposal. Broader
+  METPO1007072 overlaps the deliberately retained parent; no forced parent migration
+  or exact-child equivalence is inferred. Gamma remains a narrow synonym.
+- The Genes paper principally studies D. irradiatisoli and UV, while actually containing
+  the D. radiodurans comparison and general repair/protection context. Background
+  support is not a new isolated DSB-repair experiment or an all-taxon mechanism requirement.
+- The supported gamma excerpt normalizes Greek notation and subscripts/superscripts;
+  it is not raw literal text. Gamma and UV use different quantities, and D10 is not
+  complete survival. No new threshold, dose conversion, condition or optimization
+  is supplied.
+- The canonical nearest title/abstract supports radiation-resistant D. radiodurans
+  R1. Quantified extreme-dose context is separate corroboration from the already assigned
+  Genes paper, not proof that every isolate has identical resistance.
+- The actual CSH abstract positively supports causal proteome protection and repair/recovery.
+  Exact Mn/Fe quotation, approximately threefold iron comparison and precise Mn-complex
+  material role remain unverified because full text was unavailable. This is not a
+  correlation-only or false-source finding.
+- The chapter distinguishes lesion-specific repair and repair-resistant clusters.
+  The finding bounds coverage of the mixed lesion state; it neither declares all clusters
+  irreparable nor reconstructs additional repair routes.
+- RO enables has material-executor semantics while the current ratio is valid QUALITY.
+  Preserve both ratio and damage STATE facets. Local challenges/confers are maintained
+  provisional proposals; free-text repairs/correlation do not inherit absent RO identifiers.
+  No OWL reasoning run is claimed.
+- Original Genes JATS acquisition at 09:37:42–43Z is separate from copying and fresh
+  metadata. CSH/canonical XML failures, BioC help responses, publisher 403, root MDPI
+  429 and browser challenges remain distinct from successful chapter HTML and actual
+  abstracts. Browser observation receipts do not hash article bodies.
+- Publication-status inspection covers the actual three indexed records and one chapter
+  registry/publisher identity. No corrective relation in those fields is not a globally
+  exhaustive absence claim. An empty indexed chapter DOI query does not invalidate
+  the resolved chapter.
+- The complete retained catalog has no canonical or historical-name/genus match. No
+  organism substitution or downstream module search occurred; noncoverage is not negative
+  biology. Runner discovery retains its original bounded scope and times.
+- The parent was read as context only; its proteins are not target proteins. The historical
+  provider header was inspected, not its entire report. NONMECHANISTIC scope and zero
+  protein instances do not mandate invented graph completion.
+- Six explicit AI events and ignored-inclusive bounded local searches establish maintenance
+  but not attributed human acceptance. Remote/private sources remain unassessed. Current
+  upstream ontology authorship is not current-target human sign-off.
+- Historical B4/B5/B3/OLD checks retain actual dates, failures, retry, baselines and
+  adapter skips. No new native corpus execution, scientific record edit, environment
+  mutation, paid research, experiment or Git mutation is part of this review.
+notes:
+- 'Three findings: two major and one minor. All field indices are zero-based.'
+- All 59 current captured input hashes match. Six nodes, seven edges, one component,
+  zero protein classes/instances and six explicit AI events are covered.
+- 'Final source ledger: 11:32:31.439116Z. Final grounding ledger: 11:33:38.635492Z.
+  Acquisition, copy, independent observation and integration times remain distinct.'
+tags:
+- record-review
+- ionizing-radiation-tolerant
+- environment
+- needs-curation
