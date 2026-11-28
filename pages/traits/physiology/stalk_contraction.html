@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.2142/biophysics.8.1" rel="nofollow noreferrer"><code>DOI:10.2142/biophysics.8.1</code></a>
         <blockquote>The stalk is straight at the initial stage. Then, it bends and coils into a helix near the zooid.</blockquote>
-        <p class="meta">Kamiguri et al. 2012, PMID:27857602, PMCID:PMC5070450, printed page 3, Results and Discussion first paragraph, left column. Direct contiguous PDF match with whitespace-only line-wrap normalization and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. Junko Kamiguri is the first author; the running header says Hashimoto et al. Living source-named Vorticella sp. from activated sludge attached to glass rods was stimulated by hitting the dish; eight cells were observed at 6000 frames/s. Figures 3 and 5 show coiling and decreased end-to-end extension. The same paragraph says contour length does not change. All nine main-paper pages were inspected; raw videos were not reanalyzed. Model fits are not molecular proof. The primary PDF came from J-STAGE; an acquisition-helper failure left no original request timestamp or header receipt. Those missing fields are not reconstructed. Current taxonomic and culture identities remain unresolved.</p>
+        <p class="meta">Kamiguri et al. 2012, <a href="https://pubmed.ncbi.nlm.nih.gov/27857602/" rel="nofollow noreferrer">PMID:27857602</a>, PMCID:<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5070450/" rel="nofollow noreferrer">PMC5070450</a>, printed page 3, Results and Discussion first paragraph, left column. Direct contiguous PDF match with whitespace-only line-wrap normalization and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. Junko Kamiguri is the first author; the running header says Hashimoto et al. Living source-named Vorticella sp. from activated sludge attached to glass rods was stimulated by hitting the dish; eight cells were observed at 6000 frames/s. Figures 3 and 5 show coiling and decreased end-to-end extension. The same paragraph says contour length does not change. All nine main-paper pages were inspected; raw videos were not reanalyzed. Model fits are not molecular proof. The primary PDF came from J-STAGE; an acquisition-helper failure left no original request timestamp or header receipt. Those missing fields are not reconstructed. Current taxonomic and culture identities remain unresolved.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1016/j.bpj.2012.07.038" rel="nofollow noreferrer"><code>DOI:10.1016/j.bpj.2012.07.038</code></a>
         <blockquote>The stalk contraction was stalled more as the fluid viscosity and/or flow rate increased.</blockquote>
-        <p class="meta">Ryu et al. 2012, PMID:23009835, PMCID:PMC3433611, printed page 862, Figure 2A caption, sentence beginning The stalk contraction. Direct contiguous PDF match and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. The primary PDF was retrieved from the Vanderbilt Lang Lab mirror. Source-named Vorticella convallaria contracted in microfluidic channels under varied flow and viscosity. Four to five contractions per cell per condition are not independent cells. Figure 3 uses six cells; Figure 4C uses fifteen in a separate analysis. Isometric force is extrapolated through a hydrodynamic model, not directly measured zero-shortening force. All eight main-paper pages and actual Figures 1-5 were inspected; the supplement was not. Projection and geometry assumptions remain relevant. Some extracted micrometre symbols appear as mm; no such numeric extraction is quoted. Culture/taxonomy correspondence is unresolved. No universal rate, force, calcium threshold, ATP independence or protein mechanism follows.</p>
+        <p class="meta">Ryu et al. 2012, <a href="https://pubmed.ncbi.nlm.nih.gov/23009835/" rel="nofollow noreferrer">PMID:23009835</a>, PMCID:<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3433611/" rel="nofollow noreferrer">PMC3433611</a>, printed page 862, Figure 2A caption, sentence beginning The stalk contraction. Direct contiguous PDF match and actual typeset passage inspected; native NOT_IN_ABSTRACT retained. The primary PDF was retrieved from the Vanderbilt Lang Lab mirror. Source-named Vorticella convallaria contracted in microfluidic channels under varied flow and viscosity. Four to five contractions per cell per condition are not independent cells. Figure 3 uses six cells; Figure 4C uses fifteen in a separate analysis. Isometric force is extrapolated through a hydrodynamic model, not directly measured zero-shortening force. All eight main-paper pages and actual Figures 1-5 were inspected; the supplement was not. Projection and geometry assumptions remain relevant. Some extracted micrometre symbols appear as mm; no such numeric extraction is quoted. Culture/taxonomy correspondence is unresolved. No universal rate, force, calcium threshold, ATP independence or protein mechanism follows.</p>
       </li>
 
     </ul>
@@ -113,7 +114,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -345,7 +346,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -374,12 +384,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-15 03:55 UTC

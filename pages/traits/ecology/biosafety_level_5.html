@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -118,8 +119,8 @@
             <a href="https://w3id.org/metpo/1001106" rel="nofollow noreferrer"><code>METPO:1001106</code></a>
             <span class="edge-predicate">is a</span>
             <strong>biosafety level</strong>
-            <a href="https://w3id.org/metpo/1001101" rel="nofollow noreferrer"><code>METPO:1001101</code></a>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/ecology/biosafety_level.html"><code>METPO:1001101</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>BSL-5 is a proposed member of the biosafety-level classification.</p>
             <ul>
 
@@ -178,7 +179,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>5 <span class="meta">RELATED_SYNONYM · metpo.owl</span></li>
+        <li>5 <span class="meta">RELATED_SYNONYM · <code>metpo.owl</code></span></li>
 
       </ul>
     </div>
@@ -194,7 +195,7 @@
         via <em>direct_metpo</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1001106</code> <span class="dim-preview">[-1.943, -2.943, -2.758, +0.700, …]</span></li>
+        <li><a href="https://w3id.org/metpo/1001106" rel="nofollow noreferrer">biosafety level 5 <code>METPO:1001106</code></a> <span class="dim-preview">[-1.943, -2.943, -2.758, +0.700, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -422,7 +423,7 @@ The node inventory below focuses on **hazard properties**, **biorisk decision pr
         <li><time>2026-09-06T13:30:00Z</time>
            · codex
           <ul><li><strong>REVIEW</strong> — Repair PR 664 BSL-5 definition evidence
-            <p>Addressed adversarial review issue #668 by restoring DOI:10.1146/annurev.micro.62.081307.162938 as the biosafety_level_5 definition source and DOI-backed top-level evidence while keeping the SAE PPL-alpha source as additional record and graph evidence; the focused replay tests verify the patched script and curated YAML stay in sync.</p></li></ul>
+            <p>Addressed adversarial review issue #668 by restoring <a href="https://doi.org/10.1146/annurev.micro.62.081307.162938" rel="nofollow noreferrer">DOI:10.1146/annurev.micro.62.081307.162938</a> as the biosafety_level_5 definition source and DOI-backed top-level evidence while keeping the SAE PPL-alpha source as additional record and graph evidence; the focused replay tests verify the patched script and curated YAML stay in sync.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/biosafety_level_5/2026-09-06T133000Z-codex-9a8cfc.yaml">Read this curation session</a>
         </li></ul>
 
@@ -454,7 +455,16 @@ The node inventory below focuses on **hazard properties**, **biorisk decision pr
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -818,12 +828,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-09-07 07:24 UTC

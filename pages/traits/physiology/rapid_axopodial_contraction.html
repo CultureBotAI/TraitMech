@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.2108/zsj.20.1367" rel="nofollow noreferrer"><code>DOI:10.2108/zsj.20.1367</code></a>
         <blockquote>Axopodial contraction of the centrohelid heliozoon Raphidiophrys contractilis was induced by mechanical or electrical stimulation.</blockquote>
-        <p class="meta">Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC for PMID:14624035 at https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035%20AND%20SRC%3AMED&amp;resultType=core&amp;format=json. Abstract-only access; full Methods and figures were not inspected. The study reports contraction faster than 3.0 mm/sec, followed by re-elongation initially about 0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium dependence is restricted to this stimulation assay, not a universal defining threshold. Failure to detect other filaments with the reported fixation method does not prove their biological absence. Source taxon spelling is retained; natural culture provenance and current taxonomic identity are not established here.</p>
+        <p class="meta">Khan et al. (2003), scientific Abstract, directly retrieved from Europe PMC for <a href="https://pubmed.ncbi.nlm.nih.gov/14624035/" rel="nofollow noreferrer">PMID:14624035</a> at <a href="https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035%20AND%20SRC%3AMED&amp;resultType=core&amp;format=json" rel="nofollow noreferrer">https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A14624035%20AND%20SRC%3AMED&amp;resultType=core&amp;format=json</a>. Abstract-only access; full Methods and figures were not inspected. The study reports contraction faster than 3.0 mm/sec, followed by re-elongation initially about 0.30 microm/sec, and a microtubule bundle in each axopodium. Extracellular calcium dependence is restricted to this stimulation assay, not a universal defining threshold. Failure to detect other filaments with the reported fixation method does not prove their biological absence. Source taxon spelling is retained; natural culture provenance and current taxonomic identity are not established here.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1111/j.1550-7408.2001.tb00187.x" rel="nofollow noreferrer"><code>DOI:10.1111/j.1550-7408.2001.tb00187.x</code></a>
         <blockquote>Upon food uptake, the tubules shorten and transform into a mass of small granules when rapid axopodial contraction occurs</blockquote>
-        <p class="meta">Kinoshita et al. (2001), scientific Abstract, directly read at https://pubmed.ncbi.nlm.nih.gov/11596916/ and cross-checked against Europe PMC&#39;s scientific abstract. Abstract-only access; full Methods and figures were not inspected. The study concerns Actinophrys sol. Contractile-tubule shortening and granulation accompany the food-uptake response; the authors suggest, rather than prove, a causal role. Cold and colchicine both induce microtubule disassembly, but only cold induces tubule granulation in the reported comparison. Neither intervention alone defines the natural rapid-contraction phenotype. No protein identity, effect size or strain provenance is inferred.</p>
+        <p class="meta">Kinoshita et al. (2001), scientific Abstract, directly read at <a href="https://pubmed.ncbi.nlm.nih.gov/11596916/" rel="nofollow noreferrer">https://pubmed.ncbi.nlm.nih.gov/11596916/</a> and cross-checked against Europe PMC&#39;s scientific abstract. Abstract-only access; full Methods and figures were not inspected. The study concerns Actinophrys sol. Contractile-tubule shortening and granulation accompany the food-uptake response; the authors suggest, rather than prove, a causal role. Cold and colchicine both induce microtubule disassembly, but only cold induces tubule granulation in the reported comparison. Neither intervention alone defines the natural rapid-contraction phenotype. No protein identity, effect size or strain provenance is inferred.</p>
       </li>
 
     </ul>
@@ -113,7 +114,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -347,7 +348,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -376,12 +386,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-14 22:39 UTC

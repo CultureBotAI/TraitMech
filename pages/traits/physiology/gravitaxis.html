@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.1038/s41598-018-26046-8" rel="nofollow noreferrer"><code>DOI:10.1038/s41598-018-26046-8</code></a>
         <blockquote>Predominantly, E. gracilis shows a negative gravitaxis behavior.</blockquote>
-        <p class="meta">Introduction, page 1, visually verified at https://d-nb.info/1186379677/34 (PMID:29765103; PMC5954063). Direction varies with culture age. Results, Figure 4 and Supplementary Figure 6e-g distinguish upward-biased controls from EgPCDUF4201/CaM2 knockdowns. Full main text and supplement 41598_2018_26046_MOESM1_ESM.pdf inspected via Europe PMC. Supplementary Figure 5e, not the main text&#39;s 5c, measures flagellar length; Supplementary Table 1 reports comparable, not identical, speeds. These controls do not exclude every flagellar defect. PKA phosphorylation and a direct dynein link remain hypotheses.</p>
+        <p class="meta">Introduction, page 1, visually verified at <a href="https://d-nb.info/1186379677/34" rel="nofollow noreferrer">https://d-nb.info/1186379677/34</a> (<a href="https://pubmed.ncbi.nlm.nih.gov/29765103/" rel="nofollow noreferrer">PMID:29765103</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5954063/" rel="nofollow noreferrer">PMC5954063</a>). Direction varies with culture age. Results, Figure 4 and Supplementary Figure 6e-g distinguish upward-biased controls from EgPCDUF4201/CaM2 knockdowns. Full main text and supplement 41598_2018_26046_MOESM1_ESM.pdf inspected via Europe PMC. Supplementary Figure 5e, not the main text&#39;s 5c, measures flagellar length; Supplementary Table 1 reports comparable, not identical, speeds. These controls do not exclude every flagellar defect. PKA phosphorylation and a direct dynein link remain hypotheses.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1242/jeb.050666" rel="nofollow noreferrer"><code>DOI:10.1242/jeb.050666</code></a>
         <blockquote>the ability to swim preferentially upwards (negative gravitaxis) is primarily the result of upwardly curving trajectories</blockquote>
-        <p class="meta">Summary (PMID:21112996); publisher main-text Methods, Results and Discussion inspected. Curved trajectories agree with a physical shape-orientation model, but shape and orientation rate were not measured simultaneously in the same individual. This is not proof that all protists lack gravity receptors. Gravikinesis concerns orientation-dependent swimming speed, not the directional phenotype. Equation images and supplementary material were not inspected; no equation-derived or supplement-only claim is asserted.</p>
+        <p class="meta">Summary (<a href="https://pubmed.ncbi.nlm.nih.gov/21112996/" rel="nofollow noreferrer">PMID:21112996</a>); publisher main-text Methods, Results and Discussion inspected. Curved trajectories agree with a physical shape-orientation model, but shape and orientation rate were not measured simultaneously in the same individual. This is not proof that all protists lack gravity receptors. Gravikinesis concerns orientation-dependent swimming speed, not the directional phenotype. Equation images and supplementary material were not inspected; no equation-derived or supplement-only claim is asserted.</p>
       </li>
 
     </ul>
@@ -113,7 +114,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000702</code> <span class="dim-preview">[+24.397, -70.567, +20.807, -80.811, …]</span></li>
+        <li><a href="../../traits/morphology/motile.html">motile <code>METPO:1000702</code></a> <span class="dim-preview">[+24.397, -70.567, +20.807, -80.811, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -311,7 +312,7 @@
         <li><time>2026-10-04T02:22:36Z</time>
            · codex
           <ul><li><strong>CREATE</strong> — Add gravity-relative swimming trait
-            <p>Added traitmech:000584 gravitaxis under motile with DOI:10.1038/s41598-018-26046-8 and DOI:10.1242/jeb.050666, contiguous snippets, species-qualified Euglena gracilis and Paramecium caudatum examples, and companion METPO proposal v461 reserving METPO:1053800. Ignored-and-hidden searches found no exact existing record. Read primary text and Nasir supplement; verified the flagellar-length panel is Supplementary Figure 5e despite the main-text 5c pointer. Kept GO process equivalence and exact protein/physical-graph representation gaps explicit. Wrote through write_validated_trait and record_curation_event.</p></li></ul>
+            <p>Added traitmech:000584 gravitaxis under motile with <a href="https://doi.org/10.1038/s41598-018-26046-8" rel="nofollow noreferrer">DOI:10.1038/s41598-018-26046-8</a> and <a href="https://doi.org/10.1242/jeb.050666" rel="nofollow noreferrer">DOI:10.1242/jeb.050666</a>, contiguous snippets, species-qualified Euglena gracilis and Paramecium caudatum examples, and companion METPO proposal v461 reserving METPO:1053800. Ignored-and-hidden searches found no exact existing record. Read primary text and Nasir supplement; verified the flagellar-length panel is Supplementary Figure 5e despite the main-text 5c pointer. Kept GO process equivalence and exact protein/physical-graph representation gaps explicit. Wrote through write_validated_trait and record_curation_event.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/gravitaxis/2026-10-04T022236Z-codex-1a0ec7.yaml">Read this curation session</a>
         </li></ul>
 
@@ -343,7 +344,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -372,12 +382,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-04 02:22 UTC

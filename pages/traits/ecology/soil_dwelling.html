@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -96,7 +97,7 @@
 
           <li id="pathograph-1-edge-1">
             <strong>soil-dwelling</strong>
-            <code>traitmech:000050</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/soil_dwelling.yaml" rel="nofollow noreferrer"><code>traitmech:000050</code></a>
             <span class="edge-predicate">contributes to</span>
             <strong>biogeochemical cycling</strong>
 
@@ -346,7 +347,7 @@
 
             <span class="edge-predicate">associated with</span>
             <strong>soil-dwelling</strong>
-            <code>traitmech:000050</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/ecology/soil_dwelling.yaml" rel="nofollow noreferrer"><code>traitmech:000050</code></a>
             <a href="https://w3id.org/biolink/vocab/associated_with" rel="nofollow noreferrer"><code>biolink:associated_with</code></a>
             <p>Soil habitat is associated with soil-resident microbes.</p>
             <ul>
@@ -406,7 +407,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>soil-associated <span class="meta">RELATED_SYNONYM · DOI:10.1038/nrmicro.2017.87</span></li>
+        <li>soil-associated <span class="meta">RELATED_SYNONYM · <a href="https://doi.org/10.1038/nrmicro.2017.87" rel="nofollow noreferrer"><code>DOI:10.1038/nrmicro.2017.87</code></a></span></li>
 
       </ul>
     </div>
@@ -422,7 +423,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -717,7 +718,7 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
         <li><time>2026-09-04T00:20:00Z</time>
            · claude-code
           <ul><li><strong>REVIEW</strong> — Reviewed soil-dwelling causal evidence for issue #183
-            <p>Reviewed data/traits/ecology/soil_dwelling.yaml after the issue #183 priority pass. Added source-verified verbatim snippets to the two record-level evidence items and all eight causal-edge evidence items in soil_dwelling_biogeochemistry; regrounded the five broad observational ecology edges to biolink:associated_with; and narrowed the climate-extreme edge to the heat treatment supported by DOI:10.1038/s41586-024-08185-3. The transform is dry-run by default, uses write_validated_trait for LinkML validation before writes, and has focused regression tests for idempotence, source drift, migrated drift, and partial replay.</p></li></ul>
+            <p>Reviewed data/traits/ecology/soil_dwelling.yaml after the issue #183 priority pass. Added source-verified verbatim snippets to the two record-level evidence items and all eight causal-edge evidence items in soil_dwelling_biogeochemistry; regrounded the five broad observational ecology edges to biolink:associated_with; and narrowed the climate-extreme edge to the heat treatment supported by <a href="https://doi.org/10.1038/s41586-024-08185-3" rel="nofollow noreferrer">DOI:10.1038/s41586-024-08185-3</a>. The transform is dry-run by default, uses write_validated_trait for LinkML validation before writes, and has focused regression tests for idempotence, source drift, migrated drift, and partial replay.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/soil_dwelling/2026-09-04T002000Z-claude-code-50a534.yaml">Read this curation session</a>
         </li>
         <li><time>2026-09-04T12:00:00Z</time>
@@ -761,7 +762,16 @@ Broad surveys identify pH, organic-carbon quantity and quality, O₂/redox, mois
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>REVIEWED</dd>
+      <dd>REVIEWED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Curator has signed off on label / definition / parents.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1125,12 +1135,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-09-07 20:05 UTC

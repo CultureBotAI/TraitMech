@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -55,13 +56,13 @@
       <li>
         <a href="https://doi.org/10.1078/0932-4739-00847" rel="nofollow noreferrer"><code>DOI:10.1078/0932-4739-00847</code></a>
         <blockquote>By electron microscopy, we show evidence that the kinetocyst is an extrusive organelle that discharges its contents upon food capture.</blockquote>
-        <p class="meta">Sakaguchi et al. 2002, scientific Abstract directly read on 2026-10-10 at https://www.researchgate.net/publication/222864147. Electron microscopy of Raphidiophrys contractilis supports release during food capture, with the posterior remaining cell-attached and the anterior directed toward prey. The proposed scaffold role is not demonstrated causality. Crossref identifies the 2002 publication; ResearchGate&#39;s date and automatically linked author profile are not used as authority. Publisher access returned 403; full Methods and figures were not inspected. No universal toxin, prey-killing requirement or trigger is inferred.</p>
+        <p class="meta">Sakaguchi et al. 2002, scientific Abstract directly read on 2026-10-10 at <a href="https://www.researchgate.net/publication/222864147" rel="nofollow noreferrer">https://www.researchgate.net/publication/222864147</a>. Electron microscopy of Raphidiophrys contractilis supports release during food capture, with the posterior remaining cell-attached and the anterior directed toward prey. The proposed scaffold role is not demonstrated causality. Crossref identifies the 2002 publication; ResearchGate&#39;s date and automatically linked author profile are not used as authority. Publisher access returned 403; full Methods and figures were not inspected. No universal toxin, prey-killing requirement or trigger is inferred.</p>
       </li>
 
       <li>
         <a href="https://doi.org/10.1515/znc-1976-3-418" rel="nofollow noreferrer"><code>DOI:10.1515/znc-1976-3-418</code></a>
         <blockquote>Freeze-fracture studies reveal that extrusive organelles displaying saltatory particle movements in centrohelidian axopod are attached to highly ordered domains within the plasma membrane.</blockquote>
-        <p class="meta">Bardele 1976, PMID:134561. Scientific abstract and primary full-text OCR directly read on 2026-10-10 at https://www.researchgate.net/publication/22999924. The snippet supports organelle identity and membrane attachment, not discharge alone. Printed pp191-193 describe formaldehyde-fume-induced release in living whole mounts and negative-stained expelled jacket material. Methods name Acanthocystis erinaceoides and Raphidiophrys ambigua; this observation is not assigned here to just one species. The author interprets kinetocysts as compound motile mucocysts. Food-trapping and movement models remain hypotheses. PDF images were unavailable; no visual audit or OCR-normalized quotation is claimed. The article year is 1976, not the later upload date.</p>
+        <p class="meta">Bardele 1976, <a href="https://pubmed.ncbi.nlm.nih.gov/134561/" rel="nofollow noreferrer">PMID:134561</a>. Scientific abstract and primary full-text OCR directly read on 2026-10-10 at <a href="https://www.researchgate.net/publication/22999924" rel="nofollow noreferrer">https://www.researchgate.net/publication/22999924</a>. The snippet supports organelle identity and membrane attachment, not discharge alone. Printed pp191-193 describe formaldehyde-fume-induced release in living whole mounts and negative-stained expelled jacket material. Methods name Acanthocystis erinaceoides and Raphidiophrys ambigua; this observation is not assigned here to just one species. The author interprets kinetocysts as compound motile mucocysts. Food-trapping and movement models remain hypotheses. PDF images were unavailable; no visual audit or OCR-normalized quotation is claimed. The article year is 1976, not the later upload date.</p>
       </li>
 
       <li>
@@ -119,7 +120,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000059</code> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
+        <li><a href="../../traits/upper/phenotype.html">phenotype <code>METPO:1000059</code></a> <span class="dim-preview">[-2.682, -2.070, -3.656, -0.652, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -309,7 +310,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -338,12 +348,14 @@
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-10 04:08 UTC

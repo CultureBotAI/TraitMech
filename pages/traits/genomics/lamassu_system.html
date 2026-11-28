@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../../index.html">TraitMech</a>
@@ -18,13 +19,13 @@
       <a href="../../umap.html">Embedding space</a>
       <a href="../../graph.html">Graph layout</a>
       <a href="../../data/traits.json">Data JSON</a>
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">Schema</a>
+      <a href="../../schema.html">Schema</a>
       <a href="https://github.com/CultureBotAI/TraitMech">GitHub</a>
       <a href="https://w3id.org/metpo">METPO</a>
     </nav>
   </div>
 </header>
-<main class="wrap">
+<main class="wrap" id="main-content" tabindex="-1">
 
 <div class="layout-2col">
 <article class="trait">
@@ -199,7 +200,7 @@
 
             <span class="edge-predicate">confers</span>
             <strong>Lamassu system</strong>
-            <code>traitmech:000232</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/lamassu_system.yaml" rel="nofollow noreferrer"><code>traitmech:000232</code></a>
             <a href="https://w3id.org/metpo/2007700" rel="nofollow noreferrer"><code>METPO:2007700</code></a>
             <p>Viral-DNA-triggered LmuA effector activation realizes the Lamassu system trait.</p>
             <ul>
@@ -215,11 +216,11 @@
 
           <li id="pathograph-1-edge-6">
             <strong>Lamassu system</strong>
-            <code>traitmech:000232</code>
+            <a href="https://github.com/CultureBotAI/TraitMech/blob/main/data/traits/genomics/lamassu_system.yaml" rel="nofollow noreferrer"><code>traitmech:000232</code></a>
             <span class="edge-predicate">is a</span>
             <strong>phage defense system</strong>
-            <code>traitmech:000209</code>
-            <code>rdfs:subClassOf</code>
+            <a href="../../traits/genomics/phage_defense_system.html"><code>traitmech:000209</code></a>
+            <a href="http://www.w3.org/2000/01/rdf-schema#subClassOf" rel="nofollow noreferrer"><code>rdfs:subClassOf</code></a>
             <p>Lamassu system possession is a phage-defense-system trait.</p>
             <ul>
 
@@ -313,7 +314,7 @@
       <h2>Synonyms (1)</h2>
       <ul class="synonyms">
 
-        <li>Lamassu <span class="meta">EXACT_SYNONYM · DOI:10.1073/pnas.2519643122</span></li>
+        <li>Lamassu <span class="meta">EXACT_SYNONYM · <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer"><code>DOI:10.1073/pnas.2519643122</code></a></span></li>
 
       </ul>
     </div>
@@ -329,7 +330,7 @@
         via <em>parent_proxy</em>.</p>
       <ul class="kgm-nodes">
 
-        <li><code>METPO:1000188</code> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
+        <li><a href="../../traits/upper/quality.html">quality <code>METPO:1000188</code></a> <span class="dim-preview">[-0.956, -1.962, -3.148, +1.274, …]</span></li>
 
       </ul>
       <p class="meta">512-dim DeepWalkSkipGramEnsmallen embedding from kg-microbe (2026-04-25).</p>
@@ -450,7 +451,7 @@
           mechanism it concerns.</p>
 
 
-        <p>Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row&#39;s relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row&#39;s relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row&#39;s relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row&#39;s relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row&#39;s relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other&#39;s effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary&#39;s profile labels as current executable model requirements. Lamassu-HNH system (traitmech:000568) now captures the literature-supported short-LmuB architecture with HNH-domain LmuA and LmuC. The published dataset supplies complete computational genome calls, not HNH-specific functional validation. The pinned executable HNH model accepts either long or short LmuB, whereas all HNH calls in that dataset use short LmuB; its software key is therefore not an exact synonym for this biological scope. HNH-specific activity, substrates, and activation remain unresolved. Lamassu-SMEK system (traitmech:000569) now captures a locus with SMEK-domain LmuA, LmuB, and LmuC. The paper describes SMEK as short-specific, but its dataset contains 124 short-profile system calls and one long-profile call; the latter requires reconciliation before asserting a biological long-LmuB subtype. The definition therefore does not impose a LmuB-length restriction. The three-component architecture is not equivalent to the single-gene DS-27 system that also uses SMEK as a working label. SMEK-specific functional validation and chemistry remain unresolved. Short Lamassu system (traitmech:000570) now captures the short-LmuB phylogenetic and structural family, not a fixed protein-length bin or an effector-specific detector. Lamassu-HNH is placed below it because its existing definition explicitly requires short-form LmuB. SMEK remains directly under the broader Lamassu parent because of its unresolved long-profile exception. The short family permits the reported LmuC-loss and effector-domain-loss architectures; type I is not an exact synonym for the whole short family. The Lamassu-Hypothetical registry label is not accepted as a separate biological trait here: unknown annotation does not establish effector-domain loss, and its relationship to the paper&#39;s clade O still needs explicit mapping. The long family and component-number subtypes remain separate discovery leads. Long Lamassu system (traitmech:000571) now captures the complementary long-LmuB phylogenetic and structural family, not an 800-residue cutoff or a particular effector model. The paper assigns the B. cereus B4077 Hydrolase-Protease system to this family, but that effector architecture also occurs in short Lamassu, so the whole Hydrolase-Protease trait is not reparented. The legacy table-defined FMO trait still needs model and biological-scope reconciliation before assigning the entire record to the long family. SMEK&#39;s exception remains unresolved. Raw detection gene_name hits must not be confused with exchangeable hit_gene_ref model slots, and ambiguous loci need phylogenetic classification. Component-number type I/II traits remain separate discovery leads. Lamassu type II system (traitmech:000572) now captures the LmuC-containing component architecture defined by Payne et al. (DOI:10.1093/nar/gkab883) and independently used by Li et al. (DOI:10.1038/s41589-025-02102-z). HNH, SMEK and Hydrolase-Protease already require LmuC in their definitions and now have this parent; HNH retains its short-family parent too. This does not assert a three-gene count, universal LmuC essentiality, or new antiviral validation of those children. Long/short families and legacy detector rows are not equivalent to this component class. Type I and family-wide mechanisms remain open discovery and curation questions. Lamassu type I system (traitmech:000573) now resolves the component-class discovery lead: Haudiquet et al. explicitly identify the LmuC-loss architecture as type I, and Li et al. independently study a type-I LmuA/LmuB complex. This is not equivalent to all short Lamassu or proof that every failed LmuC hit is biological absence. No existing effector-defined child is reparented. Family-wide mechanisms, legacy model reconciliation and native-host activity remain open.</p>
+        <p>Haudiquet et al. support a structurally characterized Vibrio cholerae Lamassu Vc-Cap4 system with LmuABC DNA-end sensing and LmuA Cap4 nuclease activation, and the pinned DefenseFinder tables model Lamassu-Amidase, Lamassu-Cap4_nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, Lamassu-Sir2, and other Lamassu-Fam subtypes as rule-row variants. Lamassu-Amidase, Lamassu-Cap4 nuclease, Lamassu-FMO, Lamassu-Hydrolase, Lamassu-Lipase, Lamassu-Mrr, Lamassu-PDDEXK, Lamassu-Protease, and Lamassu-Sir2 now capture nine DefenseFinder rule-row subtypes, but long-versus-short LmuB clades, LmuC-independent subfamilies, the Lamassu-Fam base, Lamassu-Hydrolase_Protease, and Lamassu-Hypothetical rule rows, viral-DNA triggers, exact LmuA effector substrates, FMO acronym expansion, the Lamassu-FMO rule row&#39;s relationship to FMO-scoped LmuB/LmuC HMM rows, the Lamassu-Lipase rule row&#39;s relationship to its Lipase-scoped LmuB HMM row, the Lamassu-Mrr rule row&#39;s relationship to Mrr-scoped LmuB/LmuC HMM rows, the Lamassu-PDDEXK rule row&#39;s relationship to PDDEXK-scoped LmuB/LmuC HMM rows, the Lamassu-Sir2 rule row&#39;s relationship to Sir2-scoped LmuB/LmuC HMM rows, and cell-death outputs across Lamassu loci remain unresolved. Lamassu Hydrolase-Protease system (traitmech:000567) now captures the literature-supported paired architecture with LmuB and LmuC. Its pinned executable XML requires four components, whereas the summary TSV requires three matches and calls LmuC accessory. The existing table-defined Lamassu-Hydrolase and Lamassu-Protease siblings each forbid the other&#39;s effector profile and are not exact matches to this paired architecture. Reconciling the legacy table-based sibling definitions with executable models remains open; do not interpret the summary&#39;s profile labels as current executable model requirements. Lamassu-HNH system (traitmech:000568) now captures the literature-supported short-LmuB architecture with HNH-domain LmuA and LmuC. The published dataset supplies complete computational genome calls, not HNH-specific functional validation. The pinned executable HNH model accepts either long or short LmuB, whereas all HNH calls in that dataset use short LmuB; its software key is therefore not an exact synonym for this biological scope. HNH-specific activity, substrates, and activation remain unresolved. Lamassu-SMEK system (traitmech:000569) now captures a locus with SMEK-domain LmuA, LmuB, and LmuC. The paper describes SMEK as short-specific, but its dataset contains 124 short-profile system calls and one long-profile call; the latter requires reconciliation before asserting a biological long-LmuB subtype. The definition therefore does not impose a LmuB-length restriction. The three-component architecture is not equivalent to the single-gene DS-27 system that also uses SMEK as a working label. SMEK-specific functional validation and chemistry remain unresolved. Short Lamassu system (traitmech:000570) now captures the short-LmuB phylogenetic and structural family, not a fixed protein-length bin or an effector-specific detector. Lamassu-HNH is placed below it because its existing definition explicitly requires short-form LmuB. SMEK remains directly under the broader Lamassu parent because of its unresolved long-profile exception. The short family permits the reported LmuC-loss and effector-domain-loss architectures; type I is not an exact synonym for the whole short family. The Lamassu-Hypothetical registry label is not accepted as a separate biological trait here: unknown annotation does not establish effector-domain loss, and its relationship to the paper&#39;s clade O still needs explicit mapping. The long family and component-number subtypes remain separate discovery leads. Long Lamassu system (traitmech:000571) now captures the complementary long-LmuB phylogenetic and structural family, not an 800-residue cutoff or a particular effector model. The paper assigns the B. cereus B4077 Hydrolase-Protease system to this family, but that effector architecture also occurs in short Lamassu, so the whole Hydrolase-Protease trait is not reparented. The legacy table-defined FMO trait still needs model and biological-scope reconciliation before assigning the entire record to the long family. SMEK&#39;s exception remains unresolved. Raw detection gene_name hits must not be confused with exchangeable hit_gene_ref model slots, and ambiguous loci need phylogenetic classification. Component-number type I/II traits remain separate discovery leads. Lamassu type II system (traitmech:000572) now captures the LmuC-containing component architecture defined by Payne et al. (<a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer">DOI:10.1093/nar/gkab883</a>) and independently used by Li et al. (<a href="https://doi.org/10.1038/s41589-025-02102-z" rel="nofollow noreferrer">DOI:10.1038/s41589-025-02102-z</a>). HNH, SMEK and Hydrolase-Protease already require LmuC in their definitions and now have this parent; HNH retains its short-family parent too. This does not assert a three-gene count, universal LmuC essentiality, or new antiviral validation of those children. Long/short families and legacy detector rows are not equivalent to this component class. Type I and family-wide mechanisms remain open discovery and curation questions. Lamassu type I system (traitmech:000573) now resolves the component-class discovery lead: Haudiquet et al. explicitly identify the LmuC-loss architecture as type I, and Li et al. independently study a type-I LmuA/LmuB complex. This is not equivalent to all short Lamassu or proof that every failed LmuC hit is biological absence. No existing effector-defined child is reparented. Family-wide mechanisms, legacy model reconciliation and native-host activity remain open.</p>
 
 
 
@@ -562,13 +563,13 @@
         <li>
           <time>2026-10-03T15:14:27Z</time> ·
           <strong>TRACK_TYPE_II_CLASS</strong> · codex
-          <p class="changes">Linked traitmech:000572 Lamassu type II system using the LmuC-containing classification in DOI:10.1093/nar/gkab883. Preserved biological definitions, evidence, examples and length-family distinctions. Historical proposal parent axioms remain true; v449 documents the additional subclass relations for upstream minting. This is not new experimental validation.</p>
+          <p class="changes">Linked traitmech:000572 Lamassu type II system using the LmuC-containing classification in <a href="https://doi.org/10.1093/nar/gkab883" rel="nofollow noreferrer">DOI:10.1093/nar/gkab883</a>. Preserved biological definitions, evidence, examples and length-family distinctions. Historical proposal parent axioms remain true; v449 documents the additional subclass relations for upstream minting. This is not new experimental validation.</p>
         </li>
 
         <li>
           <time>2026-10-03T15:57:07Z</time> ·
           <strong>TRACK_TYPE_I_CLASS</strong> · codex
-          <p class="changes">Linked traitmech:000573 Lamassu type I system to the existing component-architecture discussion using DOI:10.1073/pnas.2519643122 and DOI:10.1038/s41589-025-02102-z. Preserved all definitions, parents, evidence, examples and prior history. Component absence, LmuB-length family and experimental activity remain separate claims.</p>
+          <p class="changes">Linked traitmech:000573 Lamassu type I system to the existing component-architecture discussion using <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer">DOI:10.1073/pnas.2519643122</a> and <a href="https://doi.org/10.1038/s41589-025-02102-z" rel="nofollow noreferrer">DOI:10.1038/s41589-025-02102-z</a>. Preserved all definitions, parents, evidence, examples and prior history. Component absence, LmuB-length family and experimental activity remain separate claims.</p>
         </li>
 
       </ol>
@@ -656,7 +657,7 @@
         <li><time>2026-10-03T12:40:04Z</time>
            · codex
           <ul><li><strong>EDIT</strong> — Track the short Lamassu family and remaining classification gaps
-            <p>Appended a guarded discussion update for new traitmech:000570 and its HNH child. Kept SMEK directly under Lamassu because its published long-profile exception remains unresolved. Rejected equating the Hypothetical registry label with the article effector-domain-loss clade without explicit mapping; retained long-family and component-number classes as discovery leads. The primary source is DOI:10.1073/pnas.2519643122. Preserved all earlier rationale and evidence. Production preimage hash guards and 24 focused writer tests protect unrelated curation.</p></li></ul>
+            <p>Appended a guarded discussion update for new traitmech:000570 and its HNH child. Kept SMEK directly under Lamassu because its published long-profile exception remains unresolved. Rejected equating the Hypothetical registry label with the article effector-domain-loss clade without explicit mapping; retained long-family and component-number classes as discovery leads. The primary source is <a href="https://doi.org/10.1073/pnas.2519643122" rel="nofollow noreferrer">DOI:10.1073/pnas.2519643122</a>. Preserved all earlier rationale and evidence. Production preimage hash guards and 24 focused writer tests protect unrelated curation.</p></li></ul>
           <a href="https://github.com/CultureBotAI/TraitMech/blob/main/history/records/lamassu_system/2026-10-03T124004Z-codex-54df45.yaml">Read this curation session</a>
         </li>
         <li><time>2026-10-03T14:33:35Z</time>
@@ -706,7 +707,16 @@
       <dt>Term kind</dt>
       <dd>CLASS</dd>
       <dt>Status</dt>
-      <dd>PROPOSED</dd>
+      <dd>PROPOSED
+
+
+        <details class="status-meaning">
+          <summary>What this status means</summary>
+          <p>Candidate trait proposed from literature research to fill a coverage gap; not yet curator-reviewed. Must carry at least two distinct literature citations (across definition_source and evidence) — this is enforced by scripts/audit_proposals.py in the `qc` target.</p>
+          <p class="meta">Quoted from the schema's <a href="../../schema.html#enum-MappingStatusEnum">status definitions</a>.</p>
+        </details>
+
+      </dd>
     </dl>
   </div>
 
@@ -1070,12 +1080,14 @@ function renderPathograph(containerId, data) {
       <a href="https://github.com/Knowledge-Graph-Hub/kg-microbe">kg-microbe</a> ·
       <a href="https://bioportal.bioontology.org/ontologies/METPO">METPO</a> ·
       <a href="../../data/traits.json">traits.json</a> ·
-      <a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">LinkML schema</a>
+      <a href="../../schema.html">LinkML schema</a>
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/src/traitmech/schema/traitmech.yaml">YAML</a>)
     </div>
-    <div class="fam">
-      Project data: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-      code: <a href="https://opensource.org/licenses/BSD-3-Clause">BSD-3-Clause</a> ·
-      third-party source terms apply
+    <div class="fam license">
+      Project data: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-DATA">CC BY 4.0</a>.
+      Code: <a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE-CODE">BSD-3-Clause</a>.
+      Third-party source material keeps its own terms
+      (<a href="https://github.com/CultureBotAI/TraitMech/blob/main/LICENSE">licence scope</a>).
     </div>
     <div>
       Record as of 2026-10-03 16:01 UTC
